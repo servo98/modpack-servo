@@ -38,7 +38,7 @@ GDD completo en `docs/gdd-v2.md`. Tareas en `docs/TODO.md`.
 | Balance | `docs/balance/*.md` | combat-scaling, gacha-rates, accessories, rpg-weapon-stats |
 | RPG Series | `docs/mod-data/rpg-series-content.md` | Clases, spells, tiers (datos de JARs) |
 | Blockers | `docs/blockers.md` | Problemas que bloquean progreso |
-| Session log | `docs/session-log.md` | Historial de sesiones (append-only) |
+| Historial | `git log` | Commits = registro de sesiones (reemplaza session-log.md) |
 | Mecanicas | `docs/mechanics/*.md` | 21 docs, una por mecanica |
 | Capitulos | `docs/chapters/ch*.md` | 8 docs (ch1-ch8) con quests por capitulo |
 | Ideas originales | `docs/reference/mods-ideas*.md` | Brainstorming del usuario (solo archivo) |
@@ -70,19 +70,19 @@ GDD completo en `docs/gdd-v2.md`. Tareas en `docs/TODO.md`.
 ### Al INICIO
 1. Leer `docs/TODO.md` (tareas y estado)
 2. Leer `docs/blockers.md` (problemas activos)
-3. Leer ultimas entradas de `docs/session-log.md` (contexto reciente)
+3. `git log --oneline -10` (contexto de sesiones recientes via commits)
 
 ### Al FINAL
 1. Invocar `doc-keeper` (sync de docs, redundancias, consistencia)
-2. Append a `docs/session-log.md` — solo lo hecho y lecciones aprendidas
+2. Commitear cambios con mensaje descriptivo (git = registro de sesiones)
 3. Si cambio diseno/estado → actualizar MEMORY.md
 4. Si se resolvio un blocker → mover a "Resueltos" en blockers.md
 
 ### Reglas de archivos de estado
 - **TODO.md** = fuente de verdad de tareas. Cada tarea tiene estado (pending/planned/needs-decision/done).
 - **blockers.md** = fuente de verdad de problemas. Solo problemas que bloquean progreso real.
-- **session-log.md** = append-only. Cada sesion: que se hizo + lecciones. SIN copiar estado de TODO ni blockers.
-- NO repetir la misma info en multiples archivos. Si algo ya esta en TODO, no ponerlo en session-log.
+- **git log** = registro de sesiones. Cada commit documenta que se hizo. NO usar docs/session-log.md.
+- NO repetir la misma info en multiples archivos.
 
 ## Flujo de testing
 | Cambio | Como verificar |
