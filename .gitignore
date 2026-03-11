@@ -42,3 +42,4 @@ servo-mcp/dist/
 *.log
 *.bak
 *.tmp
+.claude/settings.local.json
