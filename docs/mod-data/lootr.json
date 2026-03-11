@@ -1,0 +1,29 @@
+{
+  "mod_id": "lootr",
+  "jar": "lootr-neoforge-1.21.1-1.11.36.116.jar",
+  "items": {},
+  "blocks": {
+    "block.lootr.decorated_pot": "Decorated Loot Pot",
+    "block.lootr.lootr_barrel": "Loot Barrel",
+    "block.lootr.lootr_chest": "Loot Chest",
+    "block.lootr.lootr_inventory": "Loot Chest",
+    "block.lootr.lootr_shulker": "Loot Shulker",
+    "block.lootr.lootr_trapped_chest": "Loot Chest",
+    "block.lootr.suspicious_gravel": "Gravel",
+    "block.lootr.suspicious_sand": "Sand",
+    "block.lootr.trophy": "Centennial Trophy"
+  },
+  "entities": {
+    "entity.lootr.item_frame": "Item Frame with Loot",
+    "entity.lootr.lootr_minecart": "Minecart with Loot Chest"
+  },
+  "recipes_count": 0,
+  "recipe_types": [],
+  "recipes": {},
+  "summary": {
+    "total_items": 0,
+    "total_blocks": 9,
+    "total_entities": 2,
+    "total_recipes": 0
+  }
+}

@@ -1,0 +1,1605 @@
+{
+  "mod_id": "mcwwindows",
+  "jar": "mcw-mcwwindows-2.4.2-mc1.21.1neoforge.jar",
+  "items": {
+    "item.mcwwindows.hammer": "Window Hammer",
+    "item.mcwwindows.key": "Window Key",
+    "item.mcwwindows.window_base": "Window Base",
+    "item.mcwwindows.window_centre_bar_base": "Window Four Pane Base",
+    "item.mcwwindows.window_half_bar_base": "Window Half Pane Base"
+  },
+  "blocks": {
+    "block.mcwwindows.acacia_blinds": "Acacia Blinds",
+    "block.mcwwindows.acacia_curtain_rod": "Acacia Curtain Rod",
+    "block.mcwwindows.acacia_four_window": "Acacia Four Pane Window",
+    "block.mcwwindows.acacia_log_parapet": "Acacia Parapet",
+    "block.mcwwindows.acacia_louvered_shutter": "Acacia Louvered Shutter",
+    "block.mcwwindows.acacia_pane_window": "Acacia Pane Window",
+    "block.mcwwindows.acacia_plank_four_window": "Acacia Planks Four Pane Window",
+    "block.mcwwindows.acacia_plank_pane_window": "Acacia Planks Pane Window",
+    "block.mcwwindows.acacia_plank_parapet": "Acacia Planks Parapet",
+    "block.mcwwindows.acacia_plank_window": "Resizeable Acacia Planks Window",
+    "block.mcwwindows.acacia_plank_window2": "Rectangle Acacia Planks Window",
+    "block.mcwwindows.acacia_shutter": "Acacia Shutter",
+    "block.mcwwindows.acacia_window": "Resizeable Acacia Window",
+    "block.mcwwindows.acacia_window2": "Rectangle Acacia Window",
+    "block.mcwwindows.andesite_four_window": "Andesite Four Pane Window",
+    "block.mcwwindows.andesite_louvered_shutter": "Andesite Louvered Shutter",
+    "block.mcwwindows.andesite_pane_window": "Andesite Pane Window",
+    "block.mcwwindows.andesite_parapet": "Andesite Parapet",
+    "block.mcwwindows.andesite_window": "Resizeable Andesite Window",
+    "block.mcwwindows.andesite_window2": "Rectangle Andesite Window",
+    "block.mcwwindows.bamboo_shutter": "Bamboo Shutter",
+    "block.mcwwindows.birch_blinds": "Birch Blinds",
+    "block.mcwwindows.birch_curtain_rod": "Birch Curtain Rod",
+    "block.mcwwindows.birch_four_window": "Birch Four Pane Window",
+    "block.mcwwindows.birch_log_parapet": "Birch Parapet",
+    "block.mcwwindows.birch_louvered_shutter": "Birch Louvered Shutter",
+    "block.mcwwindows.birch_pane_window": "Birch Pane Window",
+    "block.mcwwindows.birch_plank_four_window": "Birch Planks Four Pane Window",
+    "block.mcwwindows.birch_plank_pane_window": "Birch Planks Pane Window",
+    "block.mcwwindows.birch_plank_parapet": "Birch Planks Parapet",
+    "block.mcwwindows.birch_plank_window": "Resizeable Birch Planks Window",
+    "block.mcwwindows.birch_plank_window2": "Rectangle Birch Planks Window",
+    "block.mcwwindows.birch_shutter": "Birch Shutter",
+    "block.mcwwindows.birch_window": "Resizeable Birch Window",
+    "block.mcwwindows.birch_window2": "Rectangle Birch Window",
+    "block.mcwwindows.black_curtain": "Black Curtain",
+    "block.mcwwindows.black_mosaic_glass": "Black Mosaic Glass",
+    "block.mcwwindows.black_mosaic_glass_pane": "Black Mosaic Glass Pane",
+    "block.mcwwindows.blackstone_brick_arrow_slit": "Blackstone Brick Arrow Slit",
+    "block.mcwwindows.blackstone_brick_gothic": "Blackstone Gothic Window",
+    "block.mcwwindows.blackstone_four_window": "Blackstone Four Pane Window",
+    "block.mcwwindows.blackstone_pane_window": "Blackstone Pane Window",
+    "block.mcwwindows.blackstone_parapet": "Blackstone Parapet",
+    "block.mcwwindows.blackstone_window": "Resizeable Blackstone Window",
+    "block.mcwwindows.blackstone_window2": "Rectangle Blackstone Window",
+    "block.mcwwindows.blue_curtain": "Blue Curtain",
+    "block.mcwwindows.blue_mosaic_glass": "Blue Mosaic Glass",
+    "block.mcwwindows.blue_mosaic_glass_pane": "Blue Mosaic Glass Pane",
+    "block.mcwwindows.bricks_four_window": "Bricks Four Window",
+    "block.mcwwindows.bricks_pane_window": "Bricks Pane Window",
+    "block.mcwwindows.bricks_window": "Resizeable Bricks Window",
+    "block.mcwwindows.bricks_window2": "Rectangle Bricks Window",
+    "block.mcwwindows.brown_curtain": "Brown Curtain",
+    "block.mcwwindows.brown_mosaic_glass": "Brown Mosaic Glass",
+    "block.mcwwindows.brown_mosaic_glass_pane": "Brown Mosaic Glass Pane",
+    "block.mcwwindows.cherry_blinds": "Cherry Blinds",
+    "block.mcwwindows.cherry_curtain_rod": "Cherry Curtain Rod",
+    "block.mcwwindows.cherry_four_window": "Cherry Four Pane Window",
+    "block.mcwwindows.cherry_log_parapet": "Cherry Parapet",
+    "block.mcwwindows.cherry_louvered_shutter": "Cherry Louvered Shutter",
+    "block.mcwwindows.cherry_pane_window": "Cherry Pane Window",
+    "block.mcwwindows.cherry_plank_four_window": "Cherry Planks Four Pane Window",
+    "block.mcwwindows.cherry_plank_pane_window": "Cherry Planks Pane Window",
+    "block.mcwwindows.cherry_plank_parapet": "Cherry Planks Parapet",
+    "block.mcwwindows.cherry_plank_window": "Resizeable Cherry Planks Window",
+    "block.mcwwindows.cherry_plank_window2": "Rectangle Cherry Planks Window",
+    "block.mcwwindows.cherry_shutter": "Cherry Shutter",
+    "block.mcwwindows.cherry_window": "Resizeable Cherry Window",
+    "block.mcwwindows.cherry_window2": "Rectangle Cherry Window",
+    "block.mcwwindows.cobblestone_arrow_slit": "Cobblestone Arrow Slit",
+    "block.mcwwindows.crimson_blinds": "Crimson Blinds",
+    "block.mcwwindows.crimson_curtain_rod": "Crimson Curtain Rod",
+    "block.mcwwindows.crimson_louvered_shutter": "Crimson Louvered Shutter",
+    "block.mcwwindows.crimson_pane_window": "Crimson Pane Window",
+    "block.mcwwindows.crimson_plank_pane_window": "Crimson Planks Pane Window",
+    "block.mcwwindows.crimson_plank_parapet": "Crimson Planks Parapet",
+    "block.mcwwindows.crimson_planks_four_window": "Crimson Planks Four Pane Window",
+    "block.mcwwindows.crimson_planks_window": "Resizeable Crimson Planks Window",
+    "block.mcwwindows.crimson_planks_window2": "Rectangle Crimson Planks Window",
+    "block.mcwwindows.crimson_shutter": "Crimson Shutter",
+    "block.mcwwindows.crimson_stem_four_window": "Crimson Stem Four Pane Window",
+    "block.mcwwindows.crimson_stem_parapet": "Crimson Stem Parapet",
+    "block.mcwwindows.crimson_stem_window": "Resizeable Crimson Stem Window",
+    "block.mcwwindows.crimson_stem_window2": "Rectangle Crimson Stem Window",
+    "block.mcwwindows.cyan_curtain": "Cyan Curtain",
+    "block.mcwwindows.cyan_mosaic_glass": "Cyan Mosaic Glass",
+    "block.mcwwindows.cyan_mosaic_glass_pane": "Cyan Mosaic Glass Pane",
+    "block.mcwwindows.dark_oak_blinds": "Dark Oak Blinds",
+    "block.mcwwindows.dark_oak_curtain_rod": "Dark Oak Curtain Rod",
+    "block.mcwwindows.dark_oak_four_window": "Dark Oak Four Pane Window",
+    "block.mcwwindows.dark_oak_log_parapet": "Dark Oak Parapet",
+    "block.mcwwindows.dark_oak_louvered_shutter": "Dark Oak Louvered Shutter",
+    "block.mcwwindows.dark_oak_pane_window": "Dark Oak Pane Window",
+    "block.mcwwindows.dark_oak_plank_four_window": "Dark Oak Planks Four Pane Window",
+    "block.mcwwindows.dark_oak_plank_pane_window": "Dark Planks Oak Pane Window",
+    "block.mcwwindows.dark_oak_plank_parapet": "Dark Oak Planks Parapet",
+    "block.mcwwindows.dark_oak_plank_window": "Resizeable Dark Oak Planks Window",
+    "block.mcwwindows.dark_oak_plank_window2": "Rectangle Dark Oak Planks Window",
+    "block.mcwwindows.dark_oak_shutter": "Dark Oak Shutter",
+    "block.mcwwindows.dark_oak_window": "Resizeable Dark Oak Window",
+    "block.mcwwindows.dark_oak_window2": "Rectangle Dark Oak Window",
+    "block.mcwwindows.dark_prismarine_brick_arrow_slit": "Dark Prismarine Brick Arrow Slit",
+    "block.mcwwindows.dark_prismarine_brick_gothic": "Dark Prismarine Gothic Window",
+    "block.mcwwindows.dark_prismarine_four_window": "Dark Prismarine Four Pane Window",
+    "block.mcwwindows.dark_prismarine_pane_window": "Dark Prismarine Pane Window",
+    "block.mcwwindows.dark_prismarine_parapet": "Dark Prismarine Parapet",
+    "block.mcwwindows.dark_prismarine_window": "Resizeable Dark Prismarine Window",
+    "block.mcwwindows.dark_prismarine_window2": "Rectangle Dark Prismarine Window",
+    "block.mcwwindows.deepslate_four_window": "Deepslate Four Window",
+    "block.mcwwindows.deepslate_pane_window": "Deepslate Pane Window",
+    "block.mcwwindows.deepslate_window": "Resizeable Deepslate Window",
+    "block.mcwwindows.deepslate_window2": "Rectangle Deepslate Window",
+    "block.mcwwindows.diorite_four_window": "Diorite Four Pane Window",
+    "block.mcwwindows.diorite_louvered_shutter": "Diorite Louvered Shutter",
+    "block.mcwwindows.diorite_pane_window": "Diorite Pane Window",
+    "block.mcwwindows.diorite_parapet": "Diorite Parapet",
+    "block.mcwwindows.diorite_window": "Resizeable Diorite Window",
+    "block.mcwwindows.diorite_window2": "Rectangle Diorite Window",
+    "block.mcwwindows.end_brick_gothic": "End Brick Gothic Window",
+    "block.mcwwindows.ender_brick_arrow_slit": "End Brick Arrow Slit",
+    "block.mcwwindows.golden_curtain_rod": "Golden Curtain Rod",
+    "block.mcwwindows.granite_four_window": "Granite Four Pane Window",
+    "block.mcwwindows.granite_louvered_shutter": "Granite Louvered Shutter",
+    "block.mcwwindows.granite_pane_window": "Granite Pane Window",
+    "block.mcwwindows.granite_parapet": "Granite Parapet",
+    "block.mcwwindows.granite_window": "Resizeable Granite Window",
+    "block.mcwwindows.granite_window2": "Rectangle Granite Window",
+    "block.mcwwindows.gray_curtain": "Gray Curtain",
+    "block.mcwwindows.gray_mosaic_glass": "Gray Mosaic Glass",
+    "block.mcwwindows.gray_mosaic_glass_pane": "Gray Mosaic Glass Pane",
+    "block.mcwwindows.green_curtain": "Green Curtain",
+    "block.mcwwindows.green_mosaic_glass": "Green Mosaic Glass",
+    "block.mcwwindows.green_mosaic_glass_pane": "Green Mosaic Glass Pane",
+    "block.mcwwindows.iron_shutter": "Iron Shutter",
+    "block.mcwwindows.jungle_blinds": "Jungle Blinds",
+    "block.mcwwindows.jungle_curtain_rod": "Jungle Curtain Rod",
+    "block.mcwwindows.jungle_four_window": "Jungle Four Pane Window",
+    "block.mcwwindows.jungle_log_parapet": "Jungle Parapet",
+    "block.mcwwindows.jungle_louvered_shutter": "Jungle Louvered Shutter",
+    "block.mcwwindows.jungle_pane_window": "Jungle Pane Window",
+    "block.mcwwindows.jungle_plank_four_window": "Jungle Planks Four Pane Window",
+    "block.mcwwindows.jungle_plank_pane_window": "Jungle Planks Pane Window",
+    "block.mcwwindows.jungle_plank_parapet": "Jungle Planks Parapet",
+    "block.mcwwindows.jungle_plank_window": "Resizeable Jungle Planks Window",
+    "block.mcwwindows.jungle_plank_window2": "Rectangle Jungle Planks Window",
+    "block.mcwwindows.jungle_shutter": "Jungle Shutter",
+    "block.mcwwindows.jungle_window": "Resizeable Jungle Window",
+    "block.mcwwindows.jungle_window2": "Rectangle Jungle Window",
+    "block.mcwwindows.light_blue_curtain": "Light Blue Curtain",
+    "block.mcwwindows.light_blue_mosaic_glass": "Light Blue Mosaic Glass",
+    "block.mcwwindows.light_blue_mosaic_glass_pane": "Light Blue Mosaic Glass Pane",
+    "block.mcwwindows.light_gray_curtain": "Light Gray Curtain",
+    "block.mcwwindows.light_gray_mosaic_glass": "Light Gray Mosaic Glass",
+    "block.mcwwindows.light_gray_mosaic_glass_pane": "Light Gray Mosaic Glass Pane",
+    "block.mcwwindows.lime_curtain": "Lime Curtain",
+    "block.mcwwindows.lime_mosaic_glass": "Lime Mosaic Glass",
+    "block.mcwwindows.lime_mosaic_glass_pane": "Lime Mosaic Glass Pane",
+    "block.mcwwindows.magenta_curtain": "Magenta Curtain",
+    "block.mcwwindows.magenta_mosaic_glass": "Magenta Mosaic Glass",
+    "block.mcwwindows.magenta_mosaic_glass_pane": "Magenta Mosaic Glass Pane",
+    "block.mcwwindows.mangrove_blinds": "Mangrove Blinds",
+    "block.mcwwindows.mangrove_curtain_rod": "Mangrove Curtain Rod",
+    "block.mcwwindows.mangrove_four_window": "Mangrove Four Pane Window",
+    "block.mcwwindows.mangrove_log_parapet": "Mangrove Parapet",
+    "block.mcwwindows.mangrove_louvered_shutter": "Mangrove Louvered Shutter",
+    "block.mcwwindows.mangrove_pane_window": "Mangrove Pane Window",
+    "block.mcwwindows.mangrove_plank_four_window": "Mangrove Planks Four Pane Window",
+    "block.mcwwindows.mangrove_plank_pane_window": "Mangrove Planks Pane Window",
+    "block.mcwwindows.mangrove_plank_parapet": "Mangrove Planks Parapet",
+    "block.mcwwindows.mangrove_plank_window": "Resizeable Mangrove Planks Window",
+    "block.mcwwindows.mangrove_plank_window2": "Rectangle Mangrove Planks Window",
+    "block.mcwwindows.mangrove_shutter": "Mangrove Shutter",
+    "block.mcwwindows.mangrove_window": "Resizeable Mangrove Window",
+    "block.mcwwindows.mangrove_window2": "Rectangle Mangrove Window",
+    "block.mcwwindows.metal_curtain_rod": "Metal Curtain Rod",
+    "block.mcwwindows.metal_four_window": "Metal Four Window",
+    "block.mcwwindows.metal_pane_window": "Metal Pane Window",
+    "block.mcwwindows.metal_window": "Resizeable Metal Window",
+    "block.mcwwindows.metal_window2": "Rectangle Metal Window",
+    "block.mcwwindows.mud_brick_arrow_slit": "Mud Brick Arrow Slit",
+    "block.mcwwindows.mud_brick_gothic": "Mud Brick Gothic Window",
+    "block.mcwwindows.nether_brick_arrow_slit": "Nether Brick Arrow Slit",
+    "block.mcwwindows.nether_brick_gothic": "Nether Brick Gothic Window",
+    "block.mcwwindows.oak_blinds": "Oak Blinds",
+    "block.mcwwindows.oak_curtain_rod": "Oak Curtain Rod",
+    "block.mcwwindows.oak_four_window": "Oak Four Pane Window",
+    "block.mcwwindows.oak_log_parapet": "Oak Parapet",
+    "block.mcwwindows.oak_louvered_shutter": "Oak Louvered Shutter",
+    "block.mcwwindows.oak_pane_window": "Oak Pane Window",
+    "block.mcwwindows.oak_plank_four_window": "Oak Planks Four Pane Window",
+    "block.mcwwindows.oak_plank_pane_window": "Oak Planks Pane Window",
+    "block.mcwwindows.oak_plank_parapet": "Oak Planks Parapet",
+    "block.mcwwindows.oak_plank_window": "Resizeable Oak Planks Window",
+    "block.mcwwindows.oak_plank_window2": "Rectangle Oak Planks Window",
+    "block.mcwwindows.oak_shutter": "Oak Shutter",
+    "block.mcwwindows.oak_window": "Resizeable Oak Window",
+    "block.mcwwindows.oak_window2": "Rectangle Oak Window",
+    "block.mcwwindows.one_way_glass": "One Way Glass",
+    "block.mcwwindows.one_way_glass_pane": "One Way Glass Pane",
+    "block.mcwwindows.orange_curtain": "Orange Curtain",
+    "block.mcwwindows.orange_mosaic_glass": "Orange Mosaic Glass",
+    "block.mcwwindows.orange_mosaic_glass_pane": "Orange Mosaic Glass Pane",
+    "block.mcwwindows.pink_curtain": "Pink Curtain",
+    "block.mcwwindows.pink_mosaic_glass": "Pink Mosaic Glass",
+    "block.mcwwindows.pink_mosaic_glass_pane": "Pink Mosaic Glass Pane",
+    "block.mcwwindows.prismarine_brick_arrow_slit": "Prismarine Brick Arrow Slit",
+    "block.mcwwindows.prismarine_brick_gothic": "Prismarine Brick Gothic Window",
+    "block.mcwwindows.prismarine_four_window": "Prismarine Four Pane Window",
+    "block.mcwwindows.prismarine_pane_window": "Prismarine Pane Window",
+    "block.mcwwindows.prismarine_parapet": "Prismarine Parapet",
+    "block.mcwwindows.prismarine_window": "Resizeable Prismarine Window",
+    "block.mcwwindows.prismarine_window2": "Rectangle Prismarine Window",
+    "block.mcwwindows.purple_curtain": "Purple Curtain",
+    "block.mcwwindows.purple_mosaic_glass": "Purple Mosaic Glass",
+    "block.mcwwindows.purple_mosaic_glass_pane": "Purple Mosaic Glass Pane",
+    "block.mcwwindows.quartz_four_window": "Quartz Four Window",
+    "block.mcwwindows.quartz_pane_window": "Quartz Pane Window",
+    "block.mcwwindows.quartz_window": "Resizeable Quartz Window",
+    "block.mcwwindows.quartz_window2": "Rectangle Quartz Window",
+    "block.mcwwindows.red_curtain": "Red Curtain",
+    "block.mcwwindows.red_mosaic_glass": "Red Mosaic Glass",
+    "block.mcwwindows.red_mosaic_glass_pane": "Red Mosaic Glass Pane",
+    "block.mcwwindows.red_sandstone_four_window": "Red Sandstone Four Window",
+    "block.mcwwindows.red_sandstone_pane_window": "Red Sandstone Pane Window",
+    "block.mcwwindows.red_sandstone_window": "Resizeable Red Sandstone Window",
+    "block.mcwwindows.red_sandstone_window2": "Rectangle Red Sandstone Window",
+    "block.mcwwindows.sandstone_four_window": "Sandstone Four Window",
+    "block.mcwwindows.sandstone_pane_window": "Sandstone Pane Window",
+    "block.mcwwindows.sandstone_window": "Resizeable Sandstone Window",
+    "block.mcwwindows.sandstone_window2": "Rectangle Sandstone Window",
+    "block.mcwwindows.spruce_blinds": "Spruce Blinds",
+    "block.mcwwindows.spruce_curtain_rod": "Spruce Curtain Rod",
+    "block.mcwwindows.spruce_four_window": "Spruce Four Pane Window",
+    "block.mcwwindows.spruce_log_parapet": "Spruce Parapet",
+    "block.mcwwindows.spruce_louvered_shutter": "Spruce Louvered Shutter",
+    "block.mcwwindows.spruce_pane_window": "Spruce Pane Window",
+    "block.mcwwindows.spruce_plank_four_window": "Spruce Planks Four Pane Window",
+    "block.mcwwindows.spruce_plank_pane_window": "Spruce Planks Pane Window",
+    "block.mcwwindows.spruce_plank_parapet": "Spruce Planks Parapet",
+    "block.mcwwindows.spruce_plank_window": "Resizeable Spruce Planks Window",
+    "block.mcwwindows.spruce_plank_window2": "Rectangle Spruce Planks Window",
+    "block.mcwwindows.spruce_shutter": "Spruce Shutter",
+    "block.mcwwindows.spruce_window": "Resizeable Spruce Window",
+    "block.mcwwindows.spruce_window2": "Rectangle Spruce Window",
+    "block.mcwwindows.stone_brick_arrow_slit": "Stone Brick Arrow Slit",
+    "block.mcwwindows.stone_brick_gothic": "Stone Brick Gothic Window",
+    "block.mcwwindows.stone_four_window": "Stone Four Pane Window",
+    "block.mcwwindows.stone_pane_window": "Stone Pane Window",
+    "block.mcwwindows.stone_window": "Resizeable Stone Window",
+    "block.mcwwindows.stone_window2": "Rectangle Stone Window",
+    "block.mcwwindows.stripped_acacia_log_four_window": "Stripped Acacia Four Pane Window",
+    "block.mcwwindows.stripped_acacia_log_window": "Resizeable Stripped Acacia Window",
+    "block.mcwwindows.stripped_acacia_log_window2": "Rectangle Stripped Acacia Window",
+    "block.mcwwindows.stripped_acacia_pane_window": "Stripped Acacia Pane Window",
+    "block.mcwwindows.stripped_birch_log_four_window": "Stripped Birch Four Pane Window",
+    "block.mcwwindows.stripped_birch_log_window": "Resizeable Stripped Birch Window",
+    "block.mcwwindows.stripped_birch_log_window2": "Rectangle Stripped Birch Window",
+    "block.mcwwindows.stripped_birch_pane_window": "Stripped Birch Pane Window",
+    "block.mcwwindows.stripped_cherry_log_four_window": "Stripped Cherry Four Pane Window",
+    "block.mcwwindows.stripped_cherry_log_window": "Resizeable Stripped Cherry Window",
+    "block.mcwwindows.stripped_cherry_log_window2": "Rectangle Stripped Cherry Window",
+    "block.mcwwindows.stripped_cherry_pane_window": "Stripped Cherry Pane Window",
+    "block.mcwwindows.stripped_crimson_pane_window": "Stripped Crimson Pane Window",
+    "block.mcwwindows.stripped_crimson_stem_four_window": "Stripped Crimson Four Pane Window",
+    "block.mcwwindows.stripped_crimson_stem_window": "Resizeable Stripped Crimson Window",
+    "block.mcwwindows.stripped_crimson_stem_window2": "Rectangle Stripped Crimson Window",
+    "block.mcwwindows.stripped_dark_oak_log_four_window": "Stripped Dark Oak Four Pane Window",
+    "block.mcwwindows.stripped_dark_oak_log_window": "Resizeable Stripped Dark Oak Window",
+    "block.mcwwindows.stripped_dark_oak_log_window2": "Rectangle Stripped Dark Oak Window",
+    "block.mcwwindows.stripped_dark_oak_pane_window": "Stripped Dark Oak Pane Window",
+    "block.mcwwindows.stripped_jungle_log_four_window": "Stripped Jungle Four Pane Window",
+    "block.mcwwindows.stripped_jungle_log_window": "Resizeable Stripped Jungle Window",
+    "block.mcwwindows.stripped_jungle_log_window2": "Rectangle Stripped Jungle Window",
+    "block.mcwwindows.stripped_jungle_pane_window": "Stripped Jungle Pane Window",
+    "block.mcwwindows.stripped_mangrove_log_four_window": "Stripped Mangrove Four Pane Window",
+    "block.mcwwindows.stripped_mangrove_log_window": "Resizeable Stripped Mangrove Window",
+    "block.mcwwindows.stripped_mangrove_log_window2": "Rectangle Stripped Mangrove Window",
+    "block.mcwwindows.stripped_mangrove_pane_window": "Stripped Mangrove Pane Window",
+    "block.mcwwindows.stripped_oak_log_four_window": "Stripped Oak Four Pane Window",
+    "block.mcwwindows.stripped_oak_log_window": "Resizeable Stripped Oak Window",
+    "block.mcwwindows.stripped_oak_log_window2": "Rectangle Stripped Oak Window",
+    "block.mcwwindows.stripped_oak_pane_window": "Stripped Oak Pane Window",
+    "block.mcwwindows.stripped_spruce_log_four_window": "Stripped Spruce Four Pane Window",
+    "block.mcwwindows.stripped_spruce_log_window": "Resizeable Stripped Spruce Window",
+    "block.mcwwindows.stripped_spruce_log_window2": "Rectangle Stripped Spruce Window",
+    "block.mcwwindows.stripped_spruce_pane_window": "Stripped Spruce Pane Window",
+    "block.mcwwindows.stripped_warped_pane_window": "Stripped Warped Pane Window",
+    "block.mcwwindows.stripped_warped_stem_four_window": "Stripped Warped Four Pane Window",
+    "block.mcwwindows.stripped_warped_stem_window": "Resizeable Stripped Warped Window",
+    "block.mcwwindows.stripped_warped_stem_window2": "Rectangle Stripped Warped Window",
+    "block.mcwwindows.warped_blinds": "Warped Blinds",
+    "block.mcwwindows.warped_curtain_rod": "Warped Curtain Rod",
+    "block.mcwwindows.warped_louvered_shutter": "Warped Louvered Shutter",
+    "block.mcwwindows.warped_pane_window": "Warped Pane Window",
+    "block.mcwwindows.warped_plank_pane_window": "Warped Planks Pane Window",
+    "block.mcwwindows.warped_plank_parapet": "Warped Planks Parapet",
+    "block.mcwwindows.warped_planks_four_window": "Warped Planks Four Pane Window",
+    "block.mcwwindows.warped_planks_window": "Resizeable Warped Planks Window",
+    "block.mcwwindows.warped_planks_window2": "Rectangle Warped Planks Window",
+    "block.mcwwindows.warped_shutter": "Warped Shutter",
+    "block.mcwwindows.warped_stem_four_window": "Warped Stem Four Pane Window",
+    "block.mcwwindows.warped_stem_parapet": "Warped Stem Parapet",
+    "block.mcwwindows.warped_stem_window": "Resizeable Warped Stem Window",
+    "block.mcwwindows.warped_stem_window2": "Rectangle Warped Stem Window",
+    "block.mcwwindows.white_curtain": "White Curtain",
+    "block.mcwwindows.white_mosaic_glass": "White Mosaic Glass",
+    "block.mcwwindows.white_mosaic_glass_pane": "White Mosaic Glass Pane",
+    "block.mcwwindows.yellow_curtain": "Yellow Curtain",
+    "block.mcwwindows.yellow_mosaic_glass": "Yellow Mosaic Glass",
+    "block.mcwwindows.yellow_mosaic_glass_pane": "Yellow Mosaic Glass Pane"
+  },
+  "entities": {},
+  "recipes_count": 317,
+  "recipe_types": [
+    "minecraft:crafting_shaped",
+    "minecraft:crafting_shapeless"
+  ],
+  "recipes": {
+    "acacia_blinds": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_blinds x3"
+    },
+    "acacia_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_curtain_rod x5"
+    },
+    "acacia_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_four_window x8"
+    },
+    "acacia_log_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_log_parapet x5"
+    },
+    "acacia_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_louvered_shutter x3"
+    },
+    "acacia_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_pane_window x8"
+    },
+    "acacia_plank_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_plank_four_window x8"
+    },
+    "acacia_plank_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_plank_pane_window x8"
+    },
+    "acacia_plank_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_plank_parapet x5"
+    },
+    "acacia_plank_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_plank_window x4"
+    },
+    "acacia_plank_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_plank_window2 x8"
+    },
+    "acacia_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_shutter x3"
+    },
+    "acacia_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_window x4"
+    },
+    "acacia_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:acacia_window2 x8"
+    },
+    "andesite_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:andesite_four_window x8"
+    },
+    "andesite_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:andesite_louvered_shutter x3"
+    },
+    "andesite_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:andesite_pane_window x8"
+    },
+    "andesite_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:andesite_parapet x5"
+    },
+    "andesite_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:andesite_window x4"
+    },
+    "andesite_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:andesite_window2 x8"
+    },
+    "bamboo_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:bamboo_shutter"
+    },
+    "birch_blinds": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_blinds x3"
+    },
+    "birch_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_curtain_rod x5"
+    },
+    "birch_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_four_window x8"
+    },
+    "birch_log_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_log_parapet x5"
+    },
+    "birch_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_louvered_shutter x3"
+    },
+    "birch_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_pane_window x8"
+    },
+    "birch_plank_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_plank_four_window x8"
+    },
+    "birch_plank_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_plank_pane_window x8"
+    },
+    "birch_plank_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_plank_parapet x5"
+    },
+    "birch_plank_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_plank_window x4"
+    },
+    "birch_plank_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_plank_window2 x8"
+    },
+    "birch_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_shutter x3"
+    },
+    "birch_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_window x4"
+    },
+    "birch_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:birch_window2 x8"
+    },
+    "blackstone_brick_arrow_slit": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:blackstone_brick_arrow_slit x3"
+    },
+    "blackstone_brick_gothic": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:blackstone_brick_gothic x4"
+    },
+    "blackstone_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:blackstone_four_window x8"
+    },
+    "blackstone_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:blackstone_pane_window x8"
+    },
+    "blackstone_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:blackstone_parapet x5"
+    },
+    "blackstone_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:blackstone_window x4"
+    },
+    "blackstone_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:blackstone_window2 x8"
+    },
+    "black_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:black_curtain x3"
+    },
+    "black_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:black_mosaic_glass x8"
+    },
+    "black_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:black_mosaic_glass_pane x16"
+    },
+    "blue_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:blue_curtain x3"
+    },
+    "blue_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:blue_mosaic_glass x8"
+    },
+    "blue_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:blue_mosaic_glass_pane x16"
+    },
+    "bricks_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:bricks_four_window x8"
+    },
+    "bricks_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:bricks_pane_window x8"
+    },
+    "bricks_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:bricks_window x4"
+    },
+    "bricks_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:bricks_window2 x8"
+    },
+    "brown_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:brown_curtain x3"
+    },
+    "brown_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:brown_mosaic_glass x8"
+    },
+    "brown_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:brown_mosaic_glass_pane x16"
+    },
+    "cherry_blinds": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_blinds x3"
+    },
+    "cherry_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_curtain_rod x5"
+    },
+    "cherry_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_four_window x8"
+    },
+    "cherry_log_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_log_parapet x5"
+    },
+    "cherry_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_louvered_shutter x3"
+    },
+    "cherry_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_pane_window x8"
+    },
+    "cherry_plank_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_plank_four_window x8"
+    },
+    "cherry_plank_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_plank_pane_window x8"
+    },
+    "cherry_plank_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_plank_parapet x5"
+    },
+    "cherry_plank_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_plank_window x4"
+    },
+    "cherry_plank_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_plank_window2 x8"
+    },
+    "cherry_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_shutter x3"
+    },
+    "cherry_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_window x4"
+    },
+    "cherry_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cherry_window2 x8"
+    },
+    "cobblestone_arrow_slit": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cobblestone_arrow_slit x3"
+    },
+    "crimson_blinds": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_blinds x3"
+    },
+    "crimson_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_curtain_rod x5"
+    },
+    "crimson_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_louvered_shutter x3"
+    },
+    "crimson_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_pane_window x8"
+    },
+    "crimson_planks_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_planks_four_window x8"
+    },
+    "crimson_planks_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_planks_window x4"
+    },
+    "crimson_planks_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_planks_window2 x8"
+    },
+    "crimson_plank_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_plank_pane_window x8"
+    },
+    "crimson_plank_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_plank_parapet x5"
+    },
+    "crimson_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_shutter x3"
+    },
+    "crimson_stem_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_stem_four_window x8"
+    },
+    "crimson_stem_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_stem_parapet x5"
+    },
+    "crimson_stem_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_stem_window x4"
+    },
+    "crimson_stem_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:crimson_stem_window2 x8"
+    },
+    "cyan_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cyan_curtain x3"
+    },
+    "cyan_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cyan_mosaic_glass x8"
+    },
+    "cyan_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:cyan_mosaic_glass_pane x16"
+    },
+    "dark_oak_blinds": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_blinds x3"
+    },
+    "dark_oak_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_curtain_rod x5"
+    },
+    "dark_oak_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_four_window x8"
+    },
+    "dark_oak_log_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_log_parapet x5"
+    },
+    "dark_oak_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_louvered_shutter x3"
+    },
+    "dark_oak_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_pane_window x8"
+    },
+    "dark_oak_plank_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_plank_four_window x8"
+    },
+    "dark_oak_plank_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_plank_pane_window x8"
+    },
+    "dark_oak_plank_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_plank_parapet x5"
+    },
+    "dark_oak_plank_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_plank_window x4"
+    },
+    "dark_oak_plank_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_plank_window2 x8"
+    },
+    "dark_oak_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_shutter x3"
+    },
+    "dark_oak_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_window x4"
+    },
+    "dark_oak_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_oak_window2 x8"
+    },
+    "dark_prismarine_brick_arrow_slit": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_prismarine_brick_arrow_slit x3"
+    },
+    "dark_prismarine_brick_gothic": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_prismarine_brick_gothic x4"
+    },
+    "dark_prismarine_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_prismarine_four_window x8"
+    },
+    "dark_prismarine_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_prismarine_pane_window x8"
+    },
+    "dark_prismarine_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_prismarine_parapet x5"
+    },
+    "dark_prismarine_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_prismarine_window x4"
+    },
+    "dark_prismarine_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:dark_prismarine_window2 x8"
+    },
+    "deepslate_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:deepslate_four_window x8"
+    },
+    "deepslate_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:deepslate_pane_window x8"
+    },
+    "deepslate_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:deepslate_window x4"
+    },
+    "deepslate_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:deepslate_window2 x8"
+    },
+    "diorite_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:diorite_four_window x8"
+    },
+    "diorite_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:diorite_louvered_shutter x3"
+    },
+    "diorite_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:diorite_pane_window x8"
+    },
+    "diorite_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:diorite_parapet x5"
+    },
+    "diorite_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:diorite_window x4"
+    },
+    "diorite_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:diorite_window2 x8"
+    },
+    "ender_brick_arrow_slit": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:ender_brick_arrow_slit x3"
+    },
+    "end_brick_gothic": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:end_brick_gothic x4"
+    },
+    "golden_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:golden_curtain_rod x3"
+    },
+    "granite_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:granite_four_window x8"
+    },
+    "granite_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:granite_louvered_shutter x3"
+    },
+    "granite_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:granite_pane_window x8"
+    },
+    "granite_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:granite_parapet x5"
+    },
+    "granite_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:granite_window x4"
+    },
+    "granite_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:granite_window2 x8"
+    },
+    "gray_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:gray_curtain x3"
+    },
+    "gray_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:gray_mosaic_glass x8"
+    },
+    "gray_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:gray_mosaic_glass_pane x16"
+    },
+    "green_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:green_curtain x3"
+    },
+    "green_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:green_mosaic_glass x8"
+    },
+    "green_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:green_mosaic_glass_pane x16"
+    },
+    "hammer": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:hammer"
+    },
+    "iron_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:iron_shutter x3"
+    },
+    "jungle_blinds": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_blinds x3"
+    },
+    "jungle_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_curtain_rod x5"
+    },
+    "jungle_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_four_window x8"
+    },
+    "jungle_log_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_log_parapet x5"
+    },
+    "jungle_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_louvered_shutter x3"
+    },
+    "jungle_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_pane_window x8"
+    },
+    "jungle_plank_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_plank_four_window x8"
+    },
+    "jungle_plank_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_plank_pane_window x8"
+    },
+    "jungle_plank_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_plank_parapet x5"
+    },
+    "jungle_plank_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_plank_window x4"
+    },
+    "jungle_plank_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_plank_window2 x8"
+    },
+    "jungle_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_shutter x3"
+    },
+    "jungle_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_window x4"
+    },
+    "jungle_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:jungle_window2 x8"
+    },
+    "key": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:key"
+    },
+    "light_blue_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:light_blue_curtain x3"
+    },
+    "light_blue_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:light_blue_mosaic_glass x8"
+    },
+    "light_blue_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:light_blue_mosaic_glass_pane x16"
+    },
+    "light_gray_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:light_gray_curtain x3"
+    },
+    "light_gray_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:light_gray_mosaic_glass x8"
+    },
+    "light_gray_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:light_gray_mosaic_glass_pane x16"
+    },
+    "lime_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:lime_curtain x3"
+    },
+    "lime_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:lime_mosaic_glass x8"
+    },
+    "lime_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:lime_mosaic_glass_pane x16"
+    },
+    "magenta_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:magenta_curtain x3"
+    },
+    "magenta_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:magenta_mosaic_glass x8"
+    },
+    "magenta_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:magenta_mosaic_glass_pane x16"
+    },
+    "mangrove_blinds": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_blinds x3"
+    },
+    "mangrove_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_curtain_rod x5"
+    },
+    "mangrove_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_four_window x8"
+    },
+    "mangrove_log_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_log_parapet x5"
+    },
+    "mangrove_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_louvered_shutter x3"
+    },
+    "mangrove_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_pane_window x8"
+    },
+    "mangrove_plank_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_plank_four_window x8"
+    },
+    "mangrove_plank_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_plank_pane_window x8"
+    },
+    "mangrove_plank_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_plank_parapet x5"
+    },
+    "mangrove_plank_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_plank_window x4"
+    },
+    "mangrove_plank_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_plank_window2 x8"
+    },
+    "mangrove_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_shutter x3"
+    },
+    "mangrove_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_window x4"
+    },
+    "mangrove_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mangrove_window2 x8"
+    },
+    "metal_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:metal_curtain_rod x3"
+    },
+    "metal_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:metal_four_window x8"
+    },
+    "metal_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:metal_pane_window x8"
+    },
+    "metal_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:metal_window x4"
+    },
+    "metal_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:metal_window2 x8"
+    },
+    "mud_brick_arrow_slit": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mud_brick_arrow_slit x3"
+    },
+    "mud_brick_gothic": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:mud_brick_gothic x4"
+    },
+    "nether_brick_arrow_slit": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:nether_brick_arrow_slit x3"
+    },
+    "nether_brick_gothic": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:nether_brick_gothic x4"
+    },
+    "oak_blinds": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_blinds x3"
+    },
+    "oak_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_curtain_rod x5"
+    },
+    "oak_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_four_window x8"
+    },
+    "oak_log_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_log_parapet x5"
+    },
+    "oak_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_louvered_shutter x3"
+    },
+    "oak_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_pane_window x8"
+    },
+    "oak_plank_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_plank_four_window x8"
+    },
+    "oak_plank_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_plank_pane_window x8"
+    },
+    "oak_plank_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_plank_parapet x5"
+    },
+    "oak_plank_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_plank_window x4"
+    },
+    "oak_plank_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_plank_window2 x8"
+    },
+    "oak_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_shutter x3"
+    },
+    "oak_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_window x4"
+    },
+    "oak_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:oak_window2 x8"
+    },
+    "one_way_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:one_way_glass x6"
+    },
+    "one_way_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:one_way_glass_pane x12"
+    },
+    "orange_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:orange_curtain x3"
+    },
+    "orange_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:orange_mosaic_glass x8"
+    },
+    "orange_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:orange_mosaic_glass_pane x16"
+    },
+    "pink_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:pink_curtain x3"
+    },
+    "pink_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:pink_mosaic_glass x8"
+    },
+    "pink_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:pink_mosaic_glass_pane x16"
+    },
+    "prismarine_brick_arrow_slit": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:prismarine_brick_arrow_slit x3"
+    },
+    "prismarine_brick_gothic": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:prismarine_brick_gothic x4"
+    },
+    "prismarine_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:prismarine_four_window x8"
+    },
+    "prismarine_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:prismarine_pane_window x8"
+    },
+    "prismarine_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:prismarine_parapet x5"
+    },
+    "prismarine_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:prismarine_window x4"
+    },
+    "prismarine_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:prismarine_window2 x8"
+    },
+    "purple_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:purple_curtain x3"
+    },
+    "purple_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:purple_mosaic_glass x8"
+    },
+    "purple_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:purple_mosaic_glass_pane x16"
+    },
+    "quartz_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:quartz_four_window x8"
+    },
+    "quartz_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:quartz_pane_window x8"
+    },
+    "quartz_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:quartz_window x4"
+    },
+    "quartz_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:quartz_window2 x8"
+    },
+    "red_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:red_curtain x3"
+    },
+    "red_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:red_mosaic_glass x8"
+    },
+    "red_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:red_mosaic_glass_pane x16"
+    },
+    "red_sandstone_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:red_sandstone_four_window x8"
+    },
+    "red_sandstone_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:red_sandstone_pane_window x8"
+    },
+    "red_sandstone_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:red_sandstone_window x4"
+    },
+    "red_sandstone_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:red_sandstone_window2 x8"
+    },
+    "sandstone_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:sandstone_four_window x8"
+    },
+    "sandstone_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:sandstone_pane_window x8"
+    },
+    "sandstone_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:sandstone_window x4"
+    },
+    "sandstone_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:sandstone_window2 x8"
+    },
+    "spruce_blinds": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_blinds x3"
+    },
+    "spruce_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_curtain_rod x5"
+    },
+    "spruce_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_four_window x8"
+    },
+    "spruce_log_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_log_parapet x5"
+    },
+    "spruce_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_louvered_shutter x3"
+    },
+    "spruce_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_pane_window x8"
+    },
+    "spruce_plank_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_plank_four_window x8"
+    },
+    "spruce_plank_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_plank_pane_window x8"
+    },
+    "spruce_plank_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_plank_parapet x5"
+    },
+    "spruce_plank_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_plank_window x4"
+    },
+    "spruce_plank_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_plank_window2 x8"
+    },
+    "spruce_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_shutter x3"
+    },
+    "spruce_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_window x4"
+    },
+    "spruce_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:spruce_window2 x8"
+    },
+    "stone_brick_arrow_slit": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stone_brick_arrow_slit x3"
+    },
+    "stone_brick_gothic": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stone_brick_gothic x4"
+    },
+    "stone_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stone_four_window x8"
+    },
+    "stone_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stone_pane_window x8"
+    },
+    "stone_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stone_window x4"
+    },
+    "stone_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stone_window2 x8"
+    },
+    "stripped_acacia_log_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_acacia_log_four_window x8"
+    },
+    "stripped_acacia_log_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_acacia_log_window x4"
+    },
+    "stripped_acacia_log_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_acacia_log_window2 x8"
+    },
+    "stripped_acacia_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_acacia_pane_window x8"
+    },
+    "stripped_birch_log_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_birch_log_four_window x8"
+    },
+    "stripped_birch_log_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_birch_log_window x4"
+    },
+    "stripped_birch_log_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_birch_log_window2 x8"
+    },
+    "stripped_birch_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_birch_pane_window x8"
+    },
+    "stripped_cherry_log_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_cherry_log_four_window x8"
+    },
+    "stripped_cherry_log_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_cherry_log_window x4"
+    },
+    "stripped_cherry_log_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_cherry_log_window2 x8"
+    },
+    "stripped_cherry_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_cherry_pane_window x8"
+    },
+    "stripped_crimson_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_crimson_pane_window x8"
+    },
+    "stripped_crimson_stem_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_crimson_stem_four_window x8"
+    },
+    "stripped_crimson_stem_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_crimson_stem_window x4"
+    },
+    "stripped_crimson_stem_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_crimson_stem_window2 x8"
+    },
+    "stripped_dark_oak_log_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_dark_oak_log_four_window x8"
+    },
+    "stripped_dark_oak_log_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_dark_oak_log_window x4"
+    },
+    "stripped_dark_oak_log_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_dark_oak_log_window2 x8"
+    },
+    "stripped_dark_oak_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_dark_oak_pane_window x8"
+    },
+    "stripped_jungle_log_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_jungle_log_four_window x8"
+    },
+    "stripped_jungle_log_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_jungle_log_window x4"
+    },
+    "stripped_jungle_log_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_jungle_log_window2 x8"
+    },
+    "stripped_jungle_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_jungle_pane_window x8"
+    },
+    "stripped_mangrove_log_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_mangrove_log_four_window x8"
+    },
+    "stripped_mangrove_log_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_mangrove_log_window x4"
+    },
+    "stripped_mangrove_log_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_mangrove_log_window2 x8"
+    },
+    "stripped_mangrove_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_mangrove_pane_window x8"
+    },
+    "stripped_oak_log_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_oak_log_four_window x8"
+    },
+    "stripped_oak_log_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_oak_log_window x4"
+    },
+    "stripped_oak_log_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_oak_log_window2 x8"
+    },
+    "stripped_oak_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_oak_pane_window x8"
+    },
+    "stripped_spruce_log_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_spruce_log_four_window x8"
+    },
+    "stripped_spruce_log_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_spruce_log_window x4"
+    },
+    "stripped_spruce_log_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_spruce_log_window2 x8"
+    },
+    "stripped_spruce_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_spruce_pane_window x8"
+    },
+    "stripped_warped_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_warped_pane_window x8"
+    },
+    "stripped_warped_stem_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_warped_stem_four_window x8"
+    },
+    "stripped_warped_stem_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_warped_stem_window x4"
+    },
+    "stripped_warped_stem_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:stripped_warped_stem_window2 x8"
+    },
+    "warped_blinds": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_blinds x3"
+    },
+    "warped_curtain_rod": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_curtain_rod x5"
+    },
+    "warped_louvered_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_louvered_shutter x3"
+    },
+    "warped_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_pane_window x8"
+    },
+    "warped_planks_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_planks_four_window x8"
+    },
+    "warped_planks_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_planks_window x4"
+    },
+    "warped_planks_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_planks_window2 x8"
+    },
+    "warped_plank_pane_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_plank_pane_window x8"
+    },
+    "warped_plank_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_plank_parapet x5"
+    },
+    "warped_shutter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_shutter x3"
+    },
+    "warped_stem_four_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_stem_four_window x8"
+    },
+    "warped_stem_parapet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_stem_parapet x5"
+    },
+    "warped_stem_window": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_stem_window x4"
+    },
+    "warped_stem_window2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:warped_stem_window2 x8"
+    },
+    "white_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:white_curtain x3"
+    },
+    "white_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:white_mosaic_glass x8"
+    },
+    "white_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:white_mosaic_glass_pane x16"
+    },
+    "window_base": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:window_base x4"
+    },
+    "window_centre_bar_base": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwwindows:window_centre_bar_base x2"
+    },
+    "window_centre_bar_base_revert": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwwindows:window_half_bar_base"
+    },
+    "window_half_bar_base": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwwindows:window_half_bar_base x2"
+    },
+    "window_half_bar_base_revert": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwwindows:window_base"
+    },
+    "yellow_curtain": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:yellow_curtain x3"
+    },
+    "yellow_mosaic_glass": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:yellow_mosaic_glass x8"
+    },
+    "yellow_mosaic_glass_pane": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwwindows:yellow_mosaic_glass_pane x16"
+    }
+  },
+  "summary": {
+    "total_items": 5,
+    "total_blocks": 310,
+    "total_entities": 0,
+    "total_recipes": 317
+  }
+}

@@ -1,0 +1,4 @@
+Quiero que para las dungeons se puedan entrar de a varios no que sean individuales y a lo mejor que escale la dificultad con la cantidad de jugadores y aparte veo qeu son pocas salas por dungeon de verdad son así yo me imaginaba mas cuartos cada vez que uno entra a la dungeon y si fuera en caso de las llaves tematicas quiero que elavores más de eso
+
+
+Respeceto a los trenes siento que casi me convence eso de que el space elevator tenga estacion de tren para recibir las cosas me gusta como protegemos que no destryan esas estructuras o como sería la estacion mulktibloque para eso? porque el chiste es que esa cosa ya esté en el mundo no?_ si no uno crearia la estacion esa cerca de la base para no tener que hacer los trenes elavora como sería esa parte

@@ -1,0 +1,61 @@
+{
+  "mod_id": "sliceanddice",
+  "jar": "sliceanddice-forge-4.2.2.jar",
+  "items": {
+    "item.sliceanddice.fertilizer_bucket": "Bucket of Liquid Fertilizer"
+  },
+  "blocks": {
+    "block.sliceanddice.fertilizer": "Fertilizer",
+    "block.sliceanddice.slicer": "Slicer",
+    "block.sliceanddice.sprinkler": "Sprinkler",
+    "block.sliceanddice.wet_air": "Wet Air"
+  },
+  "entities": {},
+  "recipes_count": 8,
+  "recipe_types": [
+    "minecraft:crafting_shaped",
+    "create:mixing",
+    "minecraft:crafting_shapeless",
+    "create:filling"
+  ],
+  "recipes": {
+    "rich_soil": {
+      "type": "create:filling",
+      "result": "unknown"
+    },
+    "hot_cocoa_from_fluid": {
+      "type": "create:filling",
+      "result": "unknown"
+    },
+    "from_tree_fertilizer": {
+      "type": "create:mixing",
+      "result": "unknown"
+    },
+    "from_phyto": {
+      "type": "create:mixing",
+      "result": "unknown"
+    },
+    "from_compost": {
+      "type": "create:mixing",
+      "result": "unknown"
+    },
+    "slicer": {
+      "type": "minecraft:crafting_shaped",
+      "result": "sliceanddice:slicer"
+    },
+    "sprinkler": {
+      "type": "minecraft:crafting_shaped",
+      "result": "sliceanddice:sprinkler x3"
+    },
+    "slime_ball": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "minecraft:slime_ball"
+    }
+  },
+  "summary": {
+    "total_items": 1,
+    "total_blocks": 4,
+    "total_entities": 0,
+    "total_recipes": 8
+  }
+}

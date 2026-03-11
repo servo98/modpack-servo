@@ -1,0 +1,135 @@
+{
+  "mod_id": "create_enchantment_industry",
+  "jar": "create-enchantment-industry-2.3.0.jar",
+  "items": {
+    "item.create_enchantment_industry.enchanting_template": "Enchanting Template",
+    "item.create_enchantment_industry.experience_bucket": "Bucket o' Enchanting",
+    "item.create_enchantment_industry.experience_cake": "Cake o' Enchanting",
+    "item.create_enchantment_industry.experience_cake_base": "Cake Base o' Enchanting",
+    "item.create_enchantment_industry.experience_cake_slice": "Cake Slice o' Enchanting",
+    "item.create_enchantment_industry.super_enchanting_template": "Super Enchanting Template",
+    "item.create_enchantment_industry.super_experience_nugget": "Nugget of Super Experience"
+  },
+  "blocks": {
+    "block.create_enchantment_industry.blaze_enchanter": "Blaze Enchanter",
+    "block.create_enchantment_industry.blaze_forger": "Blaze Forger",
+    "block.create_enchantment_industry.experience": "Liquid Experience",
+    "block.create_enchantment_industry.experience_hatch": "Experience Hatch",
+    "block.create_enchantment_industry.experience_lantern": "Experience Lantern",
+    "block.create_enchantment_industry.grindstone_drain": "Grindstone Drain",
+    "block.create_enchantment_industry.mechanical_grindstone": "Mechanical Grindstone",
+    "block.create_enchantment_industry.printer": "Printer",
+    "block.create_enchantment_industry.super_experience_block": "Block of Super Experience"
+  },
+  "entities": {},
+  "recipes_count": 22,
+  "recipe_types": [
+    "minecraft:smithing_transform",
+    "create:compacting",
+    "minecraft:crafting_shapeless",
+    "create:item_application",
+    "create:filling",
+    "create:pressing",
+    "create:crushing",
+    "create:emptying",
+    "create_enchantment_industry:grinding",
+    "minecraft:crafting_shaped",
+    "create:cutting"
+  ],
+  "recipes": {
+    "experience_bottle": {
+      "type": "create:emptying",
+      "result": "unknown"
+    },
+    "experience_cake": {
+      "type": "create:filling",
+      "result": "unknown"
+    },
+    "experience_cake_slice": {
+      "type": "create:cutting",
+      "result": "unknown"
+    },
+    "super_enchanting_template": {
+      "type": "create:pressing",
+      "result": "unknown"
+    },
+    "enchanting_template": {
+      "type": "create:pressing",
+      "result": "unknown"
+    },
+    "blaze_forger": {
+      "type": "minecraft:smithing_transform",
+      "result": "create_enchantment_industry:blaze_forger"
+    },
+    "blaze_enchanter": {
+      "type": "minecraft:smithing_transform",
+      "result": "create_enchantment_industry:blaze_enchanter"
+    },
+    "experience_cake_base": {
+      "type": "create:compacting",
+      "result": "unknown"
+    },
+    "experience_block": {
+      "type": "create_enchantment_industry:grinding",
+      "result": "unknown"
+    },
+    "infested_stone": {
+      "type": "create:compacting",
+      "result": "unknown"
+    },
+    "experience_hatch": {
+      "type": "create:item_application",
+      "result": "unknown"
+    },
+    "infested_cobblestone": {
+      "type": "create:crushing",
+      "result": "unknown"
+    },
+    "experience_nugget": {
+      "type": "create_enchantment_industry:grinding",
+      "result": "unknown"
+    },
+    "super_experience_block": {
+      "type": "minecraft:crafting_shaped",
+      "result": "create_enchantment_industry:super_experience_block"
+    },
+    "super_experience_nugget": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "create_enchantment_industry:super_experience_nugget x9"
+    },
+    "heap_of_experience": {
+      "type": "create_enchantment_industry:grinding",
+      "result": "unknown"
+    },
+    "greater_experience_gem": {
+      "type": "create_enchantment_industry:grinding",
+      "result": "unknown"
+    },
+    "experience_gem": {
+      "type": "create_enchantment_industry:grinding",
+      "result": "unknown"
+    },
+    "experience_lantern": {
+      "type": "minecraft:crafting_shaped",
+      "result": "create_enchantment_industry:experience_lantern"
+    },
+    "mechanical_grindstone": {
+      "type": "minecraft:crafting_shaped",
+      "result": "create_enchantment_industry:mechanical_grindstone"
+    },
+    "printer": {
+      "type": "minecraft:crafting_shaped",
+      "result": "create_enchantment_industry:printer"
+    },
+    "experience_droplet": {
+      "type": "create:emptying",
+      "result": "unknown"
+    }
+  },
+  "summary": {
+    "total_items": 7,
+    "total_blocks": 9,
+    "total_entities": 0,
+    "total_recipes": 22
+  }
+}

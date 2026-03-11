@@ -1,0 +1,654 @@
+{
+  "mod_id": "storagedrawers",
+  "jar": "StorageDrawers-neoforge-1.21.1-13.11.4.jar",
+  "items": {
+    "item.storagedrawers.balance_fill_upgrade": "Balanced Fill Upgrade",
+    "item.storagedrawers.balance_fill_upgrade.desc": "Distribute items evenly across slots",
+    "item.storagedrawers.balance_fill_upgrade.warn": "Has no effect with current mod configuration",
+    "item.storagedrawers.conversion_upgrade": "Conversion Upgrade",
+    "item.storagedrawers.conversion_upgrade.desc": "Auto-converts compatible items",
+    "item.storagedrawers.copper_storage_upgrade": "Storage Upgrade (II)",
+    "item.storagedrawers.creative_storage_upgrade": "Creative Storage Upgrade",
+    "item.storagedrawers.creative_storage_upgrade.desc": "Near-infinite storage",
+    "item.storagedrawers.creative_vending_upgrade": "Creative Vending Upgrade",
+    "item.storagedrawers.creative_vending_upgrade.desc": "Unlimited item withdrawal",
+    "item.storagedrawers.detached_drawer": "Detached Drawer",
+    "item.storagedrawers.detached_drawer.desc": "Put in a drawer block with a missing space",
+    "item.storagedrawers.diamond_storage_upgrade": "Storage Upgrade (VI)",
+    "item.storagedrawers.drawer_key": "Drawer Key",
+    "item.storagedrawers.drawer_key.desc": "Locks and unlocks drawers\nHold in off-hand to lock newly-placed drawers",
+    "item.storagedrawers.drawer_puller": "Drawer Puller",
+    "item.storagedrawers.drawer_puller.desc": "Remove a drawer from its block\nDetached drawer will keep its contents",
+    "item.storagedrawers.emerald_storage_upgrade": "Storage Upgrade (V)",
+    "item.storagedrawers.fill_level_upgrade": "Fill Level Upgrade",
+    "item.storagedrawers.fill_level_upgrade.desc": "Shows how full storage is",
+    "item.storagedrawers.gold_storage_upgrade": "Storage Upgrade (IV)",
+    "item.storagedrawers.hopper_upgrade": "Hopper Upgrade",
+    "item.storagedrawers.hopper_upgrade.desc": "Hopper-like in-world item collection",
+    "item.storagedrawers.illumination_upgrade": "Illumination Upgrade",
+    "item.storagedrawers.illumination_upgrade.desc": "Illuminates drawer labels in the dark",
+    "item.storagedrawers.iron_storage_upgrade": "Storage Upgrade (III)",
+    "item.storagedrawers.keyring": "Keyring",
+    "item.storagedrawers.keyring.desc": "Storage for keys\nAdd or remove keys in inventory\nCrouch and use to cycle keys",
+    "item.storagedrawers.magnet_upgrade": "Magnet Upgrade (I)",
+    "item.storagedrawers.magnet_upgrade.desc": "Collect items around drawers",
+    "item.storagedrawers.magnet_upgrade.range": "Adds %s collecting range",
+    "item.storagedrawers.magnet_upgrade.speed": "Collects %d stack per %dt",
+    "item.storagedrawers.magnet_upgrade_2": "Magnet Upgrade (II)",
+    "item.storagedrawers.magnet_upgrade_3": "Magnet Upgrade (III)",
+    "item.storagedrawers.max_redstone_upgrade": "Max Redstone Upgrade",
+    "item.storagedrawers.max_redstone_upgrade.desc": "Emits signal for most full slot",
+    "item.storagedrawers.min_redstone_upgrade": "Min Redstone Upgrade",
+    "item.storagedrawers.min_redstone_upgrade.desc": "Emits signal for least full slot",
+    "item.storagedrawers.netherite_storage_upgrade": "Storage Upgrade (VII)",
+    "item.storagedrawers.obsidian_storage_upgrade": "Storage Upgrade (I)",
+    "item.storagedrawers.one_stack_upgrade": "Storage Downgrade",
+    "item.storagedrawers.one_stack_upgrade.desc": "Reduces base storage to a single stack",
+    "item.storagedrawers.personal_key": "Personal Key",
+    "item.storagedrawers.personal_key.desc": "Protect access from other players\nDoes not protect blocks from breaking",
+    "item.storagedrawers.personal_key_cofh": "Personal Key (CoFH)",
+    "item.storagedrawers.personal_key_cofh.desc": "Protect access from other players\nDoes not protect blocks from breaking",
+    "item.storagedrawers.personal_key_ftb": "Personal Key (FTB)",
+    "item.storagedrawers.personal_key_ftb.desc": "Protect access from other players\nAllows access to your team",
+    "item.storagedrawers.personal_key_unlock": "Personal Key (Admin)",
+    "item.storagedrawers.personal_key_unlock.desc": "Unlocks any drawer locked by another player's personal key",
+    "item.storagedrawers.portability_upgrade": "Portability Upgrade",
+    "item.storagedrawers.portability_upgrade.desc": "Allows you to carry filled drawers",
+    "item.storagedrawers.portability_upgrade.warn": "Has no effect with current mod configuration",
+    "item.storagedrawers.priority_key": "Priority Key",
+    "item.storagedrawers.priority_key.desc": "Cycle drawer through priority levels\nCrouch and use to cycle key",
+    "item.storagedrawers.priority_key_n1": "Priority Key (-1)",
+    "item.storagedrawers.priority_key_n1.desc": "Gives drawer lower priority\nCrouch and use to cycle key",
+    "item.storagedrawers.priority_key_n2": "Priority Key (-2)",
+    "item.storagedrawers.priority_key_n2.desc": "Gives drawer lowest priority\nCrouch and use to cycle key",
+    "item.storagedrawers.priority_key_p1": "Priority Key (+1)",
+    "item.storagedrawers.priority_key_p1.desc": "Gives drawer higher priority\nCrouch and use to cycle key",
+    "item.storagedrawers.priority_key_p2": "Priority Key (+2)",
+    "item.storagedrawers.priority_key_p2.desc": "Gives drawer highest priority\nCrouch and use to cycle key",
+    "item.storagedrawers.quantify_key": "Quantify Key",
+    "item.storagedrawers.quantify_key.desc": "Show or hide stored quantity labels",
+    "item.storagedrawers.redstone_upgrade": "Redstone Upgrade",
+    "item.storagedrawers.redstone_upgrade.desc": "Emits signal for total storage",
+    "item.storagedrawers.remote_group_upgrade": "Remote Group Upgrade",
+    "item.storagedrawers.remote_group_upgrade.bound": "Use on controller to bind upgrade",
+    "item.storagedrawers.remote_group_upgrade.desc": "Lets connected drawer group remotely connect to controller",
+    "item.storagedrawers.remote_group_upgrade_bound": "Remote Group Upgrade",
+    "item.storagedrawers.remote_group_upgrade_bound.bound": "Bound to controller [%d, %d, %d]",
+    "item.storagedrawers.remote_group_upgrade_bound.desc": "Lets connected drawer group remotely connect to controller.\nCan be used on upgraded drawer to re-bind it",
+    "item.storagedrawers.remote_upgrade": "Remote Upgrade",
+    "item.storagedrawers.remote_upgrade.bound": "Use on controller to bind upgrade",
+    "item.storagedrawers.remote_upgrade.desc": "Lets single drawer remotely connect to controller",
+    "item.storagedrawers.remote_upgrade_bound": "Remote Upgrade",
+    "item.storagedrawers.remote_upgrade_bound.bound": "Bound to controller [%d, %d, %d]",
+    "item.storagedrawers.remote_upgrade_bound.desc": "Lets single drawer remotely connect to controller.\nCan be used on upgraded drawer to re-bind it",
+    "item.storagedrawers.shroud_key": "Concealment Key",
+    "item.storagedrawers.shroud_key.desc": "Show or hide item labels",
+    "item.storagedrawers.storage_upgrade.desc": "Increases storage by %d times base value",
+    "item.storagedrawers.suspend_key": "Pause Key",
+    "item.storagedrawers.suspend_key.desc": "Pauses controller I/O\nand most upgrade actions",
+    "item.storagedrawers.upgrade_template": "Upgrade Template",
+    "item.storagedrawers.void_upgrade": "Void Upgrade",
+    "item.storagedrawers.void_upgrade.desc": "Destroys excess items"
+  },
+  "blocks": {
+    "block.storagedrawers.compacting_drawers_2": "Compacting Drawers (2-Tier)",
+    "block.storagedrawers.compacting_drawers_3": "Compacting Drawers (3-Tier)",
+    "block.storagedrawers.compacting_half_drawers_2": "Compacting Half Drawers (2-Tier)",
+    "block.storagedrawers.compacting_half_drawers_3": "Compacting Half Drawers (3-Tier)",
+    "block.storagedrawers.controller": "Drawer Controller",
+    "block.storagedrawers.controller_io": "Drawer Controller IO",
+    "block.storagedrawers.framed_compacting_drawers_2": "Framed Compacting Drawers (2-Tier)",
+    "block.storagedrawers.framed_compacting_drawers_3": "Framed Compacting Drawers (3-Tier)",
+    "block.storagedrawers.framed_compacting_half_drawers_2": "Framed Compacting Half Drawers (2-Tier)",
+    "block.storagedrawers.framed_compacting_half_drawers_3": "Framed Compacting Half Drawers (3-Tier)",
+    "block.storagedrawers.framed_controller": "Framed Drawer Controller",
+    "block.storagedrawers.framed_controller_io": "Framed Drawer Controller IO",
+    "block.storagedrawers.framing_table": "Framing Table",
+    "block.storagedrawers.keybutton_concealment": "Concealment Key Button",
+    "block.storagedrawers.keybutton_drawer": "Drawer Key Button",
+    "block.storagedrawers.keybutton_personal": "Personal Key Button",
+    "block.storagedrawers.keybutton_quantify": "Quantify Key Button",
+    "block.storagedrawers.mat.acacia": "Acacia",
+    "block.storagedrawers.mat.bamboo": "Bamboo",
+    "block.storagedrawers.mat.birch": "Birch",
+    "block.storagedrawers.mat.cherry": "Cherry",
+    "block.storagedrawers.mat.crimson": "Crimson",
+    "block.storagedrawers.mat.dark_oak": "Dark Oak",
+    "block.storagedrawers.mat.framed": "Framed",
+    "block.storagedrawers.mat.jungle": "Jungle",
+    "block.storagedrawers.mat.mangrove": "Mangrove",
+    "block.storagedrawers.mat.oak": "Oak",
+    "block.storagedrawers.mat.spruce": "Spruce",
+    "block.storagedrawers.mat.warped": "Warped",
+    "block.storagedrawers.type.full_drawers_1": "%s Drawers 1x1",
+    "block.storagedrawers.type.full_drawers_2": "%s Drawers 1x2",
+    "block.storagedrawers.type.full_drawers_4": "%s Drawers 2x2",
+    "block.storagedrawers.type.half_drawers_1": "%s Half Drawers 1x1",
+    "block.storagedrawers.type.half_drawers_2": "%s Half Drawers 1x2",
+    "block.storagedrawers.type.half_drawers_4": "%s Half Drawers 2x2",
+    "block.storagedrawers.type.trim": "%s Trim"
+  },
+  "entities": {},
+  "recipes_count": 126,
+  "recipe_types": [
+    "minecraft:crafting_shapeless",
+    "storagedrawers:personal_key_cycle",
+    "storagedrawers:add_upgrade",
+    "storagedrawers:remote_group_upgrade",
+    "minecraft:crafting_shaped",
+    "storagedrawers:add_detached_upgrade",
+    "storagedrawers:keyring"
+  ],
+  "recipes": {
+    "acacia_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:acacia_full_drawers_1"
+    },
+    "acacia_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:acacia_full_drawers_2 x2"
+    },
+    "acacia_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:acacia_full_drawers_4 x4"
+    },
+    "acacia_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:acacia_half_drawers_1"
+    },
+    "acacia_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:acacia_half_drawers_2 x2"
+    },
+    "acacia_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:acacia_half_drawers_4 x4"
+    },
+    "acacia_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:acacia_trim x4"
+    },
+    "add_detached_upgrade": {
+      "type": "storagedrawers:add_detached_upgrade",
+      "result": "unknown"
+    },
+    "add_upgrade": {
+      "type": "storagedrawers:add_upgrade",
+      "result": "unknown"
+    },
+    "balanced_fill_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:balance_fill_upgrade"
+    },
+    "bamboo_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:bamboo_full_drawers_1"
+    },
+    "bamboo_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:bamboo_full_drawers_2 x2"
+    },
+    "bamboo_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:bamboo_full_drawers_4 x4"
+    },
+    "bamboo_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:bamboo_half_drawers_1"
+    },
+    "bamboo_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:bamboo_half_drawers_2 x2"
+    },
+    "bamboo_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:bamboo_half_drawers_4 x4"
+    },
+    "bamboo_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:bamboo_trim x4"
+    },
+    "birch_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:birch_full_drawers_1"
+    },
+    "birch_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:birch_full_drawers_2 x2"
+    },
+    "birch_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:birch_full_drawers_4 x4"
+    },
+    "birch_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:birch_half_drawers_1"
+    },
+    "birch_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:birch_half_drawers_2 x2"
+    },
+    "birch_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:birch_half_drawers_4 x4"
+    },
+    "birch_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:birch_trim x4"
+    },
+    "cherry_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:cherry_full_drawers_1"
+    },
+    "cherry_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:cherry_full_drawers_2 x2"
+    },
+    "cherry_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:cherry_full_drawers_4 x4"
+    },
+    "cherry_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:cherry_half_drawers_1"
+    },
+    "cherry_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:cherry_half_drawers_2 x2"
+    },
+    "cherry_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:cherry_half_drawers_4 x4"
+    },
+    "cherry_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:cherry_trim x4"
+    },
+    "compacting_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:compacting_drawers_2"
+    },
+    "compacting_drawers_3": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:compacting_drawers_3"
+    },
+    "compacting_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:compacting_half_drawers_2"
+    },
+    "compacting_half_drawers_3": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:compacting_half_drawers_3"
+    },
+    "concealment_key": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "storagedrawers:shroud_key"
+    },
+    "controller": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:controller"
+    },
+    "controller_io": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:controller_io"
+    },
+    "conversion_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:conversion_upgrade"
+    },
+    "copper_storage_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:copper_storage_upgrade"
+    },
+    "crimson_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:crimson_full_drawers_1"
+    },
+    "crimson_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:crimson_full_drawers_2 x2"
+    },
+    "crimson_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:crimson_full_drawers_4 x4"
+    },
+    "crimson_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:crimson_half_drawers_1"
+    },
+    "crimson_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:crimson_half_drawers_2 x2"
+    },
+    "crimson_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:crimson_half_drawers_4 x4"
+    },
+    "crimson_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:crimson_trim x4"
+    },
+    "dark_oak_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:dark_oak_full_drawers_1"
+    },
+    "dark_oak_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:dark_oak_full_drawers_2 x2"
+    },
+    "dark_oak_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:dark_oak_full_drawers_4 x4"
+    },
+    "dark_oak_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:dark_oak_half_drawers_1"
+    },
+    "dark_oak_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:dark_oak_half_drawers_2 x2"
+    },
+    "dark_oak_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:dark_oak_half_drawers_4 x4"
+    },
+    "dark_oak_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:dark_oak_trim x4"
+    },
+    "detached_drawer": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:detached_drawer"
+    },
+    "diamond_storage_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:diamond_storage_upgrade"
+    },
+    "drawer_key": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:drawer_key"
+    },
+    "drawer_puller": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:drawer_puller"
+    },
+    "emerald_storage_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:emerald_storage_upgrade"
+    },
+    "fill_level_upgrade": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "storagedrawers:fill_level_upgrade"
+    },
+    "framing_table": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:framing_table"
+    },
+    "gold_storage_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:gold_storage_upgrade"
+    },
+    "hopper_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:hopper_upgrade"
+    },
+    "illumination_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:illumination_upgrade x8"
+    },
+    "iron_storage_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:iron_storage_upgrade"
+    },
+    "jungle_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:jungle_full_drawers_1"
+    },
+    "jungle_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:jungle_full_drawers_2 x2"
+    },
+    "jungle_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:jungle_full_drawers_4 x4"
+    },
+    "jungle_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:jungle_half_drawers_1"
+    },
+    "jungle_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:jungle_half_drawers_2 x2"
+    },
+    "jungle_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:jungle_half_drawers_4 x4"
+    },
+    "jungle_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:jungle_trim x4"
+    },
+    "keybutton_concealment": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "storagedrawers:keybutton_concealment"
+    },
+    "keybutton_drawer": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "storagedrawers:keybutton_drawer"
+    },
+    "keybutton_quantify": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "storagedrawers:keybutton_quantify"
+    },
+    "keyring": {
+      "type": "storagedrawers:keyring",
+      "result": "unknown"
+    },
+    "magnet_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:magnet_upgrade"
+    },
+    "magnet_upgrade_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:magnet_upgrade_2"
+    },
+    "magnet_upgrade_3": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:magnet_upgrade_3"
+    },
+    "mangrove_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:mangrove_full_drawers_1"
+    },
+    "mangrove_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:mangrove_full_drawers_2 x2"
+    },
+    "mangrove_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:mangrove_full_drawers_4 x4"
+    },
+    "mangrove_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:mangrove_half_drawers_1"
+    },
+    "mangrove_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:mangrove_half_drawers_2 x2"
+    },
+    "mangrove_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:mangrove_half_drawers_4 x4"
+    },
+    "mangrove_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:mangrove_trim x4"
+    },
+    "max_redstone_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:max_redstone_upgrade"
+    },
+    "min_redstone_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:min_redstone_upgrade"
+    },
+    "netherite_storage_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:netherite_storage_upgrade"
+    },
+    "oak_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:oak_full_drawers_1"
+    },
+    "oak_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:oak_full_drawers_2 x2"
+    },
+    "oak_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:oak_full_drawers_4 x4"
+    },
+    "oak_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:oak_half_drawers_1"
+    },
+    "oak_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:oak_half_drawers_2 x2"
+    },
+    "oak_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:oak_half_drawers_4 x4"
+    },
+    "oak_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:oak_trim x4"
+    },
+    "obsidian_storage_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:obsidian_storage_upgrade"
+    },
+    "one_stack_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:one_stack_upgrade"
+    },
+    "personal_key": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "storagedrawers:personal_key"
+    },
+    "personal_key_cofh": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "storagedrawers:personal_key_cofh"
+    },
+    "personal_key_cycle": {
+      "type": "storagedrawers:personal_key_cycle",
+      "result": "unknown"
+    },
+    "portability_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:portability_upgrade"
+    },
+    "priority_key": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "storagedrawers:priority_key"
+    },
+    "quantify_key": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "storagedrawers:quantify_key"
+    },
+    "redstone_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:redstone_upgrade"
+    },
+    "remote_group_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:remote_group_upgrade"
+    },
+    "remote_group_upgrade_bound": {
+      "type": "storagedrawers:remote_group_upgrade",
+      "result": "unknown"
+    },
+    "remote_group_upgrade_inc": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:remote_group_upgrade"
+    },
+    "remote_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:remote_upgrade"
+    },
+    "spruce_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:spruce_full_drawers_1"
+    },
+    "spruce_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:spruce_full_drawers_2 x2"
+    },
+    "spruce_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:spruce_full_drawers_4 x4"
+    },
+    "spruce_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:spruce_half_drawers_1"
+    },
+    "spruce_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:spruce_half_drawers_2 x2"
+    },
+    "spruce_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:spruce_half_drawers_4 x4"
+    },
+    "spruce_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:spruce_trim x4"
+    },
+    "suspend_key": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "storagedrawers:suspend_key"
+    },
+    "upgrade_template": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:upgrade_template x4"
+    },
+    "void_upgrade": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:void_upgrade"
+    },
+    "warped_full_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:warped_full_drawers_1"
+    },
+    "warped_full_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:warped_full_drawers_2 x2"
+    },
+    "warped_full_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:warped_full_drawers_4 x4"
+    },
+    "warped_half_drawers_1": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:warped_half_drawers_1"
+    },
+    "warped_half_drawers_2": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:warped_half_drawers_2 x2"
+    },
+    "warped_half_drawers_4": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:warped_half_drawers_4 x4"
+    },
+    "warped_trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "storagedrawers:warped_trim x4"
+    }
+  },
+  "summary": {
+    "total_items": 87,
+    "total_blocks": 36,
+    "total_entities": 0,
+    "total_recipes": 126
+  }
+}

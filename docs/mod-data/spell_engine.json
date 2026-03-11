@@ -1,0 +1,33 @@
+{
+  "mod_id": "spell_engine",
+  "jar": "spell_engine-neoforge-1.9.6+1.21.1.jar",
+  "items": {
+    "item.spell_engine.scroll": "Spell Scroll",
+    "item.spell_engine.scroll.table_hint": "Attachable to Spell Book using Spell Binding Table",
+    "item.spell_engine.spell_book": "Spell Book"
+  },
+  "blocks": {
+    "block.spell_engine.spell_binding": "Spell Binding Table",
+    "block.spell_engine.spell_binding.description": "Use it to create and fill Spell Books."
+  },
+  "entities": {
+    "entity.spell_engine.spell_area_effect": "Area Effect",
+    "entity.spell_engine.spell_projectile": "Spell"
+  },
+  "recipes_count": 1,
+  "recipe_types": [
+    "minecraft:crafting_shaped"
+  ],
+  "recipes": {
+    "spell_binding_table": {
+      "type": "minecraft:crafting_shaped",
+      "result": "spell_engine:spell_binding"
+    }
+  },
+  "summary": {
+    "total_items": 3,
+    "total_blocks": 2,
+    "total_entities": 2,
+    "total_recipes": 1
+  }
+}

@@ -1,0 +1,1191 @@
+{
+  "mod_id": "mcwbridges",
+  "jar": "mcw-bridges-3.1.2-mc1.21.1neoforge.jar",
+  "items": {
+    "item.mcwbridges.pliers": "Pliers"
+  },
+  "blocks": {
+    "block.mcwbridges.acacia_bridge_pier": "Acacia Bridge Support",
+    "block.mcwbridges.acacia_log_bridge_middle": "Acacia Bridge",
+    "block.mcwbridges.acacia_log_bridge_stair": "Acacia Bridge Stair",
+    "block.mcwbridges.acacia_rail_bridge": "Acacia Rail Bridge",
+    "block.mcwbridges.acacia_rope_bridge_stair": "Rope Acacia Bridge Stair",
+    "block.mcwbridges.andesite_bridge": "Andesite Bridge",
+    "block.mcwbridges.andesite_bridge_pier": "Andesite Bridge Pier",
+    "block.mcwbridges.andesite_bridge_stair": "Andesite Bridge Stair",
+    "block.mcwbridges.asian_red_bridge": "Asian Red Bridge",
+    "block.mcwbridges.asian_red_bridge_pier": "Asian Red Bridge Pier",
+    "block.mcwbridges.asian_red_bridge_stair": "Asian Red Bridge Stair",
+    "block.mcwbridges.balustrade_andesite_bridge": "Balustrade Andesite Bridge",
+    "block.mcwbridges.balustrade_blackstone_bridge": "Balustrade Blackstone Bridge",
+    "block.mcwbridges.balustrade_bricks_bridge": "Balustrade Bricks Bridge",
+    "block.mcwbridges.balustrade_cobblestone_bridge": "Balustrade Cobblestone Bridge",
+    "block.mcwbridges.balustrade_deepslate_bricks_bridge": "Balustrade Deepslate Bricks Bridge",
+    "block.mcwbridges.balustrade_deepslate_tiles_bridge": "Balustrade Deepslate Tiles Bridge",
+    "block.mcwbridges.balustrade_diorite_bridge": "Balustrade Diorite Bridge",
+    "block.mcwbridges.balustrade_end_stone_bricks_bridge": "Balustrade End Stone Bricks Bridge",
+    "block.mcwbridges.balustrade_granite_bridge": "Balustrade Granite Bridge",
+    "block.mcwbridges.balustrade_mossy_cobblestone_bridge": "Balustrade Mossy Cobblestone Bridge",
+    "block.mcwbridges.balustrade_mossy_stone_bricks_bridge": "Balustrade Mossy Stone Bricks Bridge",
+    "block.mcwbridges.balustrade_mud_bricks_bridge": "Balustrade Mud Bricks Bridge",
+    "block.mcwbridges.balustrade_nether_bricks_bridge": "Balustrade Nether Bricks Bridge",
+    "block.mcwbridges.balustrade_orange_sandstone_bridge": "Balustrade Red Sandstone Bridge",
+    "block.mcwbridges.balustrade_prismarine_bricks_bridge": "Balustrade Prismarine Bricks Bridge",
+    "block.mcwbridges.balustrade_sandstone_bridge": "Balustrade Sandstone Bridge",
+    "block.mcwbridges.balustrade_stone_bricks_bridge": "Balustrade Stone Bricks Bridge",
+    "block.mcwbridges.bamboo_bridge": "Bamboo Bridge",
+    "block.mcwbridges.bamboo_bridge_pier": "Bamboo Bridge Support",
+    "block.mcwbridges.bamboo_bridge_stair": "Bamboo Bridge Stair",
+    "block.mcwbridges.birch_bridge_pier": "Birch Bridge Support",
+    "block.mcwbridges.birch_log_bridge_middle": "Birch Bridge",
+    "block.mcwbridges.birch_log_bridge_stair": "Birch Bridge Stair",
+    "block.mcwbridges.birch_rail_bridge": "Birch Rail Bridge",
+    "block.mcwbridges.birch_rope_bridge_stair": "Rope Birch Bridge Stair",
+    "block.mcwbridges.blackstone_bridge": "Blackstone Bridge",
+    "block.mcwbridges.blackstone_bridge_pier": "Blackstone Bridge Support",
+    "block.mcwbridges.blackstone_bridge_stair": "Blackstone Bridge Stair",
+    "block.mcwbridges.brick_bridge": "Brick Bridge",
+    "block.mcwbridges.brick_bridge_pier": "Brick Bridge Support",
+    "block.mcwbridges.brick_bridge_stair": "Brick Bridge Stair",
+    "block.mcwbridges.bridge_lantern": "Bridge Lantern",
+    "block.mcwbridges.bridge_torch": "Bridge Torch",
+    "block.mcwbridges.cherry_bridge_pier": "Cherry Bridge Support",
+    "block.mcwbridges.cherry_log_bridge_middle": "Cherry Bridge",
+    "block.mcwbridges.cherry_log_bridge_stair": "Cherry Bridge Stair",
+    "block.mcwbridges.cherry_rail_bridge": "Cherry Rail Bridge",
+    "block.mcwbridges.cherry_rope_bridge_stair": "Rope Cherry Bridge Stair",
+    "block.mcwbridges.cobblestone_bridge": "Cobblestone Bridge",
+    "block.mcwbridges.cobblestone_bridge_pier": "Cobblestone Bridge Pier",
+    "block.mcwbridges.cobblestone_bridge_stair": "Cobblestone Bridge Stair",
+    "block.mcwbridges.crimson_bridge_pier": "Crimson Bridge Support",
+    "block.mcwbridges.crimson_log_bridge_middle": "Crimson Bridge",
+    "block.mcwbridges.crimson_log_bridge_stair": "Crimson Bridge Stair",
+    "block.mcwbridges.crimson_rail_bridge": "Crimson Rail Bridge",
+    "block.mcwbridges.crimson_rope_bridge_stair": "Rope Crimson Bridge Stair",
+    "block.mcwbridges.dark_oak_bridge_pier": "Dark Oak Bridge Support",
+    "block.mcwbridges.dark_oak_log_bridge_middle": "Dark Oak Bridge",
+    "block.mcwbridges.dark_oak_log_bridge_stair": "Dark Oak Bridge Stair",
+    "block.mcwbridges.dark_oak_rail_bridge": "Dark Oak Rail Bridge",
+    "block.mcwbridges.dark_oak_rope_bridge_stair": "Rope Dark Oak Bridge Stair",
+    "block.mcwbridges.deepslate_brick_bridge": "Deepslate Brick Bridge",
+    "block.mcwbridges.deepslate_brick_bridge_pier": "Deepslate Brick Bridge Support",
+    "block.mcwbridges.deepslate_brick_bridge_stair": "Deepslate Brick Bridge Stair",
+    "block.mcwbridges.deepslate_tile_bridge": "Deepslate Tile Bridge",
+    "block.mcwbridges.deepslate_tile_bridge_pier": "Deepslate Tile Bridge Support",
+    "block.mcwbridges.deepslate_tile_bridge_stair": "Deepslate Tile Bridge Stair",
+    "block.mcwbridges.diorite_bridge": "Diorite Bridge",
+    "block.mcwbridges.diorite_bridge_pier": "Diorite Bridge Pier",
+    "block.mcwbridges.diorite_bridge_stair": "Diorite Bridge Stair",
+    "block.mcwbridges.dry_bamboo_bridge": "Dry Bamboo Bridge",
+    "block.mcwbridges.dry_bamboo_bridge_pier": "Dry Bamboo Bridge Support",
+    "block.mcwbridges.dry_bamboo_bridge_stair": "Dry Bamboo Bridge Stair",
+    "block.mcwbridges.end_stone_bricks_bridge": "End Stone Bricks Bridge",
+    "block.mcwbridges.end_stone_bricks_bridge_pier": "End Stone Bricks Bridge Pier",
+    "block.mcwbridges.end_stone_bricks_bridge_stair": "End Stone Bricks Bridge Stair",
+    "block.mcwbridges.glass_bridge": "Glass Bridge",
+    "block.mcwbridges.glass_bridge_pier": "Glass Bridge Pier",
+    "block.mcwbridges.glass_bridge_stair": "Glass Bridge Stair",
+    "block.mcwbridges.granite_bridge": "Granite Bridge",
+    "block.mcwbridges.granite_bridge_pier": "Granite Bridge Pier",
+    "block.mcwbridges.granite_bridge_stair": "Granite Bridge Stair",
+    "block.mcwbridges.iron_bridge": "Iron Bridge",
+    "block.mcwbridges.iron_bridge_pier": "Iron Bridge Support",
+    "block.mcwbridges.iron_bridge_stair": "Iron Bridge Stair",
+    "block.mcwbridges.jungle_bridge_pier": "Jungle Bridge Support",
+    "block.mcwbridges.jungle_log_bridge_middle": "Jungle Bridge",
+    "block.mcwbridges.jungle_log_bridge_stair": "Jungle Bridge Stair",
+    "block.mcwbridges.jungle_rail_bridge": "Jungle Rail Bridge",
+    "block.mcwbridges.jungle_rope_bridge_stair": "Rope Jungle Bridge Stair",
+    "block.mcwbridges.mangrove_bridge_pier": "Mangrove Bridge Support",
+    "block.mcwbridges.mangrove_log_bridge_middle": "Mangrove Bridge",
+    "block.mcwbridges.mangrove_log_bridge_stair": "Mangrove Bridge Stair",
+    "block.mcwbridges.mangrove_rail_bridge": "Mangrove Rail Bridge",
+    "block.mcwbridges.mangrove_rope_bridge_stair": "Rope Mangrove Bridge Stair",
+    "block.mcwbridges.mossy_cobblestone_bridge": "Mossy Cobblestone Bridge",
+    "block.mcwbridges.mossy_cobblestone_bridge_pier": "Mossy Cobblestone Bridge Pier",
+    "block.mcwbridges.mossy_cobblestone_bridge_stair": "Mossy Cobblestone Bridge Stair",
+    "block.mcwbridges.mossy_stone_brick_bridge": "Mossy Stone Brick Bridge",
+    "block.mcwbridges.mossy_stone_bridge_pier": "Mossy Stone Bridge Support",
+    "block.mcwbridges.mossy_stone_bridge_stair": "Mossy Stone Bridge Stair",
+    "block.mcwbridges.mud_brick_bridge": "Mud Brick Bridge",
+    "block.mcwbridges.mud_brick_bridge_pier": "Mud Brick Bridge Support",
+    "block.mcwbridges.mud_brick_bridge_stair": "Mud Brick Bridge Stair",
+    "block.mcwbridges.nether_bricks_bridge": "Nether Bricks Bridge",
+    "block.mcwbridges.nether_bricks_bridge_pier": "Nether Bricks Bridge Pier",
+    "block.mcwbridges.nether_bricks_bridge_stair": "Nether Bricks Bridge Stair",
+    "block.mcwbridges.oak_bridge_pier": "Oak Bridge Support",
+    "block.mcwbridges.oak_log_bridge_middle": "Oak Bridge",
+    "block.mcwbridges.oak_log_bridge_stair": "Oak Bridge Stair",
+    "block.mcwbridges.oak_rail_bridge": "Oak Rail Bridge",
+    "block.mcwbridges.oak_rope_bridge_stair": "Rope Oak Bridge Stair",
+    "block.mcwbridges.orange_sandstone_bridge": "Red Sandstone Bridge",
+    "block.mcwbridges.pale_oak_bridge_pier": "Pale Oak Bridge Support",
+    "block.mcwbridges.pale_oak_log_bridge_middle": "Pale Oak Bridge",
+    "block.mcwbridges.pale_oak_log_bridge_stair": "Pale Oak Bridge Stair",
+    "block.mcwbridges.pale_oak_rail_bridge": "Pale Oak Rail Bridge",
+    "block.mcwbridges.pale_oak_rope_bridge_stair": "Rope Pale Oak Bridge Stair",
+    "block.mcwbridges.prismarine_bricks_bridge": "Prismarine Bricks Bridge",
+    "block.mcwbridges.prismarine_bricks_bridge_pier": "Prismarine Bricks Bridge Pier",
+    "block.mcwbridges.prismarine_bricks_bridge_stair": "Prismarine Bricks Bridge Stair",
+    "block.mcwbridges.red_sandstone_bridge_pier": "Red Sandstone Bridge Support",
+    "block.mcwbridges.red_sandstone_bridge_stair": "Red Sandstone Bridge Stair",
+    "block.mcwbridges.rope_acacia_bridge": "Rope Acacia Bridge",
+    "block.mcwbridges.rope_birch_bridge": "Rope Birch Bridge",
+    "block.mcwbridges.rope_cherry_bridge": "Rope Cherry Bridge",
+    "block.mcwbridges.rope_crimson_bridge": "Rope Crimson Bridge",
+    "block.mcwbridges.rope_dark_oak_bridge": "Rope Dark Oak Bridge",
+    "block.mcwbridges.rope_jungle_bridge": "Rope Jungle Bridge",
+    "block.mcwbridges.rope_mangrove_bridge": "Rope Mangrove Bridge",
+    "block.mcwbridges.rope_oak_bridge": "Rope Oak Bridge",
+    "block.mcwbridges.rope_pale_oak_bridge": "Rope Pale Oak Bridge",
+    "block.mcwbridges.rope_spruce_bridge": "Rope Spruce Bridge",
+    "block.mcwbridges.rope_warped_bridge": "Rope Warped Bridge",
+    "block.mcwbridges.sandstone_bridge": "Sandstone Bridge",
+    "block.mcwbridges.sandstone_bridge_pier": "Sandstone Bridge Support",
+    "block.mcwbridges.sandstone_bridge_stair": "Sandstone Bridge Stair",
+    "block.mcwbridges.spruce_bridge_pier": "Spruce Bridge Support",
+    "block.mcwbridges.spruce_log_bridge_middle": "Spruce Bridge",
+    "block.mcwbridges.spruce_log_bridge_stair": "Spruce Bridge Stair",
+    "block.mcwbridges.spruce_rail_bridge": "Spruce Rail Bridge",
+    "block.mcwbridges.spruce_rope_bridge_stair": "Rope Spruce Bridge Stair",
+    "block.mcwbridges.stone_brick_bridge": "Stone Brick Bridge",
+    "block.mcwbridges.stone_brick_bridge_stair": "Stone Brick Bridge Stair",
+    "block.mcwbridges.stone_bridge_pier": "Stone Bridge Support",
+    "block.mcwbridges.warped_bridge_pier": "Warped Bridge Support",
+    "block.mcwbridges.warped_log_bridge_middle": "Warped Bridge",
+    "block.mcwbridges.warped_log_bridge_stair": "Warped Bridge Stair",
+    "block.mcwbridges.warped_rail_bridge": "Warped Rail Bridge",
+    "block.mcwbridges.warped_rope_bridge_stair": "Rope Warped Bridge Stair"
+  },
+  "entities": {},
+  "recipes_count": 254,
+  "recipe_types": [
+    "minecraft:crafting_shaped",
+    "minecraft:stonecutting",
+    "minecraft:crafting_shapeless"
+  ],
+  "recipes": {
+    "acacia_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:acacia_bridge_pier x3"
+    },
+    "acacia_log_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:acacia_log_bridge_middle x4"
+    },
+    "acacia_log_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:acacia_log_bridge_stair x6"
+    },
+    "acacia_log_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:acacia_log_bridge_middle"
+    },
+    "acacia_rail_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:acacia_rail_bridge x4"
+    },
+    "acacia_rope_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:acacia_rope_bridge_stair x6"
+    },
+    "acacia_rope_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:rope_acacia_bridge"
+    },
+    "andesite_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:andesite_bridge x4"
+    },
+    "andesite_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:andesite_bridge_pier x3"
+    },
+    "andesite_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:andesite_bridge_stair x6"
+    },
+    "andesite_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:andesite_bridge"
+    },
+    "asian_red_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:asian_red_bridge x4"
+    },
+    "asian_red_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:asian_red_bridge_pier x3"
+    },
+    "asian_red_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:asian_red_bridge_stair x6"
+    },
+    "balustrade_andesite_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_andesite_bridge x5"
+    },
+    "balustrade_blackstone_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_blackstone_bridge x5"
+    },
+    "balustrade_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_bricks_bridge x5"
+    },
+    "balustrade_cobblestone_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_cobblestone_bridge x5"
+    },
+    "balustrade_deepslate_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_deepslate_bricks_bridge x5"
+    },
+    "balustrade_deepslate_tiles_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_deepslate_tiles_bridge x5"
+    },
+    "balustrade_diorite_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_diorite_bridge x5"
+    },
+    "balustrade_end_stone_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_end_stone_bricks_bridge x5"
+    },
+    "balustrade_granite_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_granite_bridge x5"
+    },
+    "balustrade_mossy_cobblestone_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_mossy_cobblestone_bridge x5"
+    },
+    "balustrade_mossy_stone_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_mossy_stone_bricks_bridge x5"
+    },
+    "balustrade_mud_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_mud_bricks_bridge x5"
+    },
+    "balustrade_nether_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_nether_bricks_bridge x5"
+    },
+    "balustrade_orange_sandstone_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_orange_sandstone_bridge x5"
+    },
+    "balustrade_prismarine_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_prismarine_bricks_bridge x5"
+    },
+    "balustrade_sandstone_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_sandstone_bridge x5"
+    },
+    "balustrade_stone_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:balustrade_stone_bricks_bridge x5"
+    },
+    "bamboo_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:bamboo_bridge"
+    },
+    "bamboo_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:bamboo_bridge_pier"
+    },
+    "bamboo_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:bamboo_bridge_stair x6"
+    },
+    "bamboo_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:bamboo_bridge"
+    },
+    "birch_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:birch_bridge_pier x3"
+    },
+    "birch_log_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:birch_log_bridge_middle x4"
+    },
+    "birch_log_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:birch_log_bridge_stair x6"
+    },
+    "birch_log_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:birch_log_bridge_middle"
+    },
+    "birch_rail_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:birch_rail_bridge x4"
+    },
+    "birch_rope_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:birch_rope_bridge_stair x6"
+    },
+    "birch_rope_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:rope_birch_bridge"
+    },
+    "blackstone_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:blackstone_bridge x4"
+    },
+    "blackstone_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:blackstone_bridge_pier x3"
+    },
+    "blackstone_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:blackstone_bridge_stair x6"
+    },
+    "blackstone_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:blackstone_bridge"
+    },
+    "brick_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:brick_bridge x4"
+    },
+    "brick_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:brick_bridge_pier x3"
+    },
+    "brick_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:brick_bridge_stair x6"
+    },
+    "brick_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:brick_bridge"
+    },
+    "bridge_lantern": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:bridge_lantern x2"
+    },
+    "bridge_torch": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:bridge_torch x2"
+    },
+    "cherry_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:cherry_bridge_pier x3"
+    },
+    "cherry_log_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:cherry_log_bridge_middle x4"
+    },
+    "cherry_log_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:cherry_log_bridge_stair x6"
+    },
+    "cherry_log_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:cherry_log_bridge_middle"
+    },
+    "cherry_rail_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:cherry_rail_bridge x4"
+    },
+    "cherry_rope_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:cherry_rope_bridge_stair x6"
+    },
+    "cherry_rope_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:rope_cherry_bridge"
+    },
+    "cobblestone_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:cobblestone_bridge x4"
+    },
+    "cobblestone_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:cobblestone_bridge_pier x3"
+    },
+    "cobblestone_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:cobblestone_bridge_stair x6"
+    },
+    "cobblestone_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:cobblestone_bridge"
+    },
+    "crimson_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:crimson_bridge_pier x3"
+    },
+    "crimson_log_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:crimson_log_bridge_middle x4"
+    },
+    "crimson_log_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:crimson_log_bridge_stair x6"
+    },
+    "crimson_log_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:crimson_log_bridge_middle"
+    },
+    "crimson_rail_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:crimson_rail_bridge x4"
+    },
+    "crimson_rope_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:crimson_rope_bridge_stair x6"
+    },
+    "crimson_rope_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:rope_crimson_bridge"
+    },
+    "dark_oak_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:dark_oak_bridge_pier x3"
+    },
+    "dark_oak_log_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:dark_oak_log_bridge_middle x4"
+    },
+    "dark_oak_log_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:dark_oak_log_bridge_stair x6"
+    },
+    "dark_oak_log_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:dark_oak_log_bridge_middle"
+    },
+    "dark_oak_rail_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:dark_oak_rail_bridge x4"
+    },
+    "dark_oak_rope_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:dark_oak_rope_bridge_stair x6"
+    },
+    "dark_oak_rope_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:rope_dark_oak_bridge"
+    },
+    "deepslate_brick_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:deepslate_brick_bridge x4"
+    },
+    "deepslate_brick_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:deepslate_brick_bridge_pier x3"
+    },
+    "deepslate_brick_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:deepslate_brick_bridge_stair x6"
+    },
+    "deepslate_brick_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:deepslate_brick_bridge"
+    },
+    "deepslate_tile_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:deepslate_tile_bridge x4"
+    },
+    "deepslate_tile_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:deepslate_tile_bridge_pier x3"
+    },
+    "deepslate_tile_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:deepslate_tile_bridge_stair x6"
+    },
+    "deepslate_tile_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:deepslate_tile_bridge"
+    },
+    "diorite_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:diorite_bridge x4"
+    },
+    "diorite_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:diorite_bridge_pier x3"
+    },
+    "diorite_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:diorite_bridge_stair x6"
+    },
+    "diorite_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:diorite_bridge"
+    },
+    "dry_bamboo_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:dry_bamboo_bridge"
+    },
+    "dry_bamboo_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:dry_bamboo_bridge_pier"
+    },
+    "dry_bamboo_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:dry_bamboo_bridge_stair x6"
+    },
+    "dry_bamboo_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:dry_bamboo_bridge"
+    },
+    "end_stone_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:end_stone_bricks_bridge x4"
+    },
+    "end_stone_bricks_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:end_stone_bricks_bridge_pier x3"
+    },
+    "end_stone_bricks_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:end_stone_bricks_bridge_stair x6"
+    },
+    "end_stone_bricks_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:end_stone_bricks_bridge"
+    },
+    "glass_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:glass_bridge x4"
+    },
+    "glass_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:glass_bridge_pier x3"
+    },
+    "glass_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:glass_bridge_stair x6"
+    },
+    "granite_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:granite_bridge x4"
+    },
+    "granite_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:granite_bridge_pier x3"
+    },
+    "granite_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:granite_bridge_stair x6"
+    },
+    "granite_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:granite_bridge"
+    },
+    "iron_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:iron_bridge"
+    },
+    "iron_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:iron_bridge_pier x3"
+    },
+    "iron_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:iron_bridge_stair x6"
+    },
+    "iron_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:iron_bridge"
+    },
+    "jungle_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:jungle_bridge_pier x3"
+    },
+    "jungle_log_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:jungle_log_bridge_middle x4"
+    },
+    "jungle_log_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:jungle_log_bridge_stair x6"
+    },
+    "jungle_log_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:jungle_log_bridge_middle"
+    },
+    "jungle_rail_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:jungle_rail_bridge x4"
+    },
+    "jungle_rope_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:jungle_rope_bridge_stair x6"
+    },
+    "jungle_rope_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:rope_jungle_bridge"
+    },
+    "mangrove_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mangrove_bridge_pier x3"
+    },
+    "mangrove_log_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mangrove_log_bridge_middle x4"
+    },
+    "mangrove_log_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mangrove_log_bridge_stair x6"
+    },
+    "mangrove_log_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:mangrove_log_bridge_middle"
+    },
+    "mangrove_rail_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mangrove_rail_bridge x4"
+    },
+    "mangrove_rope_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mangrove_rope_bridge_stair x6"
+    },
+    "mangrove_rope_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:rope_mangrove_bridge"
+    },
+    "mossy_cobblestone_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mossy_cobblestone_bridge x4"
+    },
+    "mossy_cobblestone_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mossy_cobblestone_bridge_pier x3"
+    },
+    "mossy_cobblestone_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mossy_cobblestone_bridge_stair x6"
+    },
+    "mossy_cobblestone_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:mossy_cobblestone_bridge"
+    },
+    "mossy_stone_brick_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mossy_stone_brick_bridge x4"
+    },
+    "mossy_stone_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mossy_stone_bridge_pier x3"
+    },
+    "mossy_stone_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mossy_stone_bridge_stair x6"
+    },
+    "mossy_stone_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:mossy_stone_brick_bridge"
+    },
+    "mud_brick_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mud_brick_bridge x4"
+    },
+    "mud_brick_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mud_brick_bridge_pier x3"
+    },
+    "mud_brick_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:mud_brick_bridge_stair x6"
+    },
+    "mud_brick_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:mud_brick_bridge"
+    },
+    "nether_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:nether_bricks_bridge x4"
+    },
+    "nether_bricks_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:nether_bricks_bridge_pier x3"
+    },
+    "nether_bricks_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:nether_bricks_bridge_stair x6"
+    },
+    "nether_bricks_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:nether_bricks_bridge"
+    },
+    "oak_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:oak_bridge_pier x3"
+    },
+    "oak_log_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:oak_log_bridge_middle x4"
+    },
+    "oak_log_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:oak_log_bridge_stair x6"
+    },
+    "oak_log_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:oak_log_bridge_middle"
+    },
+    "oak_rail_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:oak_rail_bridge x4"
+    },
+    "oak_rope_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:oak_rope_bridge_stair x6"
+    },
+    "oak_rope_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:rope_oak_bridge"
+    },
+    "orange_sandstone_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:orange_sandstone_bridge x4"
+    },
+    "pliers": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:pliers"
+    },
+    "prismarine_bricks_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:prismarine_bricks_bridge x4"
+    },
+    "prismarine_bricks_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:prismarine_bricks_bridge_pier x3"
+    },
+    "prismarine_bricks_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:prismarine_bricks_bridge_stair x6"
+    },
+    "prismarine_bricks_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:prismarine_bricks_bridge"
+    },
+    "red_sandstone_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:red_sandstone_bridge_pier x3"
+    },
+    "red_sandstone_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:red_sandstone_bridge_stair x6"
+    },
+    "red_sandstone_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:orange_sandstone_bridge"
+    },
+    "rope_acacia_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:rope_acacia_bridge x4"
+    },
+    "rope_birch_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:rope_birch_bridge x4"
+    },
+    "rope_cherry_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:rope_cherry_bridge x4"
+    },
+    "rope_crimson_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:rope_crimson_bridge x4"
+    },
+    "rope_dark_oak_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:rope_dark_oak_bridge x4"
+    },
+    "rope_jungle_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:rope_jungle_bridge x4"
+    },
+    "rope_mangrove_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:rope_mangrove_bridge x4"
+    },
+    "rope_oak_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:rope_oak_bridge x4"
+    },
+    "rope_spruce_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:rope_spruce_bridge x4"
+    },
+    "rope_warped_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:rope_warped_bridge x4"
+    },
+    "sandstone_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:sandstone_bridge x4"
+    },
+    "sandstone_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:sandstone_bridge_pier x3"
+    },
+    "sandstone_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:sandstone_bridge_stair x6"
+    },
+    "sandstone_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:sandstone_bridge"
+    },
+    "spruce_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:spruce_bridge_pier x3"
+    },
+    "spruce_log_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:spruce_log_bridge_middle x4"
+    },
+    "spruce_log_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:spruce_log_bridge_stair x6"
+    },
+    "spruce_log_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:spruce_log_bridge_middle"
+    },
+    "spruce_rail_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:spruce_rail_bridge x4"
+    },
+    "spruce_rope_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:spruce_rope_bridge_stair x6"
+    },
+    "spruce_rope_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:rope_spruce_bridge"
+    },
+    "stonecutter_andesite_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:andesite_bridge"
+    },
+    "stonecutter_andesite_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:andesite_bridge_pier"
+    },
+    "stonecutter_andesite_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:andesite_bridge_stair"
+    },
+    "stonecutter_balustrade_andesite_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_andesite_bridge"
+    },
+    "stonecutter_balustrade_blackstone_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_blackstone_bridge"
+    },
+    "stonecutter_balustrade_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_bricks_bridge"
+    },
+    "stonecutter_balustrade_cobblestone_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_cobblestone_bridge"
+    },
+    "stonecutter_balustrade_deepslate_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_deepslate_bricks_bridge"
+    },
+    "stonecutter_balustrade_deepslate_tiles_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_deepslate_tiles_bridge"
+    },
+    "stonecutter_balustrade_diorite_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_diorite_bridge"
+    },
+    "stonecutter_balustrade_end_stone_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_end_stone_bricks_bridge"
+    },
+    "stonecutter_balustrade_granite_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_granite_bridge"
+    },
+    "stonecutter_balustrade_mossy_cobblestone_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_mossy_cobblestone_bridge"
+    },
+    "stonecutter_balustrade_mossy_stone_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_mossy_stone_bricks_bridge"
+    },
+    "stonecutter_balustrade_mud_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_mud_bricks_bridge"
+    },
+    "stonecutter_balustrade_nether_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_nether_bricks_bridge"
+    },
+    "stonecutter_balustrade_orange_sandstone_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_orange_sandstone_bridge"
+    },
+    "stonecutter_balustrade_prismarine_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_prismarine_bricks_bridge"
+    },
+    "stonecutter_balustrade_sandstone_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_sandstone_bridge"
+    },
+    "stonecutter_balustrade_stone_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:balustrade_stone_bricks_bridge"
+    },
+    "stonecutter_blackstone_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:blackstone_bridge"
+    },
+    "stonecutter_blackstone_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:blackstone_bridge_pier"
+    },
+    "stonecutter_blackstone_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:blackstone_bridge_stair"
+    },
+    "stonecutter_brick_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:brick_bridge"
+    },
+    "stonecutter_brick_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:brick_bridge_pier"
+    },
+    "stonecutter_brick_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:brick_bridge_stair"
+    },
+    "stonecutter_cobblestone_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:cobblestone_bridge"
+    },
+    "stonecutter_cobblestone_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:cobblestone_bridge_pier"
+    },
+    "stonecutter_cobblestone_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:cobblestone_bridge_stair"
+    },
+    "stonecutter_deepslate_brick_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:deepslate_brick_bridge"
+    },
+    "stonecutter_deepslate_brick_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:deepslate_brick_bridge_pier"
+    },
+    "stonecutter_deepslate_brick_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:deepslate_brick_bridge_stair"
+    },
+    "stonecutter_deepslate_tile_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:deepslate_tile_bridge"
+    },
+    "stonecutter_deepslate_tile_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:deepslate_tile_bridge_pier"
+    },
+    "stonecutter_deepslate_tile_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:deepslate_tile_bridge_stair"
+    },
+    "stonecutter_diorite_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:diorite_bridge"
+    },
+    "stonecutter_diorite_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:diorite_bridge_pier"
+    },
+    "stonecutter_diorite_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:diorite_bridge_stair"
+    },
+    "stonecutter_end_stone_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:end_stone_bricks_bridge"
+    },
+    "stonecutter_end_stone_bricks_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:end_stone_bricks_bridge_pier"
+    },
+    "stonecutter_end_stone_bricks_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:end_stone_bricks_bridge_stair"
+    },
+    "stonecutter_granite_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:granite_bridge"
+    },
+    "stonecutter_granite_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:granite_bridge_pier"
+    },
+    "stonecutter_granite_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:granite_bridge_stair"
+    },
+    "stonecutter_mossy_cobblestone_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:mossy_cobblestone_bridge"
+    },
+    "stonecutter_mossy_cobblestone_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:mossy_cobblestone_bridge_pier"
+    },
+    "stonecutter_mossy_cobblestone_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:mossy_cobblestone_bridge_stair"
+    },
+    "stonecutter_mossy_stone_brick_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:mossy_stone_brick_bridge"
+    },
+    "stonecutter_mossy_stone_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:mossy_stone_bridge_pier"
+    },
+    "stonecutter_mossy_stone_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:mossy_stone_bridge_stair"
+    },
+    "stonecutter_mud_brick_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:mud_brick_bridge"
+    },
+    "stonecutter_mud_brick_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:mud_brick_bridge_pier"
+    },
+    "stonecutter_mud_brick_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:mud_brick_bridge_stair"
+    },
+    "stonecutter_nether_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:nether_bricks_bridge"
+    },
+    "stonecutter_nether_bricks_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:nether_bricks_bridge_pier"
+    },
+    "stonecutter_nether_bricks_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:nether_bricks_bridge_stair"
+    },
+    "stonecutter_orange_sandstone_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:orange_sandstone_bridge"
+    },
+    "stonecutter_prismarine_bricks_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:prismarine_bricks_bridge"
+    },
+    "stonecutter_prismarine_bricks_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:prismarine_bricks_bridge_pier"
+    },
+    "stonecutter_prismarine_bricks_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:prismarine_bricks_bridge_stair"
+    },
+    "stonecutter_red_sandstone_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:red_sandstone_bridge_pier"
+    },
+    "stonecutter_red_sandstone_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:red_sandstone_bridge_stair"
+    },
+    "stonecutter_sandstone_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:sandstone_bridge"
+    },
+    "stonecutter_sandstone_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:sandstone_bridge_pier"
+    },
+    "stonecutter_sandstone_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:sandstone_bridge_stair"
+    },
+    "stonecutter_stone_brick_bridge": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:stone_brick_bridge"
+    },
+    "stonecutter_stone_brick_bridge_stair": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:stone_brick_bridge_stair"
+    },
+    "stonecutter_stone_bridge_pier": {
+      "type": "minecraft:stonecutting",
+      "result": "mcwbridges:stone_bridge_pier"
+    },
+    "stone_brick_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:stone_brick_bridge x4"
+    },
+    "stone_brick_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:stone_brick_bridge_stair x6"
+    },
+    "stone_brick_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:stone_brick_bridge"
+    },
+    "stone_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:stone_bridge_pier x3"
+    },
+    "warped_bridge_pier": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:warped_bridge_pier x3"
+    },
+    "warped_log_bridge_middle": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:warped_log_bridge_middle x4"
+    },
+    "warped_log_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:warped_log_bridge_stair x6"
+    },
+    "warped_log_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:warped_log_bridge_middle"
+    },
+    "warped_rail_bridge": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:warped_rail_bridge x4"
+    },
+    "warped_rope_bridge_stair": {
+      "type": "minecraft:crafting_shaped",
+      "result": "mcwbridges:warped_rope_bridge_stair x6"
+    },
+    "warped_rope_bridge_stair_recycle": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "mcwbridges:rope_warped_bridge"
+    }
+  },
+  "summary": {
+    "total_items": 1,
+    "total_blocks": 151,
+    "total_entities": 0,
+    "total_recipes": 254
+  }
+}

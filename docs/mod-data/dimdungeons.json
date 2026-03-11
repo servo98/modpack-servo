@@ -1,0 +1,44 @@
+{
+  "mod_id": "dimdungeons",
+  "jar": "dimdungeons-203-neoforge-1.21.0.jar",
+  "items": {},
+  "blocks": {},
+  "entities": {},
+  "recipes_count": 6,
+  "recipe_types": [
+    "minecraft:crafting_shaped",
+    "minecraft:crafting_shapeless"
+  ],
+  "recipes": {
+    "recipe_block_gilded_portal": {
+      "type": "minecraft:crafting_shaped",
+      "result": "dimdungeons:block_gilded_portal"
+    },
+    "recipe_block_portal_keyhole": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "dimdungeons:block_portal_keyhole"
+    },
+    "recipe_homeward_pearl": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "dimdungeons:item_homeward_pearl"
+    },
+    "recipe_item_blank_build_key": {
+      "type": "minecraft:crafting_shaped",
+      "result": "dimdungeons:item_blank_build_key"
+    },
+    "recipe_item_blank_key": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "dimdungeons:item_portal_key"
+    },
+    "recipe_item_guidebook_2": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "patchouli:guide_book"
+    }
+  },
+  "summary": {
+    "total_items": 0,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 6
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "mod_id": "runes",
+  "jar": "runes-neoforge-1.2.1+1.21.1.jar",
+  "items": {
+    "item.runes.arcane_stone": "Arcane Rune",
+    "item.runes.fire_stone": "Fire Rune",
+    "item.runes.frost_stone": "Frost Rune",
+    "item.runes.healing_stone": "Healing Rune",
+    "item.runes.large_rune_pouch": "Mystic Rune Pouch",
+    "item.runes.lightning_stone": "Lightning Rune",
+    "item.runes.medium_rune_pouch": "Phantom Rune Pouch",
+    "item.runes.rune_pouch.hint": "Provides runes for spell casting, when equipped.",
+    "item.runes.small_rune_pouch": "Rune Pouch",
+    "item.runes.soul_stone": "Soul Rune"
+  },
+  "blocks": {
+    "block.runes.crafting_altar": "Rune Crafting Altar",
+    "block.runes.crafting_altar.hint": "Craft runes more cost-efficiently."
+  },
+  "entities": {},
+  "recipes_count": 20,
+  "recipe_types": [
+    "minecraft:crafting_shaped",
+    "runes:crafting",
+    "minecraft:crafting_shapeless"
+  ],
+  "recipes": {
+    "arcane_rune_medium_altar": {
+      "type": "runes:crafting",
+      "result": "runes:arcane_stone x16"
+    },
+    "arcane_rune_medium_hand": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "runes:arcane_stone x4"
+    },
+    "arcane_rune_small_altar": {
+      "type": "runes:crafting",
+      "result": "runes:arcane_stone x8"
+    },
+    "arcane_rune_small_hand": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "runes:arcane_stone x2"
+    },
+    "fire_rune_medium_altar": {
+      "type": "runes:crafting",
+      "result": "runes:fire_stone x16"
+    },
+    "fire_rune_medium_hand": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "runes:fire_stone x4"
+    },
+    "fire_rune_small_altar": {
+      "type": "runes:crafting",
+      "result": "runes:fire_stone x8"
+    },
+    "fire_rune_small_hand": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "runes:fire_stone x2"
+    },
+    "frost_rune_medium_altar": {
+      "type": "runes:crafting",
+      "result": "runes:frost_stone x16"
+    },
+    "frost_rune_medium_hand": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "runes:frost_stone x4"
+    },
+    "frost_rune_small_altar": {
+      "type": "runes:crafting",
+      "result": "runes:frost_stone x8"
+    },
+    "frost_rune_small_hand": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "runes:frost_stone x2"
+    },
+    "healing_rune_medium_altar": {
+      "type": "runes:crafting",
+      "result": "runes:healing_stone x16"
+    },
+    "healing_rune_medium_hand": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "runes:healing_stone x4"
+    },
+    "healing_rune_small_altar": {
+      "type": "runes:crafting",
+      "result": "runes:healing_stone x8"
+    },
+    "healing_rune_small_hand": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "runes:healing_stone x2"
+    },
+    "large_rune_pouch": {
+      "type": "minecraft:crafting_shaped",
+      "result": "runes:large_rune_pouch"
+    },
+    "medium_rune_pouch": {
+      "type": "minecraft:crafting_shaped",
+      "result": "runes:medium_rune_pouch"
+    },
+    "small_rune_pouch": {
+      "type": "minecraft:crafting_shaped",
+      "result": "runes:small_rune_pouch"
+    },
+    "rune_crafting_altar": {
+      "type": "minecraft:crafting_shaped",
+      "result": "runes:crafting_altar"
+    }
+  },
+  "summary": {
+    "total_items": 10,
+    "total_blocks": 2,
+    "total_entities": 0,
+    "total_recipes": 20
+  }
+}

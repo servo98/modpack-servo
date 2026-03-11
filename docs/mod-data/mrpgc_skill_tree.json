@@ -1,0 +1,16 @@
+{
+  "mod_id": "mrpgc_skill_tree",
+  "jar": "mrpgc_skill_tree-neoforge-1.1.2+1.21.1.jar",
+  "items": {},
+  "blocks": {},
+  "entities": {},
+  "recipes_count": 0,
+  "recipe_types": [],
+  "recipes": {},
+  "summary": {
+    "total_items": 0,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 0
+  }
+}

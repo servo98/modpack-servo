@@ -1,0 +1,46 @@
+{
+  "mod_id": "solonion",
+  "jar": "Spice of Life Onion_NEOFORGE_v1.5.6_mc1.21.1.jar",
+  "items": {
+    "item.solonion.container.golden_lunchbox": "Golden Lunchbox",
+    "item.solonion.container.lunchbag": "Lunchbag",
+    "item.solonion.container.lunchbox": "Lunchbox",
+    "item.solonion.container.open": "%s + %s to open",
+    "item.solonion.food_book": "Food Book",
+    "item.solonion.golden_lunchbox": "Golden Lunchbox",
+    "item.solonion.lunchbag": "Lunchbag",
+    "item.solonion.lunchbox": "Lunchbox"
+  },
+  "blocks": {},
+  "entities": {},
+  "recipes_count": 4,
+  "recipe_types": [
+    "minecraft:crafting_shaped",
+    "solonion:upgrade_food_container",
+    "minecraft:crafting_shapeless"
+  ],
+  "recipes": {
+    "food_book": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "solonion:food_book"
+    },
+    "golden_lunchbox": {
+      "type": "solonion:upgrade_food_container",
+      "result": "solonion:golden_lunchbox"
+    },
+    "lunchbag": {
+      "type": "minecraft:crafting_shaped",
+      "result": "solonion:lunchbag"
+    },
+    "lunchbox": {
+      "type": "solonion:upgrade_food_container",
+      "result": "solonion:lunchbox"
+    }
+  },
+  "summary": {
+    "total_items": 8,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 4
+  }
+}

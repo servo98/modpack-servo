@@ -1,0 +1,248 @@
+{
+  "alexsmobs": {
+    "total_items": 334,
+    "total_blocks": 118,
+    "total_entities": 140,
+    "total_recipes": 84
+  },
+  "aquaculture": {
+    "total_items": 124,
+    "total_blocks": 5,
+    "total_entities": 40,
+    "total_recipes": 63
+  },
+  "botanypots": {
+    "total_items": 0,
+    "total_blocks": 183,
+    "total_entities": 0,
+    "total_recipes": 1285
+  },
+  "brewinandchewin": {
+    "total_items": 36,
+    "total_blocks": 11,
+    "total_entities": 0,
+    "total_recipes": 72
+  },
+  "chipped": {
+    "total_items": 6,
+    "total_blocks": 6967,
+    "total_entities": 0,
+    "total_recipes": 13
+  },
+  "create": {
+    "total_items": 204,
+    "total_blocks": 701,
+    "total_entities": 9,
+    "total_recipes": 1736
+  },
+  "create_enchantment_industry": {
+    "total_items": 7,
+    "total_blocks": 9,
+    "total_entities": 0,
+    "total_recipes": 22
+  },
+  "createaddition": {
+    "total_items": 78,
+    "total_blocks": 65,
+    "total_entities": 0,
+    "total_recipes": 150
+  },
+  "createdeco": {
+    "total_items": 20,
+    "total_blocks": 389,
+    "total_entities": 0,
+    "total_recipes": 1714
+  },
+  "croptopia": {
+    "total_items": 420,
+    "total_blocks": 117,
+    "total_entities": 0,
+    "total_recipes": 488
+  },
+  "cucumber": {
+    "total_items": 0,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 0
+  },
+  "curios": {
+    "total_items": 0,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 0
+  },
+  "dimdungeons": {
+    "total_items": 0,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 6
+  },
+  "expandeddelight": {
+    "total_items": 60,
+    "total_blocks": 43,
+    "total_entities": 0,
+    "total_recipes": 95
+  },
+  "farmersdelight": {
+    "total_items": 92,
+    "total_blocks": 126,
+    "total_entities": 1,
+    "total_recipes": 315
+  },
+  "gachamachine": {
+    "total_items": 110,
+    "total_blocks": 10,
+    "total_entities": 0,
+    "total_recipes": 20
+  },
+  "jewelry": {
+    "total_items": 85,
+    "total_blocks": 4,
+    "total_entities": 2,
+    "total_recipes": 87
+  },
+  "lootr": {
+    "total_items": 0,
+    "total_blocks": 9,
+    "total_entities": 2,
+    "total_recipes": 0
+  },
+  "mcwbridges": {
+    "total_items": 1,
+    "total_blocks": 151,
+    "total_entities": 0,
+    "total_recipes": 254
+  },
+  "mcwfurnitures": {
+    "total_items": 2,
+    "total_blocks": 652,
+    "total_entities": 0,
+    "total_recipes": 654
+  },
+  "mcwroofs": {
+    "total_items": 2,
+    "total_blocks": 605,
+    "total_entities": 0,
+    "total_recipes": 607
+  },
+  "mcwtrpdoors": {
+    "total_items": 12,
+    "total_blocks": 187,
+    "total_entities": 0,
+    "total_recipes": 191
+  },
+  "mcwwindows": {
+    "total_items": 5,
+    "total_blocks": 310,
+    "total_entities": 0,
+    "total_recipes": 317
+  },
+  "mrpgc_skill_tree": {
+    "total_items": 0,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 0
+  },
+  "mysticalagriculture": {
+    "total_items": 175,
+    "total_blocks": 73,
+    "total_entities": 0,
+    "total_recipes": 810
+  },
+  "paladins": {
+    "total_items": 71,
+    "total_blocks": 2,
+    "total_entities": 5,
+    "total_recipes": 140
+  },
+  "progressivestages": {
+    "total_items": 0,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 0
+  },
+  "ranged_weapon_api": {
+    "total_items": 10,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 0
+  },
+  "refinedstorage": {
+    "total_items": 120,
+    "total_blocks": 38,
+    "total_entities": 0,
+    "total_recipes": 420
+  },
+  "refurbished_furniture": {
+    "total_items": 25,
+    "total_blocks": 448,
+    "total_entities": 0,
+    "total_recipes": 672
+  },
+  "rogues": {
+    "total_items": 60,
+    "total_blocks": 2,
+    "total_entities": 3,
+    "total_recipes": 125
+  },
+  "runes": {
+    "total_items": 10,
+    "total_blocks": 2,
+    "total_entities": 0,
+    "total_recipes": 20
+  },
+  "skill_tree": {
+    "total_items": 0,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 0
+  },
+  "sliceanddice": {
+    "total_items": 1,
+    "total_blocks": 4,
+    "total_entities": 0,
+    "total_recipes": 8
+  },
+  "solonion": {
+    "total_items": 8,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 4
+  },
+  "spell_engine": {
+    "total_items": 3,
+    "total_blocks": 2,
+    "total_entities": 2,
+    "total_recipes": 1
+  },
+  "spell_power": {
+    "total_items": 76,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 0
+  },
+  "storagedrawers": {
+    "total_items": 87,
+    "total_blocks": 36,
+    "total_entities": 0,
+    "total_recipes": 126
+  },
+  "supplementaries": {
+    "total_items": 45,
+    "total_blocks": 251,
+    "total_entities": 14,
+    "total_recipes": 312
+  },
+  "toms_storage": {
+    "total_items": 7,
+    "total_blocks": 15,
+    "total_entities": 0,
+    "total_recipes": 25
+  },
+  "wizards": {
+    "total_items": 55,
+    "total_blocks": 0,
+    "total_entities": 3,
+    "total_recipes": 125
+  }
+}

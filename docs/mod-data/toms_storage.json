@@ -1,0 +1,145 @@
+{
+  "mod_id": "toms_storage",
+  "jar": "toms_storage-1.21-2.3.0.jar",
+  "items": {
+    "item.toms_storage.adv_wireless_terminal": "Advanced Wireless Terminal",
+    "item.toms_storage.inventory_configurator": "Inventory Configurator",
+    "item.toms_storage.item_filter": "Item Filter",
+    "item.toms_storage.paint_kit": "Paint Kit",
+    "item.toms_storage.polymorphic_item_filter": "Polymorphic Item Filter",
+    "item.toms_storage.tag_item_filter": "Tag Item Filter",
+    "item.toms_storage.wireless_terminal": "Wireless Terminal"
+  },
+  "blocks": {
+    "block.toms_storage.basic_inventory_hopper": "Basic Inventory Hopper",
+    "block.toms_storage.crafting_terminal": "Crafting Terminal",
+    "block.toms_storage.filing_cabinet": "Filing Cabinet",
+    "block.toms_storage.inventory_cable": "Inventory Cable",
+    "block.toms_storage.inventory_cable_connector": "Inventory Cable Connector",
+    "block.toms_storage.inventory_cable_connector_framed": "Inventory Cable Connector (Framed)",
+    "block.toms_storage.inventory_cable_framed": "Framed Inventory Cable",
+    "block.toms_storage.inventory_connector": "Inventory Connector",
+    "block.toms_storage.inventory_interface": "Inventory Interface",
+    "block.toms_storage.inventory_proxy": "Inventory Proxy",
+    "block.toms_storage.level_emitter": "Level Emitter",
+    "block.toms_storage.open_crate": "Open Crate",
+    "block.toms_storage.painted_trim": "Inventory Trim",
+    "block.toms_storage.storage_terminal": "Storage Terminal",
+    "block.toms_storage.trim": "Inventory Trim"
+  },
+  "entities": {},
+  "recipes_count": 25,
+  "recipe_types": [
+    "minecraft:crafting_shaped",
+    "minecraft:smithing_transform",
+    "minecraft:crafting_shapeless"
+  ],
+  "recipes": {
+    "adv_wireless_terminal": {
+      "type": "minecraft:smithing_transform",
+      "result": "toms_storage:adv_wireless_terminal"
+    },
+    "basic_inventory_hopper": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:basic_inventory_hopper"
+    },
+    "crafting_terminal": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:crafting_terminal"
+    },
+    "filing_cabinet": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:filing_cabinet"
+    },
+    "inventory_cable": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:inventory_cable x6"
+    },
+    "inventory_cable_connector": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:inventory_cable_connector"
+    },
+    "inventory_cable_connector_framed": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:inventory_cable_connector_framed"
+    },
+    "inventory_cable_connector_framed_clean": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "toms_storage:inventory_cable_connector_framed"
+    },
+    "inventory_cable_framed": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:inventory_cable_framed"
+    },
+    "inventory_cable_framed_clean": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "toms_storage:inventory_cable_framed"
+    },
+    "inventory_configurator": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:inventory_configurator"
+    },
+    "inventory_connector": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:inventory_connector"
+    },
+    "inventory_interface": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:inventory_interface"
+    },
+    "inventory_proxy": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:inventory_proxy"
+    },
+    "inventory_proxy_clean": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "toms_storage:inventory_proxy"
+    },
+    "item_filter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:item_filter"
+    },
+    "level_emitter": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:level_emitter"
+    },
+    "open_crate": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:open_crate"
+    },
+    "paint_kit": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:paint_kit"
+    },
+    "poly_item_filter": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "toms_storage:polymorphic_item_filter"
+    },
+    "storage_terminal": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:storage_terminal"
+    },
+    "tag_item_filter": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "toms_storage:tag_item_filter"
+    },
+    "trim": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:trim x2"
+    },
+    "trim_clean": {
+      "type": "minecraft:crafting_shapeless",
+      "result": "toms_storage:trim"
+    },
+    "wireless_terminal": {
+      "type": "minecraft:crafting_shaped",
+      "result": "toms_storage:wireless_terminal"
+    }
+  },
+  "summary": {
+    "total_items": 7,
+    "total_blocks": 15,
+    "total_entities": 0,
+    "total_recipes": 25
+  }
+}
