@@ -28,14 +28,18 @@ Pepe Coin = moneda universal del modpack. Conecta todos los sistemas.
 
 | Uso | Costo |
 |-----|-------|
-| Gacha principal | 10 tokens/pull |
-| Gacha ServoMart | 5 tokens/pull |
+| Gacha Basica (Verde) | 10 tokens/pull |
+| Gacha Avanzada (Azul) | 10 tokens/pull |
+| Gacha Superior (Purpura) | 15 tokens/pull |
+| Gacha Muebles (Rosa) | 5 tokens/pull |
 | Crafteo Llaves avanzadas | Variable |
 | ServoMart compras directas | Mas caro que gacha |
+
+Ver [Gacha](gacha.md) para pools de cada maquina.
 
 ## Balance por capitulo
 
 - ~150 tokens por capitulo
-- ~15 pulls gacha artefactos (a 10 tokens)
-- O ~30 pulls gacha muebles (a 5 tokens)
-- Primera pity (50 pulls) alcanzable en Ch3-4
+- Distribucion tipica: ~8 pulls artefactos (80-120 tokens) + ~4 pulls muebles (20 tokens) + 1-2 llaves dungeon
+- Primera pity (50 pulls en una maquina) alcanzable en Ch3-4
+- El jugador decide como repartir tokens entre las maquinas disponibles

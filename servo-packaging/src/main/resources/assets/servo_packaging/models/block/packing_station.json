@@ -1,0 +1,24 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "top": "servo_packaging:block/packing_station_top",
+    "side": "servo_packaging:block/packing_station_side",
+    "bottom": "minecraft:block/oak_planks",
+    "particle": "servo_packaging:block/packing_station_side"
+  },
+  "elements": [
+    {
+      "comment": "Table body - slightly shorter than full block (14/16)",
+      "from": [0, 0, 0],
+      "to": [16, 14, 16],
+      "faces": {
+        "up":    { "texture": "#top", "cullface": "up" },
+        "down":  { "texture": "#bottom", "cullface": "down" },
+        "north": { "texture": "#side", "cullface": "north" },
+        "south": { "texture": "#side", "cullface": "south" },
+        "east":  { "texture": "#side", "cullface": "east" },
+        "west":  { "texture": "#side", "cullface": "west" }
+      }
+    }
+  ]
+}

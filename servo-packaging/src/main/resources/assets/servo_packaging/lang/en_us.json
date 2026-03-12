@@ -1,0 +1,16 @@
+{
+  "item.servo_packaging.flat_cardboard": "Flat Cardboard",
+  "item.servo_packaging.open_box": "Open Box",
+  "item.servo_packaging.shipping_box": "Shipping Box",
+  "block.servo_packaging.packing_station": "Packing Station",
+  "itemGroup.servo_packaging": "Servo Packaging",
+
+  "item.servo_packaging.shipping_box.contains": "Contains: %1$dx %2$s",
+  "item.servo_packaging.shipping_box.hint": "Deliver to the Delivery Terminal",
+
+  "servo_packaging.packing.not_packable": "This item cannot be packed",
+  "servo_packaging.packing.wrong_type": "Only items of the same type can go in one box",
+  "servo_packaging.packing.progress": "Packing: %1$d/%2$d",
+  "servo_packaging.packing.sealed": "Box sealed!",
+  "servo_packaging.packing.cancelled": "Packing cancelled"
+}

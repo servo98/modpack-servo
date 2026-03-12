@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#c:crops",
+    "#c:ores",
+    "#c:raw_materials",
+    "#minecraft:coals"
+  ]
+}

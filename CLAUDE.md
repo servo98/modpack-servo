@@ -41,7 +41,6 @@ GDD completo en `docs/gdd-v2.md`. Tareas en `docs/TODO.md`.
 | Historial | `git log` | Commits = registro de sesiones (reemplaza session-log.md) |
 | Mecanicas | `docs/mechanics/*.md` | 21 docs, una por mecanica |
 | Capitulos | `docs/chapters/ch*.md` | 8 docs (ch1-ch8) con quests por capitulo |
-| Ideas originales | `docs/reference/mods-ideas*.md` | Brainstorming del usuario (solo archivo) |
 
 ## Estructura de codigo
 - `src/` — mod Java (servo_core)

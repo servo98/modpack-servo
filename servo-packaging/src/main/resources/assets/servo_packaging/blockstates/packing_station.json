@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "servo_packaging:block/packing_station" },
+    "facing=south": { "model": "servo_packaging:block/packing_station", "y": 180 },
+    "facing=east":  { "model": "servo_packaging:block/packing_station", "y": 90 },
+    "facing=west":  { "model": "servo_packaging:block/packing_station", "y": 270 }
+  }
+}

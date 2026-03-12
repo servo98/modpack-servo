@@ -12,7 +12,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModRegistry {
-    // Deferred registers for all registry types
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(Registries.BLOCK, ServoCore.MOD_ID);
     public static final DeferredRegister<Item> ITEMS =
@@ -28,22 +27,8 @@ public class ModRegistry {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ServoCore.MOD_ID);
 
-    // === BLOCKS ===
-    // Cooking workstations, boss altars, etc. will be registered here
-
     // === ITEMS ===
-    // Tokens, boss keys, molds, etc. will be registered here
-
-    // === BLOCK ENTITIES ===
-    // Workstation block entities will be registered here
-
-    // === MENUS ===
-    // GUI menus for workstations will be registered here
-
-    // === RECIPE TYPES ===
-    // Custom recipe types (blender, pastry_mold, drink_maker, advanced_oven)
-
-    // === RECIPE SERIALIZERS ===
+    // Pepe Coins, accessories, etc. will be registered here
 
     // === CREATIVE TAB ===
 

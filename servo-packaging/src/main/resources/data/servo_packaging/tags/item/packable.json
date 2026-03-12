@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "#c:foods",
+    "#c:crops",
+    "#c:ores",
+    "#c:ingots",
+    "#c:gems",
+    "#c:raw_materials",
+    "#minecraft:coals",
+    "minecraft:iron_pickaxe",
+    "minecraft:iron_sword",
+    "minecraft:iron_axe",
+    "minecraft:diamond_pickaxe",
+    "minecraft:diamond_sword",
+    "minecraft:bow",
+    "minecraft:enchanted_book"
+  ]
+}
