@@ -1,4 +1,4 @@
-# Champions (Mobs de Elite)
+# Champions
 
 > Fuente: GDD v2, seccion 3.9
 > Mod: **Champions Unofficial** (16 affixes, reemplaza sistema custom de elite mobs del GDD original)
@@ -6,7 +6,7 @@
 
 ## Overview
 
-Mobs con prefixes tipo Diablo. Implementado con **Champions Unofficial** (mod). 16 affixes en 4 categorias, spawn por zona. 6,884 combinaciones posibles.
+Mobs con affixes tipo Diablo. Implementado con **Champions Unofficial** (mod). 16 affixes en 4 categorias, spawn por zona. 6,884 combinaciones posibles.
 
 **NOTA**: El GDD originalmente llamaba esto "Elite Mobs" como sistema custom de servo_core. Decidido en Session 9 usar Champions Unofficial en su lugar.
 
@@ -57,7 +57,7 @@ Mobs con prefixes tipo Diablo. Implementado con **Champions Unofficial** (mod). 
 ## HP Scaling
 
 ```
-Elite HP = mob_hp * multiplicador
+Champion HP = mob_hp * multiplicador
   1 affix:  * 2.5
   2 affixes: * 3.75
   3 affixes: * 5.0

@@ -13,7 +13,7 @@
 | Tier | Nombre | Boost | Cantidad | Obtencion |
 |------|--------|-------|----------|-----------|
 | 1 | Tosco | +5% | 20 | Craft, quests |
-| 2 | Pulido | +12% | 15 | Gacha (12%), elites |
+| 2 | Pulido | +12% | 15 | Gacha (12%), champions |
 | 3 | Refinado | +22% + bonus | 10 | Gacha (5%), bosses |
 | 4 | Excepcional | +40% + bonus + visual | 6 | Gacha (2%), dungeon boss |
 | 5 | Maestro | +70% + 2 bonus + particulas | 3 | Gacha (1%), boss cap 7-8 |
@@ -48,7 +48,7 @@
 | Gacha | 16 | T1-5 |
 | Boss drops | 8 | T2-4 |
 | Dungeon boss | 12 | T2-3 |
-| Elite mobs | 8 | T1-2 |
+| Champions | 8 | T1-2 |
 | Quest rewards | 6 | T1-2 |
 | **Total** | **~70** (con duplicados) | |
 | Unicos esperados | ~35-40 de 54 (65-75%) | |

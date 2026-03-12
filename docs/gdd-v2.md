@@ -15,7 +15,7 @@ Cada mecanica tiene su propio doc en `docs/mechanics/`. El GDD es el overview, l
 | Cooking (Sistema de cocina) | [mechanics/cooking.md](mechanics/cooking.md) |
 | Dungeons | [mechanics/dungeons.md](mechanics/dungeons.md) |
 | Bosses | [mechanics/bosses.md](mechanics/bosses.md) |
-| Champions (mobs de elite) | [mechanics/champions.md](mechanics/champions.md) |
+| Champions | [mechanics/champions.md](mechanics/champions.md) |
 | RPG Classes | [mechanics/rpg-classes.md](mechanics/rpg-classes.md) |
 | Accessories (Curios) | [mechanics/accessories.md](mechanics/accessories.md) |
 | Gacha | [mechanics/gacha.md](mechanics/gacha.md) |
@@ -57,7 +57,7 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 **Principios**:
 - Cada mod justifica su presencia - si no sirve para progresion, no entra (excepcion: cosmeticos)
 - Progresion gateada por capitulos (ProgressiveStages)
-- Combate: RPG Series (7 clases, spells, skill trees) + Champions Unofficial (elite mobs, 16 affixes) + accesorios Jewelry/custom
+- Combate: RPG Series (7 clases, spells, skill trees) + Champions Unofficial (16 affixes) + accesorios Jewelry/custom
 - Cocina como sistema central - cocinar a mano es divertido, Create escala para entregas
 - Automatizacion tiene PROPOSITO: empacar y entregar items al Space Elevator
 - Gacha como engagement hook, no pay-to-win
@@ -200,7 +200,7 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 |---------|-------------|
 | 4 workstations de cocina | Batidora, Moldes, Drink Maker, Horno Avanzado |
 | 8 bosses de capitulo | 1 por capitulo, con fases y mecanicas unicas |
-| Elite mobs (Champions Unofficial) | 16 affixes en 4 categorias, configurados via mod (NO custom servo_core) |
+| Champions (Champions Unofficial) | 16 affixes en 4 categorias, configurados via mod (NO custom servo_core) |
 | Accesorios custom (belt, charm, head) | Curios slots que Jewelry NO cubre. Jewelry maneja rings/necklaces (85 items). Custom para los demas |
 | Recetas Tier 4 RPG | KubeJS: reemplazar Aeternium/Ruby con materiales de dungeon/boss |
 | Rebalanceo Berserker | KubeJS: quitar netherite_scrap de Berserker armor Tier 2 |
@@ -322,7 +322,7 @@ Bloque custom tipo tablet/computadora. Abres un catalogo de muebles:
 
 ### Estructura de dungeon por tier
 
-| Llave | Salas | Duracion | Elites | Boss de dungeon |
+| Llave | Salas | Duracion | Champions | Boss de dungeon |
 |-------|-------|----------|--------|----------------|
 | Basica | 5-7 | ~15-20 min | Max 1 affix, 15% spawn | No |
 | Avanzada | 10-14 | ~30-40 min | Max 2 affix, 25% spawn | No |
@@ -335,7 +335,7 @@ Bloque custom tipo tablet/computadora. Abres un catalogo de muebles:
 | Drop | Fuente | Chance |
 |------|--------|--------|
 | Ores vanilla (iron, gold, diamond) | cofres | Comun |
-| Pepe Coins (5-10) | cofres + elites | Garantizado |
+| Pepe Coins (5-10) | cofres + champions | Garantizado |
 | Runas basicas (Arcane, Frost, Fire) | cofres | 30% |
 | Enchanted Books nivel I-II | cofres | 20% |
 | Accesorio custom T1 (belt/back/feet) | cofres raros | 10% |
@@ -344,23 +344,23 @@ Bloque custom tipo tablet/computadora. Abres un catalogo de muebles:
 **Avanzada (Ch3+)** — todo lo de Basica +:
 | Drop | Fuente | Chance |
 |------|--------|--------|
-| Pepe Coins (10-20) | cofres + elites | Garantizado |
+| Pepe Coins (10-20) | cofres + champions | Garantizado |
 | Materiales Nether (Blaze Rod, Nether Wart, Quartz) | cofres | Comun |
 | RPG gear T1-T2 (armas/armor pre-crafteadas) | cofres raros | 15% |
 | Enchanted Books nivel II-III + Spell Power | cofres | 20% |
 | Accesorio custom T2 | cofres raros | 10% |
-| **Esencia de Dungeon** (custom, para craftear Llave Maestra) | elites | 15% por elite |
+| **Esencia de Dungeon** (custom, para craftear Llave Maestra) | champions | 15% por champion |
 | Unique Jewelry (de las 24 loot-only) | cofre final de run | 5% |
 
 **Maestra (Ch5+)** — todo lo de Avanzada +:
 | Drop | Fuente | Chance |
 |------|--------|--------|
-| Pepe Coins (20-35) | cofres + elites | Garantizado |
+| Pepe Coins (20-35) | cofres + champions | Garantizado |
 | Materiales raros (Netherite Scrap, Nether Star fragments) | cofres | 15% |
 | RPG gear T2-T3 | cofres raros | 15% |
 | Enchanted Books nivel III-IV + Spell Power avanzado | cofres | 25% |
 | Accesorio custom T3 | cofres raros | 12% |
-| Esencia de Dungeon (x2-3) | elites | 25% por elite |
+| Esencia de Dungeon (x2-3) | champions | 25% por champion |
 | Unique Jewelry | cofre final de run | 15% |
 | Soul/Lightning runes | cofres | 20% |
 | Moldes 4-5 estrellas | cofres raros | 8% |
@@ -368,7 +368,7 @@ Bloque custom tipo tablet/computadora. Abres un catalogo de muebles:
 **Del Nucleo (Ch7+)** — todo lo de Maestra +:
 | Drop | Fuente | Chance |
 |------|--------|--------|
-| Pepe Coins (35-50) | cofres + elites | Garantizado |
+| Pepe Coins (35-50) | cofres + champions | Garantizado |
 | Fragmento de Cristal del Nucleo (custom, para T4 RPG) | boss de dungeon | Garantizado (1-2) |
 | RPG gear T3 (pre-enchantado) | cofres raros | 20% |
 | Accesorio custom T4 | boss de dungeon | 25% |
@@ -597,7 +597,7 @@ OVERWORLD:
 | 7 | Nucleo del Dungeon | 12,800 | Cristalino. Arena que cambia de forma |
 | 8 | Devorador de Mundos | 25,600 | 4 fases: melee → Create → cocina buff → DPS race |
 
-## 3.9 Elite Mobs / Champions (Champions Unofficial)
+## 3.9 Champions (Champions Unofficial)
 
 > Implementado via mod **Champions Unofficial** (no custom servo_core). Ver detalle en [mechanics/champions.md](mechanics/champions.md).
 
@@ -654,7 +654,7 @@ OVERWORLD:
 | Tier | Nombre | Boost | Obtencion |
 |------|--------|-------|-----------|
 | 1 | Comun (cobre) | +5% | Gacha, quest |
-| 2 | Uncommon (hierro) | +12% | Gacha, elite drops |
+| 2 | Uncommon (hierro) | +12% | Gacha, champion drops |
 | 3 | Raro (oro) | +22% | Boss drops, gacha |
 | 4 | Epico (diamante) | +40% | Boss drops, dungeon |
 | 5 | Legendario (netherite) | +70% | Boss final, dungeon boss |
@@ -686,7 +686,7 @@ TOTAL:               ~13 piezas de equipo (build tipo MMO)
 
 - NO crafteable. Se obtiene como recompensa de quest en Ch1.
 - Unica por grupo. No se pueden hacer mas.
-- Usa Pepe Coins (obtenidos de quests, elites, bosses, dungeons).
+- Usa Pepe Coins (obtenidos de quests, champions, bosses, dungeons).
 
 **Gacha de Artefactos (la principal)**:
 | Rareza | Probabilidad | Contenido |
@@ -707,7 +707,7 @@ TOTAL:               ~13 piezas de equipo (build tipo MMO)
 
 Pepe Coin = moneda universal. Obtencion:
 - Quests completadas: 3-10 tokens segun dificultad
-- Elite mobs: 1-3 tokens por kill
+- Champions: 1-3 tokens por kill
 - Bosses de capitulo: 15-100+ tokens (escala por capitulo — ver [mechanics/tokens.md](mechanics/tokens.md))
 - Dungeon runs: 5-15 tokens por run
 - Comidas nuevas cocinadas (primera vez): 1 token
@@ -903,7 +903,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 | 4 | Basica + Avanzada | Mismo, loot actualizado a Ch4 |
 | 5 | + **Maestra** | 15-20 salas, champions 3 affix, 15% unique jewelry, moldes 4-5 estrellas |
 | 6 | Basica + Avanzada + Maestra | Mismo, loot actualizado a Ch6 |
-| 7 | + **Del Nucleo** | 20-25 salas + boss de dungeon, elites exclusivos, unique jewelry garantizada, Fragmentos de Cristal |
+| 7 | + **Del Nucleo** | 20-25 salas + boss de dungeon, champions exclusivos, unique jewelry garantizada, Fragmentos de Cristal |
 | 8 | Todas | Loot endgame, T4 materials |
 
 ### Decoracion por capitulo
@@ -950,11 +950,11 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 - Set de iron tools
 
 **Quests Ch1 (~50)**:
-- Historia/tutorial (12): mecanicas custom, FD, gacha, dungeon, elites, Space Elevator, empaque, Spell Binding Table
+- Historia/tutorial (12): mecanicas custom, FD, gacha, dungeon, champions, Space Elevator, empaque, Spell Binding Table
 - Cocina (8): recetas de FD, variedad para Spice of Life
 - Farming (6): cada crop, granja, animales
 - Dungeon (5): primera run, sobrevivir, loot (Spell Scrolls como teaser)
-- Combate (5): elites, boss prep, boss fight, craftear arma T0
+- Combate (5): champions, boss prep, boss fight, craftear arma T0
 - Exploracion (5): biomas, Terralith, Waystones
 - Construccion (4): casa, cocina, almacen
 - Coleccion (5): comidas unicas, tokens, gacha pulls
@@ -1092,7 +1092,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 **Contenido**:
 - +6 crops raros (64 total), +10 recetas con dungeon ingredients
 - Piso 10 + boss de dungeon
-- Elites dungeon exclusivos (Teleporter, Invisible, Shield)
+- Champions dungeon exclusivos (Teleporter, Invisible, Shield)
 - **RPG**: Las 24 unique jewelry como coleccionables de dungeon
 - **RPG**: Boss de dungeon garantiza 1 unique jewelry
 - **RPG**: Accesorios custom T4 (belt/charm/head) como boss drops

@@ -6,7 +6,7 @@
 | Mod | Proposito | Capitulo | Notas |
 |-----|-----------|----------|-------|
 | NeoForge 21.1.219 | Mod loader | - | Dominante para modpacks, FTB ecosystem |
-| servo_core (custom) | Cocina custom (4 workstations), bosses (8), dungeons custom, accesorios (belt/back/feet), progresion, delivery (Space Elevator + Cajas) | Todos | Nuestro mod principal. Elite mobs manejados por Champions Unofficial |
+| servo_core (custom) | Cocina custom (4 workstations), bosses (8), dungeons custom, accesorios (belt/back/feet), progresion, delivery (Space Elevator + Cajas) | Todos | Nuestro mod principal. Champions manejados por Champions Unofficial |
 
 ## Quests & Progression
 | Mod | Proposito | Notas |
@@ -62,10 +62,10 @@
 | Tom's Simple Storage | Terminal basico | Ch3 |
 | Refined Storage | Storage digital completo | Ch5 |
 
-## Combate / Elite Mobs
+## Combate / Champions
 | Mod | Proposito | Notas |
 |-----|-----------|-------|
-| Champions Unofficial | Elite mobs con 16 affixes en 4 categorias | Reemplaza sistema custom de servo_core. Configurable via JSON/KubeJS |
+| Champions Unofficial | Champions con 16 affixes en 4 categorias | Reemplaza sistema custom de servo_core. Configurable via JSON/KubeJS |
 
 ## Exploracion
 | Mod | Proposito | Notas |

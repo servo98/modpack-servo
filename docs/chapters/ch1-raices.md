@@ -46,7 +46,7 @@ Vanilla, FD basico, Supplementaries basico, Aquaculture, Spice of Life, Lootr, G
 7. Tutorial: Sistema de empaque
 8. Tutorial: Gacha Machine (quest reward: obtener la maquina)
 9. Tutorial: Dungeon y llaves
-10. Tutorial: Champions (mobs de elite)
+10. Tutorial: Champions
 11. Tutorial: Spell Binding Table (quest reward)
 12. Tutorial: Rune Pouch
 

@@ -24,7 +24,7 @@
 | Tier | Nombre | Boost | Obtencion |
 |------|--------|-------|-----------|
 | 1 | Comun (cobre) | +5% | Gacha, quest |
-| 2 | Uncommon (hierro) | +12% | Gacha, elite drops |
+| 2 | Uncommon (hierro) | +12% | Gacha, champion drops |
 | 3 | Raro (oro) | +22% | Boss drops, gacha |
 | 4 | Epico (diamante) | +40% | Boss drops, dungeon |
 | 5 | Legendario (netherite) | +70% | Boss final, dungeon boss |

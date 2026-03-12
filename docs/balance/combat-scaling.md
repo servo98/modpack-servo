@@ -2,7 +2,7 @@
 
 ## Decision: RPG Series + custom systems
 - RPG Series (Daedelus): armas, armaduras y spells por clase
-- Elite mobs con affixes tipo Diablo via **Champions Unofficial** (16 affixes, reemplaza custom servo_core)
+- Champions con affixes tipo Diablo via **Champions Unofficial** (16 affixes, reemplaza custom servo_core)
 - Accesorios: Jewelry (rings/necklaces) + custom servo_core (belt, back, feet)
 - Max 8 jugadores
 - Stats detallados en `rpg-weapon-stats.md`
@@ -11,7 +11,7 @@
 - HP: `base * (1 + (players-1) * 0.3)`
 - Dmg: `base * (1 + (players-1) * 0.15)`
 - NO cambia mid-fight (si alguien se desconecta, queda igual)
-- Champions (elite mobs): stats configurados via Champions Unofficial, sin scaling por jugadores
+- Champions: stats configurados via Champions Unofficial, sin scaling por jugadores
 
 | Jugadores | HP multiplier | Dmg multiplier |
 |-----------|--------------|----------------|
@@ -69,7 +69,7 @@ Con Staff T2 (6.0 SP) + Arcane Robe T2 (+100% arcane) = 12.0 effective SP.
 | 8 | 25,600 | 25,600 | 33,280 | 48,640 | 79,360 |
 
 ## Enemy HP Scaling (fijo, sin scaling por jugadores)
-| Cap | Normal | Elite 1x | Elite 2x | Elite 3x (dungeon) |
+| Cap | Normal | Champion 1x | Champion 2x | Champion 3x (dungeon) |
 |-----|--------|----------|----------|---------------------|
 | 1 | 20 | 50 | - | - |
 | 2 | 24 | 60 | 90 | - |
@@ -80,8 +80,8 @@ Con Staff T2 (6.0 SP) + Arcane Robe T2 (+100% arcane) = 12.0 effective SP.
 | 7 | 58 | 145 | 218 | 327 |
 | 8 | 70 | 175 | 263 | 394 |
 
-## Elite Mob Prefixes
-| Prefix | Efecto | Visual |
+## Champion Affixes
+| Affix | Efecto | Visual |
 |--------|--------|--------|
 | Veloz | Speed II, +30% dmg | Particulas azules |
 | Tanque | +150% HP, Resistance I | Tamano +20%, brillo |

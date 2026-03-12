@@ -9,7 +9,7 @@
 | Boss capitulo | 20 | 13% |
 | Delivery capitulo | 15 | 10% |
 | Recetas nuevas (~15/cap) | 15 | 10% |
-| Champions overworld (elite mobs) | 25 | 17% |
+| Champions overworld | 25 | 17% |
 | Dungeon runs (~3/cap) | 40 | 27% |
 | **Total** | **150** | 100% |
 

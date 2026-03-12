@@ -12,7 +12,7 @@ Pepe Coin = moneda universal del modpack. Conecta todos los sistemas.
 | Fuente | Tokens | Frecuencia |
 |--------|--------|------------|
 | Quests completadas | 3-10 segun dificultad | Por quest |
-| Champions (elite mobs) | 1-3 por kill | Por kill |
+| Champions | 1-3 por kill | Por kill |
 | Boss Ch1 (Guardian del Bosque) | 15-25 | Por kill |
 | Boss Ch2 (Bestia Glotona) | 25-35 | Por kill |
 | Boss Ch3 (Coloso Mecanico) | 30-45 | Por kill |
