@@ -363,7 +363,7 @@ Bloque custom tipo tablet/computadora. Abres un catalogo de muebles:
 | Esencia de Dungeon (x2-3) | elites | 25% por elite |
 | Unique Jewelry | cofre final de run | 15% |
 | Soul/Lightning runes | cofres | 20% |
-| Boss Key fragments (para Boss Key de capitulo) | cofres raros | 8% |
+| Moldes 4-5 estrellas | cofres raros | 8% |
 
 **Del Nucleo (Ch7+)** — todo lo de Maestra +:
 | Drop | Fuente | Chance |
@@ -384,7 +384,6 @@ Bloque custom tipo tablet/computadora. Abres un catalogo de muebles:
 | **Unique Jewelry** (24 items de Jewelry mod) | Avanzada (5%), mejor en tiers altos | Mejor equipo de rings/necklaces del juego |
 | **Fragmento de Cristal del Nucleo** | Del Nucleo | Craftear equipo RPG Tier 4 (endgame) |
 | **Accesorio custom T4-T5** (belt/back/feet) | Maestra/Nucleo | Mejores accesorios del juego |
-| **Boss Key fragments** | Maestra | Reducir costo del Boss Key de capitulo |
 | **Moldes 4-5 estrellas** | Maestra/Nucleo | Mejores moldes de postres |
 
 ### Por que el jugador NECESITA ir a dungeons superiores
@@ -702,14 +701,14 @@ TOTAL:               ~13 piezas de equipo (build tipo MMO)
 **Gacha de ServoMart (muebles)**:
 - Separado del principal
 - Caja misteriosa con mueble random
-- Usa Pepe Coins tambien pero menos (5 tokens vs 15 del principal)
+- Usa Pepe Coins tambien pero menos (5 tokens vs 10 del principal)
 
 ## 3.12 Token System
 
 Pepe Coin = moneda universal. Obtencion:
 - Quests completadas: 3-10 tokens segun dificultad
 - Elite mobs: 1-3 tokens por kill
-- Bosses de capitulo: 20-50 tokens
+- Bosses de capitulo: 15-100+ tokens (escala por capitulo — ver [mechanics/tokens.md](mechanics/tokens.md))
 - Dungeon runs: 5-15 tokens por run
 - Comidas nuevas cocinadas (primera vez): 1 token
 
@@ -902,7 +901,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 | 2 | Basica | Mismo tier, mas variedad de loot acorde a Ch2 |
 | 3 | + **Avanzada** | 10-14 salas, champions 2 affix, Esencia de Dungeon empieza a dropear, 5% unique jewelry |
 | 4 | Basica + Avanzada | Mismo, loot actualizado a Ch4 |
-| 5 | + **Maestra** | 15-20 salas, champions 3 affix, 15% unique jewelry, Boss Key fragments |
+| 5 | + **Maestra** | 15-20 salas, champions 3 affix, 15% unique jewelry, moldes 4-5 estrellas |
 | 6 | Basica + Avanzada + Maestra | Mismo, loot actualizado a Ch6 |
 | 7 | + **Del Nucleo** | 20-25 salas + boss de dungeon, elites exclusivos, unique jewelry garantizada, Fragmentos de Cristal |
 | 8 | Todas | Loot endgame, T4 materials |
@@ -1215,7 +1214,7 @@ ProgressiveStages tiene 7 mecanismos independientes. Nuestra config:
 - [x] Pilares separados: cocina NO en dungeon loot (pilares se conectan via Space Elevator, no mezclando rewards)
 - [x] Servo Tokens renombrados a Pepe Coins
 - [x] Dimensional Dungeons REMOVIDO: licencia impide fork. Sistema custom desde cero en servo_core
-- [x] Muerte en dungeon simplificada: Soulbound en gear equipado, pierdes solo loot de la run. Sin tumbas, sin recibos
+- [x] Muerte en dungeon: YIGD tumba donde moriste, puedes volver a buscarla (Dark Souls). Soulbound en gear T2+, pierdes loot de la run si no recuperas la tumba. Boss Chamber: sin tumba YIGD, portal reabre 15s
 
 ### Por resolver
 - [ ] ServoMart: diseño completo del GUI y sistema de pedidos

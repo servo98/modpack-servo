@@ -71,7 +71,7 @@ Refined Storage, Create Trains, Create C&A, Create Enchantment Industry, Create 
 2. Completar dungeon Maestra
 3. Obtener accesorio T3
 4. Obtener unique jewelry en Maestra (15%)
-5. Obtener Boss Key fragment
+5. Obtener Molde de postre 4-5 estrellas en Maestra
 
 ### Combate/RPG (5)
 1. Aplicar enchant magico a arma
