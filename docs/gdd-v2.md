@@ -137,7 +137,6 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 | Macaw's Furniture | Muebles decorativos | 652 |
 | Macaw's Windows | Ventanas | 310 |
 | Macaw's Trapdoors | Trampillas | 187 |
-| Chipped | Variantes de bloques vanilla | 6,967 |
 | MrCrayfish Refurbished | Muebles funcionales (nevera, estufa, TV, etc) | 448 |
 
 ### Quality of Life
@@ -288,7 +287,7 @@ Bloque custom tipo tablet/computadora. Abres un catalogo de muebles:
 - Muebles se desbloquean por capitulo
 - "Compras" con tokens o materiales
 - Te llega una Caja de Carton que colocas y al abrirla aparece el mueble
-- Muebles de Macaw's, Chipped, y Refurbished Furniture se obtienen por aqui
+- Muebles de Macaw's y Refurbished Furniture se obtienen por aqui
 
 **Muebles funcionales de Refurbished (afectan progresion)**:
 - Nevera: conserva comida (no se pudre)
@@ -912,7 +911,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 | 1 | Supplementaries basico (rope, jar, sign post, soap) |
 | 2 | + Macaw's Furniture basico + Supplementaries completo |
 | 3 | + Refurbished Furniture basico (funcional: nevera, estufa, fregadero) |
-| 4 | + Todo Macaw's (bridges, roofs, windows, trapdoors) + Chipped |
+| 4 | + Todo Macaw's (bridges, roofs, windows, trapdoors) |
 | 5 | + Create Deco + Refurbished completo |
 | 6+ | Todo disponible |
 
@@ -1015,7 +1014,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 
 **Tema**: Create brass. Especias. Decoracion completa. Feasts. Tier 2 RPG y Skill Tree.
 
-**Mods nuevos**: Create brass (Mixer, Deployer, Crafter), Macaw's completo, Chipped, FD Feasts, Skill Tree (especializaciones)
+**Mods nuevos**: Create brass (Mixer, Deployer, Crafter), Macaw's completo, FD Feasts, Skill Tree (especializaciones)
 
 **Contenido**:
 - +8 crops especias (42 total), +20 recetas
@@ -1182,7 +1181,7 @@ ProgressiveStages tiene 7 mecanismos independientes. Nuestra config:
 | servo_ch1 | Default (mundo nuevo) | Vanilla, FD basico, Supplementaries basico, Aquaculture, QoL mods, **Spell Engine (T0 armas, Small Rune Pouch, Copper/Iron Ring)** |
 | servo_ch2 | Boss Ch1 + Delivery Ch1 | Croptopia 12 crops, B&C, Blender, Moldes, Create basico, Drawers, Macaw's basico, **Rogue/Warrior class books, T1 melee armor+armas, Arms Station, Gold/Citrine/Jade jewelry, Fire/Healing runes** |
 | servo_ch3 | Boss Ch2 + Delivery Ch2 | Croptopia frutas, Create andesite, Slice&Dice, Tom's, Drink Maker, Horno, Exp.Delight, Refurbished basico, Llave Avanzada, **Wizard/Paladin/Priest class books, T1 magico armor+armas, Monk Workbench, Jeweler's Kit, Rune Crafting Altar, Medium Rune Pouch, Ruby/Sapphire jewelry** |
-| servo_ch4 | Boss Ch3 + Delivery Ch3 | Croptopia especias, Create brass+steam, Macaw's completo, Chipped, FD Feasts, **Skill Tree (especializaciones), T2 armor+armas (Diamond, Assassin, Berserker, Elemental Robes, Crusader, Prior), Tanzanite/Topaz/Diamond/Emerald jewelry** |
+| servo_ch4 | Boss Ch3 + Delivery Ch3 | Croptopia especias, Create brass+steam, Macaw's completo, FD Feasts, **Skill Tree (especializaciones), T2 armor+armas (Diamond, Assassin, Berserker, Elemental Robes, Crusader, Prior), Tanzanite/Topaz/Diamond/Emerald jewelry** |
 | servo_ch5 | Boss Ch4 + Delivery Ch4 | Croptopia exoticos, RS, Create Trains+C&A+Enchant, Create Deco, Llave Maestra, **Enchantments magicos, Pociones Spell Power, Soul/Lightning runes, Large Rune Pouch, Netherite jewelry** |
 | servo_ch6 | Boss Ch5 + Delivery Ch5 | Croptopia avanzados, enchant V, Refurbished completo, **T3 Netherite upgrades para todo equipo RPG, Tipped Arrows Spell Power** |
 | servo_ch7 | Boss Ch6 + Delivery Ch6 | Croptopia raros, Llave del Nucleo, **Unique jewelry loot habilitado en dungeons** |

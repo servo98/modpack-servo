@@ -1,33 +1,15 @@
 {
-  "alexsmobs": {
-    "total_items": 334,
-    "total_blocks": 118,
-    "total_entities": 140,
-    "total_recipes": 84
-  },
   "aquaculture": {
     "total_items": 124,
     "total_blocks": 5,
     "total_entities": 40,
     "total_recipes": 63
   },
-  "botanypots": {
-    "total_items": 0,
-    "total_blocks": 183,
-    "total_entities": 0,
-    "total_recipes": 1285
-  },
   "brewinandchewin": {
     "total_items": 36,
     "total_blocks": 11,
     "total_entities": 0,
     "total_recipes": 72
-  },
-  "chipped": {
-    "total_items": 6,
-    "total_blocks": 6967,
-    "total_entities": 0,
-    "total_recipes": 13
   },
   "create": {
     "total_items": 204,
@@ -59,23 +41,11 @@
     "total_entities": 0,
     "total_recipes": 488
   },
-  "cucumber": {
-    "total_items": 0,
-    "total_blocks": 0,
-    "total_entities": 0,
-    "total_recipes": 0
-  },
   "curios": {
     "total_items": 0,
     "total_blocks": 0,
     "total_entities": 0,
     "total_recipes": 0
-  },
-  "dimdungeons": {
-    "total_items": 0,
-    "total_blocks": 0,
-    "total_entities": 0,
-    "total_recipes": 6
   },
   "expandeddelight": {
     "total_items": 60,
@@ -142,12 +112,6 @@
     "total_blocks": 0,
     "total_entities": 0,
     "total_recipes": 0
-  },
-  "mysticalagriculture": {
-    "total_items": 175,
-    "total_blocks": 73,
-    "total_entities": 0,
-    "total_recipes": 810
   },
   "paladins": {
     "total_items": 71,

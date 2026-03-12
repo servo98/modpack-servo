@@ -107,7 +107,6 @@
 | Mod | Proposito | Notas |
 |-----|-----------|-------|
 | Macaw's (Bridges/Roofs/Furniture/Windows/Trapdoors) | Building blocks | Decoracion de base, Ch4+ |
-| Chipped | Variantes de bloques vanilla | Mas opciones esteticas, Ch4+ |
 | MrCrayfish Refurbished | Muebles funcionales | Decoracion funcional, Ch4+ |
 
 ## Worldgen
@@ -162,6 +161,7 @@
 | Cooking for Blockheads | Incompatible con Farmer's Delight |
 | GameStages | No existe para 1.21.1, reemplazado por ProgressiveStages |
 | Alex's Mobs + Citadel | Eliminado: crash al cargar + no encaja en 3 pilares de contenido (cocina, Create, RPG) |
+| Chipped + Athena | Eliminado: bloat decorativo, Macaw's + Refurbished cubren la necesidad |
 | Bosses of Mass Destruction | Eliminado: solo bosses custom servo_core, evitar que "relleno" sea mas interesante que progresion |
 | Brutal Bosses | Eliminado: misma razon que BoMD |
 | Dimensional Dungeons | Eliminado: licencia "All Rights Reserved" impide fork. Sistema custom en servo_core da control total (llaves, multiplayer, limpieza chunks, muerte roguelike) |
