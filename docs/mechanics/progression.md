@@ -1,6 +1,6 @@
 # Progression System (ProgressiveStages)
 
-> Fuente: GDD v2, seccion 4 + 5.3
+> Fuente de verdad para stages, bloqueo, distribucion de contenido por capitulo.
 > Relacionado: [Game Loop](game-loop.md), [Quest System](quests.md), [Space Elevator](space-elevator.md), [Bosses](bosses.md)
 
 ## Overview
@@ -54,3 +54,103 @@ ProgressiveStages NO escanea slots de Curios API. `BLOCK_ITEM_PICKUP` impide rec
 - Dungeons siempre mas dificiles que overworld al mismo nivel
 - Cada capitulo tiene de todo: cocina + farming + dungeon + combate + decoracion
 - Zero SavedData custom. Zero sincronizacion entre sistemas.
+
+---
+
+## Distribucion de contenido por capitulo
+
+Cada capitulo desbloquea contenido de TODOS los pilares. No hay "capitulo de Create" ni "capitulo de dungeons".
+
+### Crops (gradual, no dump)
+
+| Cap | Crops nuevos | Total |
+|-----|-------------|-------|
+| 1 | 12: Vanilla (trigo, papa, zanahoria, beetroot, melon, pumpkin, cacao, sugar cane) + FD (tomate, cebolla, repollo, arroz) | 12 |
+| 2 | +12 Croptopia basicos: lettuce, corn, strawberry, blueberry, grape, cucumber, bell pepper, garlic, ginger, spinach, peanut, soybeans | 24 |
+| 3 | +10 frutas: banana, mango, lemon, orange, apple, pineapple, coconut, peach, cherry, lime | 34 |
+| 4 | +8 hierbas/especias: basil, cinnamon, nutmeg, turmeric, vanilla, mustard, hops, tea leaves | 42 |
+| 5 | +8 exoticos: dragon fruit, star fruit, avocado, kiwi, fig, date, pomegranate, cranberry | 50 |
+| 6 | +8 avanzados: artichoke, asparagus, eggplant, leek, rhubarb, elderberry, coffee beans, olive | 58 |
+| 7 | +6 raros: saguaro, kumquat, persimmon, nectarine, currant, tomatillo | 64 |
+| 8 | Todos los restantes desbloqueados | 70+ |
+
+### Cocina
+
+| Cap | Workstations nuevas | Recetas nuevas aprox |
+|-----|--------------------|-----------------------|
+| 1 | Cutting Board, Cooking Pot, Stove, Skillet (FD) | ~25 |
+| 2 | Blender, Moldes de Postres (custom) + B&C Keg | +30 |
+| 3 | Drink Maker, Horno Avanzado (custom) + Expanded Delight | +25 |
+| 4 | FD Feasts + recetas con especias | +20 |
+| 5 | Slice&Dice (auto-cocina) + recetas exoticas | +15 |
+| 6 | Recetas avanzadas con ingredientes raros | +10 |
+| 7 | Recetas con ingredientes exclusivos de dungeon | +10 |
+| 8 | Recetas legendarias que combinan todo | +10 |
+
+### Create
+
+| Cap | Que se desbloquea |
+|-----|-------------------|
+| 1 | Nada |
+| 2 | Basico: Water Wheel, Shaft, Cogwheel, Belt, Depot, Andesite Funnel, Chute |
+| 3 | Andesite completo: Mechanical Press, Fan, Saw, Drill, Harvester, Millstone |
+| 4 | Brass tier: Mixer, Deployer, Crafter, Arm, Brass Funnel + Steam Engine + Trains basicos |
+| 5 | Trains avanzados + Create C&A (motor electrico, alternador) + Enchantment Industry |
+| 6+ | Todo disponible |
+
+### Storage
+
+| Cap | Que se desbloquea |
+|-----|-------------------|
+| 1 | Vanilla chests |
+| 2 | Storage Drawers basicos |
+| 3 | Tom's Storage (terminal, connector) |
+| 4 | Storage Drawers upgrades avanzados |
+| 5 | Refined Storage completo |
+| 6+ | Todo disponible |
+
+### RPG Clases
+
+| Cap | Clases disponibles | Tier | Notas |
+|-----|--------------------|------|-------|
+| 1 | Ninguna (ataques genericos) | T0 | Spell Binding Table, Small Rune Pouch, Copper/Iron Ring |
+| 2 | Rogue, Warrior (melee) | T1 melee | Arms Station. Melee primero (materiales accesibles) |
+| 3 | + Wizard, Paladin, Priest | T1 magico | Monk Workbench, Rune Crafting Altar, Medium Rune Pouch, Ruby/Sapphire jewelry |
+| 4 | Todas + Skill Tree | T2 | Elegir especializacion. Tanzanite/Topaz/Diamond/Emerald jewelry |
+| 5 | Todas | T2+ enchants | Enchants magicos, Pociones Spell Power, Soul/Lightning runes, Large Rune Pouch, Netherite jewelry |
+| 6 | Todas | T3 | Netherite upgrades para todo equipo RPG. Tipped Arrows Spell Power |
+| 7 | Todas | T3+ uniques | 24 unique jewelry farmeable en Dungeon del Nucleo |
+| 8 | Todas (maxeadas) | T4 custom | Aeternium/Ruby via KubeJS (materiales de boss) |
+
+### Dungeons
+
+| Cap | Llaves disponibles | Lo que cambia |
+|-----|-------------------|---------------|
+| 1 | Basica (1ra gratis + crafteo barato) | 5-7 salas, champions 1 affix, loot basico |
+| 2 | Basica | Mismo tier, mas variedad de loot |
+| 3 | + Avanzada | 10-14 salas, champions 2 affix, Esencia de Dungeon, 5% unique jewelry |
+| 4 | Basica + Avanzada | Loot actualizado a Ch4 |
+| 5 | + Maestra | 15-20 salas, champions 3 affix, 15% unique jewelry, moldes 4-5 estrellas |
+| 6 | Basica + Avanzada + Maestra | Loot actualizado a Ch6 |
+| 7 | + Del Nucleo | 20-25 salas + boss de dungeon, champions exclusivos, unique jewelry garantizada |
+| 8 | Todas | Loot endgame, T4 materials |
+
+### Decoracion
+
+| Cap | Que se desbloquea |
+|-----|-------------------|
+| 1 | Supplementaries basico (rope, jar, sign post, soap) |
+| 2 | + Macaw's Furniture basico + Supplementaries completo |
+| 3 | + Refurbished Furniture basico (funcional: nevera, estufa, fregadero) |
+| 4 | + Macaw's Windows completo |
+| 5 | + Create Deco + Refurbished completo |
+| 6+ | Todo disponible |
+
+### Enchantments (vanilla, gateados)
+
+| Cap | Max nivel de enchant |
+|-----|---------------------|
+| 1-2 | Nivel I-II |
+| 3-4 | Nivel III |
+| 5 | Nivel IV + Enchantment Industry (auto-enchanting) |
+| 6+ | Nivel V, todo |

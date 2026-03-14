@@ -59,6 +59,15 @@
 | 5.8 | Macaw's Bridges/Roofs/Trapdoors: confirmar remocion y limpiar de GDD/gacha/servomart/ch4 | done |
 | 5.9 | Create Dragons Plus: se queda o se quita? (solo en mod-decisions, sin contenido asignado) | needs-decision |
 | 5.10 | Spice of Life: quitar JAR fisico + crear capitulo "Recetario" en FTB Quests + verificar AttributeResetFix NeoForge | pending |
+| 5.11 | Lore: historia minima visual sin texto. Que historia contamos? | needs-decision |
+| 5.12 | Better Combat: agregar para mejorar animaciones melee? (mismo dev que RPG Series, solo visual) | needs-decision |
+| 5.13 | Unique jewelry: distribucion exacta por dungeon tier (cuales de las 24 droppen donde) | planned |
+| 5.14 | Muebles funcionales Refurbished: exactamente cuales afectan progresion y como | planned |
+| 5.15 | Aquaculture: cuales peces son relevantes si todos usan tag generico #c:fish? | needs-decision |
+| 5.16 | Spell Power balance: DPS de spells vs HP de bosses por capitulo | planned |
+| 5.17 | Recetas exactas: cuales recetas van en que workstation, cuales se redirigen de Croptopia | planned |
+| 5.18 | Dungeon: diseño de las 100+ salas con Structure Blocks | planned |
+| 5.19 | Dungeon: como incluir puzzles de Supplementaries en salas | planned |
 
 ### 6. Arquitectura y sistemas custom (servo_core Java)
 | # | Tarea | Estado |
