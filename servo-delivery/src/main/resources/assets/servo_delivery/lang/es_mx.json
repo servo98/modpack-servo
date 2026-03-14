@@ -1,0 +1,13 @@
+{
+  "itemGroup.servo_delivery": "Servo Entrega",
+  "block.servo_delivery.delivery_terminal": "Terminal de Entrega",
+  "block.servo_delivery.delivery_port": "Puerto de Entrega",
+  "block.servo_delivery.elevator_base": "Base del Elevador",
+  "block.servo_delivery.elevator_antenna": "Antena del Elevador",
+  "servo_delivery.terminal.not_formed": "Estructura incompleta. Coloca todos los bloques en la formacion correcta.",
+  "servo_delivery.terminal.no_chapter": "No hay datos de entrega para este capitulo.",
+  "servo_delivery.terminal.not_needed": "Este item no es necesario para la entrega actual.",
+  "servo_delivery.terminal.chapter": "Capitulo %d — Progreso: %d%%",
+  "servo_delivery.terminal.complete": "Entrega del Capitulo %d completada!",
+  "servo_delivery.terminal.already_complete": "Ya entregaste suficientes de este tipo."
+}

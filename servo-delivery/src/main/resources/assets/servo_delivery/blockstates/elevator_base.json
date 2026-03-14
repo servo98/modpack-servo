@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "formed=false": { "model": "servo_delivery:block/elevator_base" },
+    "formed=true": { "model": "servo_delivery:block/elevator_base" }
+  }
+}

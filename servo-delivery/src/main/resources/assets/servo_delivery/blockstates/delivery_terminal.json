@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,formed=false": { "model": "servo_delivery:block/delivery_terminal_unformed" },
+    "facing=south,formed=false": { "model": "servo_delivery:block/delivery_terminal_unformed", "y": 180 },
+    "facing=east,formed=false": { "model": "servo_delivery:block/delivery_terminal_unformed", "y": 90 },
+    "facing=west,formed=false": { "model": "servo_delivery:block/delivery_terminal_unformed", "y": 270 },
+    "facing=north,formed=true": { "model": "servo_delivery:block/delivery_terminal_unformed" },
+    "facing=south,formed=true": { "model": "servo_delivery:block/delivery_terminal_unformed", "y": 180 },
+    "facing=east,formed=true": { "model": "servo_delivery:block/delivery_terminal_unformed", "y": 90 },
+    "facing=west,formed=true": { "model": "servo_delivery:block/delivery_terminal_unformed", "y": 270 }
+  }
+}

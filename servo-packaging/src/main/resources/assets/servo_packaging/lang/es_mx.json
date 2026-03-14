@@ -3,14 +3,16 @@
   "item.servo_packaging.open_box": "Caja Abierta",
   "item.servo_packaging.shipping_box": "Caja de Envio",
   "block.servo_packaging.packing_station": "Empacadora",
+  "block.servo_packaging.open_box": "Caja Abierta",
   "itemGroup.servo_packaging": "Servo Packaging",
 
   "item.servo_packaging.shipping_box.contains": "Contiene: %1$dx %2$s",
   "item.servo_packaging.shipping_box.hint": "Entregar al Terminal de Entrega",
+  "item.servo_packaging.shipping_box.unboxed": "Desempacado %1$dx %2$s",
 
-  "servo_packaging.packing.not_packable": "Este item no se puede empacar",
-  "servo_packaging.packing.wrong_type": "Solo items del mismo tipo caben en una caja",
-  "servo_packaging.packing.progress": "Empacando: %1$d/%2$d",
-  "servo_packaging.packing.sealed": "Caja sellada!",
-  "servo_packaging.packing.cancelled": "Empaque cancelado"
+  "servo_packaging.box.item_added": "Añadido %s",
+  "servo_packaging.box.item_removed": "Retirado %s",
+  "servo_packaging.box.sealed": "Caja sellada!",
+  "servo_packaging.box.wrong_type": "Solo items del mismo tipo",
+  "servo_packaging.station.folding": "Doblando..."
 }

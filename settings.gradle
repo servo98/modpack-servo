@@ -13,8 +13,8 @@ rootProject.name = 'modpack-servo'
 // === Servo mod subprojects ===
 include ':servo-packaging'
 include ':servo-core'
+include ':servo-delivery'
 // Future:
-// include ':servo-delivery'
 // include ':servo-cooking'
 // include ':servo-create'
 // include ':servo-dungeons'

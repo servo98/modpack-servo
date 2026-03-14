@@ -54,7 +54,7 @@ Ver: [Dungeons - Multiplayer](dungeons.md#muerte-en-dungeon-dark-souls-style) pa
 
 - Jugador A muere → respawnea en overworld, puede re-entrar gratis por el altar
 - Jugador B sigue en dungeon → continua peleando
-- Cuando 0 jugadores quedan Y nadie re-entra en 10 min → servo_core limpia chunks
+- Cuando 0 jugadores quedan Y nadie re-entra en 10 min → servo_dungeons limpia chunks
 - Tumbas no recogidas se teleportan al altar en overworld (items no se pierden)
 
 ## Muerte en Boss Chamber

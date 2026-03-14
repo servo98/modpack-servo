@@ -3,14 +3,16 @@
   "item.servo_packaging.open_box": "Open Box",
   "item.servo_packaging.shipping_box": "Shipping Box",
   "block.servo_packaging.packing_station": "Packing Station",
+  "block.servo_packaging.open_box": "Open Box",
   "itemGroup.servo_packaging": "Servo Packaging",
 
   "item.servo_packaging.shipping_box.contains": "Contains: %1$dx %2$s",
   "item.servo_packaging.shipping_box.hint": "Deliver to the Delivery Terminal",
+  "item.servo_packaging.shipping_box.unboxed": "Unboxed %1$dx %2$s",
 
-  "servo_packaging.packing.not_packable": "This item cannot be packed",
-  "servo_packaging.packing.wrong_type": "Only items of the same type can go in one box",
-  "servo_packaging.packing.progress": "Packing: %1$d/%2$d",
-  "servo_packaging.packing.sealed": "Box sealed!",
-  "servo_packaging.packing.cancelled": "Packing cancelled"
+  "servo_packaging.box.item_added": "Added %s",
+  "servo_packaging.box.item_removed": "Removed %s",
+  "servo_packaging.box.sealed": "Box sealed!",
+  "servo_packaging.box.wrong_type": "Only items of the same type",
+  "servo_packaging.station.folding": "Folding..."
 }

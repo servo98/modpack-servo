@@ -1,7 +1,7 @@
 # Sistema: Terminal de Entrega (Space Elevator) — Diseno Completo
 
-> Modulo: servo_core (Java)
-> Dependencias: FTB Quests (auto-complete), ProgressiveStages (stage unlock), FTB Teams (multiplayer sync)
+> Modulo: **servo_delivery** (mod standalone). Coordination con servo_core para stage unlocks.
+> Dependencias: servo_packaging (hard — acepta Cajas de Envio), FTB Quests (auto-complete), ProgressiveStages (stage unlock via servo_core), FTB Teams (multiplayer sync)
 > Prioridad: CRITICA — sin esto no hay progresion de capitulos
 > Relacionado: [Packaging (Cajas de Envio)](packaging.md), [Progression](progression.md), [Game Loop](game-loop.md), [Create Automation](create-automation.md)
 
@@ -30,19 +30,19 @@ Profundidad: 1 bloque (plano)
 Total: 9 bloques
 ```
 
-### Bloques servo_core:
+### Bloques servo_delivery:
 | Bloque | ID | Funcion | Cant. |
 |--------|----|---------|-------|
-| Terminal de Entrega (Pantalla) | `servo_core:delivery_terminal` | Bloque principal. Click derecho = GUI. Almacena progreso. | 1 |
-| Puerto de Entrega | `servo_core:delivery_port` | Acepta items por automation (hopper/funnel/belt/exporter). | 2 |
-| Base del Elevator | `servo_core:elevator_base` | Estructural. | 3 |
-| Antena del Elevator | `servo_core:elevator_antenna` | Decorativo. Particulas y beam de luz al completar capitulo. | 1 |
+| Terminal de Entrega (Pantalla) | `servo_delivery:delivery_terminal` | Bloque principal. Click derecho = GUI. Almacena progreso. | 1 |
+| Puerto de Entrega | `servo_delivery:delivery_port` | Acepta items por automation (hopper/funnel/belt/exporter). | 2 |
+| Base del Elevator | `servo_delivery:elevator_base` | Estructural. | 3 |
+| Antena del Elevator | `servo_delivery:elevator_antenna` | Decorativo. Particulas y beam de luz al completar capitulo. | 1 |
 
 ### Propiedades:
 - **Indestructible una vez armado**: dureza -1 (como bedrock). No se rompen, no se mueven con Carry On, no explotan.
-- **Unico por mundo**: colocar un segundo Terminal falla con mensaje "Ya existe un Terminal de Entrega en este mundo".
-- **Chunk forzado**: el chunk del Terminal se force-loadea automaticamente al armarlo.
-- **Validacion de multibloque**: al colocar el Terminal, servo_core verifica que los 9 bloques esten en la formacion correcta. Si no, muestra "Estructura incompleta" y no se activa.
+- **Progreso global**: todos los terminales del mundo comparten el mismo progreso (SavedData). Si destruyes y reconstruyes el terminal, el progreso se mantiene. Se pueden tener multiples terminales activos simultaneamente.
+- **Chunk forzado**: el chunk del Terminal se force-loadea automaticamente al armarlo. *(pendiente de implementar)*
+- **Validacion de multibloque**: al colocar el Terminal, servo_delivery verifica que los 9 bloques esten en la formacion correcta. Si no, muestra "Estructura incompleta" y no se activa.
 
 ## 2.2 Como lo obtiene el jugador
 
@@ -82,13 +82,12 @@ Click derecho en el Terminal de Entrega:
 |  |                                              |     |
 |  +---------------------------------------------+     |
 |                                                       |
-|  +----------+                                        |
-|  | INSERTAR  |  <- Slot de input (1 slot)             |
-|  |   AQUI    |                                        |
-|  +----------+                                        |
+|  +------------------+                                |
+|  |  [ LAUNCH ]      |  <- Habilitado al 100%          |
+|  +------------------+                                |
 |                                                       |
-|  Tip: Empaca items en Cajas de Envio antes de         |
-|  insertarlos.                                         |
+|  Tip: Click derecho en el Terminal o en los           |
+|  Puertos laterales con Cajas de Envio en mano.        |
 +------------------------------------------------------+
 ```
 
@@ -98,29 +97,33 @@ Click derecho en el Terminal de Entrega:
 | **Titulo** | Capitulo actual + nombre tematico |
 | **Barra de progreso** | Porcentaje global (items entregados / total requerido) |
 | **Lista de entregas** | Cada requisito con icono, nombre, contador, checkmark al completar |
-| **Slot de input** | 1 slot. Item se consume al insertar si es valido |
-| **Tooltip** | Hover sobre requisito = descripcion + pista de como obtenerlo |
+| **Boton LAUNCH** | Aparece habilitado cuando todas las entregas estan al 100%. El jugador debe presionarlo para completar el capitulo. |
+| **Tooltip** | Hover sobre requisito = descripcion + pista de como obtenerlo *(pendiente)* |
 | **Tip contextual** | Cambia segun progreso: "Cocina variedad", "Derrota al boss", "Casi listo!" |
 
-## 3.2 Comportamiento del slot de input
+## 3.2 Como se insertan items
 
-1. Jugador pone item en el slot
-2. servo_core verifica:
-   - Es Caja de Envio valida (`servo_core:shipping_box`) o item directo de boss?
+El jugador inserta items haciendo **click derecho** directamente sobre el bloque Terminal o sobre los bloques Puerto, con la Caja de Envio en mano. No hay un slot de GUI para arrastrar items.
+
+Flujo de validacion al hacer click derecho:
+1. servo_delivery verifica:
+   - Es Caja de Envio valida (`servo_packaging:shipping_box`) o item directo de boss?
    - Corresponde a un requisito de la entrega actual?
    - Aun se necesitan mas de ese tipo?
-3. **Si valido**: item se consume, contador sube, particulas verdes, sonido "cha-ching"
-4. **Si no valido**: item se queda en el slot (no se destruye). Mensaje rojo: "Este item no es necesario para la entrega actual"
-5. **Si ya completo ese tipo**: "Ya entregaste suficientes de este tipo"
+2. **Si valido**: item se consume del stack en mano, contador sube, particulas verdes, sonido "cha-ching"
+3. **Si no valido**: item no se consume. Mensaje rojo en ActionBar: "Este item no es necesario para la entrega actual"
+4. **Si ya completo ese tipo**: "Ya entregaste suficientes de este tipo"
+5. **Al completar todo**: el boton LAUNCH se habilita en el GUI. El jugador debe abrir el GUI y presionarlo para cerrar el capitulo.
 
 ## 3.3 Los Puertos de Entrega (automation)
 
-Los 2 bloques `delivery_port` a los lados funcionan como hoppers inteligentes:
+Los 2 bloques `delivery_port` a los lados del Terminal aceptan items por click derecho o por automatizacion:
 
-- **Aceptan items desde**: Hopper, Create Funnel, Create Belt, RS Exporter, Chute
-- **Mismo comportamiento** que el slot del GUI: verifican y consumen si valido
-- **Si no valido**: item queda en buffer del Puerto (1 slot). No lo destruye.
-- **Senal de redstone**: Puerto emite redstone 15 cuando tiene item rechazado (para que Create filtre)
+- **Click derecho**: igual que el Terminal — valida y consume si el item es correcto
+- **Automatizacion** *(pendiente)*: Hopper, Create Funnel, Create Belt, RS Exporter, Chute
+- **Comportamiento actual**: los puertos delegan al master (`tryInsertItem`). Son passthrough — no tienen buffer propio.
+- **Buffer de 1 slot por puerto** *(pendiente)*: retener items rechazados en vez de tirarlos
+- **Senal de redstone por rechazo** *(pendiente)*: Puerto emite redstone 15 cuando tiene item rechazado (para que Create filtre)
 
 Progresion de uso:
 - **Ch1-Ch3**: jugador lleva cajas a mano al GUI
@@ -262,34 +265,35 @@ Cada entrega debe:
 # 5. FLUJO TECNICO: COMPLETAR UN CAPITULO
 
 ```
-Jugador inserta ultimo item requerido
+Jugador presiona LAUNCH cuando todas las entregas estan completas
   |
-  +- servo_core detecta entrega completa
+  +- servo_delivery valida que el progreso es 100% y dispara DeliveryCompleteEvent
   |
   +- 1. ANIMACION: terminal brilla, particulas, sonido epico (3-5 seg)
   |
   +- 2. FTB QUESTS: quest "Entrega Ch[N] completa" -> done
   |
-  +- 3. VERIFICAR: boss Ch[N] tambien derrotado?
+  +- 3. VERIFICAR (via servo_core): boss Ch[N] tambien derrotado?
   |     +- SI -> otorgar stage servo_ch[N+1] a todo el team
   |     +- NO -> mensaje: "Entrega completa. Derrota al boss para avanzar."
   |
   +- 4. SI AMBAS CONDICIONES:
-  |     +- ProgressiveStages: grant servo_ch[N+1] a todos los miembros del team
+  |     +- servo_core via ProgressiveStages: grant servo_ch[N+1] a todos los miembros del team
   |     +- Chat broadcast: "El equipo ha completado el Capitulo [N]!"
   |     +- Title screen grande tipo achievement
   |     +- Terminal se actualiza a entregas del capitulo siguiente
   |
-  +- 5. RECOMPENSA: items en output del terminal
-        +- 15 Pepe Coins + 1 Gacha Ticket
+  +- 5. RECOMPENSA: manejada por servo_core al escuchar DeliveryCompleteEvent
+        +- servo_delivery solo dispara el evento — no sabe de items ni de stages
+        +- servo_core otorga: 15 Pepe Coins + 1 Gacha Ticket
         +- Item tematico del siguiente capitulo
         +- Llave de Dungeon del tier correspondiente (si aplica)
 ```
 
-### Data que servo_core trackea por team:
+### Data que servo_core trackea por team (glue entre servo_delivery y servo_dungeons):
 ```java
-team_data.delivery_ch[N] = true/false   // entrega completa
-team_data.boss_ch[N] = true/false       // boss derrotado
+team_data.delivery_ch[N] = true/false   // entrega completa (event from servo_delivery)
+team_data.boss_ch[N] = true/false       // boss derrotado (event from servo_dungeons)
 // Cuando ambos son true -> grant servo_ch[N+1]
 ```
 
@@ -302,7 +306,7 @@ team_data.boss_ch[N] = true/false       // boss derrotado
 ## Resueltas
 1. **Obtencion**: recompensa de quest temprana Ch1 + receta de backup
 2. **Cajas**: sistema fisico separado (ver [packaging.md](packaging.md))
-3. **Empacadora**: crafting manual Ch1, Empacadora bloque Ch1, Deployer Ch4
+3. **Empacadora**: bloque disponible desde Ch1. Sin crafting manual previo. Deployer compat (servo_create) en Ch4.
 
 ## Pendientes
 - [ ] "Caja de Comida Variada" verifica tipos unicos? Propuesta: si, estricto

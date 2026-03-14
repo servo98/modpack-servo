@@ -5,7 +5,7 @@
 
 ## Overview
 
-Sistema 100% custom en servo_core. Dimension void, generacion procedural de salas, 4 tiers de llave, multiplayer, roguelike (muerte = pierde loot de la run). **Dimensional Dungeons REMOVIDO** (licencia ARR).
+Sistema 100% custom en **servo_dungeons**. Dimension void, generacion procedural de salas, 4 tiers de llave, multiplayer, roguelike (muerte = pierde loot de la run). **Dimensional Dungeons REMOVIDO** (licencia ARR).
 
 ## Llaves de Dungeon
 
@@ -109,8 +109,8 @@ El Altar de Dungeon es la unica forma de entrar a una dungeon. Es un pequeno rit
 [R]  [P]  [R]
      [R]
 
-P = Pedestal de Dungeon (servo_core:dungeon_pedestal)
-R = Runa de Dungeon (servo_core:dungeon_rune)
+P = Pedestal de Dungeon (servo_dungeons:dungeon_pedestal)
+R = Runa de Dungeon (servo_dungeons:dungeon_rune)
 ```
 
 5 bloques total, patron de cruz en el suelo. Cuando se forma correctamente, particulas conectan las runas al pedestal.

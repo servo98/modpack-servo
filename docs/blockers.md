@@ -9,11 +9,6 @@
 - **Estado**: Investigado (7 mecanismos). Falta crear configs TOML y asignar items por stage.
 - **Gap**: NO escanea Curios API slots → necesita fix en servo_core.
 
-### B011: Mods sin descargar (9 mods)
-- **Impacto**: Medio. Funcionalidad pendiente.
-- **Mods**: TMRV, RS-EMI-integration, Jade+Addons, Sophisticated Backpacks, Carry On, WATERFrAMES, WATERMeDIA, Iris, Monocle
-- **Tambien borrar**: Macaw's Bridges/Roofs/Trapdoors, JEI, JER
-
 ### B014: Tier 4 RPG sin recetas crafteables
 - **Impacto**: Medio. Items Aeternium/Ruby requieren BetterEnd/BetterNether (no instalados).
 - **Solucion**: Recetas KubeJS custom usando materiales de dungeon/boss drops.
@@ -35,8 +30,9 @@
 | B006 | Alex's Mobs crash | Removido (crash Citadel + no encaja en pilares) |
 | B007 | GDD pendiente | GDD v2 completo |
 | B008 | Mods de combate | NO agregar. RPG Series + Champions Unofficial |
-| B009 | Mods de bosses | NO agregar. Solo custom servo_core |
-| B010 | Dungeons mod | Dim Dungeons removido (ARR). 100% custom servo_core |
+| B009 | Mods de bosses | NO agregar. Solo custom servo_dungeons |
+| B010 | Dungeons mod | Dim Dungeons removido (ARR). 100% custom servo_dungeons |
+| B011 | Mods sin descargar | Todos descargados (tasks 1.1-1.10 DONE) |
 | B012 | 6 vs 8 capitulos | 8 capitulos confirmado |
 | B013 | RPG Series sin testear | Carga correctamente con 15 dependencias |
-| B015 | Jewelry vs Custom Curios overlap | Jewelry = rings/necklaces, servo_core = belt/charm/head |
+| B015 | Jewelry vs Custom Curios overlap | Jewelry = rings/necklaces, servo_core = belt/back/feet |

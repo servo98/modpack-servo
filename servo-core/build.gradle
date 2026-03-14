@@ -20,6 +20,12 @@ neoForge {
         mappingsVersion = rootProject.property('parchment_mappings_version')
         minecraftVersion = rootProject.property('parchment_minecraft_version')
     }
+
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
 }
 
 dependencies {

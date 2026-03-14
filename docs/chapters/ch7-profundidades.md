@@ -24,9 +24,9 @@ Llave del Nucleo de dungeon
 
 ## Space Elevator entrega Ch7
 
-- Cajas con materiales exclusivos de dungeon
-- 5 unique jewelry (demostrar farming de dungeon)
-- Material del boss
+Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevator.md#47-capitulo-7-profundidades).
+
+Resumen: Cajas de materiales de dungeon, unique jewelry, Esencia de Dungeon, Cristal del Nucleo (boss drop).
 
 ## Quests (~50)
 
@@ -45,7 +45,7 @@ Llave del Nucleo de dungeon
 ### Cocina (8)
 1. Cocinar con ingredientes de dungeon
 2. Cocinar con crops raros
-3. Comer 100 comidas diferentes (Spice of Life: +8)
+3. Comer 100 comidas diferentes (FTB Quests Recetario: +8 corazones)
 4. Receta con ingrediente exclusivo de dungeon
 5. Automatizar produccion de comida rara
 6. Preparar buffs de comida para dungeon runs
@@ -90,6 +90,6 @@ Llave del Nucleo de dungeon
 ### Coleccion (5)
 1. 10+ unique jewelry
 2. Set completo de accesorios T3+
-3. 100+ comidas unicas
+3. 100+ comidas unicas (Recetario: hito Ch7)
 4. Fragmentos para T4 (acumular)
 5. Completar entrega al Space Elevator Ch7

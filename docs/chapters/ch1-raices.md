@@ -9,7 +9,7 @@ Capitulo introductorio. Aprender mecanicas vanilla + Farmer's Delight + mecanica
 
 ## Mods activos
 
-Vanilla, FD basico, Supplementaries basico, Aquaculture, Spice of Life, Lootr, Gacha Machine, Waystones, Xaero's, Jade, Backpacks, Carry On, Spell Engine (limitado), Runes (basico), Jewelry (basico)
+Vanilla, FD basico, Supplementaries basico, Aquaculture, FTB Quests (Recetario), Lootr, Gacha Machine, Waystones, Xaero's, Jade, Backpacks, Carry On, Spell Engine (limitado), Runes (basico), Jewelry (basico)
 
 ## Contenido
 
@@ -29,10 +29,9 @@ Vanilla, FD basico, Supplementaries basico, Aquaculture, Spice of Life, Lootr, G
 
 ## Space Elevator entrega Ch1
 
-- 16 Cajas de Comida Variada (al menos 10 tipos empacados)
-- 8 Cajas de Crops (stacks de cada crop basico)
-- 1 Raiz del Guardian (drop de boss)
-- Set de iron tools
+Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevator.md#41-capitulo-1-primeras-raices).
+
+Resumen: Cajas de comida variada, crops basicos, Raiz del Guardian (boss drop), iron tools.
 
 ## Quests (~50)
 
@@ -56,7 +55,7 @@ Vanilla, FD basico, Supplementaries basico, Aquaculture, Spice of Life, Lootr, G
 3. Usar la Cutting Board para cortar
 4. Cocinar algo con el Stove
 5. Preparar una comida con el Skillet
-6. Comer 5 comidas diferentes (Spice of Life: +1 corazon)
+6. Comer 5 comidas diferentes (FTB Quests Recetario: +1 corazon)
 7. Pescar un pez con Aquaculture
 8. Cocinar un plato con pescado
 
@@ -98,6 +97,6 @@ Vanilla, FD basico, Supplementaries basico, Aquaculture, Spice of Life, Lootr, G
 ### Coleccion (5)
 1. Obtener 5 Pepe Coins
 2. Hacer primer pull de gacha
-3. Cocinar 5 comidas unicas (Spice of Life)
+3. Cocinar 5 comidas unicas (Recetario: primer hito)
 4. Recoger 3 tipos de pez
 5. Completar entrega al Space Elevator Ch1

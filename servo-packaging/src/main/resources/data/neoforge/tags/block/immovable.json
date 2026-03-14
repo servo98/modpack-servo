@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "servo_packaging:open_box",
+    "servo_packaging:packing_station"
+  ]
+}

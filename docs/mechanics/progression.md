@@ -47,7 +47,10 @@ ProgressiveStages NO escanea slots de Curios API. `BLOCK_ITEM_PICKUP` impide rec
 
 ## Filosofia
 
-- **Dificultad por ZONA** (overworld/nether/dungeon), NO por stage del jugador
-- ProgressiveStages es **per-player** para recetas/items, global para nada
-- Mobs y dificultad son fijos por zona
+- **ProgressiveStages = unica fuente de verdad** para TODA la progresion (items, recetas Y dificultad)
+- Per-player/team: cada jugador ve dificultad acorde a su stage personal
+- Champions escalan por **stage del jugador mas cercano** (servo_core post-procesa via API publica)
+- Dungeons escalan por **tier de llave usada** (independiente del player stage)
+- Dungeons siempre mas dificiles que overworld al mismo nivel
 - Cada capitulo tiene de todo: cocina + farming + dungeon + combate + decoracion
+- Zero SavedData custom. Zero sincronizacion entre sistemas.

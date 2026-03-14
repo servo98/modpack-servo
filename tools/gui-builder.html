@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoForge GUI Builder</title>
+<style>
+/* MC-like pixel font via Google Fonts (single dependency, tiny) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+</style>
+<style>
+/* === RESET & DARK THEME === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #1a1a2e; --surface: #16213e; --panel: #0f3460;
+  --text: #e0e0e0; --text-muted: #8899aa; --accent: #e94560;
+  --accent2: #0f9b8e; --border: #1a3a5c; --input-bg: #0a1628;
+  --mc-bg: #c6c6c6; --mc-slot: #8b8b8b; --mc-dark: #373737;
+  --mc-light: #ffffff; --mc-border-dark: #555555; --mc-border-light: #dbdbdb;
+  --scale: 3;
+}
+html, body { height: 100%; overflow: hidden; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px;
+  background: var(--bg); color: var(--text);
+  display: flex; flex-direction: column;
+}
+button { cursor: pointer; font-family: inherit; font-size: 12px; }
+input, select { font-family: inherit; font-size: 12px; background: var(--input-bg);
+  color: var(--text); border: 1px solid var(--border); padding: 4px 6px; border-radius: 3px; }
+input:focus, select:focus { outline: none; border-color: var(--accent2); }
+select { padding: 3px 4px; }
+label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* === TOOLBAR === */
+#toolbar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 12px; background: var(--surface); border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+#toolbar h1 { font-size: 14px; font-weight: 600; color: var(--accent); margin-right: 12px; white-space: nowrap; }
+.tb-btn {
+  background: var(--panel); color: var(--text); border: 1px solid var(--border);
+  padding: 4px 12px; border-radius: 4px; font-size: 12px; white-space: nowrap;
+}
+.tb-btn:hover { background: var(--accent2); border-color: var(--accent2); color: #fff; }
+.tb-sep { width: 1px; height: 20px; background: var(--border); }
+#toolbar select { min-width: 120px; }
+.tb-spacer { flex: 1; }
+#status { font-size: 11px; color: var(--text-muted); }
+
+/* === MAIN LAYOUT === */
+#main { display: flex; flex: 1; overflow: hidden; }
+
+/* === PALETTE === */
+#palette {
+  width: 190px; min-width: 190px; background: var(--surface);
+  border-right: 1px solid var(--border); overflow-y: auto; padding: 8px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.pal-section { font-size: 10px; color: var(--accent); text-transform: uppercase;
+  letter-spacing: 1px; margin-top: 8px; padding-bottom: 2px; border-bottom: 1px solid var(--border); }
+.pal-section:first-child { margin-top: 0; }
+.pal-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 8px; border-radius: 4px; cursor: pointer;
+  border: 1px solid transparent; transition: all 0.1s;
+}
+.pal-item:hover { background: var(--panel); border-color: var(--border); }
+.pal-item.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pal-icon { width: 24px; height: 24px; border-radius: 3px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 14px; }
+.pal-label { font-size: 12px; }
+.pal-desc { font-size: 10px; color: var(--text-muted); }
+
+/* === CANVAS AREA === */
+#canvas-area {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  background: #0d1117; overflow: auto; position: relative;
+}
+#gui-canvas { cursor: crosshair; image-rendering: pixelated; }
+#gui-canvas.placing { cursor: copy; }
+#gui-canvas.dragging { cursor: grabbing; }
+
+/* === PROPERTIES === */
+#properties {
+  width: 280px; min-width: 280px; background: var(--surface);
+  border-left: 1px solid var(--border); overflow-y: auto; padding: 0;
+  display: flex; flex-direction: column;
+}
+.prop-section {
+  padding: 8px 12px; border-bottom: 1px solid var(--border);
+}
+.prop-section h3 { font-size: 11px; color: var(--accent2); text-transform: uppercase;
+  letter-spacing: 0.8px; margin-bottom: 6px; }
+.prop-row { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
+.prop-row label { width: 70px; flex-shrink: 0; text-align: right; }
+.prop-row input, .prop-row select { flex: 1; min-width: 0; }
+.prop-row input[type="number"] { width: 60px; flex: 0 0 60px; }
+.prop-row-wide { flex-direction: column; align-items: stretch; }
+.prop-row-wide label { text-align: left; width: auto; margin-bottom: 2px; }
+
+/* === CODE OUTPUT === */
+#code-output {
+  flex: 1; display: flex; flex-direction: column; min-height: 0;
+}
+#code-tabs {
+  display: flex; border-bottom: 1px solid var(--border); background: var(--panel);
+  flex-shrink: 0;
+}
+.code-tab {
+  padding: 5px 10px; font-size: 11px; cursor: pointer;
+  border: none; background: none; color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+}
+.code-tab:hover { color: var(--text); }
+.code-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+#code-content {
+  flex: 1; overflow: auto; padding: 8px; font-family: 'Cascadia Code', 'Fira Code', monospace;
+  font-size: 11px; line-height: 1.5; white-space: pre; background: var(--input-bg);
+  tab-size: 4; color: #c9d1d9; min-height: 0;
+}
+.copy-btn {
+  position: absolute; top: 4px; right: 4px; font-size: 10px;
+  background: var(--panel); color: var(--text); border: 1px solid var(--border);
+  padding: 2px 8px; border-radius: 3px; z-index: 10;
+}
+.copy-btn:hover { background: var(--accent2); }
+#code-wrapper { position: relative; flex: 1; display: flex; flex-direction: column; min-height: 0; }
+
+/* === ELEMENT LIST === */
+.el-list { max-height: 120px; overflow-y: auto; }
+.el-item {
+  display: flex; align-items: center; gap: 6px; padding: 3px 6px;
+  border-radius: 3px; cursor: pointer; font-size: 11px;
+}
+.el-item:hover { background: var(--panel); }
+.el-item.selected { background: var(--accent); color: #fff; }
+.el-item .el-type { font-size: 10px; color: var(--text-muted); }
+.el-item.selected .el-type { color: rgba(255,255,255,0.7); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent2); }
+</style>
+</head>
+<body>
+
+<!-- TOOLBAR -->
+<div id="toolbar">
+  <h1>NeoForge GUI Builder</h1>
+  <button class="tb-btn" onclick="newGui()" title="New GUI (Ctrl+N)">New</button>
+  <button class="tb-btn" onclick="saveGui()" title="Save JSON">Save</button>
+  <button class="tb-btn" onclick="loadGui()" title="Load JSON">Load</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" onclick="uploadBgImage()" title="Upload background image" style="background:#0f9b8e;border-color:#0f9b8e;color:#fff">Upload BG</button>
+  <div class="tb-sep"></div>
+  <label style="color:var(--text-muted);font-size:11px">Size:</label>
+  <select id="sizePreset" onchange="applySizePreset(this.value)">
+    <option value="">Custom</option>
+    <option value="176x166" selected>Standard (176x166)</option>
+    <option value="176x131">No title (176x131)</option>
+    <option value="176x90">Compact (176x90)</option>
+    <option value="98x84">Mini (98x84)</option>
+    <option value="60x50">Tiny 1-slot (60x50)</option>
+    <option value="230x200">Large (230x200)</option>
+  </select>
+  <div class="tb-sep"></div>
+  <label style="color:var(--text-muted);font-size:11px">Presets:</label>
+  <select id="presets" onchange="loadPreset(this.value)">
+    <option value="">-- Select --</option>
+    <option value="empty">Empty</option>
+    <option value="simple">Simple (1-in, 1-out)</option>
+    <option value="furnace">Furnace-like</option>
+    <option value="3to1">3-input, 1-output</option>
+  </select>
+  <div class="tb-spacer"></div>
+  <span id="status">Ready</span>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+  <!-- PALETTE -->
+  <div id="palette">
+    <div class="pal-section">Slots</div>
+    <div class="pal-item" data-type="INPUT_SLOT" onclick="selectPalette(this)">
+      <div class="pal-icon" style="background:#8b8b8b;border:2px inset #666">I</div>
+      <div><div class="pal-label">Input Slot</div><div class="pal-desc">Accepts items</div></div>
+    </div>
+    <div class="pal-item" data-type="OUTPUT_SLOT" onclick="selectPalette(this)">
+      <div class="pal-icon" style="background:#8b8b8b;border:2px outset #aaa">O</div>
+      <div><div class="pal-label">Output Slot</div><div class="pal-desc">Extract only</div></div>
+    </div>
+    <div class="pal-item" data-type="LARGE_OUTPUT_SLOT" onclick="selectPalette(this)">
+      <div class="pal-icon" style="background:#8b8b8b;border:2px outset #aaa;width:34px;height:34px;font-size:16px">O+</div>
+      <div><div class="pal-label">Large Output</div><div class="pal-desc">26x26 slot</div></div>
+    </div>
+    <div class="pal-item" data-type="FUEL_SLOT" onclick="selectPalette(this)">
+      <div class="pal-icon" style="background:#8b4513;border:2px inset #654321">F</div>
+      <div><div class="pal-label">Fuel Slot</div><div class="pal-desc">Burnable items</div></div>
+    </div>
+
+    <div class="pal-section">Indicators</div>
+    <div class="pal-item" data-type="PROGRESS_ARROW" onclick="selectPalette(this)">
+      <div class="pal-icon" style="background:#c6c6c6;font-size:16px">&rarr;</div>
+      <div><div class="pal-label">Progress Arrow</div><div class="pal-desc">24x16, L-to-R</div></div>
+    </div>
+    <div class="pal-item" data-type="FLAME" onclick="selectPalette(this)">
+      <div class="pal-icon" style="background:#c6c6c6;color:#e94560;font-size:18px">&#9632;</div>
+      <div><div class="pal-label">Flame</div><div class="pal-desc">14x14, B-to-T</div></div>
+    </div>
+    <div class="pal-item" data-type="FLUID_TANK" onclick="selectPalette(this)">
+      <div class="pal-icon" style="background:#335577;border:1px solid #446688">T</div>
+      <div><div class="pal-label">Fluid Tank</div><div class="pal-desc">16xH indicator</div></div>
+    </div>
+
+    <div class="pal-section">Decoration</div>
+    <div class="pal-item" data-type="LABEL" onclick="selectPalette(this)">
+      <div class="pal-icon" style="font-size:16px;color:var(--text)">A</div>
+      <div><div class="pal-label">Label</div><div class="pal-desc">Text overlay</div></div>
+    </div>
+
+    <div class="pal-section" style="margin-top: auto; border:none;">
+      <div style="font-size:10px;color:var(--text-muted);line-height:1.6">
+        <b>Controls:</b><br>
+        Click palette &rarr; place<br>
+        Click element &rarr; select<br>
+        Drag &rarr; move<br>
+        Del &rarr; remove<br>
+        Ctrl+Z &rarr; undo<br>
+        Arrow keys &rarr; nudge<br>
+        Shift &rarr; 1px (free)<br>
+        Esc &rarr; cancel place
+      </div>
+    </div>
+  </div>
+
+  <!-- CANVAS -->
+  <div id="canvas-area">
+    <canvas id="gui-canvas"></canvas>
+  </div>
+
+  <!-- PROPERTIES -->
+  <div id="properties">
+    <!-- Global settings -->
+    <div class="prop-section">
+      <h3>Global Settings</h3>
+      <div class="prop-row">
+        <label>Mod ID</label>
+        <input id="prop-modId" value="servo_packaging" oninput="updateGlobal('modId',this.value)">
+      </div>
+      <div class="prop-row">
+        <label>Block</label>
+        <input id="prop-blockName" value="packing_station" oninput="updateGlobal('blockName',this.value)">
+      </div>
+      <div class="prop-row">
+        <label>Package</label>
+        <input id="prop-packageName" value="com.servo.packaging" oninput="updateGlobal('packageName',this.value)">
+      </div>
+      <div class="prop-row">
+        <label>GUI Title</label>
+        <input id="prop-guiTitle" value="Packing Station" oninput="updateGlobal('guiTitle',this.value)">
+      </div>
+      <div class="prop-row">
+        <label>Data Count</label>
+        <input id="prop-dataCount" type="number" value="2" min="0" max="16" oninput="updateGlobal('containerDataCount',+this.value)">
+      </div>
+      <div class="prop-row">
+        <label>Width</label>
+        <input id="prop-imgW" type="number" value="176" min="30" max="256" oninput="updateGlobal('imageWidth',+this.value)">
+      </div>
+      <div class="prop-row">
+        <label>Height</label>
+        <input id="prop-imgH" type="number" value="166" min="30" max="256" oninput="updateGlobal('imageHeight',+this.value)">
+      </div>
+      <div class="prop-row">
+        <label>Inv X</label>
+        <input id="prop-playerX" type="number" value="8" min="0" max="300" oninput="updateGlobal('playerInvX',+this.value)">
+        <label style="width:auto">Y</label>
+        <input id="prop-playerY" type="number" value="84" min="0" max="300" oninput="updateGlobal('playerInvY',+this.value)">
+      </div>
+      <div class="prop-row">
+        <label>Show Inv</label>
+        <select id="prop-showInv" onchange="updateGlobal('showPlayerInv',this.value==='true')">
+          <option value="true" selected>Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Background image -->
+    <div class="prop-section" id="bg-section">
+      <h3>Background Image</h3>
+      <div id="bg-none" style="font-size:11px;color:var(--text-muted);margin-bottom:4px">
+        No custom background. Using default MC style.<br>
+        <span style="font-size:10px">Upload any image (AI-generated, photo, etc.) and it will be auto-converted to pixel art at the GUI resolution.</span>
+      </div>
+      <div id="bg-preview" style="display:none">
+        <div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">
+          <canvas id="bg-thumb" width="88" height="83" style="border:1px solid var(--border);image-rendering:pixelated;background:#222"></canvas>
+          <div style="font-size:10px;color:var(--text-muted)">
+            <div id="bg-info-orig">Original: ?x?</div>
+            <div id="bg-info-scaled">Scaled: ?x?</div>
+            <div style="margin-top:4px">
+              <button class="tb-btn" style="font-size:10px;padding:2px 6px" onclick="removeBgImage()">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div class="prop-row">
+          <label>Opacity</label>
+          <input id="bg-opacity" type="range" min="0" max="100" value="100" oninput="updateBgOpacity(+this.value)" style="flex:1">
+          <span id="bg-opacity-val" style="font-size:10px;width:30px">100%</span>
+        </div>
+        <div class="prop-row">
+          <label>Borders</label>
+          <select id="bg-borders" onchange="state.bgDrawBorders=this.value==='true';render()">
+            <option value="true" selected>MC 3D borders</option>
+            <option value="false">No borders</option>
+          </select>
+        </div>
+        <div class="prop-row">
+          <label>Fit Mode</label>
+          <select id="bg-fit" onchange="state.bgFitMode=this.value;reprocessBg();render()">
+            <option value="stretch" selected>Stretch</option>
+            <option value="fit">Fit (keep ratio)</option>
+            <option value="fill">Fill/Crop (cover)</option>
+            <option value="center">Center (no scale)</option>
+          </select>
+        </div>
+        <div id="bg-offset-controls" style="display:none">
+          <div class="prop-row">
+            <label>Offset X</label>
+            <input id="bg-offX" type="number" value="0" oninput="state.bgOffsetX=+this.value;reprocessBg();render()">
+            <label style="width:auto">Y</label>
+            <input id="bg-offY" type="number" value="0" oninput="state.bgOffsetY=+this.value;reprocessBg();render()">
+          </div>
+          <div style="font-size:9px;color:var(--text-muted)">Shift image position within the frame</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Elements list -->
+    <div class="prop-section">
+      <h3>Elements <span id="el-count" style="color:var(--text-muted)">(0)</span></h3>
+      <div class="el-list" id="el-list"></div>
+    </div>
+
+    <!-- Selected element properties -->
+    <div class="prop-section" id="sel-props" style="display:none">
+      <h3>Selected: <span id="sel-type"></span></h3>
+      <div class="prop-row">
+        <label>X</label>
+        <input id="sel-x" type="number" min="0" oninput="updateElement('x',+this.value)">
+        <label style="width:auto">Y</label>
+        <input id="sel-y" type="number" min="0" oninput="updateElement('y',+this.value)">
+      </div>
+      <div id="sel-extra"></div>
+    </div>
+
+    <!-- Code output -->
+    <div id="code-output">
+      <div id="code-tabs">
+        <button class="code-tab active" data-tab="menu" onclick="switchTab(this)">Menu</button>
+        <button class="code-tab" data-tab="screen" onclick="switchTab(this)">Screen</button>
+        <button class="code-tab" data-tab="registry" onclick="switchTab(this)">Registry</button>
+        <button class="code-tab" data-tab="client" onclick="switchTab(this)">ClientSetup</button>
+        <button class="code-tab" data-tab="png" onclick="switchTab(this)">PNG</button>
+      </div>
+      <div id="code-wrapper">
+        <button class="copy-btn" onclick="copyCode()">Copy</button>
+        <pre id="code-content">// Select a tab to generate code</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// DATA MODEL
+// ============================================================
+const DEFAULTS = {
+  INPUT_SLOT:        { w:18, h:18, slotIndex:-1, label:'Input', filterItem:'' },
+  OUTPUT_SLOT:       { w:18, h:18, slotIndex:-1, label:'Output' },
+  LARGE_OUTPUT_SLOT: { w:26, h:26, slotIndex:-1, label:'Large Output' },
+  FUEL_SLOT:         { w:18, h:18, slotIndex:-1, label:'Fuel', filterItem:'' },
+  PROGRESS_ARROW:    { w:24, h:16, dataIndex:0, dataMaxIndex:1, label:'Progress' },
+  FLAME:             { w:14, h:14, dataIndex:0, dataMaxIndex:1, label:'Burn' },
+  FLUID_TANK:        { w:16, h:52, label:'Tank' },
+  LABEL:             { w:40, h:10, text:'Label', color:'#404040', label:'Label' },
+};
+
+const SLOT_TYPES = ['INPUT_SLOT','OUTPUT_SLOT','LARGE_OUTPUT_SLOT','FUEL_SLOT'];
+const INDICATOR_TYPES = ['PROGRESS_ARROW','FLAME','FLUID_TANK'];
+
+let state = createDefaultState();
+let activeTab = 'menu';
+let placingType = null;
+let dragInfo = null;
+let ghostPos = null;
+
+function createDefaultState() {
+  return {
+    modId: 'servo_packaging', blockName: 'packing_station',
+    packageName: 'com.servo.packaging', guiTitle: 'Packing Station',
+    containerDataCount: 2, imageWidth: 176, imageHeight: 166,
+    playerInvX: 8, playerInvY: 84, showPlayerInv: true,
+    elements: [], selectedId: null, undoStack: [], nextId: 1,
+    bgImageData: null, // base64 of the PIXELATED version at GUI resolution
+    bgOrigData: null,  // base64 of the ORIGINAL uploaded image (for reprocessing)
+    bgOrigInfo: null,  // { w, h } of the original uploaded image
+    bgOpacity: 100,
+    bgDrawBorders: true,
+    bgFitMode: 'stretch', // stretch | fit | fill | center
+    bgOffsetX: 0,
+    bgOffsetY: 0
+  };
+}
+
+// Runtime: holds the decoded Image object for the pixelated bg
+let bgPixelatedImg = null;
+// Resize handle state
+let resizeInfo = null; // { edge: 'right'|'bottom'|'corner', startX, startY, startW, startH }
+
+// ============================================================
+// CANVAS RENDERING
+// ============================================================
+const canvas = document.getElementById('gui-canvas');
+const ctx = canvas.getContext('2d');
+const SCALE = 3;
+const HANDLE_PAD = 14; // extra pixels beyond GUI for resize handles
+const MIN_CANVAS = 540; // minimum canvas dimension so handles are always reachable
+
+function resizeCanvas() {
+  canvas.width = Math.max(MIN_CANVAS, state.imageWidth * SCALE + HANDLE_PAD);
+  canvas.height = Math.max(MIN_CANVAS, state.imageHeight * SCALE + HANDLE_PAD);
+}
+
+function render() {
+  resizeCanvas();
+  ctx.imageSmoothingEnabled = false;
+
+  // Clear entire canvas including handle area
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  ctx.save();
+  ctx.scale(SCALE, SCALE);
+
+  // Background
+  if (bgPixelatedImg && state.bgImageData) {
+    // Custom background image (already pixelated to GUI resolution)
+    const oldAlpha = ctx.globalAlpha;
+    ctx.globalAlpha = (state.bgOpacity ?? 100) / 100;
+    ctx.drawImage(bgPixelatedImg, 0, 0, state.imageWidth, state.imageHeight);
+    ctx.globalAlpha = oldAlpha;
+    // Optionally draw MC 3D borders on top
+    if (state.bgDrawBorders !== false) {
+      drawMcBorders(0, 0, state.imageWidth, state.imageHeight);
+    }
+    // Title text
+    ctx.fillStyle = '#404040';
+    ctx.font = '7px "Press Start 2P", monospace';
+    ctx.fillText(state.guiTitle, 8, 14);
+    if (state.showPlayerInv !== false) ctx.fillText('Inventory', state.playerInvX ?? 8, state.playerInvY - 2);
+  } else {
+    drawMcBackground(0, 0, state.imageWidth, state.imageHeight);
+  }
+
+  // Grid (subtle)
+  ctx.strokeStyle = 'rgba(0,0,0,0.06)';
+  ctx.lineWidth = 0.5;
+  for (let gx = 0; gx <= state.imageWidth; gx += 18) {
+    ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, state.imageHeight); ctx.stroke();
+  }
+  for (let gy = 0; gy <= state.imageHeight; gy += 18) {
+    ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(state.imageWidth, gy); ctx.stroke();
+  }
+
+  // Player inventory
+  if (state.showPlayerInv !== false) {
+    drawPlayerInv(state.playerInvX ?? 8, state.playerInvY);
+    // Selection highlight for player inv
+    if (state.selectedId === '__playerInv__') {
+      const pix = state.playerInvX ?? 8;
+      ctx.strokeStyle = '#0f9b8e';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 2]);
+      ctx.strokeRect(pix - 1, state.playerInvY - 1, 164, 78);
+      ctx.setLineDash([]);
+    }
+  }
+
+  // Elements
+  for (const el of state.elements) {
+    drawElement(el, el.id === state.selectedId);
+  }
+
+  // Ghost preview
+  if (placingType && ghostPos) {
+    ctx.globalAlpha = 0.5;
+    const ghost = { ...DEFAULTS[placingType], type: placingType, x: ghostPos.x, y: ghostPos.y, id: -1 };
+    drawElement(ghost, false);
+    ctx.globalAlpha = 1.0;
+  }
+
+  ctx.restore();
+
+  // Draw resize handles OUTSIDE the scaled context (in screen pixels)
+  drawResizeHandles();
+}
+
+function drawResizeHandles() {
+  const w = state.imageWidth * SCALE;
+  const h = state.imageHeight * SCALE;
+
+  ctx.save();
+
+  // Right edge — full-height stripe
+  ctx.fillStyle = 'rgba(15,155,142,0.5)';
+  ctx.fillRect(w, 0, HANDLE_PAD, h);
+  // Bottom edge — full-width stripe
+  ctx.fillRect(0, h, w, HANDLE_PAD);
+  // Corner — brighter
+  ctx.fillStyle = 'rgba(233,69,96,0.7)';
+  ctx.fillRect(w, h, HANDLE_PAD, HANDLE_PAD);
+
+  // Grip dots on right edge
+  ctx.fillStyle = 'rgba(255,255,255,0.6)';
+  for (let i = -2; i <= 2; i++) {
+    ctx.fillRect(w + 4, h / 2 + i * 8, 4, 3);
+  }
+  // Grip dots on bottom edge
+  for (let i = -2; i <= 2; i++) {
+    ctx.fillRect(w / 2 + i * 8, h + 4, 3, 4);
+  }
+  // Corner grip
+  ctx.fillRect(w + 3, h + 3, 4, 4);
+  ctx.fillRect(w + 7, h + 7, 3, 3);
+
+  // Size label
+  ctx.fillStyle = 'rgba(255,255,255,0.8)';
+  ctx.font = '10px monospace';
+  ctx.fillText(`${state.imageWidth}x${state.imageHeight}`, w - 56, h + 11);
+
+  ctx.restore();
+}
+
+function getResizeEdge(screenX, screenY) {
+  const w = state.imageWidth * SCALE;
+  const h = state.imageHeight * SCALE;
+  const onRight = screenX >= w - 6 && screenX <= w + HANDLE_PAD;
+  const onBottom = screenY >= h - 6 && screenY <= h + HANDLE_PAD;
+  if (onRight && onBottom) return 'corner';
+  if (onRight && screenY >= 0 && screenY <= h + HANDLE_PAD) return 'right';
+  if (onBottom && screenX >= 0 && screenX <= w + HANDLE_PAD) return 'bottom';
+  return null;
+}
+
+function drawMcBackground(x, y, w, h) {
+  // Fill
+  ctx.fillStyle = '#c6c6c6';
+  ctx.fillRect(x, y, w, h);
+  // 3D borders
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(x, y, w, 1);         // top highlight
+  ctx.fillRect(x, y, 1, h);         // left highlight
+  ctx.fillStyle = '#555555';
+  ctx.fillRect(x, y + h - 1, w, 1); // bottom shadow
+  ctx.fillRect(x + w - 1, y, 1, h); // right shadow
+  ctx.fillStyle = '#dbdbdb';
+  ctx.fillRect(x + 1, y + 1, w - 3, 1);
+  ctx.fillRect(x + 1, y + 1, 1, h - 3);
+  ctx.fillStyle = '#878787';
+  ctx.fillRect(x + 1, y + h - 2, w - 2, 1);
+  ctx.fillRect(x + w - 2, y + 1, 1, h - 2);
+
+  // Title text
+  ctx.fillStyle = '#404040';
+  ctx.font = '7px "Press Start 2P", monospace';
+  ctx.fillText(state.guiTitle, 8, 14);
+
+  // "Inventory" label — only if inventory visible
+  if (state.showPlayerInv !== false) {
+    ctx.fillText('Inventory', state.playerInvX ?? 8, state.playerInvY - 2);
+  }
+}
+
+function drawMcBorders(x, y, w, h) {
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(x, y, w, 1);
+  ctx.fillRect(x, y, 1, h);
+  ctx.fillStyle = '#555555';
+  ctx.fillRect(x, y + h - 1, w, 1);
+  ctx.fillRect(x + w - 1, y, 1, h);
+  ctx.fillStyle = '#dbdbdb';
+  ctx.fillRect(x + 1, y + 1, w - 3, 1);
+  ctx.fillRect(x + 1, y + 1, 1, h - 3);
+  ctx.fillStyle = '#878787';
+  ctx.fillRect(x + 1, y + h - 2, w - 2, 1);
+  ctx.fillRect(x + w - 2, y + 1, 1, h - 2);
+}
+
+function drawSlotBg(x, y, size) {
+  // MC slot: dark top-left border, light bottom-right, dark bg
+  const s = size; // typically 18
+  const inner = s - 2;
+  ctx.fillStyle = '#373737';
+  ctx.fillRect(x, y, s - 1, 1);       // top dark
+  ctx.fillRect(x, y, 1, s - 1);       // left dark
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(x + s - 1, y, 1, s);   // right light
+  ctx.fillRect(x, y + s - 1, s, 1);   // bottom light
+  ctx.fillStyle = '#8b8b8b';
+  ctx.fillRect(x + 1, y + 1, inner, inner); // center
+}
+
+function drawElement(el, selected) {
+  const t = el.type;
+  if (t === 'INPUT_SLOT' || t === 'FUEL_SLOT') {
+    drawSlotBg(el.x, el.y, 18);
+    // Fuel icon hint
+    if (t === 'FUEL_SLOT') {
+      ctx.fillStyle = 'rgba(139,69,19,0.3)';
+      ctx.fillRect(el.x + 2, el.y + 2, 14, 14);
+    }
+  } else if (t === 'OUTPUT_SLOT') {
+    drawSlotBg(el.x, el.y, 18);
+    ctx.fillStyle = 'rgba(255,165,0,0.15)';
+    ctx.fillRect(el.x + 2, el.y + 2, 14, 14);
+  } else if (t === 'LARGE_OUTPUT_SLOT') {
+    drawSlotBg(el.x, el.y, 26);
+    ctx.fillStyle = 'rgba(255,165,0,0.15)';
+    ctx.fillRect(el.x + 2, el.y + 2, 22, 22);
+  } else if (t === 'PROGRESS_ARROW') {
+    drawArrow(el.x, el.y, el.w || 24, el.h || 16);
+  } else if (t === 'FLAME') {
+    drawFlame(el.x, el.y, el.w || 14, el.h || 14);
+  } else if (t === 'FLUID_TANK') {
+    const th = el.h || 52;
+    ctx.fillStyle = '#373737';
+    ctx.fillRect(el.x, el.y, 18, 1);
+    ctx.fillRect(el.x, el.y, 1, th);
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(el.x + 17, el.y, 1, th);
+    ctx.fillRect(el.x, el.y + th - 1, 18, 1);
+    ctx.fillStyle = '#335577';
+    ctx.fillRect(el.x + 1, el.y + 1, 16, th - 2);
+  } else if (t === 'LABEL') {
+    ctx.fillStyle = el.color || '#404040';
+    ctx.font = '7px "Press Start 2P", monospace';
+    ctx.fillText(el.text || 'Label', el.x, el.y + 8);
+  }
+
+  // Selection highlight
+  if (selected) {
+    const ew = getElementWidth(el);
+    const eh = getElementHeight(el);
+    ctx.strokeStyle = '#e94560';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([2, 2]);
+    ctx.strokeRect(el.x - 1, el.y - 1, ew + 2, eh + 2);
+    ctx.setLineDash([]);
+  }
+}
+
+function drawArrow(x, y, w, h) {
+  // Empty arrow background
+  ctx.fillStyle = '#c6c6c6';
+  ctx.fillRect(x, y, w, h);
+  // Arrow outline
+  ctx.fillStyle = '#b0b0b0';
+  // shaft
+  ctx.fillRect(x, y + 3, w - 6, h - 6);
+  // arrowhead
+  ctx.beginPath();
+  ctx.moveTo(x + w - 6, y);
+  ctx.lineTo(x + w, y + h / 2);
+  ctx.lineTo(x + w - 6, y + h);
+  ctx.closePath();
+  ctx.fill();
+  // Inner
+  ctx.fillStyle = '#d4d4d4';
+  ctx.fillRect(x + 1, y + 4, w - 8, h - 8);
+}
+
+function drawFlame(x, y, w, h) {
+  ctx.fillStyle = '#c6c6c6';
+  ctx.fillRect(x, y, w, h);
+  // Simple flame shape
+  ctx.fillStyle = '#b0b0b0';
+  const cx = x + w / 2;
+  ctx.beginPath();
+  ctx.moveTo(cx, y + 1);
+  ctx.lineTo(x + w - 2, y + h - 2);
+  ctx.lineTo(x + 2, y + h - 2);
+  ctx.closePath();
+  ctx.fill();
+}
+
+function drawPlayerInv(x, y) {
+  // 3 rows of 9 slots
+  for (let row = 0; row < 3; row++) {
+    for (let col = 0; col < 9; col++) {
+      drawSlotBg(x + col * 18, y + row * 18, 18);
+    }
+  }
+  // Hotbar (gap of 4px)
+  const hotbarY = y + 58;
+  for (let col = 0; col < 9; col++) {
+    drawSlotBg(x + col * 18, hotbarY, 18);
+  }
+}
+
+function getElementWidth(el) {
+  if (el.type === 'LARGE_OUTPUT_SLOT') return 26;
+  if (el.type === 'FLUID_TANK') return 18;
+  if (el.type === 'LABEL') return Math.max(40, (el.text || 'Label').length * 6);
+  return el.w || DEFAULTS[el.type]?.w || 18;
+}
+
+function getElementHeight(el) {
+  if (el.type === 'LARGE_OUTPUT_SLOT') return 26;
+  if (el.type === 'FLUID_TANK') return el.h || 52;
+  if (el.type === 'LABEL') return 10;
+  return el.h || DEFAULTS[el.type]?.h || 18;
+}
+
+// ============================================================
+// INTERACTION
+// ============================================================
+canvas.addEventListener('mousemove', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const screenX = e.clientX - rect.left;
+  const screenY = e.clientY - rect.top;
+  const mx = Math.floor(screenX / SCALE);
+  const my = Math.floor(screenY / SCALE);
+
+  // Resize dragging
+  if (resizeInfo) {
+    const dx = screenX - resizeInfo.startX;
+    const dy = screenY - resizeInfo.startY;
+    // Snap to 18px grid (MC slot size) or 1px with Alt
+    const snap = e.shiftKey ? 1 : 18;
+    if (resizeInfo.edge === 'right' || resizeInfo.edge === 'corner') {
+      let rawW = resizeInfo.startW + dx / SCALE;
+      let newW = snap > 1 ? Math.round(rawW / snap) * snap : Math.round(rawW);
+      // Ensure minimum viable width (at least 2 grid cells)
+      state.imageWidth = Math.max(36, Math.min(256, newW));
+      document.getElementById('prop-imgW').value = state.imageWidth;
+    }
+    if (resizeInfo.edge === 'bottom' || resizeInfo.edge === 'corner') {
+      let rawH = resizeInfo.startH + dy / SCALE;
+      let newH = snap > 1 ? Math.round(rawH / snap) * snap : Math.round(rawH);
+      state.imageHeight = Math.max(36, Math.min(256, newH));
+      document.getElementById('prop-imgH').value = state.imageHeight;
+    }
+    document.getElementById('sizePreset').value = '';
+    render();
+    setStatus(`${state.imageWidth}x${state.imageHeight} (grid: 18px, Shift=1px)`);
+    return;
+  }
+
+  // Update cursor for resize handles
+  const edge = getResizeEdge(screenX, screenY);
+  if (edge === 'corner') canvas.style.cursor = 'nwse-resize';
+  else if (edge === 'right') canvas.style.cursor = 'ew-resize';
+  else if (edge === 'bottom') canvas.style.cursor = 'ns-resize';
+  else if (placingType) canvas.style.cursor = 'copy';
+  else if (dragInfo) canvas.style.cursor = 'grabbing';
+  else canvas.style.cursor = 'crosshair';
+
+  if (dragInfo) {
+    const snap = e.shiftKey ? 1 : 18;
+    let nx = mx - dragInfo.offsetX;
+    let ny = my - dragInfo.offsetY;
+    if (snap > 1) {
+      nx = Math.round(nx / snap) * snap;
+      ny = Math.round(ny / snap) * snap;
+    }
+
+    if (dragInfo.isPlayerInv) {
+      // Dragging the player inventory
+      nx = Math.max(0, Math.min(state.imageWidth - 162, nx));
+      ny = Math.max(0, Math.min(state.imageHeight - 76, ny));
+      state.playerInvX = nx;
+      state.playerInvY = ny;
+      dragInfo.el.x = nx;
+      dragInfo.el.y = ny;
+      document.getElementById('prop-playerX').value = nx;
+      document.getElementById('prop-playerY').value = ny;
+      render();
+      return;
+    }
+
+    nx = Math.max(0, Math.min(state.imageWidth - getElementWidth(dragInfo.el), nx));
+    ny = Math.max(0, Math.min(state.imageHeight - getElementHeight(dragInfo.el), ny));
+    dragInfo.el.x = nx;
+    dragInfo.el.y = ny;
+    render();
+    updatePropsUI();
+    return;
+  }
+
+  if (placingType) {
+    const snap = e.shiftKey ? 1 : 18;
+    let gx = Math.round(mx / snap) * snap;
+    let gy = Math.round(my / snap) * snap;
+    const pw = DEFAULTS[placingType].w;
+    const ph = DEFAULTS[placingType].h;
+    if (snap > 1) {
+      gx = Math.round((mx - pw / 2) / snap) * snap;
+      gy = Math.round((my - ph / 2) / snap) * snap;
+    }
+    ghostPos = { x: gx, y: gy };
+    render();
+  }
+});
+
+canvas.addEventListener('mousedown', (e) => {
+  if (e.button !== 0) return;
+  const rect = canvas.getBoundingClientRect();
+  const screenX = e.clientX - rect.left;
+  const screenY = e.clientY - rect.top;
+  const mx = Math.floor(screenX / SCALE);
+  const my = Math.floor(screenY / SCALE);
+
+  // Check resize handles first
+  const edge = getResizeEdge(screenX, screenY);
+  if (edge && !placingType) {
+    resizeInfo = {
+      edge,
+      startX: screenX,
+      startY: screenY,
+      startW: state.imageWidth,
+      startH: state.imageHeight
+    };
+    return;
+  }
+
+  if (placingType) {
+    pushUndo();
+    const snap = e.shiftKey ? 1 : 18;
+    let px = ghostPos ? ghostPos.x : Math.round(mx / snap) * snap;
+    let py = ghostPos ? ghostPos.y : Math.round(my / snap) * snap;
+    const el = {
+      id: state.nextId++,
+      type: placingType,
+      x: px, y: py,
+      ...JSON.parse(JSON.stringify(DEFAULTS[placingType]))
+    };
+    if (SLOT_TYPES.includes(placingType)) {
+      const usedIndices = state.elements.filter(e => SLOT_TYPES.includes(e.type)).map(e => e.slotIndex).filter(i => i >= 0);
+      el.slotIndex = usedIndices.length > 0 ? Math.max(...usedIndices) + 1 : 0;
+    }
+    state.elements.push(el);
+    state.selectedId = el.id;
+    placingType = null;
+    canvas.classList.remove('placing');
+    clearPaletteActive();
+    render();
+    updateUI();
+    setStatus(`Placed ${el.type}`);
+    return;
+  }
+
+  // Hit test
+  for (let i = state.elements.length - 1; i >= 0; i--) {
+    const el = state.elements[i];
+    const ew = getElementWidth(el);
+    const eh = getElementHeight(el);
+    if (mx >= el.x && mx <= el.x + ew && my >= el.y && my <= el.y + eh) {
+      state.selectedId = el.id;
+      dragInfo = {
+        el,
+        offsetX: mx - el.x,
+        offsetY: my - el.y,
+        startX: el.x,
+        startY: el.y
+      };
+      canvas.classList.add('dragging');
+      render();
+      updateUI();
+      return;
+    }
+  }
+
+  // Hit test player inventory area
+  if (state.showPlayerInv !== false) {
+    const pix = state.playerInvX ?? 8;
+    const piy = state.playerInvY;
+    const piw = 162; // 9*18
+    const pih = 76;  // 3*18 + 4 + 18
+    if (mx >= pix && mx <= pix + piw && my >= piy && my <= piy + pih) {
+      state.selectedId = '__playerInv__';
+      dragInfo = {
+        el: { id: '__playerInv__', x: pix, y: piy },
+        offsetX: mx - pix,
+        offsetY: my - piy,
+        startX: pix,
+        startY: piy,
+        isPlayerInv: true
+      };
+      canvas.classList.add('dragging');
+      render();
+      updateUI();
+      return;
+    }
+  }
+
+  state.selectedId = null;
+  render();
+  updateUI();
+});
+
+canvas.addEventListener('mouseup', () => {
+  if (resizeInfo) {
+    resizeInfo = null;
+    generateCode();
+    return;
+  }
+  if (dragInfo) {
+    if (dragInfo.el.x !== dragInfo.startX || dragInfo.el.y !== dragInfo.startY) {
+      pushUndo();
+    }
+    dragInfo = null;
+    canvas.classList.remove('dragging');
+    generateCode();
+  }
+});
+
+canvas.addEventListener('mouseleave', () => {
+  ghostPos = null;
+  if (placingType) render();
+});
+
+// Double-click on resize handle = reset to standard 176x166
+canvas.addEventListener('dblclick', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const screenX = e.clientX - rect.left;
+  const screenY = e.clientY - rect.top;
+  const edge = getResizeEdge(screenX, screenY);
+  if (edge) {
+    state.imageWidth = 176;
+    state.imageHeight = 166;
+    document.getElementById('prop-imgW').value = 176;
+    document.getElementById('prop-imgH').value = 166;
+    document.getElementById('sizePreset').value = '176x166';
+    render();
+    generateCode();
+    setStatus('Reset to 176x166');
+  }
+});
+
+// Keyboard
+document.addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+
+  if (e.key === 'Escape') {
+    placingType = null;
+    canvas.classList.remove('placing');
+    clearPaletteActive();
+    ghostPos = null;
+    render();
+    return;
+  }
+
+  if ((e.key === 'Delete' || e.key === 'Backspace') && state.selectedId != null) {
+    pushUndo();
+    state.elements = state.elements.filter(el => el.id !== state.selectedId);
+    state.selectedId = null;
+    render();
+    updateUI();
+    setStatus('Element deleted');
+    return;
+  }
+
+  if (e.ctrlKey && e.key === 'z') {
+    e.preventDefault();
+    undo();
+    return;
+  }
+
+  // Arrow keys nudge
+  if (state.selectedId != null && ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)) {
+    e.preventDefault();
+    const step = e.shiftKey ? 1 : 18;
+
+    if (state.selectedId === '__playerInv__') {
+      // Nudge player inventory
+      pushUndo();
+      let px = state.playerInvX ?? 8;
+      let py = state.playerInvY;
+      if (e.key === 'ArrowUp') py = Math.max(0, py - step);
+      if (e.key === 'ArrowDown') py = Math.min(state.imageHeight - 76, py + step);
+      if (e.key === 'ArrowLeft') px = Math.max(0, px - step);
+      if (e.key === 'ArrowRight') px = Math.min(state.imageWidth - 162, px + step);
+      state.playerInvX = px;
+      state.playerInvY = py;
+      document.getElementById('prop-playerX').value = px;
+      document.getElementById('prop-playerY').value = py;
+      render();
+      generateCode();
+      return;
+    }
+
+    const el = state.elements.find(el => el.id === state.selectedId);
+    if (!el) return;
+    pushUndo();
+    if (e.key === 'ArrowUp') el.y = Math.max(0, el.y - step);
+    if (e.key === 'ArrowDown') el.y = Math.min(state.imageHeight - getElementHeight(el), el.y + step);
+    if (e.key === 'ArrowLeft') el.x = Math.max(0, el.x - step);
+    if (e.key === 'ArrowRight') el.x = Math.min(state.imageWidth - getElementWidth(el), el.x + step);
+    render();
+    updatePropsUI();
+    generateCode();
+  }
+});
+
+// ============================================================
+// PALETTE
+// ============================================================
+function selectPalette(el) {
+  const type = el.dataset.type;
+  if (placingType === type) {
+    // Toggle off
+    placingType = null;
+    canvas.classList.remove('placing');
+    clearPaletteActive();
+    return;
+  }
+  placingType = type;
+  canvas.classList.add('placing');
+  clearPaletteActive();
+  el.classList.add('active');
+  setStatus(`Click canvas to place ${type}`);
+}
+
+function clearPaletteActive() {
+  document.querySelectorAll('.pal-item').forEach(i => i.classList.remove('active'));
+}
+
+// ============================================================
+// BACKGROUND IMAGE (PIXELATION)
+// ============================================================
+function uploadBgImage() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*';
+  input.onchange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      const img = new Image();
+      img.onload = () => {
+        pixelateBgImage(img);
+        setStatus(`BG loaded: ${img.width}x${img.height} → pixelated to ${state.imageWidth}x${state.imageHeight}`);
+      };
+      img.src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
+  };
+  input.click();
+}
+
+// Runtime: original source image for reprocessing on fit mode change
+let bgSourceImg = null;
+
+function pixelateBgImage(sourceImg) {
+  // Store original for reprocessing
+  bgSourceImg = sourceImg;
+  const srcCanvas = document.createElement('canvas');
+  srcCanvas.width = sourceImg.width;
+  srcCanvas.height = sourceImg.height;
+  const sc = srcCanvas.getContext('2d');
+  sc.drawImage(sourceImg, 0, 0);
+  state.bgOrigData = srcCanvas.toDataURL('image/png');
+  state.bgOrigInfo = { w: sourceImg.width, h: sourceImg.height };
+  state.bgOpacity = 100;
+  state.bgOffsetX = 0;
+  state.bgOffsetY = 0;
+
+  processAndSetBg(sourceImg);
+}
+
+function reprocessBg() {
+  if (!bgSourceImg && state.bgOrigData) {
+    // Reload source from stored data
+    bgSourceImg = new Image();
+    bgSourceImg.onload = () => processAndSetBg(bgSourceImg);
+    bgSourceImg.src = state.bgOrigData;
+    return;
+  }
+  if (bgSourceImg) processAndSetBg(bgSourceImg);
+
+  // Show/hide offset controls
+  const show = state.bgFitMode === 'fill' || state.bgFitMode === 'center';
+  document.getElementById('bg-offset-controls').style.display = show ? '' : 'none';
+}
+
+function processAndSetBg(sourceImg) {
+  const tw = state.imageWidth;
+  const th = state.imageHeight;
+  const mode = state.bgFitMode || 'stretch';
+  const offX = state.bgOffsetX || 0;
+  const offY = state.bgOffsetY || 0;
+
+  // Calculate source rect (sx, sy, sw, sh) to sample from
+  let sx = 0, sy = 0, sw = sourceImg.width, sh = sourceImg.height;
+  const srcAspect = sourceImg.width / sourceImg.height;
+  const dstAspect = tw / th;
+
+  if (mode === 'fit') {
+    // Fit: scale to fit inside, letterbox with transparent
+    // We sample the whole source, but draw it centered
+  } else if (mode === 'fill') {
+    // Fill/cover: scale to cover, crop excess
+    if (srcAspect > dstAspect) {
+      // Source wider — crop sides
+      sw = Math.floor(sourceImg.height * dstAspect);
+      sx = Math.floor((sourceImg.width - sw) / 2) + offX;
+    } else {
+      // Source taller — crop top/bottom
+      sh = Math.floor(sourceImg.width / dstAspect);
+      sy = Math.floor((sourceImg.height - sh) / 2) + offY;
+    }
+    sx = Math.max(0, Math.min(sourceImg.width - sw, sx));
+    sy = Math.max(0, Math.min(sourceImg.height - sh, sy));
+  } else if (mode === 'center') {
+    // Center: 1:1 pixel mapping, no scale, crop to GUI size
+    sx = Math.floor((sourceImg.width - tw) / 2) + offX;
+    sy = Math.floor((sourceImg.height - th) / 2) + offY;
+    sw = tw;
+    sh = th;
+    sx = Math.max(0, Math.min(sourceImg.width - tw, sx));
+    sy = Math.max(0, Math.min(sourceImg.height - th, sy));
+  }
+
+  // Read source pixels
+  const srcCanvas = document.createElement('canvas');
+  srcCanvas.width = sourceImg.width;
+  srcCanvas.height = sourceImg.height;
+  const sc = srcCanvas.getContext('2d');
+  sc.drawImage(sourceImg, 0, 0);
+  const srcData = sc.getImageData(0, 0, sourceImg.width, sourceImg.height);
+
+  // Create destination
+  const offscreen = document.createElement('canvas');
+  offscreen.width = tw;
+  offscreen.height = th;
+  const oc = offscreen.getContext('2d');
+  const dstData = oc.createImageData(tw, th);
+
+  if (mode === 'fit') {
+    // Fit: scale preserving ratio, center
+    let drawW, drawH, drawX, drawY;
+    if (srcAspect > dstAspect) {
+      drawW = tw; drawH = Math.floor(tw / srcAspect);
+      drawX = 0; drawY = Math.floor((th - drawH) / 2);
+    } else {
+      drawH = th; drawW = Math.floor(th * srcAspect);
+      drawX = Math.floor((tw - drawW) / 2); drawY = 0;
+    }
+    // Nearest-neighbor sample into the fitted area
+    for (let dy = 0; dy < th; dy++) {
+      for (let dx = 0; dx < tw; dx++) {
+        const di = (dy * tw + dx) * 4;
+        if (dx >= drawX && dx < drawX + drawW && dy >= drawY && dy < drawY + drawH) {
+          const fx = Math.floor((dx - drawX) * sourceImg.width / drawW);
+          const fy = Math.floor((dy - drawY) * sourceImg.height / drawH);
+          const si = (fy * sourceImg.width + fx) * 4;
+          dstData.data[di] = srcData.data[si];
+          dstData.data[di+1] = srcData.data[si+1];
+          dstData.data[di+2] = srcData.data[si+2];
+          dstData.data[di+3] = srcData.data[si+3];
+        } else {
+          dstData.data[di+3] = 0; // transparent
+        }
+      }
+    }
+  } else {
+    // stretch, fill, center — all map from (sx,sy,sw,sh) to (0,0,tw,th)
+    for (let dy = 0; dy < th; dy++) {
+      for (let dx = 0; dx < tw; dx++) {
+        const fx = sx + Math.floor(dx * sw / tw);
+        const fy = sy + Math.floor(dy * sh / th);
+        const clamped_fx = Math.max(0, Math.min(sourceImg.width - 1, fx));
+        const clamped_fy = Math.max(0, Math.min(sourceImg.height - 1, fy));
+        const si = (clamped_fy * sourceImg.width + clamped_fx) * 4;
+        const di = (dy * tw + dx) * 4;
+        dstData.data[di] = srcData.data[si];
+        dstData.data[di+1] = srcData.data[si+1];
+        dstData.data[di+2] = srcData.data[si+2];
+        dstData.data[di+3] = srcData.data[si+3];
+      }
+    }
+  }
+
+  // Quantize colors for pixel-art feel
+  for (let i = 0; i < dstData.data.length; i += 4) {
+    if (dstData.data[i+3] === 0) continue;
+    dstData.data[i] = Math.round(dstData.data[i] / 8) * 8;
+    dstData.data[i+1] = Math.round(dstData.data[i+1] / 8) * 8;
+    dstData.data[i+2] = Math.round(dstData.data[i+2] / 8) * 8;
+  }
+  oc.putImageData(dstData, 0, 0);
+
+  state.bgImageData = offscreen.toDataURL('image/png');
+
+  bgPixelatedImg = new Image();
+  bgPixelatedImg.onload = () => { render(); updateBgUI(); };
+  bgPixelatedImg.src = state.bgImageData;
+}
+
+function removeBgImage() {
+  state.bgImageData = null;
+  state.bgOrigData = null;
+  state.bgOrigInfo = null;
+  bgPixelatedImg = null;
+  bgSourceImg = null;
+  render();
+  updateBgUI();
+  setStatus('Background removed');
+}
+
+function updateBgOpacity(val) {
+  state.bgOpacity = val;
+  document.getElementById('bg-opacity-val').textContent = val + '%';
+  render();
+}
+
+function updateBgUI() {
+  const hasImg = !!state.bgImageData;
+  document.getElementById('bg-none').style.display = hasImg ? 'none' : '';
+  document.getElementById('bg-preview').style.display = hasImg ? '' : 'none';
+
+  if (hasImg) {
+    // Update thumbnail
+    const thumb = document.getElementById('bg-thumb');
+    const tc = thumb.getContext('2d');
+    tc.imageSmoothingEnabled = false;
+    tc.clearRect(0, 0, thumb.width, thumb.height);
+    if (bgPixelatedImg) {
+      const aspect = state.imageWidth / state.imageHeight;
+      let dw = thumb.width, dh = thumb.height;
+      if (aspect > dw / dh) { dh = dw / aspect; } else { dw = dh * aspect; }
+      const ox = (thumb.width - dw) / 2, oy = (thumb.height - dh) / 2;
+      tc.drawImage(bgPixelatedImg, ox, oy, dw, dh);
+    }
+    document.getElementById('bg-info-orig').textContent = `Original: ${state.bgOrigInfo.w}x${state.bgOrigInfo.h}`;
+    document.getElementById('bg-info-scaled').textContent = `Pixelated: ${state.imageWidth}x${state.imageHeight}`;
+    document.getElementById('bg-opacity').value = state.bgOpacity ?? 100;
+    document.getElementById('bg-opacity-val').textContent = (state.bgOpacity ?? 100) + '%';
+  }
+}
+
+// ============================================================
+// SIZE PRESETS
+// ============================================================
+function applySizePreset(val) {
+  if (!val) return;
+  const [w, h] = val.split('x').map(Number);
+  state.imageWidth = w;
+  state.imageHeight = h;
+  document.getElementById('prop-imgW').value = w;
+  document.getElementById('prop-imgH').value = h;
+
+  // Auto-adjust player inv Y based on height
+  if (h >= 166) {
+    state.playerInvY = 84;
+    state.showPlayerInv = true;
+  } else if (h >= 120) {
+    state.playerInvY = h - 82;
+    state.showPlayerInv = true;
+  } else {
+    state.showPlayerInv = false;
+  }
+  document.getElementById('prop-playerY').value = state.playerInvY;
+  document.getElementById('prop-showInv').value = state.showPlayerInv ? 'true' : 'false';
+
+  // Re-pixelate bg if exists
+  if (state.bgOrigInfo && state.bgImageData) {
+    // Need to re-pixelate from a source — but we only have the pixelated version.
+    // We'll stretch the pixelated version to new size (it will still look pixel-art).
+    repixelateBgToSize(w, h);
+  }
+
+  render();
+  generateCode();
+  setStatus(`Size: ${w}x${h}${state.showPlayerInv ? '' : ' (no player inv)'}`);
+}
+
+function repixelateBgToSize(tw, th) {
+  // Reprocess from original source at new dimensions
+  reprocessBg();
+}
+
+// ============================================================
+// PROPERTIES UI
+// ============================================================
+function updateUI() {
+  updateElementList();
+  updateBgUI();
+  updatePropsUI();
+  generateCode();
+}
+
+function updateElementList() {
+  const list = document.getElementById('el-list');
+  const count = document.getElementById('el-count');
+  count.textContent = `(${state.elements.length})`;
+  list.innerHTML = state.elements.map(el => {
+    const sel = el.id === state.selectedId ? ' selected' : '';
+    const typeLabel = el.type.replace(/_/g, ' ').toLowerCase();
+    const slotIdx = SLOT_TYPES.includes(el.type) ? ` [${el.slotIndex}]` : '';
+    return `<div class="el-item${sel}" onclick="selectElement(${el.id})">
+      <span>${el.label || typeLabel}${slotIdx}</span>
+      <span class="el-type">(${el.x},${el.y})</span>
+    </div>`;
+  }).join('');
+}
+
+function updatePropsUI() {
+  const panel = document.getElementById('sel-props');
+  if (state.selectedId == null) {
+    panel.style.display = 'none';
+    return;
+  }
+
+  // Player inventory selected
+  if (state.selectedId === '__playerInv__') {
+    panel.style.display = '';
+    document.getElementById('sel-type').textContent = 'Player Inventory';
+    document.getElementById('sel-x').value = state.playerInvX ?? 8;
+    document.getElementById('sel-y').value = state.playerInvY;
+    document.getElementById('sel-x').oninput = function() { state.playerInvX = +this.value; document.getElementById('prop-playerX').value = this.value; render(); generateCode(); };
+    document.getElementById('sel-y').oninput = function() { state.playerInvY = +this.value; document.getElementById('prop-playerY').value = this.value; render(); generateCode(); };
+    document.getElementById('sel-extra').innerHTML = '<div style="font-size:10px;color:var(--text-muted);margin-top:4px">Drag to move. Arrow keys to nudge.<br>162x76 px (9 slots wide)</div>';
+    return;
+  }
+
+  const el = state.elements.find(e => e.id === state.selectedId);
+  if (!el) { panel.style.display = 'none'; return; }
+
+  panel.style.display = '';
+  document.getElementById('sel-type').textContent = el.type.replace(/_/g,' ');
+  document.getElementById('sel-x').value = el.x;
+  document.getElementById('sel-y').value = el.y;
+  // Reset oninput to element mode
+  document.getElementById('sel-x').oninput = function() { updateElement('x', +this.value); };
+  document.getElementById('sel-y').oninput = function() { updateElement('y', +this.value); };
+
+  // Build extra props
+  const extra = document.getElementById('sel-extra');
+  let html = '';
+
+  if (SLOT_TYPES.includes(el.type)) {
+    html += `<div class="prop-row">
+      <label>Slot #</label>
+      <input type="number" value="${el.slotIndex}" min="0" oninput="updateElement('slotIndex',+this.value)">
+    </div>`;
+    html += `<div class="prop-row">
+      <label>Label</label>
+      <input value="${el.label||''}" oninput="updateElement('label',this.value)">
+    </div>`;
+  }
+
+  if (el.type === 'INPUT_SLOT' || el.type === 'FUEL_SLOT') {
+    html += `<div class="prop-row">
+      <label>Filter</label>
+      <input value="${el.filterItem||''}" placeholder="item id or empty" oninput="updateElement('filterItem',this.value)">
+    </div>`;
+  }
+
+  if (el.type === 'PROGRESS_ARROW' || el.type === 'FLAME') {
+    html += `<div class="prop-row">
+      <label>Data idx</label>
+      <input type="number" value="${el.dataIndex||0}" min="0" oninput="updateElement('dataIndex',+this.value)">
+    </div>`;
+    html += `<div class="prop-row">
+      <label>Max idx</label>
+      <input type="number" value="${el.dataMaxIndex||1}" min="0" oninput="updateElement('dataMaxIndex',+this.value)">
+    </div>`;
+    html += `<div class="prop-row">
+      <label>Label</label>
+      <input value="${el.label||''}" oninput="updateElement('label',this.value)">
+    </div>`;
+  }
+
+  if (el.type === 'FLUID_TANK') {
+    html += `<div class="prop-row">
+      <label>Height</label>
+      <input type="number" value="${el.h||52}" min="10" max="100" oninput="updateElement('h',+this.value)">
+    </div>`;
+  }
+
+  if (el.type === 'LABEL') {
+    html += `<div class="prop-row">
+      <label>Text</label>
+      <input value="${el.text||''}" oninput="updateElement('text',this.value)">
+    </div>`;
+    html += `<div class="prop-row">
+      <label>Color</label>
+      <input type="color" value="${el.color||'#404040'}" oninput="updateElement('color',this.value)">
+    </div>`;
+  }
+
+  extra.innerHTML = html;
+}
+
+function selectElement(id) {
+  state.selectedId = id;
+  render();
+  updateUI();
+}
+
+function updateGlobal(key, val) {
+  state[key] = val;
+  render();
+  generateCode();
+}
+
+function updateElement(key, val) {
+  const el = state.elements.find(e => e.id === state.selectedId);
+  if (!el) return;
+  el[key] = val;
+  render();
+  updateElementList();
+  generateCode();
+}
+
+// ============================================================
+// UNDO
+// ============================================================
+function pushUndo() {
+  state.undoStack.push(JSON.stringify({
+    elements: state.elements,
+    selectedId: state.selectedId,
+    nextId: state.nextId
+  }));
+  if (state.undoStack.length > 50) state.undoStack.shift();
+}
+
+function undo() {
+  if (state.undoStack.length === 0) { setStatus('Nothing to undo'); return; }
+  const prev = JSON.parse(state.undoStack.pop());
+  state.elements = prev.elements;
+  state.selectedId = prev.selectedId;
+  state.nextId = prev.nextId;
+  render();
+  updateUI();
+  setStatus('Undo');
+}
+
+// ============================================================
+// CODE GENERATION
+// ============================================================
+function toPascal(s) {
+  return s.replace(/(^|_)(\w)/g, (_, __, c) => c.toUpperCase());
+}
+
+function toCamel(s) {
+  const p = toPascal(s);
+  return p.charAt(0).toLowerCase() + p.slice(1);
+}
+
+function getSlots() {
+  return state.elements.filter(e => SLOT_TYPES.includes(e.type)).sort((a, b) => a.slotIndex - b.slotIndex);
+}
+
+function getIndicators() {
+  return state.elements.filter(e => INDICATOR_TYPES.includes(e.type));
+}
+
+function genMenuJava() {
+  const S = state;
+  const className = toPascal(S.blockName) + 'Menu';
+  const beClassName = toPascal(S.blockName) + 'BlockEntity';
+  const registryClass = toPascal(S.modId.replace(/^servo_/, '')) + 'Registry';
+  const slots = getSlots();
+  const indicators = getIndicators();
+  const totalSlots = slots.length;
+  const invStart = totalSlots;
+  const invEnd = invStart + 27;
+  const hotbarStart = invEnd;
+  const hotbarEnd = hotbarStart + 9;
+
+  let code = `package ${S.packageName}.block;\n\n`;
+  code += `import ${S.packageName}.${registryClass};\n`;
+  code += `import net.minecraft.world.Container;\n`;
+  code += `import net.minecraft.world.SimpleContainer;\n`;
+  code += `import net.minecraft.world.entity.player.Inventory;\n`;
+  code += `import net.minecraft.world.entity.player.Player;\n`;
+  code += `import net.minecraft.world.inventory.AbstractContainerMenu;\n`;
+  code += `import net.minecraft.world.inventory.ContainerData;\n`;
+  code += `import net.minecraft.world.inventory.SimpleContainerData;\n`;
+  code += `import net.minecraft.world.inventory.Slot;\n`;
+  code += `import net.minecraft.world.item.ItemStack;\n`;
+  code += `\n`;
+  code += `/**\n`;
+  code += ` * Menu for the ${S.guiTitle}.\n`;
+  code += ` * Slot layout:\n`;
+  slots.forEach(s => {
+    code += ` * - Slot ${s.slotIndex}: ${s.label} (${s.type})\n`;
+  });
+  code += ` *\n`;
+  if (S.containerDataCount > 0) {
+    code += ` * ContainerData: ${S.containerDataCount} indices\n`;
+    indicators.forEach(ind => {
+      code += ` * - ${ind.dataIndex}: ${ind.label} progress\n`;
+      code += ` * - ${ind.dataMaxIndex}: ${ind.label} max\n`;
+    });
+  }
+  code += ` */\n`;
+  code += `public class ${className} extends AbstractContainerMenu {\n\n`;
+  code += `    private final Container container;\n`;
+  if (S.containerDataCount > 0) {
+    code += `    private final ContainerData data;\n`;
+  }
+  code += `\n`;
+
+  // Slot constants
+  slots.forEach(s => {
+    const constName = s.label.toUpperCase().replace(/\s+/g, '_') + '_SLOT';
+    code += `    private static final int ${constName} = ${s.slotIndex};\n`;
+  });
+  code += `    private static final int INV_SLOT_START = ${invStart};\n`;
+  if (S.showPlayerInv !== false) {
+    code += `    private static final int INV_SLOT_END = ${invEnd};   // ${invStart} + 27\n`;
+    code += `    private static final int HOTBAR_SLOT_START = ${hotbarStart};\n`;
+    code += `    private static final int HOTBAR_SLOT_END = ${hotbarEnd}; // ${hotbarStart} + 9\n`;
+  }
+  code += `\n`;
+
+  // Server constructor
+  const dataParam = S.containerDataCount > 0 ? ', ContainerData data' : '';
+  const dataArg = S.containerDataCount > 0 ? ', data' : '';
+  code += `    /** Server-side constructor. */\n`;
+  code += `    public ${className}(int containerId, Inventory playerInv, Container container${dataParam}) {\n`;
+  const menuRegName = S.blockName.toUpperCase() + '_MENU';
+  code += `        super(${registryClass}.${menuRegName}.get(), containerId);\n`;
+  code += `        checkContainerSize(container, ${totalSlots});\n`;
+  if (S.containerDataCount > 0) {
+    code += `        checkContainerDataCount(data, ${S.containerDataCount});\n`;
+  }
+  code += `        this.container = container;\n`;
+  if (S.containerDataCount > 0) {
+    code += `        this.data = data;\n`;
+  }
+  code += `\n`;
+
+  // Add slots
+  slots.forEach(s => {
+    const hasFilter = (s.type === 'INPUT_SLOT' || s.type === 'FUEL_SLOT') && s.filterItem;
+    const isOutput = s.type === 'OUTPUT_SLOT' || s.type === 'LARGE_OUTPUT_SLOT';
+    const slotX = s.type === 'LARGE_OUTPUT_SLOT' ? s.x + 5 : s.x + 1;
+    const slotY = s.type === 'LARGE_OUTPUT_SLOT' ? s.y + 5 : s.y + 1;
+
+    if (isOutput || hasFilter) {
+      code += `        // ${s.label} slot`;
+      if (isOutput) code += ` — extract only`;
+      if (hasFilter) code += ` — filtered`;
+      code += `\n`;
+      code += `        this.addSlot(new Slot(container, ${s.slotIndex}, ${slotX}, ${slotY}) {\n`;
+      code += `            @Override\n`;
+      code += `            public boolean mayPlace(ItemStack stack) {\n`;
+      if (isOutput) {
+        code += `                return false;\n`;
+      } else if (hasFilter) {
+        if (s.type === 'FUEL_SLOT') {
+          code += `                // TODO: Validate fuel items\n`;
+          code += `                return stack.is(${registryClass}.${s.filterItem.toUpperCase()}.get());\n`;
+        } else {
+          code += `                return stack.is(${registryClass}.${s.filterItem.toUpperCase()}.get());\n`;
+        }
+      }
+      code += `            }\n`;
+      code += `        });\n\n`;
+    } else {
+      code += `        // ${s.label} slot\n`;
+      code += `        this.addSlot(new Slot(container, ${s.slotIndex}, ${slotX}, ${slotY}));\n\n`;
+    }
+  });
+
+  // Player inventory
+  if (S.showPlayerInv !== false) {
+    code += `        // Player inventory (3 rows of 9)\n`;
+    code += `        for (int row = 0; row < 3; row++) {\n`;
+    code += `            for (int col = 0; col < 9; col++) {\n`;
+    const pix = S.playerInvX ?? 8;
+    code += `                this.addSlot(new Slot(playerInv, col + row * 9 + 9, ${pix} + col * 18, ${S.playerInvY} + row * 18));\n`;
+    code += `            }\n`;
+    code += `        }\n\n`;
+    code += `        // Player hotbar\n`;
+    code += `        for (int col = 0; col < 9; col++) {\n`;
+    code += `            this.addSlot(new Slot(playerInv, col, ${pix} + col * 18, ${S.playerInvY + 58}));\n`;
+    code += `        }\n\n`;
+  } else {
+    code += `        // NOTE: No player inventory slots — this is a minimal GUI\n\n`;
+  }
+
+  if (S.containerDataCount > 0) {
+    code += `        addDataSlots(data);\n`;
+  }
+  code += `    }\n\n`;
+
+  // Client factory
+  code += `    /** Client-side factory (called by MenuType registration). */\n`;
+  code += `    public static ${className} clientMenu(int containerId, Inventory playerInv) {\n`;
+  const clientDataArg = S.containerDataCount > 0 ? `, new SimpleContainerData(${S.containerDataCount})` : '';
+  code += `        return new ${className}(containerId, playerInv, new SimpleContainer(${totalSlots})${clientDataArg});\n`;
+  code += `    }\n\n`;
+
+  // stillValid
+  code += `    @Override\n`;
+  code += `    public boolean stillValid(Player player) {\n`;
+  code += `        return container.stillValid(player);\n`;
+  code += `    }\n\n`;
+
+  // quickMoveStack
+  code += `    /** Shift-click support. */\n`;
+  code += `    @Override\n`;
+  code += `    public ItemStack quickMoveStack(Player player, int slotIndex) {\n`;
+  code += `        Slot slot = this.slots.get(slotIndex);\n`;
+  code += `        if (!slot.hasItem()) {\n`;
+  code += `            return ItemStack.EMPTY;\n`;
+  code += `        }\n\n`;
+  code += `        ItemStack slotStack = slot.getItem();\n`;
+  code += `        ItemStack original = slotStack.copy();\n\n`;
+
+  // Output slots -> player
+  const outputSlots = slots.filter(s => s.type === 'OUTPUT_SLOT' || s.type === 'LARGE_OUTPUT_SLOT');
+  const inputSlots = slots.filter(s => s.type === 'INPUT_SLOT' || s.type === 'FUEL_SLOT');
+
+  if (outputSlots.length > 0) {
+    const outputConditions = outputSlots.map(s => `slotIndex == ${s.label.toUpperCase().replace(/\s+/g, '_')}_SLOT`).join(' || ');
+    code += `        if (${outputConditions}) {\n`;
+    code += `            // Output -> player inventory\n`;
+    code += `            if (!this.moveItemStackTo(slotStack, INV_SLOT_START, HOTBAR_SLOT_END, true)) {\n`;
+    code += `                return ItemStack.EMPTY;\n`;
+    code += `            }\n`;
+    code += `            slot.onQuickCraft(slotStack, original);\n`;
+  }
+
+  if (inputSlots.length > 0) {
+    const inputConditions = inputSlots.map(s => `slotIndex == ${s.label.toUpperCase().replace(/\s+/g, '_')}_SLOT`).join(' || ');
+    const elseStr = outputSlots.length > 0 ? '} else ' : '        ';
+    code += `        ${elseStr}if (${inputConditions}) {\n`;
+    code += `            // Input/fuel -> player inventory\n`;
+    code += `            if (!this.moveItemStackTo(slotStack, INV_SLOT_START, HOTBAR_SLOT_END, true)) {\n`;
+    code += `                return ItemStack.EMPTY;\n`;
+    code += `            }\n`;
+  }
+
+  // Player -> machine slots
+  code += `        } else {\n`;
+  code += `            // Player inventory -> try machine slots\n`;
+
+  inputSlots.forEach((s, i) => {
+    const constName = s.label.toUpperCase().replace(/\s+/g, '_') + '_SLOT';
+    const elseStr = i > 0 ? ' else ' : '            ';
+    if (s.filterItem) {
+      code += `${elseStr}if (slotStack.is(${registryClass}.${s.filterItem.toUpperCase()}.get())) {\n`;
+    } else if (s.type === 'FUEL_SLOT') {
+      code += `${elseStr}// TODO: Add fuel check condition\n`;
+      code += `            if (false /* isFuel(slotStack) */) {\n`;
+    } else {
+      code += `${elseStr}if (true /* TODO: add filter */) {\n`;
+    }
+    code += `                if (!this.moveItemStackTo(slotStack, ${constName}, ${constName} + 1, false)) {\n`;
+    code += `                    return ItemStack.EMPTY;\n`;
+    code += `                }\n`;
+    code += `            }`;
+  });
+
+  if (inputSlots.length > 0) {
+    code += ` else `;
+  } else {
+    code += `            `;
+  }
+  code += `if (slotIndex >= INV_SLOT_START && slotIndex < INV_SLOT_END) {\n`;
+  code += `                // Main inventory -> hotbar\n`;
+  code += `                if (!this.moveItemStackTo(slotStack, HOTBAR_SLOT_START, HOTBAR_SLOT_END, false)) {\n`;
+  code += `                    return ItemStack.EMPTY;\n`;
+  code += `                }\n`;
+  code += `            } else if (slotIndex >= HOTBAR_SLOT_START && slotIndex < HOTBAR_SLOT_END) {\n`;
+  code += `                // Hotbar -> main inventory\n`;
+  code += `                if (!this.moveItemStackTo(slotStack, INV_SLOT_START, INV_SLOT_END, false)) {\n`;
+  code += `                    return ItemStack.EMPTY;\n`;
+  code += `                }\n`;
+  code += `            }\n`;
+  code += `        }\n\n`;
+
+  code += `        if (slotStack.isEmpty()) {\n`;
+  code += `            slot.setByPlayer(ItemStack.EMPTY);\n`;
+  code += `        } else {\n`;
+  code += `            slot.setChanged();\n`;
+  code += `        }\n\n`;
+  code += `        if (slotStack.getCount() == original.getCount()) {\n`;
+  code += `            return ItemStack.EMPTY;\n`;
+  code += `        }\n\n`;
+  code += `        slot.onTake(player, slotStack);\n`;
+  code += `        return original;\n`;
+  code += `    }\n`;
+
+  // Progress methods
+  indicators.forEach(ind => {
+    const methodName = 'get' + toPascal(ind.label) + 'Progress';
+    const isName = 'is' + toPascal(ind.label) + 'Active';
+    code += `\n`;
+    code += `    /** Progress fraction for ${ind.label} (0.0 to 1.0). */\n`;
+    code += `    public float ${methodName}() {\n`;
+    code += `        int ticks = data.get(${ind.dataIndex});\n`;
+    code += `        int duration = data.get(${ind.dataMaxIndex});\n`;
+    code += `        return duration > 0 ? (float) ticks / (float) duration : 0.0f;\n`;
+    code += `    }\n\n`;
+    code += `    public boolean ${isName}() {\n`;
+    code += `        return data.get(${ind.dataIndex}) > 0;\n`;
+    code += `    }\n`;
+  });
+
+  code += `}\n`;
+  return code;
+}
+
+function genScreenJava() {
+  const S = state;
+  const menuClass = toPascal(S.blockName) + 'Menu';
+  const className = toPascal(S.blockName) + 'Screen';
+  const indicators = getIndicators();
+
+  let code = `package ${S.packageName}.client;\n\n`;
+  code += `import ${S.packageName}.block.${menuClass};\n`;
+  code += `import net.minecraft.client.gui.GuiGraphics;\n`;
+  code += `import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;\n`;
+  code += `import net.minecraft.network.chat.Component;\n`;
+  code += `import net.minecraft.resources.ResourceLocation;\n`;
+  code += `import net.minecraft.world.entity.player.Inventory;\n\n`;
+
+  code += `/**\n`;
+  code += ` * GUI screen for the ${S.guiTitle}.\n`;
+  code += ` */\n`;
+  code += `public class ${className} extends AbstractContainerScreen<${menuClass}> {\n\n`;
+
+  code += `    private static final ResourceLocation TEXTURE =\n`;
+  code += `            ResourceLocation.fromNamespaceAndPath("${S.modId}", "textures/gui/${S.blockName}.png");\n\n`;
+
+  // Indicator constants
+  let texY = 0;
+  indicators.forEach(ind => {
+    const prefix = ind.label.toUpperCase().replace(/\s+/g, '_');
+    const w = ind.w || DEFAULTS[ind.type].w;
+    const h = ind.h || DEFAULTS[ind.type].h;
+    code += `    // ${ind.label} position in the GUI\n`;
+    code += `    private static final int ${prefix}_X = ${ind.x};\n`;
+    code += `    private static final int ${prefix}_Y = ${ind.y};\n`;
+    code += `    private static final int ${prefix}_WIDTH = ${w};\n`;
+    code += `    private static final int ${prefix}_HEIGHT = ${h};\n`;
+    code += `    // ${ind.label} source in texture (filled sprite)\n`;
+    code += `    private static final int ${prefix}_TEX_X = ${S.imageWidth};\n`;
+    code += `    private static final int ${prefix}_TEX_Y = ${texY};\n\n`;
+    texY += h + 2;
+  });
+
+  // Constructor
+  code += `    public ${className}(${menuClass} menu, Inventory playerInv, Component title) {\n`;
+  code += `        super(menu, playerInv, title);\n`;
+  code += `        this.imageWidth = ${S.imageWidth};\n`;
+  code += `        this.imageHeight = ${S.imageHeight};\n`;
+  code += `    }\n\n`;
+
+  // renderBg
+  code += `    @Override\n`;
+  code += `    protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {\n`;
+  code += `        int x = this.leftPos;\n`;
+  code += `        int y = this.topPos;\n\n`;
+  code += `        // Draw the background texture\n`;
+  code += `        graphics.blit(TEXTURE, x, y, 0, 0, this.imageWidth, this.imageHeight);\n`;
+
+  indicators.forEach(ind => {
+    const prefix = ind.label.toUpperCase().replace(/\s+/g, '_');
+    const methodName = 'get' + toPascal(ind.label) + 'Progress';
+    code += `\n`;
+    code += `        // Draw ${ind.label}\n`;
+    code += `        float ${toCamel(ind.label)}Progress = this.menu.${methodName}();\n`;
+    code += `        if (${toCamel(ind.label)}Progress > 0) {\n`;
+
+    if (ind.type === 'PROGRESS_ARROW') {
+      code += `            int progressPixels = (int) (${toCamel(ind.label)}Progress * ${prefix}_WIDTH);\n`;
+      code += `            graphics.blit(TEXTURE, x + ${prefix}_X, y + ${prefix}_Y,\n`;
+      code += `                    ${prefix}_TEX_X, ${prefix}_TEX_Y,\n`;
+      code += `                    progressPixels, ${prefix}_HEIGHT);\n`;
+    } else if (ind.type === 'FLAME') {
+      code += `            int flamePixels = (int) (${toCamel(ind.label)}Progress * ${prefix}_HEIGHT);\n`;
+      code += `            // Flame fills bottom-to-top\n`;
+      code += `            graphics.blit(TEXTURE,\n`;
+      code += `                    x + ${prefix}_X, y + ${prefix}_Y + ${prefix}_HEIGHT - flamePixels,\n`;
+      code += `                    ${prefix}_TEX_X, ${prefix}_TEX_Y + ${prefix}_HEIGHT - flamePixels,\n`;
+      code += `                    ${prefix}_WIDTH, flamePixels);\n`;
+    }
+
+    code += `        }\n`;
+  });
+
+  code += `    }\n\n`;
+
+  // render
+  code += `    @Override\n`;
+  code += `    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {\n`;
+  code += `        super.render(graphics, mouseX, mouseY, partialTick);\n`;
+  code += `        this.renderTooltip(graphics, mouseX, mouseY);\n`;
+  code += `    }\n`;
+  code += `}\n`;
+
+  return code;
+}
+
+function genRegistrySnippet() {
+  const S = state;
+  const menuClass = toPascal(S.blockName) + 'Menu';
+  const menuConst = S.blockName.toUpperCase() + '_MENU';
+
+  let code = `// === Add to your Registry class ===\n\n`;
+  code += `// DeferredRegister for menus (if not already present)\n`;
+  code += `public static final DeferredRegister<MenuType<?>> MENUS =\n`;
+  code += `        DeferredRegister.create(Registries.MENU, MOD_ID);\n\n`;
+  code += `// Menu registration\n`;
+  code += `public static final DeferredHolder<MenuType<?>, MenuType<${menuClass}>> ${menuConst} =\n`;
+  code += `        MENUS.register("${S.blockName}", () ->\n`;
+  code += `                new MenuType<>(${menuClass}::clientMenu, FeatureFlags.DEFAULT_FLAGS)\n`;
+  code += `        );\n\n`;
+  code += `// In register() method:\n`;
+  code += `MENUS.register(modEventBus);\n`;
+
+  return code;
+}
+
+function genClientSetupSnippet() {
+  const S = state;
+  const registryClass = toPascal(S.modId.replace(/^servo_/, '')) + 'Registry';
+  const screenClass = toPascal(S.blockName) + 'Screen';
+  const menuConst = S.blockName.toUpperCase() + '_MENU';
+  const modIdConst = S.modId.replace(/^servo_/, '').charAt(0).toUpperCase() + S.modId.replace(/^servo_/, '').slice(1);
+
+  let code = `// === ClientSetup snippet ===\n\n`;
+  code += `import ${S.packageName}.${registryClass};\n`;
+  code += `import ${S.packageName}.client.${screenClass};\n\n`;
+  code += `@EventBusSubscriber(modid = Servo${modIdConst}.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)\n`;
+  code += `public class ${modIdConst}ClientSetup {\n\n`;
+  code += `    @SubscribeEvent\n`;
+  code += `    public static void registerMenuScreens(RegisterMenuScreensEvent event) {\n`;
+  code += `        event.register(${registryClass}.${menuConst}.get(), ${screenClass}::new);\n`;
+  code += `    }\n`;
+  code += `}\n`;
+
+  return code;
+}
+
+function generateCode() {
+  const tab = activeTab;
+  const el = document.getElementById('code-content');
+  if (tab === 'menu') el.textContent = genMenuJava();
+  else if (tab === 'screen') el.textContent = genScreenJava();
+  else if (tab === 'registry') el.textContent = genRegistrySnippet();
+  else if (tab === 'client') el.textContent = genClientSetupSnippet();
+  else if (tab === 'png') el.textContent = '// Click "Export PNG" below to download the texture\n\n' + genPngInfo();
+}
+
+function genPngInfo() {
+  const indicators = getIndicators();
+  let info = `// PNG will be 256x256 with:\n`;
+  info += `// - GUI background at (0,0) size ${state.imageWidth}x${state.imageHeight}\n`;
+  info += `// - Slot outlines drawn\n`;
+  let texY = 0;
+  indicators.forEach(ind => {
+    const w = ind.w || DEFAULTS[ind.type].w;
+    const h = ind.h || DEFAULTS[ind.type].h;
+    info += `// - ${ind.label} filled sprite at (${state.imageWidth}, ${texY}) size ${w}x${h}\n`;
+    texY += h + 2;
+  });
+  info += `\n// The PNG serves as a TEMPLATE.\n`;
+  info += `// Replace with proper pixel art for production.\n`;
+  return info;
+}
+
+function switchTab(btn) {
+  document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  activeTab = btn.dataset.tab;
+  generateCode();
+}
+
+function copyCode() {
+  const text = document.getElementById('code-content').textContent;
+  navigator.clipboard.writeText(text).then(() => setStatus('Copied to clipboard'));
+}
+
+// ============================================================
+// PNG EXPORT
+// ============================================================
+function exportPng() {
+  const S = state;
+  const pngCanvas = document.createElement('canvas');
+  pngCanvas.width = 256;
+  pngCanvas.height = 256;
+  const pc = pngCanvas.getContext('2d');
+  pc.imageSmoothingEnabled = false;
+
+  // Transparent background
+  pc.clearRect(0, 0, 256, 256);
+
+  // Draw GUI background at 1:1
+  if (bgPixelatedImg && S.bgImageData) {
+    pc.drawImage(bgPixelatedImg, 0, 0, S.imageWidth, S.imageHeight);
+    if (S.bgDrawBorders !== false) {
+      drawMcBordersPng(pc, 0, 0, S.imageWidth, S.imageHeight);
+    }
+  } else {
+    drawMcBackgroundPng(pc, 0, 0, S.imageWidth, S.imageHeight);
+  }
+
+  // Draw player inventory
+  if (S.showPlayerInv !== false) drawPlayerInvPng(pc, S.playerInvX ?? 8, S.playerInvY);
+
+  // Draw elements
+  for (const el of S.elements) {
+    drawElementPng(pc, el);
+  }
+
+  // Draw indicator sprites in the right margin (x >= imageWidth)
+  let texY = 0;
+  const indicators = getIndicators();
+  indicators.forEach(ind => {
+    const w = ind.w || DEFAULTS[ind.type].w;
+    const h = ind.h || DEFAULTS[ind.type].h;
+    if (ind.type === 'PROGRESS_ARROW') {
+      drawArrowFilledPng(pc, S.imageWidth, texY, w, h);
+    } else if (ind.type === 'FLAME') {
+      drawFlameFilledPng(pc, S.imageWidth, texY, w, h);
+    }
+    texY += h + 2;
+  });
+
+  // Download
+  const link = document.createElement('a');
+  link.download = `${S.blockName}.png`;
+  link.href = pngCanvas.toDataURL('image/png');
+  link.click();
+  setStatus(`Exported ${S.blockName}.png`);
+}
+
+function drawMcBackgroundPng(c, x, y, w, h) {
+  c.fillStyle = '#c6c6c6';
+  c.fillRect(x, y, w, h);
+  c.fillStyle = '#ffffff';
+  c.fillRect(x, y, w, 1);
+  c.fillRect(x, y, 1, h);
+  c.fillStyle = '#555555';
+  c.fillRect(x, y + h - 1, w, 1);
+  c.fillRect(x + w - 1, y, 1, h);
+  c.fillStyle = '#dbdbdb';
+  c.fillRect(x + 1, y + 1, w - 3, 1);
+  c.fillRect(x + 1, y + 1, 1, h - 3);
+  c.fillStyle = '#878787';
+  c.fillRect(x + 1, y + h - 2, w - 2, 1);
+  c.fillRect(x + w - 2, y + 1, 1, h - 2);
+}
+
+function drawMcBordersPng(c, x, y, w, h) {
+  c.fillStyle = '#ffffff';
+  c.fillRect(x, y, w, 1);
+  c.fillRect(x, y, 1, h);
+  c.fillStyle = '#555555';
+  c.fillRect(x, y + h - 1, w, 1);
+  c.fillRect(x + w - 1, y, 1, h);
+  c.fillStyle = '#dbdbdb';
+  c.fillRect(x + 1, y + 1, w - 3, 1);
+  c.fillRect(x + 1, y + 1, 1, h - 3);
+  c.fillStyle = '#878787';
+  c.fillRect(x + 1, y + h - 2, w - 2, 1);
+  c.fillRect(x + w - 2, y + 1, 1, h - 2);
+}
+
+function drawSlotBgPng(c, x, y, size) {
+  c.fillStyle = '#373737';
+  c.fillRect(x, y, size - 1, 1);
+  c.fillRect(x, y, 1, size - 1);
+  c.fillStyle = '#ffffff';
+  c.fillRect(x + size - 1, y, 1, size);
+  c.fillRect(x, y + size - 1, size, 1);
+  c.fillStyle = '#8b8b8b';
+  c.fillRect(x + 1, y + 1, size - 2, size - 2);
+}
+
+function drawPlayerInvPng(c, x, y) {
+  for (let row = 0; row < 3; row++) {
+    for (let col = 0; col < 9; col++) {
+      drawSlotBgPng(c, x + col * 18, y + row * 18, 18);
+    }
+  }
+  for (let col = 0; col < 9; col++) {
+    drawSlotBgPng(c, x + col * 18, y + 58, 18);
+  }
+}
+
+function drawElementPng(c, el) {
+  if (el.type === 'INPUT_SLOT' || el.type === 'OUTPUT_SLOT' || el.type === 'FUEL_SLOT') {
+    drawSlotBgPng(c, el.x, el.y, 18);
+  } else if (el.type === 'LARGE_OUTPUT_SLOT') {
+    drawSlotBgPng(c, el.x, el.y, 26);
+  } else if (el.type === 'PROGRESS_ARROW') {
+    // Draw empty arrow outline
+    drawArrowEmptyPng(c, el.x, el.y, el.w || 24, el.h || 16);
+  } else if (el.type === 'FLAME') {
+    drawFlameEmptyPng(c, el.x, el.y, el.w || 14, el.h || 14);
+  } else if (el.type === 'FLUID_TANK') {
+    const th = el.h || 52;
+    c.fillStyle = '#373737';
+    c.fillRect(el.x, el.y, 18, 1);
+    c.fillRect(el.x, el.y, 1, th);
+    c.fillStyle = '#ffffff';
+    c.fillRect(el.x + 17, el.y, 1, th);
+    c.fillRect(el.x, el.y + th - 1, 18, 1);
+    c.fillStyle = '#8b8b8b';
+    c.fillRect(el.x + 1, el.y + 1, 16, th - 2);
+  }
+}
+
+function drawArrowEmptyPng(c, x, y, w, h) {
+  // Light background with outline
+  c.fillStyle = '#c6c6c6';
+  c.fillRect(x, y, w, h);
+  c.fillStyle = '#b0b0b0';
+  // top line
+  c.fillRect(x, y + 3, w - 7, 1);
+  c.fillRect(x, y + h - 4, w - 7, 1);
+  c.fillRect(x, y + 3, 1, h - 6);
+  // arrowhead outline
+  for (let i = 0; i < 8; i++) {
+    c.fillRect(x + w - 7 + i, y + Math.max(0, 3 - i), 1, 1);
+    c.fillRect(x + w - 7 + i, y + h - 4 + Math.min(i, h - 4), 1, 1);
+  }
+}
+
+function drawArrowFilledPng(c, x, y, w, h) {
+  // White filled arrow
+  c.fillStyle = '#ffffff';
+  c.fillRect(x, y + 3, w - 7, h - 6);
+  // arrowhead
+  for (let i = 0; i <= 7; i++) {
+    const top = Math.max(0, h / 2 - i - 1);
+    const bot = Math.min(h, h / 2 + i + 1);
+    c.fillRect(x + w - 7 + i, y + Math.floor(top), 1, Math.ceil(bot - top));
+  }
+}
+
+function drawFlameEmptyPng(c, x, y, w, h) {
+  c.fillStyle = '#b0b0b0';
+  // Simple flame shape outline
+  const cx = x + w / 2;
+  c.beginPath();
+  c.moveTo(cx, y + 1);
+  c.lineTo(x + w - 1, y + h - 1);
+  c.lineTo(x + 1, y + h - 1);
+  c.closePath();
+  c.stroke();
+}
+
+function drawFlameFilledPng(c, x, y, w, h) {
+  c.fillStyle = '#ff6600';
+  const cx = x + w / 2;
+  c.beginPath();
+  c.moveTo(cx, y + 1);
+  c.lineTo(x + w - 1, y + h - 1);
+  c.lineTo(x + 1, y + h - 1);
+  c.closePath();
+  c.fill();
+}
+
+// ============================================================
+// SAVE / LOAD / PRESETS
+// ============================================================
+function saveGui() {
+  const json = JSON.stringify({
+    ...state,
+    undoStack: [] // don't persist undo
+  }, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const link = document.createElement('a');
+  link.download = `${state.blockName}-gui.json`;
+  link.href = URL.createObjectURL(blob);
+  link.click();
+  setStatus('Saved');
+}
+
+function loadGui() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json';
+  input.onchange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const loaded = JSON.parse(ev.target.result);
+        Object.assign(state, loaded);
+        state.undoStack = [];
+        syncGlobalInputs();
+        render();
+        updateUI();
+        setStatus(`Loaded ${file.name}`);
+      } catch (err) {
+        setStatus('Error loading file');
+      }
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+
+function newGui() {
+  if (state.elements.length > 0 && !confirm('Discard current layout?')) return;
+  state = createDefaultState();
+  bgPixelatedImg = null;
+  bgSourceImg = null;
+  syncGlobalInputs();
+  render();
+  updateUI();
+  setStatus('New GUI');
+}
+
+const PRESETS = {
+  empty: { elements: [], containerDataCount: 0 },
+  simple: {
+    containerDataCount: 2,
+    elements: [
+      { type: 'INPUT_SLOT', x: 56, y: 35, ...DEFAULTS.INPUT_SLOT },
+      { type: 'PROGRESS_ARROW', x: 79, y: 35, ...DEFAULTS.PROGRESS_ARROW },
+      { type: 'OUTPUT_SLOT', x: 116, y: 35, ...DEFAULTS.OUTPUT_SLOT },
+    ]
+  },
+  furnace: {
+    containerDataCount: 4,
+    elements: [
+      { type: 'INPUT_SLOT', x: 56, y: 17, ...DEFAULTS.INPUT_SLOT, label: 'Input' },
+      { type: 'FUEL_SLOT', x: 56, y: 53, ...DEFAULTS.FUEL_SLOT, label: 'Fuel' },
+      { type: 'PROGRESS_ARROW', x: 79, y: 35, ...DEFAULTS.PROGRESS_ARROW, dataIndex: 0, dataMaxIndex: 1, label: 'Cook' },
+      { type: 'FLAME', x: 57, y: 37, ...DEFAULTS.FLAME, dataIndex: 2, dataMaxIndex: 3, label: 'Burn' },
+      { type: 'OUTPUT_SLOT', x: 116, y: 35, ...DEFAULTS.OUTPUT_SLOT, label: 'Output' },
+    ]
+  },
+  '3to1': {
+    containerDataCount: 2,
+    elements: [
+      { type: 'INPUT_SLOT', x: 38, y: 17, ...DEFAULTS.INPUT_SLOT, label: 'Input1' },
+      { type: 'INPUT_SLOT', x: 56, y: 17, ...DEFAULTS.INPUT_SLOT, label: 'Input2' },
+      { type: 'INPUT_SLOT', x: 74, y: 17, ...DEFAULTS.INPUT_SLOT, label: 'Input3' },
+      { type: 'PROGRESS_ARROW', x: 79, y: 40, ...DEFAULTS.PROGRESS_ARROW },
+      { type: 'LARGE_OUTPUT_SLOT', x: 112, y: 34, ...DEFAULTS.LARGE_OUTPUT_SLOT, label: 'Output' },
+    ]
+  }
+};
+
+function loadPreset(name) {
+  if (!name || !PRESETS[name]) return;
+  if (state.elements.length > 0 && !confirm('Replace current layout with preset?')) {
+    document.getElementById('presets').value = '';
+    return;
+  }
+  pushUndo();
+  const preset = PRESETS[name];
+  state.elements = [];
+  state.nextId = 1;
+  state.containerDataCount = preset.containerDataCount ?? 0;
+  document.getElementById('prop-dataCount').value = state.containerDataCount;
+
+  (preset.elements || []).forEach(def => {
+    const el = { id: state.nextId++, ...def };
+    // Auto-assign slot indices
+    if (SLOT_TYPES.includes(el.type) && el.slotIndex === -1) {
+      const used = state.elements.filter(e => SLOT_TYPES.includes(e.type)).length;
+      el.slotIndex = used;
+    }
+    state.elements.push(el);
+  });
+
+  state.selectedId = null;
+  document.getElementById('presets').value = '';
+  render();
+  updateUI();
+  setStatus(`Loaded preset: ${name}`);
+}
+
+function syncGlobalInputs() {
+  document.getElementById('prop-modId').value = state.modId;
+  document.getElementById('prop-blockName').value = state.blockName;
+  document.getElementById('prop-packageName').value = state.packageName;
+  document.getElementById('prop-guiTitle').value = state.guiTitle;
+  document.getElementById('prop-dataCount').value = state.containerDataCount;
+  document.getElementById('prop-imgW').value = state.imageWidth;
+  document.getElementById('prop-imgH').value = state.imageHeight;
+  document.getElementById('prop-playerX').value = state.playerInvX ?? 8;
+  document.getElementById('prop-playerY').value = state.playerInvY;
+  document.getElementById('prop-showInv').value = (state.showPlayerInv !== false) ? 'true' : 'false';
+
+  // Restore bg images from state
+  if (state.bgOrigData) {
+    bgSourceImg = new Image();
+    bgSourceImg.onload = () => {
+      if (state.bgImageData) {
+        bgPixelatedImg = new Image();
+        bgPixelatedImg.onload = () => { render(); updateBgUI(); };
+        bgPixelatedImg.src = state.bgImageData;
+      } else {
+        reprocessBg();
+      }
+    };
+    bgSourceImg.src = state.bgOrigData;
+  } else {
+    bgPixelatedImg = null;
+    bgSourceImg = null;
+    updateBgUI();
+  }
+}
+
+// ============================================================
+// UTILITY
+// ============================================================
+function setStatus(msg) {
+  document.getElementById('status').textContent = msg;
+}
+
+// ============================================================
+// INIT
+// ============================================================
+
+// Add PNG export button
+document.querySelector('#code-tabs').insertAdjacentHTML('beforeend',
+  '<button class="code-tab" style="margin-left:auto;background:var(--accent2);color:#fff;border-radius:3px;margin:2px" onclick="exportPng()">Export PNG</button>'
+);
+
+render();
+updateUI();
+</script>
+</body>
+</html>

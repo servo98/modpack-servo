@@ -27,10 +27,9 @@ Refined Storage, Create Trains, Create C&A, Create Enchantment Industry, Create 
 
 ## Space Elevator entrega Ch5
 
-- 32 Cajas variadas (auto-producidas con RS+Create)
-- Items enchantados auto-producidos (incluyendo enchants magicos)
-- Demostrar pipeline RS→Create→Space Elevator automatizado
-- Material del boss
+Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevator.md#45-capitulo-5-la-red).
+
+Resumen: Cajas auto-producidas (RS+Create), items enchantados, Nucleo del Arquitecto (boss drop).
 
 ## Quests (~50)
 
@@ -53,7 +52,7 @@ Refined Storage, Create Trains, Create C&A, Create Enchantment Industry, Create 
 2. Preparar 3 recetas exoticas
 3. Automatizar receta con RS + Create
 4. Produccion en masa con Slice&Dice + RS
-5. Comer 70 comidas diferentes (Spice of Life: +5)
+5. Comer 70 comidas diferentes (FTB Quests Recetario: +5 corazones)
 6. Automatizar empaque completo
 7. Pipeline: RS → Create → Space Elevator
 8. Producir Tipped Arrows de cocina (si aplica)

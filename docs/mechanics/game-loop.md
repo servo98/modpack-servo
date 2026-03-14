@@ -49,7 +49,7 @@ Necesito item exclusivo → crafteo llave del tier correcto
 ### Loop de Cocina (Perfil B ama esto)
 ```
 Nuevo crop desbloqueado → descubro recetas → cocino variedad
-  → Spice of Life da corazones bonus → empaco para entregas
+  → FTB Quests "Recetario" da corazones bonus (quest rewards) → empaco para entregas
   → Create automatiza escala (Perfil A)
 ```
 

@@ -29,10 +29,9 @@ Create andesite completo, Slice&Dice, Drink Maker (custom), Horno Avanzado (cust
 
 ## Space Elevator entrega Ch3
 
-- 16 Cajas de Bebidas (diferentes tipos)
-- 8 Cajas de items procesados con Create
-- Materiales del Nether empacados
-- Material del boss
+Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevator.md#43-capitulo-3-engranajes-y-magia).
+
+Resumen: Cajas de bebidas, items procesados con Create, materiales del Nether, Engranaje del Coloso (boss drop).
 
 ## Quests (~50)
 
@@ -57,7 +56,7 @@ Create andesite completo, Slice&Dice, Drink Maker (custom), Horno Avanzado (cust
 4. Encontrar la temperatura correcta
 5. Automatizar una receta con Slice&Dice
 6. Preparar bebida con ingrediente Nether
-7. Comer 30 comidas diferentes (Spice of Life: +3)
+7. Comer 30 comidas diferentes (FTB Quests Recetario: +3 corazones)
 8. Instalar cocina funcional (nevera+estufa+fregadero)
 
 ### Farming (6)

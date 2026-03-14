@@ -1,0 +1,13 @@
+{
+  "itemGroup.servo_delivery": "Servo Delivery",
+  "block.servo_delivery.delivery_terminal": "Delivery Terminal",
+  "block.servo_delivery.delivery_port": "Delivery Port",
+  "block.servo_delivery.elevator_base": "Elevator Base",
+  "block.servo_delivery.elevator_antenna": "Elevator Antenna",
+  "servo_delivery.terminal.not_formed": "Structure incomplete. Place all blocks in the correct formation.",
+  "servo_delivery.terminal.no_chapter": "No delivery data for this chapter.",
+  "servo_delivery.terminal.not_needed": "This item is not needed for the current delivery.",
+  "servo_delivery.terminal.chapter": "Chapter %d — Progress: %d%%",
+  "servo_delivery.terminal.complete": "Chapter %d delivery complete!",
+  "servo_delivery.terminal.already_complete": "You have already delivered enough of this type."
+}

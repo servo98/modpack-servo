@@ -1,9 +1,9 @@
 # Modpack Servo - Instrucciones para Claude
 
 ## Proyecto
-Modpack progresivo MC 1.21.1 NeoForge con mod custom (servo_core).
+Modpack progresivo MC 1.21.1 NeoForge con 7 mods custom (arquitectura multi-mod).
 8 capitulos, ~240 horas, 3 pilares: Cocina/Granja + Create/Automatizacion + RPG/Clases.
-GDD completo en `docs/gdd-v2.md`. Tareas en `docs/TODO.md`.
+GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas en `docs/TODO.md`.
 
 ## Comandos clave
 - Build: `./gw build` (wrapper que setea JAVA_HOME, desde raiz)
@@ -34,6 +34,7 @@ GDD completo en `docs/gdd-v2.md`. Tareas en `docs/TODO.md`.
 |------|-----------|-------------|
 | Tareas | `docs/TODO.md` | Lista maestra con estado por tarea |
 | GDD | `docs/gdd-v2.md` | Overview del modpack completo |
+| Arquitectura | `docs/architecture.md` | 7 mods custom, dependencias, orden de desarrollo |
 | Mods | `docs/design/mod-decisions.md` | Cada mod con su razon de ser |
 | Balance | `docs/balance/*.md` | combat-scaling, gacha-rates, accessories, rpg-weapon-stats |
 | RPG Series | `docs/mod-data/rpg-series-content.md` | Clases, spells, tiers (datos de JARs) |
@@ -41,9 +42,13 @@ GDD completo en `docs/gdd-v2.md`. Tareas en `docs/TODO.md`.
 | Historial | `git log` | Commits = registro de sesiones (reemplaza session-log.md) |
 | Mecanicas | `docs/mechanics/*.md` | 21 docs, una por mecanica |
 | Capitulos | `docs/chapters/ch*.md` | 8 docs (ch1-ch8) con quests por capitulo |
+| Estado por mod | `docs/status/*.md` | Tablas done/pending + assets para artista |
 
 ## Estructura de codigo
-- `src/` — mod Java (servo_core)
+- `servo-packaging/` — mod Java standalone (COMPLETO v0.3.0)
+- `servo-delivery/` — mod Java in-progress (scaffold+GUI completo)
+- `servo-core/` — mod Java glue (scaffold)
+- Futuros: `servo-cooking/`, `servo-create/`, `servo-dungeons/`, `servo-mart/`
 - `modpack/kubejs/` — scripts KubeJS
 - `modpack/config/` — configs de mods
 - `modpack/mods/` — JARs de mods
@@ -52,8 +57,9 @@ GDD completo en `docs/gdd-v2.md`. Tareas en `docs/TODO.md`.
 ## Convenciones
 - Java: PascalCase clases, camelCase metodos, SCREAMING_SNAKE constantes
 - KubeJS: camelCase funciones, archivos con prefijo numerico para orden
-- Mod ID: `servo_core` | Package: `com.servo.core`
-- Recipe namespace: `servo_core:`
+- Mod IDs: `servo_packaging`, `servo_delivery`, `servo_core`, `servo_cooking`, `servo_create`, `servo_dungeons`, `servo_mart`
+- Packages: `com.servo.packaging`, `com.servo.delivery`, `com.servo.core`, etc.
+- Recipe namespaces: `servo_packaging:`, `servo_delivery:`, `servo_core:`, etc.
 - Lang: siempre espanol (es_mx) e ingles (en_us)
 
 ## Agentes disponibles (.claude/agents/)
@@ -86,9 +92,10 @@ GDD completo en `docs/gdd-v2.md`. Tareas en `docs/TODO.md`.
 ## Flujo de testing
 | Cambio | Como verificar |
 |--------|---------------|
-| Java (servo_core) | `./gw build` → `./gw runClient` → probar in-game |
+| Java (cualquier mod) | `./gw build` → `./gw runClient` → probar in-game |
 | KubeJS scripts | `/reload` → verificar en EMI (R = receta, U = usos) |
-| Items custom | `/give @s servo_core:item_name` en creative |
+| Items custom servo_packaging | `/function servo_packaging:test_kit` en creative |
+| Items de otros mods | `/give @s servo_[mod]:item_name` en creative |
 | Progression/stages | Mundo nuevo → `/kubejs stages add @s servo_ch2` → verificar |
 | Configs de mods | Reiniciar cliente |
 | Mods nuevos/eliminados | Reiniciar cliente → verificar en EMI |

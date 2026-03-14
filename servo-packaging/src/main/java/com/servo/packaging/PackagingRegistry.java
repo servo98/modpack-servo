@@ -1,7 +1,10 @@
 package com.servo.packaging;
 
+import com.servo.packaging.block.OpenBoxBlock;
+import com.servo.packaging.block.OpenBoxBlockEntity;
 import com.servo.packaging.block.PackingStationBlock;
 import com.servo.packaging.block.PackingStationBlockEntity;
+import com.servo.packaging.block.PackingStationMenu;
 import com.servo.packaging.component.BoxContents;
 import com.servo.packaging.item.FlatCardboardItem;
 import com.servo.packaging.item.ShippingBoxItem;
@@ -10,6 +13,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -37,6 +42,8 @@ public class PackagingRegistry {
             DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, ServoPackaging.MOD_ID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ServoPackaging.MOD_ID);
+    public static final DeferredRegister<MenuType<?>> MENUS =
+            DeferredRegister.create(Registries.MENU, ServoPackaging.MOD_ID);
 
     // === Data Components ===
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<BoxContents>> BOX_CONTENTS =
@@ -57,14 +64,25 @@ public class PackagingRegistry {
                             .noOcclusion()
             ));
 
+    public static final DeferredHolder<Block, OpenBoxBlock> OPEN_BOX_BLOCK =
+            BLOCKS.register("open_box", () -> new OpenBoxBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(0.5f)
+                            .sound(SoundType.WOOL)
+                            .noOcclusion()
+            ));
+
     // === Items ===
     public static final DeferredHolder<Item, FlatCardboardItem> FLAT_CARDBOARD_ITEM =
             ITEMS.register("flat_cardboard", () -> new FlatCardboardItem(
                     new Item.Properties().stacksTo(64)
             ));
 
-    public static final DeferredHolder<Item, Item> OPEN_BOX_ITEM =
-            ITEMS.register("open_box", () -> new Item(
+    // Open Box is now a BlockItem that places the OpenBoxBlock
+    public static final DeferredHolder<Item, BlockItem> OPEN_BOX_ITEM =
+            ITEMS.register("open_box", () -> new BlockItem(
+                    OPEN_BOX_BLOCK.get(),
                     new Item.Properties().stacksTo(16)
             ));
 
@@ -85,6 +103,19 @@ public class PackagingRegistry {
             BLOCK_ENTITIES.register("packing_station", () ->
                     BlockEntityType.Builder.of(PackingStationBlockEntity::new, PACKING_STATION_BLOCK.get())
                             .build(null)
+            );
+
+    @SuppressWarnings("DataFlowIssue")
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<OpenBoxBlockEntity>> OPEN_BOX_BE =
+            BLOCK_ENTITIES.register("open_box", () ->
+                    BlockEntityType.Builder.of(OpenBoxBlockEntity::new, OPEN_BOX_BLOCK.get())
+                            .build(null)
+            );
+
+    // === Menus ===
+    public static final DeferredHolder<MenuType<?>, MenuType<PackingStationMenu>> PACKING_STATION_MENU =
+            MENUS.register("packing_station", () ->
+                    new MenuType<>(PackingStationMenu::clientMenu, FeatureFlags.DEFAULT_FLAGS)
             );
 
     // === Tags (items) ===
@@ -126,6 +157,7 @@ public class PackagingRegistry {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
         BLOCK_ENTITIES.register(modEventBus);
+        MENUS.register(modEventBus);
         DATA_COMPONENTS.register(modEventBus);
         CREATIVE_TABS.register(modEventBus);
     }

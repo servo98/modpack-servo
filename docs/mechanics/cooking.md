@@ -5,7 +5,7 @@
 
 ## Overview
 
-Pilar central del modpack. Cocinar a mano es **divertido** (Perfil B), Create escala para entregas. Incentivo: Spice of Life: Onion (variedad = corazones extras).
+Pilar central del modpack. Cocinar a mano es **divertido** (Perfil B), Create escala para entregas. Incentivo: capitulo "Recetario" en FTB Quests (variedad de comidas = corazones extras como rewards de quest).
 
 ## Mods de cocina
 
@@ -16,10 +16,10 @@ Pilar central del modpack. Cocinar a mano es **divertido** (Perfil B), Create es
 | Expanded Delight | Juicer, mas crops y recetas FD. 60 items | Ch3 |
 | Croptopia | ~60 crops (recetas ELIMINADAS, solo ingredientes) | Ch2+ (gradual) |
 | Aquaculture 2 | 30+ peces, tag generico #c:fish | Siempre |
-| Spice of Life: Onion | Variedad = corazones permanentes | Siempre |
+| FTB Quests (Recetario) | Variedad = corazones permanentes via quest rewards | Siempre (capitulo propio en quest book) |
 | Slice & Dice | Automatizar cocina con Create | Ch3 |
 
-## 4 Workstations custom (servo_core)
+## 4 Workstations custom (servo_cooking)
 
 ### Batidora/Blender (Ch2)
 - 4 ingredientes + 1 fluido → 1 output
@@ -71,7 +71,10 @@ Pilar central del modpack. Cocinar a mano es **divertido** (Perfil B), Create es
 | 7 | Recetas con ingredientes de dungeon | +10 |
 | 8 | Recetas legendarias que combinan todo | +10 |
 
-## Spice of Life milestones
+## FTB Quests: capitulo "Recetario" (milestones de variedad)
+
+> Reemplaza Spice of Life: Onion. FTB Quests trackea las comidas cocinadas via quest triggers.
+> Los corazones bonus se otorgan como quest rewards (no automaticamente por el mod).
 
 | Comidas unicas | Corazones bonus | Capitulo esperado |
 |----------------|----------------|-------------------|

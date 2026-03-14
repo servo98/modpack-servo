@@ -29,10 +29,9 @@ Croptopia (12 crops), Brewin' And Chewin', Blender (custom), Moldes (custom), St
 
 ## Space Elevator entrega Ch2
 
-- 24 Cajas de Comida (smoothies, quesos, postres)
-- 8 Cajas de Crops nuevos
-- 4 Cajas de Queso
-- Material del boss
+Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevator.md#42-capitulo-2-la-mesa-servida).
+
+Resumen: Cajas de comida variada (smoothies, quesos, postres), crops nuevos, Mandibula de la Bestia (boss drop).
 
 ## Quests (~50)
 
@@ -56,7 +55,7 @@ Croptopia (12 crops), Brewin' And Chewin', Blender (custom), Moldes (custom), St
 3. Usar Molde para hacer un postre
 4. Hacer queso en el Keg
 5. Fermentar una bebida alcoholica
-6. Comer 15 comidas diferentes (Spice of Life: +2)
+6. Comer 15 comidas diferentes (FTB Quests Recetario: +2 corazones)
 7. Hacer una receta de Croptopia (usando ingredientes)
 8. Preparar Cajas de Queso
 
@@ -99,5 +98,5 @@ Croptopia (12 crops), Brewin' And Chewin', Blender (custom), Moldes (custom), St
 1. Hacer 5 pulls de gacha
 2. Obtener 3 moldes de postres
 3. Equipar primer ring de gema
-4. Completar 20 comidas unicas
+4. Completar 20 comidas unicas (Recetario: avanzar hitos)
 5. Completar entrega al Space Elevator Ch2

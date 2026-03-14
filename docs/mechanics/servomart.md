@@ -1,7 +1,7 @@
 # ServoMart (Sistema IKEA)
 
 > Fuente: GDD v2, seccion 3.4
-> Implementacion: servo_core custom
+> Implementacion: **servo_mart** (mod standalone, deps: servo_packaging)
 > Relacionado: [Tokens](tokens.md), [Gacha](gacha.md), [Progression](progression.md)
 
 ## Overview
@@ -38,7 +38,7 @@ Ciertas recetas Ch4+ requieren cocina equipada con nevera+estufa+fregadero.
 |-----|---------------------|
 | 2 | Macaw's Furniture basico |
 | 3 | Refurbished basico (nevera, estufa, fregadero) |
-| 4 | Macaw's completo (bridges, roofs, windows, trapdoors) |
+| 4 | Macaw's Windows completo |
 | 5 | Create Deco + Refurbished completo |
 | 6+ | Todo |
 

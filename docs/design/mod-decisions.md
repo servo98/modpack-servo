@@ -7,7 +7,13 @@
 | Mod | Proposito | Notas |
 |-----|-----------|-------|
 | NeoForge 21.1.219 | Mod loader | Dominante para modpacks, FTB ecosystem |
-| servo_core (custom) | Cocina custom, bosses (8), dungeons, accesorios, progresion, delivery | Nuestro mod principal |
+| servo_packaging (custom) | Cajas de carton, Empacadora. Standalone. | CODIGO COMPLETO v0.3.0. Ver architecture.md |
+| servo_delivery (custom) | Terminal de Entrega (Space Elevator), multibloque 3x3. Deps: servo_packaging. | in-progress (scaffold+GUI). Ver architecture.md |
+| servo_cooking (custom) | 4 workstations: Blender, Moldes, Drink Maker, Horno Avanzado. Standalone. | pendiente |
+| servo_create (custom) | Compat Create <-> packaging (funnels, deployers). Deps: packaging+Create. | pendiente |
+| servo_dungeons (custom) | Bosses (8), dungeons, llaves, Boss Altar, Boss Chamber, dimension void. Deps: GeckoLib. | pendiente |
+| servo_mart (custom) | Tienda catalogo dinamico. Deps: servo_packaging. | pendiente |
+| servo_core (custom, glue) | Tokens (Pepe Coin), accesorios custom (belt/back/feet), gacha pity, champions post-processing, progression manager. No standalone. | scaffold |
 
 ## Quests & Progression
 | Mod | Proposito | Notas |
@@ -24,7 +30,6 @@
 | Brewin' And Chewin' | Fermentacion, quesos, bebidas | Extiende FD |
 | Expanded Delight | Mas recetas FD | Extiende FD |
 | Croptopia | Ingredientes crudos SOLAMENTE | Eliminamos TODAS sus recetas via KubeJS |
-| Spice of Life: Onion | Incentivo a comer variado (bonus hearts) | Fork NeoForge de Carrot |
 | Create: Slice & Dice | Automatizar cocina con Create | Bridge cocina-automatizacion |
 | Aquaculture 2 | Pesca expandida | Mas ingredientes de pescado |
 

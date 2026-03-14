@@ -25,9 +25,9 @@ Ninguno nuevo. Todo se desbloquea/mejora.
 
 ## Space Elevator entrega Ch6
 
-- 48 Cajas de items complejos (multi-step recipes)
-- 1 set de equipo RPG encantado completo (demostrar dominio)
-- Material del boss
+Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevator.md#46-capitulo-6-maestria).
+
+Resumen: Cajas de items multi-step, gear RPG Netherite encantado, Hoz del Senor de las Cosechas (boss drop).
 
 ## Quests (~50)
 
@@ -48,7 +48,7 @@ Ninguno nuevo. Todo se desbloquea/mejora.
 2. Usar ingredientes raros
 3. Preparar cafe (coffee beans)
 4. Preparar plato con olive oil
-5. Comer 85 comidas diferentes (Spice of Life: +6)
+5. Comer 85 comidas diferentes (FTB Quests Recetario: +6 corazones)
 6. Encadenar 3 workstations en 1 receta
 7. Automatizar receta multi-step
 8. Produccion masiva con pipeline completo
@@ -92,5 +92,5 @@ Ninguno nuevo. Todo se desbloquea/mejora.
 1. Set T3 Netherite completo
 2. Full enchant con nivel V
 3. 5+ unique jewelry
-4. 85+ comidas unicas
+4. 85+ comidas unicas (Recetario: hito Ch6)
 5. Completar entrega al Space Elevator Ch6

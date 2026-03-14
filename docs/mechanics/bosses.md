@@ -1,7 +1,7 @@
 # Sistema de Jefes - Modpack Servo
 
 > Fuente: GDD v2, seccion 3.8
-> Implementacion: servo_core custom
+> Implementacion: **servo_dungeons** (8 bosses, Boss Altar, Boss Chamber)
 > Relacionado: [Dungeons](dungeons.md), [Death System](death-system.md), [Combat Scaling](../balance/combat-scaling.md), [RPG Weapon Stats](../balance/rpg-weapon-stats.md), [Tokens](tokens.md)
 
 ---
@@ -24,7 +24,7 @@
 
 ## 2.1 Concepto
 
-El Boss Altar es un bloque custom de servo_core. Existe 1 por mundo, pre-colocado en el spawn o crafteable a partir de Ch1. El jugador craftea una Boss Key del capitulo correspondiente, la inserta en el Altar, y el grupo entero es teleportado a la Boss Chamber (una arena instanciada en la dimension void de servo_core).
+El Boss Altar es un bloque custom de servo_dungeons. Existe 1 por mundo, pre-colocado en el spawn o crafteable a partir de Ch1. El jugador craftea una Boss Key del capitulo correspondiente, la inserta en el Altar, y el grupo entero es teleportado a la Boss Chamber (una arena instanciada en la dimension void de servo_dungeons).
 
 No hay salas previas, no hay dungeon. Es directo: llave → altar → boss.
 

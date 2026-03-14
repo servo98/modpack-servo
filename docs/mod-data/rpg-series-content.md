@@ -90,7 +90,7 @@
 | 1 | Iron/Stone weapons, Wizard Staff | Wizard Robes, Rogue set, Warrior set, Paladin set, Priest set | Ch2-3 |
 | 2 | Diamond/Gold weapons, Elemental Staffs | Arcane/Fire/Frost Robes, Assassin, Berserker, Crusader, Prior | Ch4-5 |
 | 3 | Netherite weapons (smithing upgrade) | Netherite variants de todo | Ch6-7 |
-| 4 | ~~Aeternium/Ruby~~ **NO DISPONIBLE** | ~~Aeternium/Ruby variants~~ | Necesita custom |
+| 4 | Aeternium/Ruby — **recetas custom KubeJS** (BetterEnd/BetterNether no instalados) | Aeternium/Ruby variants | Ch8 (custom) |
 
 ### PROBLEMA: Tier 4 requiere BetterEnd/BetterNether
 - Aeternium Ingot → betterend mod (no instalado)

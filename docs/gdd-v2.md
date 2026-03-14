@@ -62,7 +62,7 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 - Automatizacion tiene PROPOSITO: empacar y entregar items al Space Elevator
 - Gacha como engagement hook, no pay-to-win
 - Dungeons accesibles desde Ch1, dificultad escala con tier de llave
-- Dificultad por ZONA (overworld/nether/dungeon), no por stage del jugador
+- Dificultad escala por **stage del jugador mas cercano** (per-player via ProgressiveStages)
 - Capitulo introductorio que enseña mecanicas custom
 - Variedad en cada capitulo: cocina + farming + dungeon + combate + construccion
 
@@ -80,7 +80,6 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 | Expanded Delight | Mas crops (asparagus, chili, cranberry, cinnamon), jugos. 60 items | Expande variedad de FD |
 | Croptopia | 60+ crops crudos (RECETAS ELIMINADAS, solo ingredientes) | Variedad de cultivos |
 | Aquaculture 2 | 30+ peces, neptunium, tackle box. Recetas usan tag generico #c:fish | Pesca expandida, cualquier pez sirve |
-| Spice of Life: Onion | Comer variado = corazones permanentes bonus | Incentiva cocinar de todo |
 
 ### Automatizacion
 | Mod | Funcion | Justificacion |
@@ -115,9 +114,7 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 ### Exploracion y Dungeons
 | Mod | Funcion | Justificacion |
 |-----|---------|---------------|
-| ~~Alex's Mobs~~ | ~~89+ animales (fauna decorativa)~~ | **REMOVIDO**: crash con Citadel + no encaja en 3 pilares |
 | Supplementaries | Rope, bombs, keys, quiver, slingshot, cages | Herramientas utiles, NECESARIAS en dungeons |
-| ~~Dimensional Dungeons~~ | ~~Dimension procedural roguelike~~ | **REMOVIDO**: sistema custom en servo_core (control total sobre llaves, multiplayer, limpieza, muerte) |
 | Lootr | Loot individual por jugador en cofres | Multiplayer justo |
 
 ### Gacha y Progresion
@@ -132,11 +129,8 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 ### Decoracion
 | Mod | Funcion | Bloques |
 |-----|---------|---------|
-| Macaw's Bridges | Puentes | 151 |
-| Macaw's Roofs | Techos | 605 |
 | Macaw's Furniture | Muebles decorativos | 652 |
 | Macaw's Windows | Ventanas | 310 |
-| Macaw's Trapdoors | Trampillas | 187 |
 | MrCrayfish Refurbished | Muebles funcionales (nevera, estufa, TV, etc) | 448 |
 
 ### Quality of Life
@@ -187,33 +181,29 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 | Bosses of Mass Destruction | Port no oficial, bosses custom son mejores |
 | Brutal Bosses | Riesgo de opacar bosses custom |
 | Alex's Mobs + Citadel | Crash al cargar + no encaja en 3 pilares de contenido |
-| Dimensional Dungeons | Licencia "All Rights Reserved", diseño incompatible. Sistema custom en servo_core |
-| Dungeon Crawl | Overworld limpio, dungeons custom en servo_core |
+| Dimensional Dungeons | Licencia "All Rights Reserved", diseño incompatible. Sistema custom en servo_dungeons |
+| Dungeon Crawl | Overworld limpio, dungeons custom en servo_dungeons |
 | When Dungeons Arise | Idem |
 | Silent Gear / Simply Swords / Better Combat | No mods de combate, vanilla + custom |
 | Iron Chests | No existe para 1.21.1 |
 | Mekanism / AE2 | No interesan |
 
-## 2.3 Contenido custom (servo_core)
-| Sistema | Que incluye |
-|---------|-------------|
-| 4 workstations de cocina | Batidora, Moldes, Drink Maker, Horno Avanzado |
-| 8 bosses de capitulo | 1 por capitulo, con fases y mecanicas unicas |
-| Champions (Champions Unofficial) | 16 affixes en 4 categorias, configurados via mod (NO custom servo_core) |
-| Accesorios custom (belt, charm, head) | Curios slots que Jewelry NO cubre. Jewelry maneja rings/necklaces (85 items). Custom para los demas |
-| Recetas Tier 4 RPG | KubeJS: reemplazar Aeternium/Ruby con materiales de dungeon/boss |
-| Rebalanceo Berserker | KubeJS: quitar netherite_scrap de Berserker armor Tier 2 |
-| Space Elevator | Multibloque para entregas de capitulo (tipo Satisfactory) |
-| Sistema de empaque | Cajas de Envio para empacar items/comida para entregas |
-| ServoMart (IKEA) | Catalogo de muebles, pedidos llegan en cajas |
-| Token system | Pepe Coin como moneda para gacha |
-| **Sistema de Dungeons completo** | Dimension void custom, generacion procedural de salas, 4 tiers, multiplayer, limpieza de chunks |
-| Portal de Dungeon | Bloque custom, multiplayer-friendly (1 llave = todo el grupo entra) |
-| Llaves de Dungeon | 4 tiers (Basica/Avanzada/Maestra/Nucleo), consumibles, crafteo encadenado |
-| Salas de dungeon | 100+ templates .nbt, 7 tipos (entrada, pasillo, esquina, T, cruz, dead-end, boss) |
-| Esencia de Dungeon | Drop exclusivo de dungeons Avanzada+, necesario para llaves superiores |
-| Fragmento de Cristal del Nucleo | Drop de boss de dungeon Del Nucleo, necesario para RPG Tier 4 |
-| Progression manager | Bridge entre ProgressiveStages y FTB Quests |
+## 2.3 Contenido custom (7 mods propios)
+
+> Arquitectura multi-mod completa en `docs/architecture.md`. Los sistemas se distribuyen en 7 JARs.
+
+| Sistema | Mod | Estado |
+|---------|-----|--------|
+| Sistema de empaque (Cajas de Envio) | servo_packaging | CODIGO COMPLETO |
+| Create compat para empacadora | servo_create | pendiente |
+| Space Elevator (Terminal de Entrega) | servo_delivery | in-progress (scaffold + GUI completo) |
+| 4 workstations de cocina (Blender, Moldes, Drink Maker, Horno Avanzado) | servo_cooking | pendiente |
+| ServoMart (IKEA) | servo_mart | pendiente |
+| Bosses (8) + Dungeons (4 tiers) + llaves + dimension void | servo_dungeons | pendiente |
+| Tokens (Pepe Coin), accesorios custom (belt/back/feet), gacha pity, progression manager | servo_core (glue) | scaffold |
+| Champions post-processing | servo_core | pendiente (Fase 7) |
+| Recetas Tier 4 RPG | KubeJS | pendiente |
+| Rebalanceo Berserker armor | KubeJS | pendiente |
 
 ---
 
@@ -221,12 +211,13 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 
 ## 3.1 Space Elevator (Terminal de Entrega)
 
-Inspirado en Satisfactory. Bloque multibloque donde entregas items para avanzar de capitulo.
+Inspirado en Satisfactory. Bloque multibloque 3x3 donde entregas items para avanzar de capitulo.
 
 ```
-Vista frontal (3x2):
-[Puerto][Screen][Puerto]
-[Base ][Base  ][Base  ]
+Vista frontal (3 ancho x 3 alto):
+[Antena                      ]
+[Puerto][Terminal/Screen][Puerto]
+[Base  ][Base           ][Base  ]
 ```
 
 - Screen muestra items requeridos y progreso
@@ -237,14 +228,23 @@ Vista frontal (3x2):
 
 ## 3.2 Sistema de Empaque (Cajas de Envio)
 
+**Implementado en servo_packaging (v0.3.0 — CODIGO COMPLETO). Ver [mechanics/packaging.md](mechanics/packaging.md) para detalle completo.**
+
 **Problema resuelto**: cocinar es divertido a mano, pero las entregas al Space Elevator piden cantidades grandes. Create automatiza la ESCALA, no reemplaza la cocina.
 
-**Como funciona**:
-- Existe un bloque "Empacadora" o se usa un Deployer de Create
-- Metes comida/items + Caja Vacia → sale Caja de [Item] (no se puede comer, solo entregar)
-- Cajas de Envio se pueden hacer a mano (lento) o automatizar con Create (rapido)
-- El Space Elevator SOLO acepta Cajas, no items sueltos
-- Ejemplo: el Space Elevator pide "32 Cajas de Tomato Soup". Puedes cocinar las 32 sopas a mano y empacarlas una por una, O automatizar con Create: harvester → belt → Slice&Dice → Cooking Pot → Deployer empaca → belt al Space Elevator
+**Como funciona (flujo real)**:
+1. Craftear Carton Plano (4 Paper + 1 String = 4 unidades)
+2. Doblar en la **Empacadora** (GUI con 2 slots, 40 ticks = 2s): Carton Plano → Caja Abierta
+3. **Colocar Caja Abierta** en el piso como bloque (inmersivo, sin GUI)
+4. Click derecho con items en mano para llenar (mismo tipo, max 16 items, tag packable)
+5. Caja se sella automaticamente al llegar a 16 items → **Caja de Envio** (sellada, con icono visible)
+6. Recoger la Caja de Envio y llevarla al Space Elevator
+
+La Empacadora SOLO dobla carton. El empaque de items se hace en la caja colocada en el suelo.
+Hoppers nativos automatizan ambos pasos. Create (servo_create) agrega funnels/deployers para pipeline completo.
+El Space Elevator SOLO acepta Cajas de Envio, no items sueltos.
+
+**Ejemplo**: el Space Elevator pide "16 Cajas de Tomato Soup". Puedes cocinar las sopas a mano y empacarlas una por una, O automatizar con Create: harvester → belt → Slice&Dice → Cooking Pot → hopper → Caja Abierta (auto-seal) → belt al Space Elevator.
 
 **Por que esto funciona**:
 - Jugador que ama cocinar: cocina a mano, empaca a mano. Disfruta el proceso.
@@ -297,7 +297,7 @@ Bloque custom tipo tablet/computadora. Abres un catalogo de muebles:
 
 **Gacha de ServoMart**: opcion de "caja misteriosa" con mueble random. Separado del gacha de artefactos.
 
-## 3.5 Llaves de Dungeon (Sistema custom servo_core)
+## 3.5 Llaves de Dungeon (Sistema custom servo_dungeons)
 
 **UN solo sistema de dungeons con 4 tiers de llave.** No hay dungeons "normales" vs "especiales" — el tier de la llave determina la dificultad, duracion, y loot.
 
@@ -396,7 +396,7 @@ El game loop obliga a subir de tier de dungeon porque:
 
 El jugador nunca va a una dungeon "por explorar" — siempre tiene un objetivo concreto: necesita un material, un accesorio, o una unique jewelry para su build.
 
-### Muerte en dungeons (servo_core custom)
+### Muerte en dungeons (servo_dungeons custom)
 
 **Sistema simple**: gear equipado se queda contigo, loot de la run se pierde.
 
@@ -423,13 +423,13 @@ El jugador nunca va a una dungeon "por explorar" — siempre tiene un objetivo c
 **Caso multiplayer**:
 - Jugador A muere → respawnea en overworld con Soulbound items. Pierde loot de la run.
 - Jugador B sigue en dungeon → puede completarla solo o morir tambien.
-- Cuando 0 jugadores quedan en la dungeon → servo_core marca chunks para limpieza.
+- Cuando 0 jugadores quedan en la dungeon → servo_dungeons marca chunks para limpieza.
 
 ### Loot individual (bosses y cofres)
 
 **Cofres de dungeon**: Lootr genera loot INDIVIDUAL por jugador. Cada jugador abre el mismo cofre pero ve diferente loot. No hay pelearse por drops.
 
-**Boss de dungeon/capitulo**: servo_core implementa drops individuales por participante. Cada jugador que participo en el kill recibe su propio drop instanciado (como un MMO). Si 2 jugadores matan al boss del Nucleo, AMBOS reciben 1-2 Fragmentos de Cristal independientemente.
+**Boss de dungeon/capitulo**: servo_dungeons implementa drops individuales por participante. Cada jugador que participo en el kill recibe su propio drop instanciado (como un MMO). Si 2 jugadores matan al boss del Nucleo, AMBOS reciben 1-2 Fragmentos de Cristal independientemente.
 
 **Cuantos boss kills para T4 completo**: Una pieza T4 cuesta ~3 Fragmentos de Cristal del Nucleo. Un set completo (arma + 4 armor) = ~15 fragmentos. Boss da 1-2 por kill → ~8-10 runs del Nucleo. Jugando en pareja, ambos reciben drops → ~8-10 runs juntos equipan a los 2.
 
@@ -500,7 +500,7 @@ Necesito item exclusivo → crafteo llave del tier correcto
 **Loop de Cocina** (constante, Perfil B ama esto):
 ```
 Nuevo crop desbloqueado → descubro recetas → cocino variedad
-  → Spice of Life da corazones bonus → empaco para entregas
+  → FTB Quests "Recetario" da corazones bonus (quest rewards) → empaco para entregas
   → Create automatiza escala (Perfil A)
 ```
 
@@ -631,10 +631,11 @@ OVERWORLD:
 | Invisible | Invisible hasta que ataca | Shimmer | Muy Alta |
 | Shield | Escudo que se rompe con 3 hits | Escudo giratorio | Alta |
 
-**Spawn**:
-- Overworld: 8% base, max 1 affix (Ch1-2), max 2 affix (Ch3+)
-- Nether: 15%, max 2 affix
-- Dungeon: 15-35% segun tier (Basica 15%, Avanzada 25%, Maestra 30%, Del Nucleo 35%), max affixes segun tier (1→2→3→3+exclusivos). Ver [champions.md](mechanics/champions.md)
+**Spawn** (escala por stage del jugador — ver [champions.md](mechanics/champions.md) para tabla completa):
+- Overworld: tier max segun stage del player mas cercano, max 1→2 affixes, pool crece por capitulo
+- Nether: 15-18%, max 2→3 affixes
+- Dungeons: 15-35% segun tier de llave, siempre mas dificil que overworld
+- Del Nucleo: 35%, 3 affixes + exclusivos (Teleporter/Invisible/Shield)
 
 ## 3.10 Accesorios (Curios API)
 
@@ -807,13 +808,14 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 
 **Cada capitulo tiene de todo**: cocina nueva, crops nuevos, dungeon accesible, combate, decoracion, y un objetivo de entrega al Space Elevator. No hay "el capitulo de Create" o "el capitulo de dungeons".
 
-**Dificultad por zona, no por jugador**:
-- Overworld: dificultad base, escala levemente por distancia del spawn
-- Nether: dificultad media fija
-- Dungeons: dificultad segun tier de llave
-- Champion spawn: fija por zona (8% overworld, 15% nether, 15-35% dungeon segun tier de llave)
+**Dificultad escala por stage del jugador** (per-player via ProgressiveStages):
+- Cada jugador enfrenta dificultad acorde a su propio stage — Player A (Ch2) ve Ch2, Player B (Ch5) ve Ch5
+- servo_core post-procesa champions via API publica y hace downgrade si exceden el tier del player mas cercano
+- Overworld/Nether: tier basado en stage del player mas cercano
+- Dungeons: tier basado en llave usada para crear la instancia (siempre mas dificil que overworld)
+- Pool de affixes crece con cada capitulo completado
 
-**ProgressiveStages**: per-player para recetas/items. Global para nada - mobs y dificultad son por zona.
+**ProgressiveStages = unica fuente de verdad** para toda la progresion: items, recetas Y dificultad. Zero SavedData custom.
 
 ## 4.2 Distribucion de contenido por capitulo
 
@@ -911,7 +913,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 | 1 | Supplementaries basico (rope, jar, sign post, soap) |
 | 2 | + Macaw's Furniture basico + Supplementaries completo |
 | 3 | + Refurbished Furniture basico (funcional: nevera, estufa, fregadero) |
-| 4 | + Todo Macaw's (bridges, roofs, windows, trapdoors) |
+| 4 | + Macaw's Windows completo |
 | 5 | + Create Deco + Refurbished completo |
 | 6+ | Todo disponible |
 
@@ -929,7 +931,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 
 **Tema**: Capitulo introductorio. Aprender mecanicas vanilla + FD + mecanicas custom + descubrir sistema RPG.
 
-**Mods activos**: Vanilla, FD basico, Supplementaries basico, Aquaculture, Spice of Life, Lootr, Gacha Machine, Waystones, Xaero's, Jade, Backpacks, Carry On, Spell Engine (limitado), Runes (basico), Jewelry (basico)
+**Mods activos**: Vanilla, FD basico, Supplementaries basico, Aquaculture, FTB Quests (Recetario), Lootr, Gacha Machine, Waystones, Xaero's, Jade, Backpacks, Carry On, Spell Engine (limitado), Runes (basico), Jewelry (basico)
 
 **Contenido**:
 - 12 crops, ~25 recetas de cocina
@@ -942,15 +944,11 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 - **RPG**: Small Rune Pouch + Arcane/Frost runes. NO class books aun (solo ataques genericos)
 - **Jewelry**: Copper/Iron Ring (introductorio, sin stats reales)
 
-**Space Elevator entrega Ch1**:
-- 16 Cajas de Comida Variada (al menos 10 tipos diferentes empacados)
-- 8 Cajas de Crops (stacks de cada crop basico)
-- 1 Raiz del Guardian (drop de boss)
-- Set de iron tools
+**Entregas**: Ver [mechanics/space-elevator.md](mechanics/space-elevator.md#41-capitulo-1-primeras-raices) | **Quests detallados**: Ver [chapters/ch1-raices.md](chapters/ch1-raices.md)
 
 **Quests Ch1 (~50)**:
 - Historia/tutorial (12): mecanicas custom, FD, gacha, dungeon, champions, Space Elevator, empaque, Spell Binding Table
-- Cocina (8): recetas de FD, variedad para Spice of Life
+- Cocina (8): recetas de FD, variedad para FTB Quests "Recetario"
 - Farming (6): cada crop, granja, animales
 - Dungeon (5): primera run, sobrevivir, loot (Spell Scrolls como teaser)
 - Combate (5): champions, boss prep, boss fight, craftear arma T0
@@ -977,11 +975,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 
 **Por que melee primero?** Iron y leather son materiales accesibles en Ch2. Magia requiere materiales mas raros (Ender Pearl, Blaze Powder). El jugador aprende combate cuerpo a cuerpo antes de castear.
 
-**Space Elevator entrega Ch2**:
-- 24 Cajas de Comida (incluir smoothies, quesos, postres)
-- 8 Cajas de Crops nuevos
-- 4 Cajas de Queso
-- Material del boss
+**Entregas**: Ver [mechanics/space-elevator.md](mechanics/space-elevator.md#42-capitulo-2-la-mesa-servida) | **Quests detallados**: Ver [chapters/ch2-cocina-melee.md](chapters/ch2-cocina-melee.md)
 
 ### Capitulo 3: Los Engranajes + La Magia Despierta
 
@@ -1004,11 +998,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 - **Jewelry**: Ruby/Sapphire rings y necklaces
 - **Nether** abre materiales para Fire Wizard (Blaze Powder) y Crusader/Prior (Ghast Tear en Ch4)
 
-**Space Elevator entrega Ch3**:
-- 16 Cajas de Bebidas (diferentes tipos)
-- 8 Cajas de items procesados con Create (prensados, molidos)
-- Materiales del Nether empacados
-- Material del boss
+**Entregas**: Ver [mechanics/space-elevator.md](mechanics/space-elevator.md#43-capitulo-3-engranajes-y-magia) | **Quests detallados**: Ver [chapters/ch3-engranajes-magia.md](chapters/ch3-engranajes-magia.md)
 
 ### Capitulo 4: Horizontes + Especializacion
 
@@ -1031,11 +1021,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 
 **Momento clave**: El jugador se define. Ya no es "un tipo con espada" sino un Berserker, un Frost Wizard, o un Priest Water.
 
-**Space Elevator entrega Ch4**:
-- 8 Cajas de Feasts
-- 8 Cajas de items auto-crafteados (Mechanical Crafter)
-- 1 Scroll de Especializacion (prueba de haber elegido spec en Skill Tree)
-- Material del boss
+**Entregas**: Ver [mechanics/space-elevator.md](mechanics/space-elevator.md#44-capitulo-4-horizontes) | **Quests detallados**: Ver [chapters/ch4-horizontes.md](chapters/ch4-horizontes.md)
 
 ### Capitulo 5: La Red + Poder Magico
 
@@ -1056,11 +1042,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 - **Jewelry**: Netherite variants de todas las gemas (netherite + gem)
 - **Enchantment Industry** automatiza enchants magicos para todo el equipo RPG
 
-**Space Elevator entrega Ch5**:
-- 32 Cajas variadas (auto-producidas con RS+Create)
-- Items enchantados auto-producidos (incluyendo enchants magicos)
-- Demostrar pipeline RS→Create→Space Elevator automatizado
-- Material del boss
+**Entregas**: Ver [mechanics/space-elevator.md](mechanics/space-elevator.md#45-capitulo-5-la-red) | **Quests detallados**: Ver [chapters/ch5-red-poder.md](chapters/ch5-red-poder.md)
 
 ### Capitulo 6: La Maestria + Netherite RPG
 
@@ -1077,10 +1059,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 - **Dungeon Maestra**: unique jewelry drop rate mas alto
 - Boss Ch6 dropea "Rubi Infernal" (material para T4)
 
-**Space Elevator entrega Ch6**:
-- 48 Cajas de items complejos (multi-step recipes)
-- 1 set de equipo RPG encantado completo (demostrar dominio de clase)
-- Material del boss
+**Entregas**: Ver [mechanics/space-elevator.md](mechanics/space-elevator.md#46-capitulo-6-maestria) | **Quests detallados**: Ver [chapters/ch6-maestria.md](chapters/ch6-maestria.md)
 
 ### Capitulo 7: Las Profundidades + Coleccion Legendaria
 
@@ -1097,10 +1076,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 - **RPG**: Accesorios custom T4 (belt/charm/head) como boss drops
 - Boss Ch7 dropea "Cristal del Nucleo" (material para T4)
 
-**Space Elevator entrega Ch7**:
-- Cajas con materiales exclusivos de dungeon
-- 5 unique jewelry (demostrar farming de dungeon)
-- Material del boss
+**Entregas**: Ver [mechanics/space-elevator.md](mechanics/space-elevator.md#47-capitulo-7-profundidades) | **Quests detallados**: Ver [chapters/ch7-profundidades.md](chapters/ch7-profundidades.md)
 
 ### Capitulo 8: El Final + Armas Legendarias
 
@@ -1118,12 +1094,7 @@ Progresar capitulo → Desbloquear tier de gear + llave de dungeon
 - **RPG**: Unique jewelry legendarias como drops del boss final (Ring of Omnipotence, Pendant of Acumen, etc.)
 - **RPG**: Todas las especializaciones maxeadas
 
-**Space Elevator entrega final**:
-- Item Maestro (mega-craft que usa items de todos los capitulos)
-- 100+ comidas unicas empacadas
-- Factory automatizada funcionando
-- Todos los bosses derrotados (trofeos)
-- 1 arma T4 legendaria (crafteo endgame)
+**Entregas**: Ver [mechanics/space-elevator.md](mechanics/space-elevator.md#48-capitulo-8-final-el-legado) | **Quests detallados**: Ver [chapters/ch8-final.md](chapters/ch8-final.md)
 
 ---
 
@@ -1141,17 +1112,10 @@ Accesorio boost: 5%, 12%, 22%, 40%, 70% por tier
 Nutrition bonus: base * (1 + 0.2*(mold_stars-1))
 ```
 
-## 5.2 Spice of Life milestones
-| Comidas unicas | Corazones bonus | Capitulo esperado |
-|----------------|----------------|-------------------|
-| 5 | +1 | Ch1 |
-| 15 | +2 | Ch1-2 |
-| 30 | +3 | Ch2-3 |
-| 50 | +4 | Ch3-4 |
-| 70 | +5 | Ch5 |
-| 85 | +6 | Ch6 |
-| 100 | +8 | Ch7 |
-| 130 | +10 (max 20 hearts) | Ch8 |
+## 5.2 FTB Quests "Recetario" — milestones de variedad de comidas
+
+Los corazones bonus se otorgan via FTB Quests (quest rewards manuales). Spice of Life: Onion removido.
+Tabla completa: ver [mechanics/cooking.md](mechanics/cooking.md#ftb-quests-capitulo-recetario-milestones-de-variedad).
 
 ## 5.3 ProgressiveStages
 
@@ -1208,18 +1172,18 @@ ProgressiveStages tiene 7 mecanismos independientes. Nuestra config:
 - [x] Incendium descartado (demasiado complejo, NPCs no van con nuestro diseño)
 - [x] ProgressiveStages bloquea equipo: inventory scanner + block pickup + block use + tooltips + JEI lock icons
 - [x] Anti-skip tiers: Esencia NO dropea en Basica, llaves superiores requieren boss drops + materials anteriores
-- [x] Boss loot individual: servo_core implementa drops por participante (como MMO). ~8-10 runs Nucleo para T4 completo
+- [x] Boss loot individual: servo_dungeons implementa drops por participante (como MMO). ~8-10 runs Nucleo para T4 completo
 - [x] Muerte en dungeon: YIGD (You're in Grave Danger) — tumba, compas, soulbound selectivo, timer anti-robo
 - [x] Pilares separados: cocina NO en dungeon loot (pilares se conectan via Space Elevator, no mezclando rewards)
 - [x] Servo Tokens renombrados a Pepe Coins
-- [x] Dimensional Dungeons REMOVIDO: licencia impide fork. Sistema custom desde cero en servo_core
+- [x] Dimensional Dungeons REMOVIDO: licencia impide fork. Sistema custom desde cero en servo_dungeons
 - [x] Muerte en dungeon: YIGD tumba donde moriste, puedes volver a buscarla (Dark Souls). Soulbound en gear T2+, pierdes loot de la run si no recuperas la tumba. Boss Chamber: sin tumba YIGD, portal reabre 15s
 
 ### Por resolver
 - [ ] ServoMart: diseño completo del GUI y sistema de pedidos
 - [ ] Lore: historia minima visual sin texto. Que historia contamos?
 - [ ] Recetas exactas: cuales recetas van en que workstation, cuales se redirigen de Croptopia
-- [ ] Dungeon custom: arquitectura del sistema de generacion procedural (servo_core)
+- [ ] Dungeon custom: arquitectura del sistema de generacion procedural (servo_dungeons)
 - [ ] Dungeon custom: diseño de las 100+ salas con Structure Blocks
 - [ ] Dungeon custom: como incluir puzzles de Supplementaries en salas
 - [ ] Aquaculture: cuales peces son relevantes si todos usan #c:fish?

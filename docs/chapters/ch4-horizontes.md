@@ -30,10 +30,9 @@ Berserker, Deadeye, War Archer, Tundra Hunter, Forcemaster, Air, Earth, Water
 
 ## Space Elevator entrega Ch4
 
-- 8 Cajas de Feasts
-- 8 Cajas de items auto-crafteados (Mechanical Crafter)
-- 1 Scroll de Especializacion (prueba de haber elegido spec)
-- Material del boss
+Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevator.md#44-capitulo-4-horizontes).
+
+Resumen: Cajas de Feasts, items auto-crafteados, Scroll de Especializacion, Senal Fantasma (boss drop).
 
 ## Quests (~50)
 
@@ -57,7 +56,7 @@ Berserker, Deadeye, War Archer, Tundra Hunter, Forcemaster, Air, Earth, Water
 3. Cocinar con especias
 4. Compartir un Feast (multiplayer)
 5. Usar Mixer para receta de cocina
-6. Comer 50 comidas diferentes (Spice of Life: +4)
+6. Comer 50 comidas diferentes (FTB Quests Recetario: +4 corazones)
 7. Usar Deployer para automatizar empaque
 8. Preparar receta con 3+ especias
 

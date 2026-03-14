@@ -31,11 +31,9 @@ Materiales: Cristal del Nucleo + Rubi Infernal (drops de bosses)
 
 ## Space Elevator entrega final
 
-- **Item Maestro** (mega-craft que usa items de todos los capitulos)
-- 100+ comidas unicas empacadas
-- Factory automatizada funcionando
-- Todos los bosses derrotados (trofeos)
-- 1 arma T4 legendaria
+Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevator.md#48-capitulo-8-final-el-legado).
+
+Resumen: Item Maestro, comidas legendarias, arma T4, trofeos de todos los bosses, Fragmento del Devorador (boss drop).
 
 ## Boss Final: Devorador de Mundos
 
@@ -62,7 +60,7 @@ Materiales: Cristal del Nucleo + Rubi Infernal (drops de bosses)
 
 ### Cocina (8)
 1. Cocinar receta legendaria
-2. Completar 100% de comidas (Spice of Life: +10, max 20 hearts)
+2. Completar 100% de comidas (FTB Quests Recetario: +10 corazones, max 20 hearts)
 3. Comer 130+ comidas diferentes
 4. Preparar buff de comida para boss final
 5. Automatizar produccion de todas las comidas
@@ -108,6 +106,6 @@ Materiales: Cristal del Nucleo + Rubi Infernal (drops de bosses)
 ### Coleccion (5)
 1. 24/24 unique jewelry
 2. Todos los accesorios T5
-3. 130+ comidas unicas
+3. 130+ comidas unicas (Recetario: hito final)
 4. Todos los moldes de postre
 5. Completar entrega final al Space Elevator

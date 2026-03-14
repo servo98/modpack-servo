@@ -1,13 +1,11 @@
 package com.servo.packaging.block;
 
 import com.mojang.serialization.MapCodec;
+import com.servo.packaging.PackagingRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -15,6 +13,8 @@ import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -25,29 +25,19 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Packing Station — immersive block for packing items into shipping boxes.
- * No GUI. All interaction via right-click in the world.
- *
- * States:
- * 1. Empty — no box
- * 2. Box placed — open box on top
- * 3. Items being added — box + partial items
- * 4. Box full — auto-closes (instant transition)
- * 5. Closed box ready — pick up
+ * Packing Station — folds flat cardboard into open boxes.
+ * Opens a GUI (like a furnace) when right-clicked.
+ * Folding takes 2 seconds with a progress bar in the GUI.
  *
  * Automation (vanilla):
- * - Hopper from top: inserts Open Box
- * - Hopper from sides: inserts items
- * - Hopper from bottom: extracts Shipping Box
- *
- * Create automation lives in servo_create addon.
+ * - Hopper from top: inserts flat_cardboard
+ * - Hopper from bottom/sides: extracts open_box
  */
 public class PackingStationBlock extends BaseEntityBlock {
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final MapCodec<PackingStationBlock> CODEC = simpleCodec(PackingStationBlock::new);
 
-    // Table shape: slightly shorter than a full block
     private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 14, 16);
 
     public PackingStationBlock(Properties properties) {
@@ -83,26 +73,33 @@ public class PackingStationBlock extends BaseEntityBlock {
         return RenderShape.MODEL;
     }
 
+    // Right-click — open GUI
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack heldItem, BlockState state, Level level,
-                                              BlockPos pos, Player player, InteractionHand hand,
-                                              BlockHitResult hitResult) {
-        if (level.isClientSide()) {
-            return ItemInteractionResult.SUCCESS;
-        }
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos,
+                                               Player player, BlockHitResult hitResult) {
+        if (level.isClientSide()) return InteractionResult.SUCCESS;
 
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof PackingStationBlockEntity station) {
-            return station.handleInteraction(player, hand, heldItem);
+            player.openMenu(station);
+            return InteractionResult.SUCCESS;
         }
-
-        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        return InteractionResult.PASS;
     }
 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new PackingStationBlockEntity(pos, state);
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state,
+                                                                   BlockEntityType<T> type) {
+        if (level.isClientSide()) return null;
+        return createTickerHelper(type, PackagingRegistry.PACKING_STATION_BE.get(),
+                PackingStationBlockEntity::serverTick);
     }
 
     @Override

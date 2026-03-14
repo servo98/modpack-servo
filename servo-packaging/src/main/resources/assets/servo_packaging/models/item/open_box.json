@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "servo_packaging:item/open_box"
-  }
+  "parent": "servo_packaging:block/open_box"
 }

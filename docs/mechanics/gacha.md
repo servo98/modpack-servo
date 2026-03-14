@@ -137,7 +137,7 @@ Solo 8 de las 24 unique estan disponibles (las de stats mas generales):
 El pool de muebles se expande por capitulo segun desbloqueo de ServoMart (ver [ServoMart](servomart.md)):
 - Ch2: Macaw's basico
 - Ch3: + Refurbished basico (nevera, estufa, fregadero)
-- Ch4: + Macaw's completo (bridges, roofs, windows, trapdoors)
+- Ch4: + Macaw's Windows completo
 - Ch5: + Create Deco + Refurbished completo
 - Ch6+: Todo
 

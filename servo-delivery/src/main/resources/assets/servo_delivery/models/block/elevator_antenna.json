@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "servo_delivery:block/elevator_antenna_placeholder"
+  }
+}

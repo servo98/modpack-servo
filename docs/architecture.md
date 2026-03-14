@@ -50,11 +50,12 @@ Los mods standalone son configurables via JSON/datapacks y no dependen de servo_
 ## Contenido por mod
 
 ### servo_packaging
-- **Items**: Carton Plano, Caja Abierta, Caja de Envio (DataComponent NBT)
-- **Bloques**: Empacadora (packing_station) — sin GUI, inmersiva
-- **Tags**: `#servo_packaging:packable`, `#servo_packaging:pack_size_4/8/16`
+- **Items**: Carton Plano, Caja Abierta, Caja de Envio (DataComponent BoxContents)
+- **Bloques**: Empacadora (packing_station) — GUI con 2 slots + barra de progreso (solo dobla carton); Caja Abierta (open_box) — bloque placeable, interaccion inmersiva sin GUI
+- **Tags**: `#servo_packaging:packable`, `#servo_packaging:pack_size_1/8/16`, `#servo_packaging:category/food/crops/processed/magic/special`
 - **Config**: Cantidades por categoria, items empacables
 - **Deps**: ninguna
+- **Estado**: CODIGO COMPLETO (v0.3.0)
 
 ### servo_create
 - **Agrega**: Inventario por caras a Empacadora (funnel/belt I/O), Deployer compat
@@ -91,7 +92,8 @@ Los mods standalone son configurables via JSON/datapacks y no dependen de servo_
 - **Curios**: 3 slots (belt/back/feet), ~50 accesorios custom
 - **Gacha**: Pity tracker (PlayerCapability)
 - **Progression**: Conecta Terminal + Boss kill -> grant stage
-- **Deps**: todos los demas (soft), Curios API, ProgressiveStages, FTB Quests, Bloo's Gacha Machine
+- **Champion post-processing**: `EntityJoinLevelEvent` (LOWEST) → lee stage del player mas cercano via ProgressiveStages → downgrade champions que excedan tier permitido. Cache `Map<UUID, Integer>` actualizado via `StageChangeEvent`. En dungeons, tier basado en llave usada.
+- **Deps**: todos los demas (soft), Curios API, ProgressiveStages, Champions Unofficial (API), FTB Quests, Bloo's Gacha Machine
 
 ## Estructura Gradle
 
@@ -122,15 +124,15 @@ modpack-servo/
 
 ## Orden de desarrollo
 
-| Fase | Mod | Razon |
-|------|-----|-------|
-| 1 | servo_packaging | 0 deps, desbloquea 3 mods |
-| 2 | servo_delivery | Packaging + Delivery = loop core del modpack |
-| 3 | servo_cooking | Contenido para cocinar -> empacar -> entregar |
-| 4 | servo_create | Automation: belts + funnels + deployers |
-| 5 | servo_mart | Tienda, menos urgente |
-| 6 | servo_dungeons | El mas complejo, independiente |
-| 7 | servo_core | Glue, al final cuando todo existe |
+| Fase | Mod | Estado | Razon |
+|------|-----|--------|-------|
+| 1 | servo_packaging | **COMPLETO (v0.3.0)** | 0 deps, desbloquea 3 mods |
+| 2 | servo_delivery | **in-progress — scaffold completo** | Packaging + Delivery = loop core del modpack |
+| 3 | servo_cooking | pendiente | Contenido para cocinar -> empacar -> entregar |
+| 4 | servo_create | pendiente | Automation: belts + funnels + deployers |
+| 5 | servo_mart | pendiente | Tienda, menos urgente |
+| 6 | servo_dungeons | pendiente | El mas complejo, independiente |
+| 7 | servo_core | scaffold | Glue, al final cuando todo existe |
 
 ## Patrones compartidos
 
@@ -146,4 +148,5 @@ Cada mod es configurable sin tocar codigo:
 MC 1.21.1 usa DataComponents. Shipping Box usa un DataComponent custom `BoxContents`.
 
 ### Sin GUI donde sea posible
-Empacadora, cajas, y workstations de cocina priorizan interaccion inmersiva (click derecho, items visibles en el mundo).
+Cajas abiertas y workstations de cocina priorizan interaccion inmersiva (click derecho, items visibles en el mundo).
+Excepcion: Empacadora tiene GUI de 2 slots (necesaria para el proceso de doblado con barra de progreso).

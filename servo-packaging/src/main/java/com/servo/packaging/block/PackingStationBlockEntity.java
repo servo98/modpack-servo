@@ -1,265 +1,174 @@
 package com.servo.packaging.block;
 
 import com.servo.packaging.PackagingRegistry;
-import com.servo.packaging.component.BoxContents;
-import com.servo.packaging.item.ShippingBoxItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.MenuProvider;
 import net.minecraft.world.WorldlyContainer;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Block entity for the Packing Station.
+ * Packing Station — folds flat cardboard into open boxes.
  *
- * Internal state machine:
- * - EMPTY: no box, no items
- * - BOX_PLACED: open box on station, awaiting items
- * - FILLING: box + some items (not yet full)
- * - SEALED: box is full and sealed, ready for pickup
+ * State machine: IDLE → FOLDING → DONE
+ * - IDLE: waiting for flat_cardboard input
+ * - FOLDING: animating fold (40 ticks / 2 seconds)
+ * - DONE: open_box ready for pickup in output
  *
- * Implements WorldlyContainer for hopper interaction:
- * - Top: accepts Open Box only
- * - Sides: accepts packable items
- * - Bottom: outputs sealed Shipping Box
+ * WorldlyContainer for hopper compat:
+ * - Top: accepts flat_cardboard
+ * - Bottom/Sides: outputs open_box
  */
-public class PackingStationBlockEntity extends BlockEntity implements WorldlyContainer {
+public class PackingStationBlockEntity extends BlockEntity implements WorldlyContainer, MenuProvider {
 
-    public enum State { EMPTY, BOX_PLACED, FILLING, SEALED }
+    public enum State { IDLE, FOLDING, DONE }
 
-    private State currentState = State.EMPTY;
+    private State currentState = State.IDLE;
+    private ItemStack inputSlot = ItemStack.EMPTY;   // flat_cardboard
+    private ItemStack outputSlot = ItemStack.EMPTY;  // open_box
+    private int foldTicks = 0;
+    private static final int FOLD_DURATION = 40; // 2 seconds
 
-    // What item is being packed (null if empty/box-only)
-    @Nullable
-    private ResourceLocation packedItemId;
-    private int packedCount;
-    private int targetCount;
-    private String category = "";
+    private static final int SLOT_INPUT = 0;
+    private static final int SLOT_OUTPUT = 1;
+    private static final int[] SLOTS_TOP = {SLOT_INPUT};
+    private static final int[] SLOTS_BOTTOM_SIDE = {SLOT_OUTPUT};
 
-    // The sealed output box (only set in SEALED state)
-    private ItemStack outputBox = ItemStack.EMPTY;
+    /** Syncs foldTicks and foldDuration to the client-side menu for the progress bar. */
+    private final ContainerData dataAccess = new ContainerData() {
+        @Override
+        public int get(int index) {
+            return switch (index) {
+                case 0 -> foldTicks;
+                case 1 -> FOLD_DURATION;
+                default -> 0;
+            };
+        }
 
-    // Slot indices for WorldlyContainer
-    private static final int SLOT_BOX_IN = 0;    // top — open box input
-    private static final int SLOT_ITEM_IN = 1;   // sides — item input
-    private static final int SLOT_OUTPUT = 2;     // bottom — sealed box output
-    private static final int[] SLOTS_TOP = {SLOT_BOX_IN};
-    private static final int[] SLOTS_SIDES = {SLOT_ITEM_IN};
-    private static final int[] SLOTS_BOTTOM = {SLOT_OUTPUT};
+        @Override
+        public void set(int index, int value) {
+            if (index == 0) foldTicks = value;
+        }
+
+        @Override
+        public int getCount() {
+            return 2;
+        }
+    };
 
     public PackingStationBlockEntity(BlockPos pos, BlockState state) {
         super(PackagingRegistry.PACKING_STATION_BE.get(), pos, state);
     }
 
-    // === Player interaction (right-click) ===
+    // === MenuProvider ===
 
-    public ItemInteractionResult handleInteraction(Player player, InteractionHand hand, ItemStack heldItem) {
-        return switch (currentState) {
-            case EMPTY -> handleEmpty(player, heldItem);
-            case BOX_PLACED -> handleBoxPlaced(player, heldItem);
-            case FILLING -> handleFilling(player, heldItem);
-            case SEALED -> handleSealed(player);
-        };
+    @Override
+    public Component getDisplayName() {
+        return Component.translatable("block.servo_packaging.packing_station");
     }
 
-    private ItemInteractionResult handleEmpty(Player player, ItemStack heldItem) {
-        // Accept open box
-        if (heldItem.is(PackagingRegistry.OPEN_BOX_ITEM.get())) {
-            heldItem.shrink(1);
-            currentState = State.BOX_PLACED;
-            playSound(SoundEvents.WOOL_PLACE);
-            setChanged();
-            return ItemInteractionResult.SUCCESS;
-        }
-        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    @Nullable
+    @Override
+    public AbstractContainerMenu createMenu(int containerId, Inventory playerInv, Player player) {
+        return new PackingStationMenu(containerId, playerInv, this, dataAccess);
     }
 
-    private ItemInteractionResult handleBoxPlaced(Player player, ItemStack heldItem) {
-        if (heldItem.isEmpty()) {
-            // Empty hand on box-only state: return the open box
-            returnOpenBox(player);
-            return ItemInteractionResult.SUCCESS;
-        }
-        // Start filling with this item
-        return tryAddItem(player, heldItem);
-    }
+    // === Tick ===
 
-    private ItemInteractionResult handleFilling(Player player, ItemStack heldItem) {
-        if (heldItem.isEmpty()) {
-            // Empty hand: cancel, return items + open box
-            cancelPacking(player);
-            return ItemInteractionResult.SUCCESS;
-        }
-        // Add more of the same item
-        return tryAddItem(player, heldItem);
-    }
-
-    private ItemInteractionResult handleSealed(Player player) {
-        // Pick up the sealed box
-        if (!outputBox.isEmpty()) {
-            if (!player.getInventory().add(outputBox.copy())) {
-                player.drop(outputBox.copy(), false);
+    public static void serverTick(Level level, BlockPos pos, BlockState state, PackingStationBlockEntity be) {
+        if (be.currentState == State.IDLE) {
+            if (canStartFolding(be)) {
+                be.currentState = State.FOLDING;
+                be.foldTicks = 0;
+                be.setChanged();
+                be.syncToClient();
             }
-            outputBox = ItemStack.EMPTY;
-            currentState = State.EMPTY;
-            playSound(SoundEvents.ITEM_PICKUP);
-            setChanged();
-        }
-        return ItemInteractionResult.SUCCESS;
-    }
-
-    // === Packing logic ===
-
-    private ItemInteractionResult tryAddItem(Player player, ItemStack heldItem) {
-        if (!isPackable(heldItem)) {
-            sendActionBar(player, Component.translatable("servo_packaging.packing.not_packable"));
-            return ItemInteractionResult.FAIL;
-        }
-
-        ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(heldItem.getItem());
-
-        if (currentState == State.BOX_PLACED) {
-            // First item determines what goes in the box
-            packedItemId = itemId;
-            category = detectCategory(heldItem);
-            targetCount = getPackSize(heldItem);
-            packedCount = 0;
-        } else if (!itemId.equals(packedItemId)) {
-            sendActionBar(player, Component.translatable("servo_packaging.packing.wrong_type"));
-            return ItemInteractionResult.FAIL;
-        }
-
-        // Add items (shift-click = fill completely, normal = 1 at a time)
-        int toAdd = player.isShiftKeyDown()
-                ? Math.min(heldItem.getCount(), targetCount - packedCount)
-                : Math.min(1, targetCount - packedCount);
-
-        if (toAdd <= 0) {
-            return ItemInteractionResult.FAIL;
-        }
-
-        heldItem.shrink(toAdd);
-        packedCount += toAdd;
-        currentState = State.FILLING;
-        playSound(SoundEvents.BUNDLE_INSERT);
-        setChanged();
-
-        // Check if box is full
-        if (packedCount >= targetCount) {
-            sealBox();
-            sendActionBar(player, Component.translatable("servo_packaging.packing.sealed"));
-        } else {
-            sendActionBar(player, Component.translatable("servo_packaging.packing.progress",
-                    packedCount, targetCount));
-        }
-
-        return ItemInteractionResult.SUCCESS;
-    }
-
-    private void sealBox() {
-        outputBox = ShippingBoxItem.createBox(packedItemId, packedCount, category);
-        packedItemId = null;
-        packedCount = 0;
-        targetCount = 0;
-        category = "";
-        currentState = State.SEALED;
-        playSound(SoundEvents.BARREL_CLOSE);
-        setChanged();
-    }
-
-    private void returnOpenBox(Player player) {
-        ItemStack openBox = new ItemStack(PackagingRegistry.OPEN_BOX_ITEM.get());
-        if (!player.getInventory().add(openBox)) {
-            player.drop(openBox, false);
-        }
-        currentState = State.EMPTY;
-        setChanged();
-    }
-
-    private void cancelPacking(Player player) {
-        // Return packed items
-        if (packedItemId != null && packedCount > 0) {
-            var item = BuiltInRegistries.ITEM.get(packedItemId);
-            ItemStack returnStack = new ItemStack(item, packedCount);
-            if (!player.getInventory().add(returnStack)) {
-                player.drop(returnStack, false);
+        } else if (be.currentState == State.FOLDING) {
+            be.foldTicks++;
+            if (be.foldTicks >= FOLD_DURATION) {
+                // Consume 1 flat_cardboard, produce 1 open_box (stacks if already has some)
+                be.inputSlot.shrink(1);
+                if (be.outputSlot.isEmpty()) {
+                    be.outputSlot = new ItemStack(PackagingRegistry.OPEN_BOX_ITEM.get());
+                } else {
+                    be.outputSlot.grow(1);
+                }
+                be.foldTicks = 0;
+                level.playSound(null, pos, SoundEvents.BOOK_PAGE_TURN, SoundSource.BLOCKS, 0.8f, 1.2f);
+                // Continue folding if possible, otherwise go idle
+                if (canStartFolding(be)) {
+                    be.currentState = State.FOLDING;
+                } else {
+                    be.currentState = State.IDLE;
+                }
+                be.setChanged();
+                be.syncToClient();
+            } else if (be.foldTicks % 10 == 0) {
+                be.syncToClient();
             }
-        }
-        // Return open box
-        returnOpenBox(player);
-        packedItemId = null;
-        packedCount = 0;
-        targetCount = 0;
-        category = "";
-        sendActionBar(player, Component.translatable("servo_packaging.packing.cancelled"));
-    }
-
-    // === Helpers ===
-
-    private boolean isPackable(ItemStack stack) {
-        if (stack.isEmpty()) return false;
-        // Never pack our own items
-        if (stack.is(PackagingRegistry.OPEN_BOX_ITEM.get())) return false;
-        if (stack.is(PackagingRegistry.FLAT_CARDBOARD_ITEM.get())) return false;
-        if (stack.is(PackagingRegistry.SHIPPING_BOX_ITEM.get())) return false;
-        // Must be in the packable tag
-        return stack.is(PackagingRegistry.PACKABLE_TAG);
-    }
-
-    private int getPackSize(ItemStack stack) {
-        // Check tags for pack size, default to 4
-        if (stack.is(PackagingRegistry.PACK_SIZE_16_TAG)) return 16;
-        if (stack.is(PackagingRegistry.PACK_SIZE_8_TAG)) return 8;
-        if (stack.is(PackagingRegistry.PACK_SIZE_1_TAG)) return 1;
-        return 4; // default
-    }
-
-    private String detectCategory(ItemStack stack) {
-        if (stack.is(PackagingRegistry.CATEGORY_FOOD_TAG)) return "food";
-        if (stack.is(PackagingRegistry.CATEGORY_CROPS_TAG)) return "crops";
-        if (stack.is(PackagingRegistry.CATEGORY_PROCESSED_TAG)) return "processed";
-        if (stack.is(PackagingRegistry.CATEGORY_MAGIC_TAG)) return "magic";
-        if (stack.is(PackagingRegistry.CATEGORY_SPECIAL_TAG)) return "special";
-        return "general";
-    }
-
-    private void playSound(net.minecraft.sounds.SoundEvent sound) {
-        if (level != null && !level.isClientSide()) {
-            level.playSound(null, worldPosition, sound, SoundSource.BLOCKS, 0.8f, 1.0f);
+        } else if (be.currentState == State.DONE) {
+            // Legacy state — transition to IDLE
+            be.currentState = State.IDLE;
+            be.setChanged();
         }
     }
 
-    private void sendActionBar(Player player, Component message) {
-        player.displayClientMessage(message, true);
+    private static boolean canStartFolding(PackingStationBlockEntity be) {
+        boolean hasInput = !be.inputSlot.isEmpty()
+                && be.inputSlot.is(PackagingRegistry.FLAT_CARDBOARD_ITEM.get());
+        boolean canOutput = be.outputSlot.isEmpty()
+                || (be.outputSlot.is(PackagingRegistry.OPEN_BOX_ITEM.get())
+                    && be.outputSlot.getCount() < be.outputSlot.getMaxStackSize());
+        return hasInput && canOutput;
+    }
+
+    // === Getters for renderer ===
+
+    public State getCurrentState() {
+        return currentState;
+    }
+
+    public float getFoldProgress(float partialTick) {
+        if (currentState != State.FOLDING) return currentState == State.DONE ? 1.0f : 0.0f;
+        return Math.min(1.0f, (foldTicks + partialTick) / FOLD_DURATION);
+    }
+
+    public int getFoldTicks() {
+        return foldTicks;
     }
 
     /** Drop all contents when block is broken. */
-    public void dropAllContents(net.minecraft.world.level.Level level, BlockPos pos) {
-        if (!outputBox.isEmpty()) {
-            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), outputBox);
-            outputBox = ItemStack.EMPTY;
+    public void dropAllContents(Level level, BlockPos pos) {
+        if (!inputSlot.isEmpty()) {
+            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), inputSlot);
+            inputSlot = ItemStack.EMPTY;
         }
-        if (packedItemId != null && packedCount > 0) {
-            var item = BuiltInRegistries.ITEM.get(packedItemId);
-            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(),
-                    new ItemStack(item, packedCount));
+        if (!outputSlot.isEmpty()) {
+            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), outputSlot);
+            outputSlot = ItemStack.EMPTY;
         }
-        if (currentState == State.BOX_PLACED || currentState == State.FILLING) {
-            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(),
-                    new ItemStack(PackagingRegistry.OPEN_BOX_ITEM.get()));
+    }
+
+    private void syncToClient() {
+        if (level != null && !level.isClientSide()) {
+            level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
         }
     }
 
@@ -269,91 +178,90 @@ public class PackingStationBlockEntity extends BlockEntity implements WorldlyCon
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
         tag.putInt("State", currentState.ordinal());
-        tag.putInt("PackedCount", packedCount);
-        tag.putInt("TargetCount", targetCount);
-        tag.putString("Category", category);
-        if (packedItemId != null) {
-            tag.putString("PackedItemId", packedItemId.toString());
+        tag.putInt("FoldTicks", foldTicks);
+        if (!inputSlot.isEmpty()) {
+            tag.put("Input", inputSlot.save(registries));
         }
-        if (!outputBox.isEmpty()) {
-            tag.put("OutputBox", outputBox.save(registries));
+        if (!outputSlot.isEmpty()) {
+            tag.put("Output", outputSlot.save(registries));
         }
     }
 
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
-        currentState = State.values()[tag.getInt("State")];
-        packedCount = tag.getInt("PackedCount");
-        targetCount = tag.getInt("TargetCount");
-        category = tag.getString("Category");
-        if (tag.contains("PackedItemId")) {
-            packedItemId = ResourceLocation.parse(tag.getString("PackedItemId"));
-        }
-        if (tag.contains("OutputBox")) {
-            outputBox = ItemStack.parse(registries, tag.getCompound("OutputBox")).orElse(ItemStack.EMPTY);
-        }
+        currentState = State.values()[Math.min(tag.getInt("State"), State.values().length - 1)];
+        foldTicks = tag.getInt("FoldTicks");
+        inputSlot = tag.contains("Input")
+                ? ItemStack.parse(registries, tag.getCompound("Input")).orElse(ItemStack.EMPTY)
+                : ItemStack.EMPTY;
+        outputSlot = tag.contains("Output")
+                ? ItemStack.parse(registries, tag.getCompound("Output")).orElse(ItemStack.EMPTY)
+                : ItemStack.EMPTY;
     }
 
-    // === WorldlyContainer (hopper automation) ===
+    // === Client sync ===
 
-    public State getCurrentState() {
-        return currentState;
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        CompoundTag tag = new CompoundTag();
+        saveAdditional(tag, registries);
+        return tag;
     }
+
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    // === WorldlyContainer ===
 
     @Override
     public int[] getSlotsForFace(Direction side) {
-        return switch (side) {
-            case UP -> SLOTS_TOP;
-            case DOWN -> SLOTS_BOTTOM;
-            default -> SLOTS_SIDES;
-        };
+        return side == Direction.UP ? SLOTS_TOP : SLOTS_BOTTOM_SIDE;
     }
 
     @Override
     public boolean canPlaceItemThroughFace(int slot, ItemStack stack, @Nullable Direction direction) {
-        if (slot == SLOT_BOX_IN && direction == Direction.UP) {
-            return currentState == State.EMPTY && stack.is(PackagingRegistry.OPEN_BOX_ITEM.get());
-        }
-        if (slot == SLOT_ITEM_IN && direction != Direction.UP && direction != Direction.DOWN) {
-            return (currentState == State.BOX_PLACED || currentState == State.FILLING)
-                    && isPackable(stack)
-                    && (packedItemId == null || BuiltInRegistries.ITEM.getKey(stack.getItem()).equals(packedItemId));
-        }
-        return false;
+        return slot == SLOT_INPUT && direction == Direction.UP
+                && stack.is(PackagingRegistry.FLAT_CARDBOARD_ITEM.get());
     }
 
     @Override
     public boolean canTakeItemThroughFace(int slot, ItemStack stack, Direction direction) {
-        return slot == SLOT_OUTPUT && direction == Direction.DOWN && currentState == State.SEALED;
+        return slot == SLOT_OUTPUT && direction != Direction.UP && !outputSlot.isEmpty();
     }
 
     @Override
     public int getContainerSize() {
-        return 3;
+        return 2;
     }
 
     @Override
     public boolean isEmpty() {
-        return currentState == State.EMPTY;
+        return inputSlot.isEmpty() && outputSlot.isEmpty();
     }
 
     @Override
     public ItemStack getItem(int slot) {
-        if (slot == SLOT_OUTPUT && currentState == State.SEALED) {
-            return outputBox;
-        }
-        return ItemStack.EMPTY;
+        return switch (slot) {
+            case SLOT_INPUT -> inputSlot;
+            case SLOT_OUTPUT -> outputSlot;
+            default -> ItemStack.EMPTY;
+        };
     }
 
     @Override
     public ItemStack removeItem(int slot, int amount) {
-        if (slot == SLOT_OUTPUT && currentState == State.SEALED && !outputBox.isEmpty()) {
-            ItemStack result = outputBox.split(amount);
-            if (outputBox.isEmpty()) {
-                currentState = State.EMPTY;
-                setChanged();
-            }
+        if (slot == SLOT_OUTPUT && !outputSlot.isEmpty()) {
+            ItemStack result = outputSlot.split(amount);
+            setChanged();
+            return result;
+        }
+        if (slot == SLOT_INPUT && !inputSlot.isEmpty()) {
+            ItemStack result = inputSlot.split(amount);
+            setChanged();
             return result;
         }
         return ItemStack.EMPTY;
@@ -361,10 +269,14 @@ public class PackingStationBlockEntity extends BlockEntity implements WorldlyCon
 
     @Override
     public ItemStack removeItemNoUpdate(int slot) {
-        if (slot == SLOT_OUTPUT && currentState == State.SEALED) {
-            ItemStack result = outputBox;
-            outputBox = ItemStack.EMPTY;
-            currentState = State.EMPTY;
+        if (slot == SLOT_OUTPUT) {
+            ItemStack result = outputSlot;
+            outputSlot = ItemStack.EMPTY;
+            return result;
+        }
+        if (slot == SLOT_INPUT) {
+            ItemStack result = inputSlot;
+            inputSlot = ItemStack.EMPTY;
             return result;
         }
         return ItemStack.EMPTY;
@@ -372,48 +284,31 @@ public class PackingStationBlockEntity extends BlockEntity implements WorldlyCon
 
     @Override
     public void setItem(int slot, ItemStack stack) {
-        if (slot == SLOT_BOX_IN && stack.is(PackagingRegistry.OPEN_BOX_ITEM.get()) && currentState == State.EMPTY) {
-            stack.shrink(1);
-            currentState = State.BOX_PLACED;
-            playSound(SoundEvents.WOOL_PLACE);
+        if (slot == SLOT_INPUT) {
+            inputSlot = stack;
             setChanged();
-        } else if (slot == SLOT_ITEM_IN && (currentState == State.BOX_PLACED || currentState == State.FILLING)) {
-            // Hopper inserting items
-            if (isPackable(stack)) {
-                ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(stack.getItem());
-                if (currentState == State.BOX_PLACED) {
-                    packedItemId = itemId;
-                    category = detectCategory(stack);
-                    targetCount = getPackSize(stack);
-                    packedCount = 0;
-                    currentState = State.FILLING;
-                }
-                if (itemId.equals(packedItemId)) {
-                    int toAdd = Math.min(stack.getCount(), targetCount - packedCount);
-                    packedCount += toAdd;
-                    stack.shrink(toAdd);
-                    if (packedCount >= targetCount) {
-                        sealBox();
-                    }
-                    setChanged();
-                }
-            }
+        } else if (slot == SLOT_OUTPUT) {
+            outputSlot = stack;
+            setChanged();
         }
     }
 
     @Override
     public boolean stillValid(Player player) {
-        return true;
+        if (this.level != null && this.level.getBlockEntity(this.worldPosition) != this) {
+            return false;
+        }
+        return player.distanceToSqr(this.worldPosition.getX() + 0.5,
+                this.worldPosition.getY() + 0.5,
+                this.worldPosition.getZ() + 0.5) <= 64.0;
     }
 
     @Override
     public void clearContent() {
-        currentState = State.EMPTY;
-        packedItemId = null;
-        packedCount = 0;
-        targetCount = 0;
-        category = "";
-        outputBox = ItemStack.EMPTY;
+        inputSlot = ItemStack.EMPTY;
+        outputSlot = ItemStack.EMPTY;
+        currentState = State.IDLE;
+        foldTicks = 0;
         setChanged();
     }
 }

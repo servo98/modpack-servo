@@ -1,5 +1,4 @@
 plugins {
-    id 'java-library'
     id 'net.neoforged.moddev' version '2.0.140'
     id 'idea'
 }
@@ -9,6 +8,16 @@ tasks.named('wrapper', Wrapper).configure {
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
+}
 
 // Root project: no source code, only run configurations.
 // All mod code lives in subprojects (servo-packaging, servo-core, etc.)
@@ -39,23 +48,12 @@ neoForge {
             jvmArguments.addAll '-Xmx8G', '-Xms4G'
         }
     }
-
-    mods {
-        servo_packaging {
-            sourceSet project(':servo-packaging').sourceSets.main
-        }
-        servo_core {
-            sourceSet project(':servo-core').sourceSets.main
-        }
-        // Add more as subprojects are created:
-        // servo_delivery { sourceSet project(':servo-delivery').sourceSets.main }
-        // servo_cooking  { sourceSet project(':servo-cooking').sourceSets.main }
-    }
 }
 
 dependencies {
     implementation project(':servo-packaging')
     implementation project(':servo-core')
+    implementation project(':servo-delivery')
 }
 
 idea {

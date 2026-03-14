@@ -93,10 +93,9 @@ Con Staff T2 (6.0 SP) + Arcane Robe T2 (+100% arcane) = 12.0 effective SP.
 | Gelido | Slowness II al pegar | Escarcha visual |
 
 ## Spawn Rates (Champions Unofficial)
-- Overworld: 8% base, max 1 affix (Ch1-2), max 2 affix (Ch3+)
-- Nether: 15%, max 2 affix
-- Dungeon Basica: 15%, max 1 affix
-- Dungeon Avanzada: 25%, max 2 affix
-- Dungeon Maestra: 30%, max 3 affix
-- Dungeon Del Nucleo: 35%, max 3 affix + exclusivos (Teleporter/Invisible/Shield)
-- Ver detalle completo: docs/mechanics/champions.md
+Escalan por **stage del jugador mas cercano** (per-player via ProgressiveStages). servo_core post-procesa champions y hace downgrade si exceden el tier permitido. Ver detalle completo en docs/mechanics/champions.md.
+
+- Overworld/Nether: tier max basado en stage del player mas cercano
+- Dungeons: tier basado en llave usada para crear la instancia (independiente del player stage)
+- Del Nucleo: 35%, 3 affixes + exclusivos (Teleporter/Invisible/Shield)
+- Pool de affixes disponibles crece con cada capitulo completado (4→6→8→10→12→15)

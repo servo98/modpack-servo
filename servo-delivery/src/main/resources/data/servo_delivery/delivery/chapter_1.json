@@ -1,0 +1,28 @@
+{
+  "chapter": 1,
+  "name": "Primeras Raices",
+  "stage_granted": "servo_delivery_ch1",
+  "requirements": [
+    {
+      "id": "wheat_delivery",
+      "item": "minecraft:wheat",
+      "count": 3,
+      "direct": true,
+      "description": "Wheat"
+    },
+    {
+      "id": "iron_ingot_delivery",
+      "item": "minecraft:iron_ingot",
+      "count": 2,
+      "direct": true,
+      "description": "Iron Ingot"
+    },
+    {
+      "id": "bread_delivery",
+      "item": "minecraft:bread",
+      "count": 1,
+      "direct": true,
+      "description": "Bread"
+    }
+  ]
+}

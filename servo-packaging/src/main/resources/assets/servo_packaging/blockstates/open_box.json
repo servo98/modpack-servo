@@ -1,0 +1,154 @@
+{
+  "variants": {
+    "facing=north,items=0,sealed=false": {
+      "model": "servo_packaging:block/open_box"
+    },
+    "facing=south,items=0,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 180
+    },
+    "facing=west,items=0,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 270
+    },
+    "facing=east,items=0,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 90
+    },
+    "facing=north,items=0,sealed=true": {
+      "model": "servo_packaging:block/sealed_box"
+    },
+    "facing=south,items=0,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 180
+    },
+    "facing=west,items=0,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 270
+    },
+    "facing=east,items=0,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 90
+    },
+    "facing=north,items=1,sealed=false": {
+      "model": "servo_packaging:block/open_box"
+    },
+    "facing=south,items=1,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 180
+    },
+    "facing=west,items=1,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 270
+    },
+    "facing=east,items=1,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 90
+    },
+    "facing=north,items=1,sealed=true": {
+      "model": "servo_packaging:block/sealed_box"
+    },
+    "facing=south,items=1,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 180
+    },
+    "facing=west,items=1,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 270
+    },
+    "facing=east,items=1,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 90
+    },
+    "facing=north,items=2,sealed=false": {
+      "model": "servo_packaging:block/open_box"
+    },
+    "facing=south,items=2,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 180
+    },
+    "facing=west,items=2,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 270
+    },
+    "facing=east,items=2,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 90
+    },
+    "facing=north,items=2,sealed=true": {
+      "model": "servo_packaging:block/sealed_box"
+    },
+    "facing=south,items=2,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 180
+    },
+    "facing=west,items=2,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 270
+    },
+    "facing=east,items=2,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 90
+    },
+    "facing=north,items=3,sealed=false": {
+      "model": "servo_packaging:block/open_box"
+    },
+    "facing=south,items=3,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 180
+    },
+    "facing=west,items=3,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 270
+    },
+    "facing=east,items=3,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 90
+    },
+    "facing=north,items=3,sealed=true": {
+      "model": "servo_packaging:block/sealed_box"
+    },
+    "facing=south,items=3,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 180
+    },
+    "facing=west,items=3,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 270
+    },
+    "facing=east,items=3,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 90
+    },
+    "facing=north,items=4,sealed=false": {
+      "model": "servo_packaging:block/open_box"
+    },
+    "facing=south,items=4,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 180
+    },
+    "facing=west,items=4,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 270
+    },
+    "facing=east,items=4,sealed=false": {
+      "model": "servo_packaging:block/open_box",
+      "y": 90
+    },
+    "facing=north,items=4,sealed=true": {
+      "model": "servo_packaging:block/sealed_box"
+    },
+    "facing=south,items=4,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 180
+    },
+    "facing=west,items=4,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 270
+    },
+    "facing=east,items=4,sealed=true": {
+      "model": "servo_packaging:block/sealed_box",
+      "y": 90
+    }
+  }
+}
