@@ -53,9 +53,9 @@
 | 5.2 | End dimension (Nullscape + YUNG's Better End Island?) | needs-decision |
 | 5.3 | Runas: consumibles o infinitas en pouches? | needs-decision |
 | 5.4 | ServoMart: disenar tienda automatizada estilo IKEA | planned |
-| 5.5 | Slots custom Curios: definir nombres finales (`belt/back/feet` vs `belt/charm/head`) — 15+ docs afectados | needs-decision |
-| 5.6 | MrCrayfish Refurbished: desbloqueo en Ch3 o Ch4? (mod-decisions dice Ch4, resto dice Ch3) | needs-decision |
-| 5.7 | T2 RPG (Diamond/Gold): desbloqueo en Ch4 o Ch3-4? (rpg-weapon-stats dice Ch3-4, resto dice Ch4) | needs-decision |
+| 5.5 | Slots custom Curios: belt/back/feet/head (4 slots) — DECIDIDO, docs actualizados | done |
+| 5.6 | MrCrayfish Refurbished: Ch3 (basico), Ch5 (completo) — DECIDIDO, docs actualizados | done |
+| 5.7 | T2 RPG: gradual Ch3-4 (T2 melee Ch3, T2 magico Ch4) — DECIDIDO, docs actualizados | done |
 | 5.8 | Macaw's Bridges/Roofs/Trapdoors: confirmar remocion y limpiar de GDD/gacha/servomart/ch4 | done |
 | 5.9 | Create Dragons Plus: se queda o se quita? (solo en mod-decisions, sin contenido asignado) | needs-decision |
 | 5.10 | Spice of Life: quitar JAR fisico + crear capitulo "Recetario" en FTB Quests + verificar AttributeResetFix NeoForge | pending |
@@ -77,7 +77,7 @@
 | 6.3 | Sistema de dungeons (dimension void, generacion procedural, portales, llaves consumibles) | planned |
 | 6.4 | 8 bosses de capitulo (entities, AI, drops, scaling) | planned |
 | 6.5 | 4 workstations de cocina (Blender, Moldes, Drink Maker, Horno Avanzado) | planned |
-| 6.6 | Accesorios custom Curios (belt, charm, head) | planned |
+| 6.6 | Accesorios custom Curios (belt, back, feet, head) — 4 slots, ~65 items | planned |
 | 6.7 | Terminal de Entrega — multibloque 3x3, GUI, puertos automation, progresion por capitulo | in-progress — ver sección 8 |
 | 6.8 | Sistema de Cajas de Carton — Empacadora inmersiva, Carton Plano, Caja Abierta/Cerrada, Create compat | done (codigo) — assets pendientes para artista |
 

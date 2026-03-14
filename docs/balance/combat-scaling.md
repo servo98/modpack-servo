@@ -3,7 +3,7 @@
 ## Decision: RPG Series + custom systems
 - RPG Series (Daedelus): armas, armaduras y spells por clase
 - Champions con affixes tipo Diablo via **Champions Unofficial** (16 affixes, reemplaza custom servo_core)
-- Accesorios: Jewelry (rings/necklaces) + custom servo_core (belt, back, feet)
+- Accesorios: Jewelry (rings/necklaces) + custom servo_core (belt, back, feet, head)
 - Max 8 jugadores
 - Stats detallados en `rpg-weapon-stats.md`
 
@@ -81,19 +81,11 @@ Con Staff T2 (6.0 SP) + Arcane Robe T2 (+100% arcane) = 12.0 effective SP.
 | 8 | 70 | 175 | 263 | 394 |
 
 ## Champion Affixes
-| Affix | Efecto | Visual |
-|--------|--------|--------|
-| Veloz | Speed II, +30% dmg | Particulas azules |
-| Tanque | +150% HP, Resistance I | Tamano +20%, brillo |
-| Explosivo | Explota al morir (sin block damage) | Particulas fuego |
-| Invocador | Spawna 2 copias cada 15s | Particulas ender |
-| Vampiro | Se cura 20% del dmg dado | Particulas rojas |
-| Reflector | Devuelve 15% dmg recibido | Escudo visual |
-| Toxico | Nube de veneno al morir | Particulas verdes |
-| Gelido | Slowness II al pegar | Escarcha visual |
+
+Lista completa de affixes (4 categorias), spawn rates por stage, y mecanica de post-procesamiento: ver [mechanics/champions.md](../mechanics/champions.md).
 
 ## Spawn Rates (Champions Unofficial)
-Escalan por **stage del jugador mas cercano** (per-player via ProgressiveStages). servo_core post-procesa champions y hace downgrade si exceden el tier permitido. Ver detalle completo en docs/mechanics/champions.md.
+Escalan por **stage del jugador mas cercano** (per-player via ProgressiveStages). servo_core post-procesa champions y hace downgrade si exceden el tier permitido.
 
 - Overworld/Nether: tier max basado en stage del player mas cercano
 - Dungeons: tier basado en llave usada para crear la instancia (independiente del player stage)

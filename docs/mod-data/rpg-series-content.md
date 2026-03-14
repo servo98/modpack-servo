@@ -271,7 +271,7 @@ Nuestro plan original era 54 accesorios custom via Curios API.
 **Opciones:**
 - A) Usar Jewelry como base y agregar solo los accesorios que falten
 - B) Reemplazar Jewelry con nuestros custom completos
-- C) Combinar: Jewelry para rings/necklaces, custom para otros slots (belt, charm, head)
+- C) Combinar: Jewelry para rings/necklaces, custom para otros slots (belt, back, feet, head)
 **RECOMENDACIÓN**: Opción C. Jewelry ya tiene 85 items con sistema de tiers y ores. Nuestros custom se enfocan en otros slots.
 
 ### 2. Tier 4 Aeternium/Ruby no crafteable

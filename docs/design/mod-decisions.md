@@ -13,7 +13,7 @@
 | servo_create (custom) | Compat Create <-> packaging (funnels, deployers). Deps: packaging+Create. | pendiente |
 | servo_dungeons (custom) | Bosses (8), dungeons, llaves, Boss Altar, Boss Chamber, dimension void. Deps: GeckoLib. | pendiente |
 | servo_mart (custom) | Tienda catalogo dinamico. Deps: servo_packaging. | pendiente |
-| servo_core (custom, glue) | Tokens (Pepe Coin), accesorios custom (belt/back/feet), gacha pity, champions post-processing, progression manager. No standalone. | scaffold |
+| servo_core (custom, glue) | Tokens (Pepe Coin), accesorios custom (belt/back/feet/head), gacha pity, champions post-processing, progression manager. No standalone. | scaffold |
 
 ## Quests & Progression
 | Mod | Proposito | Notas |
@@ -50,7 +50,7 @@
 ## Accesorios
 | Mod | Proposito | Notas |
 |-----|-----------|-------|
-| Curios API | Framework de slots de accesorios | Jewelry maneja rings/necklaces, custom para belt/charm/head |
+| Curios API | Framework de slots de accesorios | Jewelry maneja rings/necklaces, custom para belt/back/feet/head |
 
 ## Automatizacion
 | Mod | Proposito | Notas |
@@ -71,7 +71,7 @@
 ## Combate
 | Mod | Proposito | Notas |
 |-----|-----------|-------|
-| Champions Unofficial | Mobs con 16 affixes en 4 categorias tipo Diablo | Configurable via JSON/KubeJS |
+| Champions Unofficial | Mobs con 16 affixes en 3 categorias tipo Diablo | Pool crece por capitulo (4→16). Ver [champions.md](../mechanics/champions.md) |
 
 ## Exploracion
 | Mod | Proposito | Notas |
@@ -109,7 +109,7 @@
 |-----|-----------|-------|
 | Macaw's Furniture | Muebles decorativos (~650 muebles) | Ch4+ |
 | Macaw's Windows | Ventanas decorativas (~310 variantes) | Ch4+ |
-| MrCrayfish Refurbished | Muebles funcionales (nevera, estufa, TV, fregadero) | Ch4+ |
+| MrCrayfish Refurbished | Muebles funcionales (nevera, estufa, TV, fregadero) | Ch3 (basico), Ch5 (completo) |
 
 ## Worldgen
 | Mod | Proposito | Notas |

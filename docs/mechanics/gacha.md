@@ -39,7 +39,7 @@
 |--------|---|---------------|
 | Comun (gris) | 55% | **Materiales**: 8-16 Iron, 4-8 Gold, 8-16 Copper, 16-32 Coal, 4-8 Lapis, 4-8 Redstone, 8-16 Leather, 4-8 String. **Comida**: 4-8 ingredientes FD (trigo, papa, zanahoria, tomate, cebolla, arroz). **Runas**: 2-4 Small Arcane/Frost Rune |
 | Poco Comun (verde) | 25% | **Gemas**: 1-2 Citrine o Jade. **Libros**: Enchanted Book I-II (Protection, Sharpness, Efficiency, etc). **Preview**: 2-4 ingredientes Croptopia Ch2 (Lettuce, Corn, Strawberry). **Runas**: 1 Small Rune Pouch |
-| Raro (azul) | 12% | **Accesorios**: 1 Accesorio custom T1 aleatorio (Belt/Back/Feet). **Moldes**: 1 Molde de postre 1-2★. **Jewelry**: Copper Ring o Iron Ring |
+| Raro (azul) | 12% | **Accesorios**: 1 Accesorio custom T1 aleatorio (Belt/Back/Feet/Head). **Moldes**: 1 Molde de postre 1-2★. **Jewelry**: Copper Ring o Iron Ring |
 | Epico (purpura) | 5% | **Accesorios**: 1 Accesorio custom T2 aleatorio. **Moldes**: 1 Molde de postre 3★. **Jewelry**: Gold Ring, Citrine Ring, o Jade Ring |
 | Legendario (dorado) | 3% | **Armas**: 1 arma RPG T1 (Iron Dagger, Iron Sickle, Wizard Staff, etc). **Accesorios**: 1 Accesorio T2 con SpecialEffect. **Llaves**: 1 Llave de Dungeon Basica |
 

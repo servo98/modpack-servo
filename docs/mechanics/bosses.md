@@ -289,7 +289,7 @@ public class BossPhaseManager {
 | 15-25 Pepe Coins | 100% |
 | Semilla del Bosque (trophy + quest proof) | 100% |
 | Drop de Boss Ch1 (para Llave Avanzada en Ch3) | 100% |
-| Accesorio custom T1 (belt/back/feet aleatorio) | 30% |
+| Accesorio custom T1 (belt/back/feet/head aleatorio) | 30% |
 | Molde de postre 2 estrellas | 20% |
 | Runa Arcane x4 | 40% |
 
@@ -367,7 +367,7 @@ La Bestia tiene un medidor de **Saciedad** (barra verde visible, 0%-100%, empiez
 | Mandibula de la Bestia (trophy) | 100% |
 | Drop de Boss Ch2 (para Llave Avanzada) | 100% |
 | Molde de postre 3 estrellas | 25% |
-| Accesorio T2 (belt/back/feet) | 20% |
+| Accesorio T2 (belt/back/feet/head) | 20% |
 | Receta: "Estofado de la Bestia" (unica, +4 corazones temp) | 15% |
 
 ### Animaciones GeckoLib
@@ -916,7 +916,7 @@ Reglas especificas para Boss Chamber (diferentes a dungeons — ver [Death Syste
 - Armor equipada (4 piezas)
 - Arma principal equipada
 - Rune Pouch equipada
-- Accesorios Curios (rings, necklaces, belt, back, feet)
+- Accesorios Curios (rings, necklaces, belt, back, feet, head)
 - Solo aplica a gear T2+
 
 **Se pierde al morir**:

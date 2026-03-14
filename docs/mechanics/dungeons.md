@@ -33,7 +33,7 @@ Cada tier necesita drop del tier anterior → **cadena de progresion natural**.
 | Basica | 5-7 | ~15-20 min | Max 1 affix, 15% spawn | No |
 | Avanzada | 10-14 | ~30-40 min | Max 2 affix, 25% spawn | No |
 | Maestra | 15-20 | ~45-60 min | Max 3 affix, 30% spawn | No |
-| Del Nucleo | 20-25 | ~60-75 min | Max 3 affix + exclusivos, 35% spawn | Si |
+| Del Nucleo | 20-25 | ~60-75 min | Max 3 affix (16 pool completo incl. Paralyzing, Wounding), 35% spawn | Si |
 
 ## Loot por tier
 

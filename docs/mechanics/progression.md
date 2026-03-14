@@ -15,8 +15,8 @@ Progresion gateada por **8 capitulos** usando ProgressiveStages. Cada capitulo s
 |-------|---------|---------------------|
 | servo_ch1 | Default (mundo nuevo) | Vanilla, FD basico, Supplementaries basico, Aquaculture, QoL, Spell Engine T0, Small Rune Pouch, Copper/Iron Ring |
 | servo_ch2 | Boss Ch1 + Delivery Ch1 | Croptopia 12, B&C, Blender, Moldes, Create basico, Drawers, Rogue/Warrior, T1 melee, Gold/Citrine/Jade jewelry |
-| servo_ch3 | Boss Ch2 + Delivery Ch2 | Frutas, Create andesite, Slice&Dice, Tom's, Drink Maker, Horno, Wizard/Paladin/Priest, T1 magico, Llave Avanzada |
-| servo_ch4 | Boss Ch3 + Delivery Ch3 | Especias, Create brass+steam, Feasts, Skill Tree, T2 armor+armas, Tanzanite/Topaz/Diamond/Emerald jewelry |
+| servo_ch3 | Boss Ch2 + Delivery Ch2 | Frutas, Create andesite, Slice&Dice, Tom's, Drink Maker, Horno, Wizard/Paladin/Priest, T1 magico, **T2 melee** (Diamond melee gear), Llave Avanzada |
+| servo_ch4 | Boss Ch3 + Delivery Ch3 | Especias, Create brass+steam, Feasts, Skill Tree, **T2 magico** (Diamond staves/robes), Tanzanite/Topaz/Diamond/Emerald jewelry |
 | servo_ch5 | Boss Ch4 + Delivery Ch4 | Exoticos, RS, Trains, Enchantment Industry, Enchants magicos, Pociones Spell Power, Llave Maestra, Netherite jewelry |
 | servo_ch6 | Boss Ch5 + Delivery Ch5 | Avanzados, enchant V, T3 Netherite upgrades, Tipped Arrows Spell Power |
 | servo_ch7 | Boss Ch6 + Delivery Ch6 | Raros, Llave del Nucleo, Unique jewelry loot en dungeons |
@@ -82,7 +82,7 @@ Cada capitulo desbloquea contenido de TODOS los pilares. No hay "capitulo de Cre
 | 2 | Blender, Moldes de Postres (custom) + B&C Keg | +30 |
 | 3 | Drink Maker, Horno Avanzado (custom) + Expanded Delight | +25 |
 | 4 | FD Feasts + recetas con especias | +20 |
-| 5 | Slice&Dice (auto-cocina) + recetas exoticas | +15 |
+| 5 | Recetas exoticas | +15 |
 | 6 | Recetas avanzadas con ingredientes raros | +10 |
 | 7 | Recetas con ingredientes exclusivos de dungeon | +10 |
 | 8 | Recetas legendarias que combinan todo | +10 |
@@ -93,7 +93,7 @@ Cada capitulo desbloquea contenido de TODOS los pilares. No hay "capitulo de Cre
 |-----|-------------------|
 | 1 | Nada |
 | 2 | Basico: Water Wheel, Shaft, Cogwheel, Belt, Depot, Andesite Funnel, Chute |
-| 3 | Andesite completo: Mechanical Press, Fan, Saw, Drill, Harvester, Millstone |
+| 3 | Andesite completo: Mechanical Press, Fan, Saw, Drill, Harvester, Millstone + Slice&Dice |
 | 4 | Brass tier: Mixer, Deployer, Crafter, Arm, Brass Funnel + Steam Engine + Trains basicos |
 | 5 | Trains avanzados + Create C&A (motor electrico, alternador) + Enchantment Industry |
 | 6+ | Todo disponible |
@@ -115,8 +115,8 @@ Cada capitulo desbloquea contenido de TODOS los pilares. No hay "capitulo de Cre
 |-----|--------------------|------|-------|
 | 1 | Ninguna (ataques genericos) | T0 | Spell Binding Table, Small Rune Pouch, Copper/Iron Ring |
 | 2 | Rogue, Warrior (melee) | T1 melee | Arms Station. Melee primero (materiales accesibles) |
-| 3 | + Wizard, Paladin, Priest | T1 magico | Monk Workbench, Rune Crafting Altar, Medium Rune Pouch, Ruby/Sapphire jewelry |
-| 4 | Todas + Skill Tree | T2 | Elegir especializacion. Tanzanite/Topaz/Diamond/Emerald jewelry |
+| 3 | + Wizard, Paladin, Priest | T1 magico + T2 melee | Diamond melee gear + Monk Workbench, Rune Crafting Altar, Medium Rune Pouch, Ruby/Sapphire jewelry |
+| 4 | Todas + Skill Tree | T2 magico | Diamond staves/robes + Elegir especializacion. Tanzanite/Topaz/Diamond/Emerald jewelry |
 | 5 | Todas | T2+ enchants | Enchants magicos, Pociones Spell Power, Soul/Lightning runes, Large Rune Pouch, Netherite jewelry |
 | 6 | Todas | T3 | Netherite upgrades para todo equipo RPG. Tipped Arrows Spell Power |
 | 7 | Todas | T3+ uniques | 24 unique jewelry farmeable en Dungeon del Nucleo |

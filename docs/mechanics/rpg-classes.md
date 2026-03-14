@@ -40,7 +40,7 @@ Tercer pilar del modpack. 7 clases, 8 especializaciones, 4 tiers de gear. 367 it
 |------|----------|---------|----------|
 | 0 | Flint, Stone, Wood | Shaped basico | Ch1 |
 | 1 | Iron, Gold, Leather, Wool | Shaped | Ch2 (melee), Ch3 (magico) |
-| 2 | Diamond, Ender Pearl, Blaze Powder, Prismarine | Shaped | Ch4 |
+| 2 | Diamond, Ender Pearl, Blaze Powder, Prismarine | Shaped | Ch3 (melee), Ch4 (magico) |
 | 3 | Netherite Ingot + Smithing Template | Smithing Transform | Ch6 |
 | 4 | Cristal del Nucleo / Rubi Infernal (boss drops) | KubeJS custom | Ch8 |
 
@@ -52,8 +52,8 @@ Tercer pilar del modpack. 7 clases, 8 especializaciones, 4 tiers de gear. 367 it
 |-----|--------|------|-------|
 | 1 | Ninguna (ataques genericos) | T0 | Spell Binding Table como quest |
 | 2 | Rogue, Warrior | T1 melee | Melee primero (materiales accesibles) |
-| 3 | + Wizard, Paladin, Priest | T1 magico | Todas las clases disponibles |
-| 4 | Todas + Skill Tree | T2 | Elegir especializacion |
+| 3 | + Wizard, Paladin, Priest | T1 magico + T2 melee | Clases magicas + Diamond melee gear |
+| 4 | Todas + Skill Tree | T2 magico | Elegir especializacion + Diamond staves/robes |
 | 5 | Todas | T2+ enchants | Enchants magicos, pociones Spell Power |
 | 6 | Todas | T3 | Netherite upgrades |
 | 7 | Todas | T3+ uniques | Unique jewelry coleccionables |
@@ -90,7 +90,7 @@ Tercer pilar del modpack. 7 clases, 8 especializaciones, 4 tiers de gear. 367 it
 ARMOR (RPG Series):  Helmet + Chest + Legs + Boots
 MANOS:               Arma + Offhand (shield/spell book)
 CURIOS (Jewelry):    Ring x2 + Necklace x1
-CURIOS (Custom):     Belt + Back + Feet
+CURIOS (Custom):     Belt + Back + Feet + Head
 RUNES:               Rune Pouch (en Curios slot)
-TOTAL:               ~13 piezas (build tipo MMO)
+TOTAL:               ~14 piezas (build tipo MMO)
 ```

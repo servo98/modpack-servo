@@ -126,7 +126,7 @@ Detalle: [mechanics/bosses.md](mechanics/bosses.md)
 
 ## 3.7 Champions
 
-Mobs con affixes tipo Diablo (16 affixes en 4 categorias: ofensivos, defensivos, control, dungeon-exclusivos). Spawn rate y max affixes escalan por stage del jugador mas cercano. servo_core post-procesa via API publica.
+Mobs con affixes tipo Diablo (16 affixes nativos del mod en 3 categorias: ofensivos, defensivos, control). Pool crece de 4 affixes en Ch1 a 16 en Ch5+. Spawn rate y max affixes escalan por stage del jugador mas cercano. servo_core post-procesa via API publica.
 
 Detalle: [mechanics/champions.md](mechanics/champions.md)
 
@@ -138,13 +138,13 @@ Detalle: [mechanics/rpg-classes.md](mechanics/rpg-classes.md) | Datos: [mod-data
 
 ## 3.9 Accesorios (Curios API)
 
-6 slots: Ring x2 + Necklace (Jewelry mod) + Belt + Back + Feet (servo_core custom). Accesorios custom en 5 tiers con boosts de 5% a 70%.
+7 slots: Ring x2 + Necklace (Jewelry mod) + Belt + Back + Feet + Head (servo_core custom). Accesorios custom en 5 tiers con boosts de 5% a 70%.
 
 Detalle: [mechanics/accessories.md](mechanics/accessories.md) | Jewelry: [mechanics/jewelry.md](mechanics/jewelry.md)
 
 ## 3.10 Gacha y Tokens
 
-Gacha Machine unica (quest reward Ch1). Usa Pepe Coins (150/capitulo). Pull principal = 10 tokens, pity a 50 pulls. Gacha de muebles separado (5 tokens). Tokens de: quests, champions, bosses, dungeons, primera cocina.
+4 Gacha Machines fisicas, cada una quest reward en su capitulo (Basica Ch1, Muebles Ch2, Avanzada Ch3, Superior Ch5). Usa Pepe Coins convertidos a monedas de color (10-15 tokens/pull). Pity a 50 pulls. Tokens de: quests, champions, bosses, dungeons, primera cocina.
 
 Detalle: [mechanics/gacha.md](mechanics/gacha.md) | Tokens: [mechanics/tokens.md](mechanics/tokens.md)
 

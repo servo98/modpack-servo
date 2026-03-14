@@ -14,7 +14,7 @@ Comportamiento diferente segun la zona. Simple y claro.
 |------|----------|----------|
 | Overworld | YIGD tumba normal | Nada se pierde (tumba con compas) |
 | Nether | YIGD tumba normal | Nada se pierde |
-| Dungeon | **Roguelike** | Soulbound se queda, loot de la run se pierde |
+| Dungeon | **Dark Souls** | Soulbound se queda, loot queda en tumba (re-entry gratis para recuperar) |
 | Boss Chamber | **Re-entry via portal** | Soulbound se queda, consumibles se pierden, portal reabre 15s |
 
 ## Soulbound (NUNCA se pierden)
@@ -23,7 +23,7 @@ Items con propiedad Soulbound (automatica en T2+):
 - Armor equipada (4 piezas)
 - Arma principal equipada
 - Rune Pouch equipada
-- Accesorios equipados (Curios: rings, necklaces, belt, back, feet)
+- Accesorios equipados (Curios: rings, necklaces, belt, back, feet, head)
 
 **Nota**: Items T0-T1 NO son soulbound.
 

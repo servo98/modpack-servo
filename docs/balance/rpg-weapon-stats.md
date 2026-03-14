@@ -216,7 +216,7 @@ damage = base_spell_power * coefficient * (1 + armor_bonus)
 |----------|-------------|-----------------|------|
 | T0       | Stone/Stick  | Ch1-2           | Starter weapons |
 | T1       | Iron         | Ch2             | First real RPG gear |
-| T2       | Diamond/Gold | Ch3-4           | Class specialization |
+| T2       | Diamond/Gold | Ch3 (melee), Ch4 (magico) | Melee primero, magia despues |
 | T3       | Netherite    | Ch5-6           | Nether progression |
 | T4       | Ruby/Aeternium| Ch7-8          | Custom recipes (no BetterEnd/BetterNether) |
 

@@ -89,7 +89,7 @@ Los mods standalone son configurables via JSON/datapacks y no dependen de servo_
 
 ### servo_core (glue)
 - **Items**: Pepe Coin
-- **Curios**: 3 slots (belt/back/feet), ~50 accesorios custom
+- **Curios**: 4 slots (belt/back/feet/head), ~65 accesorios custom
 - **Gacha**: Pity tracker (PlayerCapability)
 - **Progression**: Conecta Terminal + Boss kill -> grant stage
 - **Champion post-processing**: `EntityJoinLevelEvent` (LOWEST) → lee stage del player mas cercano via ProgressiveStages → downgrade champions que excedan tier permitido. Cache `Map<UUID, Integer>` actualizado via `StageChangeEvent`. En dungeons, tier basado en llave usada.
