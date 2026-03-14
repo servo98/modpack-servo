@@ -89,5 +89,5 @@ Escalan por **stage del jugador mas cercano** (per-player via ProgressiveStages)
 
 - Overworld/Nether: tier max basado en stage del player mas cercano
 - Dungeons: tier basado en llave usada para crear la instancia (independiente del player stage)
-- Del Nucleo: 35%, 3 affixes + exclusivos (Teleporter/Invisible/Shield)
+- Del Nucleo: 35%, 3 affixes, pool completo (16 incl. Paralyzing, Wounding)
 - Pool de affixes disponibles crece con cada capitulo completado (4→6→8→10→12→15)

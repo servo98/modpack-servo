@@ -17,7 +17,7 @@ Llave del Nucleo de dungeon
 |------|---------|
 | Crops | +6 raros (64 total): saguaro, kumquat, persimmon, nectarine, currant, tomatillo |
 | Recetas | +10 (con ingredientes de dungeon) |
-| Dungeon | **Llave del Nucleo**. 20-25 salas + boss dungeon. Champions exclusivos (Teleporter, Invisible, Shield) |
+| Dungeon | **Llave del Nucleo**. 20-25 salas + boss dungeon. Pool completo de 16 affixes (incl. Paralyzing, Wounding) |
 | Unique Jewelry | 24 items como coleccionables. Boss dungeon garantiza 1 |
 | RPG | T3+ uniques. Accesorios custom T4 |
 | Boss | Nucleo del Dungeon (12,800 HP). Dropea **Cristal del Nucleo** |
@@ -33,13 +33,13 @@ Resumen: Cajas de materiales de dungeon, unique jewelry, Esencia de Dungeon, Cri
 ### Historia/Tutorial (10)
 1. Tutorial: Llave del Nucleo
 2. Tutorial: Boss de dungeon
-3. Tutorial: Champions exclusivos (Teleporter, Invisible, Shield)
+3. Tutorial: Champions peligrosos del Nucleo (Paralyzing, Wounding, Molten)
 4. Explicar Fragmentos de Cristal del Nucleo
 5. Explicar T4 (proximo capitulo)
 6. Caza de unique jewelry
 7. Accesorios T4
 8. Recetas con ingredientes de dungeon
-9. Estrategia para champions exclusivos
+9. Estrategia para champions con Paralyzing/Wounding
 10. Preparacion para boss de dungeon
 
 ### Cocina (8)
@@ -71,7 +71,7 @@ Resumen: Cajas de materiales de dungeon, unique jewelry, Esencia de Dungeon, Cri
 1. Equipar unique jewelry
 2. Obtener accesorio custom T4
 3. Build optimizado para dungeon
-4. Derrotar champion Teleporter
+4. Derrotar champion con Paralyzing
 5. Derrotar al Nucleo del Dungeon
 
 ### Exploracion (5)
