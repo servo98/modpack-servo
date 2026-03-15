@@ -17,5 +17,5 @@ include ':servo-delivery'
 // Future:
 // include ':servo-cooking'
 // include ':servo-create'
-// include ':servo-dungeons'
+include ':servo-dungeons'
 // include ':servo-mart'
