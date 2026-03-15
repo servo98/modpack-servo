@@ -151,6 +151,18 @@ public class DeliveryTerminalBlockEntity extends net.minecraft.world.level.block
     // ==================== Delivery Logic ====================
 
     /**
+     * Checks if the terminal would accept this item (without consuming it).
+     * Used by IItemHandler for hopper/funnel simulation.
+     */
+    public boolean canAcceptItem(ItemStack stack) {
+        if (level == null || level.isClientSide() || !formed) return false;
+        DeliverySavedData data = DeliverySavedData.get(level.getServer());
+        ChapterDelivery chapter = DeliveryDataLoader.getChapter(data.getCurrentChapter());
+        if (chapter == null) return false;
+        return chapter.findMatchingRequirement(stack, data.getDeliveredItems()) != null;
+    }
+
+    /**
      * Attempts to insert an item into the terminal.
      * Called from right-click or from DeliveryPort automation.
      * Does NOT auto-complete the chapter — only the LAUNCH button does that.
