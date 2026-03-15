@@ -269,11 +269,11 @@ label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; le
       </div>
       <div class="prop-row">
         <label>Width</label>
-        <input id="prop-imgW" type="number" value="176" min="30" max="256" oninput="updateGlobal('imageWidth',+this.value)">
+        <input id="prop-imgW" type="number" value="176" min="30" max="512" oninput="updateGlobal('imageWidth',+this.value)">
       </div>
       <div class="prop-row">
         <label>Height</label>
-        <input id="prop-imgH" type="number" value="166" min="30" max="256" oninput="updateGlobal('imageHeight',+this.value)">
+        <input id="prop-imgH" type="number" value="166" min="30" max="512" oninput="updateGlobal('imageHeight',+this.value)">
       </div>
       <div class="prop-row">
         <label>Inv X</label>
@@ -746,13 +746,13 @@ canvas.addEventListener('mousemove', (e) => {
       let rawW = resizeInfo.startW + dx / SCALE;
       let newW = snap > 1 ? Math.round(rawW / snap) * snap : Math.round(rawW);
       // Ensure minimum viable width (at least 2 grid cells)
-      state.imageWidth = Math.max(36, Math.min(256, newW));
+      state.imageWidth = Math.max(36, Math.min(512, newW));
       document.getElementById('prop-imgW').value = state.imageWidth;
     }
     if (resizeInfo.edge === 'bottom' || resizeInfo.edge === 'corner') {
       let rawH = resizeInfo.startH + dy / SCALE;
       let newH = snap > 1 ? Math.round(rawH / snap) * snap : Math.round(rawH);
-      state.imageHeight = Math.max(36, Math.min(256, newH));
+      state.imageHeight = Math.max(36, Math.min(512, newH));
       document.getElementById('prop-imgH').value = state.imageHeight;
     }
     document.getElementById('sizePreset').value = '';
@@ -913,7 +913,8 @@ canvas.addEventListener('mousedown', (e) => {
   updateUI();
 });
 
-canvas.addEventListener('mouseup', () => {
+// Use document-level mouseup so drag doesn't get stuck when releasing outside canvas
+document.addEventListener('mouseup', () => {
   if (resizeInfo) {
     resizeInfo = null;
     generateCode();

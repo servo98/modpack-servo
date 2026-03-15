@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MC Texture Toolkit</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+</style>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #1a1a2e; --surface: #16213e; --panel: #0f3460;
+  --text: #e0e0e0; --text-muted: #8899aa; --accent: #e94560;
+  --accent2: #0f9b8e; --border: #1a3a5c; --input-bg: #0a1628;
+}
+html, body { height: 100%; overflow: hidden; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px;
+  background: var(--bg); color: var(--text);
+  display: flex; flex-direction: column;
+}
+button { cursor: pointer; font-family: inherit; font-size: 12px; }
+input, select { font-family: inherit; font-size: 12px; background: var(--input-bg);
+  color: var(--text); border: 1px solid var(--border); padding: 4px 6px; border-radius: 3px; }
+input:focus, select:focus { outline: none; border-color: var(--accent2); }
+label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* === TOOLBAR === */
+#toolbar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 12px; background: var(--surface); border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+#toolbar h1 { font-size: 14px; font-weight: 600; color: var(--accent); margin-right: 12px; white-space: nowrap; }
+.tb-btn {
+  background: var(--panel); color: var(--text); border: 1px solid var(--border);
+  padding: 4px 12px; border-radius: 4px; font-size: 12px; white-space: nowrap;
+}
+.tb-btn:hover { background: var(--accent2); border-color: var(--accent2); color: #fff; }
+.tb-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.tb-sep { width: 1px; height: 20px; background: var(--border); }
+.tb-spacer { flex: 1; }
+#status { font-size: 11px; color: var(--text-muted); }
+
+/* === MAIN LAYOUT === */
+#main { display: flex; flex: 1; overflow: hidden; }
+
+/* === LEFT PANEL (controls) === */
+#controls {
+  width: 260px; min-width: 260px; background: var(--surface);
+  border-right: 1px solid var(--border); overflow-y: auto; padding: 0;
+  display: flex; flex-direction: column;
+}
+.ctrl-section {
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+}
+.ctrl-section h3 {
+  font-size: 11px; color: var(--accent2); text-transform: uppercase;
+  letter-spacing: 0.8px; margin-bottom: 8px;
+}
+.ctrl-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+.ctrl-row label { width: 80px; flex-shrink: 0; text-align: right; }
+.ctrl-row input, .ctrl-row select { flex: 1; min-width: 0; }
+.ctrl-row input[type="range"] { flex: 1; }
+.ctrl-row input[type="checkbox"] { flex: 0; width: 16px; height: 16px; }
+
+/* Upload zone */
+#drop-zone {
+  border: 2px dashed var(--border); border-radius: 8px;
+  padding: 24px 16px; text-align: center; cursor: pointer;
+  transition: all 0.2s; margin-bottom: 8px;
+}
+#drop-zone:hover, #drop-zone.drag-over {
+  border-color: var(--accent2); background: rgba(15,155,142,0.1);
+}
+#drop-zone .icon { font-size: 28px; margin-bottom: 6px; }
+#drop-zone .label { font-size: 12px; color: var(--text-muted); }
+#drop-zone .sublabel { font-size: 10px; color: var(--text-muted); margin-top: 4px; }
+#file-input { display: none; }
+
+/* Source info */
+#source-info {
+  font-size: 11px; color: var(--text-muted); padding: 4px 0;
+  display: none;
+}
+#source-info span { color: var(--accent2); font-weight: 600; }
+
+/* Size presets as grid */
+.size-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: 6px;
+}
+.size-btn {
+  background: var(--panel); color: var(--text); border: 1px solid var(--border);
+  padding: 6px 4px; border-radius: 4px; font-size: 11px; text-align: center;
+  cursor: pointer; transition: all 0.15s;
+}
+.size-btn:hover { border-color: var(--accent2); background: rgba(15,155,142,0.15); }
+.size-btn.active { background: var(--accent2); border-color: var(--accent2); color: #fff; }
+.size-btn .sz-label { font-size: 10px; color: var(--text-muted); display: block; margin-top: 2px; }
+.size-btn.active .sz-label { color: rgba(255,255,255,0.7); }
+
+/* === CANVAS AREA === */
+#canvas-area {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  background: #0d1117; overflow: auto; position: relative;
+  flex-direction: column; gap: 12px;
+}
+#canvas-area.empty-state {
+  color: var(--text-muted); font-size: 14px;
+}
+.canvas-label {
+  font-size: 11px; color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 1px; margin-bottom: 4px;
+}
+
+/* Preview containers */
+#preview-container {
+  display: none; flex-direction: column; align-items: center; gap: 16px;
+}
+.preview-row {
+  display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;
+  justify-content: center;
+}
+.preview-box {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.preview-box canvas {
+  image-rendering: pixelated; border: 1px solid var(--border);
+  background: repeating-conic-gradient(#2a2a3e 0% 25%, #1e1e32 0% 50%) 0 0 / 16px 16px;
+}
+
+/* Tiling preview */
+#tiling-canvas {
+  image-rendering: pixelated;
+  border: 1px solid var(--border);
+  background: repeating-conic-gradient(#2a2a3e 0% 25%, #1e1e32 0% 50%) 0 0 / 16px 16px;
+}
+
+/* Color info */
+#color-info {
+  font-size: 11px; line-height: 1.6;
+}
+#color-info .ci-row { display: flex; justify-content: space-between; padding: 2px 0; }
+#color-info .ci-label { color: var(--text-muted); }
+
+/* Palette display */
+#palette-display {
+  display: flex; flex-wrap: wrap; gap: 2px; margin-top: 6px;
+}
+.pal-swatch {
+  width: 16px; height: 16px; border: 1px solid var(--border); border-radius: 2px;
+  cursor: pointer; position: relative;
+}
+.pal-swatch:hover { border-color: var(--accent); transform: scale(1.3); z-index: 1; }
+.pal-swatch .tooltip {
+  display: none; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+  background: var(--panel); color: var(--text); font-size: 10px; padding: 2px 6px;
+  border-radius: 3px; white-space: nowrap; border: 1px solid var(--border); z-index: 10;
+}
+.pal-swatch:hover .tooltip { display: block; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent2); }
+</style>
+</head>
+<body>
+
+<!-- TOOLBAR -->
+<div id="toolbar">
+  <h1>MC Texture Toolkit</h1>
+  <button class="tb-btn" onclick="document.getElementById('file-input').click()">Upload Image</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" onclick="downloadTexture()" id="btn-download" disabled>Download PNG</button>
+  <button class="tb-btn" onclick="downloadAll()" id="btn-download-all" style="display:none">Download All Sizes</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btn-tiling" onclick="toggleTiling()" style="display:none">Tiling 3x3</button>
+  <button class="tb-btn" id="btn-outline" onclick="toggleOutline()" style="display:none">Auto Outline</button>
+  <div class="tb-spacer"></div>
+  <span id="status">Upload an image to start</span>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+  <!-- LEFT: Controls -->
+  <div id="controls">
+    <!-- Upload -->
+    <div class="ctrl-section">
+      <h3>Source Image</h3>
+      <div id="drop-zone" onclick="document.getElementById('file-input').click()">
+        <div class="icon">+</div>
+        <div class="label">Drop image here or click to upload</div>
+        <div class="sublabel">PNG, JPG, BMP, WebP</div>
+      </div>
+      <input type="file" id="file-input" accept="image/*" onchange="handleFileSelect(event)">
+      <div id="source-info">
+        Source: <span id="source-name">-</span><br>
+        Original: <span id="source-size">-</span>
+      </div>
+    </div>
+
+    <!-- Target Size -->
+    <div class="ctrl-section">
+      <h3>Target Size</h3>
+      <div class="size-grid">
+        <button class="size-btn active" data-size="16x16" onclick="setSize(16,16,this)">
+          16x16 <span class="sz-label">Items / Blocks</span>
+        </button>
+        <button class="size-btn" data-size="32x32" onclick="setSize(32,32,this)">
+          32x32 <span class="sz-label">RPG Weapons</span>
+        </button>
+        <button class="size-btn" data-size="64x64" onclick="setSize(64,64,this)">
+          64x64 <span class="sz-label">Detailed / Entity</span>
+        </button>
+        <button class="size-btn" data-size="64x32" onclick="setSize(64,32,this)">
+          64x32 <span class="sz-label">Armor Layer</span>
+        </button>
+        <button class="size-btn" data-size="128x128" onclick="setSize(128,128,this)">
+          128x128 <span class="sz-label">HD Texture</span>
+        </button>
+        <button class="size-btn" data-size="256x256" onclick="setSize(256,256,this)">
+          256x256 <span class="sz-label">GUI Atlas</span>
+        </button>
+      </div>
+      <div class="ctrl-row">
+        <label>Custom</label>
+        <input id="custom-w" type="number" value="16" min="1" max="512" style="width:60px"
+               oninput="setCustomSize()">
+        <span style="color:var(--text-muted)">x</span>
+        <input id="custom-h" type="number" value="16" min="1" max="512" style="width:60px"
+               oninput="setCustomSize()">
+      </div>
+    </div>
+
+    <!-- Algorithm -->
+    <div class="ctrl-section">
+      <h3>Downscale Method</h3>
+      <div class="ctrl-row">
+        <label>Algorithm</label>
+        <select id="algo" onchange="processImage()">
+          <option value="nearest" selected>Nearest Neighbor</option>
+          <option value="average">Area Average</option>
+        </select>
+      </div>
+      <div style="font-size:10px;color:var(--text-muted);margin-top:2px;line-height:1.4">
+        Nearest = sharp pixels (default MC).<br>
+        Area Average = smoother, better for photos.
+      </div>
+    </div>
+
+    <!-- Color Quantization -->
+    <div class="ctrl-section">
+      <h3>Color Reduction</h3>
+      <div class="ctrl-row">
+        <label>Enable</label>
+        <input type="checkbox" id="quant-enable" onchange="processImage()">
+      </div>
+      <div class="ctrl-row">
+        <label>Max Colors</label>
+        <input type="range" id="quant-colors" min="2" max="64" value="16" oninput="quantColorsLabel.textContent=this.value;processImage()">
+        <span id="quantColorsLabel" style="font-size:11px;width:24px;text-align:right">16</span>
+      </div>
+      <div class="ctrl-row">
+        <label>Dithering</label>
+        <select id="dither" onchange="processImage()">
+          <option value="none" selected>None (MC default)</option>
+          <option value="floyd">Floyd-Steinberg</option>
+          <option value="ordered">Ordered (Bayer 4x4)</option>
+          <option value="atkinson">Atkinson</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Effects -->
+    <div class="ctrl-section">
+      <h3>Post Effects</h3>
+      <div class="ctrl-row">
+        <label>Outline</label>
+        <input type="checkbox" id="fx-outline" onchange="processImage()">
+        <span style="font-size:10px;color:var(--text-muted)">Dark edge (item style)</span>
+      </div>
+      <div class="ctrl-row" id="outline-color-row" style="display:none">
+        <label>Color</label>
+        <input type="color" id="outline-color" value="#2d2d2d" onchange="processImage()" style="width:40px;height:24px;padding:0;border:none">
+        <label style="width:auto">Strength</label>
+        <input type="range" id="outline-strength" min="1" max="3" value="1" onchange="processImage()" style="width:60px">
+      </div>
+      <div class="ctrl-row">
+        <label>Inner Light</label>
+        <input type="checkbox" id="fx-highlight" onchange="processImage()">
+        <span style="font-size:10px;color:var(--text-muted)">MC pillow shading</span>
+      </div>
+      <div class="ctrl-row">
+        <label>Brightness</label>
+        <input type="range" id="fx-brightness" min="-50" max="50" value="0" oninput="processImage()">
+      </div>
+      <div class="ctrl-row">
+        <label>Contrast</label>
+        <input type="range" id="fx-contrast" min="-50" max="50" value="0" oninput="processImage()">
+      </div>
+      <div class="ctrl-row">
+        <label>Saturation</label>
+        <input type="range" id="fx-saturation" min="-100" max="100" value="0" oninput="processImage()">
+      </div>
+    </div>
+
+    <!-- Texture Info -->
+    <div class="ctrl-section" id="info-section" style="display:none">
+      <h3>Texture Info</h3>
+      <div id="color-info">
+        <div class="ci-row"><span class="ci-label">Unique colors:</span><span id="ci-colors">-</span></div>
+        <div class="ci-row"><span class="ci-label">Has transparency:</span><span id="ci-alpha">-</span></div>
+        <div class="ci-row"><span class="ci-label">Output size:</span><span id="ci-outsize">-</span></div>
+        <div class="ci-row"><span class="ci-label">File size (est):</span><span id="ci-filesize">-</span></div>
+      </div>
+    </div>
+
+    <!-- Extracted palette -->
+    <div class="ctrl-section" id="palette-section" style="display:none">
+      <h3>Extracted Palette</h3>
+      <div id="palette-display"></div>
+    </div>
+
+    <!-- Export -->
+    <div class="ctrl-section">
+      <h3>Export</h3>
+      <div class="ctrl-row">
+        <label>Filename</label>
+        <input id="export-name" value="texture" oninput="">
+      </div>
+      <div class="ctrl-row">
+        <label>Type</label>
+        <select id="export-type">
+          <option value="item">textures/item/</option>
+          <option value="block">textures/block/</option>
+          <option value="entity">textures/entity/</option>
+          <option value="gui">textures/gui/</option>
+          <option value="particle">textures/particle/</option>
+          <option value="root">(root)</option>
+        </select>
+      </div>
+      <div style="font-size:10px;color:var(--text-muted);margin-top:4px">
+        Path prefix for MC resource pack structure
+      </div>
+    </div>
+  </div>
+
+  <!-- CENTER: Preview -->
+  <div id="canvas-area" class="empty-state">
+    <div id="empty-msg">Upload an image to convert it to MC pixel art</div>
+    <div id="preview-container">
+      <div class="preview-row">
+        <div class="preview-box">
+          <div class="canvas-label">Result (zoomed)</div>
+          <canvas id="result-zoomed" width="512" height="512"></canvas>
+          <div id="result-info" style="font-size:10px;color:var(--text-muted)"></div>
+        </div>
+        <div class="preview-box">
+          <div class="canvas-label">Actual size</div>
+          <canvas id="result-actual" width="64" height="64"></canvas>
+        </div>
+        <div class="preview-box">
+          <div class="canvas-label">Original (scaled)</div>
+          <canvas id="source-preview" width="128" height="128"></canvas>
+        </div>
+      </div>
+      <!-- Tiling preview (inside center area) -->
+      <div class="preview-row" id="tiling-section" style="display:none">
+        <div class="preview-box">
+          <div class="canvas-label">Tiling Preview (3x3)</div>
+          <canvas id="tiling-canvas" width="288" height="288"></canvas>
+          <div style="font-size:10px;color:var(--text-muted)">How this texture tiles as a block face</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// STATE
+// ============================================================
+let sourceImg = null;        // Original uploaded Image object
+let targetW = 16, targetH = 16;
+let resultCanvas = null;     // OffscreenCanvas with the processed result
+let showTiling = false;
+const ZOOM = 16;             // Zoom factor for preview (will adapt)
+
+// ============================================================
+// FILE HANDLING
+// ============================================================
+const dropZone = document.getElementById('drop-zone');
+const fileInput = document.getElementById('file-input');
+
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropZone.classList.add('drag-over');
+});
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropZone.classList.remove('drag-over');
+  if (e.dataTransfer.files.length > 0) loadFile(e.dataTransfer.files[0]);
+});
+
+function handleFileSelect(e) {
+  if (e.target.files.length > 0) loadFile(e.target.files[0]);
+}
+
+function loadFile(file) {
+  if (!file.type.startsWith('image/')) {
+    setStatus('Not an image file');
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const img = new Image();
+    img.onload = () => {
+      sourceImg = img;
+      // Set export name from filename
+      const name = file.name.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9_]/g, '_');
+      document.getElementById('export-name').value = name;
+      // Show source info
+      document.getElementById('source-name').textContent = file.name;
+      document.getElementById('source-size').textContent = `${img.width}x${img.height}`;
+      document.getElementById('source-info').style.display = 'block';
+      // Show UI
+      document.getElementById('empty-msg').style.display = 'none';
+      document.getElementById('preview-container').style.display = 'flex';
+      document.getElementById('canvas-area').classList.remove('empty-state');
+      document.getElementById('btn-download').disabled = false;
+      document.getElementById('btn-download-all').style.display = '';
+      document.getElementById('btn-tiling').style.display = '';
+      document.getElementById('btn-outline').style.display = '';
+      document.getElementById('info-section').style.display = '';
+      document.getElementById('palette-section').style.display = '';
+      // Draw source preview
+      drawSourcePreview();
+      processImage();
+      setStatus(`Loaded ${img.width}x${img.height} -> ${targetW}x${targetH}`);
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function drawSourcePreview() {
+  const c = document.getElementById('source-preview');
+  const ctx = c.getContext('2d');
+  const maxDim = 128;
+  const scale = Math.min(maxDim / sourceImg.width, maxDim / sourceImg.height, 1);
+  const dw = Math.round(sourceImg.width * scale);
+  const dh = Math.round(sourceImg.height * scale);
+  c.width = Math.max(dw, 1);
+  c.height = Math.max(dh, 1);
+  ctx.imageSmoothingEnabled = true;
+  ctx.drawImage(sourceImg, 0, 0, dw, dh);
+}
+
+// ============================================================
+// IMAGE PROCESSING
+// ============================================================
+function processImage() {
+  if (!sourceImg) return;
+
+  const algo = document.getElementById('algo').value;
+  const quantEnabled = document.getElementById('quant-enable').checked;
+  const maxColors = parseInt(document.getElementById('quant-colors').value);
+  const ditherMode = document.getElementById('dither').value;
+  const doOutline = document.getElementById('fx-outline').checked;
+  const doHighlight = document.getElementById('fx-highlight').checked;
+  const brightness = parseInt(document.getElementById('fx-brightness').value);
+  const contrast = parseInt(document.getElementById('fx-contrast').value);
+  const saturation = parseInt(document.getElementById('fx-saturation').value);
+
+  // Show/hide outline color row
+  document.getElementById('outline-color-row').style.display = doOutline ? 'flex' : 'none';
+
+  // Step 1: Downscale (use a regular canvas for drawImage compat)
+  const work = document.createElement('canvas');
+  work.width = targetW; work.height = targetH;
+  const wctx = work.getContext('2d');
+
+  if (algo === 'nearest') {
+    wctx.imageSmoothingEnabled = false;
+    wctx.drawImage(sourceImg, 0, 0, targetW, targetH);
+  } else {
+    // Area average: manual implementation
+    areaAverage(sourceImg, work);
+  }
+
+  let imgData = wctx.getImageData(0, 0, targetW, targetH);
+
+  // Step 2: Brightness / Contrast / Saturation
+  if (brightness !== 0 || contrast !== 0 || saturation !== 0) {
+    imgData = applyAdjustments(imgData, brightness, contrast, saturation);
+  }
+
+  // Step 3: Color quantization + dithering
+  if (quantEnabled) {
+    imgData = quantize(imgData, maxColors, ditherMode);
+  }
+
+  // Step 4: Post effects
+  if (doOutline) {
+    const outlineColor = hexToRgb(document.getElementById('outline-color').value);
+    const strength = parseInt(document.getElementById('outline-strength').value);
+    imgData = applyOutline(imgData, targetW, targetH, outlineColor, strength);
+  }
+  if (doHighlight) {
+    imgData = applyInnerHighlight(imgData, targetW, targetH);
+  }
+
+  wctx.putImageData(imgData, 0, 0);
+  resultCanvas = work;
+
+  // Render previews
+  renderResult();
+  updateInfo(imgData);
+  if (showTiling) renderTiling();
+}
+
+// --- Area Average Downscale ---
+function areaAverage(src, dst) {
+  // Draw source to a temp canvas to get pixel data
+  const tmpC = document.createElement('canvas');
+  tmpC.width = src.width; tmpC.height = src.height;
+  const tmpCtx = tmpC.getContext('2d');
+  tmpCtx.drawImage(src, 0, 0);
+  const srcData = tmpCtx.getImageData(0, 0, src.width, src.height).data;
+
+  const dw = dst.width, dh = dst.height;
+  const sw = src.width, sh = src.height;
+  const dstCtx = dst.getContext('2d');
+  const outData = dstCtx.createImageData(dw, dh);
+  const out = outData.data;
+
+  const scaleX = sw / dw, scaleY = sh / dh;
+
+  for (let dy = 0; dy < dh; dy++) {
+    for (let dx = 0; dx < dw; dx++) {
+      const sx0 = Math.floor(dx * scaleX);
+      const sy0 = Math.floor(dy * scaleY);
+      const sx1 = Math.min(Math.floor((dx + 1) * scaleX), sw);
+      const sy1 = Math.min(Math.floor((dy + 1) * scaleY), sh);
+
+      let r = 0, g = 0, b = 0, a = 0, count = 0;
+      for (let sy = sy0; sy < sy1; sy++) {
+        for (let sx = sx0; sx < sx1; sx++) {
+          const i = (sy * sw + sx) * 4;
+          r += srcData[i]; g += srcData[i + 1]; b += srcData[i + 2]; a += srcData[i + 3];
+          count++;
+        }
+      }
+      if (count === 0) count = 1;
+      const oi = (dy * dw + dx) * 4;
+      out[oi] = Math.round(r / count);
+      out[oi + 1] = Math.round(g / count);
+      out[oi + 2] = Math.round(b / count);
+      out[oi + 3] = Math.round(a / count);
+    }
+  }
+  dstCtx.putImageData(outData, 0, 0);
+}
+
+// --- Brightness / Contrast / Saturation ---
+function applyAdjustments(imgData, brightness, contrast, saturation) {
+  const d = imgData.data;
+  const bFactor = brightness * 2.55;
+  const cFactor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+  const sFactor = 1 + saturation / 100;
+
+  for (let i = 0; i < d.length; i += 4) {
+    if (d[i + 3] === 0) continue;
+    let r = d[i], g = d[i + 1], b = d[i + 2];
+
+    // Brightness
+    r += bFactor; g += bFactor; b += bFactor;
+
+    // Contrast
+    r = cFactor * (r - 128) + 128;
+    g = cFactor * (g - 128) + 128;
+    b = cFactor * (b - 128) + 128;
+
+    // Saturation
+    const gray = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    r = gray + sFactor * (r - gray);
+    g = gray + sFactor * (g - gray);
+    b = gray + sFactor * (b - gray);
+
+    d[i] = clamp(r); d[i + 1] = clamp(g); d[i + 2] = clamp(b);
+  }
+  return imgData;
+}
+
+// ============================================================
+// COLOR QUANTIZATION (Median Cut)
+// ============================================================
+function quantize(imgData, maxColors, ditherMode) {
+  const d = imgData.data;
+  const w = imgData.width, h = imgData.height;
+
+  // Collect non-transparent pixels
+  const pixels = [];
+  for (let i = 0; i < d.length; i += 4) {
+    if (d[i + 3] > 10) pixels.push([d[i], d[i + 1], d[i + 2]]);
+  }
+  if (pixels.length === 0) return imgData;
+
+  // Median cut
+  const palette = medianCut(pixels, maxColors);
+
+  // Apply palette with optional dithering
+  if (ditherMode === 'none') {
+    for (let i = 0; i < d.length; i += 4) {
+      if (d[i + 3] <= 10) continue;
+      const closest = findClosest([d[i], d[i + 1], d[i + 2]], palette);
+      d[i] = closest[0]; d[i + 1] = closest[1]; d[i + 2] = closest[2];
+    }
+  } else if (ditherMode === 'floyd') {
+    floydSteinberg(d, w, h, palette);
+  } else if (ditherMode === 'ordered') {
+    orderedDither(d, w, h, palette);
+  } else if (ditherMode === 'atkinson') {
+    atkinsonDither(d, w, h, palette);
+  }
+
+  return imgData;
+}
+
+function medianCut(pixels, maxColors) {
+  if (pixels.length === 0) return [[0, 0, 0]];
+
+  let buckets = [pixels];
+
+  while (buckets.length < maxColors) {
+    // Find bucket with largest range
+    let maxRange = -1, maxIdx = 0, maxChannel = 0;
+    for (let bi = 0; bi < buckets.length; bi++) {
+      const b = buckets[bi];
+      if (b.length < 2) continue;
+      for (let ch = 0; ch < 3; ch++) {
+        let mn = 255, mx = 0;
+        for (const p of b) { mn = Math.min(mn, p[ch]); mx = Math.max(mx, p[ch]); }
+        const range = mx - mn;
+        if (range > maxRange) { maxRange = range; maxIdx = bi; maxChannel = ch; }
+      }
+    }
+    if (maxRange <= 0) break;
+
+    // Split
+    const bucket = buckets[maxIdx];
+    bucket.sort((a, b) => a[maxChannel] - b[maxChannel]);
+    const mid = Math.floor(bucket.length / 2);
+    buckets.splice(maxIdx, 1, bucket.slice(0, mid), bucket.slice(mid));
+  }
+
+  // Average each bucket
+  return buckets.map(b => {
+    if (b.length === 0) return [0, 0, 0];
+    let r = 0, g = 0, bl = 0;
+    for (const p of b) { r += p[0]; g += p[1]; bl += p[2]; }
+    const n = b.length;
+    return [Math.round(r / n), Math.round(g / n), Math.round(bl / n)];
+  });
+}
+
+function findClosest(pixel, palette) {
+  let minDist = Infinity, best = palette[0];
+  for (const p of palette) {
+    const dr = pixel[0] - p[0], dg = pixel[1] - p[1], db = pixel[2] - p[2];
+    const dist = dr * dr + dg * dg + db * db;
+    if (dist < minDist) { minDist = dist; best = p; }
+  }
+  return best;
+}
+
+// --- Floyd-Steinberg Dithering ---
+function floydSteinberg(d, w, h, palette) {
+  const errors = new Float32Array(w * h * 3);
+  // Copy pixel data to float
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const i = (y * w + x) * 4;
+      const ei = (y * w + x) * 3;
+      if (d[i + 3] <= 10) continue;
+      errors[ei] = d[i]; errors[ei + 1] = d[i + 1]; errors[ei + 2] = d[i + 2];
+    }
+  }
+
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const i = (y * w + x) * 4;
+      if (d[i + 3] <= 10) continue;
+      const ei = (y * w + x) * 3;
+      const old = [clamp(errors[ei]), clamp(errors[ei + 1]), clamp(errors[ei + 2])];
+      const nw = findClosest(old, palette);
+      d[i] = nw[0]; d[i + 1] = nw[1]; d[i + 2] = nw[2];
+
+      const er = [old[0] - nw[0], old[1] - nw[1], old[2] - nw[2]];
+      const spread = [[x + 1, y, 7 / 16], [x - 1, y + 1, 3 / 16], [x, y + 1, 5 / 16], [x + 1, y + 1, 1 / 16]];
+      for (const [sx, sy, f] of spread) {
+        if (sx < 0 || sx >= w || sy >= h) continue;
+        const si = (sy * w + sx) * 3;
+        errors[si] += er[0] * f; errors[si + 1] += er[1] * f; errors[si + 2] += er[2] * f;
+      }
+    }
+  }
+}
+
+// --- Ordered (Bayer) Dithering ---
+function orderedDither(d, w, h, palette) {
+  const bayer4 = [
+    [0, 8, 2, 10], [12, 4, 14, 6],
+    [3, 11, 1, 9], [15, 7, 13, 5]
+  ];
+  const n = 16; // 4x4 matrix has 16 levels
+
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const i = (y * w + x) * 4;
+      if (d[i + 3] <= 10) continue;
+      const threshold = (bayer4[y % 4][x % 4] / n - 0.5) * 64;
+      const adjusted = [
+        clamp(d[i] + threshold),
+        clamp(d[i + 1] + threshold),
+        clamp(d[i + 2] + threshold)
+      ];
+      const nw = findClosest(adjusted, palette);
+      d[i] = nw[0]; d[i + 1] = nw[1]; d[i + 2] = nw[2];
+    }
+  }
+}
+
+// --- Atkinson Dithering ---
+function atkinsonDither(d, w, h, palette) {
+  const errors = new Float32Array(w * h * 3);
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const i = (y * w + x) * 4;
+      const ei = (y * w + x) * 3;
+      if (d[i + 3] <= 10) continue;
+      errors[ei] = d[i]; errors[ei + 1] = d[i + 1]; errors[ei + 2] = d[i + 2];
+    }
+  }
+
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const i = (y * w + x) * 4;
+      if (d[i + 3] <= 10) continue;
+      const ei = (y * w + x) * 3;
+      const old = [clamp(errors[ei]), clamp(errors[ei + 1]), clamp(errors[ei + 2])];
+      const nw = findClosest(old, palette);
+      d[i] = nw[0]; d[i + 1] = nw[1]; d[i + 2] = nw[2];
+
+      const er = [old[0] - nw[0], old[1] - nw[1], old[2] - nw[2]];
+      // Atkinson: 1/8 to 6 neighbors, loses 1/4 of error
+      const spread = [
+        [x + 1, y, 1 / 8], [x + 2, y, 1 / 8],
+        [x - 1, y + 1, 1 / 8], [x, y + 1, 1 / 8], [x + 1, y + 1, 1 / 8],
+        [x, y + 2, 1 / 8]
+      ];
+      for (const [sx, sy, f] of spread) {
+        if (sx < 0 || sx >= w || sy >= h) continue;
+        const si = (sy * w + sx) * 3;
+        errors[si] += er[0] * f; errors[si + 1] += er[1] * f; errors[si + 2] += er[2] * f;
+      }
+    }
+  }
+}
+
+// ============================================================
+// POST EFFECTS
+// ============================================================
+function applyOutline(imgData, w, h, color, strength) {
+  const d = imgData.data;
+  const outline = new Uint8Array(w * h); // 1 = needs outline
+
+  // Find transparent pixels adjacent to opaque pixels
+  for (let s = 0; s < strength; s++) {
+    const prevOutline = new Uint8Array(outline);
+    for (let y = 0; y < h; y++) {
+      for (let x = 0; x < w; x++) {
+        const i = (y * w + x) * 4;
+        if (d[i + 3] > 10) continue; // not transparent
+        if (prevOutline[y * w + x]) continue; // already outlined
+        // Check 4 neighbors
+        const neighbors = [[x-1,y],[x+1,y],[x,y-1],[x,y+1]];
+        for (const [nx, ny] of neighbors) {
+          if (nx < 0 || nx >= w || ny < 0 || ny >= h) continue;
+          const ni = (ny * w + nx) * 4;
+          if (d[ni + 3] > 10 || prevOutline[ny * w + nx]) {
+            outline[y * w + x] = 1;
+            break;
+          }
+        }
+      }
+    }
+    // Apply this pass
+    for (let y = 0; y < h; y++) {
+      for (let x = 0; x < w; x++) {
+        if (outline[y * w + x] && !prevOutline[y * w + x]) {
+          const i = (y * w + x) * 4;
+          d[i] = color[0]; d[i + 1] = color[1]; d[i + 2] = color[2]; d[i + 3] = 255;
+        }
+      }
+    }
+  }
+
+  return imgData;
+}
+
+function applyInnerHighlight(imgData, w, h) {
+  const d = imgData.data;
+  const highlighted = new Uint8Array(w * h);
+
+  // Find opaque pixels adjacent to transparent pixels (inner edge)
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const i = (y * w + x) * 4;
+      if (d[i + 3] <= 10) continue;
+      // Check if any neighbor is transparent or outline
+      const neighbors = [[x-1,y],[x+1,y],[x,y-1],[x,y+1]];
+      let isEdge = false;
+      for (const [nx, ny] of neighbors) {
+        if (nx < 0 || nx >= w || ny < 0 || ny >= h) { isEdge = true; break; }
+        const ni = (ny * w + nx) * 4;
+        if (d[ni + 3] <= 10) { isEdge = true; break; }
+      }
+      // Inner highlight: lighten pixels 1px inside the top-left edge
+      if (!isEdge) {
+        // Check if top or left neighbor is edge
+        const top = y > 0 ? d[((y-1) * w + x) * 4 + 3] : 0;
+        const left = x > 0 ? d[(y * w + (x-1)) * 4 + 3] : 0;
+        if ((y === 1 || (y > 0 && top > 10)) && (x === 1 || (x > 0 && left > 10))) {
+          // Check if this pixel's top or left is a border pixel
+          const topIsEdge = y > 0 && isEdgePixel(d, w, h, x, y - 1);
+          const leftIsEdge = x > 0 && isEdgePixel(d, w, h, x - 1, y);
+          if (topIsEdge || leftIsEdge) {
+            highlighted[y * w + x] = 1;
+          }
+        }
+      }
+    }
+  }
+
+  // Apply highlight
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      if (highlighted[y * w + x]) {
+        const i = (y * w + x) * 4;
+        d[i] = Math.min(255, d[i] + 40);
+        d[i + 1] = Math.min(255, d[i + 1] + 40);
+        d[i + 2] = Math.min(255, d[i + 2] + 40);
+      }
+    }
+  }
+
+  return imgData;
+}
+
+function isEdgePixel(d, w, h, x, y) {
+  const i = (y * w + x) * 4;
+  if (d[i + 3] <= 10) return false;
+  const neighbors = [[x-1,y],[x+1,y],[x,y-1],[x,y+1]];
+  for (const [nx, ny] of neighbors) {
+    if (nx < 0 || nx >= w || ny < 0 || ny >= h) return true;
+    if (d[(ny * w + nx) * 4 + 3] <= 10) return true;
+  }
+  return false;
+}
+
+// ============================================================
+// RENDERING
+// ============================================================
+function renderResult() {
+  if (!resultCanvas) return;
+
+  // Zoomed preview
+  const zoomC = document.getElementById('result-zoomed');
+  const maxZoomPx = 512;
+  const zoom = Math.max(1, Math.floor(maxZoomPx / Math.max(targetW, targetH)));
+  const zw = targetW * zoom, zh = targetH * zoom;
+  zoomC.width = zw; zoomC.height = zh;
+  zoomC.style.width = zw + 'px'; zoomC.style.height = zh + 'px';
+  const zctx = zoomC.getContext('2d');
+  zctx.imageSmoothingEnabled = false;
+  zctx.drawImage(resultCanvas, 0, 0, zw, zh);
+
+  // Draw grid on zoomed preview
+  zctx.strokeStyle = 'rgba(255,255,255,0.08)';
+  zctx.lineWidth = 1;
+  for (let x = 0; x <= targetW; x++) {
+    zctx.beginPath(); zctx.moveTo(x * zoom, 0); zctx.lineTo(x * zoom, zh); zctx.stroke();
+  }
+  for (let y = 0; y <= targetH; y++) {
+    zctx.beginPath(); zctx.moveTo(0, y * zoom); zctx.lineTo(zw, y * zoom); zctx.stroke();
+  }
+
+  // Actual size preview
+  const actC = document.getElementById('result-actual');
+  const actScale = Math.max(1, Math.floor(64 / Math.max(targetW, targetH)));
+  actC.width = targetW * actScale; actC.height = targetH * actScale;
+  actC.style.width = (targetW * actScale) + 'px';
+  actC.style.height = (targetH * actScale) + 'px';
+  const actCtx = actC.getContext('2d');
+  actCtx.imageSmoothingEnabled = false;
+  actCtx.drawImage(resultCanvas, 0, 0, actC.width, actC.height);
+
+  // Result info
+  document.getElementById('result-info').textContent = `${targetW}x${targetH} @ ${zoom}x zoom`;
+}
+
+function renderTiling() {
+  if (!resultCanvas) return;
+  const c = document.getElementById('tiling-canvas');
+  // Each tile should be ~128px so 3x3 = ~384px total — visible and clear
+  const maxTile = 128;
+  const tileZoom = Math.max(1, Math.floor(maxTile / Math.max(targetW, targetH)));
+  const tw = targetW * tileZoom, th = targetH * tileZoom;
+  c.width = tw * 3; c.height = th * 3;
+  c.style.width = (tw * 3) + 'px'; c.style.height = (th * 3) + 'px';
+  const ctx = c.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
+  for (let ty = 0; ty < 3; ty++) {
+    for (let tx = 0; tx < 3; tx++) {
+      ctx.drawImage(resultCanvas, tx * tw, ty * th, tw, th);
+    }
+  }
+  // Draw grid lines between tiles
+  ctx.strokeStyle = 'rgba(233,69,96,0.3)';
+  ctx.lineWidth = 1;
+  for (let i = 1; i < 3; i++) {
+    ctx.beginPath(); ctx.moveTo(tw * i, 0); ctx.lineTo(tw * i, th * 3); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0, th * i); ctx.lineTo(tw * 3, th * i); ctx.stroke();
+  }
+}
+
+function updateInfo(imgData) {
+  const d = imgData.data;
+  const colors = new Set();
+  let hasAlpha = false;
+  for (let i = 0; i < d.length; i += 4) {
+    if (d[i + 3] <= 10) { hasAlpha = true; continue; }
+    colors.add(`${d[i]},${d[i+1]},${d[i+2]}`);
+  }
+
+  document.getElementById('ci-colors').textContent = colors.size;
+  document.getElementById('ci-alpha').textContent = hasAlpha ? 'Yes' : 'No';
+  document.getElementById('ci-outsize').textContent = `${targetW}x${targetH}`;
+  // Rough PNG estimate: ~3 bytes per pixel for small textures
+  const est = targetW * targetH * 3;
+  document.getElementById('ci-filesize').textContent = est < 1024 ? `~${est} B` : `~${(est/1024).toFixed(1)} KB`;
+
+  // Build palette display
+  const palDiv = document.getElementById('palette-display');
+  palDiv.innerHTML = '';
+  const colorArr = Array.from(colors).slice(0, 64);
+  for (const c of colorArr) {
+    const [r, g, b] = c.split(',').map(Number);
+    const hex = rgbToHex(r, g, b);
+    const swatch = document.createElement('div');
+    swatch.className = 'pal-swatch';
+    swatch.style.background = hex;
+    swatch.innerHTML = `<span class="tooltip">${hex}</span>`;
+    swatch.onclick = () => navigator.clipboard.writeText(hex);
+    palDiv.appendChild(swatch);
+  }
+}
+
+// ============================================================
+// SIZE SELECTION
+// ============================================================
+function setSize(w, h, btn) {
+  targetW = w; targetH = h;
+  document.getElementById('custom-w').value = w;
+  document.getElementById('custom-h').value = h;
+  // Update active button
+  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  processImage();
+  setStatus(`Target: ${w}x${h}`);
+}
+
+function setCustomSize() {
+  const w = parseInt(document.getElementById('custom-w').value) || 16;
+  const h = parseInt(document.getElementById('custom-h').value) || 16;
+  targetW = Math.max(1, Math.min(512, w));
+  targetH = Math.max(1, Math.min(512, h));
+  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+  processImage();
+}
+
+// ============================================================
+// TOOLBAR ACTIONS
+// ============================================================
+function toggleTiling() {
+  showTiling = !showTiling;
+  document.getElementById('btn-tiling').classList.toggle('active', showTiling);
+  document.getElementById('tiling-section').style.display = showTiling ? '' : 'none';
+  if (showTiling) renderTiling();
+}
+
+function toggleOutline() {
+  const cb = document.getElementById('fx-outline');
+  cb.checked = !cb.checked;
+  document.getElementById('btn-outline').classList.toggle('active', cb.checked);
+  processImage();
+}
+
+function downloadTexture() {
+  if (!resultCanvas) return;
+  const name = document.getElementById('export-name').value || 'texture';
+  resultCanvas.toBlob((blob) => {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `${name}.png`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+    setStatus(`Downloaded ${name}.png (${targetW}x${targetH})`);
+  }, 'image/png');
+}
+
+function downloadAll() {
+  if (!sourceImg) return;
+  const sizes = [[16, 16], [32, 32], [64, 64]];
+  const name = document.getElementById('export-name').value || 'texture';
+  const origW = targetW, origH = targetH;
+
+  for (const [w, h] of sizes) {
+    targetW = w; targetH = h;
+    processImage();
+    resultCanvas.toBlob((blob) => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `${name}_${w}x${h}.png`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }, 'image/png');
+  }
+
+  // Restore original size
+  targetW = origW; targetH = origH;
+  processImage();
+  setStatus(`Downloaded 3 sizes of ${name}.png`);
+}
+
+// ============================================================
+// UTILITIES
+// ============================================================
+function clamp(v) { return Math.max(0, Math.min(255, Math.round(v))); }
+
+function hexToRgb(hex) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return [r, g, b];
+}
+
+function rgbToHex(r, g, b) {
+  return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+}
+
+function setStatus(msg) {
+  document.getElementById('status').textContent = msg;
+}
+
+// ============================================================
+// INIT
+// ============================================================
+setStatus('Upload an image to start');
+</script>
+</body>
+</html>
