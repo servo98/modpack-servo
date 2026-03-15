@@ -1,12 +1,16 @@
 package com.servo.dungeons;
 
 import com.servo.dungeons.dungeon.DungeonManager;
+import com.servo.dungeons.dungeon.MobDeathListener;
+import com.servo.dungeons.dungeon.RoomActivationListener;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import net.neoforged.neoforge.event.server.ServerStoppedEvent;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,6 +30,16 @@ public class ServoDungeons {
         NeoForge.EVENT_BUS.addListener((ServerStoppedEvent event) -> {
             DungeonManager.clear();
         });
+
+        // Room activation: detect players entering LOCKED rooms, spawn mobs
+        NeoForge.EVENT_BUS.addListener((LevelTickEvent.Post event) -> {
+            if (event.getLevel() instanceof ServerLevel serverLevel) {
+                RoomActivationListener.onServerTick(serverLevel);
+            }
+        });
+
+        // Mob death: track kills and mark rooms as CLEARED
+        NeoForge.EVENT_BUS.addListener(MobDeathListener::onMobDeath);
 
         LOGGER.info("Servo Dungeons initialized!");
     }

@@ -26,6 +26,8 @@ public class DungeonInstance {
     private final BlockPos center;
     @Nullable
     private DungeonLayout layout;
+    @Nullable
+    private RoomTracker roomTracker;
     private boolean active;
 
     public DungeonInstance(UUID id, DungeonTier tier, UUID leaderId, BlockPos altarPos, BlockPos entrancePos, BlockPos center) {
@@ -91,6 +93,15 @@ public class DungeonInstance {
 
     public void setLayout(DungeonLayout layout) {
         this.layout = layout;
+    }
+
+    @Nullable
+    public RoomTracker getRoomTracker() {
+        return roomTracker;
+    }
+
+    public void setRoomTracker(RoomTracker roomTracker) {
+        this.roomTracker = roomTracker;
     }
 
     /**
