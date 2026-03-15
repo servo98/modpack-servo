@@ -9,9 +9,12 @@ import java.util.UUID;
 
 /**
  * Data class representing an active dungeon instance.
- * Tracks the dungeon tier, participating players, and positions.
+ * Tracks the dungeon tier, participating players, positions, and offset center.
  */
 public class DungeonInstance {
+
+    /** Half-width of the area assigned to each dungeon instance along X/Z. */
+    private static final int AREA_HALF_SIZE = 5000;
 
     private final UUID id;
     private final DungeonTier tier;
@@ -19,9 +22,10 @@ public class DungeonInstance {
     private final Set<UUID> playerIds;
     private final BlockPos altarPos;
     private final BlockPos entrancePos;
+    private final BlockPos center;
     private boolean active;
 
-    public DungeonInstance(UUID id, DungeonTier tier, UUID leaderId, BlockPos altarPos, BlockPos entrancePos) {
+    public DungeonInstance(UUID id, DungeonTier tier, UUID leaderId, BlockPos altarPos, BlockPos entrancePos, BlockPos center) {
         this.id = id;
         this.tier = tier;
         this.leaderId = leaderId;
@@ -29,6 +33,7 @@ public class DungeonInstance {
         this.playerIds.add(leaderId);
         this.altarPos = altarPos;
         this.entrancePos = entrancePos;
+        this.center = center;
         this.active = true;
     }
 
@@ -70,5 +75,18 @@ public class DungeonInstance {
 
     public boolean hasPlayer(UUID playerId) {
         return playerIds.contains(playerId);
+    }
+
+    public BlockPos getCenter() {
+        return center;
+    }
+
+    /**
+     * Check if a position is within this instance's area.
+     * Uses a half-size of {@value AREA_HALF_SIZE} blocks along X and Z from the center.
+     */
+    public boolean isPlayerInArea(BlockPos pos) {
+        return Math.abs(pos.getX() - center.getX()) <= AREA_HALF_SIZE
+                && Math.abs(pos.getZ() - center.getZ()) <= AREA_HALF_SIZE;
     }
 }

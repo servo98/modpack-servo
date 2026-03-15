@@ -1,6 +1,7 @@
 package com.servo.dungeons.block;
 
 import com.mojang.serialization.MapCodec;
+import com.servo.dungeons.dungeon.DungeonInstance;
 import com.servo.dungeons.dungeon.DungeonManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -41,10 +42,13 @@ public class ExitPortalBlock extends Block {
 
         if (entity instanceof ServerPlayer serverPlayer) {
             DungeonManager manager = DungeonManager.getInstance();
-            if (manager != null && manager.isActive()) {
-                serverPlayer.sendSystemMessage(
-                        Component.translatable("message.servo_dungeons.dungeon_exit"));
-                manager.exitDungeon(serverPlayer);
+            if (manager != null) {
+                DungeonInstance dungeonInstance = manager.getDungeonForPlayer(serverPlayer.getUUID());
+                if (dungeonInstance != null) {
+                    serverPlayer.sendSystemMessage(
+                            Component.translatable("message.servo_dungeons.dungeon_exit"));
+                    manager.exitDungeon(serverPlayer);
+                }
             }
         }
     }
