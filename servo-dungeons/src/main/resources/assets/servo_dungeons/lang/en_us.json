@@ -1,0 +1,22 @@
+{
+  "itemGroup.servo_dungeons": "Servo Dungeons",
+  "block.servo_dungeons.dungeon_pedestal": "Dungeon Pedestal",
+  "block.servo_dungeons.dungeon_rune": "Dungeon Rune",
+  "block.servo_dungeons.exit_portal": "Exit Portal",
+  "item.servo_dungeons.dungeon_key_basic": "Basic Dungeon Key",
+  "item.servo_dungeons.dungeon_key_advanced": "Advanced Dungeon Key",
+  "item.servo_dungeons.dungeon_key_master": "Master Dungeon Key",
+  "item.servo_dungeons.dungeon_key_core": "Core Dungeon Key",
+  "tooltip.servo_dungeons.key_tier": "Tier: %s",
+  "tooltip.servo_dungeons.key_rooms": "Rooms: %d-%d",
+  "tooltip.servo_dungeons.tier.basic": "Basic",
+  "tooltip.servo_dungeons.tier.advanced": "Advanced",
+  "tooltip.servo_dungeons.tier.master": "Master",
+  "tooltip.servo_dungeons.tier.core": "Core",
+  "message.servo_dungeons.ritual_started": "Ritual started... Stand near the altar!",
+  "message.servo_dungeons.dungeon_entered": "Entering the dungeon...",
+  "message.servo_dungeons.dungeon_active": "A dungeon is already in progress.",
+  "message.servo_dungeons.invalid_altar": "The altar is not properly formed. Place 4 Dungeon Runes in a cross pattern.",
+  "message.servo_dungeons.dungeon_abandoned": "The dungeon has been abandoned.",
+  "message.servo_dungeons.dungeon_exit": "Returning to the surface..."
+}

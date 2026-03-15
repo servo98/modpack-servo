@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north,state=inactive": { "model": "servo_dungeons:block/dungeon_pedestal" },
+    "facing=south,state=inactive": { "model": "servo_dungeons:block/dungeon_pedestal", "y": 180 },
+    "facing=west,state=inactive":  { "model": "servo_dungeons:block/dungeon_pedestal", "y": 270 },
+    "facing=east,state=inactive":  { "model": "servo_dungeons:block/dungeon_pedestal", "y": 90 },
+    "facing=north,state=charging": { "model": "servo_dungeons:block/dungeon_pedestal" },
+    "facing=south,state=charging": { "model": "servo_dungeons:block/dungeon_pedestal", "y": 180 },
+    "facing=west,state=charging":  { "model": "servo_dungeons:block/dungeon_pedestal", "y": 270 },
+    "facing=east,state=charging":  { "model": "servo_dungeons:block/dungeon_pedestal", "y": 90 },
+    "facing=north,state=active":   { "model": "servo_dungeons:block/dungeon_pedestal" },
+    "facing=south,state=active":   { "model": "servo_dungeons:block/dungeon_pedestal", "y": 180 },
+    "facing=west,state=active":    { "model": "servo_dungeons:block/dungeon_pedestal", "y": 270 },
+    "facing=east,state=active":    { "model": "servo_dungeons:block/dungeon_pedestal", "y": 90 }
+  }
+}

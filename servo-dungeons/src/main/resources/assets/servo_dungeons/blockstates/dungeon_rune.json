@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "active=false": { "model": "servo_dungeons:block/dungeon_rune" },
+    "active=true":  { "model": "servo_dungeons:block/dungeon_rune_active" }
+  }
+}

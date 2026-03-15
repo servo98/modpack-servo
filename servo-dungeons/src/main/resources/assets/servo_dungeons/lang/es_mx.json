@@ -1,0 +1,22 @@
+{
+  "itemGroup.servo_dungeons": "Servo Dungeons",
+  "block.servo_dungeons.dungeon_pedestal": "Pedestal de Dungeon",
+  "block.servo_dungeons.dungeon_rune": "Runa de Dungeon",
+  "block.servo_dungeons.exit_portal": "Portal de Salida",
+  "item.servo_dungeons.dungeon_key_basic": "Llave de Dungeon Basica",
+  "item.servo_dungeons.dungeon_key_advanced": "Llave de Dungeon Avanzada",
+  "item.servo_dungeons.dungeon_key_master": "Llave de Dungeon Maestra",
+  "item.servo_dungeons.dungeon_key_core": "Llave de Dungeon del Nucleo",
+  "tooltip.servo_dungeons.key_tier": "Tier: %s",
+  "tooltip.servo_dungeons.key_rooms": "Salas: %d-%d",
+  "tooltip.servo_dungeons.tier.basic": "Basica",
+  "tooltip.servo_dungeons.tier.advanced": "Avanzada",
+  "tooltip.servo_dungeons.tier.master": "Maestra",
+  "tooltip.servo_dungeons.tier.core": "Del Nucleo",
+  "message.servo_dungeons.ritual_started": "Ritual iniciado... \u00a1Quedate cerca del altar!",
+  "message.servo_dungeons.dungeon_entered": "Entrando al dungeon...",
+  "message.servo_dungeons.dungeon_active": "Ya hay un dungeon en progreso.",
+  "message.servo_dungeons.invalid_altar": "El altar no esta formado correctamente. Coloca 4 Runas de Dungeon en patron de cruz.",
+  "message.servo_dungeons.dungeon_abandoned": "El dungeon ha sido abandonado.",
+  "message.servo_dungeons.dungeon_exit": "Regresando a la superficie..."
+}

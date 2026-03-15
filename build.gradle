@@ -55,6 +55,7 @@ dependencies {
     implementation project(':servo-core')
     implementation project(':servo-delivery')
     implementation project(':servo-create')
+    implementation project(':servo-dungeons')
 }
 
 idea {
