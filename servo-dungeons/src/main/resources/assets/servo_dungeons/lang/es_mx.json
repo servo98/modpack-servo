@@ -25,5 +25,15 @@
   "block.servo_dungeons.dungeon_rope": "Cuerda de Dungeon",
   "block.servo_dungeons.dungeon_spikes": "Espinas de Dungeon",
   "item.servo_dungeons.dungeon_bomb": "Bomba de Dungeon",
-  "item.servo_dungeons.dungeon_rope_item": "Cuerda de Dungeon"
+  "item.servo_dungeons.dungeon_rope_item": "Cuerda de Dungeon",
+  "message.servo_dungeons.boss_fight_entered": "Entrando a la arena del jefe...",
+  "item.servo_dungeons.boss_key_ch1": "Llave de Jefe: Capitulo 1",
+  "item.servo_dungeons.boss_key_ch2": "Llave de Jefe: Capitulo 2",
+  "item.servo_dungeons.boss_key_ch3": "Llave de Jefe: Capitulo 3",
+  "item.servo_dungeons.boss_key_ch4": "Llave de Jefe: Capitulo 4",
+  "item.servo_dungeons.boss_key_ch5": "Llave de Jefe: Capitulo 5",
+  "item.servo_dungeons.boss_key_ch6": "Llave de Jefe: Capitulo 6",
+  "item.servo_dungeons.boss_key_ch7": "Llave de Jefe: Capitulo 7",
+  "item.servo_dungeons.boss_key_ch8": "Llave de Jefe: Capitulo 8",
+  "tooltip.servo_dungeons.boss_key_chapter": "Jefe del Capitulo %d"
 }

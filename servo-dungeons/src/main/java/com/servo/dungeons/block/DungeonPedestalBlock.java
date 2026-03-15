@@ -3,6 +3,7 @@ package com.servo.dungeons.block;
 import com.mojang.serialization.MapCodec;
 import com.servo.dungeons.DungeonRegistry;
 import com.servo.dungeons.DungeonTier;
+import com.servo.dungeons.item.BossKeyItem;
 import com.servo.dungeons.item.DungeonKeyItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -94,6 +95,20 @@ public class DungeonPedestalBlock extends BaseEntityBlock {
         if (pedestal.isActive()) {
             serverPlayer.sendSystemMessage(
                     Component.translatable("message.servo_dungeons.dungeon_active_use_beam"));
+            return ItemInteractionResult.SUCCESS;
+        }
+
+        // Boss Key → generate boss arena
+        if (stack.getItem() instanceof BossKeyItem bossKey && !pedestal.isRitualInProgress()) {
+            if (!pedestal.validateMultiblock()) {
+                serverPlayer.sendSystemMessage(
+                        Component.translatable("message.servo_dungeons.invalid_altar"));
+                return ItemInteractionResult.FAIL;
+            }
+            pedestal.startBossRitual(bossKey.getChapter(), serverPlayer);
+            stack.shrink(1);
+            serverPlayer.sendSystemMessage(
+                    Component.translatable("message.servo_dungeons.ritual_started"));
             return ItemInteractionResult.SUCCESS;
         }
 

@@ -35,6 +35,9 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
     private int ritualTicks;
     private boolean isActive;
 
+    /** Chapter for boss fight (-1 = not a boss fight). */
+    private int bossChapter = -1;
+
     /** Player who started the ritual (used for teleportation when ritual completes). */
     @Nullable
     private UUID ritualStarterId;
@@ -50,6 +53,24 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
      */
     public void startRitual(DungeonTier tier, ServerPlayer leader) {
         this.activeTier = tier;
+        this.ritualTicks = 0;
+        this.ritualStarterId = leader.getUUID();
+
+        // Set pedestal state to CHARGING
+        if (level != null) {
+            level.setBlock(worldPosition, getBlockState()
+                    .setValue(DungeonPedestalBlock.STATE, DungeonPedestalBlock.PedestalState.CHARGING), 3);
+            setRunesActive(true);
+        }
+        setChanged();
+    }
+
+    /**
+     * Start a boss ritual charging phase (uses the same altar as dungeon rituals).
+     */
+    public void startBossRitual(int chapter, ServerPlayer leader) {
+        this.bossChapter = chapter;
+        this.activeTier = DungeonTier.CORE; // Boss fights use highest tier
         this.ritualTicks = 0;
         this.ritualStarterId = leader.getUUID();
 
@@ -98,8 +119,14 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
             return;
         }
 
-        // Start the dungeon
-        UUID id = manager.startDungeon(serverLevel, worldPosition, leader, activeTier);
+        // Start dungeon or boss fight depending on bossChapter
+        UUID id;
+        if (bossChapter >= 0) {
+            id = manager.startBossFight(serverLevel, worldPosition, leader, bossChapter);
+        } else {
+            id = manager.startDungeon(serverLevel, worldPosition, leader, activeTier);
+        }
+
         if (id != null) {
             this.dungeonId = id;
             this.isActive = true;
@@ -111,7 +138,11 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
             // Place beam blocks above pedestal for re-entry
             placeBeam();
 
-            leader.sendSystemMessage(Component.translatable("message.servo_dungeons.dungeon_entered"));
+            if (bossChapter >= 0) {
+                leader.sendSystemMessage(Component.translatable("message.servo_dungeons.boss_fight_entered"));
+            } else {
+                leader.sendSystemMessage(Component.translatable("message.servo_dungeons.dungeon_entered"));
+            }
         } else {
             cancelRitual();
         }
@@ -119,6 +150,7 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
         // Reset ritual state
         this.ritualTicks = 0;
         this.ritualStarterId = null;
+        this.bossChapter = -1;
         setChanged();
     }
 
@@ -129,6 +161,7 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
         this.ritualTicks = 0;
         this.ritualStarterId = null;
         this.activeTier = null;
+        this.bossChapter = -1;
 
         if (level != null) {
             level.setBlock(worldPosition, getBlockState()
@@ -145,6 +178,7 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
         this.isActive = false;
         this.dungeonId = null;
         this.activeTier = null;
+        this.bossChapter = -1;
 
         if (level != null) {
             removeBeam();
@@ -244,6 +278,7 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
         super.saveAdditional(tag, registries);
         tag.putBoolean("IsActive", isActive);
         tag.putInt("RitualTicks", ritualTicks);
+        tag.putInt("BossChapter", bossChapter);
 
         if (activeTier != null) {
             tag.putString("ActiveTier", activeTier.name());
@@ -261,6 +296,10 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
         super.loadAdditional(tag, registries);
         isActive = tag.getBoolean("IsActive");
         ritualTicks = tag.getInt("RitualTicks");
+        bossChapter = tag.getInt("BossChapter");
+        if (bossChapter == 0 && !tag.contains("BossChapter")) {
+            bossChapter = -1; // Default for old saves without this field
+        }
 
         if (tag.contains("ActiveTier")) {
             try {

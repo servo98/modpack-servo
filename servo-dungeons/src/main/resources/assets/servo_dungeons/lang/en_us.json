@@ -25,5 +25,15 @@
   "block.servo_dungeons.dungeon_rope": "Dungeon Rope",
   "block.servo_dungeons.dungeon_spikes": "Dungeon Spikes",
   "item.servo_dungeons.dungeon_bomb": "Dungeon Bomb",
-  "item.servo_dungeons.dungeon_rope_item": "Dungeon Rope"
+  "item.servo_dungeons.dungeon_rope_item": "Dungeon Rope",
+  "message.servo_dungeons.boss_fight_entered": "Entering boss arena...",
+  "item.servo_dungeons.boss_key_ch1": "Boss Key: Chapter 1",
+  "item.servo_dungeons.boss_key_ch2": "Boss Key: Chapter 2",
+  "item.servo_dungeons.boss_key_ch3": "Boss Key: Chapter 3",
+  "item.servo_dungeons.boss_key_ch4": "Boss Key: Chapter 4",
+  "item.servo_dungeons.boss_key_ch5": "Boss Key: Chapter 5",
+  "item.servo_dungeons.boss_key_ch6": "Boss Key: Chapter 6",
+  "item.servo_dungeons.boss_key_ch7": "Boss Key: Chapter 7",
+  "item.servo_dungeons.boss_key_ch8": "Boss Key: Chapter 8",
+  "tooltip.servo_dungeons.boss_key_chapter": "Chapter %d Boss"
 }

@@ -10,6 +10,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
@@ -96,6 +97,78 @@ public class DungeonManager {
                 tier.name, leader.getName().getString(), id, center, layout.getRoomCount());
 
         return id;
+    }
+
+    /**
+     * Start a boss fight. Allocates an offset, creates a boss arena in the dungeon dimension,
+     * and teleports the leader.
+     *
+     * @param chapter the boss chapter (1-8)
+     * @return the dungeon instance UUID, or null if creation failed
+     */
+    @Nullable
+    public UUID startBossFight(ServerLevel overworld, BlockPos altarPos, ServerPlayer leader, int chapter) {
+        ServerLevel dungeonLevel = server.getLevel(DungeonRegistry.DUNGEON_LEVEL_KEY);
+        if (dungeonLevel == null) {
+            ServoDungeons.LOGGER.error("Dungeon dimension not found! Cannot create boss arena.");
+            return null;
+        }
+
+        BlockPos center = offsetAllocator.allocate();
+
+        // Create a simple boss arena (single large room)
+        createBossArena(dungeonLevel, center, chapter);
+
+        // Entrance: center of the arena floor
+        BlockPos entrancePos = center.offset(16, 1, 2);
+
+        UUID id = UUID.randomUUID();
+        DungeonInstance instance = new DungeonInstance(id, DungeonTier.CORE, leader.getUUID(), altarPos, entrancePos, center);
+        instance.setBossFight(true);
+        instance.setBossChapter(chapter);
+        activeInstances.put(id, instance);
+
+        teleportToDungeon(leader, entrancePos, dungeonLevel);
+
+        ServoDungeons.LOGGER.info("Boss fight started: chapter={}, leader={}, id={}, center={}",
+                chapter, leader.getName().getString(), id, center);
+
+        return id;
+    }
+
+    /**
+     * Create a boss arena: a single large room (32x32x16) made of deepslate bricks.
+     */
+    private void createBossArena(ServerLevel level, BlockPos center, int chapter) {
+        int size = 32;
+        int height = 16;
+        BlockState wall = Blocks.DEEPSLATE_BRICKS.defaultBlockState();
+        BlockState floor = Blocks.DEEPSLATE_TILES.defaultBlockState();
+        BlockState air = Blocks.AIR.defaultBlockState();
+        BlockState light = Blocks.SHROOMLIGHT.defaultBlockState();
+
+        // Build shell: floor, walls, ceiling
+        for (int x = 0; x < size; x++) {
+            for (int z = 0; z < size; z++) {
+                level.setBlock(center.offset(x, 0, z), floor, 3);
+                level.setBlock(center.offset(x, height - 1, z), wall, 3);
+                for (int y = 1; y < height - 1; y++) {
+                    boolean isWall = (x == 0 || x == size - 1 || z == 0 || z == size - 1);
+                    level.setBlock(center.offset(x, y, z), isWall ? wall : air, 3);
+                }
+            }
+        }
+
+        // Lighting: shroomlight in ceiling every 6 blocks
+        for (int x = 3; x < size; x += 6) {
+            for (int z = 3; z < size; z += 6) {
+                level.setBlock(center.offset(x, height - 2, z), light, 3);
+            }
+        }
+
+        // Exit portal near entrance
+        level.setBlock(center.offset(size / 2, 1, 1),
+                DungeonRegistry.EXIT_PORTAL_BLOCK.get().defaultBlockState(), 3);
     }
 
     /**
