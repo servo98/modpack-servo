@@ -12,9 +12,6 @@ Ejecuta estos pasos en paralelo y presenta un resumen consolidado:
    - Lista solo los blockers activos (no resueltos)
    - Si no hay blockers, indicalo
 
-3. **Estado de mods**: Lee los archivos en `docs/status/*.md`
-   - Muestra una linea por mod con su estado general (COMPLETO, EN PROGRESO, 0%, etc.)
-
 ## Formato de salida
 
 Presenta el resumen asi:
@@ -27,11 +24,6 @@ Presenta el resumen asi:
 
 **Blockers**: N activos
 [lista corta de cada blocker]
-
-**Estado de mods**:
-- servo_packaging: [estado]
-- servo_delivery: [estado]
-- [etc.]
 ```
 
 Al final pregunta: "En que trabajamos hoy?"

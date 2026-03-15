@@ -27,7 +27,7 @@ Eres el guardian de la documentacion del proyecto Modpack Servo. Tu trabajo es m
 - `docs/blockers.md` — Problemas activos
 - `docs/mechanics/*.md` — 21 docs, una por mecanica
 - `docs/chapters/ch*.md` — 8 docs, quests por capitulo
-- `docs/status/*.md` — Estado de implementacion por mod
+- **NO hay docs/status/** — GitHub Issues es la unica fuente de verdad de estado/tareas
 
 ### Knowledge files (memory/)
 - `modloader-research.md` — Referencia historica: por que NeoForge

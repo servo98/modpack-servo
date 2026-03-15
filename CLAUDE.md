@@ -43,7 +43,6 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 | Assets | `assets/` | Drop folder para artista. Subcarpetas por mod. Ver `assets/README.md` |
 | Mecanicas | `docs/mechanics/*.md` | 21 docs, una por mecanica |
 | Capitulos | `docs/chapters/ch*.md` | 8 docs (ch1-ch8) con quests por capitulo |
-| Estado por mod | `docs/status/*.md` | Tablas done/pending + assets para artista |
 
 ## Estructura de codigo
 - `servo-packaging/` — mod Java standalone (COMPLETO v0.3.0)
@@ -84,7 +83,6 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 Usar `/session-start` o ejecutar manualmente:
 1. `gh issue list --repo servo98/modpack-servo --state open --limit 20` (tareas pendientes)
 2. Leer `docs/blockers.md` (problemas activos)
-3. Leer `docs/status/*.md` (estado de mods)
 
 ### Al FINAL
 1. Invocar `doc-keeper` (sync de docs, redundancias, consistencia)
