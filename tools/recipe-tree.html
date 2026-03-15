@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Tree Viewer</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+</style>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #1a1a2e; --surface: #16213e; --panel: #0f3460;
+  --text: #e0e0e0; --text-muted: #8899aa; --accent: #e94560;
+  --accent2: #0f9b8e; --border: #1a3a5c; --input-bg: #0a1628;
+}
+html, body { height: 100%; overflow: hidden; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px;
+  background: var(--bg); color: var(--text);
+  display: flex; flex-direction: column;
+}
+button { cursor: pointer; font-family: inherit; font-size: 12px; }
+input, select { font-family: inherit; font-size: 12px; background: var(--input-bg);
+  color: var(--text); border: 1px solid var(--border); padding: 4px 6px; border-radius: 3px; }
+input:focus, select:focus { outline: none; border-color: var(--accent2); }
+label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* === TOOLBAR === */
+#toolbar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 12px; background: var(--surface); border-bottom: 1px solid var(--border);
+  flex-shrink: 0; flex-wrap: wrap;
+}
+#toolbar h1 { font-size: 14px; font-weight: 600; color: var(--accent); margin-right: 12px; white-space: nowrap; }
+.tb-btn {
+  background: var(--panel); color: var(--text); border: 1px solid var(--border);
+  padding: 4px 12px; border-radius: 4px; font-size: 12px; white-space: nowrap;
+}
+.tb-btn:hover { background: var(--accent2); border-color: var(--accent2); color: #fff; }
+.tb-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.tb-sep { width: 1px; height: 20px; background: var(--border); }
+.tb-spacer { flex: 1; }
+#status { font-size: 11px; color: var(--text-muted); }
+
+/* === MAIN LAYOUT === */
+#main { display: flex; flex: 1; overflow: hidden; }
+
+/* === LEFT PANEL === */
+#left-panel {
+  width: 280px; min-width: 280px; background: var(--surface);
+  border-right: 1px solid var(--border); overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.lp-section {
+  padding: 8px 12px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+}
+.lp-section h3 {
+  font-size: 11px; color: var(--accent2); text-transform: uppercase;
+  letter-spacing: 0.8px; margin-bottom: 6px;
+}
+#search-box {
+  width: 100%; padding: 6px 8px; margin-bottom: 6px;
+}
+#search-box::placeholder { color: var(--text-muted); }
+.filter-row { display: flex; gap: 6px; margin-bottom: 4px; align-items: center; }
+.filter-row label { width: auto; flex-shrink: 0; font-size: 10px; }
+.filter-row select { flex: 1; min-width: 0; font-size: 11px; padding: 3px 4px; }
+.recipe-count {
+  font-size: 10px; color: var(--text-muted); padding: 2px 0;
+}
+.recipe-count span { color: var(--accent); font-weight: 600; }
+
+/* recipe list */
+#recipe-list {
+  flex: 1; overflow-y: auto; padding: 0;
+}
+.recipe-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 12px; cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background 0.1s;
+}
+.recipe-item:hover { background: var(--panel); }
+.recipe-item.selected { background: var(--accent); border-left-color: #fff; color: #fff; }
+.recipe-item .ri-icon {
+  width: 20px; height: 20px; border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; flex-shrink: 0;
+}
+.recipe-item .tn-icon {
+  width: 18px; height: 18px; image-rendering: pixelated; flex-shrink: 0;
+}
+.recipe-item .tn-icon-placeholder {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px; background: var(--panel); border: 1px solid var(--border);
+  border-radius: 2px; font-size: 9px; font-weight: 700; color: var(--text-muted); flex-shrink: 0;
+}
+.recipe-item .ri-name { font-size: 12px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.recipe-item .ri-mod { font-size: 9px; color: var(--text-muted); flex-shrink: 0; }
+.recipe-item.selected .ri-mod { color: rgba(255,255,255,0.7); }
+.recipe-item .ri-ws-dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+.recipe-item.proposed { border-left-style: dashed; }
+.recipe-item.proposed .ri-name { font-style: italic; }
+
+/* Quick filters */
+.quick-filters { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 4px; }
+.qf-btn {
+  background: var(--input-bg); color: var(--text-muted); border: 1px solid var(--border);
+  padding: 2px 6px; border-radius: 3px; font-size: 10px; cursor: pointer;
+}
+.qf-btn:hover { border-color: var(--accent2); color: var(--text); }
+.qf-btn.active { background: var(--accent2); border-color: var(--accent2); color: #fff; }
+
+/* === CENTER PANEL (tree) === */
+#center-panel {
+  flex: 1; display: flex; flex-direction: column; overflow: hidden;
+  background: #0d1117; position: relative;
+}
+#tree-toolbar {
+  display: flex; align-items: center; gap: 6px;
+  padding: 4px 10px; background: var(--surface); border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+#tree-toolbar .tt-label { font-size: 12px; color: var(--accent); font-weight: 600; flex: 1; }
+
+#tree-container {
+  flex: 1; overflow: hidden; position: relative;
+  cursor: grab;
+}
+#tree-container:active { cursor: grabbing; }
+#tree-container.no-recipe {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted); font-size: 14px;
+}
+
+#tree-canvas {
+  position: absolute; top: 0; left: 0;
+  transform-origin: 0 0;
+  cursor: grab;
+}
+#tree-canvas:active { cursor: grabbing; }
+
+/* tree nodes */
+.tree-node {
+  position: absolute;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-width: 140px;
+  max-width: 220px;
+  cursor: pointer;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  z-index: 2;
+}
+.tree-node:hover { box-shadow: 0 0 12px rgba(15, 155, 142, 0.3); border-color: var(--accent2); }
+.tree-node.selected { border-color: var(--accent); box-shadow: 0 0 16px rgba(233, 69, 96, 0.4); }
+.tree-node.proposed { border-style: dashed; }
+.tree-node.leaf { border-color: #2d5a3d; }
+.tree-node .tn-name {
+  font-size: 12px; font-weight: 600; color: var(--text);
+  margin-bottom: 3px; word-break: break-word;
+}
+.tree-node .tn-mod {
+  font-size: 9px; color: var(--text-muted); margin-bottom: 2px;
+}
+.tree-node .tn-ws {
+  font-size: 10px; padding: 1px 6px; border-radius: 3px;
+  display: inline-flex; align-items: center; gap: 3px;
+  color: #fff; font-weight: 600;
+}
+.tree-node .tn-icon {
+  width: 24px; height: 24px; image-rendering: pixelated;
+  vertical-align: middle; margin-right: 4px; flex-shrink: 0;
+}
+.tree-node .tn-icon-placeholder {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; background: var(--panel); border: 1px solid var(--border);
+  border-radius: 3px; font-size: 11px; font-weight: 700; color: var(--text-muted);
+  margin-right: 4px; flex-shrink: 0;
+}
+.tree-node .tn-name {
+  display: flex; align-items: center;
+}
+/* Cycling icon (tags con multiples opciones) */
+.tn-icon-cycle {
+  position: relative; display: inline-flex; align-items: center; margin-right: 4px;
+  cursor: help; flex-shrink: 0;
+}
+.tn-icon-cycle .tn-icon { margin-right: 0; }
+.tag-badge {
+  position: absolute; bottom: -2px; right: -4px;
+  background: var(--accent); color: #fff; font-size: 8px; font-weight: 700;
+  min-width: 12px; height: 12px; border-radius: 6px; line-height: 12px;
+  text-align: center; padding: 0 2px;
+}
+/* Popup al hover */
+.tag-popup {
+  position: fixed; z-index: 500; display: none;
+  background: var(--surface); border: 1px solid var(--accent2); border-radius: 6px;
+  padding: 8px 10px; min-width: 160px; max-width: 260px; max-height: 300px;
+  overflow-y: auto; box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.tag-popup-title {
+  font-size: 10px; color: var(--accent2); text-transform: uppercase;
+  letter-spacing: 0.5px; margin-bottom: 6px; font-weight: 600;
+}
+.tag-popup-item {
+  display: flex; align-items: center; gap: 6px;
+  padding: 3px 0; font-size: 11px; color: var(--text);
+}
+.tag-popup-icon {
+  width: 16px; height: 16px; image-rendering: pixelated; flex-shrink: 0;
+}
+.tree-node .tn-qty {
+  font-size: 9px; color: var(--accent); position: absolute;
+  top: 2px; right: 6px;
+}
+
+/* connector lines drawn via SVG overlay */
+#tree-svg {
+  position: absolute; top: 0; left: 0;
+  pointer-events: none; z-index: 1;
+}
+#tree-svg line, #tree-svg path {
+  stroke: var(--border);
+  stroke-width: 2;
+  fill: none;
+}
+
+/* empty state */
+.empty-tree-msg {
+  color: var(--text-muted); text-align: center; padding: 40px;
+}
+.empty-tree-msg h2 { font-family: 'Press Start 2P', monospace; font-size: 14px; color: var(--accent); margin-bottom: 16px; }
+.empty-tree-msg p { font-size: 12px; line-height: 1.8; }
+.empty-tree-msg code { background: var(--panel); padding: 2px 6px; border-radius: 3px; color: var(--accent2); }
+
+/* === RIGHT PANEL (info) === */
+#right-panel {
+  width: 260px; min-width: 260px; background: var(--surface);
+  border-left: 1px solid var(--border); overflow-y: auto;
+  display: flex; flex-direction: column;
+}
+.rp-section {
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+}
+.rp-section h3 {
+  font-size: 11px; color: var(--accent2); text-transform: uppercase;
+  letter-spacing: 0.8px; margin-bottom: 6px;
+}
+.rp-row { display: flex; justify-content: space-between; padding: 2px 0; font-size: 11px; }
+.rp-row .rp-label { color: var(--text-muted); }
+.rp-row .rp-value { color: var(--text); font-weight: 500; }
+.rp-list { list-style: none; padding: 0; }
+.rp-list li {
+  font-size: 11px; padding: 3px 6px; border-radius: 3px; cursor: pointer;
+  display: flex; align-items: center; gap: 6px;
+}
+.rp-list li:hover { background: var(--panel); }
+.rp-list li .rp-ws-dot {
+  width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+}
+.rp-empty { font-size: 11px; color: var(--text-muted); font-style: italic; }
+
+/* Legend */
+.legend-grid { display: flex; flex-wrap: wrap; gap: 4px; }
+.legend-item {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 10px; padding: 2px 6px; border-radius: 3px;
+  background: var(--input-bg);
+}
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent2); }
+
+/* Toast notification */
+.toast {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  background: var(--accent2); color: #fff; padding: 8px 20px; border-radius: 6px;
+  font-size: 12px; z-index: 1000; opacity: 0; transition: opacity 0.3s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; }
+
+/* Export modal */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+}
+.modal-overlay.hidden { display: none; }
+.modal {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  padding: 20px; min-width: 400px; max-width: 90vw; max-height: 80vh; overflow: auto;
+}
+.modal h2 { font-size: 14px; color: var(--accent); margin-bottom: 12px; }
+.modal pre {
+  background: var(--input-bg); padding: 12px; border-radius: 4px;
+  font-family: 'Cascadia Code', 'Fira Code', monospace; font-size: 11px;
+  line-height: 1.5; overflow: auto; max-height: 400px; white-space: pre;
+  color: #c9d1d9;
+}
+.modal-actions { display: flex; gap: 8px; margin-top: 12px; justify-content: flex-end; }
+</style>
+</head>
+<body>
+
+<!-- TOOLBAR -->
+<div id="toolbar">
+  <h1>Recipe Tree Viewer</h1>
+  <button class="tb-btn" onclick="showOrphans()" title="Items with no use in recipes">Orphaned Items</button>
+  <button class="tb-btn" onclick="showCraftingTable()" title="Recipes using crafting table">Crafting Table Recipes</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" onclick="expandAll()">Expand All</button>
+  <button class="tb-btn" onclick="collapseAll()">Collapse</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" onclick="exportText()">Export Text</button>
+  <button class="tb-btn" onclick="exportImage()">Export Image</button>
+  <div class="tb-spacer"></div>
+  <span id="status">Loading...</span>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+  <!-- LEFT: Recipe List -->
+  <div id="left-panel">
+    <div class="lp-section">
+      <h3>Recipes</h3>
+      <input type="text" id="search-box" placeholder="Search by name..." oninput="filterRecipes()">
+      <div class="filter-row">
+        <label>Mod</label>
+        <select id="filter-mod" onchange="filterRecipes()"><option value="">All Mods</option></select>
+      </div>
+      <div class="filter-row">
+        <label>Station</label>
+        <select id="filter-ws" onchange="filterRecipes()"><option value="">All Stations</option></select>
+      </div>
+      <div class="filter-row">
+        <label>Chapter</label>
+        <select id="filter-chapter" onchange="filterRecipes()"><option value="">All Chapters</option></select>
+      </div>
+      <div class="quick-filters">
+        <button class="qf-btn" onclick="toggleQuickFilter(this, 'proposed')" data-filter="proposed">Proposed Only</button>
+        <button class="qf-btn" onclick="toggleQuickFilter(this, 'existing')" data-filter="existing">Existing Only</button>
+        <button class="qf-btn" onclick="toggleQuickFilter(this, 'crafting')" data-filter="crafting">Crafting Table</button>
+      </div>
+      <div class="recipe-count">Showing <span id="shown-count">0</span> of <span id="total-count">0</span> recipes</div>
+    </div>
+    <div id="recipe-list"></div>
+  </div>
+
+  <!-- CENTER: Tree -->
+  <div id="center-panel">
+    <div id="tree-toolbar">
+      <span class="tt-label" id="tree-title">Select a recipe</span>
+      <button class="tb-btn" onclick="zoomIn()" style="padding:2px 8px">+</button>
+      <button class="tb-btn" onclick="zoomOut()" style="padding:2px 8px">-</button>
+      <button class="tb-btn" onclick="resetZoom()" style="padding:2px 8px">1:1</button>
+      <button class="tb-btn" onclick="centerTree()" style="padding:2px 8px">Center</button>
+    </div>
+    <div id="tree-container" class="no-recipe">
+      <div class="empty-tree-msg" id="empty-msg">
+        <h2>Recipe Tree</h2>
+        <p>Select a recipe from the left panel to visualize its ingredient tree.</p>
+        <p>The tree shows the full crafting chain from raw ingredients to final product.</p>
+      </div>
+      <div id="tree-canvas" style="display:none">
+        <svg id="tree-svg"></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Info -->
+  <div id="right-panel">
+    <div class="rp-section">
+      <h3>Legend</h3>
+      <div class="legend-grid" id="legend-grid"></div>
+    </div>
+
+    <div class="rp-section" id="info-section">
+      <h3>Item Info</h3>
+      <div id="info-empty" class="rp-empty">Click a node in the tree to see details</div>
+      <div id="info-content" style="display:none">
+        <div class="rp-row"><span class="rp-label">Name</span><span class="rp-value" id="info-name">-</span></div>
+        <div class="rp-row"><span class="rp-label">ID</span><span class="rp-value" id="info-id" style="font-size:10px;word-break:break-all">-</span></div>
+        <div class="rp-row"><span class="rp-label">Mod</span><span class="rp-value" id="info-mod">-</span></div>
+        <div class="rp-row"><span class="rp-label">Workstation</span><span class="rp-value" id="info-ws">-</span></div>
+        <div class="rp-row"><span class="rp-label">Type</span><span class="rp-value" id="info-type">-</span></div>
+        <div class="rp-row"><span class="rp-label">Status</span><span class="rp-value" id="info-status">-</span></div>
+      </div>
+    </div>
+
+    <div class="rp-section" id="uses-section">
+      <h3>Used In</h3>
+      <div id="uses-empty" class="rp-empty">No data</div>
+      <ul class="rp-list" id="uses-list" style="display:none"></ul>
+    </div>
+
+    <div class="rp-section" id="stats-section">
+      <h3>Tree Stats</h3>
+      <div class="rp-row"><span class="rp-label">Total Nodes</span><span class="rp-value" id="stat-nodes">-</span></div>
+      <div class="rp-row"><span class="rp-label">Tree Depth</span><span class="rp-value" id="stat-depth">-</span></div>
+      <div class="rp-row"><span class="rp-label">Raw Ingredients</span><span class="rp-value" id="stat-leaves">-</span></div>
+      <div class="rp-row"><span class="rp-label">Workstations</span><span class="rp-value" id="stat-stations">-</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Export Modal -->
+<div class="modal-overlay hidden" id="export-modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h2 id="modal-title">Export</h2>
+    <pre id="modal-content"></pre>
+    <div class="modal-actions">
+      <button class="tb-btn" onclick="copyModalContent()">Copy to Clipboard</button>
+      <button class="tb-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Data load error message (hidden by default) -->
+<div id="data-error" style="display:none; position:fixed; inset:0; z-index:200;
+  background: var(--bg); flex-direction:column; align-items:center; justify-content:center; gap:20px;">
+  <h1 style="font-family:'Press Start 2P',monospace; font-size:16px; color:var(--accent)">No Recipe Data</h1>
+  <p style="font-size:14px; color:var(--text-muted); max-width:500px; text-align:center; line-height:1.8;">
+    Recipe data file not found. Run the extract script to generate it:
+  </p>
+  <code style="background:var(--panel); padding:10px 20px; border-radius:6px; color:var(--accent2); font-size:13px;">
+    python scripts/extract-mod-content.py
+  </code>
+  <p style="font-size:12px; color:var(--text-muted);">
+    This will create <code style="background:var(--panel);padding:2px 6px;border-radius:3px;color:var(--accent2)">tools/recipe-tree-data.js</code>
+  </p>
+  <p style="font-size:12px; color:var(--text-muted); margin-top:12px;">
+    Using sample data for preview...
+  </p>
+  <button class="tb-btn" onclick="dismissDataError()" style="margin-top:8px; padding:8px 20px;">
+    Continue with Sample Data
+  </button>
+</div>
+
+<script>
+// ============================================================
+// SAMPLE DATA (used when recipe-tree-data.js is not available)
+// ============================================================
+const SAMPLE_RECIPES = {
+  "farmersdelight:beef_stew": {
+    type: "farmersdelight:cooking",
+    result: "farmersdelight:beef_stew",
+    ingredients: ["minecraft:beef", "minecraft:potato", "minecraft:carrot", "farmersdelight:onion", "farmersdelight:tomato", "minecraft:bowl"],
+    mod: "farmersdelight",
+    workstation: "Cooking Pot",
+    proposed: false,
+    chapter: 2
+  },
+  "farmersdelight:hamburger": {
+    type: "minecraft:crafting_shapeless",
+    result: "farmersdelight:hamburger",
+    ingredients: ["minecraft:bread", "farmersdelight:beef_patty", "farmersdelight:tomato_sauce", "farmersdelight:cabbage_leaf"],
+    mod: "farmersdelight",
+    workstation: "Crafting Table",
+    proposed: false,
+    chapter: 2
+  },
+  "farmersdelight:beef_patty": {
+    type: "farmersdelight:cooking",
+    result: "farmersdelight:beef_patty",
+    ingredients: ["minecraft:beef"],
+    mod: "farmersdelight",
+    workstation: "Cooking Pot",
+    proposed: false,
+    chapter: 1
+  },
+  "farmersdelight:tomato_sauce": {
+    type: "farmersdelight:cutting",
+    result: "farmersdelight:tomato_sauce",
+    ingredients: ["farmersdelight:tomato", "farmersdelight:tomato"],
+    mod: "farmersdelight",
+    workstation: "Cutting Board",
+    proposed: false,
+    chapter: 1
+  },
+  "farmersdelight:cabbage_leaf": {
+    type: "farmersdelight:cutting",
+    result: "farmersdelight:cabbage_leaf",
+    ingredients: ["farmersdelight:cabbage"],
+    mod: "farmersdelight",
+    workstation: "Cutting Board",
+    proposed: false,
+    chapter: 1
+  },
+  "farmersdelight:apple_pie": {
+    type: "minecraft:crafting_shaped",
+    result: "farmersdelight:apple_pie",
+    ingredients: ["minecraft:wheat", "minecraft:apple", "minecraft:sugar", "farmersdelight:pie_crust", "minecraft:egg"],
+    mod: "farmersdelight",
+    workstation: "Crafting Table",
+    proposed: false,
+    chapter: 3
+  },
+  "farmersdelight:pie_crust": {
+    type: "minecraft:crafting_shaped",
+    result: "farmersdelight:pie_crust",
+    ingredients: ["minecraft:wheat", "minecraft:wheat", "minecraft:wheat"],
+    mod: "farmersdelight",
+    workstation: "Crafting Table",
+    proposed: false,
+    chapter: 2
+  },
+  "servo_cooking:empanada": {
+    type: "servo_cooking:bakers_oven",
+    result: "servo_cooking:empanada",
+    ingredients: ["farmersdelight:wheat_dough", "minecraft:beef", "farmersdelight:onion", "servo_cooking:cumin"],
+    mod: "servo_cooking",
+    workstation: "Baker's Oven",
+    proposed: true,
+    chapter: 3
+  },
+  "farmersdelight:wheat_dough": {
+    type: "minecraft:crafting_shapeless",
+    result: "farmersdelight:wheat_dough",
+    ingredients: ["minecraft:wheat", "minecraft:wheat", "minecraft:wheat", "minecraft:water_bucket"],
+    mod: "farmersdelight",
+    workstation: "Crafting Table",
+    proposed: false,
+    chapter: 1
+  },
+  "servo_cooking:horchata": {
+    type: "servo_cooking:licuadora",
+    result: "servo_cooking:horchata",
+    ingredients: ["minecraft:milk_bucket", "minecraft:sugar", "servo_cooking:cinnamon", "servo_cooking:rice"],
+    mod: "servo_cooking",
+    workstation: "Licuadora",
+    proposed: true,
+    chapter: 4
+  },
+  "servo_cooking:stir_fry": {
+    type: "servo_cooking:wok",
+    result: "servo_cooking:stir_fry",
+    ingredients: ["minecraft:chicken", "minecraft:carrot", "farmersdelight:onion", "farmersdelight:rice", "servo_cooking:soy_sauce"],
+    mod: "servo_cooking",
+    workstation: "Wok",
+    proposed: true,
+    chapter: 5
+  },
+  "servo_cooking:soy_sauce": {
+    type: "farmersdelight:cooking",
+    result: "servo_cooking:soy_sauce",
+    ingredients: ["servo_cooking:soybean", "minecraft:water_bucket", "minecraft:sugar"],
+    mod: "servo_cooking",
+    workstation: "Cooking Pot",
+    proposed: true,
+    chapter: 4
+  },
+  "farmersdelight:sweet_berry_cheesecake": {
+    type: "farmersdelight:cooking",
+    result: "farmersdelight:sweet_berry_cheesecake",
+    ingredients: ["minecraft:sweet_berries", "minecraft:sweet_berries", "minecraft:milk_bucket", "minecraft:sugar", "farmersdelight:pie_crust"],
+    mod: "farmersdelight",
+    workstation: "Cooking Pot",
+    proposed: false,
+    chapter: 3
+  },
+  "farmersdelight:fruit_salad": {
+    type: "farmersdelight:cutting",
+    result: "farmersdelight:fruit_salad",
+    ingredients: ["minecraft:apple", "minecraft:melon_slice", "minecraft:sweet_berries", "minecraft:bowl"],
+    mod: "farmersdelight",
+    workstation: "Cutting Board",
+    proposed: false,
+    chapter: 2
+  },
+  "servo_cooking:tacos": {
+    type: "servo_cooking:prep_station",
+    result: "servo_cooking:tacos",
+    ingredients: ["servo_cooking:tortilla", "minecraft:beef", "farmersdelight:onion", "servo_cooking:cilantro", "servo_cooking:lime"],
+    mod: "servo_cooking",
+    workstation: "Prep Station",
+    proposed: true,
+    chapter: 4
+  },
+  "servo_cooking:tortilla": {
+    type: "servo_cooking:wok",
+    result: "servo_cooking:tortilla",
+    ingredients: ["servo_cooking:masa"],
+    mod: "servo_cooking",
+    workstation: "Wok",
+    proposed: true,
+    chapter: 3
+  },
+  "servo_cooking:masa": {
+    type: "servo_cooking:prep_station",
+    result: "servo_cooking:masa",
+    ingredients: ["servo_cooking:dried_corn", "minecraft:water_bucket", "servo_cooking:cal"],
+    mod: "servo_cooking",
+    workstation: "Prep Station",
+    proposed: true,
+    chapter: 3
+  }
+};
+
+const SAMPLE_ITEM_NAMES = {
+  "minecraft:beef": "Raw Beef",
+  "minecraft:potato": "Potato",
+  "minecraft:carrot": "Carrot",
+  "minecraft:bread": "Bread",
+  "minecraft:wheat": "Wheat",
+  "minecraft:apple": "Apple",
+  "minecraft:sugar": "Sugar",
+  "minecraft:egg": "Egg",
+  "minecraft:bowl": "Bowl",
+  "minecraft:water_bucket": "Water Bucket",
+  "minecraft:milk_bucket": "Milk Bucket",
+  "minecraft:chicken": "Raw Chicken",
+  "minecraft:sweet_berries": "Sweet Berries",
+  "minecraft:melon_slice": "Melon Slice",
+  "farmersdelight:onion": "Onion",
+  "farmersdelight:tomato": "Tomato",
+  "farmersdelight:cabbage": "Cabbage",
+  "farmersdelight:rice": "Rice",
+  "farmersdelight:beef_stew": "Beef Stew",
+  "farmersdelight:hamburger": "Hamburger",
+  "farmersdelight:beef_patty": "Beef Patty",
+  "farmersdelight:tomato_sauce": "Tomato Sauce",
+  "farmersdelight:cabbage_leaf": "Cabbage Leaf",
+  "farmersdelight:apple_pie": "Apple Pie",
+  "farmersdelight:pie_crust": "Pie Crust",
+  "farmersdelight:wheat_dough": "Wheat Dough",
+  "farmersdelight:sweet_berry_cheesecake": "Sweet Berry Cheesecake",
+  "farmersdelight:fruit_salad": "Fruit Salad",
+  "servo_cooking:empanada": "Empanada",
+  "servo_cooking:cumin": "Cumin",
+  "servo_cooking:horchata": "Horchata",
+  "servo_cooking:cinnamon": "Cinnamon",
+  "servo_cooking:rice": "Rice (servo)",
+  "servo_cooking:stir_fry": "Stir Fry",
+  "servo_cooking:soy_sauce": "Soy Sauce",
+  "servo_cooking:soybean": "Soybean",
+  "servo_cooking:tacos": "Tacos",
+  "servo_cooking:tortilla": "Tortilla",
+  "servo_cooking:cilantro": "Cilantro",
+  "servo_cooking:lime": "Lime",
+  "servo_cooking:masa": "Masa",
+  "servo_cooking:dried_corn": "Dried Corn",
+  "servo_cooking:cal": "Cal"
+};
+
+// ============================================================
+// STATE
+// ============================================================
+let recipes = {};       // all recipes keyed by result item ID
+let itemNames = {};     // item ID -> display name
+let allRecipeKeys = []; // sorted list of recipe keys
+let filteredKeys = [];  // current filtered set
+let selectedRecipe = null;  // currently selected recipe key
+let selectedNode = null;    // currently selected tree node item ID
+let treeZoom = 1;
+let expandedNodes = new Set(); // node IDs that are expanded
+let allExpanded = true;
+let quickFilters = { proposed: false, existing: false, crafting: false };
+let usingSampleData = false;
+let isPanning = false;
+let panStartX = 0, panStartY = 0;
+let panOffsetX = 0, panOffsetY = 0; // current translate offsets
+let treeW = 0, treeH = 0; // current tree dimensions
+
+// reverse index: ingredient -> list of recipes that use it
+let usedInIndex = {};
+
+// ============================================================
+// DATA LOADING
+// ============================================================
+function loadData() {
+  if (typeof RECIPE_DATA !== 'undefined' && typeof ITEM_NAMES !== 'undefined') {
+    // Flatten the nested mod structure into our flat format
+    recipes = flattenRecipeData(RECIPE_DATA);
+    itemNames = ITEM_NAMES;
+    usingSampleData = false;
+  } else {
+    recipes = SAMPLE_RECIPES;
+    itemNames = SAMPLE_ITEM_NAMES;
+    usingSampleData = true;
+    document.getElementById('data-error').style.display = 'flex';
+  }
+
+  buildIndex();
+  populateFilters();
+  buildLegend();
+  allRecipeKeys = Object.keys(recipes).sort((a, b) => getItemName(a).localeCompare(getItemName(b)));
+  filteredKeys = [...allRecipeKeys];
+  renderRecipeList();
+  updateCounts();
+  setStatus(usingSampleData
+    ? `Sample data: ${allRecipeKeys.length} recipes`
+    : `Loaded ${allRecipeKeys.length} recipes`);
+}
+
+function flattenRecipeData(data) {
+  const flat = {};
+
+  for (const [modName, modData] of Object.entries(data)) {
+    if (!modData.recipes) continue;
+
+    for (const [recipeName, recipe] of Object.entries(modData.recipes)) {
+      // Parse result - may have " xN" suffix for quantity
+      let resultId = recipe.result || `${modName}:${recipeName}`;
+      resultId = resultId.replace(/\s+x\d+$/, '').trim(); // remove " x9" etc.
+
+      // Skip if result is "unknown" or empty
+      if (resultId === 'unknown' || !resultId) continue;
+
+      // Determine workstation from recipe type
+      const ws = getWorkstationFromType(recipe.type);
+
+      // If we already have a recipe for this result, prefer cooking/cutting over crafting
+      if (flat[resultId]) {
+        const existingWs = flat[resultId].workstation;
+        // Keep the more "interesting" recipe (non-crafting-table)
+        if (existingWs !== 'Crafting Table' && ws === 'Crafting Table') continue;
+      }
+
+      flat[resultId] = {
+        type: recipe.type,
+        result: resultId,
+        ingredients: recipe.ingredients || [],
+        mod: modName,
+        workstation: ws,
+        proposed: false,
+        recipeName: recipeName
+      };
+    }
+  }
+
+  return flat;
+}
+
+function dismissDataError() {
+  document.getElementById('data-error').style.display = 'none';
+}
+
+function buildIndex() {
+  usedInIndex = {};
+  for (const [key, recipe] of Object.entries(recipes)) {
+    if (!recipe.ingredients) continue;
+    for (const ing of recipe.ingredients) {
+      const ingId = normalizeIngredient(ing);
+      if (!usedInIndex[ingId]) usedInIndex[ingId] = [];
+      usedInIndex[ingId].push(key);
+    }
+  }
+}
+
+function normalizeIngredient(ing) {
+  if (typeof ing === 'string') return ing;
+  if (ing && ing.item) return ing.item;
+  if (ing && ing.tag) return '#' + ing.tag;
+  return String(ing);
+}
+
+function getItemName(itemId) {
+  if (itemNames[itemId]) return itemNames[itemId];
+  // Generate name from ID
+  const parts = itemId.split(':');
+  const raw = parts.length > 1 ? parts[1] : parts[0];
+  return raw.replace(/#/g, '').replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function getModFromId(itemId) {
+  const parts = itemId.replace('#', '').split(':');
+  return parts.length > 1 ? parts[0] : 'minecraft';
+}
+
+const WS_COLORS = {
+  'cooking-pot': '#e8852e',
+  'cutting-board': '#8b6914',
+  'keg': '#9b59b6',
+  'juicer': '#a8e06c',
+  'furnace': '#c0392b',
+  'crafting': '#7f8c8d',
+  'prep-station': '#3498db',
+  'licuadora': '#00bcd4',
+  'wok': '#f1c40f',
+  'bakers-oven': '#e91e90',
+  'create': '#27ae60',
+  'unknown': '#555555'
+};
+
+// Mapping de workstation name -> item ID para iconos
+const WS_ICON_IDS = {
+  'Cooking Pot': 'farmersdelight:cooking_pot',
+  'Cutting Board': 'farmersdelight:cutting_board',
+  'Keg': 'brewinandchewin:keg',
+  'Juicer': 'expandeddelight:juicer',
+  'Cask': 'expandeddelight:cask',
+  'Furnace': 'minecraft:furnace',
+  'Smoker': 'minecraft:smoker',
+  'Campfire': 'minecraft:campfire',
+  'Crafting Table': 'minecraft:crafting_table',
+  'Stove': 'farmersdelight:stove',
+  'Skillet': 'farmersdelight:skillet',
+  'Prep Station': null,
+  'Licuadora': null,
+  'Wok': null,
+  "Baker's Oven": null,
+  'Create': null,
+};
+
+function getWsIconHtml(wsName, size) {
+  size = size || 16;
+  const itemId = WS_ICON_IDS[wsName];
+  if (itemId && typeof ITEM_ICONS !== 'undefined' && ITEM_ICONS[itemId]) {
+    return `<img src="data:image/png;base64,${ITEM_ICONS[itemId]}" style="width:${size}px;height:${size}px;image-rendering:pixelated;vertical-align:middle" alt="${wsName}" draggable="false">`;
+  }
+  return '';
+}
+
+function buildLegend() {
+  const grid = document.getElementById('legend-grid');
+  if (!grid) return;
+  const entries = [
+    ['Cooking Pot', 'cooking-pot'],
+    ['Cutting Board', 'cutting-board'],
+    ['Keg', 'keg'],
+    ['Juicer', 'juicer'],
+    ['Cask', 'keg'],
+    ['Stove', 'furnace'],
+    ['Skillet', 'furnace'],
+    ['Furnace/Smoker', 'furnace'],
+    ['Crafting Table', 'crafting'],
+    ['Prep Station', 'prep-station'],
+    ['Licuadora', 'licuadora'],
+    ['Wok', 'wok'],
+    ["Baker's Oven", 'bakers-oven'],
+    ['Create', 'create'],
+  ];
+  grid.innerHTML = entries.map(([name, colorKey]) => {
+    const icon = getWsIconHtml(name, 14);
+    const dot = icon ? '' : `<div class="legend-dot" style="background:${WS_COLORS[colorKey]}"></div>`;
+    return `<div class="legend-item">${icon}${dot}${name}</div>`;
+  }).join('');
+}
+
+function getWorkstationColor(ws) {
+  if (!ws) return WS_COLORS.unknown;
+  const lower = ws.toLowerCase();
+  if (lower.includes('cooking pot') || lower.includes('cooking')) return WS_COLORS['cooking-pot'];
+  if (lower.includes('cutting')) return WS_COLORS['cutting-board'];
+  if (lower.includes('keg')) return WS_COLORS.keg;
+  if (lower.includes('juicer')) return WS_COLORS.juicer;
+  if (lower.includes('furnace') || lower.includes('smoker') || lower.includes('smelting') || lower.includes('smoking') || lower.includes('blasting')) return WS_COLORS.furnace;
+  if (lower.includes('prep')) return WS_COLORS['prep-station'];
+  if (lower.includes('licuadora') || lower.includes('blender')) return WS_COLORS.licuadora;
+  if (lower.includes('wok')) return WS_COLORS.wok;
+  if (lower.includes('baker') || lower.includes('oven')) return WS_COLORS['bakers-oven'];
+  if (lower.includes('create') || lower.includes('mixing') || lower.includes('pressing') || lower.includes('deployer') || lower.includes('basin') || lower.includes('compacting') || lower.includes('milling')) return WS_COLORS.create;
+  if (lower.includes('crafting') || lower.includes('shaped') || lower.includes('shapeless')) return WS_COLORS.crafting;
+  return WS_COLORS.unknown;
+}
+
+function getWorkstationFromType(type) {
+  if (!type) return 'Unknown';
+  const lower = type.toLowerCase();
+  if (lower.includes('cooking')) return 'Cooking Pot';
+  if (lower.includes('cutting')) return 'Cutting Board';
+  if (lower.includes('keg') || lower.includes('brewing')) return 'Keg';
+  if (lower.includes('juicer')) return 'Juicer';
+  if (lower.includes('smelting') || lower.includes('furnace')) return 'Furnace';
+  if (lower.includes('smoking') || lower.includes('smoker')) return 'Smoker';
+  if (lower.includes('blasting')) return 'Furnace';
+  if (lower.includes('prep_station')) return 'Prep Station';
+  if (lower.includes('licuadora') || lower.includes('blender')) return 'Licuadora';
+  if (lower.includes('wok')) return 'Wok';
+  if (lower.includes('bakers_oven') || lower.includes('oven')) return "Baker's Oven";
+  if (lower.includes('mixing') || lower.includes('pressing') || lower.includes('deployer') || lower.includes('compacting') || lower.includes('milling')) return 'Create';
+  if (lower.includes('crafting') || lower.includes('shaped')) return 'Crafting Table';
+  return type.split(':').pop().replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+// Cache de iconos resueltos
+const _iconCache = {};
+
+function _findIconBase64(itemId) {
+  if (_iconCache[itemId] !== undefined) return _iconCache[itemId];
+  const icons = (typeof ITEM_ICONS !== 'undefined') ? ITEM_ICONS : {};
+  let found = null;
+
+  // 1. Match directo
+  if (icons[itemId]) found = icons[itemId];
+
+  // 2. Tags: #c:almonds -> buscar miembros del tag, o singular
+  if (!found && itemId.startsWith('#')) {
+    const tagName = itemId.split(':').pop().replace(/^foods\//, '').replace(/^crops\//, '');
+    const variants = [tagName, tagName.replace(/s$/, ''), tagName.replace(/es$/, '')];
+    for (const v of variants) {
+      for (const [k, icon] of Object.entries(icons)) {
+        if (k.endsWith(':' + v)) { found = icon; break; }
+      }
+      if (found) break;
+    }
+    if (!found) {
+      for (const v of variants) {
+        for (const prefix of ['croptopia', 'farmersdelight', 'expandeddelight', 'minecraft', 'brewinandchewin']) {
+          if (icons[`${prefix}:${v}`]) { found = icons[`${prefix}:${v}`]; break; }
+        }
+        if (found) break;
+      }
+    }
+  }
+
+  // 3. Fallback: buscar nombre en otros mods
+  if (!found && !itemId.startsWith('#')) {
+    const name = itemId.split(':').pop();
+    for (const prefix of ['croptopia', 'farmersdelight', 'expandeddelight', 'minecraft', 'brewinandchewin']) {
+      if (icons[`${prefix}:${name}`]) { found = icons[`${prefix}:${name}`]; break; }
+    }
+  }
+
+  _iconCache[itemId] = found;
+  return found;
+}
+
+function getTagMembers(tagId) {
+  // Busca los items reales que pertenecen a un tag
+  if (typeof ITEM_TAGS === 'undefined') return [];
+  const clean = tagId.replace(/^#/, '');
+  if (ITEM_TAGS[clean]) return ITEM_TAGS[clean];
+  // Probar variantes
+  const tagName = clean.split(':').pop();
+  const variants = [tagName, tagName.replace(/s$/, ''), tagName + 's'];
+  for (const v of variants) {
+    const key = `c:${v}`;
+    if (ITEM_TAGS[key]) return ITEM_TAGS[key];
+  }
+  return [];
+}
+
+function getItemIcon(itemId) {
+  const isTag = itemId.startsWith('#') || itemId.includes('|');
+  const icons = (typeof ITEM_ICONS !== 'undefined') ? ITEM_ICONS : {};
+
+  if (isTag) {
+    // Obtener todos los miembros del tag que tienen icono
+    let members = [];
+    if (itemId.includes('|')) {
+      members = itemId.split('|');
+    } else {
+      members = getTagMembers(itemId);
+    }
+    // Filtrar a los que tienen icono
+    const withIcons = members.filter(m => _findIconBase64(m)).map(m => ({
+      id: m, b64: _findIconBase64(m), name: getItemName(m)
+    }));
+
+    if (withIcons.length === 0) {
+      // Intentar icono unico
+      const b64 = _findIconBase64(itemId);
+      if (b64) return `<img class="tn-icon" src="data:image/png;base64,${b64}" alt="" draggable="false">`;
+      return _makePlaceholder(itemId);
+    }
+
+    if (withIcons.length === 1) {
+      return `<img class="tn-icon" src="data:image/png;base64,${withIcons[0].b64}" alt="" draggable="false">`;
+    }
+
+    // Multiples: crear cycling icon con popup al hover
+    const uid = 'cyc_' + (++_cycleCounter);
+    const first = withIcons[0];
+    // Registrar para el interval
+    _cycleData[uid] = { items: withIcons, index: 0 };
+
+    // Popup items HTML
+    const popupItems = withIcons.map(w =>
+      `<div class="tag-popup-item"><img src="data:image/png;base64,${w.b64}" class="tag-popup-icon">${w.name}</div>`
+    ).join('');
+
+    return `<span class="tn-icon-cycle" data-cycle="${uid}" onmouseenter="_showTagPopup(event,'${uid}')" onmouseleave="_hideTagPopup()">` +
+      `<img class="tn-icon" src="data:image/png;base64,${first.b64}" alt="" draggable="false" data-cycle-img="${uid}">` +
+      `<span class="tag-badge">${withIcons.length}</span>` +
+      `</span>`;
+  }
+
+  // Item normal
+  const b64 = _findIconBase64(itemId);
+  if (b64) return `<img class="tn-icon" src="data:image/png;base64,${b64}" alt="" draggable="false">`;
+  return _makePlaceholder(itemId);
+}
+
+function _makePlaceholder(itemId) {
+  const name = (itemId.split(':').pop() || '?').replace(/#/g, '');
+  return `<span class="tn-icon-placeholder">${name[0].toUpperCase()}</span>`;
+}
+
+// Cycling system
+let _cycleCounter = 0;
+const _cycleData = {};
+
+setInterval(() => {
+  for (const [uid, data] of Object.entries(_cycleData)) {
+    data.index = (data.index + 1) % data.items.length;
+    const img = document.querySelector(`[data-cycle-img="${uid}"]`);
+    if (img) {
+      img.src = 'data:image/png;base64,' + data.items[data.index].b64;
+    }
+  }
+}, 1500);
+
+// Tag popup
+let _tagPopupEl = null;
+
+function _showTagPopup(event, uid) {
+  const data = _cycleData[uid];
+  if (!data) return;
+  if (!_tagPopupEl) {
+    _tagPopupEl = document.createElement('div');
+    _tagPopupEl.className = 'tag-popup';
+    document.body.appendChild(_tagPopupEl);
+  }
+  _tagPopupEl.innerHTML = `<div class="tag-popup-title">Accepts any:</div>` +
+    data.items.map(w =>
+      `<div class="tag-popup-item"><img src="data:image/png;base64,${w.b64}" class="tag-popup-icon">${w.name}</div>`
+    ).join('');
+  _tagPopupEl.style.display = 'block';
+
+  const rect = event.target.closest('.tn-icon-cycle').getBoundingClientRect();
+  _tagPopupEl.style.left = (rect.right + 8) + 'px';
+  _tagPopupEl.style.top = rect.top + 'px';
+}
+
+function _hideTagPopup() {
+  if (_tagPopupEl) _tagPopupEl.style.display = 'none';
+}
+
+// Keep this for backwards compat with export
+function getLeafIcon(itemId) {
+  return '';
+}
+
+// ============================================================
+// FILTERS
+// ============================================================
+function populateFilters() {
+  const mods = new Set();
+  const stations = new Set();
+  const chapters = new Set();
+
+  for (const recipe of Object.values(recipes)) {
+    if (recipe.mod) mods.add(recipe.mod);
+    const ws = recipe.workstation || getWorkstationFromType(recipe.type);
+    if (ws) stations.add(ws);
+    if (recipe.chapter) chapters.add(recipe.chapter);
+  }
+
+  const modSel = document.getElementById('filter-mod');
+  [...mods].sort().forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m; opt.textContent = m;
+    modSel.appendChild(opt);
+  });
+
+  const wsSel = document.getElementById('filter-ws');
+  [...stations].sort().forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s; opt.textContent = s;
+    wsSel.appendChild(opt);
+  });
+
+  const chSel = document.getElementById('filter-chapter');
+  [...chapters].sort((a, b) => a - b).forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c; opt.textContent = `Chapter ${c}`;
+    chSel.appendChild(opt);
+  });
+}
+
+function toggleQuickFilter(btn, filter) {
+  quickFilters[filter] = !quickFilters[filter];
+  btn.classList.toggle('active', quickFilters[filter]);
+  // mutually exclusive: proposed / existing
+  if (filter === 'proposed' && quickFilters.proposed) {
+    quickFilters.existing = false;
+    document.querySelector('.qf-btn[data-filter="existing"]').classList.remove('active');
+  }
+  if (filter === 'existing' && quickFilters.existing) {
+    quickFilters.proposed = false;
+    document.querySelector('.qf-btn[data-filter="proposed"]').classList.remove('active');
+  }
+  filterRecipes();
+}
+
+function filterRecipes() {
+  const search = document.getElementById('search-box').value.toLowerCase().trim();
+  const modFilter = document.getElementById('filter-mod').value;
+  const wsFilter = document.getElementById('filter-ws').value;
+  const chFilter = document.getElementById('filter-chapter').value;
+
+  filteredKeys = allRecipeKeys.filter(key => {
+    const recipe = recipes[key];
+    const name = getItemName(key).toLowerCase();
+    const mod = recipe.mod || getModFromId(key);
+    const ws = recipe.workstation || getWorkstationFromType(recipe.type);
+
+    if (search && !name.includes(search) && !key.includes(search)) return false;
+    if (modFilter && mod !== modFilter) return false;
+    if (wsFilter && ws !== wsFilter) return false;
+    if (chFilter && String(recipe.chapter) !== chFilter) return false;
+    if (quickFilters.proposed && !recipe.proposed) return false;
+    if (quickFilters.existing && recipe.proposed) return false;
+    if (quickFilters.crafting) {
+      const isCtable = ws === 'Crafting Table' || (recipe.type && (recipe.type.includes('crafting') || recipe.type.includes('shaped')));
+      if (!isCtable) return false;
+    }
+
+    return true;
+  });
+
+  renderRecipeList();
+  updateCounts();
+}
+
+function updateCounts() {
+  document.getElementById('shown-count').textContent = filteredKeys.length;
+  document.getElementById('total-count').textContent = allRecipeKeys.length;
+}
+
+// ============================================================
+// RECIPE LIST
+// ============================================================
+function renderRecipeList() {
+  const list = document.getElementById('recipe-list');
+  list.innerHTML = '';
+
+  for (const key of filteredKeys) {
+    const recipe = recipes[key];
+    const ws = recipe.workstation || getWorkstationFromType(recipe.type);
+    const mod = recipe.mod || getModFromId(key);
+
+    const div = document.createElement('div');
+    div.className = 'recipe-item' + (recipe.proposed ? ' proposed' : '') + (key === selectedRecipe ? ' selected' : '');
+    div.dataset.key = key;
+    div.onclick = () => selectRecipe(key);
+
+    const listIcon = getItemIcon(key);
+    div.innerHTML = `
+      <div class="ri-ws-dot" style="background:${getWorkstationColor(ws)}"></div>
+      ${listIcon}
+      <span class="ri-name" title="${key}">${getItemName(key)}</span>
+      <span class="ri-mod">${mod}</span>
+    `;
+
+    list.appendChild(div);
+  }
+}
+
+function selectRecipe(key) {
+  selectedRecipe = key;
+  selectedNode = null;
+  expandedNodes = new Set();
+  allExpanded = true;
+
+  // update list selection
+  document.querySelectorAll('.recipe-item').forEach(el => {
+    el.classList.toggle('selected', el.dataset.key === key);
+  });
+
+  renderTree();
+  clearInfoPanel();
+}
+
+// ============================================================
+// TREE BUILDING
+// ============================================================
+function buildTree(itemId, depth, visited) {
+  if (!visited) visited = new Set();
+  // prevent infinite loops
+  if (visited.has(itemId)) {
+    return { id: itemId, name: getItemName(itemId), leaf: true, circular: true, children: [], depth };
+  }
+
+  const recipe = recipes[itemId];
+  if (!recipe || !recipe.ingredients || recipe.ingredients.length === 0) {
+    // leaf node - raw ingredient
+    return {
+      id: itemId,
+      name: getItemName(itemId),
+      mod: getModFromId(itemId),
+      leaf: true,
+      children: [],
+      depth
+    };
+  }
+
+  visited.add(itemId);
+
+  const ws = recipe.workstation || getWorkstationFromType(recipe.type);
+  const children = [];
+
+  // Deduplicate ingredients and count
+  const ingCounts = {};
+  for (const ing of recipe.ingredients) {
+    const ingId = normalizeIngredient(ing);
+    ingCounts[ingId] = (ingCounts[ingId] || 0) + 1;
+  }
+
+  for (const [ingId, count] of Object.entries(ingCounts)) {
+    // only expand if the node is expanded
+    const nodeKey = itemId + '>' + ingId;
+    const shouldExpand = allExpanded || expandedNodes.has(nodeKey);
+    const childRecipe = recipes[ingId];
+
+    let child;
+    if (shouldExpand && childRecipe && childRecipe.ingredients) {
+      child = buildTree(ingId, depth + 1, new Set(visited));
+    } else {
+      child = {
+        id: ingId,
+        name: getItemName(ingId),
+        mod: getModFromId(ingId),
+        leaf: !childRecipe || !childRecipe.ingredients || !childRecipe.ingredients.length,
+        collapsed: childRecipe && childRecipe.ingredients && childRecipe.ingredients.length > 0,
+        children: [],
+        depth: depth + 1
+      };
+    }
+    child.count = count;
+    child.parentId = itemId;
+    children.push(child);
+  }
+
+  visited.delete(itemId);
+
+  return {
+    id: itemId,
+    name: getItemName(itemId),
+    mod: recipe.mod || getModFromId(itemId),
+    workstation: ws,
+    type: recipe.type,
+    proposed: recipe.proposed,
+    leaf: false,
+    children,
+    depth
+  };
+}
+
+// ============================================================
+// TREE RENDERING
+// ============================================================
+const NODE_W = 180;
+const NODE_H = 58;
+const H_GAP = 60;
+const V_GAP = 16;
+
+function renderTree() {
+  if (!selectedRecipe) return;
+
+  const container = document.getElementById('tree-container');
+  const canvas = document.getElementById('tree-canvas');
+  const svg = document.getElementById('tree-svg');
+  const emptyMsg = document.getElementById('empty-msg');
+
+  container.classList.remove('no-recipe');
+  emptyMsg.style.display = 'none';
+  canvas.style.display = 'block';
+
+  // build tree data
+  const tree = buildTree(selectedRecipe, 0);
+
+  // set title
+  document.getElementById('tree-title').textContent = getItemName(selectedRecipe);
+
+  // measure tree
+  const measured = measureTree(tree);
+
+  // layout
+  const padding = 40;
+  const totalW = (measured.maxDepth + 1) * (NODE_W + H_GAP) + padding * 2;
+  const totalH = measured.totalHeight + padding * 2;
+
+  treeW = totalW;
+  treeH = totalH;
+  canvas.style.width = totalW + 'px';
+  canvas.style.height = totalH + 'px';
+  canvas.style.transformOrigin = '0 0';
+
+  // clear
+  canvas.querySelectorAll('.tree-node').forEach(n => n.remove());
+  svg.innerHTML = '';
+  svg.setAttribute('width', totalW);
+  svg.setAttribute('height', totalH);
+
+  // position nodes (root on the right, children to the left)
+  const maxDepthVal = measured.maxDepth;
+  const startX = padding + maxDepthVal * (NODE_W + H_GAP); // root at far right
+  const startY = padding;
+  const positions = {}; // nodeUniqueKey -> {x, y}
+
+  layoutNode(tree, 0, startX, startY, positions, measured);
+
+  // draw connector lines
+  drawConnectors(tree, positions, svg);
+
+  // draw nodes
+  for (const [uniqueKey, pos] of Object.entries(positions)) {
+    const node = pos.node;
+    const div = createNodeElement(node, uniqueKey);
+    div.style.left = pos.x + 'px';
+    div.style.top = pos.y + 'px';
+    canvas.appendChild(div);
+  }
+
+  // update stats
+  updateTreeStats(tree, measured);
+
+  // Auto-fit y centrar
+  fitTree();
+}
+
+function measureTree(node) {
+  // returns { height (of this subtree), maxDepth, totalHeight (for entire tree) }
+  if (node.children.length === 0) {
+    node._height = NODE_H;
+    return { height: NODE_H, maxDepth: node.depth };
+  }
+
+  let childrenTotalH = 0;
+  let maxDepth = node.depth;
+
+  for (const child of node.children) {
+    const m = measureTree(child);
+    childrenTotalH += m.height;
+    maxDepth = Math.max(maxDepth, m.maxDepth);
+  }
+  childrenTotalH += (node.children.length - 1) * V_GAP;
+
+  node._height = Math.max(NODE_H, childrenTotalH);
+
+  return {
+    height: node._height,
+    maxDepth,
+    totalHeight: node._height
+  };
+}
+
+let nodeCounter = 0;
+
+function layoutNode(node, depth, x, yStart, positions, measured) {
+  const uniqueKey = 'n' + (nodeCounter++);
+
+  if (node.children.length === 0) {
+    // leaf or collapsed - position this node centered in its allocated height
+    const y = yStart;
+    positions[uniqueKey] = { x, y, node };
+    node._centerY = y + NODE_H / 2;
+    return;
+  }
+
+  // position children to the left of this node
+  const childX = x - NODE_W - H_GAP;
+  let childY = yStart;
+
+  // if children are shorter than this node, center them
+  let childrenTotalH = 0;
+  for (const child of node.children) {
+    childrenTotalH += child._height;
+  }
+  childrenTotalH += (node.children.length - 1) * V_GAP;
+
+  if (childrenTotalH < node._height) {
+    childY = yStart + (node._height - childrenTotalH) / 2;
+  }
+
+  for (const child of node.children) {
+    layoutNode(child, depth + 1, childX, childY, positions, measured);
+    childY += child._height + V_GAP;
+  }
+
+  // position this node centered vertically among its children
+  const firstChildCenter = node.children[0]._centerY;
+  const lastChildCenter = node.children[node.children.length - 1]._centerY;
+  const myCenter = (firstChildCenter + lastChildCenter) / 2;
+  const myY = myCenter - NODE_H / 2;
+
+  positions[uniqueKey] = { x, y: myY, node };
+  node._centerY = myCenter;
+}
+
+function drawConnectors(tree, positions, svg) {
+  // find position entries for parent-child relationships
+  const posArr = Object.values(positions);
+
+  for (const pos of posArr) {
+    const node = pos.node;
+    if (node.children.length === 0) continue;
+
+    // Parent is on the right, children are on the left
+    const parentLeft = pos.x;
+    const parentCY = pos.y + NODE_H / 2;
+
+    for (const child of node.children) {
+      // find the child's position
+      const childPos = posArr.find(p => p.node === child);
+      if (!childPos) continue;
+
+      const childRight = childPos.x + NODE_W;
+      const childCY = childPos.y + NODE_H / 2;
+
+      // draw a bezier curve from child right edge to parent left edge
+      const midX = (childRight + parentLeft) / 2;
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', `M ${childRight} ${childCY} C ${midX} ${childCY}, ${midX} ${parentCY}, ${parentLeft} ${parentCY}`);
+      path.setAttribute('stroke', getWorkstationColor(node.workstation || 'unknown'));
+      path.setAttribute('stroke-width', '2');
+      path.setAttribute('fill', 'none');
+      path.setAttribute('stroke-opacity', '0.5');
+      svg.appendChild(path);
+    }
+  }
+}
+
+function createNodeElement(node, uniqueKey) {
+  const div = document.createElement('div');
+  div.className = 'tree-node';
+  if (node.leaf) div.classList.add('leaf');
+  if (node.proposed) div.classList.add('proposed');
+  if (node.id === selectedNode) div.classList.add('selected');
+  if (node.collapsed) div.classList.add('collapsed');
+
+  const recipe = recipes[node.id];
+  const ws = node.workstation || (recipe ? recipe.workstation || getWorkstationFromType(recipe.type) : null);
+  const wsColor = ws ? getWorkstationColor(ws) : WS_COLORS.unknown;
+
+  let html = '';
+
+  if (node.count && node.count > 1) {
+    html += `<span class="tn-qty">x${node.count}</span>`;
+  }
+
+  const icon = getItemIcon(node.id);
+
+  if (node.leaf) {
+    html += `<div class="tn-name">${icon}${node.name}</div>`;
+    html += `<div class="tn-mod">${node.mod || getModFromId(node.id)}</div>`;
+    if (node.collapsed) {
+      html += `<div class="tn-ws" style="background:${wsColor};font-size:9px;cursor:pointer" title="Click to expand">+ expand</div>`;
+    }
+  } else {
+    html += `<div class="tn-name">${icon}${node.name}</div>`;
+    html += `<div class="tn-mod">${node.mod || getModFromId(node.id)}</div>`;
+    if (ws) {
+      const wsIcon = getWsIconHtml(ws, 12);
+      html += `<div class="tn-ws" style="background:${wsColor}">${wsIcon} ${ws}</div>`;
+    }
+  }
+
+  div.innerHTML = html;
+  div.style.borderColor = node.leaf ? '#2d5a3d' : wsColor;
+
+  div.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (node.collapsed) {
+      // expand this node
+      const nodeKey = node.parentId + '>' + node.id;
+      expandedNodes.add(nodeKey);
+      nodeCounter = 0;
+      renderTree();
+      return;
+    }
+    selectNode(node);
+  });
+
+  return div;
+}
+
+function selectNode(node) {
+  selectedNode = node.id;
+
+  // update selected class
+  document.querySelectorAll('.tree-node').forEach(n => n.classList.remove('selected'));
+  // re-render to update selection visually isn't great, update manually
+  // Actually just re-render since it's fast enough
+  nodeCounter = 0;
+  renderTree();
+
+  // show info
+  showNodeInfo(node);
+}
+
+// ============================================================
+// INFO PANEL
+// ============================================================
+function clearInfoPanel() {
+  document.getElementById('info-empty').style.display = '';
+  document.getElementById('info-content').style.display = 'none';
+  document.getElementById('uses-empty').style.display = '';
+  document.getElementById('uses-list').style.display = 'none';
+  document.getElementById('uses-list').innerHTML = '';
+}
+
+function showNodeInfo(node) {
+  document.getElementById('info-empty').style.display = 'none';
+  document.getElementById('info-content').style.display = '';
+
+  document.getElementById('info-name').textContent = node.name;
+  document.getElementById('info-id').textContent = node.id;
+  document.getElementById('info-mod').textContent = node.mod || getModFromId(node.id);
+
+  const recipe = recipes[node.id];
+  const ws = node.workstation || (recipe ? recipe.workstation || getWorkstationFromType(recipe.type) : 'None (raw)');
+  document.getElementById('info-ws').textContent = ws || 'None (raw)';
+  document.getElementById('info-type').textContent = node.type || (recipe ? recipe.type : 'None') || 'None';
+  document.getElementById('info-status').textContent = node.proposed ? 'Proposed' : (node.leaf ? 'Raw / Base' : 'Existing');
+
+  // Used in
+  const uses = usedInIndex[node.id] || [];
+  const usesEmpty = document.getElementById('uses-empty');
+  const usesList = document.getElementById('uses-list');
+
+  if (uses.length === 0) {
+    usesEmpty.style.display = '';
+    usesEmpty.textContent = node.leaf ? 'No known uses' : 'Final product';
+    usesList.style.display = 'none';
+  } else {
+    usesEmpty.style.display = 'none';
+    usesList.style.display = '';
+    usesList.innerHTML = '';
+
+    for (const useKey of uses) {
+      const useRecipe = recipes[useKey];
+      const useWs = useRecipe ? useRecipe.workstation || getWorkstationFromType(useRecipe.type) : 'Unknown';
+      const li = document.createElement('li');
+      li.innerHTML = `<div class="rp-ws-dot" style="background:${getWorkstationColor(useWs)}"></div>${getItemName(useKey)}`;
+      li.onclick = () => selectRecipe(useKey);
+      usesList.appendChild(li);
+    }
+  }
+}
+
+function updateTreeStats(tree, measured) {
+  let nodeCount = 0;
+  let leafCount = 0;
+  let maxDepth = 0;
+  const stations = new Set();
+
+  function walk(n) {
+    nodeCount++;
+    maxDepth = Math.max(maxDepth, n.depth);
+    if (n.leaf && !n.collapsed) leafCount++;
+    if (n.workstation) stations.add(n.workstation);
+    for (const child of n.children) walk(child);
+  }
+  walk(tree);
+
+  document.getElementById('stat-nodes').textContent = nodeCount;
+  document.getElementById('stat-depth').textContent = maxDepth + 1;
+  document.getElementById('stat-leaves').textContent = leafCount;
+  document.getElementById('stat-stations').textContent = stations.size;
+}
+
+// ============================================================
+// ZOOM
+// ============================================================
+function zoomIn() {
+  treeZoom = Math.min(3, treeZoom + 0.1);
+  applyZoom();
+}
+
+function zoomOut() {
+  treeZoom = Math.max(0.2, treeZoom - 0.1);
+  applyZoom();
+}
+
+function resetZoom() {
+  treeZoom = 1;
+  applyZoom();
+}
+
+function applyZoom() {
+  const canvas = document.getElementById('tree-canvas');
+  canvas.style.transform = `translate(${panOffsetX}px, ${panOffsetY}px) scale(${treeZoom})`;
+  setStatus(`Zoom: ${Math.round(treeZoom * 100)}%`);
+}
+
+function centerTree() {
+  if (!selectedRecipe) return;
+  const container = document.getElementById('tree-container');
+  const cw = container.clientWidth;
+  const ch = container.clientHeight;
+  const scaledW = treeW * treeZoom;
+  const scaledH = treeH * treeZoom;
+  panOffsetX = (cw - scaledW) / 2;
+  panOffsetY = (ch - scaledH) / 2;
+  applyZoom();
+}
+
+function fitTree() {
+  if (!selectedRecipe) return;
+  const container = document.getElementById('tree-container');
+  const cw = container.clientWidth;
+  const ch = container.clientHeight;
+  const fitZoomW = cw / treeW;
+  const fitZoomH = ch / treeH;
+  treeZoom = Math.min(fitZoomW, fitZoomH, 1.0);
+  treeZoom = Math.max(treeZoom, 0.1);
+  centerTree();
+}
+
+// ============================================================
+// EXPAND / COLLAPSE
+// ============================================================
+function expandAll() {
+  allExpanded = true;
+  expandedNodes = new Set();
+  nodeCounter = 0;
+  if (selectedRecipe) renderTree();
+}
+
+function collapseAll() {
+  allExpanded = false;
+  expandedNodes = new Set();
+  nodeCounter = 0;
+  if (selectedRecipe) renderTree();
+}
+
+// ============================================================
+// ORPHANED ITEMS
+// ============================================================
+function showOrphans() {
+  // Find ingredients that are never used as a result
+  // And results that are never used as ingredients
+  const allIngredients = new Set();
+  const allResults = new Set();
+
+  for (const [key, recipe] of Object.entries(recipes)) {
+    allResults.add(key);
+    if (recipe.ingredients) {
+      for (const ing of recipe.ingredients) {
+        allIngredients.add(normalizeIngredient(ing));
+      }
+    }
+  }
+
+  // Items that are results but never used as ingredients
+  const unusedResults = [];
+  for (const result of allResults) {
+    if (!usedInIndex[result] || usedInIndex[result].length === 0) {
+      // This is a final product, not orphaned
+      // But check if it's intermediate (used nowhere)
+    }
+  }
+
+  // Items that appear as ingredients but have no recipe and are never the final result of a "useful" chain
+  // More useful: find intermediate items that are never used
+  const orphaned = [];
+  for (const result of allResults) {
+    const uses = usedInIndex[result] || [];
+    if (uses.length === 0) {
+      orphaned.push(result);
+    }
+  }
+
+  // Show as text export
+  let text = 'ORPHANED ITEMS (recipes whose output is never used as ingredient in another recipe)\n';
+  text += '='.repeat(80) + '\n\n';
+  text += `Found ${orphaned.length} items:\n\n`;
+
+  for (const id of orphaned.sort()) {
+    const recipe = recipes[id];
+    const ws = recipe.workstation || getWorkstationFromType(recipe.type);
+    text += `  ${getItemName(id).padEnd(30)} ${id.padEnd(40)} [${ws}]\n`;
+  }
+
+  showModal('Orphaned Items', text);
+}
+
+// ============================================================
+// CRAFTING TABLE RECIPES
+// ============================================================
+function showCraftingTable() {
+  const ctRecipes = [];
+  for (const [key, recipe] of Object.entries(recipes)) {
+    const ws = recipe.workstation || getWorkstationFromType(recipe.type);
+    if (ws === 'Crafting Table') {
+      ctRecipes.push({ key, recipe, ws });
+    }
+  }
+
+  let text = 'CRAFTING TABLE RECIPES (candidates to move to custom workstations)\n';
+  text += '='.repeat(80) + '\n\n';
+  text += `Found ${ctRecipes.length} recipes:\n\n`;
+
+  for (const { key, recipe } of ctRecipes.sort((a, b) => a.key.localeCompare(b.key))) {
+    const mod = recipe.mod || getModFromId(key);
+    const ings = (recipe.ingredients || []).map(i => getItemName(normalizeIngredient(i))).join(', ');
+    text += `  ${getItemName(key).padEnd(30)} [${mod}]\n`;
+    text += `    Type: ${recipe.type}\n`;
+    text += `    Ingredients: ${ings}\n\n`;
+  }
+
+  showModal('Crafting Table Recipes', text);
+}
+
+// ============================================================
+// EXPORT
+// ============================================================
+function exportText() {
+  if (!selectedRecipe) {
+    toast('Select a recipe first');
+    return;
+  }
+
+  const tree = buildTree(selectedRecipe, 0);
+  let text = '';
+
+  function printNode(node, prefix, isLast) {
+    const connector = prefix === '' ? '' : (isLast ? '\\-- ' : '|-- ');
+    const qty = node.count && node.count > 1 ? ` x${node.count}` : '';
+    const ws = node.workstation ? ` [${node.workstation}]` : '';
+    const proposed = node.proposed ? ' (PROPOSED)' : '';
+    const leaf = node.leaf && !node.collapsed ? ' *' : '';
+
+    text += prefix + connector + node.name + qty + ws + proposed + leaf + '\n';
+
+    const childPrefix = prefix === '' ? '' : prefix + (isLast ? '    ' : '|   ');
+    for (let i = 0; i < node.children.length; i++) {
+      printNode(node.children[i], childPrefix, i === node.children.length - 1);
+    }
+  }
+
+  printNode(tree, '', true);
+
+  showModal(`Recipe Tree: ${getItemName(selectedRecipe)}`, text);
+}
+
+function exportImage() {
+  if (!selectedRecipe) {
+    toast('Select a recipe first');
+    return;
+  }
+
+  const canvas = document.getElementById('tree-canvas');
+  const svg = document.getElementById('tree-svg');
+
+  // Use html2canvas approach - render to a canvas
+  // Since we can't use external libs, we'll create an SVG-based export
+  const w = parseInt(canvas.style.width);
+  const h = parseInt(canvas.style.height);
+
+  const exportCanvas = document.createElement('canvas');
+  exportCanvas.width = w * 2; // 2x for quality
+  exportCanvas.height = h * 2;
+  const ctx = exportCanvas.getContext('2d');
+  ctx.scale(2, 2);
+
+  // Background
+  ctx.fillStyle = '#0d1117';
+  ctx.fillRect(0, 0, w, h);
+
+  // Draw connectors from SVG paths
+  const paths = svg.querySelectorAll('path');
+  for (const path of paths) {
+    const d = path.getAttribute('d');
+    const stroke = path.getAttribute('stroke');
+    ctx.strokeStyle = stroke || '#1a3a5c';
+    ctx.lineWidth = 2;
+    ctx.globalAlpha = 0.5;
+
+    // Parse the bezier curve: M x1 y1 C cx1 cy1, cx2 cy2, x2 y2
+    const match = d.match(/M\s+([\d.]+)\s+([\d.]+)\s+C\s+([\d.]+)\s+([\d.]+),\s+([\d.]+)\s+([\d.]+),\s+([\d.]+)\s+([\d.]+)/);
+    if (match) {
+      const [, x1, y1, cx1, cy1, cx2, cy2, x2, y2] = match.map(Number);
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.bezierCurveTo(cx1, cy1, cx2, cy2, x2, y2);
+      ctx.stroke();
+    }
+  }
+
+  ctx.globalAlpha = 1;
+
+  // Draw nodes
+  const nodes = canvas.querySelectorAll('.tree-node');
+  for (const node of nodes) {
+    const x = parseInt(node.style.left);
+    const y = parseInt(node.style.top);
+    const nodeW = node.offsetWidth;
+    const nodeH = node.offsetHeight;
+
+    // background
+    ctx.fillStyle = '#16213e';
+    ctx.strokeStyle = node.style.borderColor || '#1a3a5c';
+    ctx.lineWidth = 2;
+
+    if (node.classList.contains('proposed')) {
+      ctx.setLineDash([6, 3]);
+    } else {
+      ctx.setLineDash([]);
+    }
+
+    roundRect(ctx, x, y, nodeW, nodeH, 8);
+    ctx.fill();
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // text
+    const nameEl = node.querySelector('.tn-name');
+    const modEl = node.querySelector('.tn-mod');
+    const wsEl = node.querySelector('.tn-ws');
+
+    if (nameEl) {
+      ctx.fillStyle = '#e0e0e0';
+      ctx.font = '600 12px Segoe UI, system-ui, sans-serif';
+      ctx.fillText(nameEl.textContent.replace(/[^\x20-\x7E]/g, '').trim(), x + 12, y + 18);
+    }
+    if (modEl) {
+      ctx.fillStyle = '#8899aa';
+      ctx.font = '9px Segoe UI, system-ui, sans-serif';
+      ctx.fillText(modEl.textContent, x + 12, y + 30);
+    }
+    if (wsEl) {
+      const wsText = wsEl.textContent;
+      const bgColor = wsEl.style.background || '#555';
+      ctx.fillStyle = bgColor;
+      const tw = ctx.measureText(wsText).width + 12;
+      roundRect(ctx, x + 12, y + 35, tw, 16, 3);
+      ctx.fill();
+      ctx.fillStyle = '#fff';
+      ctx.font = '600 10px Segoe UI, system-ui, sans-serif';
+      ctx.fillText(wsText, x + 18, y + 47);
+    }
+  }
+
+  // Title
+  ctx.fillStyle = '#e94560';
+  ctx.font = '600 16px Segoe UI, system-ui, sans-serif';
+  ctx.fillText(`Recipe Tree: ${getItemName(selectedRecipe)}`, 10, 20);
+
+  // Download
+  exportCanvas.toBlob(blob => {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `recipe-tree-${selectedRecipe.replace(/:/g, '-')}.png`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+    toast('Image exported');
+  }, 'image/png');
+}
+
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.arcTo(x + w, y, x + w, y + r, r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.arcTo(x + w, y + h, x + w - r, y + h, r);
+  ctx.lineTo(x + r, y + h);
+  ctx.arcTo(x, y + h, x, y + h - r, r);
+  ctx.lineTo(x, y + r);
+  ctx.arcTo(x, y, x + r, y, r);
+  ctx.closePath();
+}
+
+// ============================================================
+// MODAL
+// ============================================================
+function showModal(title, content) {
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-content').textContent = content;
+  document.getElementById('export-modal').classList.remove('hidden');
+}
+
+function closeModal() {
+  document.getElementById('export-modal').classList.add('hidden');
+}
+
+function copyModalContent() {
+  const content = document.getElementById('modal-content').textContent;
+  navigator.clipboard.writeText(content).then(() => {
+    toast('Copied to clipboard');
+  }).catch(() => {
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = content;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    toast('Copied to clipboard');
+  });
+}
+
+// ============================================================
+// UTILITIES
+// ============================================================
+function setStatus(msg) {
+  document.getElementById('status').textContent = msg;
+}
+
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2000);
+}
+
+// ============================================================
+// KEYBOARD SHORTCUTS
+// ============================================================
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+  if (e.key === 'f' && (e.ctrlKey || e.metaKey)) {
+    e.preventDefault();
+    document.getElementById('search-box').focus();
+  }
+});
+
+// Mouse wheel zoom on tree (con o sin Ctrl)
+const treeContainer = document.getElementById('tree-container');
+treeContainer.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  if (e.deltaY < 0) zoomIn();
+  else zoomOut();
+}, { passive: false });
+
+// Mouse drag para pan libre del arbol (translate, no scroll)
+let panSavedX = 0, panSavedY = 0;
+
+treeContainer.addEventListener('mousedown', (e) => {
+  if (e.button !== 0) return;
+  if (e.target.closest('.tree-node')) return;
+  isPanning = true;
+  panStartX = e.clientX;
+  panStartY = e.clientY;
+  panSavedX = panOffsetX;
+  panSavedY = panOffsetY;
+  treeContainer.style.cursor = 'grabbing';
+  e.preventDefault();
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isPanning) return;
+  e.preventDefault();
+  panOffsetX = panSavedX + (e.clientX - panStartX);
+  panOffsetY = panSavedY + (e.clientY - panStartY);
+  const canvas = document.getElementById('tree-canvas');
+  canvas.style.transform = `translate(${panOffsetX}px, ${panOffsetY}px) scale(${treeZoom})`;
+});
+
+document.addEventListener('mouseup', () => {
+  if (isPanning) {
+    isPanning = false;
+    treeContainer.style.cursor = 'grab';
+  }
+});
+
+// ============================================================
+// INIT
+// ============================================================
+// Try to load external data file
+const dataScript = document.createElement('script');
+dataScript.src = 'recipe-tree-data.js';
+dataScript.onload = () => {
+  loadData();
+};
+dataScript.onerror = () => {
+  loadData(); // will fall back to sample data
+};
+document.head.appendChild(dataScript);
+</script>
+</body>
+</html>

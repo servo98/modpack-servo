@@ -24,106 +24,180 @@
   "entities": {},
   "recipes_count": 22,
   "recipe_types": [
-    "minecraft:smithing_transform",
-    "create:compacting",
-    "minecraft:crafting_shapeless",
-    "create:item_application",
-    "create:filling",
-    "create:pressing",
-    "create:crushing",
-    "create:emptying",
     "create_enchantment_industry:grinding",
+    "create:crushing",
     "minecraft:crafting_shaped",
-    "create:cutting"
+    "create:cutting",
+    "minecraft:crafting_shapeless",
+    "create:compacting",
+    "create:item_application",
+    "create:emptying",
+    "create:pressing",
+    "create:filling",
+    "minecraft:smithing_transform"
   ],
   "recipes": {
     "experience_bottle": {
       "type": "create:emptying",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:experience_bottle"
+      ]
     },
     "experience_cake": {
       "type": "create:filling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create_enchantment_industry:experience_cake_base",
+        "{'type': 'fluid_stack', 'amount': 1000, 'fluid': 'create_enchantment_industry:experience'}"
+      ]
     },
     "experience_cake_slice": {
       "type": "create:cutting",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create_enchantment_industry:experience_cake"
+      ]
     },
     "super_enchanting_template": {
       "type": "create:pressing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create_enchantment_industry:super_experience_block"
+      ]
     },
     "enchanting_template": {
       "type": "create:pressing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:experience_block"
+      ]
     },
     "blaze_forger": {
       "type": "minecraft:smithing_transform",
-      "result": "create_enchantment_industry:blaze_forger"
+      "result": "create_enchantment_industry:blaze_forger",
+      "ingredients": []
     },
     "blaze_enchanter": {
       "type": "minecraft:smithing_transform",
-      "result": "create_enchantment_industry:blaze_enchanter"
+      "result": "create_enchantment_industry:blaze_enchanter",
+      "ingredients": []
     },
     "experience_cake_base": {
       "type": "create:compacting",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:eggs",
+        "minecraft:sugar",
+        "minecraft:lapis_lazuli"
+      ]
     },
     "experience_block": {
       "type": "create_enchantment_industry:grinding",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:experience_block"
+      ]
     },
     "infested_stone": {
       "type": "create:compacting",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:infested_stone",
+        "minecraft:infested_stone",
+        "minecraft:infested_stone",
+        "minecraft:infested_stone"
+      ]
     },
     "experience_hatch": {
       "type": "create:item_application",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create_dragons_plus:fluid_hatch",
+        "create:experience_block"
+      ]
     },
     "infested_cobblestone": {
       "type": "create:crushing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:infested_cobblestone"
+      ]
     },
     "experience_nugget": {
       "type": "create_enchantment_industry:grinding",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:experience_nugget"
+      ]
     },
     "super_experience_block": {
       "type": "minecraft:crafting_shaped",
-      "result": "create_enchantment_industry:super_experience_block"
+      "result": "create_enchantment_industry:super_experience_block",
+      "ingredients": [
+        "create_enchantment_industry:super_experience_nugget"
+      ]
     },
     "super_experience_nugget": {
       "type": "minecraft:crafting_shapeless",
-      "result": "create_enchantment_industry:super_experience_nugget x9"
+      "result": "create_enchantment_industry:super_experience_nugget x9",
+      "ingredients": [
+        "create_enchantment_industry:super_experience_block"
+      ]
     },
     "heap_of_experience": {
       "type": "create_enchantment_industry:grinding",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create_sa:heap_of_experience"
+      ]
     },
     "greater_experience_gem": {
       "type": "create_enchantment_industry:grinding",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "ars_nouveau:greater_experience_gem"
+      ]
     },
     "experience_gem": {
       "type": "create_enchantment_industry:grinding",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "ars_nouveau:experience_gem"
+      ]
     },
     "experience_lantern": {
       "type": "minecraft:crafting_shaped",
-      "result": "create_enchantment_industry:experience_lantern"
+      "result": "create_enchantment_industry:experience_lantern",
+      "ingredients": [
+        "create:experience_block",
+        "minecraft:sponge",
+        "create:copper_casing"
+      ]
     },
     "mechanical_grindstone": {
       "type": "minecraft:crafting_shaped",
-      "result": "create_enchantment_industry:mechanical_grindstone"
+      "result": "create_enchantment_industry:mechanical_grindstone",
+      "ingredients": [
+        "create:andesite_alloy",
+        "create:shaft"
+      ]
     },
     "printer": {
       "type": "minecraft:crafting_shaped",
-      "result": "create_enchantment_industry:printer"
+      "result": "create_enchantment_industry:printer",
+      "ingredients": [
+        "#c:plates/brass",
+        "create:spout",
+        "#c:storage_blocks/iron"
+      ]
     },
     "experience_droplet": {
       "type": "create:emptying",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "mysticalagriculture:experience_droplet"
+      ]
     }
   },
   "summary": {

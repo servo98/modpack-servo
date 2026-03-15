@@ -100,358 +100,675 @@
   },
   "recipes_count": 87,
   "recipe_types": [
-    "minecraft:crafting_shaped",
     "minecraft:blasting",
-    "minecraft:smelting"
+    "minecraft:smelting",
+    "minecraft:crafting_shaped"
   ],
   "recipes": {
     "citrine_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:citrine_necklace"
+      "result": "jewelry:citrine_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_ingot",
+        "jewelry:citrine"
+      ]
     },
     "citrine_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:citrine_ring"
+      "result": "jewelry:citrine_ring",
+      "ingredients": [
+        "jewelry:citrine",
+        "minecraft:gold_ingot"
+      ]
     },
     "copper_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:copper_ring"
+      "result": "jewelry:copper_ring",
+      "ingredients": [
+        "minecraft:copper_ingot"
+      ]
     },
     "diamond_from_blasting_diamond_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:diamond"
+      "result": "minecraft:diamond",
+      "ingredients": [
+        "jewelry:diamond_necklace"
+      ]
     },
     "diamond_from_smelting_diamond_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:diamond"
+      "result": "minecraft:diamond",
+      "ingredients": [
+        "jewelry:diamond_necklace"
+      ]
     },
     "diamond_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:diamond_necklace"
+      "result": "jewelry:diamond_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_ingot",
+        "minecraft:diamond"
+      ]
     },
     "diamond_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:diamond_ring"
+      "result": "jewelry:diamond_ring",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:gold_ingot"
+      ]
     },
     "emerald_from_blasting_emerald_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:emerald"
+      "result": "minecraft:emerald",
+      "ingredients": [
+        "jewelry:emerald_necklace"
+      ]
     },
     "emerald_from_smelting_emerald_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:emerald"
+      "result": "minecraft:emerald",
+      "ingredients": [
+        "jewelry:emerald_necklace"
+      ]
     },
     "emerald_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:emerald_necklace"
+      "result": "jewelry:emerald_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_ingot",
+        "minecraft:emerald"
+      ]
     },
     "gold_nugget_from_blasting_citrine_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:citrine_necklace"
+      ]
     },
     "gold_nugget_from_blasting_citrine_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:citrine_ring"
+      ]
     },
     "gold_nugget_from_blasting_gold_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:gold_ring"
+      ]
     },
     "gold_nugget_from_blasting_jade_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:jade_necklace"
+      ]
     },
     "gold_nugget_from_blasting_jade_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:jade_ring"
+      ]
     },
     "gold_nugget_from_blasting_ruby_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:ruby_necklace"
+      ]
     },
     "gold_nugget_from_blasting_ruby_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:ruby_ring"
+      ]
     },
     "gold_nugget_from_blasting_sapphire_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:sapphire_necklace"
+      ]
     },
     "gold_nugget_from_blasting_sapphire_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:sapphire_ring"
+      ]
     },
     "gold_nugget_from_blasting_tanzanite_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:tanzanite_necklace"
+      ]
     },
     "gold_nugget_from_blasting_tanzanite_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:tanzanite_ring"
+      ]
     },
     "gold_nugget_from_blasting_topaz_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:topaz_necklace"
+      ]
     },
     "gold_nugget_from_blasting_topaz_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:topaz_ring"
+      ]
     },
     "gold_nugget_from_smelting_citrine_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:citrine_necklace"
+      ]
     },
     "gold_nugget_from_smelting_citrine_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:citrine_ring"
+      ]
     },
     "gold_nugget_from_smelting_gold_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:gold_ring"
+      ]
     },
     "gold_nugget_from_smelting_jade_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:jade_necklace"
+      ]
     },
     "gold_nugget_from_smelting_jade_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:jade_ring"
+      ]
     },
     "gold_nugget_from_smelting_ruby_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:ruby_necklace"
+      ]
     },
     "gold_nugget_from_smelting_ruby_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:ruby_ring"
+      ]
     },
     "gold_nugget_from_smelting_sapphire_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:sapphire_necklace"
+      ]
     },
     "gold_nugget_from_smelting_sapphire_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:sapphire_ring"
+      ]
     },
     "gold_nugget_from_smelting_tanzanite_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:tanzanite_necklace"
+      ]
     },
     "gold_nugget_from_smelting_tanzanite_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:tanzanite_ring"
+      ]
     },
     "gold_nugget_from_smelting_topaz_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:topaz_necklace"
+      ]
     },
     "gold_nugget_from_smelting_topaz_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "jewelry:topaz_ring"
+      ]
     },
     "gold_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:gold_ring"
+      "result": "jewelry:gold_ring",
+      "ingredients": [
+        "minecraft:gold_ingot"
+      ]
     },
     "iron_nugget_from_blasting_iron_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "jewelry:iron_ring"
+      ]
     },
     "iron_nugget_from_smelting_iron_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "jewelry:iron_ring"
+      ]
     },
     "iron_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:iron_ring"
+      "result": "jewelry:iron_ring",
+      "ingredients": [
+        "minecraft:iron_ingot"
+      ]
     },
     "jade_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:jade_necklace"
+      "result": "jewelry:jade_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_ingot",
+        "jewelry:jade"
+      ]
     },
     "jade_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:jade_ring"
+      "result": "jewelry:jade_ring",
+      "ingredients": [
+        "jewelry:jade",
+        "minecraft:gold_ingot"
+      ]
     },
     "jewelers_kit": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:jewelers_kit"
+      "result": "jewelry:jewelers_kit",
+      "ingredients": [
+        "minecraft:copper_ingot",
+        "minecraft:iron_ingot",
+        "minecraft:gold_ingot",
+        "#minecraft:planks"
+      ]
     },
     "netherite_citrine_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_citrine_necklace"
+      "result": "jewelry:netherite_citrine_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_nugget",
+        "minecraft:netherite_ingot",
+        "jewelry:citrine"
+      ]
     },
     "netherite_citrine_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_citrine_ring"
+      "result": "jewelry:netherite_citrine_ring",
+      "ingredients": [
+        "jewelry:citrine",
+        "minecraft:gold_ingot",
+        "minecraft:netherite_ingot"
+      ]
     },
     "netherite_jade_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_jade_necklace"
+      "result": "jewelry:netherite_jade_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_nugget",
+        "minecraft:netherite_ingot",
+        "jewelry:jade"
+      ]
     },
     "netherite_jade_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_jade_ring"
+      "result": "jewelry:netherite_jade_ring",
+      "ingredients": [
+        "jewelry:jade",
+        "minecraft:gold_ingot",
+        "minecraft:netherite_ingot"
+      ]
     },
     "netherite_ruby_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_ruby_necklace"
+      "result": "jewelry:netherite_ruby_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_nugget",
+        "minecraft:netherite_ingot",
+        "jewelry:ruby"
+      ]
     },
     "netherite_ruby_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_ruby_ring"
+      "result": "jewelry:netherite_ruby_ring",
+      "ingredients": [
+        "jewelry:ruby",
+        "minecraft:gold_ingot",
+        "minecraft:netherite_ingot"
+      ]
     },
     "netherite_sapphire_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_sapphire_necklace"
+      "result": "jewelry:netherite_sapphire_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_nugget",
+        "minecraft:netherite_ingot",
+        "jewelry:sapphire"
+      ]
     },
     "netherite_sapphire_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_sapphire_ring"
+      "result": "jewelry:netherite_sapphire_ring",
+      "ingredients": [
+        "jewelry:sapphire",
+        "minecraft:gold_ingot",
+        "minecraft:netherite_ingot"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_citrine_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_citrine_necklace"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_citrine_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_citrine_ring"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_jade_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_jade_necklace"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_jade_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_jade_ring"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_ruby_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_ruby_necklace"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_ruby_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_ruby_ring"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_sapphire_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_sapphire_necklace"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_sapphire_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_sapphire_ring"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_tanzanite_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_tanzanite_necklace"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_tanzanite_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_tanzanite_ring"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_topaz_necklace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_topaz_necklace"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_topaz_ring": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_topaz_ring"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_citrine_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_citrine_necklace"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_citrine_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_citrine_ring"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_jade_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_jade_necklace"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_jade_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_jade_ring"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_ruby_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_ruby_necklace"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_ruby_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_ruby_ring"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_sapphire_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_sapphire_necklace"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_sapphire_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_sapphire_ring"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_tanzanite_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_tanzanite_necklace"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_tanzanite_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_tanzanite_ring"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_topaz_necklace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_topaz_necklace"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_topaz_ring": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "jewelry:netherite_topaz_ring"
+      ]
     },
     "netherite_tanzanite_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_tanzanite_necklace"
+      "result": "jewelry:netherite_tanzanite_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_nugget",
+        "minecraft:netherite_ingot",
+        "jewelry:tanzanite"
+      ]
     },
     "netherite_tanzanite_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_tanzanite_ring"
+      "result": "jewelry:netherite_tanzanite_ring",
+      "ingredients": [
+        "jewelry:tanzanite",
+        "minecraft:gold_ingot",
+        "minecraft:netherite_ingot"
+      ]
     },
     "netherite_topaz_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_topaz_necklace"
+      "result": "jewelry:netherite_topaz_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_nugget",
+        "minecraft:netherite_ingot",
+        "jewelry:topaz"
+      ]
     },
     "netherite_topaz_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:netherite_topaz_ring"
+      "result": "jewelry:netherite_topaz_ring",
+      "ingredients": [
+        "jewelry:topaz",
+        "minecraft:gold_ingot",
+        "minecraft:netherite_ingot"
+      ]
     },
     "ruby_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:ruby_necklace"
+      "result": "jewelry:ruby_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_ingot",
+        "jewelry:ruby"
+      ]
     },
     "ruby_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:ruby_ring"
+      "result": "jewelry:ruby_ring",
+      "ingredients": [
+        "jewelry:ruby",
+        "minecraft:gold_ingot"
+      ]
     },
     "sapphire_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:sapphire_necklace"
+      "result": "jewelry:sapphire_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_ingot",
+        "jewelry:sapphire"
+      ]
     },
     "sapphire_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:sapphire_ring"
+      "result": "jewelry:sapphire_ring",
+      "ingredients": [
+        "jewelry:sapphire",
+        "minecraft:gold_ingot"
+      ]
     },
     "tanzanite_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:tanzanite_necklace"
+      "result": "jewelry:tanzanite_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_ingot",
+        "jewelry:tanzanite"
+      ]
     },
     "tanzanite_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:tanzanite_ring"
+      "result": "jewelry:tanzanite_ring",
+      "ingredients": [
+        "jewelry:tanzanite",
+        "minecraft:gold_ingot"
+      ]
     },
     "topaz_necklace": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:topaz_necklace"
+      "result": "jewelry:topaz_necklace",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:gold_ingot",
+        "jewelry:topaz"
+      ]
     },
     "topaz_ring": {
       "type": "minecraft:crafting_shaped",
-      "result": "jewelry:topaz_ring"
+      "result": "jewelry:topaz_ring",
+      "ingredients": [
+        "jewelry:topaz",
+        "minecraft:gold_ingot"
+      ]
     }
   },
   "summary": {

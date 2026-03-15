@@ -13,43 +13,77 @@
   "entities": {},
   "recipes_count": 8,
   "recipe_types": [
-    "minecraft:crafting_shaped",
     "create:mixing",
     "minecraft:crafting_shapeless",
-    "create:filling"
+    "create:filling",
+    "minecraft:crafting_shaped"
   ],
   "recipes": {
     "rich_soil": {
       "type": "create:filling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "farmersdelight:organic_compost",
+        "{'type': 'neoforge:single', 'amount': 500, 'fluid': 'sliceanddice:fertilizer'}"
+      ]
     },
     "hot_cocoa_from_fluid": {
       "type": "create:filling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "{'type': 'neoforge:single', 'amount': 250, 'fluid': 'create:chocolate'}"
+      ]
     },
     "from_tree_fertilizer": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:tree_fertilizer",
+        "{'type': 'neoforge:single', 'amount': 500, 'fluid': 'minecraft:water'}"
+      ]
     },
     "from_phyto": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "{'type': 'neoforge:compound', 'ingredients': [{'item': 'thermal:phytogro'}]}",
+        "{'type': 'neoforge:single', 'amount': 1000, 'fluid': 'minecraft:water'}"
+      ]
     },
     "from_compost": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "farmersdelight:organic_compost",
+        "{'type': 'neoforge:single', 'amount': 250, 'fluid': 'minecraft:water'}"
+      ]
     },
     "slicer": {
       "type": "minecraft:crafting_shaped",
-      "result": "sliceanddice:slicer"
+      "result": "sliceanddice:slicer",
+      "ingredients": [
+        "create:cogwheel",
+        "create:andesite_casing",
+        "create:turntable"
+      ]
     },
     "sprinkler": {
       "type": "minecraft:crafting_shaped",
-      "result": "sliceanddice:sprinkler x3"
+      "result": "sliceanddice:sprinkler x3",
+      "ingredients": [
+        "#c:plates/copper",
+        "create:fluid_pipe",
+        "minecraft:iron_bars"
+      ]
     },
     "slime_ball": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:slime_ball"
+      "result": "minecraft:slime_ball",
+      "ingredients": [
+        "#c:foods/dough",
+        "#c:dyes/lime"
+      ]
     }
   },
   "summary": {

@@ -545,1967 +545,4041 @@
   "entities": {},
   "recipes_count": 488,
   "recipe_types": [
-    "minecraft:campfire_cooking",
     "minecraft:smoking",
-    "minecraft:smelting",
-    "minecraft:crafting_shapeless",
-    "botanypots:crop",
-    "thermal:insolator",
     "minecraft:crafting_shaped",
+    "thermal:insolator",
+    "botanypots:crop",
+    "minecraft:crafting_shapeless",
+    "minecraft:smelting",
+    "minecraft:campfire_cooking",
     "immersiveengineering:cloche"
   ],
   "recipes": {
     "almond_brittle": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:almond_brittle x2"
+      "result": "croptopia:almond_brittle x2",
+      "ingredients": [
+        "#c:butters",
+        "#c:almonds",
+        "minecraft:sugar",
+        "minecraft:sugar"
+      ]
     },
     "almond_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:almond_sapling"
+      "result": "croptopia:almond_sapling",
+      "ingredients": [
+        "#c:almonds",
+        "#c:almonds",
+        "#minecraft:saplings"
+      ]
     },
     "anchovy_pizza": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:anchovy_pizza"
+      "result": "croptopia:anchovy_pizza",
+      "ingredients": [
+        "#c:tomatoes",
+        "#c:anchovies",
+        "#c:cheeses",
+        "#c:doughs",
+        "croptopia:frying_pan"
+      ]
     },
     "apple_juice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:apple_juice"
+      "result": "croptopia:apple_juice",
+      "ingredients": [
+        "#c:apples",
+        "croptopia:food_press",
+        "minecraft:glass_bottle"
+      ]
     },
     "apple_pie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:apple_pie"
+      "result": "croptopia:apple_pie",
+      "ingredients": [
+        "#c:apples",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "#c:flour",
+        "#c:doughs",
+        "croptopia:frying_pan"
+      ]
     },
     "apple_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:apple_sapling"
+      "result": "croptopia:apple_sapling",
+      "ingredients": [
+        "#c:apples",
+        "#c:apples",
+        "#minecraft:saplings"
+      ]
     },
     "apricot_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:apricot_jam"
+      "result": "croptopia:apricot_jam",
+      "ingredients": [
+        "#c:apricots",
+        "minecraft:sugar",
+        "croptopia:cooking_pot"
+      ]
     },
     "apricot_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:apricot_sapling"
+      "result": "croptopia:apricot_sapling",
+      "ingredients": [
+        "#c:apricots",
+        "#c:apricots",
+        "#minecraft:saplings"
+      ]
     },
     "artichoke_dip": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:artichoke_dip"
+      "result": "croptopia:artichoke_dip",
+      "ingredients": [
+        "#c:artichokes",
+        "#c:cheeses"
+      ]
     },
     "artichoke_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:artichoke_seed"
+      "result": "croptopia:artichoke_seed",
+      "ingredients": [
+        "#c:artichokes"
+      ]
     },
     "asparagus_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:asparagus_seed"
+      "result": "croptopia:asparagus_seed",
+      "ingredients": [
+        "#c:asparagus"
+      ]
     },
     "avocado_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:avocado_sapling"
+      "result": "croptopia:avocado_sapling",
+      "ingredients": [
+        "#c:avocados",
+        "#c:avocados",
+        "#minecraft:saplings"
+      ]
     },
     "baked_beans_from_blackbean": {
       "type": "minecraft:smelting",
-      "result": "croptopia:baked_beans"
+      "result": "croptopia:baked_beans",
+      "ingredients": [
+        "croptopia:blackbean"
+      ]
     },
     "baked_beans_from_smoking_blackbean": {
       "type": "minecraft:smoking",
-      "result": "croptopia:baked_beans"
+      "result": "croptopia:baked_beans",
+      "ingredients": [
+        "croptopia:blackbean"
+      ]
     },
     "baked_crepes": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:baked_crepes"
+      "result": "croptopia:baked_crepes",
+      "ingredients": [
+        "minecraft:egg",
+        "#c:flour",
+        "#c:milks",
+        "#c:spinach",
+        "#c:cheeses",
+        "croptopia:frying_pan"
+      ]
     },
     "baked_sweet_potato_from_smoking_sweetpotato": {
       "type": "minecraft:smoking",
-      "result": "croptopia:baked_sweet_potato"
+      "result": "croptopia:baked_sweet_potato",
+      "ingredients": [
+        "croptopia:sweetpotato"
+      ]
     },
     "baked_sweet_potato_from_sweetpotato": {
       "type": "minecraft:smelting",
-      "result": "croptopia:baked_sweet_potato"
+      "result": "croptopia:baked_sweet_potato",
+      "ingredients": [
+        "croptopia:sweetpotato"
+      ]
     },
     "baked_yam_from_smoking_yam": {
       "type": "minecraft:smoking",
-      "result": "croptopia:baked_yam"
+      "result": "croptopia:baked_yam",
+      "ingredients": [
+        "croptopia:yam"
+      ]
     },
     "baked_yam_from_yam": {
       "type": "minecraft:smelting",
-      "result": "croptopia:baked_yam"
+      "result": "croptopia:baked_yam",
+      "ingredients": [
+        "croptopia:yam"
+      ]
     },
     "banana_cream_pie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:banana_cream_pie"
+      "result": "croptopia:banana_cream_pie",
+      "ingredients": [
+        "#c:bananas",
+        "#c:vanilla",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "#c:milks",
+        "croptopia:frying_pan"
+      ]
     },
     "banana_nut_bread": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:banana_nut_bread x2"
+      "result": "croptopia:banana_nut_bread x2",
+      "ingredients": [
+        "croptopia:cinnamon",
+        "minecraft:sugar",
+        "#c:flour",
+        "#c:bananas",
+        "#c:nuts"
+      ]
     },
     "banana_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:banana_sapling"
+      "result": "croptopia:banana_sapling",
+      "ingredients": [
+        "#c:bananas",
+        "#c:bananas",
+        "#minecraft:saplings"
+      ]
     },
     "banana_smoothie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:banana_smoothie"
+      "result": "croptopia:banana_smoothie",
+      "ingredients": [
+        "#c:bananas",
+        "minecraft:ice",
+        "#c:milks",
+        "minecraft:glass_bottle"
+      ]
     },
     "barley_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:barley_seed"
+      "result": "croptopia:barley_seed",
+      "ingredients": [
+        "#c:barley"
+      ]
     },
     "basil_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:basil_seed"
+      "result": "croptopia:basil_seed",
+      "ingredients": [
+        "#c:basil"
+      ]
     },
     "beef_jerky": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:beef_jerky x14"
+      "result": "croptopia:beef_jerky x14",
+      "ingredients": [
+        "minecraft:beef",
+        "#c:salts"
+      ]
     },
     "beer": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:beer"
+      "result": "croptopia:beer",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "#c:hops",
+        "#c:barley",
+        "croptopia:food_press"
+      ]
     },
     "beetroot_salad": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:beetroot_salad"
+      "result": "croptopia:beetroot_salad",
+      "ingredients": [
+        "minecraft:beetroot",
+        "#c:lettuce",
+        "#c:cheeses",
+        "#c:lemons",
+        "croptopia:cooking_pot"
+      ]
     },
     "bellpepper_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:bellpepper_seed"
+      "result": "croptopia:bellpepper_seed",
+      "ingredients": [
+        "#c:bellpeppers"
+      ]
     },
     "blackbean_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:blackbean_seed"
+      "result": "croptopia:blackbean_seed",
+      "ingredients": [
+        "#c:blackbeans"
+      ]
     },
     "blackberry_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:blackberry_jam"
+      "result": "croptopia:blackberry_jam",
+      "ingredients": [
+        "#c:blackberries",
+        "minecraft:sugar",
+        "croptopia:cooking_pot"
+      ]
     },
     "blackberry_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:blackberry_seed"
+      "result": "croptopia:blackberry_seed",
+      "ingredients": [
+        "#c:blackberries"
+      ]
     },
     "blt": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:blt"
+      "result": "croptopia:blt",
+      "ingredients": [
+        "minecraft:bread",
+        "croptopia:cooked_bacon",
+        "#c:lettuce",
+        "#c:tomatoes"
+      ]
     },
     "blueberry_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:blueberry_jam"
+      "result": "croptopia:blueberry_jam",
+      "ingredients": [
+        "#c:blueberries",
+        "minecraft:sugar",
+        "croptopia:cooking_pot"
+      ]
     },
     "blueberry_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:blueberry_seed"
+      "result": "croptopia:blueberry_seed",
+      "ingredients": [
+        "#c:blueberries"
+      ]
     },
     "borscht": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:borscht x2"
+      "result": "croptopia:borscht x2",
+      "ingredients": [
+        "minecraft:carrot",
+        "minecraft:potato",
+        "minecraft:beetroot",
+        "#c:onions",
+        "#c:tomatoes",
+        "#c:water_bottles",
+        "#c:cabbage",
+        "croptopia:cooking_pot",
+        "#c:garlic"
+      ]
     },
     "almond": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "apple": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "apricot": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "avocado": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "banana": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cashew": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cherry": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cinnamon": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "coconut": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "date": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "dragonfruit": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "fig": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "grapefruit": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "kumquat": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "lemon": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "lime": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "mango": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "nectarine": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "nutmeg": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "orange": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "peach": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "pear": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "pecan": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "persimmon": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "plum": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "starfruit": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "walnut": {
       "type": "botanypots:crop",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "broccoli_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:broccoli_seed"
+      "result": "croptopia:broccoli_seed",
+      "ingredients": [
+        "#c:broccoli"
+      ]
     },
     "brownies": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:brownies"
+      "result": "croptopia:brownies",
+      "ingredients": [
+        "minecraft:sugar",
+        "minecraft:egg",
+        "croptopia:frying_pan",
+        "#c:flour",
+        "#c:milks",
+        "#c:chocolates"
+      ]
     },
     "burrito": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:burrito"
+      "result": "croptopia:burrito",
+      "ingredients": [
+        "#c:tortillas",
+        "#c:rice",
+        "#c:blackbeans",
+        "#c:tomatoes"
+      ]
     },
     "butter": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:butter"
+      "result": "croptopia:butter",
+      "ingredients": [
+        "croptopia:cooking_pot",
+        "croptopia:food_press",
+        "#c:milks",
+        "#c:salts"
+      ]
     },
     "buttered_toast": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:buttered_toast"
+      "result": "croptopia:buttered_toast",
+      "ingredients": [
+        "#c:toasts",
+        "#c:butters"
+      ]
     },
     "cabbage_roll": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:cabbage_roll x2"
+      "result": "croptopia:cabbage_roll x2",
+      "ingredients": [
+        "#croptopia:beef_replacements",
+        "#c:onions",
+        "#c:salts",
+        "#c:cabbage",
+        "#c:rice",
+        "croptopia:frying_pan"
+      ]
     },
     "cabbage_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cabbage_seed"
+      "result": "croptopia:cabbage_seed",
+      "ingredients": [
+        "#c:cabbage"
+      ]
     },
     "caesar_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:caesar_salad"
+      "result": "croptopia:caesar_salad",
+      "ingredients": [
+        "minecraft:bowl",
+        "#c:lettuce",
+        "#c:olives",
+        "#c:garlic",
+        "#c:toasts"
+      ]
     },
     "campfire_baked_beans": {
       "type": "minecraft:campfire_cooking",
-      "result": "croptopia:baked_beans"
+      "result": "croptopia:baked_beans",
+      "ingredients": [
+        "#c:blackbeans"
+      ]
     },
     "campfire_baked_sweet_potato": {
       "type": "minecraft:campfire_cooking",
-      "result": "croptopia:baked_sweet_potato"
+      "result": "croptopia:baked_sweet_potato",
+      "ingredients": [
+        "#c:sweetpotatos"
+      ]
     },
     "campfire_baked_yam": {
       "type": "minecraft:campfire_cooking",
-      "result": "croptopia:baked_yam"
+      "result": "croptopia:baked_yam",
+      "ingredients": [
+        "#c:yams"
+      ]
     },
     "campfire_caramel": {
       "type": "minecraft:campfire_cooking",
-      "result": "croptopia:caramel"
+      "result": "croptopia:caramel",
+      "ingredients": [
+        "minecraft:sugar"
+      ]
     },
     "campfire_molasses": {
       "type": "minecraft:campfire_cooking",
-      "result": "croptopia:molasses"
+      "result": "croptopia:molasses",
+      "ingredients": [
+        "minecraft:sugar_cane"
+      ]
     },
     "campfire_popcorn": {
       "type": "minecraft:campfire_cooking",
-      "result": "croptopia:popcorn"
+      "result": "croptopia:popcorn",
+      "ingredients": [
+        "#c:corn"
+      ]
     },
     "campfire_raisins": {
       "type": "minecraft:campfire_cooking",
-      "result": "croptopia:raisins"
+      "result": "croptopia:raisins",
+      "ingredients": [
+        "#c:grapes"
+      ]
     },
     "campfire_toast": {
       "type": "minecraft:campfire_cooking",
-      "result": "croptopia:toast"
+      "result": "croptopia:toast",
+      "ingredients": [
+        "minecraft:bread"
+      ]
     },
     "candied_kumquats": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:candied_kumquats x7"
+      "result": "croptopia:candied_kumquats x7",
+      "ingredients": [
+        "#c:kumquats",
+        "#c:kumquats",
+        "#c:kumquats",
+        "#c:kumquats",
+        "#c:kumquats",
+        "#c:kumquats",
+        "#c:kumquats",
+        "#c:vanilla",
+        "minecraft:honey_bottle"
+      ]
     },
     "candied_nuts": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:candied_nuts x4"
+      "result": "croptopia:candied_nuts x4",
+      "ingredients": [
+        "#c:nuts",
+        "#c:nuts",
+        "minecraft:sugar",
+        "minecraft:sugar"
+      ]
     },
     "candy_corn": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:candy_corn"
+      "result": "croptopia:candy_corn",
+      "ingredients": [
+        "minecraft:sugar",
+        "#c:corn",
+        "minecraft:sugar"
+      ]
     },
     "cantaloupe_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cantaloupe_seed"
+      "result": "croptopia:cantaloupe_seed",
+      "ingredients": [
+        "#c:cantaloupes"
+      ]
     },
     "caramel_from_smoking_sugar": {
       "type": "minecraft:smoking",
-      "result": "croptopia:caramel"
+      "result": "croptopia:caramel",
+      "ingredients": [
+        "minecraft:sugar"
+      ]
     },
     "caramel_from_sugar": {
       "type": "minecraft:smelting",
-      "result": "croptopia:caramel"
+      "result": "croptopia:caramel",
+      "ingredients": [
+        "minecraft:sugar"
+      ]
     },
     "carnitas": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:carnitas"
+      "result": "croptopia:carnitas",
+      "ingredients": [
+        "minecraft:porkchop",
+        "#c:tortillas",
+        "#c:cabbage",
+        "#c:onions",
+        "croptopia:frying_pan"
+      ]
     },
     "cashew_chicken": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cashew_chicken"
+      "result": "croptopia:cashew_chicken",
+      "ingredients": [
+        "#c:cashews",
+        "minecraft:cooked_chicken",
+        "#c:soy_sauces",
+        "#c:cabbage",
+        "minecraft:carrot"
+      ]
     },
     "cashew_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cashew_sapling"
+      "result": "croptopia:cashew_sapling",
+      "ingredients": [
+        "#c:cashews",
+        "#c:cashews",
+        "#minecraft:saplings"
+      ]
     },
     "cauliflower_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cauliflower_seed"
+      "result": "croptopia:cauliflower_seed",
+      "ingredients": [
+        "#c:cauliflower"
+      ]
     },
     "celery_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:celery_seed"
+      "result": "croptopia:celery_seed",
+      "ingredients": [
+        "#c:celery"
+      ]
     },
     "cheese": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cheese"
+      "result": "croptopia:cheese",
+      "ingredients": [
+        "croptopia:cooking_pot",
+        "#c:milks",
+        "#c:salts"
+      ]
     },
     "cheeseburger": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cheeseburger"
+      "result": "croptopia:cheeseburger",
+      "ingredients": [
+        "minecraft:bread",
+        "#c:cheeses",
+        "croptopia:frying_pan",
+        "#croptopia:beef_replacements"
+      ]
     },
     "cheese_pizza": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cheese_pizza"
+      "result": "croptopia:cheese_pizza",
+      "ingredients": [
+        "#c:doughs",
+        "#c:cheeses",
+        "#c:tomatoes",
+        "#c:cheeses",
+        "croptopia:frying_pan"
+      ]
     },
     "cherry_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cherry_jam"
+      "result": "croptopia:cherry_jam",
+      "ingredients": [
+        "#c:cherries",
+        "minecraft:sugar",
+        "croptopia:cooking_pot"
+      ]
     },
     "cherry_pie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cherry_pie"
+      "result": "croptopia:cherry_pie",
+      "ingredients": [
+        "#c:cherries",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "#c:flour",
+        "#c:doughs",
+        "croptopia:frying_pan"
+      ]
     },
     "cherry_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cherry_sapling"
+      "result": "croptopia:cherry_sapling",
+      "ingredients": [
+        "#c:cherries",
+        "#c:cherries",
+        "#minecraft:saplings"
+      ]
     },
     "chicken_and_dumplings": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:chicken_and_dumplings"
+      "result": "croptopia:chicken_and_dumplings",
+      "ingredients": [
+        "#c:doughs",
+        "#c:chile_peppers",
+        "minecraft:chicken",
+        "croptopia:cooking_pot"
+      ]
     },
     "chicken_and_noodles": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:chicken_and_noodles"
+      "result": "croptopia:chicken_and_noodles",
+      "ingredients": [
+        "#c:noodles",
+        "#c:chile_peppers",
+        "#c:olive_oils",
+        "#croptopia:chicken_replacements",
+        "croptopia:cooking_pot"
+      ]
     },
     "chicken_and_rice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:chicken_and_rice"
+      "result": "croptopia:chicken_and_rice",
+      "ingredients": [
+        "#c:rice",
+        "#c:chile_peppers",
+        "#c:olive_oils",
+        "#croptopia:chicken_replacements"
+      ]
     },
     "chile_pepper_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:chile_pepper_seed"
+      "result": "croptopia:chile_pepper_seed",
+      "ingredients": [
+        "#c:chile_peppers"
+      ]
     },
     "chili_relleno": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:chili_relleno"
+      "result": "croptopia:chili_relleno",
+      "ingredients": [
+        "minecraft:egg",
+        "#c:chile_peppers",
+        "#c:olive_oils",
+        "#c:flour",
+        "#c:salts",
+        "croptopia:cooking_pot"
+      ]
     },
     "chimichanga": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:chimichanga"
+      "result": "croptopia:chimichanga",
+      "ingredients": [
+        "croptopia:burrito",
+        "#c:flour",
+        "croptopia:cooking_pot"
+      ]
     },
     "chocolate": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:chocolate x4"
+      "result": "croptopia:chocolate x4",
+      "ingredients": [
+        "minecraft:cocoa_beans",
+        "#c:butters",
+        "croptopia:cooking_pot"
+      ]
     },
     "chocolate_milkshake": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:chocolate_milkshake"
+      "result": "croptopia:chocolate_milkshake",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "#c:chocolates",
+        "#c:milks",
+        "croptopia:vanilla_ice_cream"
+      ]
     },
     "churros": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:churros x3"
+      "result": "croptopia:churros x3",
+      "ingredients": [
+        "#c:milks",
+        "minecraft:sugar",
+        "#c:flour",
+        "croptopia:cinnamon"
+      ]
     },
     "cinnamon_roll": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:cinnamon_roll x3"
+      "result": "croptopia:cinnamon_roll x3",
+      "ingredients": [
+        "#c:milks",
+        "#c:doughs",
+        "minecraft:egg",
+        "#c:butters",
+        "#c:salts",
+        "minecraft:sugar",
+        "#c:cinnamon",
+        "croptopia:frying_pan",
+        "croptopia:whipping_cream"
+      ]
     },
     "cinnamon_wood": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:cinnamon_wood"
+      "result": "croptopia:cinnamon_wood",
+      "ingredients": [
+        "croptopia:cinnamon_log"
+      ]
     },
     "coconut_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:coconut_sapling"
+      "result": "croptopia:coconut_sapling",
+      "ingredients": [
+        "#c:coconuts",
+        "#c:coconuts",
+        "#minecraft:saplings"
+      ]
     },
     "coffee": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:coffee"
+      "result": "croptopia:coffee",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "#c:coffee_beans",
+        "croptopia:food_press"
+      ]
     },
     "coffee_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:coffee_seed"
+      "result": "croptopia:coffee_seed",
+      "ingredients": [
+        "#c:coffee_beans"
+      ]
     },
     "cooked_anchovy_from_anchovy": {
       "type": "minecraft:smelting",
-      "result": "croptopia:cooked_anchovy"
+      "result": "croptopia:cooked_anchovy",
+      "ingredients": [
+        "croptopia:anchovy"
+      ]
     },
     "cooked_anchovy_from_smoking_anchovy": {
       "type": "minecraft:smoking",
-      "result": "croptopia:cooked_anchovy"
+      "result": "croptopia:cooked_anchovy",
+      "ingredients": [
+        "croptopia:anchovy"
+      ]
     },
     "cooked_bacon_from_bacon": {
       "type": "minecraft:smelting",
-      "result": "croptopia:cooked_bacon"
+      "result": "croptopia:cooked_bacon",
+      "ingredients": [
+        "croptopia:bacon"
+      ]
     },
     "cooked_bacon_from_smoking_bacon": {
       "type": "minecraft:smoking",
-      "result": "croptopia:cooked_bacon"
+      "result": "croptopia:cooked_bacon",
+      "ingredients": [
+        "croptopia:bacon"
+      ]
     },
     "cooked_calamari_from_calamari": {
       "type": "minecraft:smelting",
-      "result": "croptopia:cooked_calamari"
+      "result": "croptopia:cooked_calamari",
+      "ingredients": [
+        "croptopia:calamari"
+      ]
     },
     "cooked_calamari_from_glowing_calamari": {
       "type": "minecraft:smelting",
-      "result": "croptopia:cooked_calamari"
+      "result": "croptopia:cooked_calamari",
+      "ingredients": [
+        "croptopia:glowing_calamari"
+      ]
     },
     "cooked_calamari_from_smoking_calamari": {
       "type": "minecraft:smoking",
-      "result": "croptopia:cooked_calamari"
+      "result": "croptopia:cooked_calamari",
+      "ingredients": [
+        "croptopia:calamari"
+      ]
     },
     "cooked_calamari_from_smoking_glowing_calamari": {
       "type": "minecraft:smoking",
-      "result": "croptopia:cooked_calamari"
+      "result": "croptopia:cooked_calamari",
+      "ingredients": [
+        "croptopia:glowing_calamari"
+      ]
     },
     "cooked_ravager_meat_from_raw_ravager_meat": {
       "type": "minecraft:smelting",
-      "result": "croptopia:cooked_ravager_meat"
+      "result": "croptopia:cooked_ravager_meat",
+      "ingredients": [
+        "croptopia:raw_ravager_meat"
+      ]
     },
     "cooked_ravager_meat_from_smoking_raw_ravager_meat": {
       "type": "minecraft:smoking",
-      "result": "croptopia:cooked_ravager_meat"
+      "result": "croptopia:cooked_ravager_meat",
+      "ingredients": [
+        "croptopia:raw_ravager_meat"
+      ]
     },
     "cooked_shrimp_from_shrimp": {
       "type": "minecraft:smelting",
-      "result": "croptopia:cooked_shrimp"
+      "result": "croptopia:cooked_shrimp",
+      "ingredients": [
+        "croptopia:shrimp"
+      ]
     },
     "cooked_shrimp_from_smoking_shrimp": {
       "type": "minecraft:smoking",
-      "result": "croptopia:cooked_shrimp"
+      "result": "croptopia:cooked_shrimp",
+      "ingredients": [
+        "croptopia:shrimp"
+      ]
     },
     "cooked_tuna_from_smoking_tuna": {
       "type": "minecraft:smoking",
-      "result": "croptopia:cooked_tuna"
+      "result": "croptopia:cooked_tuna",
+      "ingredients": [
+        "croptopia:tuna"
+      ]
     },
     "cooked_tuna_from_tuna": {
       "type": "minecraft:smelting",
-      "result": "croptopia:cooked_tuna"
+      "result": "croptopia:cooked_tuna",
+      "ingredients": [
+        "croptopia:tuna"
+      ]
     },
     "cooking_pot": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:cooking_pot"
+      "result": "croptopia:cooking_pot",
+      "ingredients": [
+        "minecraft:iron_ingot"
+      ]
     },
     "corn_bread": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:corn_bread"
+      "result": "croptopia:corn_bread",
+      "ingredients": [
+        "#c:corn"
+      ]
     },
     "corn_husk": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:corn_husk x8"
+      "result": "croptopia:corn_husk x8",
+      "ingredients": [
+        "#c:corn",
+        "#c:corn",
+        "#c:corn",
+        "#c:corn"
+      ]
     },
     "corn_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:corn_seed"
+      "result": "croptopia:corn_seed",
+      "ingredients": [
+        "#c:corn"
+      ]
     },
     "crab_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:crab_legs x2"
+      "result": "croptopia:crab_legs x2",
+      "ingredients": [
+        "#c:butters",
+        "#c:garlic",
+        "#c:salts",
+        "croptopia:pepper",
+        "#c:crabs",
+        "croptopia:frying_pan"
+      ]
     },
     "cranberry_juice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cranberry_juice"
+      "result": "croptopia:cranberry_juice",
+      "ingredients": [
+        "#c:cranberries",
+        "croptopia:food_press",
+        "minecraft:glass_bottle"
+      ]
     },
     "cranberry_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cranberry_seed"
+      "result": "croptopia:cranberry_seed",
+      "ingredients": [
+        "#c:cranberries"
+      ]
     },
     "crema": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:crema x4"
+      "result": "croptopia:crema x4",
+      "ingredients": [
+        "#c:milks",
+        "#c:limes",
+        "#c:salts"
+      ]
     },
     "croque_madame": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:croque_madame"
+      "result": "croptopia:croque_madame",
+      "ingredients": [
+        "croptopia:frying_pan",
+        "minecraft:egg",
+        "minecraft:bread",
+        "#c:flour",
+        "#croptopia:pork_replacements",
+        "#c:cheeses",
+        "#c:butters"
+      ]
     },
     "croque_monsieur": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:croque_monsieur"
+      "result": "croptopia:croque_monsieur",
+      "ingredients": [
+        "croptopia:frying_pan",
+        "minecraft:bread",
+        "#c:flour",
+        "#croptopia:pork_replacements",
+        "#c:cheeses",
+        "#c:butters"
+      ]
     },
     "cucumber_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cucumber_salad"
+      "result": "croptopia:cucumber_salad",
+      "ingredients": [
+        "minecraft:bowl",
+        "#c:cucumbers",
+        "#c:lettuce",
+        "#c:spinach"
+      ]
     },
     "cucumber_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:cucumber_seed"
+      "result": "croptopia:cucumber_seed",
+      "ingredients": [
+        "#c:cucumbers"
+      ]
     },
     "currant_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:currant_seed"
+      "result": "croptopia:currant_seed",
+      "ingredients": [
+        "#c:currants"
+      ]
     },
     "date_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:date_sapling"
+      "result": "croptopia:date_sapling",
+      "ingredients": [
+        "#c:dates",
+        "#c:dates",
+        "#minecraft:saplings"
+      ]
     },
     "dauphine_potatoes": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:dauphine_potatoes"
+      "result": "croptopia:dauphine_potatoes",
+      "ingredients": [
+        "#c:water_bottles",
+        "croptopia:frying_pan",
+        "#c:milks",
+        "#c:butters",
+        "#c:flour",
+        "#c:olive_oils"
+      ]
     },
     "dead_bush": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:dead_bush"
+      "result": "minecraft:dead_bush",
+      "ingredients": [
+        "#c:salts",
+        "#minecraft:saplings"
+      ]
     },
     "deep_fried_shrimp": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:deep_fried_shrimp x2"
+      "result": "croptopia:deep_fried_shrimp x2",
+      "ingredients": [
+        "#c:shrimp",
+        "minecraft:egg",
+        "croptopia:frying_pan",
+        "minecraft:bread"
+      ]
     },
     "documentation": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:guide"
+      "result": "croptopia:guide",
+      "ingredients": [
+        "#c:crops",
+        "#c:crops",
+        "#c:crops",
+        "minecraft:book"
+      ]
     },
     "dough": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:dough"
+      "result": "croptopia:dough",
+      "ingredients": [
+        "croptopia:cooking_pot",
+        "#c:water_bottles",
+        "#c:flour"
+      ]
     },
     "doughnut": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:doughnut"
+      "result": "croptopia:doughnut",
+      "ingredients": [
+        "#c:flour",
+        "#c:milks",
+        "minecraft:sugar",
+        "#c:flour"
+      ]
     },
     "dragonfruit_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:dragonfruit_sapling"
+      "result": "croptopia:dragonfruit_sapling",
+      "ingredients": [
+        "#c:dragonfruits",
+        "#c:dragonfruits",
+        "#minecraft:saplings"
+      ]
     },
     "dragon_egg_omelette": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:dragon_egg_omelette"
+      "result": "croptopia:dragon_egg_omelette",
+      "ingredients": [
+        "minecraft:dragon_egg",
+        "#c:cheeses",
+        "#c:salts",
+        "croptopia:pepper"
+      ]
     },
     "eggplant_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:eggplant_seed"
+      "result": "croptopia:eggplant_seed",
+      "ingredients": [
+        "#c:eggplants"
+      ]
     },
     "egg_roll": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:egg_roll"
+      "result": "croptopia:egg_roll",
+      "ingredients": [
+        "#c:doughs",
+        "#c:lettuce",
+        "minecraft:egg",
+        "#croptopia:meat_replacements"
+      ]
     },
     "elderberry_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:elderberry_jam"
+      "result": "croptopia:elderberry_jam",
+      "ingredients": [
+        "#c:elderberries",
+        "minecraft:sugar",
+        "croptopia:cooking_pot"
+      ]
     },
     "elderberry_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:elderberry_seed"
+      "result": "croptopia:elderberry_seed",
+      "ingredients": [
+        "#c:elderberries"
+      ]
     },
     "enchilada": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:enchilada x2"
+      "result": "croptopia:enchilada x2",
+      "ingredients": [
+        "#croptopia:meat_replacements",
+        "#c:tomatoes",
+        "#c:cheeses",
+        "#c:tortillas"
+      ]
     },
     "fajitas": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:fajitas x2"
+      "result": "croptopia:fajitas x2",
+      "ingredients": [
+        "#croptopia:meat_replacements",
+        "#c:bellpeppers",
+        "#c:onions",
+        "#c:tomatoes",
+        "#c:cheeses",
+        "croptopia:frying_pan"
+      ]
     },
     "fig_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:fig_sapling"
+      "result": "croptopia:fig_sapling",
+      "ingredients": [
+        "#c:figs",
+        "#c:figs",
+        "#minecraft:saplings"
+      ]
     },
     "flour": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:flour"
+      "result": "croptopia:flour",
+      "ingredients": [
+        "#croptopia:flourable",
+        "#croptopia:flourable"
+      ]
     },
     "food_press": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:food_press"
+      "result": "croptopia:food_press",
+      "ingredients": [
+        "minecraft:piston",
+        "minecraft:hopper"
+      ]
     },
     "french_fries": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:french_fries"
+      "result": "croptopia:french_fries",
+      "ingredients": [
+        "minecraft:potato",
+        "croptopia:cooking_pot",
+        "#c:salts",
+        "#c:olive_oils"
+      ]
     },
     "fried_calamari": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:fried_calamari x2"
+      "result": "croptopia:fried_calamari x2",
+      "ingredients": [
+        "#c:calamari",
+        "#c:lemons",
+        "#c:olive_oils",
+        "#c:flour",
+        "croptopia:frying_pan",
+        "#c:sea_lettuce"
+      ]
     },
     "fried_chicken": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:fried_chicken"
+      "result": "croptopia:fried_chicken",
+      "ingredients": [
+        "#c:flour",
+        "#c:chile_peppers",
+        "#c:olive_oils",
+        "#croptopia:chicken_replacements",
+        "croptopia:frying_pan"
+      ]
     },
     "fruit_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:fruit_salad"
+      "result": "croptopia:fruit_salad",
+      "ingredients": [
+        "minecraft:bowl",
+        "#c:strawberries",
+        "#c:bananas",
+        "#c:grapes",
+        "minecraft:apple"
+      ]
     },
     "fruit_smoothie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:fruit_smoothie x2"
+      "result": "croptopia:fruit_smoothie x2",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "#c:fruits",
+        "#c:fruits",
+        "#c:fruits",
+        "minecraft:ice",
+        "#c:milks"
+      ]
     },
     "frying_pan": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:frying_pan"
+      "result": "croptopia:frying_pan",
+      "ingredients": [
+        "minecraft:iron_ingot"
+      ]
     },
     "garlic_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:garlic_seed"
+      "result": "croptopia:garlic_seed",
+      "ingredients": [
+        "#c:garlic"
+      ]
     },
     "ginger_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:ginger_seed"
+      "result": "croptopia:ginger_seed",
+      "ingredients": [
+        "#c:gingers"
+      ]
     },
     "goulash": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:goulash"
+      "result": "croptopia:goulash",
+      "ingredients": [
+        "#croptopia:pork_replacements",
+        "#c:onions",
+        "#croptopia:beef_replacements",
+        "#c:cabbage",
+        "#c:tomatoes",
+        "croptopia:frying_pan"
+      ]
     },
     "grapefruit_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:grapefruit_sapling"
+      "result": "croptopia:grapefruit_sapling",
+      "ingredients": [
+        "#c:grapefruits",
+        "#c:grapefruits",
+        "#minecraft:saplings"
+      ]
     },
     "grape_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:grape_jam"
+      "result": "croptopia:grape_jam",
+      "ingredients": [
+        "#c:grapes",
+        "minecraft:sugar",
+        "croptopia:cooking_pot"
+      ]
     },
     "grape_juice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:grape_juice"
+      "result": "croptopia:grape_juice",
+      "ingredients": [
+        "#c:grapes",
+        "croptopia:food_press",
+        "minecraft:glass_bottle"
+      ]
     },
     "grape_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:grape_seed"
+      "result": "croptopia:grape_seed",
+      "ingredients": [
+        "#c:grapes"
+      ]
     },
     "greenbean_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:greenbean_seed"
+      "result": "croptopia:greenbean_seed",
+      "ingredients": [
+        "#c:greenbeans"
+      ]
     },
     "greenonion_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:greenonion_seed"
+      "result": "croptopia:greenonion_seed",
+      "ingredients": [
+        "#c:greenonions"
+      ]
     },
     "grilled_cheese": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:grilled_cheese"
+      "result": "croptopia:grilled_cheese",
+      "ingredients": [
+        "minecraft:bread",
+        "#c:cheeses",
+        "croptopia:frying_pan"
+      ]
     },
     "grilled_oysters": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:grilled_oysters x2"
+      "result": "croptopia:grilled_oysters x2",
+      "ingredients": [
+        "#c:oysters",
+        "#c:cheeses",
+        "#c:lemons",
+        "#c:garlic",
+        "#c:salts",
+        "croptopia:frying_pan"
+      ]
     },
     "ground_pork": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:ground_pork x2"
+      "result": "croptopia:ground_pork x2",
+      "ingredients": [
+        "#croptopia:pork_replacements",
+        "croptopia:food_press"
+      ]
     },
     "hamburger": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:hamburger"
+      "result": "croptopia:hamburger",
+      "ingredients": [
+        "minecraft:bread",
+        "croptopia:frying_pan",
+        "minecraft:beef"
+      ]
     },
     "ham_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:ham_sandwich"
+      "result": "croptopia:ham_sandwich",
+      "ingredients": [
+        "minecraft:bread",
+        "minecraft:cooked_porkchop",
+        "#c:cheeses"
+      ]
     },
     "hashed_brown": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:hashed_brown x4"
+      "result": "croptopia:hashed_brown x4",
+      "ingredients": [
+        "#c:potatoes",
+        "croptopia:frying_pan",
+        "#c:olive_oils",
+        "croptopia:knife"
+      ]
     },
     "honeydew_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:honeydew_seed"
+      "result": "croptopia:honeydew_seed",
+      "ingredients": [
+        "#c:honeydew"
+      ]
     },
     "hops_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:hops_seed"
+      "result": "croptopia:hops_seed",
+      "ingredients": [
+        "#c:hops"
+      ]
     },
     "horchata": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:horchata"
+      "result": "croptopia:horchata",
+      "ingredients": [
+        "#c:rice",
+        "#c:almonds",
+        "#c:limes",
+        "#c:water_bottles",
+        "minecraft:sugar",
+        "croptopia:cinnamon"
+      ]
     },
     "cloche_artichoke": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_asparagus": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_barley": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_basil": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_bellpepper": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_blackbean": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_blackberry": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_blueberry": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_broccoli": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_cabbage": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_cantaloupe": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_cauliflower": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_celery": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_chile_pepper": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_coffee": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_corn": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_cranberry": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_cucumber": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_currant": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_eggplant": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_elderberry": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_garlic": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_ginger": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_grape": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_greenbean": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_greenonion": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_honeydew": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_hops": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_kale": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_kiwi": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_leek": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_lettuce": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_mustard": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_oat": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_olive": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_onion": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_peanut": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_pepper": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_pineapple": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_radish": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_raspberry": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_rhubarb": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_rice": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_rutabaga": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_saguaro": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_soybean": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_spinach": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_squash": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_strawberry": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_sweetpotato": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_tea_leaves": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_tomatillo": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_tomato": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_turmeric": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_turnip": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_vanilla": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_yam": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cloche_zucchini": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "kale_chips": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:kale_chips"
+      "result": "croptopia:kale_chips",
+      "ingredients": [
+        "#c:kale",
+        "croptopia:frying_pan",
+        "#c:salts",
+        "#c:olive_oils"
+      ]
     },
     "kale_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:kale_seed"
+      "result": "croptopia:kale_seed",
+      "ingredients": [
+        "#c:kale"
+      ]
     },
     "kale_smoothie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:kale_smoothie"
+      "result": "croptopia:kale_smoothie",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "#c:kale",
+        "minecraft:ice",
+        "#c:milks",
+        "#c:mangos",
+        "#c:yoghurts",
+        "#c:tomatoes"
+      ]
     },
     "kiwi_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:kiwi_seed"
+      "result": "croptopia:kiwi_seed",
+      "ingredients": [
+        "#c:kiwis"
+      ]
     },
     "knife": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:knife"
+      "result": "croptopia:knife",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:stick"
+      ]
     },
     "kumquat_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:kumquat_sapling"
+      "result": "croptopia:kumquat_sapling",
+      "ingredients": [
+        "#c:kumquats",
+        "#c:kumquats",
+        "#minecraft:saplings"
+      ]
     },
     "leafy_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:leafy_salad"
+      "result": "croptopia:leafy_salad",
+      "ingredients": [
+        "minecraft:bowl",
+        "#c:lettuce",
+        "#c:spinach",
+        "#c:kale"
+      ]
     },
     "leek_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:leek_seed"
+      "result": "croptopia:leek_seed",
+      "ingredients": [
+        "#c:leek"
+      ]
     },
     "leek_soup": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:leek_soup"
+      "result": "croptopia:leek_soup",
+      "ingredients": [
+        "minecraft:bowl",
+        "#c:leek",
+        "minecraft:potato",
+        "#c:milks"
+      ]
     },
     "lemonade": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:lemonade"
+      "result": "croptopia:lemonade",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "#c:lemons",
+        "croptopia:food_press"
+      ]
     },
     "lemon_chicken": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:lemon_chicken"
+      "result": "croptopia:lemon_chicken",
+      "ingredients": [
+        "#c:lemons",
+        "#c:chile_peppers",
+        "#c:tomatoes",
+        "#croptopia:chicken_replacements",
+        "croptopia:cooking_pot"
+      ]
     },
     "lemon_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:lemon_sapling"
+      "result": "croptopia:lemon_sapling",
+      "ingredients": [
+        "#c:lemons",
+        "#c:lemons",
+        "#minecraft:saplings"
+      ]
     },
     "lettuce_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:lettuce_seed"
+      "result": "croptopia:lettuce_seed",
+      "ingredients": [
+        "#c:lettuce"
+      ]
     },
     "limeade": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:limeade"
+      "result": "croptopia:limeade",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "#c:limes",
+        "#c:lemons",
+        "croptopia:food_press"
+      ]
     },
     "lime_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:lime_sapling"
+      "result": "croptopia:lime_sapling",
+      "ingredients": [
+        "#c:limes",
+        "#c:limes",
+        "#minecraft:saplings"
+      ]
     },
     "macaron": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:macaron x2"
+      "result": "croptopia:macaron x2",
+      "ingredients": [
+        "minecraft:egg",
+        "minecraft:sugar",
+        "#c:almonds",
+        "croptopia:food_press"
+      ]
     },
     "mango_ice_cream": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:mango_ice_cream"
+      "result": "croptopia:mango_ice_cream",
+      "ingredients": [
+        "#c:mangos",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "#c:milks",
+        "croptopia:cooking_pot"
+      ]
     },
     "mango_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:mango_sapling"
+      "result": "croptopia:mango_sapling",
+      "ingredients": [
+        "#c:mangos",
+        "#c:mangos",
+        "#minecraft:saplings"
+      ]
     },
     "mashed_potatoes": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:mashed_potatoes"
+      "result": "croptopia:mashed_potatoes",
+      "ingredients": [
+        "#c:potatoes",
+        "#c:salts",
+        "#c:milks",
+        "croptopia:mortar_and_pestle"
+      ]
     },
     "mead": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:mead"
+      "result": "croptopia:mead",
+      "ingredients": [
+        "minecraft:honey_bottle",
+        "#c:water_bottles",
+        "croptopia:food_press",
+        "minecraft:glass_bottle"
+      ]
     },
     "melon_juice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:melon_juice"
+      "result": "croptopia:melon_juice",
+      "ingredients": [
+        "#c:melons",
+        "croptopia:food_press",
+        "minecraft:glass_bottle"
+      ]
     },
     "meringue": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:meringue x2"
+      "result": "croptopia:meringue x2",
+      "ingredients": [
+        "#c:salts",
+        "#c:vanilla",
+        "minecraft:sugar",
+        "minecraft:egg"
+      ]
     },
     "molasses_from_smoking_sugar_cane": {
       "type": "minecraft:smoking",
-      "result": "croptopia:molasses"
+      "result": "croptopia:molasses",
+      "ingredients": [
+        "minecraft:sugar_cane"
+      ]
     },
     "molasses_from_sugar_cane": {
       "type": "minecraft:smelting",
-      "result": "croptopia:molasses"
+      "result": "croptopia:molasses",
+      "ingredients": [
+        "minecraft:sugar_cane"
+      ]
     },
     "mortar_and_pestle": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:mortar_and_pestle"
+      "result": "croptopia:mortar_and_pestle",
+      "ingredients": [
+        "minecraft:stick",
+        "minecraft:bowl"
+      ]
     },
     "mustard_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:mustard_seed"
+      "result": "croptopia:mustard_seed",
+      "ingredients": [
+        "#c:mustard"
+      ]
     },
     "nectarine_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:nectarine_sapling"
+      "result": "croptopia:nectarine_sapling",
+      "ingredients": [
+        "#c:nectarines",
+        "#c:nectarines",
+        "#minecraft:saplings"
+      ]
     },
     "nether_star_cake": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:nether_star_cake"
+      "result": "croptopia:nether_star_cake",
+      "ingredients": [
+        "minecraft:nether_star",
+        "croptopia:dough",
+        "minecraft:sugar"
+      ]
     },
     "noodle": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:noodle"
+      "result": "croptopia:noodle",
+      "ingredients": [
+        "croptopia:cooking_pot",
+        "#c:water_bottles",
+        "#c:salts",
+        "#c:flour"
+      ]
     },
     "nougat": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:nougat x2"
+      "result": "croptopia:nougat x2",
+      "ingredients": [
+        "#c:nuts",
+        "#c:nuts",
+        "minecraft:sugar",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "minecraft:egg"
+      ]
     },
     "nutmeg_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:nutmeg_sapling"
+      "result": "croptopia:nutmeg_sapling",
+      "ingredients": [
+        "#c:nutmegs",
+        "#c:nutmegs",
+        "#minecraft:saplings"
+      ]
     },
     "nutty_cookie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:nutty_cookie x4"
+      "result": "croptopia:nutty_cookie x4",
+      "ingredients": [
+        "#c:nuts",
+        "#c:nuts",
+        "minecraft:sugar",
+        "#c:flour"
+      ]
     },
     "oatmeal": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:oatmeal"
+      "result": "croptopia:oatmeal",
+      "ingredients": [
+        "minecraft:bowl",
+        "#c:oats",
+        "#c:milks"
+      ]
     },
     "oat_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:oat_seed"
+      "result": "croptopia:oat_seed",
+      "ingredients": [
+        "#c:oat"
+      ]
     },
     "olive_oil": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:olive_oil"
+      "result": "croptopia:olive_oil",
+      "ingredients": [
+        "#c:olives",
+        "#c:olives",
+        "croptopia:food_press"
+      ]
     },
     "olive_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:olive_seed"
+      "result": "croptopia:olive_seed",
+      "ingredients": [
+        "#c:olives"
+      ]
     },
     "onion_rings": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:onion_rings"
+      "result": "croptopia:onion_rings",
+      "ingredients": [
+        "#c:onions",
+        "croptopia:cooking_pot",
+        "#c:salts",
+        "#c:olive_oils",
+        "#c:flour"
+      ]
     },
     "onion_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:onion_seed"
+      "result": "croptopia:onion_seed",
+      "ingredients": [
+        "#c:onions"
+      ]
     },
     "orange_dye": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:orange_dye x2"
+      "result": "minecraft:orange_dye x2",
+      "ingredients": [
+        "#c:turmeric",
+        "#c:turmeric",
+        "#c:turmeric"
+      ]
     },
     "orange_juice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:orange_juice"
+      "result": "croptopia:orange_juice",
+      "ingredients": [
+        "#c:oranges",
+        "croptopia:food_press",
+        "minecraft:glass_bottle"
+      ]
     },
     "orange_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:orange_sapling"
+      "result": "croptopia:orange_sapling",
+      "ingredients": [
+        "#c:oranges",
+        "#c:oranges",
+        "#minecraft:saplings"
+      ]
     },
     "paprika": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:paprika"
+      "result": "croptopia:paprika",
+      "ingredients": [
+        "#c:chile_peppers",
+        "croptopia:mortar_and_pestle"
+      ]
     },
     "peach_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:peach_jam"
+      "result": "croptopia:peach_jam",
+      "ingredients": [
+        "#c:peaches",
+        "minecraft:sugar",
+        "croptopia:cooking_pot"
+      ]
     },
     "peach_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:peach_sapling"
+      "result": "croptopia:peach_sapling",
+      "ingredients": [
+        "#c:peaches",
+        "#c:peaches",
+        "#minecraft:saplings"
+      ]
     },
     "peanut_butter_and_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:peanut_butter_and_jam"
+      "result": "croptopia:peanut_butter_and_jam",
+      "ingredients": [
+        "minecraft:bread",
+        "croptopia:peanut_butter",
+        "#c:jams"
+      ]
     },
     "peanut_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:peanut_seed"
+      "result": "croptopia:peanut_seed",
+      "ingredients": [
+        "#c:peanuts"
+      ]
     },
     "pear_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pear_sapling"
+      "result": "croptopia:pear_sapling",
+      "ingredients": [
+        "#c:pears",
+        "#c:pears",
+        "#minecraft:saplings"
+      ]
     },
     "pecan_ice_cream": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pecan_ice_cream"
+      "result": "croptopia:pecan_ice_cream",
+      "ingredients": [
+        "#c:pecans",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "#c:milks",
+        "croptopia:cooking_pot"
+      ]
     },
     "pecan_pie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pecan_pie"
+      "result": "croptopia:pecan_pie",
+      "ingredients": [
+        "#c:pecans",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "#c:flour",
+        "#c:doughs",
+        "croptopia:frying_pan"
+      ]
     },
     "pecan_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pecan_sapling"
+      "result": "croptopia:pecan_sapling",
+      "ingredients": [
+        "#c:pecans",
+        "#c:pecans",
+        "#minecraft:saplings"
+      ]
     },
     "pepperoni": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pepperoni x4"
+      "result": "croptopia:pepperoni x4",
+      "ingredients": [
+        "minecraft:beef",
+        "minecraft:porkchop",
+        "#c:paprika",
+        "#c:chile_peppers"
+      ]
     },
     "pepper_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pepper_seed"
+      "result": "croptopia:pepper_seed",
+      "ingredients": [
+        "#c:pepper"
+      ]
     },
     "persimmon_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:persimmon_sapling"
+      "result": "croptopia:persimmon_sapling",
+      "ingredients": [
+        "#c:persimmons",
+        "#c:persimmons",
+        "#minecraft:saplings"
+      ]
     },
     "pineapple_juice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pineapple_juice"
+      "result": "croptopia:pineapple_juice",
+      "ingredients": [
+        "#c:pineapples",
+        "croptopia:food_press",
+        "minecraft:glass_bottle"
+      ]
     },
     "pineapple_pepperoni_pizza": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pineapple_pepperoni_pizza"
+      "result": "croptopia:pineapple_pepperoni_pizza",
+      "ingredients": [
+        "#c:doughs",
+        "#c:cheeses",
+        "#c:tomatoes",
+        "#c:pineapples",
+        "#c:pepperoni",
+        "#c:pineapples",
+        "croptopia:frying_pan"
+      ]
     },
     "pineapple_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pineapple_seed"
+      "result": "croptopia:pineapple_seed",
+      "ingredients": [
+        "#c:pineapples"
+      ]
     },
     "pizza": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pizza"
+      "result": "croptopia:pizza",
+      "ingredients": [
+        "#c:doughs",
+        "#c:cheeses",
+        "#c:tomatoes",
+        "croptopia:frying_pan"
+      ]
     },
     "plum_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:plum_sapling"
+      "result": "croptopia:plum_sapling",
+      "ingredients": [
+        "#c:plums",
+        "#c:plums",
+        "#minecraft:saplings"
+      ]
     },
     "popcorn_from_corn": {
       "type": "minecraft:smelting",
-      "result": "croptopia:popcorn"
+      "result": "croptopia:popcorn",
+      "ingredients": [
+        "croptopia:corn"
+      ]
     },
     "popcorn_from_smoking_corn": {
       "type": "minecraft:smoking",
-      "result": "croptopia:popcorn"
+      "result": "croptopia:popcorn",
+      "ingredients": [
+        "croptopia:corn"
+      ]
     },
     "pork_and_beans": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pork_and_beans"
+      "result": "croptopia:pork_and_beans",
+      "ingredients": [
+        "minecraft:bowl",
+        "#c:blackbeans",
+        "minecraft:porkchop"
+      ]
     },
     "pork_jerky": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:pork_jerky x14"
+      "result": "croptopia:pork_jerky x14",
+      "ingredients": [
+        "minecraft:porkchop",
+        "#c:salts"
+      ]
     },
     "potato_chips": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:potato_chips"
+      "result": "croptopia:potato_chips",
+      "ingredients": [
+        "minecraft:potato",
+        "croptopia:frying_pan",
+        "#c:salts",
+        "#c:olive_oils"
+      ]
     },
     "protein_bar": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:protein_bar x3"
+      "result": "croptopia:protein_bar x3",
+      "ingredients": [
+        "#c:nuts",
+        "#c:nuts",
+        "minecraft:sugar",
+        "#c:caramel",
+        "#c:chocolates",
+        "#c:salts"
+      ]
     },
     "pumpkin_bars": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:pumpkin_bars x3"
+      "result": "croptopia:pumpkin_bars x3",
+      "ingredients": [
+        "croptopia:cinnamon",
+        "#c:vanilla",
+        "#c:salts",
+        "minecraft:egg",
+        "minecraft:sugar",
+        "#c:flour",
+        "minecraft:pumpkin",
+        "#c:butters"
+      ]
     },
     "pumpkin_soup": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:pumpkin_soup x2"
+      "result": "croptopia:pumpkin_soup x2",
+      "ingredients": [
+        "#c:onions",
+        "#c:garlic",
+        "croptopia:pepper",
+        "#c:salts",
+        "minecraft:pumpkin",
+        "croptopia:cooking_pot"
+      ]
     },
     "pumpkin_spice_latte": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:pumpkin_spice_latte"
+      "result": "croptopia:pumpkin_spice_latte",
+      "ingredients": [
+        "minecraft:sugar",
+        "#c:paprika",
+        "#c:milks",
+        "minecraft:pumpkin",
+        "croptopia:coffee"
+      ]
     },
     "purple_dye": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:purple_dye x2"
+      "result": "minecraft:purple_dye x2",
+      "ingredients": [
+        "#c:grapes",
+        "#c:grapes",
+        "#c:grapes"
+      ]
     },
     "quesadilla": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:quesadilla x2"
+      "result": "croptopia:quesadilla x2",
+      "ingredients": [
+        "#c:tortillas",
+        "#c:tortillas",
+        "#c:cheeses",
+        "#c:avocados",
+        "#croptopia:chicken_replacements",
+        "croptopia:frying_pan"
+      ]
     },
     "quiche": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:quiche"
+      "result": "croptopia:quiche",
+      "ingredients": [
+        "croptopia:frying_pan",
+        "#c:milks",
+        "minecraft:egg",
+        "#c:spinach",
+        "#c:flour",
+        "#c:onions"
+      ]
     },
     "radish_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:radish_seed"
+      "result": "croptopia:radish_seed",
+      "ingredients": [
+        "#c:radishes"
+      ]
     },
     "raisins_from_grape": {
       "type": "minecraft:smelting",
-      "result": "croptopia:raisins"
+      "result": "croptopia:raisins",
+      "ingredients": [
+        "croptopia:grape"
+      ]
     },
     "raisins_from_smoking_grape": {
       "type": "minecraft:smoking",
-      "result": "croptopia:raisins"
+      "result": "croptopia:raisins",
+      "ingredients": [
+        "croptopia:grape"
+      ]
     },
     "raisin_oatmeal_cookie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:raisin_oatmeal_cookie x4"
+      "result": "croptopia:raisin_oatmeal_cookie x4",
+      "ingredients": [
+        "#c:raisins",
+        "croptopia:oatmeal",
+        "minecraft:sugar",
+        "#c:flour"
+      ]
     },
     "raspberry_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:raspberry_jam"
+      "result": "croptopia:raspberry_jam",
+      "ingredients": [
+        "#c:raspberries",
+        "minecraft:sugar",
+        "croptopia:cooking_pot"
+      ]
     },
     "raspberry_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:raspberry_seed"
+      "result": "croptopia:raspberry_seed",
+      "ingredients": [
+        "#c:raspberries"
+      ]
     },
     "ravioli": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:ravioli x2"
+      "result": "croptopia:ravioli x2",
+      "ingredients": [
+        "#c:noodles",
+        "#c:cheeses"
+      ]
     },
     "refried_beans": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:refried_beans x2"
+      "result": "croptopia:refried_beans x2",
+      "ingredients": [
+        "#c:blackbeans",
+        "#c:blackbeans",
+        "#c:chile_peppers",
+        "#c:cheeses",
+        "croptopia:frying_pan"
+      ]
     },
     "rhubarb_pie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:rhubarb_pie"
+      "result": "croptopia:rhubarb_pie",
+      "ingredients": [
+        "#c:rhubarb",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "#c:flour",
+        "#c:doughs",
+        "croptopia:frying_pan"
+      ]
     },
     "rhubarb_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:rhubarb_seed"
+      "result": "croptopia:rhubarb_seed",
+      "ingredients": [
+        "#c:rhubarb"
+      ]
     },
     "rice_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:rice_seed"
+      "result": "croptopia:rice_seed",
+      "ingredients": [
+        "#c:rice"
+      ]
     },
     "roasted_nuts": {
       "type": "minecraft:smelting",
-      "result": "croptopia:roasted_nuts"
+      "result": "croptopia:roasted_nuts",
+      "ingredients": [
+        "#c:nuts"
+      ]
     },
     "roasted_nuts_from_campfire": {
       "type": "minecraft:campfire_cooking",
-      "result": "croptopia:roasted_nuts"
+      "result": "croptopia:roasted_nuts",
+      "ingredients": [
+        "#c:nuts"
+      ]
     },
     "roasted_pumpkin_seeds": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:roasted_pumpkin_seeds"
+      "result": "croptopia:roasted_pumpkin_seeds",
+      "ingredients": [
+        "minecraft:pumpkin_seeds",
+        "#c:salts",
+        "croptopia:pepper",
+        "croptopia:frying_pan"
+      ]
     },
     "roasted_smoking": {
       "type": "minecraft:smoking",
-      "result": "croptopia:roasted_nuts"
+      "result": "croptopia:roasted_nuts",
+      "ingredients": [
+        "#c:nuts"
+      ]
     },
     "roasted_sunflower_seeds": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:roasted_sunflower_seeds"
+      "result": "croptopia:roasted_sunflower_seeds",
+      "ingredients": [
+        "minecraft:sunflower",
+        "#c:salts",
+        "croptopia:pepper",
+        "croptopia:frying_pan"
+      ]
     },
     "rum": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:rum"
+      "result": "croptopia:rum",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "#c:molasses",
+        "#c:water_bottles"
+      ]
     },
     "rum_raisin_ice_cream": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:rum_raisin_ice_cream"
+      "result": "croptopia:rum_raisin_ice_cream",
+      "ingredients": [
+        "minecraft:sugar",
+        "#c:raisins",
+        "#c:rums",
+        "#c:milks",
+        "minecraft:egg",
+        "croptopia:cooking_pot"
+      ]
     },
     "rutabaga_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:rutabaga_seed"
+      "result": "croptopia:rutabaga_seed",
+      "ingredients": [
+        "#c:rutabagas"
+      ]
     },
     "saguaro_juice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:saguaro_juice"
+      "result": "croptopia:saguaro_juice",
+      "ingredients": [
+        "#c:saguaros",
+        "croptopia:food_press",
+        "minecraft:glass_bottle"
+      ]
     },
     "saguaro_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:saguaro_seed"
+      "result": "croptopia:saguaro_seed",
+      "ingredients": [
+        "#c:saguaros"
+      ]
     },
     "salsa": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:salsa x4"
+      "result": "croptopia:salsa x4",
+      "ingredients": [
+        "#c:tomatoes",
+        "#c:chile_peppers",
+        "#c:salts",
+        "#c:limes",
+        "#c:tomatillos"
+      ]
     },
     "salt_from_smoking_water_bottle": {
       "type": "minecraft:smoking",
-      "result": "croptopia:salt"
+      "result": "croptopia:salt",
+      "ingredients": [
+        "croptopia:water_bottle"
+      ]
     },
     "salt_from_water_bottle": {
       "type": "minecraft:smelting",
-      "result": "croptopia:salt"
+      "result": "croptopia:salt",
+      "ingredients": [
+        "croptopia:water_bottle"
+      ]
     },
     "saucy_chips": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:saucy_chips"
+      "result": "croptopia:saucy_chips",
+      "ingredients": [
+        "minecraft:bowl",
+        "#croptopia:sauces",
+        "croptopia:potato_chips"
+      ]
     },
     "sausage": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:sausage"
+      "result": "croptopia:sausage",
+      "ingredients": [
+        "#c:ground_pork",
+        "#c:salts",
+        "#c:paprika"
+      ]
     },
     "scrambled_eggs": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:scrambled_eggs"
+      "result": "croptopia:scrambled_eggs",
+      "ingredients": [
+        "croptopia:frying_pan",
+        "minecraft:egg",
+        "#c:cheeses"
+      ]
     },
     "shaped_ajvar": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:ajvar"
+      "result": "croptopia:ajvar",
+      "ingredients": [
+        "#c:chile_peppers",
+        "#c:olive_oils",
+        "#c:salts",
+        "#c:bellpeppers",
+        "#c:eggplants",
+        "#c:garlic"
+      ]
     },
     "shaped_ajvar_toast": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:ajvar_toast"
+      "result": "croptopia:ajvar_toast",
+      "ingredients": [
+        "croptopia:ajvar",
+        "croptopia:toast"
+      ]
     },
     "shaped_avocado_toast": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:avocado_toast"
+      "result": "croptopia:avocado_toast",
+      "ingredients": [
+        "#c:avocados",
+        "croptopia:toast"
+      ]
     },
     "shaped_bacon": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:bacon"
+      "result": "croptopia:bacon",
+      "ingredients": [
+        "minecraft:porkchop",
+        "croptopia:knife"
+      ]
     },
     "shaped_beef_stew": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:beef_stew"
+      "result": "croptopia:beef_stew",
+      "ingredients": [
+        "minecraft:carrot",
+        "minecraft:carrot",
+        "minecraft:beef",
+        "#c:flour",
+        "minecraft:potato"
+      ]
     },
     "shaped_beef_stir_fry": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:beef_stir_fry"
+      "result": "croptopia:beef_stir_fry",
+      "ingredients": [
+        "#c:broccoli",
+        "minecraft:carrot",
+        "minecraft:beef",
+        "#c:olive_oils",
+        "#c:soy_sauces",
+        "#c:garlic"
+      ]
     },
     "shaped_beef_wellington": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:beef_wellington"
+      "result": "croptopia:beef_wellington",
+      "ingredients": [
+        "#c:flour",
+        "#c:onions",
+        "#c:mustard",
+        "croptopia:frying_pan",
+        "croptopia:pepper",
+        "minecraft:egg",
+        "minecraft:beef",
+        "minecraft:brown_mushroom"
+      ]
     },
     "shaped_buttered_green_beans": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:buttered_green_beans"
+      "result": "croptopia:buttered_green_beans",
+      "ingredients": [
+        "#c:salts",
+        "croptopia:pepper",
+        "#c:butters",
+        "#c:greenbeans",
+        "#c:gingers"
+      ]
     },
     "shaped_cheesy_asparagus": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:cheesy_asparagus"
+      "result": "croptopia:cheesy_asparagus",
+      "ingredients": [
+        "#c:asparagus",
+        "#c:cheeses",
+        "#c:olive_oils",
+        "croptopia:pepper"
+      ]
     },
     "shaped_chocolate_ice_cream": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:chocolate_ice_cream"
+      "result": "croptopia:chocolate_ice_cream",
+      "ingredients": [
+        "minecraft:egg",
+        "#c:milk_bottles",
+        "#c:chocolates",
+        "minecraft:sugar",
+        "croptopia:cooking_pot"
+      ]
     },
     "shaped_cornish_pasty": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:cornish_pasty"
+      "result": "croptopia:cornish_pasty",
+      "ingredients": [
+        "#c:onions",
+        "#c:rutabagas",
+        "croptopia:pepper",
+        "#c:flour",
+        "minecraft:beef",
+        "minecraft:potato",
+        "croptopia:frying_pan"
+      ]
     },
     "shaped_eggplant_parmesan": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:eggplant_parmesan"
+      "result": "croptopia:eggplant_parmesan",
+      "ingredients": [
+        "#c:basil",
+        "minecraft:egg",
+        "#c:olive_oils",
+        "#c:eggplants",
+        "croptopia:pepper",
+        "#c:cheeses",
+        "minecraft:bread"
+      ]
     },
     "shaped_eton_mess": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:eton_mess"
+      "result": "croptopia:eton_mess",
+      "ingredients": [
+        "#c:strawberries",
+        "croptopia:whipping_cream",
+        "minecraft:egg",
+        "minecraft:sugar"
+      ]
     },
     "shaped_figgy_pudding": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:figgy_pudding"
+      "result": "croptopia:figgy_pudding",
+      "ingredients": [
+        "#c:dates",
+        "#c:figs",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "#c:water_bottles",
+        "croptopia:whipping_cream"
+      ]
     },
     "shaped_fish_and_chips": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:fish_and_chips"
+      "result": "croptopia:fish_and_chips",
+      "ingredients": [
+        "#c:flour",
+        "#c:salts",
+        "croptopia:frying_pan",
+        "croptopia:pepper",
+        "#minecraft:fishes",
+        "minecraft:potato"
+      ]
     },
     "shaped_fruit_cake": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:fruit_cake x3"
+      "result": "croptopia:fruit_cake x3",
+      "ingredients": [
+        "#c:salts",
+        "#c:fruits",
+        "#c:lemons",
+        "minecraft:sugar",
+        "#c:pecans",
+        "minecraft:egg",
+        "croptopia:cinnamon",
+        "#c:nutmegs"
+      ]
     },
     "shaped_grilled_eggplant": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:grilled_eggplant"
+      "result": "croptopia:grilled_eggplant",
+      "ingredients": [
+        "#c:paprika",
+        "#c:salts",
+        "croptopia:pepper",
+        "#c:olive_oils",
+        "#c:eggplants",
+        "#c:garlic"
+      ]
     },
     "shaped_kiwi_sorbet": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:kiwi_sorbet"
+      "result": "croptopia:kiwi_sorbet",
+      "ingredients": [
+        "#c:kiwis",
+        "minecraft:honey_bottle"
+      ]
     },
     "shaped_lemon_coconut_bar": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:lemon_coconut_bar x2"
+      "result": "croptopia:lemon_coconut_bar x2",
+      "ingredients": [
+        "minecraft:sugar",
+        "#c:lemons",
+        "minecraft:egg",
+        "#c:butters",
+        "#c:coconuts",
+        "#c:flour"
+      ]
     },
     "shaped_milk_bottle": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:milk_bottle x16"
+      "result": "croptopia:milk_bottle x16",
+      "ingredients": [
+        "minecraft:glass",
+        "minecraft:milk_bucket"
+      ]
     },
     "shaped_nether_wart_stew": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:nether_wart_stew"
+      "result": "croptopia:nether_wart_stew",
+      "ingredients": [
+        "#c:flour",
+        "minecraft:nether_wart",
+        "minecraft:crimson_fungus",
+        "minecraft:warped_fungus"
+      ]
     },
     "shaped_peanut_butter": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:peanut_butter x4"
+      "result": "croptopia:peanut_butter x4",
+      "ingredients": [
+        "#c:peanuts",
+        "croptopia:food_press"
+      ]
     },
     "shaped_peanut_butter_with_celery": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:peanut_butter_with_celery"
+      "result": "croptopia:peanut_butter_with_celery",
+      "ingredients": [
+        "#c:celery",
+        "croptopia:peanut_butter"
+      ]
     },
     "shaped_potato_soup": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:potato_soup"
+      "result": "croptopia:potato_soup",
+      "ingredients": [
+        "minecraft:potato",
+        "#c:flour",
+        "#c:greenonions",
+        "croptopia:bacon",
+        "#c:water_bottles"
+      ]
     },
     "shaped_ratatouille": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:ratatouille x2"
+      "result": "croptopia:ratatouille x2",
+      "ingredients": [
+        "#c:tomatoes",
+        "#c:olive_oils",
+        "#c:squashes",
+        "#c:zucchini",
+        "croptopia:frying_pan",
+        "#c:eggplants",
+        "#c:onions",
+        "#c:bellpeppers",
+        "#c:basil"
+      ]
     },
     "shaped_rhubarb_crisp": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:rhubarb_crisp"
+      "result": "croptopia:rhubarb_crisp",
+      "ingredients": [
+        "#c:oats",
+        "#c:flour",
+        "#c:butters",
+        "#c:rhubarb",
+        "minecraft:sugar",
+        "#c:cinnamon",
+        "#c:salts"
+      ]
     },
     "shaped_roasted_asparagus": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:roasted_asparagus x2"
+      "result": "croptopia:roasted_asparagus x2",
+      "ingredients": [
+        "#c:olive_oils",
+        "#c:asparagus",
+        "#c:garlic",
+        "#c:salts",
+        "croptopia:frying_pan",
+        "croptopia:pepper"
+      ]
     },
     "shaped_roasted_radishes": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:roasted_radishes x2"
+      "result": "croptopia:roasted_radishes x2",
+      "ingredients": [
+        "#c:olive_oils",
+        "#c:radishes",
+        "#c:garlic",
+        "#c:salts",
+        "croptopia:frying_pan",
+        "croptopia:pepper"
+      ]
     },
     "shaped_roasted_squash": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:roasted_squash x2"
+      "result": "croptopia:roasted_squash x2",
+      "ingredients": [
+        "#c:olive_oils",
+        "#c:squashes",
+        "#c:garlic",
+        "#c:salts",
+        "croptopia:frying_pan",
+        "croptopia:pepper"
+      ]
     },
     "shaped_roasted_turnips": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:roasted_turnips x2"
+      "result": "croptopia:roasted_turnips x2",
+      "ingredients": [
+        "#c:olive_oils",
+        "#c:turnips",
+        "#c:garlic",
+        "#c:salts",
+        "croptopia:frying_pan",
+        "croptopia:pepper"
+      ]
     },
     "shaped_scones": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:scones x2"
+      "result": "croptopia:scones x2",
+      "ingredients": [
+        "minecraft:egg",
+        "#c:vanilla",
+        "#c:blueberries",
+        "#c:flour",
+        "#c:salts",
+        "minecraft:sugar",
+        "croptopia:frying_pan"
+      ]
     },
     "shaped_shepherds_pie": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:shepherds_pie"
+      "result": "croptopia:shepherds_pie",
+      "ingredients": [
+        "#c:salts",
+        "#croptopia:beef_mutton",
+        "croptopia:pepper",
+        "minecraft:potato",
+        "croptopia:frying_pan",
+        "#c:tomatoes",
+        "#c:corn",
+        "#c:garlic",
+        "#c:onions"
+      ]
     },
     "shaped_steamed_broccoli": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:steamed_broccoli"
+      "result": "croptopia:steamed_broccoli",
+      "ingredients": [
+        "#c:broccoli",
+        "#c:water_bottles"
+      ]
     },
     "shaped_steamed_green_beans": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:steamed_green_beans x2"
+      "result": "croptopia:steamed_green_beans x2",
+      "ingredients": [
+        "#c:greenbeans",
+        "#c:water_bottles"
+      ]
     },
     "shaped_sticky_toffee_pudding": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:sticky_toffee_pudding"
+      "result": "croptopia:sticky_toffee_pudding",
+      "ingredients": [
+        "#c:dates",
+        "#c:salts",
+        "croptopia:whipping_cream",
+        "minecraft:sugar",
+        "#c:butters",
+        "minecraft:egg",
+        "#c:water_bottles",
+        "#c:vanilla"
+      ]
     },
     "shaped_stir_fry": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:stir_fry"
+      "result": "croptopia:stir_fry",
+      "ingredients": [
+        "#c:garlic",
+        "#c:broccoli",
+        "#c:greenonions",
+        "#c:bellpeppers",
+        "#c:olive_oils",
+        "minecraft:carrot"
+      ]
     },
     "shaped_stuffed_artichoke": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:stuffed_artichoke"
+      "result": "croptopia:stuffed_artichoke",
+      "ingredients": [
+        "minecraft:bread",
+        "#c:cheeses",
+        "#c:olive_oils",
+        "#c:artichokes",
+        "croptopia:pepper",
+        "#c:lemons",
+        "#c:salts",
+        "croptopia:frying_pan"
+      ]
     },
     "shaped_tea": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:tea"
+      "result": "croptopia:tea",
+      "ingredients": [
+        "#c:tea_leaves",
+        "#c:water_bottles"
+      ]
     },
     "shaped_toast_sandwich": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:toast_sandwich x2"
+      "result": "croptopia:toast_sandwich x2",
+      "ingredients": [
+        "minecraft:bread",
+        "croptopia:buttered_toast"
+      ]
     },
     "shaped_treacle_tart": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:treacle_tart x3"
+      "result": "croptopia:treacle_tart x3",
+      "ingredients": [
+        "minecraft:honey_bottle",
+        "#c:lemons",
+        "croptopia:whipping_cream",
+        "minecraft:bread"
+      ]
     },
     "shaped_trifle": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:trifle"
+      "result": "croptopia:trifle",
+      "ingredients": [
+        "#c:strawberries",
+        "minecraft:bread",
+        "#c:wines",
+        "#c:butters",
+        "minecraft:egg",
+        "#c:milks",
+        "#c:vanilla"
+      ]
     },
     "shaped_water_bottle": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:water_bottle x16"
+      "result": "croptopia:water_bottle x16",
+      "ingredients": [
+        "minecraft:glass",
+        "minecraft:water_bucket"
+      ]
     },
     "snicker_doodle": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:snicker_doodle x4"
+      "result": "croptopia:snicker_doodle x4",
+      "ingredients": [
+        "croptopia:cinnamon",
+        "minecraft:sugar",
+        "#c:flour"
+      ]
     },
     "soybean_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:soybean_seed"
+      "result": "croptopia:soybean_seed",
+      "ingredients": [
+        "#c:soybeans"
+      ]
     },
     "soy_milk": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:soy_milk"
+      "result": "croptopia:soy_milk",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "#c:soybeans",
+        "croptopia:food_press"
+      ]
     },
     "soy_sauce": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:soy_sauce"
+      "result": "croptopia:soy_sauce",
+      "ingredients": [
+        "croptopia:food_press",
+        "#c:soybeans",
+        "#c:water_bottles"
+      ]
     },
     "spaghetti_squash": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:spaghetti_squash"
+      "result": "croptopia:spaghetti_squash",
+      "ingredients": [
+        "#c:squashes",
+        "#c:chile_peppers",
+        "#c:olive_oils",
+        "croptopia:frying_pan"
+      ]
     },
     "spinach_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:spinach_seed"
+      "result": "croptopia:spinach_seed",
+      "ingredients": [
+        "#c:spinach"
+      ]
     },
     "squash_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:squash_seed"
+      "result": "croptopia:squash_seed",
+      "ingredients": [
+        "#c:squashes"
+      ]
     },
     "starfruit_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:starfruit_sapling"
+      "result": "croptopia:starfruit_sapling",
+      "ingredients": [
+        "#c:starfruits",
+        "#c:starfruits",
+        "#minecraft:saplings"
+      ]
     },
     "steamed_clams": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:steamed_clams x2"
+      "result": "croptopia:steamed_clams x2",
+      "ingredients": [
+        "#c:butters",
+        "#c:garlic",
+        "#c:salts",
+        "croptopia:pepper",
+        "#c:clams",
+        "croptopia:frying_pan"
+      ]
     },
     "steamed_crab": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:steamed_crab"
+      "result": "croptopia:steamed_crab",
+      "ingredients": [
+        "#c:crabs",
+        "#c:water_bottles",
+        "croptopia:cooking_pot"
+      ]
     },
     "steamed_rice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:steamed_rice"
+      "result": "croptopia:steamed_rice",
+      "ingredients": [
+        "#c:rice",
+        "croptopia:cooking_pot",
+        "#c:salts",
+        "#c:water_bottles"
+      ]
     },
     "strawberry_ice_cream": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:strawberry_ice_cream"
+      "result": "croptopia:strawberry_ice_cream",
+      "ingredients": [
+        "#c:strawberries",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "#c:milks",
+        "croptopia:cooking_pot"
+      ]
     },
     "strawberry_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:strawberry_jam"
+      "result": "croptopia:strawberry_jam",
+      "ingredients": [
+        "#c:strawberries",
+        "minecraft:sugar",
+        "croptopia:cooking_pot"
+      ]
     },
     "strawberry_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:strawberry_seed"
+      "result": "croptopia:strawberry_seed",
+      "ingredients": [
+        "#c:strawberries"
+      ]
     },
     "strawberry_smoothie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:strawberry_smoothie"
+      "result": "croptopia:strawberry_smoothie",
+      "ingredients": [
+        "#c:strawberries",
+        "minecraft:ice",
+        "#c:milks",
+        "minecraft:glass_bottle"
+      ]
     },
     "stripped_cinnamon_wood": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:stripped_cinnamon_wood"
+      "result": "croptopia:stripped_cinnamon_wood",
+      "ingredients": [
+        "croptopia:stripped_cinnamon_log"
+      ]
     },
     "stuffed_poblanos": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:stuffed_poblanos"
+      "result": "croptopia:stuffed_poblanos",
+      "ingredients": [
+        "#croptopia:beef_replacements",
+        "#c:chile_peppers",
+        "#c:blackbeans",
+        "#c:corn",
+        "#c:cheeses",
+        "#c:rice",
+        "croptopia:cooking_pot"
+      ]
     },
     "sunny_side_eggs": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:sunny_side_eggs x2"
+      "result": "croptopia:sunny_side_eggs x2",
+      "ingredients": [
+        "minecraft:egg",
+        "croptopia:frying_pan"
+      ]
     },
     "supreme_pizza": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:supreme_pizza"
+      "result": "croptopia:supreme_pizza",
+      "ingredients": [
+        "#c:doughs",
+        "#c:cheeses",
+        "#c:tomatoes",
+        "#c:bellpeppers",
+        "#c:olives",
+        "#croptopia:meat_replacements",
+        "croptopia:frying_pan"
+      ]
     },
     "sushi": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:sushi"
+      "result": "croptopia:sushi",
+      "ingredients": [
+        "minecraft:seagrass",
+        "#croptopia:fishes",
+        "#c:rice"
+      ]
     },
     "sweetpotato_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:sweetpotato_seed"
+      "result": "croptopia:sweetpotato_seed",
+      "ingredients": [
+        "#c:sweetpotatos"
+      ]
     },
     "sweet_crepes": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:sweet_crepes"
+      "result": "croptopia:sweet_crepes",
+      "ingredients": [
+        "#c:flour",
+        "minecraft:egg",
+        "#c:milks",
+        "#c:jams",
+        "minecraft:sugar",
+        "croptopia:frying_pan"
+      ]
     },
     "sweet_potato_fries": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:sweet_potato_fries"
+      "result": "croptopia:sweet_potato_fries",
+      "ingredients": [
+        "#c:sweetpotatos",
+        "croptopia:cooking_pot",
+        "#c:salts",
+        "#c:olive_oils"
+      ]
     },
     "taco": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:taco"
+      "result": "croptopia:taco",
+      "ingredients": [
+        "#c:tortillas",
+        "#c:cheeses",
+        "#c:lettuce",
+        "croptopia:salsa",
+        "#croptopia:meat_replacements"
+      ]
     },
     "tamales": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tamales x2"
+      "result": "croptopia:tamales x2",
+      "ingredients": [
+        "minecraft:chicken",
+        "#c:onions",
+        "croptopia:corn_husk",
+        "#c:flour",
+        "#c:salts",
+        "#c:chile_peppers",
+        "croptopia:cooking_pot"
+      ]
     },
     "tea_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tea_seed"
+      "result": "croptopia:tea_seed",
+      "ingredients": [
+        "#c:tea_leaves"
+      ]
     },
     "insolator_artichoke": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:artichoke",
+      "ingredients": [
+        "croptopia:artichoke_seed"
+      ]
     },
     "insolator_asparagus": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:asparagus",
+      "ingredients": [
+        "croptopia:asparagus_seed"
+      ]
     },
     "insolator_barley": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:barley",
+      "ingredients": [
+        "croptopia:barley_seed"
+      ]
     },
     "insolator_basil": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:basil",
+      "ingredients": [
+        "croptopia:basil_seed"
+      ]
     },
     "insolator_bellpepper": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:bellpepper",
+      "ingredients": [
+        "croptopia:bellpepper_seed"
+      ]
     },
     "insolator_blackbean": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:blackbean",
+      "ingredients": [
+        "croptopia:blackbean_seed"
+      ]
     },
     "insolator_blackberry": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:blackberry",
+      "ingredients": [
+        "croptopia:blackberry_seed"
+      ]
     },
     "insolator_blueberry": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:blueberry",
+      "ingredients": [
+        "croptopia:blueberry_seed"
+      ]
     },
     "insolator_broccoli": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:broccoli",
+      "ingredients": [
+        "croptopia:broccoli_seed"
+      ]
     },
     "insolator_cabbage": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:cabbage",
+      "ingredients": [
+        "croptopia:cabbage_seed"
+      ]
     },
     "insolator_cantaloupe": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:cantaloupe",
+      "ingredients": [
+        "croptopia:cantaloupe_seed"
+      ]
     },
     "insolator_cauliflower": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:cauliflower",
+      "ingredients": [
+        "croptopia:cauliflower_seed"
+      ]
     },
     "insolator_celery": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:celery",
+      "ingredients": [
+        "croptopia:celery_seed"
+      ]
     },
     "insolator_chile_pepper": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:chile_pepper",
+      "ingredients": [
+        "croptopia:chile_pepper_seed"
+      ]
     },
     "insolator_coffee": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:coffee",
+      "ingredients": [
+        "croptopia:coffee_seed"
+      ]
     },
     "insolator_corn": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:corn",
+      "ingredients": [
+        "croptopia:corn_seed"
+      ]
     },
     "insolator_cranberry": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:cranberry",
+      "ingredients": [
+        "croptopia:cranberry_seed"
+      ]
     },
     "insolator_cucumber": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:cucumber",
+      "ingredients": [
+        "croptopia:cucumber_seed"
+      ]
     },
     "insolator_currant": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:currant",
+      "ingredients": [
+        "croptopia:currant_seed"
+      ]
     },
     "insolator_eggplant": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:eggplant",
+      "ingredients": [
+        "croptopia:eggplant_seed"
+      ]
     },
     "insolator_elderberry": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:elderberry",
+      "ingredients": [
+        "croptopia:elderberry_seed"
+      ]
     },
     "insolator_garlic": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:garlic",
+      "ingredients": [
+        "croptopia:garlic_seed"
+      ]
     },
     "insolator_ginger": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:ginger",
+      "ingredients": [
+        "croptopia:ginger_seed"
+      ]
     },
     "insolator_grape": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:grape",
+      "ingredients": [
+        "croptopia:grape_seed"
+      ]
     },
     "insolator_greenbean": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:greenbean",
+      "ingredients": [
+        "croptopia:greenbean_seed"
+      ]
     },
     "insolator_greenonion": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:greenonion",
+      "ingredients": [
+        "croptopia:greenonion_seed"
+      ]
     },
     "insolator_honeydew": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:honeydew",
+      "ingredients": [
+        "croptopia:honeydew_seed"
+      ]
     },
     "insolator_hops": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:hops",
+      "ingredients": [
+        "croptopia:hops_seed"
+      ]
     },
     "insolator_kale": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:kale",
+      "ingredients": [
+        "croptopia:kale_seed"
+      ]
     },
     "insolator_kiwi": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:kiwi",
+      "ingredients": [
+        "croptopia:kiwi_seed"
+      ]
     },
     "insolator_leek": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:leek",
+      "ingredients": [
+        "croptopia:leek_seed"
+      ]
     },
     "insolator_lettuce": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:lettuce",
+      "ingredients": [
+        "croptopia:lettuce_seed"
+      ]
     },
     "insolator_mustard": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:mustard",
+      "ingredients": [
+        "croptopia:mustard_seed"
+      ]
     },
     "insolator_oat": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:oat",
+      "ingredients": [
+        "croptopia:oat_seed"
+      ]
     },
     "insolator_olive": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:olive",
+      "ingredients": [
+        "croptopia:olive_seed"
+      ]
     },
     "insolator_onion": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:onion",
+      "ingredients": [
+        "croptopia:onion_seed"
+      ]
     },
     "insolator_peanut": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:peanut",
+      "ingredients": [
+        "croptopia:peanut_seed"
+      ]
     },
     "insolator_pepper": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:pepper",
+      "ingredients": [
+        "croptopia:pepper_seed"
+      ]
     },
     "insolator_pineapple": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:pineapple",
+      "ingredients": [
+        "croptopia:pineapple_seed"
+      ]
     },
     "insolator_radish": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:radish",
+      "ingredients": [
+        "croptopia:radish_seed"
+      ]
     },
     "insolator_raspberry": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:raspberry",
+      "ingredients": [
+        "croptopia:raspberry_seed"
+      ]
     },
     "insolator_rhubarb": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:rhubarb",
+      "ingredients": [
+        "croptopia:rhubarb_seed"
+      ]
     },
     "insolator_rice": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:rice",
+      "ingredients": [
+        "croptopia:rice_seed"
+      ]
     },
     "insolator_rutabaga": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:rutabaga",
+      "ingredients": [
+        "croptopia:rutabaga_seed"
+      ]
     },
     "insolator_saguaro": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:saguaro",
+      "ingredients": [
+        "croptopia:saguaro_seed"
+      ]
     },
     "insolator_soybean": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:soybean",
+      "ingredients": [
+        "croptopia:soybean_seed"
+      ]
     },
     "insolator_spinach": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:spinach",
+      "ingredients": [
+        "croptopia:spinach_seed"
+      ]
     },
     "insolator_squash": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:squash",
+      "ingredients": [
+        "croptopia:squash_seed"
+      ]
     },
     "insolator_strawberry": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:strawberry",
+      "ingredients": [
+        "croptopia:strawberry_seed"
+      ]
     },
     "insolator_sweetpotato": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:sweetpotato",
+      "ingredients": [
+        "croptopia:sweetpotato_seed"
+      ]
     },
     "insolator_tea": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:tea_leaves",
+      "ingredients": [
+        "croptopia:tea_seed"
+      ]
     },
     "insolator_tomatillo": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:tomatillo",
+      "ingredients": [
+        "croptopia:tomatillo_seed"
+      ]
     },
     "insolator_tomato": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:tomato",
+      "ingredients": [
+        "croptopia:tomato_seed"
+      ]
     },
     "insolator_turmeric": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:turmeric",
+      "ingredients": [
+        "croptopia:turmeric_seed"
+      ]
     },
     "insolator_turnip": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:turnip",
+      "ingredients": [
+        "croptopia:turnip_seed"
+      ]
     },
     "insolator_vanilla": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:vanilla",
+      "ingredients": [
+        "croptopia:vanilla_seeds"
+      ]
     },
     "insolator_yam": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:yam",
+      "ingredients": [
+        "croptopia:yam_seed"
+      ]
     },
     "insolator_zucchini": {
       "type": "thermal:insolator",
-      "result": "unknown"
+      "result": "croptopia:zucchini",
+      "ingredients": [
+        "croptopia:zucchini_seed"
+      ]
     },
     "the_big_breakfast": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:the_big_breakfast"
+      "result": "croptopia:the_big_breakfast",
+      "ingredients": [
+        "minecraft:egg",
+        "croptopia:bacon",
+        "croptopia:hashed_brown",
+        "croptopia:frying_pan",
+        "croptopia:toast",
+        "croptopia:baked_beans",
+        "#c:sausages"
+      ]
     },
     "toast_from_bread": {
       "type": "minecraft:smelting",
-      "result": "croptopia:toast"
+      "result": "croptopia:toast",
+      "ingredients": [
+        "minecraft:bread"
+      ]
     },
     "toast_from_smoking_bread": {
       "type": "minecraft:smoking",
-      "result": "croptopia:toast"
+      "result": "croptopia:toast",
+      "ingredients": [
+        "minecraft:bread"
+      ]
     },
     "toast_with_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:toast_with_jam"
+      "result": "croptopia:toast_with_jam",
+      "ingredients": [
+        "#c:toasts",
+        "#c:jams"
+      ]
     },
     "tofu": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tofu"
+      "result": "croptopia:tofu",
+      "ingredients": [
+        "croptopia:cooking_pot",
+        "#c:water_bottles",
+        "#c:soybeans"
+      ]
     },
     "tofuburger": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tofuburger"
+      "result": "croptopia:tofuburger",
+      "ingredients": [
+        "minecraft:bread",
+        "#c:lettuce",
+        "croptopia:frying_pan",
+        "#c:tofu",
+        "#c:onions"
+      ]
     },
     "tofu_and_dumplings": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tofu_and_dumplings"
+      "result": "croptopia:tofu_and_dumplings",
+      "ingredients": [
+        "#c:doughs",
+        "#c:chile_peppers",
+        "#c:tofu",
+        "croptopia:cooking_pot"
+      ]
     },
     "tomatillo_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tomatillo_seed"
+      "result": "croptopia:tomatillo_seed",
+      "ingredients": [
+        "#c:tomatillos"
+      ]
     },
     "tomato_juice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tomato_juice"
+      "result": "croptopia:tomato_juice",
+      "ingredients": [
+        "#c:tomatoes",
+        "croptopia:food_press",
+        "minecraft:glass_bottle"
+      ]
     },
     "tomato_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tomato_seed"
+      "result": "croptopia:tomato_seed",
+      "ingredients": [
+        "#c:tomatoes"
+      ]
     },
     "tortilla": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tortilla x2"
+      "result": "croptopia:tortilla x2",
+      "ingredients": [
+        "#c:flour",
+        "croptopia:frying_pan",
+        "#c:water_bottles"
+      ]
     },
     "tostada": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tostada"
+      "result": "croptopia:tostada",
+      "ingredients": [
+        "#c:blackbeans",
+        "#c:blackbeans",
+        "#c:tomatoes",
+        "#c:lettuce",
+        "#c:tortillas"
+      ]
     },
     "trail_mix": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:trail_mix x4"
+      "result": "croptopia:trail_mix x4",
+      "ingredients": [
+        "#c:nuts",
+        "#c:nuts",
+        "#c:nuts",
+        "#c:raisins",
+        "#c:salts",
+        "#c:chocolates"
+      ]
     },
     "transcendental_breakfast": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:transcendental_breakfast"
+      "result": "croptopia:transcendental_breakfast",
+      "ingredients": [
+        "croptopia:the_big_breakfast",
+        "croptopia:mountain_salt",
+        "croptopia:nether_star_cake",
+        "croptopia:tuna_sandwich",
+        "croptopia:dragon_egg_omelette",
+        "croptopia:cooked_ravager_meat"
+      ]
     },
     "tres_leche_cake": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:tres_leche_cake x2"
+      "result": "croptopia:tres_leche_cake x2",
+      "ingredients": [
+        "minecraft:egg",
+        "minecraft:sugar",
+        "#c:milks",
+        "#c:flour",
+        "#c:vanilla",
+        "#c:rums",
+        "croptopia:whipping_cream"
+      ]
     },
     "tuna_roll": {
       "type": "minecraft:crafting_shaped",
-      "result": "croptopia:tuna_roll x2"
+      "result": "croptopia:tuna_roll x2",
+      "ingredients": [
+        "minecraft:dried_kelp",
+        "#c:rice",
+        "#c:onions",
+        "#c:tuna"
+      ]
     },
     "turmeric_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:turmeric_seed"
+      "result": "croptopia:turmeric_seed",
+      "ingredients": [
+        "#c:turmeric"
+      ]
     },
     "turnip_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:turnip_seed"
+      "result": "croptopia:turnip_seed",
+      "ingredients": [
+        "#c:turnips"
+      ]
     },
     "vanilla_ice_cream": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:vanilla_ice_cream"
+      "result": "croptopia:vanilla_ice_cream",
+      "ingredients": [
+        "#c:vanilla",
+        "minecraft:sugar",
+        "minecraft:egg",
+        "#c:milks",
+        "croptopia:cooking_pot"
+      ]
     },
     "vanilla_seeds": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:vanilla_seeds"
+      "result": "croptopia:vanilla_seeds",
+      "ingredients": [
+        "#c:vanilla"
+      ]
     },
     "veggie_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:veggie_salad"
+      "result": "croptopia:veggie_salad",
+      "ingredients": [
+        "minecraft:bowl",
+        "#c:cucumbers",
+        "minecraft:carrot",
+        "#c:corn",
+        "#c:lettuce"
+      ]
     },
     "walnut_sapling": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:walnut_sapling"
+      "result": "croptopia:walnut_sapling",
+      "ingredients": [
+        "#c:walnuts",
+        "#c:walnuts",
+        "#minecraft:saplings"
+      ]
     },
     "whipping_cream": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:whipping_cream x4"
+      "result": "croptopia:whipping_cream x4",
+      "ingredients": [
+        "#c:milks",
+        "minecraft:sugar",
+        "#c:vanilla"
+      ]
     },
     "wine": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:wine"
+      "result": "croptopia:wine",
+      "ingredients": [
+        "minecraft:glass_bottle",
+        "#c:grapes",
+        "#c:grapes",
+        "croptopia:food_press"
+      ]
     },
     "yam_jam": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:yam_jam"
+      "result": "croptopia:yam_jam",
+      "ingredients": [
+        "#c:yams",
+        "#c:vanilla",
+        "#c:milks",
+        "#c:milks"
+      ]
     },
     "yam_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:yam_seed"
+      "result": "croptopia:yam_seed",
+      "ingredients": [
+        "#c:yams"
+      ]
     },
     "yoghurt": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:yoghurt"
+      "result": "croptopia:yoghurt",
+      "ingredients": [
+        "minecraft:bowl",
+        "#c:milks",
+        "#c:strawberries"
+      ]
     },
     "zucchini_seed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "croptopia:zucchini_seed"
+      "result": "croptopia:zucchini_seed",
+      "ingredients": [
+        "#c:zucchini"
+      ]
     }
   },
   "summary": {

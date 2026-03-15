@@ -1,10 +1,7 @@
-// PROPOSITO: Ocultar items que ya no tienen recetas o son duplicados
-// Actualizar despues de verificar conflictos reales (Fase 1.4.1)
-
-JEIEvents.hideItems(event => {
-    // Ocultar items de Croptopia que son duplicados de FD
-    // event.hide('croptopia:tomato');
-    // event.hide('croptopia:onion');
-    // ... lista completa despues de verificar conflictos
-    console.log('[Servo] JEI item hiding ready (update after mod install)');
-});
+// DEPRECADO — reemplazado por client_scripts/01_hide_duplicates.js
+//
+// Este archivo usaba JEIEvents.hideItems que no es valido en KubeJS 6 con EMI.
+// La logica completa fue migrada a 01_hide_duplicates.js usando
+// ClientEvents.hideItemsFromViewers (API correcta para KubeJS 6 / NeoForge 1.21.1).
+//
+// No borrar aun — mantener para referencia del cambio de API.

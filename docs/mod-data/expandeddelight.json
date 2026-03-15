@@ -111,397 +111,837 @@
   "entities": {},
   "recipes_count": 95,
   "recipe_types": [
-    "minecraft:campfire_cooking",
+    "farmersdelight:cutting",
     "minecraft:smoking",
-    "minecraft:smelting",
-    "minecraft:crafting_shapeless",
-    "minecraft:blasting",
-    "farmersdelight:cooking",
     "minecraft:crafting_shaped",
     "unknown",
+    "minecraft:crafting_shapeless",
     "expandeddelight:juicing",
-    "farmersdelight:cutting"
+    "minecraft:smelting",
+    "minecraft:campfire_cooking",
+    "minecraft:blasting",
+    "farmersdelight:cooking"
   ],
   "recipes": {
     "asparagus": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:asparagus x9"
+      "result": "expandeddelight:asparagus x9",
+      "ingredients": [
+        "expandeddelight:asparagus_crate"
+      ]
     },
     "asparagus_crate": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:asparagus_crate"
+      "result": "expandeddelight:asparagus_crate",
+      "ingredients": [
+        "expandeddelight:asparagus",
+        "expandeddelight:asparagus",
+        "expandeddelight:asparagus",
+        "expandeddelight:asparagus",
+        "expandeddelight:asparagus",
+        "expandeddelight:asparagus",
+        "expandeddelight:asparagus",
+        "expandeddelight:asparagus",
+        "expandeddelight:asparagus"
+      ]
     },
     "asparagus_seeds": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:asparagus_seeds"
+      "result": "expandeddelight:asparagus_seeds",
+      "ingredients": [
+        "expandeddelight:asparagus"
+      ]
     },
     "baked_sweet_potato": {
       "type": "minecraft:smelting",
-      "result": "expandeddelight:baked_sweet_potato"
+      "result": "expandeddelight:baked_sweet_potato",
+      "ingredients": [
+        "expandeddelight:sweet_potato"
+      ]
     },
     "baked_sweet_potato_from_campfire_cooking": {
       "type": "minecraft:campfire_cooking",
-      "result": "expandeddelight:baked_sweet_potato"
+      "result": "expandeddelight:baked_sweet_potato",
+      "ingredients": [
+        "expandeddelight:sweet_potato"
+      ]
     },
     "baked_sweet_potato_from_smoking": {
       "type": "minecraft:smoking",
-      "result": "expandeddelight:baked_sweet_potato"
+      "result": "expandeddelight:baked_sweet_potato",
+      "ingredients": [
+        "expandeddelight:sweet_potato"
+      ]
     },
     "berry_sweet_roll": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:berry_sweet_roll"
+      "result": "expandeddelight:berry_sweet_roll",
+      "ingredients": [
+        "#c:foods/milk",
+        "#c:foods/dough",
+        "#c:dusts/cinnamon",
+        "minecraft:sugar",
+        "minecraft:sweet_berries"
+      ]
     },
     "cask": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:cask"
+      "result": "expandeddelight:cask",
+      "ingredients": [
+        "#c:ingots/iron",
+        "#minecraft:planks",
+        "minecraft:barrel",
+        "minecraft:bucket"
+      ]
     },
     "cheese_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:cheese_sandwich"
+      "result": "expandeddelight:cheese_sandwich",
+      "ingredients": [
+        "minecraft:bread",
+        "#c:foods/cheese"
+      ]
     },
     "chili_pepper": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:chili_pepper x9"
+      "result": "expandeddelight:chili_pepper x9",
+      "ingredients": [
+        "expandeddelight:chili_pepper_crate"
+      ]
     },
     "chili_pepper_crate": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:chili_pepper_crate"
+      "result": "expandeddelight:chili_pepper_crate",
+      "ingredients": [
+        "expandeddelight:chili_pepper",
+        "expandeddelight:chili_pepper",
+        "expandeddelight:chili_pepper",
+        "expandeddelight:chili_pepper",
+        "expandeddelight:chili_pepper",
+        "expandeddelight:chili_pepper",
+        "expandeddelight:chili_pepper",
+        "expandeddelight:chili_pepper",
+        "expandeddelight:chili_pepper"
+      ]
     },
     "chili_pepper_seeds": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:chili_pepper_seeds"
+      "result": "expandeddelight:chili_pepper_seeds",
+      "ingredients": [
+        "expandeddelight:chili_pepper"
+      ]
     },
     "chocolate_cookie": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:chocolate_cookie x8"
+      "result": "expandeddelight:chocolate_cookie x8",
+      "ingredients": [
+        "minecraft:cocoa_beans",
+        "#c:crops/grain"
+      ]
     },
     "cinnamon_boat": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:cinnamon_boat"
+      "result": "expandeddelight:cinnamon_boat",
+      "ingredients": [
+        "expandeddelight:cinnamon_planks"
+      ]
     },
     "cinnamon_button": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:cinnamon_button"
+      "result": "expandeddelight:cinnamon_button",
+      "ingredients": [
+        "expandeddelight:cinnamon_planks"
+      ]
     },
     "cinnamon_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:cinnamon_cabinet"
+      "result": "expandeddelight:cinnamon_cabinet",
+      "ingredients": [
+        "expandeddelight:cinnamon_planks",
+        "expandeddelight:cinnamon_trapdoor"
+      ]
     },
     "cinnamon_chest_boat": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:cinnamon_chest_boat"
+      "result": "expandeddelight:cinnamon_chest_boat",
+      "ingredients": [
+        "expandeddelight:cinnamon_boat",
+        "#c:chests/wooden"
+      ]
     },
     "cinnamon_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:cinnamon_planks",
+      "ingredients": [
+        "expandeddelight:cinnamon_door"
+      ],
+      "tool": "#minecraft:axes"
     },
     "cinnamon_fence": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:cinnamon_fence x3"
+      "result": "expandeddelight:cinnamon_fence x3",
+      "ingredients": [
+        "expandeddelight:cinnamon_planks",
+        "#c:rods/wooden"
+      ]
     },
     "cinnamon_fence_gate": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:cinnamon_fence_gate"
+      "result": "expandeddelight:cinnamon_fence_gate",
+      "ingredients": [
+        "#c:rods/wooden",
+        "expandeddelight:cinnamon_planks"
+      ]
     },
     "cinnamon_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:cinnamon_planks",
+      "ingredients": [
+        "expandeddelight:cinnamon_hanging_sign"
+      ],
+      "tool": "#minecraft:axes"
     },
     "cinnamon_planks": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:cinnamon_planks x4"
+      "result": "expandeddelight:cinnamon_planks x4",
+      "ingredients": [
+        "#expandeddelight:cinnamon_logs"
+      ]
     },
     "cinnamon_pressure_plate": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:cinnamon_pressure_plate"
+      "result": "expandeddelight:cinnamon_pressure_plate",
+      "ingredients": [
+        "expandeddelight:cinnamon_planks"
+      ]
     },
     "cinnamon_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:cinnamon_planks",
+      "ingredients": [
+        "expandeddelight:cinnamon_sign"
+      ],
+      "tool": "#minecraft:axes"
     },
     "cinnamon_slab": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:cinnamon_slab x6"
+      "result": "expandeddelight:cinnamon_slab x6",
+      "ingredients": [
+        "expandeddelight:cinnamon_planks"
+      ]
     },
     "cinnamon_stairs": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:cinnamon_stairs x4"
+      "result": "expandeddelight:cinnamon_stairs x4",
+      "ingredients": [
+        "expandeddelight:cinnamon_planks"
+      ]
     },
     "cinnamon_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:cinnamon_planks",
+      "ingredients": [
+        "expandeddelight:cinnamon_trapdoor"
+      ],
+      "tool": "#minecraft:axes"
     },
     "cinnamon_wood": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:cinnamon_stick x6",
+      "ingredients": [
+        "expandeddelight:cinnamon_wood"
+      ],
+      "tool": "#minecraft:axes"
     },
     "asparagus_and_bacon_cheesy": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:asparagus_and_bacon_cheesy"
+      "result": "expandeddelight:asparagus_and_bacon_cheesy",
+      "ingredients": [
+        "#c:foods/raw_bacon",
+        "#c:crops/asparagus",
+        "#c:crops/onion",
+        "#c:foods/cheese"
+      ]
     },
     "asparagus_frittata": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:asparagus_frittata"
+      "result": "expandeddelight:asparagus_frittata",
+      "ingredients": [
+        "#c:eggs",
+        "#c:eggs",
+        "#c:crops/asparagus",
+        "#c:foods/cheese",
+        "#c:dusts/salt"
+      ]
     },
     "asparagus_mushroom_pasta": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:asparagus_mushroom_pasta"
+      "result": "expandeddelight:asparagus_mushroom_pasta",
+      "ingredients": [
+        "#c:foods/pasta",
+        "#c:crops/asparagus",
+        "#c:crops/onion",
+        "minecraft:brown_mushroom"
+      ]
     },
     "asparagus_soup": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:asparagus_soup"
+      "result": "expandeddelight:asparagus_soup",
+      "ingredients": [
+        "minecraft:water_bucket",
+        "#c:crops/asparagus",
+        "#c:foods/leafy_green"
+      ]
     },
     "asparagus_soup_creamy": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:asparagus_soup_creamy"
+      "result": "expandeddelight:asparagus_soup_creamy",
+      "ingredients": [
+        "#c:foods/milk",
+        "#c:crops/asparagus",
+        "#c:foods/leafy_green"
+      ]
     },
     "chili_pepper_salmon": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:chili_pepper_salmon"
+      "result": "expandeddelight:chili_pepper_salmon",
+      "ingredients": [
+        "#c:foods/cooked_salmon",
+        "#c:crops/chili_pepper",
+        "#c:crops/rice",
+        "#c:crops/onion"
+      ]
     },
     "cinnamon_apples": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:cinnamon_apples"
+      "result": "expandeddelight:cinnamon_apples",
+      "ingredients": [
+        "minecraft:water_bucket",
+        "minecraft:apple",
+        "expandeddelight:cinnamon",
+        "minecraft:sugar"
+      ]
     },
     "cinnamon_rice": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:cinnamon_rice"
+      "result": "expandeddelight:cinnamon_rice",
+      "ingredients": [
+        "#c:crops/rice",
+        "expandeddelight:cinnamon"
+      ]
     },
     "cranberry_chicken": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:cranberry_chicken"
+      "result": "expandeddelight:cranberry_chicken",
+      "ingredients": [
+        "expandeddelight:cranberries",
+        "#c:foods/cooked_chicken",
+        "#c:crops/onion"
+      ]
     },
     "cranberry_jelly": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:cranberry_jelly"
+      "result": "expandeddelight:cranberry_jelly",
+      "ingredients": [
+        "expandeddelight:cranberries",
+        "expandeddelight:cranberries",
+        "minecraft:sugar"
+      ]
     },
     "glow_berry_jelly": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:glow_berry_jelly"
+      "result": "expandeddelight:glow_berry_jelly",
+      "ingredients": [
+        "minecraft:glow_berries",
+        "minecraft:glow_berries",
+        "minecraft:sugar"
+      ]
     },
     "mac_and_cheese": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:mac_and_cheese"
+      "result": "expandeddelight:mac_and_cheese",
+      "ingredients": [
+        "#c:foods/milk",
+        "#c:foods/cheese",
+        "#c:foods/pasta",
+        "#c:dusts/salt"
+      ]
     },
     "peanut_butter": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:peanut_butter"
+      "result": "expandeddelight:peanut_butter",
+      "ingredients": [
+        "#c:crops/peanut",
+        "#c:crops/peanut",
+        "#c:foods/milk"
+      ]
     },
     "peanut_honey_soup": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:peanut_honey_soup"
+      "result": "expandeddelight:peanut_honey_soup",
+      "ingredients": [
+        "#c:foods/milk",
+        "#c:crops/peanut",
+        "minecraft:honey_bottle"
+      ]
     },
     "peperonata": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:peperonata"
+      "result": "expandeddelight:peperonata",
+      "ingredients": [
+        "#c:foods/vegetable",
+        "#c:crops/chili_pepper",
+        "#c:crops/onion",
+        "#c:crops/tomato",
+        "#c:foods/pasta"
+      ]
     },
     "sweet_berry_jelly": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:sweet_berry_jelly"
+      "result": "expandeddelight:sweet_berry_jelly",
+      "ingredients": [
+        "minecraft:sweet_berries",
+        "minecraft:sweet_berries",
+        "minecraft:sugar"
+      ]
     },
     "sweet_potato_casserole": {
       "type": "farmersdelight:cooking",
-      "result": "expandeddelight:sweet_potato_casserole"
+      "result": "expandeddelight:sweet_potato_casserole",
+      "ingredients": [
+        "expandeddelight:sweet_potato",
+        "#c:foods/milk",
+        "#c:eggs",
+        "minecraft:sugar"
+      ]
     },
     "cranberries": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:cranberries x9"
+      "result": "expandeddelight:cranberries x9",
+      "ingredients": [
+        "expandeddelight:cranberry_bag"
+      ]
     },
     "cranberry_bag": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:cranberry_bag"
+      "result": "expandeddelight:cranberry_bag",
+      "ingredients": [
+        "expandeddelight:cranberries",
+        "expandeddelight:cranberries",
+        "expandeddelight:cranberries",
+        "expandeddelight:cranberries",
+        "expandeddelight:cranberries",
+        "expandeddelight:cranberries",
+        "expandeddelight:cranberries",
+        "expandeddelight:cranberries",
+        "expandeddelight:cranberries"
+      ]
     },
     "cranberry_cobbler": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:cranberry_cobbler_slice x4",
+      "ingredients": [
+        "expandeddelight:cranberry_cobbler"
+      ],
+      "tool": "#c:tools/knife"
     },
     "cranberry_cobbler_from_slices": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:cranberry_cobbler"
+      "result": "expandeddelight:cranberry_cobbler",
+      "ingredients": [
+        "expandeddelight:cranberry_cobbler_slice"
+      ]
     },
     "cranberry_goat_cheese_toast": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:cranberry_goat_cheese_toast x2"
+      "result": "expandeddelight:cranberry_goat_cheese_toast x2",
+      "ingredients": [
+        "minecraft:bread",
+        "#c:foods/goat_cheese",
+        "expandeddelight:cranberries"
+      ]
     },
     "cranberry_jelly_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:cranberry_jelly_sandwich"
+      "result": "expandeddelight:cranberry_jelly_sandwich",
+      "ingredients": [
+        "minecraft:bread",
+        "expandeddelight:peanut_butter",
+        "#c:jams/cranberry"
+      ]
     },
     "crushing_mallet": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:crushing_mallet"
+      "result": "expandeddelight:crushing_mallet",
+      "ingredients": [
+        "minecraft:stick",
+        "minecraft:cobblestone"
+      ]
     },
     "cheese_wheel": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:cheese_slice x4",
+      "ingredients": [
+        "expandeddelight:cheese_wheel"
+      ],
+      "tool": "#c:tools/knife"
     },
     "cinnamon_log": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:cinnamon_stick x4",
+      "ingredients": [
+        "expandeddelight:cinnamon_log"
+      ],
+      "tool": "#minecraft:axes"
     },
     "cinnamon_stick": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:cinnamon x2",
+      "ingredients": [
+        "expandeddelight:cinnamon_stick"
+      ],
+      "tool": "#expandeddelight:crushing_tools"
     },
     "goat_cheese_wheel": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:goat_cheese_slice x4",
+      "ingredients": [
+        "expandeddelight:goat_cheese_wheel"
+      ],
+      "tool": "#c:tools/knife"
     },
     "honeyed_goat_cheese_tart": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:honeyed_goat_cheese_tart"
+      "result": "expandeddelight:honeyed_goat_cheese_tart",
+      "ingredients": [
+        "#c:foods/goat_cheese",
+        "#c:eggs",
+        "minecraft:honey_bottle",
+        "#c:foods/milk",
+        "farmersdelight:pie_crust"
+      ]
     },
     "salt_rock": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:salt x2",
+      "ingredients": [
+        "expandeddelight:salt_rock"
+      ],
+      "tool": "#expandeddelight:crushing_tools"
     },
     "sugar_cane": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:sugar x2",
+      "ingredients": [
+        "minecraft:sugar_cane"
+      ],
+      "tool": "#expandeddelight:crushing_tools"
     },
     "wild_asparagus": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:asparagus",
+      "ingredients": [
+        "expandeddelight:wild_asparagus"
+      ],
+      "tool": "#c:tools/knife"
     },
     "wild_chili_pepper": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:chili_pepper",
+      "ingredients": [
+        "expandeddelight:wild_chili_pepper"
+      ],
+      "tool": "#c:tools/knife"
     },
     "wild_peanuts": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:peanut",
+      "ingredients": [
+        "expandeddelight:wild_peanuts"
+      ],
+      "tool": "#c:tools/knife"
     },
     "wild_sweet_potato": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "expandeddelight:sweet_potato",
+      "ingredients": [
+        "expandeddelight:wild_sweet_potato"
+      ],
+      "tool": "#c:tools/knife"
     },
     "deepslate_salt_rock_from_blasting": {
       "type": "minecraft:blasting",
-      "result": "expandeddelight:salt_rock"
+      "result": "expandeddelight:salt_rock",
+      "ingredients": [
+        "expandeddelight:deepslate_salt_ore"
+      ]
     },
     "deepslate_salt_rock_from_smelting": {
       "type": "minecraft:smelting",
-      "result": "expandeddelight:salt_rock"
+      "result": "expandeddelight:salt_rock",
+      "ingredients": [
+        "expandeddelight:deepslate_salt_ore"
+      ]
     },
     "glass_jar": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:glass_jar x3"
+      "result": "expandeddelight:glass_jar x3",
+      "ingredients": [
+        "minecraft:glass",
+        "minecraft:paper"
+      ]
     },
     "glow_berry_jelly_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:glow_berry_jelly_sandwich"
+      "result": "expandeddelight:glow_berry_jelly_sandwich",
+      "ingredients": [
+        "minecraft:bread",
+        "expandeddelight:peanut_butter",
+        "#c:jams/glow_berry"
+      ]
     },
     "glow_berry_sweet_roll": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:glow_berry_sweet_roll"
+      "result": "expandeddelight:glow_berry_sweet_roll",
+      "ingredients": [
+        "#c:foods/milk",
+        "#c:foods/dough",
+        "#c:dusts/cinnamon",
+        "minecraft:sugar",
+        "minecraft:glow_berries"
+      ]
     },
     "goat_cheese_beetroot_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:goat_cheese_beetroot_salad"
+      "result": "expandeddelight:goat_cheese_beetroot_salad",
+      "ingredients": [
+        "#c:foods/leafy_green",
+        "#c:foods/goat_cheese",
+        "#c:crops/beetroot",
+        "minecraft:bowl"
+      ]
     },
     "goat_milk_bottle": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:goat_milk_bottle x4"
+      "result": "expandeddelight:goat_milk_bottle x4",
+      "ingredients": [
+        "expandeddelight:goat_milk_bucket",
+        "minecraft:glass_bottle",
+        "minecraft:glass_bottle",
+        "minecraft:glass_bottle",
+        "minecraft:glass_bottle"
+      ]
     },
     "grilled_cheese": {
       "type": "minecraft:campfire_cooking",
-      "result": "expandeddelight:grilled_cheese"
+      "result": "expandeddelight:grilled_cheese",
+      "ingredients": [
+        "expandeddelight:cheese_sandwich"
+      ]
     },
     "honeyed_goat_cheese_tart_from_slices": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:honeyed_goat_cheese_tart"
+      "result": "expandeddelight:honeyed_goat_cheese_tart",
+      "ingredients": [
+        "expandeddelight:honeyed_goat_cheese_tart_slice"
+      ]
     },
     "juicer": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:juicer"
+      "result": "expandeddelight:juicer",
+      "ingredients": [
+        "#c:ingots/iron",
+        "minecraft:barrel"
+      ]
     },
     "apple_juice": {
       "type": "expandeddelight:juicing",
-      "result": "expandeddelight:apple_juice"
+      "result": "expandeddelight:apple_juice",
+      "ingredients": [
+        "minecraft:apple",
+        "minecraft:sugar"
+      ]
     },
     "cranberry_juice": {
       "type": "expandeddelight:juicing",
-      "result": "expandeddelight:cranberry_juice"
+      "result": "expandeddelight:cranberry_juice",
+      "ingredients": [
+        "expandeddelight:cranberries",
+        "minecraft:sugar"
+      ]
     },
     "glow_berry_juice": {
       "type": "expandeddelight:juicing",
-      "result": "expandeddelight:glow_berry_juice"
+      "result": "expandeddelight:glow_berry_juice",
+      "ingredients": [
+        "minecraft:glow_berries",
+        "minecraft:sugar"
+      ]
     },
     "melon_juice": {
       "type": "unknown",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "sweet_berry_juice": {
       "type": "expandeddelight:juicing",
-      "result": "expandeddelight:sweet_berry_juice"
+      "result": "expandeddelight:sweet_berry_juice",
+      "ingredients": [
+        "minecraft:sweet_berries",
+        "minecraft:sugar"
+      ]
     },
     "peanut_butter_honey_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:peanut_butter_honey_sandwich"
+      "result": "expandeddelight:peanut_butter_honey_sandwich",
+      "ingredients": [
+        "minecraft:bread",
+        "expandeddelight:peanut_butter",
+        "minecraft:honey_bottle"
+      ]
     },
     "peanut_butter_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:peanut_butter_sandwich"
+      "result": "expandeddelight:peanut_butter_sandwich",
+      "ingredients": [
+        "minecraft:bread",
+        "expandeddelight:peanut_butter"
+      ]
     },
     "peanut_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:peanut_salad"
+      "result": "expandeddelight:peanut_salad",
+      "ingredients": [
+        "#c:foods/leafy_green",
+        "#c:crops/tomato",
+        "#c:crops/peanut",
+        "minecraft:bowl"
+      ]
     },
     "salt_rock_from_blasting": {
       "type": "minecraft:blasting",
-      "result": "expandeddelight:salt_rock"
+      "result": "expandeddelight:salt_rock",
+      "ingredients": [
+        "expandeddelight:salt_ore"
+      ]
     },
     "salt_rock_from_smelting": {
       "type": "minecraft:smelting",
-      "result": "expandeddelight:salt_rock"
+      "result": "expandeddelight:salt_rock",
+      "ingredients": [
+        "expandeddelight:salt_ore"
+      ]
     },
     "snickerdoodle": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:snickerdoodle x8"
+      "result": "expandeddelight:snickerdoodle x8",
+      "ingredients": [
+        "#c:crops/wheat",
+        "expandeddelight:cinnamon"
+      ]
     },
     "sugar_cookie": {
       "type": "minecraft:crafting_shaped",
-      "result": "expandeddelight:sugar_cookie x8"
+      "result": "expandeddelight:sugar_cookie x8",
+      "ingredients": [
+        "#c:crops/wheat",
+        "minecraft:sugar"
+      ]
     },
     "sweet_berry_jelly_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:sweet_berry_jelly_sandwich"
+      "result": "expandeddelight:sweet_berry_jelly_sandwich",
+      "ingredients": [
+        "minecraft:bread",
+        "expandeddelight:peanut_butter",
+        "#c:jams/sweet_berry"
+      ]
     },
     "sweet_potato": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:sweet_potato x9"
+      "result": "expandeddelight:sweet_potato x9",
+      "ingredients": [
+        "expandeddelight:sweet_potato_crate"
+      ]
     },
     "sweet_potato_crate": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:sweet_potato_crate"
+      "result": "expandeddelight:sweet_potato_crate",
+      "ingredients": [
+        "expandeddelight:sweet_potato",
+        "expandeddelight:sweet_potato",
+        "expandeddelight:sweet_potato",
+        "expandeddelight:sweet_potato",
+        "expandeddelight:sweet_potato",
+        "expandeddelight:sweet_potato",
+        "expandeddelight:sweet_potato",
+        "expandeddelight:sweet_potato",
+        "expandeddelight:sweet_potato"
+      ]
     },
     "sweet_potato_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:sweet_potato_salad"
+      "result": "expandeddelight:sweet_potato_salad",
+      "ingredients": [
+        "#c:foods/leafy_green",
+        "#c:crops/onion",
+        "#c:crops/sweet_potato",
+        "#c:dusts/cinnamon",
+        "minecraft:bowl"
+      ]
     },
     "sweet_roll": {
       "type": "minecraft:crafting_shapeless",
-      "result": "expandeddelight:sweet_roll"
+      "result": "expandeddelight:sweet_roll",
+      "ingredients": [
+        "#c:foods/milk",
+        "#c:foods/dough",
+        "#c:dusts/cinnamon",
+        "minecraft:sugar"
+      ]
     },
     "wheat_dough_from_eggs": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:wheat_dough x3"
+      "result": "farmersdelight:wheat_dough x3",
+      "ingredients": [
+        "#c:eggs",
+        "minecraft:wheat",
+        "minecraft:wheat",
+        "minecraft:wheat",
+        "expandeddelight:salt"
+      ]
     },
     "wheat_dough_from_water": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:wheat_dough x3"
+      "result": "farmersdelight:wheat_dough x3",
+      "ingredients": [
+        "minecraft:water_bucket",
+        "minecraft:wheat",
+        "minecraft:wheat",
+        "minecraft:wheat",
+        "expandeddelight:salt"
+      ]
     },
     "melon_juice_from_water": {
       "type": "unknown",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "blaze_rod": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:blaze_powder x3",
+      "ingredients": [
+        "minecraft:blaze_rod"
+      ],
+      "tool": "#expandeddelight:crushing_tools"
     },
     "bone": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:bone_meal x4",
+      "ingredients": [
+        "minecraft:bone"
+      ],
+      "tool": "#expandeddelight:crushing_tools"
     }
   },
   "summary": {

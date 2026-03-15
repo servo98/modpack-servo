@@ -228,1284 +228,2599 @@
   },
   "recipes_count": 315,
   "recipe_types": [
-    "minecraft:campfire_cooking",
+    "farmersdelight:cutting",
+    "create:mixing",
     "minecraft:smoking",
-    "minecraft:smithing_transform",
-    "minecraft:smelting",
+    "minecraft:crafting_shaped",
+    "immersiveengineering:metal_press",
     "minecraft:crafting_shapeless",
+    "immersiveengineering:squeezer",
+    "minecraft:smelting",
+    "minecraft:campfire_cooking",
+    "minecraft:blasting",
     "farmersdelight:dough",
     "farmersdelight:food_serving",
-    "minecraft:blasting",
-    "create:mixing",
-    "create:filling",
-    "immersiveengineering:metal_press",
     "immersiveengineering:crusher",
-    "farmersdelight:cooking",
-    "immersiveengineering:squeezer",
-    "minecraft:crafting_shaped",
     "immersiveengineering:cloche",
-    "farmersdelight:cutting"
+    "create:filling",
+    "minecraft:smithing_transform",
+    "farmersdelight:cooking"
   ],
   "recipes": {
     "acacia_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:acacia_cabinet"
+      "result": "farmersdelight:acacia_cabinet",
+      "ingredients": [
+        "minecraft:acacia_slab",
+        "minecraft:acacia_trapdoor"
+      ]
     },
     "apple_pie": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:apple_pie_slice x4",
+      "ingredients": [
+        "farmersdelight:apple_pie"
+      ],
+      "tool": "#c:tools/knife"
     },
     "apple_pie_from_slices": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:apple_pie"
+      "result": "farmersdelight:apple_pie",
+      "ingredients": [
+        "farmersdelight:apple_pie_slice"
+      ]
     },
     "bacon_and_eggs": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:bacon_and_eggs"
+      "result": "farmersdelight:bacon_and_eggs",
+      "ingredients": [
+        "#c:foods/cooked_bacon",
+        "#c:foods/cooked_bacon",
+        "minecraft:bowl",
+        "#c:foods/cooked_egg",
+        "#c:foods/cooked_egg"
+      ]
     },
     "bacon_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:bacon_sandwich"
+      "result": "farmersdelight:bacon_sandwich",
+      "ingredients": [
+        "#c:foods/bread",
+        "#c:foods/cooked_bacon",
+        "#c:foods/leafy_green",
+        "#c:crops/tomato"
+      ]
     },
     "bamboo_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:bamboo_cabinet"
+      "result": "farmersdelight:bamboo_cabinet",
+      "ingredients": [
+        "minecraft:bamboo_slab",
+        "minecraft:bamboo_trapdoor"
+      ]
     },
     "barbecue_stick": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:barbecue_stick"
+      "result": "farmersdelight:barbecue_stick",
+      "ingredients": [
+        "#c:crops/tomato",
+        "#c:crops/onion",
+        "#c:foods/cooked_meat",
+        "minecraft:stick"
+      ]
     },
     "basket": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:basket"
+      "result": "farmersdelight:basket",
+      "ingredients": [
+        "minecraft:bamboo",
+        "farmersdelight:canvas"
+      ]
     },
     "beef_patty": {
       "type": "minecraft:smelting",
-      "result": "farmersdelight:beef_patty"
+      "result": "farmersdelight:beef_patty",
+      "ingredients": [
+        "farmersdelight:minced_beef"
+      ]
     },
     "beef_patty_from_campfire_cooking": {
       "type": "minecraft:campfire_cooking",
-      "result": "farmersdelight:beef_patty"
+      "result": "farmersdelight:beef_patty",
+      "ingredients": [
+        "farmersdelight:minced_beef"
+      ]
     },
     "beef_patty_from_smoking": {
       "type": "minecraft:smoking",
-      "result": "farmersdelight:beef_patty"
+      "result": "farmersdelight:beef_patty",
+      "ingredients": [
+        "farmersdelight:minced_beef"
+      ]
     },
     "beetroot_crate": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:beetroot_crate"
+      "result": "farmersdelight:beetroot_crate",
+      "ingredients": [
+        "minecraft:beetroot"
+      ]
     },
     "beetroot_from_crate": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:beetroot x9"
+      "result": "minecraft:beetroot x9",
+      "ingredients": [
+        "farmersdelight:beetroot_crate"
+      ]
     },
     "birch_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:birch_cabinet"
+      "result": "farmersdelight:birch_cabinet",
+      "ingredients": [
+        "minecraft:birch_slab",
+        "minecraft:birch_trapdoor"
+      ]
     },
     "black_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:black_canvas_sign"
+      "result": "farmersdelight:black_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/black"
+      ]
     },
     "black_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:black_hanging_canvas_sign"
+      "result": "farmersdelight:black_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/black"
+      ]
     },
     "blue_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:blue_canvas_sign"
+      "result": "farmersdelight:blue_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/blue"
+      ]
     },
     "blue_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:blue_hanging_canvas_sign"
+      "result": "farmersdelight:blue_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/blue"
+      ]
     },
     "book_from_canvas": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:book"
+      "result": "minecraft:book",
+      "ingredients": [
+        "minecraft:paper",
+        "minecraft:paper",
+        "minecraft:paper",
+        "farmersdelight:canvas"
+      ]
     },
     "bread_from_smelting": {
       "type": "minecraft:smelting",
-      "result": "minecraft:bread"
+      "result": "minecraft:bread",
+      "ingredients": [
+        "farmersdelight:wheat_dough"
+      ]
     },
     "bread_from_smoking": {
       "type": "minecraft:smoking",
-      "result": "minecraft:bread"
+      "result": "minecraft:bread",
+      "ingredients": [
+        "farmersdelight:wheat_dough"
+      ]
     },
     "brown_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:brown_canvas_sign"
+      "result": "farmersdelight:brown_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/brown"
+      ]
     },
     "brown_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:brown_hanging_canvas_sign"
+      "result": "farmersdelight:brown_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/brown"
+      ]
     },
     "cabbage": {
       "type": "immersiveengineering:cloche",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "cabbage_crate": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:cabbage_crate"
+      "result": "farmersdelight:cabbage_crate",
+      "ingredients": [
+        "farmersdelight:cabbage"
+      ]
     },
     "cabbage_from_leaves": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:cabbage"
+      "result": "farmersdelight:cabbage",
+      "ingredients": [
+        "farmersdelight:cabbage_leaf",
+        "farmersdelight:cabbage_leaf"
+      ]
     },
     "cake_from_milk_bottle": {
       "type": "minecraft:crafting_shaped",
-      "result": "minecraft:cake"
+      "result": "minecraft:cake",
+      "ingredients": [
+        "#c:drinks/milk",
+        "minecraft:sugar",
+        "#c:eggs",
+        "minecraft:wheat"
+      ]
     },
     "cake_from_slices": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:cake"
+      "result": "minecraft:cake",
+      "ingredients": [
+        "farmersdelight:cake_slice",
+        "farmersdelight:cake_slice",
+        "farmersdelight:cake_slice",
+        "farmersdelight:cake_slice",
+        "farmersdelight:cake_slice",
+        "farmersdelight:cake_slice",
+        "farmersdelight:cake_slice"
+      ]
     },
     "canvas": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:canvas"
+      "result": "farmersdelight:canvas",
+      "ingredients": [
+        "farmersdelight:straw"
+      ]
     },
     "canvas_from_canvas_rug": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:canvas"
+      "result": "farmersdelight:canvas",
+      "ingredients": [
+        "farmersdelight:canvas_rug",
+        "farmersdelight:canvas_rug"
+      ]
     },
     "canvas_rug": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:canvas_rug x2"
+      "result": "farmersdelight:canvas_rug x2",
+      "ingredients": [
+        "farmersdelight:canvas"
+      ]
     },
     "canvas_sign": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:canvas_sign x3"
+      "result": "farmersdelight:canvas_sign x3",
+      "ingredients": [
+        "#minecraft:planks",
+        "farmersdelight:canvas",
+        "minecraft:stick"
+      ]
     },
     "carrot_crate": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:carrot_crate"
+      "result": "farmersdelight:carrot_crate",
+      "ingredients": [
+        "minecraft:carrot"
+      ]
     },
     "carrot_from_crate": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:carrot x9"
+      "result": "minecraft:carrot x9",
+      "ingredients": [
+        "farmersdelight:carrot_crate"
+      ]
     },
     "cherry_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:cherry_cabinet"
+      "result": "farmersdelight:cherry_cabinet",
+      "ingredients": [
+        "minecraft:cherry_slab",
+        "minecraft:cherry_trapdoor"
+      ]
     },
     "chicken_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:chicken_sandwich"
+      "result": "farmersdelight:chicken_sandwich",
+      "ingredients": [
+        "#c:foods/bread",
+        "#c:foods/cooked_chicken",
+        "#c:foods/leafy_green",
+        "minecraft:carrot"
+      ]
     },
     "chocolate_pie": {
       "type": "create:filling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "farmersdelight:pie_crust",
+        "{'type': 'fluid_tag', 'amount': 500, 'fluid_tag': 'c:chocolate'}"
+      ]
     },
     "chocolate_pie_from_slices": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:chocolate_pie"
+      "result": "farmersdelight:chocolate_pie",
+      "ingredients": [
+        "farmersdelight:chocolate_pie_slice"
+      ]
     },
     "cod_roll": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:cod_roll x2"
+      "result": "farmersdelight:cod_roll x2",
+      "ingredients": [
+        "farmersdelight:cod_slice",
+        "farmersdelight:cod_slice",
+        "farmersdelight:cooked_rice"
+      ]
     },
     "cooked_bacon": {
       "type": "minecraft:smelting",
-      "result": "farmersdelight:cooked_bacon"
+      "result": "farmersdelight:cooked_bacon",
+      "ingredients": [
+        "farmersdelight:bacon"
+      ]
     },
     "cooked_bacon_from_campfire_cooking": {
       "type": "minecraft:campfire_cooking",
-      "result": "farmersdelight:cooked_bacon"
+      "result": "farmersdelight:cooked_bacon",
+      "ingredients": [
+        "farmersdelight:bacon"
+      ]
     },
     "cooked_bacon_from_smoking": {
       "type": "minecraft:smoking",
-      "result": "farmersdelight:cooked_bacon"
+      "result": "farmersdelight:cooked_bacon",
+      "ingredients": [
+        "farmersdelight:bacon"
+      ]
     },
     "cooked_chicken_cuts": {
       "type": "minecraft:smelting",
-      "result": "farmersdelight:cooked_chicken_cuts"
+      "result": "farmersdelight:cooked_chicken_cuts",
+      "ingredients": [
+        "farmersdelight:chicken_cuts"
+      ]
     },
     "cooked_chicken_cuts_from_campfire_cooking": {
       "type": "minecraft:campfire_cooking",
-      "result": "farmersdelight:cooked_chicken_cuts"
+      "result": "farmersdelight:cooked_chicken_cuts",
+      "ingredients": [
+        "farmersdelight:chicken_cuts"
+      ]
     },
     "cooked_chicken_cuts_from_smoking": {
       "type": "minecraft:smoking",
-      "result": "farmersdelight:cooked_chicken_cuts"
+      "result": "farmersdelight:cooked_chicken_cuts",
+      "ingredients": [
+        "farmersdelight:chicken_cuts"
+      ]
     },
     "cooked_cod_slice": {
       "type": "minecraft:smelting",
-      "result": "farmersdelight:cooked_cod_slice"
+      "result": "farmersdelight:cooked_cod_slice",
+      "ingredients": [
+        "farmersdelight:cod_slice"
+      ]
     },
     "cooked_cod_slice_from_campfire_cooking": {
       "type": "minecraft:campfire_cooking",
-      "result": "farmersdelight:cooked_cod_slice"
+      "result": "farmersdelight:cooked_cod_slice",
+      "ingredients": [
+        "farmersdelight:cod_slice"
+      ]
     },
     "cooked_cod_slice_from_smoking": {
       "type": "minecraft:smoking",
-      "result": "farmersdelight:cooked_cod_slice"
+      "result": "farmersdelight:cooked_cod_slice",
+      "ingredients": [
+        "farmersdelight:cod_slice"
+      ]
     },
     "cooked_mutton_chops": {
       "type": "minecraft:smelting",
-      "result": "farmersdelight:cooked_mutton_chops"
+      "result": "farmersdelight:cooked_mutton_chops",
+      "ingredients": [
+        "farmersdelight:mutton_chops"
+      ]
     },
     "cooked_mutton_chops_from_campfire_cooking": {
       "type": "minecraft:campfire_cooking",
-      "result": "farmersdelight:cooked_mutton_chops"
+      "result": "farmersdelight:cooked_mutton_chops",
+      "ingredients": [
+        "farmersdelight:mutton_chops"
+      ]
     },
     "cooked_mutton_chops_from_smoking": {
       "type": "minecraft:smoking",
-      "result": "farmersdelight:cooked_mutton_chops"
+      "result": "farmersdelight:cooked_mutton_chops",
+      "ingredients": [
+        "farmersdelight:mutton_chops"
+      ]
     },
     "cooked_salmon_slice": {
       "type": "minecraft:smelting",
-      "result": "farmersdelight:cooked_salmon_slice"
+      "result": "farmersdelight:cooked_salmon_slice",
+      "ingredients": [
+        "farmersdelight:salmon_slice"
+      ]
     },
     "cooked_salmon_slice_from_campfire_cooking": {
       "type": "minecraft:campfire_cooking",
-      "result": "farmersdelight:cooked_salmon_slice"
+      "result": "farmersdelight:cooked_salmon_slice",
+      "ingredients": [
+        "farmersdelight:salmon_slice"
+      ]
     },
     "cooked_salmon_slice_from_smoking": {
       "type": "minecraft:smoking",
-      "result": "farmersdelight:cooked_salmon_slice"
+      "result": "farmersdelight:cooked_salmon_slice",
+      "ingredients": [
+        "farmersdelight:salmon_slice"
+      ]
     },
     "apple_cider": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:apple_cider"
+      "result": "farmersdelight:apple_cider",
+      "ingredients": [
+        "minecraft:apple",
+        "minecraft:apple",
+        "minecraft:sugar"
+      ]
     },
     "baked_cod_stew": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:baked_cod_stew"
+      "result": "farmersdelight:baked_cod_stew",
+      "ingredients": [
+        "#c:foods/raw_cod",
+        "minecraft:potato",
+        "#c:eggs",
+        "#c:crops/tomato"
+      ]
     },
     "beef_stew": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:beef_stew"
+      "result": "farmersdelight:beef_stew",
+      "ingredients": [
+        "#c:foods/raw_beef",
+        "minecraft:carrot",
+        "minecraft:potato"
+      ]
     },
     "beetroot_soup": {
       "type": "farmersdelight:cooking",
-      "result": "minecraft:beetroot_soup"
+      "result": "minecraft:beetroot_soup",
+      "ingredients": [
+        "minecraft:beetroot",
+        "minecraft:beetroot",
+        "minecraft:beetroot"
+      ]
     },
     "bone_broth": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:bone_broth"
+      "result": "farmersdelight:bone_broth",
+      "ingredients": [
+        "#c:bones",
+        "minecraft:glow_berries|#c:mushrooms|minecraft:hanging_roots|minecraft:glow_lichen"
+      ]
     },
     "cabbage_rolls": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:cabbage_rolls"
+      "result": "farmersdelight:cabbage_rolls",
+      "ingredients": [
+        "#c:crops/cabbage",
+        "#farmersdelight:cabbage_roll_ingredients"
+      ]
     },
     "chicken_soup": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:chicken_soup"
+      "result": "farmersdelight:chicken_soup",
+      "ingredients": [
+        "#c:foods/raw_chicken",
+        "minecraft:carrot",
+        "#c:foods/leafy_green",
+        "{'type': 'neoforge:difference', 'base': {'tag': 'c:foods/vegetable'}, 'subtracted': {'item': 'minecraft:melon_slice'}}"
+      ]
     },
     "cooked_rice": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:cooked_rice"
+      "result": "farmersdelight:cooked_rice",
+      "ingredients": [
+        "#c:crops/rice"
+      ]
     },
     "dog_food": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:dog_food"
+      "result": "farmersdelight:dog_food",
+      "ingredients": [
+        "minecraft:rotten_flesh",
+        "minecraft:bone_meal",
+        "#c:foods/raw_meat",
+        "#c:crops/rice"
+      ]
     },
     "dumplings": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:dumplings x2"
+      "result": "farmersdelight:dumplings x2",
+      "ingredients": [
+        "#c:foods/dough",
+        "#c:crops/cabbage",
+        "#c:crops/onion",
+        "#c:foods/raw_chicken|#c:foods/raw_pork|#c:foods/raw_beef|minecraft:brown_mushroom"
+      ]
     },
     "fish_stew": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:fish_stew"
+      "result": "farmersdelight:fish_stew",
+      "ingredients": [
+        "#c:foods/safe_raw_fish",
+        "farmersdelight:tomato_sauce",
+        "#c:crops/onion"
+      ]
     },
     "fried_rice": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:fried_rice"
+      "result": "farmersdelight:fried_rice",
+      "ingredients": [
+        "#c:crops/rice",
+        "#c:eggs",
+        "minecraft:carrot",
+        "#c:crops/onion"
+      ]
     },
     "glow_berry_custard": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:glow_berry_custard"
+      "result": "farmersdelight:glow_berry_custard",
+      "ingredients": [
+        "minecraft:glow_berries",
+        "#c:drinks/milk",
+        "#c:eggs",
+        "minecraft:sugar"
+      ]
     },
     "hot_cocoa": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:hot_cocoa"
+      "result": "farmersdelight:hot_cocoa",
+      "ingredients": [
+        "#c:drinks/milk",
+        "minecraft:sugar",
+        "minecraft:cocoa_beans",
+        "minecraft:cocoa_beans"
+      ]
     },
     "mushroom_rice": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:mushroom_rice"
+      "result": "farmersdelight:mushroom_rice",
+      "ingredients": [
+        "minecraft:brown_mushroom",
+        "minecraft:red_mushroom",
+        "#c:crops/rice",
+        "minecraft:carrot|minecraft:potato"
+      ]
     },
     "mushroom_stew": {
       "type": "farmersdelight:cooking",
-      "result": "minecraft:mushroom_stew"
+      "result": "minecraft:mushroom_stew",
+      "ingredients": [
+        "minecraft:brown_mushroom",
+        "minecraft:red_mushroom"
+      ]
     },
     "noodle_soup": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:noodle_soup"
+      "result": "farmersdelight:noodle_soup",
+      "ingredients": [
+        "#c:foods/pasta",
+        "#c:foods/cooked_egg",
+        "minecraft:dried_kelp",
+        "#c:foods/raw_pork"
+      ]
     },
     "pasta_with_meatballs": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:pasta_with_meatballs"
+      "result": "farmersdelight:pasta_with_meatballs",
+      "ingredients": [
+        "farmersdelight:minced_beef",
+        "#c:foods/pasta",
+        "farmersdelight:tomato_sauce"
+      ]
     },
     "pasta_with_mutton_chop": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:pasta_with_mutton_chop"
+      "result": "farmersdelight:pasta_with_mutton_chop",
+      "ingredients": [
+        "#c:foods/raw_mutton",
+        "#c:foods/pasta",
+        "farmersdelight:tomato_sauce"
+      ]
     },
     "pumpkin_soup": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:pumpkin_soup"
+      "result": "farmersdelight:pumpkin_soup",
+      "ingredients": [
+        "farmersdelight:pumpkin_slice",
+        "#c:foods/leafy_green",
+        "#c:foods/raw_pork",
+        "#c:drinks/milk"
+      ]
     },
     "rabbit_stew": {
       "type": "farmersdelight:cooking",
-      "result": "minecraft:rabbit_stew"
+      "result": "minecraft:rabbit_stew",
+      "ingredients": [
+        "minecraft:baked_potato",
+        "minecraft:rabbit",
+        "minecraft:carrot",
+        "minecraft:brown_mushroom|minecraft:red_mushroom"
+      ]
     },
     "ratatouille": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:ratatouille"
+      "result": "farmersdelight:ratatouille",
+      "ingredients": [
+        "#c:crops/tomato",
+        "#c:crops/onion",
+        "minecraft:beetroot",
+        "{'type': 'neoforge:difference', 'base': {'tag': 'c:foods/vegetable'}, 'subtracted': {'item': 'minecraft:melon_slice'}}"
+      ]
     },
     "squid_ink_pasta": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:squid_ink_pasta"
+      "result": "farmersdelight:squid_ink_pasta",
+      "ingredients": [
+        "#c:foods/safe_raw_fish",
+        "#c:foods/pasta",
+        "#c:crops/tomato",
+        "minecraft:ink_sac"
+      ]
     },
     "stuffed_pumpkin_block": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:stuffed_pumpkin_block"
+      "result": "farmersdelight:stuffed_pumpkin_block",
+      "ingredients": [
+        "#c:crops/rice",
+        "#c:crops/onion",
+        "minecraft:brown_mushroom",
+        "minecraft:potato",
+        "#c:foods/berry",
+        "{'type': 'neoforge:difference', 'base': {'tag': 'c:foods/vegetable'}, 'subtracted': {'item': 'minecraft:melon_slice'}}"
+      ]
     },
     "tomato_sauce": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:tomato_sauce"
+      "result": "farmersdelight:tomato_sauce",
+      "ingredients": [
+        "#c:crops/tomato",
+        "#c:crops/tomato"
+      ]
     },
     "vegetable_noodles": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:vegetable_noodles"
+      "result": "farmersdelight:vegetable_noodles",
+      "ingredients": [
+        "minecraft:carrot",
+        "minecraft:brown_mushroom",
+        "#c:foods/pasta",
+        "#c:foods/leafy_green",
+        "{'type': 'neoforge:difference', 'base': {'tag': 'c:foods/vegetable'}, 'subtracted': {'item': 'minecraft:melon_slice'}}"
+      ]
     },
     "vegetable_soup": {
       "type": "farmersdelight:cooking",
-      "result": "farmersdelight:vegetable_soup"
+      "result": "farmersdelight:vegetable_soup",
+      "ingredients": [
+        "minecraft:carrot",
+        "minecraft:potato",
+        "minecraft:beetroot",
+        "#c:foods/leafy_green"
+      ]
     },
     "cooking_pot": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:cooking_pot"
+      "result": "farmersdelight:cooking_pot",
+      "ingredients": [
+        "minecraft:brick",
+        "minecraft:wooden_shovel",
+        "#c:ingots/iron",
+        "#c:buckets/water"
+      ]
     },
     "crimson_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:crimson_cabinet"
+      "result": "farmersdelight:crimson_cabinet",
+      "ingredients": [
+        "minecraft:crimson_slab",
+        "minecraft:crimson_trapdoor"
+      ]
     },
     "acacia_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:acacia_planks",
+      "ingredients": [
+        "minecraft:acacia_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "acacia_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:acacia_planks",
+      "ingredients": [
+        "minecraft:acacia_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "acacia_log": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_acacia_log",
+      "ingredients": [
+        "minecraft:acacia_log"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "acacia_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:acacia_planks",
+      "ingredients": [
+        "minecraft:acacia_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "acacia_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:acacia_planks",
+      "ingredients": [
+        "minecraft:acacia_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "acacia_wood": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_acacia_wood",
+      "ingredients": [
+        "minecraft:acacia_wood"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "allium": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:magenta_dye x2",
+      "ingredients": [
+        "minecraft:allium"
+      ],
+      "tool": "#c:tools/knife"
     },
     "amethyst_block": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:amethyst_shard x4",
+      "ingredients": [
+        "minecraft:amethyst_block"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'pickaxe_dig'}"
     },
     "azure_bluet": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:light_gray_dye x2",
+      "ingredients": [
+        "minecraft:azure_bluet"
+      ],
+      "tool": "#c:tools/knife"
     },
     "bamboo_block": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_bamboo_block",
+      "ingredients": [
+        "minecraft:bamboo_block"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "bamboo_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:bamboo_planks",
+      "ingredients": [
+        "minecraft:bamboo_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "bamboo_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:bamboo_planks",
+      "ingredients": [
+        "minecraft:bamboo_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "bamboo_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:bamboo_planks",
+      "ingredients": [
+        "minecraft:bamboo_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "bamboo_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:bamboo_planks",
+      "ingredients": [
+        "minecraft:bamboo_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "beef": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:minced_beef x2",
+      "ingredients": [
+        "minecraft:beef"
+      ],
+      "tool": "#c:tools/knife"
     },
     "birch_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:birch_planks",
+      "ingredients": [
+        "minecraft:birch_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "birch_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:birch_planks",
+      "ingredients": [
+        "minecraft:birch_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "birch_log": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_birch_log",
+      "ingredients": [
+        "minecraft:birch_log"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "birch_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:birch_planks",
+      "ingredients": [
+        "minecraft:birch_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "birch_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:birch_planks",
+      "ingredients": [
+        "minecraft:birch_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "birch_wood": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_birch_wood",
+      "ingredients": [
+        "minecraft:birch_wood"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "blue_orchid": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:light_blue_dye x2",
+      "ingredients": [
+        "minecraft:blue_orchid"
+      ],
+      "tool": "#c:tools/knife"
     },
     "bricks": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:brick x4",
+      "ingredients": [
+        "minecraft:bricks"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'pickaxe_dig'}"
     },
     "brown_mushroom_colony": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:brown_mushroom x5",
+      "ingredients": [
+        "farmersdelight:brown_mushroom_colony"
+      ],
+      "tool": "#c:tools/knife"
     },
     "cake": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:cake_slice x7",
+      "ingredients": [
+        "minecraft:cake"
+      ],
+      "tool": "#c:tools/knife"
     },
     "cherry_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:cherry_planks",
+      "ingredients": [
+        "minecraft:cherry_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "cherry_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:cherry_planks",
+      "ingredients": [
+        "minecraft:cherry_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "cherry_log": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_cherry_log",
+      "ingredients": [
+        "minecraft:cherry_log"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "cherry_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:cherry_planks",
+      "ingredients": [
+        "minecraft:cherry_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "cherry_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:cherry_planks",
+      "ingredients": [
+        "minecraft:cherry_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "cherry_wood": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_cherry_wood",
+      "ingredients": [
+        "minecraft:cherry_wood"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "chicken": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:chicken_cuts x2",
+      "ingredients": [
+        "minecraft:chicken"
+      ],
+      "tool": "#c:tools/knife"
     },
     "clay": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:clay_ball x4",
+      "ingredients": [
+        "minecraft:clay"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'shovel_dig'}"
     },
     "cod": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:cod_slice x2",
+      "ingredients": [
+        "minecraft:cod"
+      ],
+      "tool": "#c:tools/knife"
     },
     "cooked_chicken": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:cooked_chicken_cuts x2",
+      "ingredients": [
+        "minecraft:cooked_chicken"
+      ],
+      "tool": "#c:tools/knife"
     },
     "cooked_cod": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:cooked_cod_slice x2",
+      "ingredients": [
+        "minecraft:cooked_cod"
+      ],
+      "tool": "#c:tools/knife"
     },
     "cooked_mutton": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:cooked_mutton_chops x2",
+      "ingredients": [
+        "minecraft:cooked_mutton"
+      ],
+      "tool": "#c:tools/knife"
     },
     "cooked_salmon": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:cooked_salmon_slice x2",
+      "ingredients": [
+        "minecraft:cooked_salmon"
+      ],
+      "tool": "#c:tools/knife"
     },
     "cornflower": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:blue_dye x2",
+      "ingredients": [
+        "minecraft:cornflower"
+      ],
+      "tool": "#c:tools/knife"
     },
     "crimson_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:crimson_planks",
+      "ingredients": [
+        "minecraft:crimson_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "crimson_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:crimson_planks",
+      "ingredients": [
+        "minecraft:crimson_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "crimson_hyphae": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_crimson_hyphae",
+      "ingredients": [
+        "minecraft:crimson_hyphae"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "crimson_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:crimson_planks",
+      "ingredients": [
+        "minecraft:crimson_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "crimson_stem": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_crimson_stem",
+      "ingredients": [
+        "minecraft:crimson_stem"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "crimson_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:crimson_planks",
+      "ingredients": [
+        "minecraft:crimson_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "dandelion": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:yellow_dye x2",
+      "ingredients": [
+        "minecraft:dandelion"
+      ],
+      "tool": "#c:tools/knife"
     },
     "dark_oak_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:dark_oak_planks",
+      "ingredients": [
+        "minecraft:dark_oak_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "dark_oak_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:dark_oak_planks",
+      "ingredients": [
+        "minecraft:dark_oak_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "dark_oak_log": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_dark_oak_log",
+      "ingredients": [
+        "minecraft:dark_oak_log"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "dark_oak_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:dark_oak_planks",
+      "ingredients": [
+        "minecraft:dark_oak_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "dark_oak_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:dark_oak_planks",
+      "ingredients": [
+        "minecraft:dark_oak_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "dark_oak_wood": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_dark_oak_wood",
+      "ingredients": [
+        "minecraft:dark_oak_wood"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "deepslate": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:cobbled_deepslate",
+      "ingredients": [
+        "minecraft:deepslate"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'pickaxe_dig'}"
     },
     "gravel": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:gravel",
+      "ingredients": [
+        "minecraft:gravel"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'shovel_dig'}"
     },
     "ham": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:porkchop x2",
+      "ingredients": [
+        "farmersdelight:ham"
+      ],
+      "tool": "#c:tools/knife"
     },
     "ink_sac": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:black_dye x2",
+      "ingredients": [
+        "minecraft:ink_sac"
+      ],
+      "tool": "#c:tools/knife"
     },
     "jungle_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:jungle_planks",
+      "ingredients": [
+        "minecraft:jungle_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "jungle_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:jungle_planks",
+      "ingredients": [
+        "minecraft:jungle_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "jungle_log": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_jungle_log",
+      "ingredients": [
+        "minecraft:jungle_log"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "jungle_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:jungle_planks",
+      "ingredients": [
+        "minecraft:jungle_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "jungle_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:jungle_planks",
+      "ingredients": [
+        "minecraft:jungle_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "jungle_wood": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_jungle_wood",
+      "ingredients": [
+        "minecraft:jungle_wood"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "kelp_roll": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:kelp_roll"
+      "result": "farmersdelight:kelp_roll",
+      "ingredients": [
+        "farmersdelight:cooked_rice",
+        "minecraft:carrot",
+        "minecraft:dried_kelp"
+      ]
     },
     "leather_boots": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "minecraft:leather_boots"
+      ],
+      "tool": "#c:tools/shear"
     },
     "leather_chestplate": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "minecraft:leather_chestplate"
+      ],
+      "tool": "#c:tools/shear"
     },
     "leather_helmet": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "minecraft:leather_helmet"
+      ],
+      "tool": "#c:tools/shear"
     },
     "leather_horse_armor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:leather x2",
+      "ingredients": [
+        "minecraft:leather_horse_armor"
+      ],
+      "tool": "#c:tools/shear"
     },
     "leather_leggings": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "minecraft:leather_leggings"
+      ],
+      "tool": "#c:tools/shear"
     },
     "lily_of_the_valley": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:white_dye x2",
+      "ingredients": [
+        "minecraft:lily_of_the_valley"
+      ],
+      "tool": "#c:tools/knife"
     },
     "mangrove_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:mangrove_planks",
+      "ingredients": [
+        "minecraft:mangrove_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "mangrove_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:mangrove_planks",
+      "ingredients": [
+        "minecraft:mangrove_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "mangrove_log": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_mangrove_log",
+      "ingredients": [
+        "minecraft:mangrove_log"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "mangrove_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:mangrove_planks",
+      "ingredients": [
+        "minecraft:mangrove_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "mangrove_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:mangrove_planks",
+      "ingredients": [
+        "minecraft:mangrove_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "mangrove_wood": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_mangrove_wood",
+      "ingredients": [
+        "minecraft:mangrove_wood"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "melon": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:melon_slice x9",
+      "ingredients": [
+        "minecraft:melon"
+      ],
+      "tool": "#c:tools/knife"
     },
     "mutton": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:mutton_chops x2",
+      "ingredients": [
+        "minecraft:mutton"
+      ],
+      "tool": "#c:tools/knife"
     },
     "nether_bricks": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:nether_brick x4",
+      "ingredients": [
+        "minecraft:nether_bricks"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'pickaxe_dig'}"
     },
     "oak_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:oak_planks",
+      "ingredients": [
+        "minecraft:oak_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "oak_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:oak_planks",
+      "ingredients": [
+        "minecraft:oak_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "oak_log": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_oak_log",
+      "ingredients": [
+        "minecraft:oak_log"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "oak_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:oak_planks",
+      "ingredients": [
+        "minecraft:oak_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "oak_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:oak_planks",
+      "ingredients": [
+        "minecraft:oak_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "oak_wood": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_oak_wood",
+      "ingredients": [
+        "minecraft:oak_wood"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "orange_tulip": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:orange_dye x2",
+      "ingredients": [
+        "minecraft:orange_tulip"
+      ],
+      "tool": "#c:tools/knife"
     },
     "oxeye_daisy": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:light_gray_dye x2",
+      "ingredients": [
+        "minecraft:oxeye_daisy"
+      ],
+      "tool": "#c:tools/knife"
     },
     "pink_tulip": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:pink_dye x2",
+      "ingredients": [
+        "minecraft:pink_tulip"
+      ],
+      "tool": "#c:tools/knife"
     },
     "poppy": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:red_dye x2",
+      "ingredients": [
+        "minecraft:poppy"
+      ],
+      "tool": "#c:tools/knife"
     },
     "porkchop": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:bacon x2",
+      "ingredients": [
+        "minecraft:porkchop"
+      ],
+      "tool": "#c:tools/knife"
     },
     "pumpkin": {
       "type": "immersiveengineering:metal_press",
-      "result": "farmersdelight:pumpkin_slice x4"
+      "result": "farmersdelight:pumpkin_slice x4",
+      "ingredients": []
     },
     "quartz_block": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:quartz x4",
+      "ingredients": [
+        "minecraft:quartz_block"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'pickaxe_dig'}"
     },
     "red_mushroom_colony": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:red_mushroom x5",
+      "ingredients": [
+        "farmersdelight:red_mushroom_colony"
+      ],
+      "tool": "#c:tools/knife"
     },
     "red_tulip": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:red_dye x2",
+      "ingredients": [
+        "minecraft:red_tulip"
+      ],
+      "tool": "#c:tools/knife"
     },
     "rice_panicle": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:rice_panicle x9"
+      "result": "farmersdelight:rice_panicle x9",
+      "ingredients": [
+        "farmersdelight:rice_bale"
+      ]
     },
     "saddle": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:leather x2",
+      "ingredients": [
+        "minecraft:saddle"
+      ],
+      "tool": "#c:tools/shear"
     },
     "salmon": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:salmon_slice x2",
+      "ingredients": [
+        "minecraft:salmon"
+      ],
+      "tool": "#c:tools/knife"
     },
     "smoked_ham": {
       "type": "minecraft:smoking",
-      "result": "farmersdelight:smoked_ham"
+      "result": "farmersdelight:smoked_ham",
+      "ingredients": [
+        "farmersdelight:ham"
+      ]
     },
     "spruce_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:spruce_planks",
+      "ingredients": [
+        "minecraft:spruce_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "spruce_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:spruce_planks",
+      "ingredients": [
+        "minecraft:spruce_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "spruce_log": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_spruce_log",
+      "ingredients": [
+        "minecraft:spruce_log"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "spruce_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:spruce_planks",
+      "ingredients": [
+        "minecraft:spruce_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "spruce_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:spruce_planks",
+      "ingredients": [
+        "minecraft:spruce_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "spruce_wood": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_spruce_wood",
+      "ingredients": [
+        "minecraft:spruce_wood"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "stone": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:cobblestone",
+      "ingredients": [
+        "minecraft:stone"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'pickaxe_dig'}"
     },
     "sweet_berry_cheesecake": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:sweet_berry_cheesecake"
+      "result": "farmersdelight:sweet_berry_cheesecake",
+      "ingredients": [
+        "minecraft:sweet_berries",
+        "#c:drinks/milk",
+        "farmersdelight:pie_crust"
+      ]
     },
     "tag_dough": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "farmersdelight:raw_pasta",
+      "ingredients": [
+        "#c:foods/dough"
+      ],
+      "tool": "#c:tools/knife"
     },
     "torchflower": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:orange_dye x2",
+      "ingredients": [
+        "minecraft:torchflower"
+      ],
+      "tool": "#c:tools/knife"
     },
     "warped_door": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:warped_planks",
+      "ingredients": [
+        "minecraft:warped_door"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "warped_hanging_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:warped_planks",
+      "ingredients": [
+        "minecraft:warped_hanging_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "warped_hyphae": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_warped_hyphae",
+      "ingredients": [
+        "minecraft:warped_hyphae"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "warped_sign": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:warped_planks",
+      "ingredients": [
+        "minecraft:warped_sign"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "warped_stem": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:stripped_warped_stem",
+      "ingredients": [
+        "minecraft:warped_stem"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_strip'}"
     },
     "warped_trapdoor": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:warped_planks",
+      "ingredients": [
+        "minecraft:warped_trapdoor"
+      ],
+      "tool": "{'type': 'farmersdelight:item_ability', 'action': 'axe_dig'}"
     },
     "white_tulip": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:light_gray_dye x2",
+      "ingredients": [
+        "minecraft:white_tulip"
+      ],
+      "tool": "#c:tools/knife"
     },
     "wild_beetroots": {
       "type": "immersiveengineering:crusher",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "wild_cabbages": {
       "type": "immersiveengineering:crusher",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "wild_carrots": {
       "type": "immersiveengineering:crusher",
-      "result": "unknown x2"
+      "result": "unknown x2",
+      "ingredients": []
     },
     "wild_onions": {
       "type": "immersiveengineering:crusher",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "wild_potatoes": {
       "type": "immersiveengineering:crusher",
-      "result": "unknown x2"
+      "result": "unknown x2",
+      "ingredients": []
     },
     "wild_rice": {
       "type": "immersiveengineering:crusher",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "wild_tomatoes": {
       "type": "immersiveengineering:crusher",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "wither_rose": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "minecraft:black_dye x2",
+      "ingredients": [
+        "minecraft:wither_rose"
+      ],
+      "tool": "#c:tools/knife"
     },
     "cutting_board": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:cutting_board"
+      "result": "farmersdelight:cutting_board",
+      "ingredients": [
+        "minecraft:stick",
+        "#minecraft:planks"
+      ]
     },
     "cyan_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:cyan_canvas_sign"
+      "result": "farmersdelight:cyan_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/cyan"
+      ]
     },
     "cyan_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:cyan_hanging_canvas_sign"
+      "result": "farmersdelight:cyan_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/cyan"
+      ]
     },
     "dark_oak_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:dark_oak_cabinet"
+      "result": "farmersdelight:dark_oak_cabinet",
+      "ingredients": [
+        "minecraft:dark_oak_slab",
+        "minecraft:dark_oak_trapdoor"
+      ]
     },
     "diamond_knife": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:diamond_knife"
+      "result": "farmersdelight:diamond_knife",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:stick"
+      ]
     },
     "egg_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:egg_sandwich"
+      "result": "farmersdelight:egg_sandwich",
+      "ingredients": [
+        "#c:foods/bread",
+        "#c:foods/cooked_egg",
+        "#c:foods/cooked_egg"
+      ]
     },
     "flint_knife": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:flint_knife"
+      "result": "farmersdelight:flint_knife",
+      "ingredients": [
+        "minecraft:flint",
+        "minecraft:stick"
+      ]
     },
     "food_serving": {
       "type": "farmersdelight:food_serving",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "fried_egg": {
       "type": "minecraft:smelting",
-      "result": "farmersdelight:fried_egg"
+      "result": "farmersdelight:fried_egg",
+      "ingredients": [
+        "minecraft:egg"
+      ]
     },
     "fried_egg_from_campfire_cooking": {
       "type": "minecraft:campfire_cooking",
-      "result": "farmersdelight:fried_egg"
+      "result": "farmersdelight:fried_egg",
+      "ingredients": [
+        "minecraft:egg"
+      ]
     },
     "fried_egg_from_smoking": {
       "type": "minecraft:smoking",
-      "result": "farmersdelight:fried_egg"
+      "result": "farmersdelight:fried_egg",
+      "ingredients": [
+        "minecraft:egg"
+      ]
     },
     "fruit_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:fruit_salad"
+      "result": "farmersdelight:fruit_salad",
+      "ingredients": [
+        "minecraft:apple",
+        "minecraft:melon_slice",
+        "minecraft:melon_slice",
+        "#c:foods/berry",
+        "#c:foods/berry",
+        "farmersdelight:pumpkin_slice",
+        "minecraft:bowl"
+      ]
     },
     "full_tatami_mat": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:full_tatami_mat x2"
+      "result": "farmersdelight:full_tatami_mat x2",
+      "ingredients": [
+        "farmersdelight:tatami"
+      ]
     },
     "full_tatami_mat_from_halves": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:full_tatami_mat"
+      "result": "farmersdelight:full_tatami_mat",
+      "ingredients": [
+        "farmersdelight:half_tatami_mat",
+        "farmersdelight:half_tatami_mat"
+      ]
     },
     "golden_knife": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:golden_knife"
+      "result": "farmersdelight:golden_knife",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:stick"
+      ]
     },
     "gold_nugget_from_blasting_knife": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "farmersdelight:golden_knife"
+      ]
     },
     "gold_nugget_from_smelting_knife": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "farmersdelight:golden_knife"
+      ]
     },
     "gray_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:gray_canvas_sign"
+      "result": "farmersdelight:gray_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/gray"
+      ]
     },
     "gray_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:gray_hanging_canvas_sign"
+      "result": "farmersdelight:gray_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/gray"
+      ]
     },
     "green_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:green_canvas_sign"
+      "result": "farmersdelight:green_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/green"
+      ]
     },
     "green_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:green_hanging_canvas_sign"
+      "result": "farmersdelight:green_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/green"
+      ]
     },
     "grilled_salmon": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:grilled_salmon"
+      "result": "farmersdelight:grilled_salmon",
+      "ingredients": [
+        "#c:foods/cooked_salmon",
+        "minecraft:sweet_berries",
+        "minecraft:bowl",
+        "#c:crops/cabbage",
+        "#c:crops/onion"
+      ]
     },
     "half_tatami_mat": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:half_tatami_mat x2"
+      "result": "farmersdelight:half_tatami_mat x2",
+      "ingredients": [
+        "farmersdelight:full_tatami_mat"
+      ]
     },
     "hamburger": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:hamburger"
+      "result": "farmersdelight:hamburger",
+      "ingredients": [
+        "#c:foods/bread",
+        "farmersdelight:beef_patty",
+        "#c:foods/leafy_green",
+        "#c:crops/tomato",
+        "#c:crops/onion"
+      ]
     },
     "hanging_canvas_sign": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:hanging_canvas_sign x6"
+      "result": "farmersdelight:hanging_canvas_sign x6",
+      "ingredients": [
+        "minecraft:chain",
+        "#minecraft:logs",
+        "farmersdelight:canvas"
+      ]
     },
     "honey_cookie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:honey_cookie x8"
+      "result": "farmersdelight:honey_cookie x8",
+      "ingredients": [
+        "minecraft:honey_bottle",
+        "minecraft:wheat",
+        "minecraft:wheat"
+      ]
     },
     "honey_glazed_ham_block": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:honey_glazed_ham_block"
+      "result": "farmersdelight:honey_glazed_ham_block",
+      "ingredients": [
+        "minecraft:sweet_berries",
+        "minecraft:honey_bottle",
+        "minecraft:sweet_berries",
+        "minecraft:sweet_berries",
+        "farmersdelight:smoked_ham",
+        "minecraft:sweet_berries",
+        "farmersdelight:cooked_rice",
+        "minecraft:bowl",
+        "farmersdelight:cooked_rice"
+      ]
     },
     "horse_feed": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:horse_feed"
+      "result": "farmersdelight:horse_feed",
+      "ingredients": [
+        "minecraft:hay_block|farmersdelight:rice_bale",
+        "minecraft:apple",
+        "minecraft:apple",
+        "minecraft:golden_carrot"
+      ]
     },
     "cabbage_slice_from_mixing": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "farmersdelight:cabbage"
+      ]
     },
     "pie_crust_from_mixing": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:wheat_flour",
+        "create:wheat_flour",
+        "create:wheat_flour",
+        "{'type': 'fluid_tag', 'amount': 250, 'fluid_tag': 'c:milk'}"
+      ]
     },
     "tomato_sauce_from_mixing": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:crops/tomato",
+        "#c:crops/tomato",
+        "minecraft:bowl"
+      ]
     },
     "onion": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:onion x9"
+      "result": "farmersdelight:onion x9",
+      "ingredients": [
+        "farmersdelight:onion_crate"
+      ]
     },
     "rice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:rice"
+      "result": "farmersdelight:rice",
+      "ingredients": [
+        "farmersdelight:rice_panicle"
+      ]
     },
     "tomato": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:tomato x9"
+      "result": "farmersdelight:tomato x9",
+      "ingredients": [
+        "farmersdelight:tomato_crate"
+      ]
     },
     "cabbage_seeds": {
       "type": "immersiveengineering:squeezer",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "tomato_seeds": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:tomato_seeds"
+      "result": "farmersdelight:tomato_seeds",
+      "ingredients": [
+        "farmersdelight:tomato|farmersdelight:rotten_tomato"
+      ]
     },
     "netherwood": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "silentgear:stripped_netherwood_log",
+      "ingredients": [
+        "silentgear:netherwood_log"
+      ],
+      "tool": "{'type': 'farmersdelight:tool_action', 'action': 'axe_strip'}"
     },
     "iron_knife": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:iron_knife"
+      "result": "farmersdelight:iron_knife",
+      "ingredients": [
+        "#c:ingots/iron",
+        "minecraft:stick"
+      ]
     },
     "iron_nugget_from_blasting_knife": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "farmersdelight:iron_knife"
+      ]
     },
     "iron_nugget_from_smelting_knife": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "farmersdelight:iron_knife"
+      ]
     },
     "jungle_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:jungle_cabinet"
+      "result": "farmersdelight:jungle_cabinet",
+      "ingredients": [
+        "minecraft:jungle_slab",
+        "minecraft:jungle_trapdoor"
+      ]
     },
     "lead_from_straw": {
       "type": "minecraft:crafting_shaped",
-      "result": "minecraft:lead"
+      "result": "minecraft:lead",
+      "ingredients": [
+        "farmersdelight:straw"
+      ]
     },
     "light_blue_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:light_blue_canvas_sign"
+      "result": "farmersdelight:light_blue_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/light_blue"
+      ]
     },
     "light_blue_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:light_blue_hanging_canvas_sign"
+      "result": "farmersdelight:light_blue_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/light_blue"
+      ]
     },
     "light_gray_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:light_gray_canvas_sign"
+      "result": "farmersdelight:light_gray_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/light_gray"
+      ]
     },
     "light_gray_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:light_gray_hanging_canvas_sign"
+      "result": "farmersdelight:light_gray_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/light_gray"
+      ]
     },
     "lime_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:lime_canvas_sign"
+      "result": "farmersdelight:lime_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/lime"
+      ]
     },
     "lime_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:lime_hanging_canvas_sign"
+      "result": "farmersdelight:lime_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/lime"
+      ]
     },
     "magenta_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:magenta_canvas_sign"
+      "result": "farmersdelight:magenta_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/magenta"
+      ]
     },
     "magenta_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:magenta_hanging_canvas_sign"
+      "result": "farmersdelight:magenta_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/magenta"
+      ]
     },
     "mangrove_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:mangrove_cabinet"
+      "result": "farmersdelight:mangrove_cabinet",
+      "ingredients": [
+        "minecraft:mangrove_slab",
+        "minecraft:mangrove_trapdoor"
+      ]
     },
     "melon_juice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:melon_juice"
+      "result": "farmersdelight:melon_juice",
+      "ingredients": [
+        "minecraft:melon_slice",
+        "minecraft:melon_slice",
+        "minecraft:sugar",
+        "minecraft:melon_slice",
+        "minecraft:melon_slice",
+        "minecraft:glass_bottle"
+      ]
     },
     "melon_popsicle": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:melon_popsicle"
+      "result": "farmersdelight:melon_popsicle",
+      "ingredients": [
+        "minecraft:melon_slice",
+        "minecraft:ice",
+        "minecraft:stick"
+      ]
     },
     "milk_bottle": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:milk_bottle x4"
+      "result": "farmersdelight:milk_bottle x4",
+      "ingredients": [
+        "minecraft:milk_bucket",
+        "minecraft:glass_bottle",
+        "minecraft:glass_bottle",
+        "minecraft:glass_bottle",
+        "minecraft:glass_bottle"
+      ]
     },
     "milk_bucket_from_bottles": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:milk_bucket"
+      "result": "minecraft:milk_bucket",
+      "ingredients": [
+        "minecraft:bucket",
+        "farmersdelight:milk_bottle",
+        "farmersdelight:milk_bottle",
+        "farmersdelight:milk_bottle",
+        "farmersdelight:milk_bottle"
+      ]
     },
     "mixed_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:mixed_salad"
+      "result": "farmersdelight:mixed_salad",
+      "ingredients": [
+        "#c:foods/leafy_green",
+        "#c:crops/tomato",
+        "minecraft:beetroot",
+        "minecraft:bowl"
+      ]
     },
     "mutton_wrap": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:mutton_wrap"
+      "result": "farmersdelight:mutton_wrap",
+      "ingredients": [
+        "#c:foods/bread",
+        "#c:foods/cooked_mutton",
+        "#c:foods/leafy_green",
+        "#c:crops/onion"
+      ]
     },
     "netherite_knife_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "farmersdelight:netherite_knife"
+      "result": "farmersdelight:netherite_knife",
+      "ingredients": []
     },
     "nether_salad": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:nether_salad"
+      "result": "farmersdelight:nether_salad",
+      "ingredients": [
+        "minecraft:crimson_fungus",
+        "minecraft:warped_fungus",
+        "minecraft:bowl"
+      ]
     },
     "oak_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:oak_cabinet"
+      "result": "farmersdelight:oak_cabinet",
+      "ingredients": [
+        "minecraft:oak_slab",
+        "minecraft:oak_trapdoor"
+      ]
     },
     "onion_crate": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:onion_crate"
+      "result": "farmersdelight:onion_crate",
+      "ingredients": [
+        "farmersdelight:onion"
+      ]
     },
     "orange_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:orange_canvas_sign"
+      "result": "farmersdelight:orange_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/orange"
+      ]
     },
     "orange_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:orange_hanging_canvas_sign"
+      "result": "farmersdelight:orange_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/orange"
+      ]
     },
     "organic_compost_from_rotten_flesh": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:organic_compost"
+      "result": "farmersdelight:organic_compost",
+      "ingredients": [
+        "minecraft:dirt",
+        "minecraft:rotten_flesh",
+        "minecraft:rotten_flesh",
+        "farmersdelight:straw",
+        "farmersdelight:straw",
+        "minecraft:bone_meal",
+        "minecraft:bone_meal",
+        "minecraft:bone_meal",
+        "minecraft:bone_meal"
+      ]
     },
     "organic_compost_from_tree_bark": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:organic_compost"
+      "result": "farmersdelight:organic_compost",
+      "ingredients": [
+        "minecraft:dirt",
+        "farmersdelight:straw",
+        "farmersdelight:straw",
+        "minecraft:bone_meal",
+        "minecraft:bone_meal",
+        "farmersdelight:tree_bark",
+        "farmersdelight:tree_bark",
+        "farmersdelight:tree_bark",
+        "farmersdelight:tree_bark"
+      ]
     },
     "packed_mud_from_straw": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:packed_mud x2"
+      "result": "minecraft:packed_mud x2",
+      "ingredients": [
+        "farmersdelight:straw",
+        "minecraft:mud",
+        "minecraft:mud"
+      ]
     },
     "painting_from_canvas": {
       "type": "minecraft:crafting_shaped",
-      "result": "minecraft:painting"
+      "result": "minecraft:painting",
+      "ingredients": [
+        "minecraft:stick",
+        "farmersdelight:canvas"
+      ]
     },
     "paper_from_tree_bark": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:paper"
+      "result": "minecraft:paper",
+      "ingredients": [
+        "farmersdelight:tree_bark",
+        "farmersdelight:tree_bark",
+        "farmersdelight:tree_bark"
+      ]
     },
     "pie_crust": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:pie_crust"
+      "result": "farmersdelight:pie_crust",
+      "ingredients": [
+        "minecraft:wheat",
+        "#c:drinks/milk"
+      ]
     },
     "pink_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:pink_canvas_sign"
+      "result": "farmersdelight:pink_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/pink"
+      ]
     },
     "pink_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:pink_hanging_canvas_sign"
+      "result": "farmersdelight:pink_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/pink"
+      ]
     },
     "potato_crate": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:potato_crate"
+      "result": "farmersdelight:potato_crate",
+      "ingredients": [
+        "minecraft:potato"
+      ]
     },
     "potato_from_crate": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:potato x9"
+      "result": "minecraft:potato x9",
+      "ingredients": [
+        "farmersdelight:potato_crate"
+      ]
     },
     "pumpkin_from_slices": {
       "type": "minecraft:crafting_shaped",
-      "result": "minecraft:pumpkin"
+      "result": "minecraft:pumpkin",
+      "ingredients": [
+        "farmersdelight:pumpkin_slice"
+      ]
     },
     "pumpkin_seeds_from_slice": {
       "type": "minecraft:crafting_shapeless",
-      "result": "minecraft:pumpkin_seeds"
+      "result": "minecraft:pumpkin_seeds",
+      "ingredients": [
+        "farmersdelight:pumpkin_slice"
+      ]
     },
     "purple_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:purple_canvas_sign"
+      "result": "farmersdelight:purple_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/purple"
+      ]
     },
     "purple_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:purple_hanging_canvas_sign"
+      "result": "farmersdelight:purple_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/purple"
+      ]
     },
     "red_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:red_canvas_sign"
+      "result": "farmersdelight:red_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/red"
+      ]
     },
     "red_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:red_hanging_canvas_sign"
+      "result": "farmersdelight:red_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/red"
+      ]
     },
     "rice_bag": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:rice_bag"
+      "result": "farmersdelight:rice_bag",
+      "ingredients": [
+        "farmersdelight:rice"
+      ]
     },
     "rice_bale": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:rice_bale"
+      "result": "farmersdelight:rice_bale",
+      "ingredients": [
+        "farmersdelight:rice_panicle"
+      ]
     },
     "rice_from_bag": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:rice x9"
+      "result": "farmersdelight:rice x9",
+      "ingredients": [
+        "farmersdelight:rice_bag"
+      ]
     },
     "rice_roll_medley_block": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:rice_roll_medley_block"
+      "result": "farmersdelight:rice_roll_medley_block",
+      "ingredients": [
+        "farmersdelight:kelp_roll_slice",
+        "farmersdelight:kelp_roll_slice",
+        "farmersdelight:kelp_roll_slice",
+        "farmersdelight:salmon_roll",
+        "farmersdelight:salmon_roll",
+        "farmersdelight:salmon_roll",
+        "farmersdelight:cod_roll",
+        "minecraft:bowl",
+        "farmersdelight:cod_roll"
+      ]
     },
     "roasted_mutton_chops": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:roasted_mutton_chops"
+      "result": "farmersdelight:roasted_mutton_chops",
+      "ingredients": [
+        "farmersdelight:cooked_mutton_chops",
+        "minecraft:beetroot",
+        "minecraft:bowl",
+        "farmersdelight:cooked_rice",
+        "#c:crops/tomato"
+      ]
     },
     "roast_chicken_block": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:roast_chicken_block"
+      "result": "farmersdelight:roast_chicken_block",
+      "ingredients": [
+        "#c:crops/onion",
+        "#c:eggs",
+        "minecraft:bread",
+        "minecraft:carrot",
+        "minecraft:cooked_chicken",
+        "minecraft:baked_potato",
+        "minecraft:carrot",
+        "minecraft:bowl",
+        "minecraft:baked_potato"
+      ]
     },
     "rope": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:rope x4"
+      "result": "farmersdelight:rope x4",
+      "ingredients": [
+        "farmersdelight:straw"
+      ]
     },
     "rope_from_safety_net": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:rope x4"
+      "result": "farmersdelight:rope x4",
+      "ingredients": [
+        "farmersdelight:safety_net"
+      ]
     },
     "safety_net": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:safety_net"
+      "result": "farmersdelight:safety_net",
+      "ingredients": [
+        "farmersdelight:rope"
+      ]
     },
     "salmon_roll": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:salmon_roll x2"
+      "result": "farmersdelight:salmon_roll x2",
+      "ingredients": [
+        "farmersdelight:salmon_slice",
+        "farmersdelight:salmon_slice",
+        "farmersdelight:cooked_rice"
+      ]
     },
     "scaffolding_from_canvas": {
       "type": "minecraft:crafting_shaped",
-      "result": "minecraft:scaffolding x6"
+      "result": "minecraft:scaffolding x6",
+      "ingredients": [
+        "minecraft:bamboo",
+        "farmersdelight:canvas"
+      ]
     },
     "shepherds_pie_block": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:shepherds_pie_block"
+      "result": "farmersdelight:shepherds_pie_block",
+      "ingredients": [
+        "minecraft:baked_potato",
+        "#c:drinks/milk",
+        "minecraft:baked_potato",
+        "#c:foods/cooked_mutton",
+        "#c:foods/cooked_mutton",
+        "#c:foods/cooked_mutton",
+        "#c:crops/onion",
+        "minecraft:bowl",
+        "#c:crops/onion"
+      ]
     },
     "skillet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:skillet"
+      "result": "farmersdelight:skillet",
+      "ingredients": [
+        "#c:ingots/iron",
+        "minecraft:brick"
+      ]
     },
     "spruce_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:spruce_cabinet"
+      "result": "farmersdelight:spruce_cabinet",
+      "ingredients": [
+        "minecraft:spruce_slab",
+        "minecraft:spruce_trapdoor"
+      ]
     },
     "steak_and_potatoes": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:steak_and_potatoes"
+      "result": "farmersdelight:steak_and_potatoes",
+      "ingredients": [
+        "minecraft:baked_potato",
+        "minecraft:cooked_beef",
+        "minecraft:bowl",
+        "#c:crops/onion",
+        "farmersdelight:cooked_rice"
+      ]
     },
     "stove": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:stove"
+      "result": "farmersdelight:stove",
+      "ingredients": [
+        "#c:ingots/iron",
+        "minecraft:bricks",
+        "minecraft:campfire"
+      ]
     },
     "straw": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:straw x9"
+      "result": "farmersdelight:straw x9",
+      "ingredients": [
+        "farmersdelight:straw_bale"
+      ]
     },
     "straw_bale": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:straw_bale"
+      "result": "farmersdelight:straw_bale",
+      "ingredients": [
+        "farmersdelight:straw"
+      ]
     },
     "stuffed_potato": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:stuffed_potato"
+      "result": "farmersdelight:stuffed_potato",
+      "ingredients": [
+        "minecraft:baked_potato",
+        "#c:foods/cooked_beef",
+        "#c:drinks/milk"
+      ]
     },
     "sweet_berry_cheesecake_from_slices": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:sweet_berry_cheesecake"
+      "result": "farmersdelight:sweet_berry_cheesecake",
+      "ingredients": [
+        "farmersdelight:sweet_berry_cheesecake_slice"
+      ]
     },
     "sweet_berry_cookie": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:sweet_berry_cookie x8"
+      "result": "farmersdelight:sweet_berry_cookie x8",
+      "ingredients": [
+        "minecraft:sweet_berries",
+        "minecraft:wheat",
+        "minecraft:wheat"
+      ]
     },
     "tatami": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:tatami x2"
+      "result": "farmersdelight:tatami x2",
+      "ingredients": [
+        "farmersdelight:canvas",
+        "farmersdelight:straw"
+      ]
     },
     "tatami_block_from_full": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:tatami"
+      "result": "farmersdelight:tatami",
+      "ingredients": [
+        "farmersdelight:full_tatami_mat",
+        "farmersdelight:full_tatami_mat"
+      ]
     },
     "tomato_crate": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:tomato_crate"
+      "result": "farmersdelight:tomato_crate",
+      "ingredients": [
+        "farmersdelight:tomato"
+      ]
     },
     "warped_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "farmersdelight:warped_cabinet"
+      "result": "farmersdelight:warped_cabinet",
+      "ingredients": [
+        "minecraft:warped_slab",
+        "minecraft:warped_trapdoor"
+      ]
     },
     "wheat_dough_from_egg": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:wheat_dough x3"
+      "result": "farmersdelight:wheat_dough x3",
+      "ingredients": [
+        "minecraft:wheat",
+        "minecraft:wheat",
+        "minecraft:wheat",
+        "#c:eggs"
+      ]
     },
     "wheat_dough_from_water": {
       "type": "farmersdelight:dough",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "white_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:white_canvas_sign"
+      "result": "farmersdelight:white_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/white"
+      ]
     },
     "white_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:white_hanging_canvas_sign"
+      "result": "farmersdelight:white_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/white"
+      ]
     },
     "yellow_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:yellow_canvas_sign"
+      "result": "farmersdelight:yellow_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:canvas_signs",
+        "#c:dyes/yellow"
+      ]
     },
     "yellow_hanging_canvas_sign": {
       "type": "minecraft:crafting_shapeless",
-      "result": "farmersdelight:yellow_hanging_canvas_sign"
+      "result": "farmersdelight:yellow_hanging_canvas_sign",
+      "ingredients": [
+        "#farmersdelight:hanging_canvas_signs",
+        "#c:dyes/yellow"
+      ]
     }
   },
   "summary": {

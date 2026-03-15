@@ -151,624 +151,1161 @@
   "entities": {},
   "recipes_count": 150,
   "recipe_types": [
-    "minecraft:smoking",
-    "minecraft:crafting_shapeless",
-    "jeed:effect_provider",
-    "immersiveengineering:mineral_mix",
-    "create:compacting",
-    "create:item_application",
     "create:mixing",
-    "mekanism:metallurgic_infusing",
-    "create:filling",
-    "create:pressing",
     "createaddition:rolling",
     "create:crushing",
-    "create:mechanical_crafting",
-    "createaddition:liquid_burning",
+    "immersiveengineering:mineral_mix",
+    "minecraft:smoking",
     "minecraft:crafting_shaped",
+    "mekanism:metallurgic_infusing",
+    "minecraft:crafting_shapeless",
+    "create:mechanical_crafting",
+    "jeed:effect_provider",
     "createaddition:charging",
-    "mekanism:enriching"
+    "create:item_application",
+    "create:compacting",
+    "createaddition:liquid_burning",
+    "mekanism:enriching",
+    "create:pressing",
+    "create:filling"
   ],
   "recipes": {
     "copper_spool": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:copper_spool"
+      "result": "createaddition:copper_spool",
+      "ingredients": [
+        "#c:wires/copper",
+        "createaddition:spool"
+      ]
     },
     "electrum_amulet": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:electrum_amulet"
+      "result": "createaddition:electrum_amulet",
+      "ingredients": [
+        "#c:wires/electrum",
+        "#c:ingots/electrum",
+        "#c:gems/emerald"
+      ]
     },
     "redstone_relay": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:redstone_relay"
+      "result": "createaddition:redstone_relay",
+      "ingredients": [
+        "#c:dusts/redstone",
+        "createaddition:connector",
+        "create:electron_tube",
+        "#c:stones"
+      ]
     },
     "portable_energy_interface": {
       "type": "minecraft:crafting_shapeless",
-      "result": "createaddition:portable_energy_interface"
+      "result": "createaddition:portable_energy_interface",
+      "ingredients": [
+        "create:brass_casing",
+        "create:chute",
+        "createaddition:copper_spool"
+      ]
     },
     "biomass_pallet_block": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:biomass_pellet_block"
+      "result": "createaddition:biomass_pellet_block",
+      "ingredients": [
+        "createaddition:biomass_pellet"
+      ]
     },
     "modular_accumulator": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:modular_accumulator"
+      "result": "createaddition:modular_accumulator",
+      "ingredients": [
+        "#c:rods/copper",
+        "createaddition:capacitor",
+        "create:brass_casing",
+        "#c:wires/electrum"
+      ]
     },
     "electrum_spool": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:electrum_spool"
+      "result": "createaddition:electrum_spool",
+      "ingredients": [
+        "#c:wires/electrum",
+        "createaddition:spool"
+      ]
     },
     "spool": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:spool x16"
+      "result": "createaddition:spool x16",
+      "ingredients": [
+        "#c:plates/iron",
+        "#c:nuggets/iron"
+      ]
     },
     "electrum_ingot_from_electrum_block": {
       "type": "minecraft:crafting_shapeless",
-      "result": "createaddition:electrum_ingot x9"
+      "result": "createaddition:electrum_ingot x9",
+      "ingredients": [
+        "createaddition:electrum_block"
+      ]
     },
     "electrum_block": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:electrum_block"
+      "result": "createaddition:electrum_block",
+      "ingredients": [
+        "createaddition:electrum_ingot"
+      ]
     },
     "rolling_mill": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:rolling_mill"
+      "result": "createaddition:rolling_mill",
+      "ingredients": [
+        "#c:plates/iron",
+        "create:shaft",
+        "create:andesite_alloy",
+        "create:andesite_casing"
+      ]
     },
     "large_connector": {
       "type": "minecraft:crafting_shapeless",
-      "result": "createaddition:large_connector x2"
+      "result": "createaddition:large_connector x2",
+      "ingredients": [
+        "#createaddition:large_connector_usable_rods",
+        "create:andesite_alloy",
+        "create:andesite_alloy",
+        "#c:slime_balls"
+      ]
     },
     "capacitor_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:capacitor"
+      "result": "createaddition:capacitor",
+      "ingredients": [
+        "#c:plates/copper",
+        "#c:plates/zinc",
+        "minecraft:redstone_torch"
+      ]
     },
     "festive_spool": {
       "type": "minecraft:crafting_shapeless",
-      "result": "createaddition:festive_spool"
+      "result": "createaddition:festive_spool",
+      "ingredients": [
+        "createaddition:copper_spool",
+        "#c:dusts/redstone",
+        "createaddition:biomass"
+      ]
     },
     "connector": {
       "type": "minecraft:crafting_shapeless",
-      "result": "createaddition:connector x3"
+      "result": "createaddition:connector x3",
+      "ingredients": [
+        "#c:rods/copper",
+        "create:andesite_alloy",
+        "#c:slime_balls"
+      ]
     },
     "diamond_grit_sandpaper": {
       "type": "minecraft:crafting_shapeless",
-      "result": "createaddition:diamond_grit_sandpaper"
+      "result": "createaddition:diamond_grit_sandpaper",
+      "ingredients": [
+        "minecraft:paper",
+        "#c:dusts/diamond"
+      ]
     },
     "gold_spool": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:gold_spool"
+      "result": "createaddition:gold_spool",
+      "ingredients": [
+        "#c:wires/gold",
+        "createaddition:spool"
+      ]
     },
     "small_light_connector": {
       "type": "minecraft:crafting_shapeless",
-      "result": "createaddition:small_light_connector"
+      "result": "createaddition:small_light_connector",
+      "ingredients": [
+        "#c:wires/iron",
+        "#c:glass_blocks",
+        "createaddition:connector"
+      ]
     },
     "barbed_wire": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:barbed_wire x2"
+      "result": "createaddition:barbed_wire x2",
+      "ingredients": [
+        "#c:wires/iron"
+      ]
     },
     "electrum_nugget": {
       "type": "minecraft:crafting_shapeless",
-      "result": "createaddition:electrum_nugget x9"
+      "result": "createaddition:electrum_nugget x9",
+      "ingredients": [
+        "createaddition:electrum_ingot"
+      ]
     },
     "electrum_ingot_from_nugget": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:electrum_ingot"
+      "result": "createaddition:electrum_ingot",
+      "ingredients": [
+        "createaddition:electrum_nugget"
+      ]
     },
     "digital_adapter": {
       "type": "minecraft:crafting_shapeless",
-      "result": "createaddition:digital_adapter"
+      "result": "createaddition:digital_adapter",
+      "ingredients": [
+        "#computercraft:wired_modem",
+        "#c:plates/brass",
+        "minecraft:redstone_torch"
+      ]
     },
     "capacitor_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "createaddition:capacitor"
+      "result": "createaddition:capacitor",
+      "ingredients": [
+        "#c:plates/zinc",
+        "#c:plates/copper",
+        "minecraft:redstone_torch"
+      ]
     },
     "biomass_pellet_from_biomass_pallet_block": {
       "type": "minecraft:crafting_shapeless",
-      "result": "createaddition:biomass_pellet x9"
+      "result": "createaddition:biomass_pellet x9",
+      "ingredients": [
+        "createaddition:biomass_pellet_block"
+      ]
     },
     "tuff_recycling": {
       "type": "create:crushing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#create:stone_types/tuff"
+      ]
     },
     "ochrum_recycling": {
       "type": "create:crushing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#create:stone_types/ochrum"
+      ]
     },
     "diamond": {
       "type": "create:crushing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:diamond"
+      ]
     },
     "crude_oil": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "{'type': 'fluid_tag', 'amount': 1000, 'fluid_tag': 'c:crude_oil'}"
+      ]
     },
     "ethanol": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "{'type': 'fluid_tag', 'amount': 1000, 'fluid_tag': 'c:ethanol'}"
+      ]
     },
     "creosote": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "{'type': 'fluid_tag', 'amount': 1000, 'fluid_tag': 'c:creosote'}"
+      ]
     },
     "diesel": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "{'type': 'fluid_tag', 'amount': 1000, 'fluid_tag': 'c:diesel'}"
+      ]
     },
     "biodiesel": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "{'type': 'fluid_tag', 'amount': 1000, 'fluid_tag': 'c:biodiesel'}"
+      ]
     },
     "plantoil": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "{'type': 'fluid_tag', 'amount': 1000, 'fluid_tag': 'c:plantoil'}"
+      ]
     },
     "gasoline": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "{'type': 'fluid_tag', 'amount': 1000, 'fluid_tag': 'c:gasoline'}"
+      ]
     },
     "biofuel": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "{'type': 'fluid_tag', 'amount': 1000, 'fluid_tag': 'c:biofuel'}"
+      ]
     },
     "lava": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "{'type': 'fluid_tag', 'amount': 1000, 'fluid_tag': 'minecraft:lava'}"
+      ]
     },
     "deoxidize_create_oxidized_copper_tiles": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:oxidized_copper_tiles"
+      ]
     },
     "deoxidize_create_exposed_copper_shingle_slab": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:exposed_copper_shingle_slab"
+      ]
     },
     "deoxidize_minecraft_oxidized_copper_grate": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:oxidized_copper_grate"
+      ]
     },
     "electrify_gold_block": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:gold_block"
+      ]
     },
     "deoxidize_minecraft_oxidized_cut_copper_stairs": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:oxidized_cut_copper_stairs"
+      ]
     },
     "deoxidize_minecraft_weathered_cut_copper_stairs": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:weathered_cut_copper_stairs"
+      ]
     },
     "electrify_gold_wire": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "createaddition:gold_wire"
+      ]
     },
     "deoxidize_minecraft_oxidized_copper_door": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:oxidized_copper_door"
+      ]
     },
     "deoxidize_minecraft_weathered_cut_copper": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:weathered_cut_copper"
+      ]
     },
     "electrify_gold_rod": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "createaddition:gold_rod"
+      ]
     },
     "deoxidize_minecraft_exposed_copper_grate": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:exposed_copper_grate"
+      ]
     },
     "deoxidize_minecraft_exposed_copper_bulb": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:exposed_copper_bulb"
+      ]
     },
     "deoxidize_minecraft_exposed_cut_copper_stairs": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:exposed_cut_copper_stairs"
+      ]
     },
     "deoxidize_minecraft_weathered_cut_copper_slab": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:weathered_cut_copper_slab"
+      ]
     },
     "electrify_gold_nugget": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:gold_nugget"
+      ]
     },
     "deoxidize_minecraft_exposed_copper_door": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:exposed_copper_door"
+      ]
     },
     "channeling": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:book"
+      ]
     },
     "deoxidize_minecraft_exposed_cut_copper": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:exposed_cut_copper"
+      ]
     },
     "deoxidize_minecraft_oxidized_cut_copper": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:oxidized_cut_copper"
+      ]
     },
     "deoxidize_create_weathered_copper_tiles": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:weathered_copper_tiles"
+      ]
     },
     "deoxidize_minecraft_exposed_chiseled_copper": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:exposed_chiseled_copper"
+      ]
     },
     "deoxidize_create_exposed_copper_tile_slab": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:exposed_copper_tile_slab"
+      ]
     },
     "deoxidize_create_weathered_copper_tile_slab": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:weathered_copper_tile_slab"
+      ]
     },
     "deoxidize_create_weathered_copper_tile_stairs": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:weathered_copper_tile_stairs"
+      ]
     },
     "deoxidize_create_exposed_copper_tile_stairs": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:exposed_copper_tile_stairs"
+      ]
     },
     "deoxidize_minecraft_weathered_copper_bulb": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:weathered_copper_bulb"
+      ]
     },
     "deoxidize_minecraft_weathered_copper_trapdoor": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:weathered_copper_trapdoor"
+      ]
     },
     "deoxidize_create_exposed_copper_tiles": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:exposed_copper_tiles"
+      ]
     },
     "deoxidize_minecraft_oxidized_copper": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:oxidized_copper"
+      ]
     },
     "deoxidize_minecraft_oxidized_chiseled_copper": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:oxidized_chiseled_copper"
+      ]
     },
     "deoxidize_minecraft_oxidized_cut_copper_slab": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:oxidized_cut_copper_slab"
+      ]
     },
     "deoxidize_minecraft_weathered_chiseled_copper": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:weathered_chiseled_copper"
+      ]
     },
     "deoxidize_create_exposed_copper_shingle_stairs": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:exposed_copper_shingle_stairs"
+      ]
     },
     "deoxidize_create_oxidized_copper_tile_slab": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:oxidized_copper_tile_slab"
+      ]
     },
     "deoxidize_create_oxidized_copper_tile_stairs": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:oxidized_copper_tile_stairs"
+      ]
     },
     "deoxidize_minecraft_oxidized_copper_bulb": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:oxidized_copper_bulb"
+      ]
     },
     "deoxidize_minecraft_exposed_cut_copper_slab": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:exposed_cut_copper_slab"
+      ]
     },
     "electrify_gold_sheet": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:golden_sheet"
+      ]
     },
     "deoxidize_minecraft_weathered_copper_grate": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:weathered_copper_grate"
+      ]
     },
     "deoxidize_minecraft_exposed_copper": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:exposed_copper"
+      ]
     },
     "deoxidize_create_weathered_copper_shingle_slab": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:weathered_copper_shingle_slab"
+      ]
     },
     "deoxidize_create_exposed_copper_shingles": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:exposed_copper_shingles"
+      ]
     },
     "electrify_gold_ingot": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:gold_ingot"
+      ]
     },
     "deoxidize_minecraft_weathered_copper_door": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:weathered_copper_door"
+      ]
     },
     "deoxidize_create_weathered_copper_shingles": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:weathered_copper_shingles"
+      ]
     },
     "deoxidize_create_weathered_copper_shingle_stairs": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:weathered_copper_shingle_stairs"
+      ]
     },
     "deoxidize_create_oxidized_copper_shingles": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:oxidized_copper_shingles"
+      ]
     },
     "deoxidize_create_oxidized_copper_shingle_slab": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:oxidized_copper_shingle_slab"
+      ]
     },
     "deoxidize_minecraft_oxidized_copper_trapdoor": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:oxidized_copper_trapdoor"
+      ]
     },
     "deoxidize_minecraft_exposed_copper_trapdoor": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:exposed_copper_trapdoor"
+      ]
     },
     "deoxidize_create_oxidized_copper_shingle_stairs": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:oxidized_copper_shingle_stairs"
+      ]
     },
     "deoxidize_minecraft_weathered_copper": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:weathered_copper"
+      ]
     },
     "electrum_plate": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:plates/electrum"
+      ]
     },
     "copper_plate": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:plates/copper"
+      ]
     },
     "iron_ingot": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/iron"
+      ]
     },
     "gold_ingot": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/gold"
+      ]
     },
     "brass_rod": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/brass"
+      ]
     },
     "electrum_ingot": {
       "type": "create:pressing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/electrum"
+      ]
     },
     "iron_plate": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:plates/iron"
+      ]
     },
     "gold_plate": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:plates/gold"
+      ]
     },
     "copper_ingot": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/copper"
+      ]
     },
     "alternator": {
       "type": "create:mechanical_crafting",
-      "result": "createaddition:alternator"
+      "result": "createaddition:alternator",
+      "ingredients": [
+        "create:andesite_alloy",
+        "#c:plates/iron",
+        "createaddition:copper_spool",
+        "#c:rods/iron",
+        "createaddition:capacitor"
+      ]
     },
     "electric_motor": {
       "type": "create:mechanical_crafting",
-      "result": "createaddition:electric_motor"
+      "result": "createaddition:electric_motor",
+      "ingredients": [
+        "create:andesite_alloy",
+        "#c:plates/brass",
+        "createaddition:copper_spool",
+        "#c:rods/iron",
+        "createaddition:capacitor"
+      ]
     },
     "tesla_coil": {
       "type": "create:mechanical_crafting",
-      "result": "createaddition:tesla_coil"
+      "result": "createaddition:tesla_coil",
+      "ingredients": [
+        "createaddition:copper_spool",
+        "create:andesite_alloy",
+        "createaddition:capacitor",
+        "create:brass_casing",
+        "#c:plates/brass",
+        "create:electron_tube"
+      ]
     },
     "tree_oil": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "refined_fuel": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "light_oil": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "heavy_oil": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "shocking": {
       "type": "jeed:effect_provider",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "rose_quartz_enriching": {
       "type": "mekanism:enriching",
-      "result": "unknown"
+      "result": "create:polished_rose_quartz",
+      "ingredients": []
     },
     "rose_quartz_metallurgic_infusing": {
       "type": "mekanism:metallurgic_infusing",
-      "result": "unknown"
+      "result": "create:rose_quartz",
+      "ingredients": []
     },
     "charged_certus_quartz": {
       "type": "createaddition:charging",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "ae2:certus_quartz_crystal"
+      ]
     },
     "fabric_sail": {
       "type": "minecraft:crafting_shaped",
-      "result": "create:white_sail x2"
+      "result": "create:white_sail x2",
+      "ingredients": [
+        "#c:fabric_hemp",
+        "#c:rods/wooden",
+        "create:andesite_alloy"
+      ]
     },
     "steel_ingot": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/steel"
+      ]
     },
     "sphalerite": {
       "type": "immersiveengineering:mineral_mix",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "lead_plate": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:plates/lead"
+      ]
     },
     "steel_plate": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:plates/steel"
+      ]
     },
     "aluminum_plate": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:plates/aluminum"
+      ]
     },
     "aluminum_ingot": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/aluminum"
+      ]
     },
     "constantan": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/nickel",
+        "#c:ingots/copper"
+      ]
     },
     "leaded_concrete": {
       "type": "create:item_application",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "immersiveengineering:concrete",
+        "#c:plates/lead"
+      ]
     },
     "kiln_brick": {
       "type": "create:item_application",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:sandstone/blocks",
+        "minecraft:brick"
+      ]
     },
     "reinforced_blast_brick": {
       "type": "create:item_application",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "immersiveengineering:blastbrick",
+        "#c:plates/steel"
+      ]
     },
     "queens_slime": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/cobalt",
+        "#c:ingots/gold",
+        "minecraft:magma_cream"
+      ]
     },
     "manyullyn": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/cobalt",
+        "#c:ingots/cobalt",
+        "#c:ingots/cobalt",
+        "#c:ingots/netherite_scrap"
+      ]
     },
     "tinkers_bronze": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/copper",
+        "#c:ingots/copper",
+        "#c:ingots/copper",
+        "#c:glass_blocks"
+      ]
     },
     "hepatizon": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:obsidians",
+        "#c:ingots/cobalt",
+        "#c:ingots/copper",
+        "#c:ingots/copper"
+      ]
     },
     "amethyst_bronze": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/copper",
+        "minecraft:amethyst_shard"
+      ]
     },
     "blaze_blood": {
       "type": "createaddition:liquid_burning",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "rose_gold": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/copper",
+        "#c:ingots/copper",
+        "#c:ingots/copper",
+        "#c:ingots/gold"
+      ]
     },
     "slimesteel": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/iron",
+        "#c:slimeball/sky",
+        "#tconstruct:seared_blocks"
+      ]
     },
     "cake": {
       "type": "create:filling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "createaddition:cake_base_baked",
+        "{'type': 'fluid_tag', 'amount': 1000, 'fluid_tag': 'c:milk'}"
+      ]
     },
     "honey_cake": {
       "type": "create:filling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "createaddition:cake_base_baked",
+        "{'type': 'fluid_tag', 'amount': 500, 'fluid_tag': 'c:honey'}"
+      ]
     },
     "chocolate_cake": {
       "type": "create:filling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "createaddition:cake_base_baked",
+        "{'type': 'fluid_stack', 'amount': 500, 'fluid': 'create:chocolate'}"
+      ]
     },
     "zinc_ingot": {
       "type": "create:pressing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/zinc"
+      ]
     },
     "cake_base_baked": {
       "type": "minecraft:smoking",
-      "result": "createaddition:cake_base_baked"
+      "result": "createaddition:cake_base_baked",
+      "ingredients": [
+        "createaddition:cake_base"
+      ]
     },
     "seed_oil": {
       "type": "create:compacting",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:seeds"
+      ]
     },
     "biomass_pellet": {
       "type": "create:compacting",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "createaddition:biomass"
+      ]
     },
     "cake_base": {
       "type": "create:compacting",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:eggs",
+        "minecraft:sugar",
+        "minecraft:sugar",
+        "create:dough"
+      ]
     },
     "biomass_from_leaves": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#minecraft:leaves",
+        "#minecraft:leaves",
+        "#minecraft:leaves",
+        "{'type': 'fluid_tag', 'amount': 100, 'fluid_tag': 'c:plantoil'}"
+      ]
     },
     "electrum": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:ingots/gold",
+        "#c:ingots/silver"
+      ]
     },
     "biomass_from_plant_foods": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#createaddition:plant_foods",
+        "#createaddition:plant_foods",
+        "{'type': 'fluid_tag', 'amount': 100, 'fluid_tag': 'c:plantoil'}"
+      ]
     },
     "bioethanol": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:sugar",
+        "create:cinder_flour",
+        "createaddition:biomass",
+        "createaddition:biomass"
+      ]
     },
     "biomass_from_crops": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:crops",
+        "#c:crops",
+        "{'type': 'fluid_tag', 'amount': 100, 'fluid_tag': 'c:plantoil'}"
+      ]
     },
     "netherrack": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#c:cobblestones",
+        "create:cinder_flour",
+        "{'type': 'fluid_tag', 'amount': 25, 'fluid_tag': 'minecraft:lava'}"
+      ]
     },
     "biomass_from_saplings": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#minecraft:saplings",
+        "#minecraft:saplings",
+        "#minecraft:saplings",
+        "{'type': 'fluid_tag', 'amount': 100, 'fluid_tag': 'c:plantoil'}"
+      ]
     },
     "biomass_from_plants": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#createaddition:plants",
+        "#createaddition:plants",
+        "#createaddition:plants",
+        "{'type': 'fluid_tag', 'amount': 100, 'fluid_tag': 'c:plantoil'}"
+      ]
     },
     "biomass_from_stricks": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:stick",
+        "minecraft:stick",
+        "{'type': 'fluid_tag', 'amount': 100, 'fluid_tag': 'c:plantoil'}"
+      ]
     },
     "biomass_from_flowers": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "#minecraft:flowers",
+        "#minecraft:flowers",
+        "{'type': 'fluid_tag', 'amount': 100, 'fluid_tag': 'c:plantoil'}"
+      ]
     },
     "biomass_from_honeycomb": {
       "type": "create:mixing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:honeycomb",
+        "{'type': 'fluid_tag', 'amount': 100, 'fluid_tag': 'c:plantoil'}"
+      ]
     },
     "tuff": {
       "type": "create:crushing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:tuff"
+      ]
     },
     "ochrum": {
       "type": "create:crushing",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "create:ochrum"
+      ]
     },
     "paper": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:paper"
+      ]
     },
     "bamboo": {
       "type": "createaddition:rolling",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": [
+        "minecraft:bamboo"
+      ]
     }
   },
   "summary": {

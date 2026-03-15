@@ -74,511 +74,898 @@
   },
   "recipes_count": 125,
   "recipe_types": [
-    "minecraft:crafting_shaped",
     "minecraft:blasting",
     "minecraft:smithing_transform",
-    "minecraft:smelting"
+    "minecraft:smelting",
+    "minecraft:crafting_shaped"
   ],
   "recipes": {
     "aeternium_dagger": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:aeternium_dagger"
+      "result": "rogues:aeternium_dagger",
+      "ingredients": [
+        "betterend:aeternium_ingot",
+        "#c:wood_sticks|minecraft:stick"
+      ]
     },
     "aeternium_double_axe": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:aeternium_double_axe"
+      "result": "rogues:aeternium_double_axe",
+      "ingredients": [
+        "betterend:aeternium_ingot",
+        "#c:wood_sticks|minecraft:stick"
+      ]
     },
     "aeternium_glaive": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:aeternium_glaive"
+      "result": "rogues:aeternium_glaive",
+      "ingredients": [
+        "betterend:aeternium_ingot",
+        "#c:wood_sticks|minecraft:stick"
+      ]
     },
     "aeternium_sickle": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:aeternium_sickle"
+      "result": "rogues:aeternium_sickle",
+      "ingredients": [
+        "betterend:aeternium_ingot",
+        "#c:wood_sticks|minecraft:stick"
+      ]
     },
     "arms_workbench": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:arms_workbench"
+      "result": "rogues:arms_workbench",
+      "ingredients": [
+        "minecraft:paper",
+        "minecraft:iron_ingot",
+        "#minecraft:wool",
+        "#minecraft:planks"
+      ]
     },
     "assassin_armor_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:assassin_armor_chest"
+      "result": "rogues:assassin_armor_chest",
+      "ingredients": [
+        "minecraft:ink_sac",
+        "minecraft:rabbit_hide",
+        "minecraft:gold_ingot"
+      ]
     },
     "assassin_armor_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:assassin_armor_feet"
+      "result": "rogues:assassin_armor_feet",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:ink_sac",
+        "minecraft:rabbit_hide"
+      ]
     },
     "assassin_armor_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:assassin_armor_head"
+      "result": "rogues:assassin_armor_head",
+      "ingredients": [
+        "minecraft:ink_sac",
+        "minecraft:gold_ingot",
+        "minecraft:rabbit_hide"
+      ]
     },
     "assassin_armor_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:assassin_armor_legs"
+      "result": "rogues:assassin_armor_legs",
+      "ingredients": [
+        "minecraft:ink_sac",
+        "minecraft:gold_ingot",
+        "minecraft:rabbit_hide"
+      ]
     },
     "berserker_armor_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:berserker_armor_chest"
+      "result": "rogues:berserker_armor_chest",
+      "ingredients": [
+        "minecraft:netherite_scrap",
+        "minecraft:chain",
+        "minecraft:leather"
+      ]
     },
     "berserker_armor_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:berserker_armor_feet"
+      "result": "rogues:berserker_armor_feet",
+      "ingredients": [
+        "minecraft:netherite_scrap",
+        "minecraft:chain"
+      ]
     },
     "berserker_armor_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:berserker_armor_head"
+      "result": "rogues:berserker_armor_head",
+      "ingredients": [
+        "minecraft:goat_horn",
+        "minecraft:netherite_scrap",
+        "minecraft:chain"
+      ]
     },
     "berserker_armor_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:berserker_armor_legs"
+      "result": "rogues:berserker_armor_legs",
+      "ingredients": [
+        "minecraft:chain",
+        "minecraft:netherite_scrap"
+      ]
     },
     "chain_from_blasting_berserker_armor_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:chain"
+      "result": "minecraft:chain",
+      "ingredients": [
+        "rogues:berserker_armor_chest"
+      ]
     },
     "chain_from_blasting_berserker_armor_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:chain"
+      "result": "minecraft:chain",
+      "ingredients": [
+        "rogues:berserker_armor_feet"
+      ]
     },
     "chain_from_blasting_berserker_armor_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:chain"
+      "result": "minecraft:chain",
+      "ingredients": [
+        "rogues:berserker_armor_head"
+      ]
     },
     "chain_from_blasting_berserker_armor_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:chain"
+      "result": "minecraft:chain",
+      "ingredients": [
+        "rogues:berserker_armor_legs"
+      ]
     },
     "chain_from_smelting_berserker_armor_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:chain"
+      "result": "minecraft:chain",
+      "ingredients": [
+        "rogues:berserker_armor_chest"
+      ]
     },
     "chain_from_smelting_berserker_armor_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:chain"
+      "result": "minecraft:chain",
+      "ingredients": [
+        "rogues:berserker_armor_feet"
+      ]
     },
     "chain_from_smelting_berserker_armor_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:chain"
+      "result": "minecraft:chain",
+      "ingredients": [
+        "rogues:berserker_armor_head"
+      ]
     },
     "chain_from_smelting_berserker_armor_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:chain"
+      "result": "minecraft:chain",
+      "ingredients": [
+        "rogues:berserker_armor_legs"
+      ]
     },
     "diamond_dagger": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:diamond_dagger"
+      "result": "rogues:diamond_dagger",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:stick"
+      ]
     },
     "diamond_double_axe": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:diamond_double_axe"
+      "result": "rogues:diamond_double_axe",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:stick"
+      ]
     },
     "diamond_glaive": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:diamond_glaive"
+      "result": "rogues:diamond_glaive",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:stick"
+      ]
     },
     "diamond_sickle": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:diamond_sickle"
+      "result": "rogues:diamond_sickle",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:stick"
+      ]
     },
     "flint_dagger": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:flint_dagger"
+      "result": "rogues:flint_dagger",
+      "ingredients": [
+        "minecraft:flint",
+        "minecraft:stick"
+      ]
     },
     "flint_from_blasting_flint_dagger": {
       "type": "minecraft:blasting",
-      "result": "minecraft:flint"
+      "result": "minecraft:flint",
+      "ingredients": [
+        "rogues:flint_dagger"
+      ]
     },
     "flint_from_smelting_flint_dagger": {
       "type": "minecraft:smelting",
-      "result": "minecraft:flint"
+      "result": "minecraft:flint",
+      "ingredients": [
+        "rogues:flint_dagger"
+      ]
     },
     "gold_nugget_from_blasting_golden_dagger": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "rogues:golden_dagger"
+      ]
     },
     "gold_nugget_from_blasting_golden_double_axe": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "rogues:golden_double_axe"
+      ]
     },
     "gold_nugget_from_blasting_golden_glaive": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "rogues:golden_glaive"
+      ]
     },
     "gold_nugget_from_blasting_golden_sickle": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "rogues:golden_sickle"
+      ]
     },
     "gold_nugget_from_smelting_golden_dagger": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "rogues:golden_dagger"
+      ]
     },
     "gold_nugget_from_smelting_golden_double_axe": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "rogues:golden_double_axe"
+      ]
     },
     "gold_nugget_from_smelting_golden_glaive": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "rogues:golden_glaive"
+      ]
     },
     "gold_nugget_from_smelting_golden_sickle": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "rogues:golden_sickle"
+      ]
     },
     "golden_dagger": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:golden_dagger"
+      "result": "rogues:golden_dagger",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:stick"
+      ]
     },
     "golden_double_axe": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:golden_double_axe"
+      "result": "rogues:golden_double_axe",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:stick"
+      ]
     },
     "golden_glaive": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:golden_glaive"
+      "result": "rogues:golden_glaive",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:stick"
+      ]
     },
     "golden_sickle": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:golden_sickle"
+      "result": "rogues:golden_sickle",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:stick"
+      ]
     },
     "iron_dagger": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:iron_dagger"
+      "result": "rogues:iron_dagger",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:stick"
+      ]
     },
     "iron_double_axe": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:iron_double_axe"
+      "result": "rogues:iron_double_axe",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:stick"
+      ]
     },
     "iron_glaive": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:iron_glaive"
+      "result": "rogues:iron_glaive",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:stick"
+      ]
     },
     "iron_nugget_from_blasting_iron_dagger": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:iron_dagger"
+      ]
     },
     "iron_nugget_from_blasting_iron_double_axe": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:iron_double_axe"
+      ]
     },
     "iron_nugget_from_blasting_iron_glaive": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:iron_glaive"
+      ]
     },
     "iron_nugget_from_blasting_iron_sickle": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:iron_sickle"
+      ]
     },
     "iron_nugget_from_blasting_warrior_armor_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:warrior_armor_chest"
+      ]
     },
     "iron_nugget_from_blasting_warrior_armor_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:warrior_armor_feet"
+      ]
     },
     "iron_nugget_from_blasting_warrior_armor_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:warrior_armor_head"
+      ]
     },
     "iron_nugget_from_blasting_warrior_armor_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:warrior_armor_legs"
+      ]
     },
     "iron_nugget_from_smelting_iron_dagger": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:iron_dagger"
+      ]
     },
     "iron_nugget_from_smelting_iron_double_axe": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:iron_double_axe"
+      ]
     },
     "iron_nugget_from_smelting_iron_glaive": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:iron_glaive"
+      ]
     },
     "iron_nugget_from_smelting_iron_sickle": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:iron_sickle"
+      ]
     },
     "iron_nugget_from_smelting_warrior_armor_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:warrior_armor_chest"
+      ]
     },
     "iron_nugget_from_smelting_warrior_armor_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:warrior_armor_feet"
+      ]
     },
     "iron_nugget_from_smelting_warrior_armor_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:warrior_armor_head"
+      ]
     },
     "iron_nugget_from_smelting_warrior_armor_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "rogues:warrior_armor_legs"
+      ]
     },
     "iron_sickle": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:iron_sickle"
+      "result": "rogues:iron_sickle",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:stick"
+      ]
     },
     "leather_from_blasting_rogue_armor_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:leather"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "rogues:rogue_armor_chest"
+      ]
     },
     "leather_from_blasting_rogue_armor_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:leather"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "rogues:rogue_armor_feet"
+      ]
     },
     "leather_from_blasting_rogue_armor_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:leather"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "rogues:rogue_armor_head"
+      ]
     },
     "leather_from_blasting_rogue_armor_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:leather"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "rogues:rogue_armor_legs"
+      ]
     },
     "leather_from_smelting_rogue_armor_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:leather"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "rogues:rogue_armor_chest"
+      ]
     },
     "leather_from_smelting_rogue_armor_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:leather"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "rogues:rogue_armor_feet"
+      ]
     },
     "leather_from_smelting_rogue_armor_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:leather"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "rogues:rogue_armor_head"
+      ]
     },
     "leather_from_smelting_rogue_armor_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:leather"
+      "result": "minecraft:leather",
+      "ingredients": [
+        "rogues:rogue_armor_legs"
+      ]
     },
     "netherite_assassin_armor_chest_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_assassin_armor_chest"
+      "result": "rogues:netherite_assassin_armor_chest",
+      "ingredients": []
     },
     "netherite_assassin_armor_feet_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_assassin_armor_feet"
+      "result": "rogues:netherite_assassin_armor_feet",
+      "ingredients": []
     },
     "netherite_assassin_armor_head_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_assassin_armor_head"
+      "result": "rogues:netherite_assassin_armor_head",
+      "ingredients": []
     },
     "netherite_assassin_armor_legs_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_assassin_armor_legs"
+      "result": "rogues:netherite_assassin_armor_legs",
+      "ingredients": []
     },
     "netherite_berserker_armor_chest_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_berserker_armor_chest"
+      "result": "rogues:netherite_berserker_armor_chest",
+      "ingredients": []
     },
     "netherite_berserker_armor_feet_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_berserker_armor_feet"
+      "result": "rogues:netherite_berserker_armor_feet",
+      "ingredients": []
     },
     "netherite_berserker_armor_head_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_berserker_armor_head"
+      "result": "rogues:netherite_berserker_armor_head",
+      "ingredients": []
     },
     "netherite_berserker_armor_legs_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_berserker_armor_legs"
+      "result": "rogues:netherite_berserker_armor_legs",
+      "ingredients": []
     },
     "netherite_dagger_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_dagger"
+      "result": "rogues:netherite_dagger",
+      "ingredients": []
     },
     "netherite_double_axe_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_double_axe"
+      "result": "rogues:netherite_double_axe",
+      "ingredients": []
     },
     "netherite_glaive_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_glaive"
+      "result": "rogues:netherite_glaive",
+      "ingredients": []
     },
     "netherite_scrap_from_blasting_netherite_assassin_armor_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_assassin_armor_chest"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_assassin_armor_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_assassin_armor_feet"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_assassin_armor_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_assassin_armor_head"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_assassin_armor_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_assassin_armor_legs"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_berserker_armor_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_berserker_armor_chest"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_berserker_armor_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_berserker_armor_feet"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_berserker_armor_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_berserker_armor_head"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_berserker_armor_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_berserker_armor_legs"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_dagger": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_dagger"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_double_axe": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_double_axe"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_glaive": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_glaive"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_sickle": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_sickle"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_assassin_armor_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_assassin_armor_chest"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_assassin_armor_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_assassin_armor_feet"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_assassin_armor_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_assassin_armor_head"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_assassin_armor_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_assassin_armor_legs"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_berserker_armor_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_berserker_armor_chest"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_berserker_armor_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_berserker_armor_feet"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_berserker_armor_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_berserker_armor_head"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_berserker_armor_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_berserker_armor_legs"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_dagger": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_dagger"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_double_axe": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_double_axe"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_glaive": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_glaive"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_sickle": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "rogues:netherite_sickle"
+      ]
     },
     "netherite_sickle_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:netherite_sickle"
+      "result": "rogues:netherite_sickle",
+      "ingredients": []
     },
     "rabbit_hide_from_blasting_assassin_armor_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:rabbit_hide"
+      "result": "minecraft:rabbit_hide",
+      "ingredients": [
+        "rogues:assassin_armor_chest"
+      ]
     },
     "rabbit_hide_from_blasting_assassin_armor_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:rabbit_hide"
+      "result": "minecraft:rabbit_hide",
+      "ingredients": [
+        "rogues:assassin_armor_feet"
+      ]
     },
     "rabbit_hide_from_blasting_assassin_armor_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:rabbit_hide"
+      "result": "minecraft:rabbit_hide",
+      "ingredients": [
+        "rogues:assassin_armor_head"
+      ]
     },
     "rabbit_hide_from_blasting_assassin_armor_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:rabbit_hide"
+      "result": "minecraft:rabbit_hide",
+      "ingredients": [
+        "rogues:assassin_armor_legs"
+      ]
     },
     "rabbit_hide_from_smelting_assassin_armor_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:rabbit_hide"
+      "result": "minecraft:rabbit_hide",
+      "ingredients": [
+        "rogues:assassin_armor_chest"
+      ]
     },
     "rabbit_hide_from_smelting_assassin_armor_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:rabbit_hide"
+      "result": "minecraft:rabbit_hide",
+      "ingredients": [
+        "rogues:assassin_armor_feet"
+      ]
     },
     "rabbit_hide_from_smelting_assassin_armor_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:rabbit_hide"
+      "result": "minecraft:rabbit_hide",
+      "ingredients": [
+        "rogues:assassin_armor_head"
+      ]
     },
     "rabbit_hide_from_smelting_assassin_armor_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:rabbit_hide"
+      "result": "minecraft:rabbit_hide",
+      "ingredients": [
+        "rogues:assassin_armor_legs"
+      ]
     },
     "rogue_armor_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:rogue_armor_chest"
+      "result": "rogues:rogue_armor_chest",
+      "ingredients": [
+        "#minecraft:wool",
+        "minecraft:leather"
+      ]
     },
     "rogue_armor_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:rogue_armor_feet"
+      "result": "rogues:rogue_armor_feet",
+      "ingredients": [
+        "#minecraft:wool",
+        "minecraft:leather"
+      ]
     },
     "rogue_armor_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:rogue_armor_head"
+      "result": "rogues:rogue_armor_head",
+      "ingredients": [
+        "#minecraft:wool",
+        "minecraft:red_dye"
+      ]
     },
     "rogue_armor_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:rogue_armor_legs"
+      "result": "rogues:rogue_armor_legs",
+      "ingredients": [
+        "#minecraft:wool",
+        "minecraft:leather"
+      ]
     },
     "ruby_dagger_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:ruby_dagger"
+      "result": "rogues:ruby_dagger",
+      "ingredients": []
     },
     "ruby_double_axe_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:ruby_double_axe"
+      "result": "rogues:ruby_double_axe",
+      "ingredients": []
     },
     "ruby_glaive_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:ruby_glaive"
+      "result": "rogues:ruby_glaive",
+      "ingredients": []
     },
     "ruby_sickle_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "rogues:ruby_sickle"
+      "result": "rogues:ruby_sickle",
+      "ingredients": []
     },
     "stone_double_axe": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:stone_double_axe"
+      "result": "rogues:stone_double_axe",
+      "ingredients": [
+        "#minecraft:stone_tool_materials",
+        "minecraft:stick"
+      ]
     },
     "warrior_armor_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:warrior_armor_chest"
+      "result": "rogues:warrior_armor_chest",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:iron_ingot",
+        "minecraft:leather"
+      ]
     },
     "warrior_armor_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:warrior_armor_feet"
+      "result": "rogues:warrior_armor_feet",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:leather"
+      ]
     },
     "warrior_armor_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:warrior_armor_head"
+      "result": "rogues:warrior_armor_head",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:leather"
+      ]
     },
     "warrior_armor_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "rogues:warrior_armor_legs"
+      "result": "rogues:warrior_armor_legs",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:leather"
+      ]
     }
   },
   "summary": {

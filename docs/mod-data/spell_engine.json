@@ -21,7 +21,13 @@
   "recipes": {
     "spell_binding_table": {
       "type": "minecraft:crafting_shaped",
-      "result": "spell_engine:spell_binding"
+      "result": "spell_engine:spell_binding",
+      "ingredients": [
+        "minecraft:book",
+        "minecraft:amethyst_shard",
+        "minecraft:gold_ingot",
+        "minecraft:polished_diorite"
+      ]
     }
   },
   "summary": {

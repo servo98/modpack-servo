@@ -30,110 +30,243 @@
   "entities": {},
   "recipes_count": 25,
   "recipe_types": [
-    "minecraft:crafting_shaped",
+    "minecraft:crafting_shapeless",
     "minecraft:smithing_transform",
-    "minecraft:crafting_shapeless"
+    "minecraft:crafting_shaped"
   ],
   "recipes": {
     "adv_wireless_terminal": {
       "type": "minecraft:smithing_transform",
-      "result": "toms_storage:adv_wireless_terminal"
+      "result": "toms_storage:adv_wireless_terminal",
+      "ingredients": []
     },
     "basic_inventory_hopper": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:basic_inventory_hopper"
+      "result": "toms_storage:basic_inventory_hopper",
+      "ingredients": [
+        "#minecraft:planks",
+        "toms_storage:inventory_cable",
+        "minecraft:hopper"
+      ]
     },
     "crafting_terminal": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:crafting_terminal"
+      "result": "toms_storage:crafting_terminal",
+      "ingredients": [
+        "minecraft:crafting_table",
+        "#c:gems/diamond",
+        "toms_storage:storage_terminal"
+      ]
     },
     "filing_cabinet": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:filing_cabinet"
+      "result": "toms_storage:filing_cabinet",
+      "ingredients": [
+        "minecraft:smooth_stone",
+        "#c:chests",
+        "#c:ingots/iron"
+      ]
     },
     "inventory_cable": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:inventory_cable x6"
+      "result": "toms_storage:inventory_cable x6",
+      "ingredients": [
+        "#c:rods/wooden",
+        "#minecraft:planks",
+        "#minecraft:trapdoors",
+        "#c:chests"
+      ]
     },
     "inventory_cable_connector": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:inventory_cable_connector"
+      "result": "toms_storage:inventory_cable_connector",
+      "ingredients": [
+        "#c:gems/quartz",
+        "#minecraft:planks",
+        "toms_storage:inventory_cable",
+        "#c:chests",
+        "#c:ender_pearls",
+        "#c:gems/diamond"
+      ]
     },
     "inventory_cable_connector_framed": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:inventory_cable_connector_framed"
+      "result": "toms_storage:inventory_cable_connector_framed",
+      "ingredients": [
+        "#c:rods/wooden",
+        "toms_storage:inventory_cable_connector"
+      ]
     },
     "inventory_cable_connector_framed_clean": {
       "type": "minecraft:crafting_shapeless",
-      "result": "toms_storage:inventory_cable_connector_framed"
+      "result": "toms_storage:inventory_cable_connector_framed",
+      "ingredients": [
+        "toms_storage:inventory_cable_connector_framed",
+        "minecraft:water_bucket"
+      ]
     },
     "inventory_cable_framed": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:inventory_cable_framed"
+      "result": "toms_storage:inventory_cable_framed",
+      "ingredients": [
+        "#c:rods/wooden",
+        "toms_storage:inventory_cable"
+      ]
     },
     "inventory_cable_framed_clean": {
       "type": "minecraft:crafting_shapeless",
-      "result": "toms_storage:inventory_cable_framed"
+      "result": "toms_storage:inventory_cable_framed",
+      "ingredients": [
+        "toms_storage:inventory_cable_framed",
+        "minecraft:water_bucket"
+      ]
     },
     "inventory_configurator": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:inventory_configurator"
+      "result": "toms_storage:inventory_configurator",
+      "ingredients": [
+        "#toms_storage:trims",
+        "#c:rods/wooden"
+      ]
     },
     "inventory_connector": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:inventory_connector"
+      "result": "toms_storage:inventory_connector",
+      "ingredients": [
+        "#minecraft:planks",
+        "minecraft:comparator",
+        "#c:chests",
+        "#c:gems/diamond",
+        "#c:ender_pearls"
+      ]
     },
     "inventory_interface": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:inventory_interface"
+      "result": "toms_storage:inventory_interface",
+      "ingredients": [
+        "#minecraft:planks",
+        "#minecraft:trapdoors",
+        "#c:chests",
+        "#c:ender_pearls"
+      ]
     },
     "inventory_proxy": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:inventory_proxy"
+      "result": "toms_storage:inventory_proxy",
+      "ingredients": [
+        "#minecraft:planks",
+        "#minecraft:trapdoors",
+        "#c:chests"
+      ]
     },
     "inventory_proxy_clean": {
       "type": "minecraft:crafting_shapeless",
-      "result": "toms_storage:inventory_proxy"
+      "result": "toms_storage:inventory_proxy",
+      "ingredients": [
+        "toms_storage:inventory_proxy",
+        "minecraft:water_bucket"
+      ]
     },
     "item_filter": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:item_filter"
+      "result": "toms_storage:item_filter",
+      "ingredients": [
+        "#c:dusts/redstone",
+        "#c:rods/wooden",
+        "#minecraft:wool"
+      ]
     },
     "level_emitter": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:level_emitter"
+      "result": "toms_storage:level_emitter",
+      "ingredients": [
+        "minecraft:redstone_torch",
+        "#minecraft:planks",
+        "toms_storage:inventory_cable",
+        "minecraft:comparator"
+      ]
     },
     "open_crate": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:open_crate"
+      "result": "toms_storage:open_crate",
+      "ingredients": [
+        "#minecraft:planks",
+        "#c:rods/wooden",
+        "#c:chests",
+        "#minecraft:trapdoors"
+      ]
     },
     "paint_kit": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:paint_kit"
+      "result": "toms_storage:paint_kit",
+      "ingredients": [
+        "#c:dyes/red",
+        "#c:dyes/green",
+        "#c:dyes/blue",
+        "#c:dyes/black",
+        "minecraft:bucket",
+        "#minecraft:wool",
+        "minecraft:water_bucket",
+        "#c:rods/wooden"
+      ]
     },
     "poly_item_filter": {
       "type": "minecraft:crafting_shapeless",
-      "result": "toms_storage:polymorphic_item_filter"
+      "result": "toms_storage:polymorphic_item_filter",
+      "ingredients": [
+        "toms_storage:item_filter",
+        "minecraft:comparator",
+        "#c:gems/diamond"
+      ]
     },
     "storage_terminal": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:storage_terminal"
+      "result": "toms_storage:storage_terminal",
+      "ingredients": [
+        "#minecraft:planks",
+        "minecraft:comparator",
+        "#c:chests",
+        "#c:dusts/glowstone",
+        "#c:glass_blocks/colorless"
+      ]
     },
     "tag_item_filter": {
       "type": "minecraft:crafting_shapeless",
-      "result": "toms_storage:tag_item_filter"
+      "result": "toms_storage:tag_item_filter",
+      "ingredients": [
+        "toms_storage:item_filter",
+        "minecraft:comparator",
+        "minecraft:name_tag"
+      ]
     },
     "trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:trim x2"
+      "result": "toms_storage:trim x2",
+      "ingredients": [
+        "#minecraft:planks",
+        "#c:rods/wooden",
+        "#c:chests"
+      ]
     },
     "trim_clean": {
       "type": "minecraft:crafting_shapeless",
-      "result": "toms_storage:trim"
+      "result": "toms_storage:trim",
+      "ingredients": [
+        "toms_storage:painted_trim",
+        "minecraft:water_bucket"
+      ]
     },
     "wireless_terminal": {
       "type": "minecraft:crafting_shaped",
-      "result": "toms_storage:wireless_terminal"
+      "result": "toms_storage:wireless_terminal",
+      "ingredients": [
+        "#minecraft:planks",
+        "minecraft:comparator",
+        "minecraft:spyglass",
+        "#c:dusts/glowstone",
+        "#c:glass_blocks/colorless",
+        "#c:ender_pearls"
+      ]
     }
   },
   "summary": {
