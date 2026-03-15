@@ -12,6 +12,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
@@ -107,6 +108,9 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
             level.setBlock(worldPosition, getBlockState()
                     .setValue(DungeonPedestalBlock.STATE, DungeonPedestalBlock.PedestalState.ACTIVE), 3);
 
+            // Place beam blocks above pedestal for re-entry
+            placeBeam();
+
             leader.sendSystemMessage(Component.translatable("message.servo_dungeons.dungeon_entered"));
         } else {
             cancelRitual();
@@ -143,6 +147,7 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
         this.activeTier = null;
 
         if (level != null) {
+            removeBeam();
             level.setBlock(worldPosition, getBlockState()
                     .setValue(DungeonPedestalBlock.STATE, DungeonPedestalBlock.PedestalState.INACTIVE), 3);
             setRunesActive(false);
@@ -178,6 +183,36 @@ public class DungeonPedestalBlockEntity extends BlockEntity {
             BlockState runeState = level.getBlockState(runePos);
             if (runeState.getBlock() instanceof DungeonRuneBlock) {
                 level.setBlock(runePos, runeState.setValue(DungeonRuneBlock.ACTIVE, active), 3);
+            }
+        }
+    }
+
+    // ==================== Beam Management ====================
+
+    /**
+     * Place beam blocks (Y+1 to Y+4) above the pedestal for dungeon entry.
+     */
+    private void placeBeam() {
+        if (level == null) return;
+        for (int y = 1; y <= 4; y++) {
+            BlockPos beamPos = worldPosition.above(y);
+            level.setBlock(beamPos, DungeonRegistry.BEAM_BLOCK.get().defaultBlockState(), 3);
+            BlockEntity be = level.getBlockEntity(beamPos);
+            if (be instanceof DungeonBeamBlockEntity beamBE) {
+                beamBE.setAltarPos(worldPosition);
+            }
+        }
+    }
+
+    /**
+     * Remove beam blocks above the pedestal when the dungeon ends.
+     */
+    private void removeBeam() {
+        if (level == null) return;
+        for (int y = 1; y <= 4; y++) {
+            BlockPos beamPos = worldPosition.above(y);
+            if (level.getBlockState(beamPos).getBlock() instanceof DungeonBeamBlock) {
+                level.setBlock(beamPos, Blocks.AIR.defaultBlockState(), 3);
             }
         }
     }

@@ -1,5 +1,7 @@
 package com.servo.dungeons;
 
+import com.servo.dungeons.block.DungeonBeamBlock;
+import com.servo.dungeons.block.DungeonBeamBlockEntity;
 import com.servo.dungeons.block.DungeonPedestalBlock;
 import com.servo.dungeons.block.DungeonPedestalBlockEntity;
 import com.servo.dungeons.block.DungeonRuneBlock;
@@ -82,6 +84,19 @@ public class DungeonRegistry {
                             .pushReaction(PushReaction.BLOCK)
             ));
 
+    public static final DeferredHolder<Block, DungeonBeamBlock> BEAM_BLOCK =
+            BLOCKS.register("dungeon_beam", () -> new DungeonBeamBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.NONE)
+                            .strength(-1.0f, 3600000.0f)
+                            .sound(SoundType.EMPTY)
+                            .noOcclusion()
+                            .noCollission()
+                            .lightLevel(state -> 10)
+                            .pushReaction(PushReaction.BLOCK)
+                            .noLootTable()
+            ));
+
     // === Block Items ===
     public static final DeferredHolder<Item, BlockItem> PEDESTAL_ITEM =
             ITEMS.register("dungeon_pedestal", () -> new BlockItem(
@@ -111,6 +126,13 @@ public class DungeonRegistry {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DungeonPedestalBlockEntity>> PEDESTAL_BE =
             BLOCK_ENTITIES.register("dungeon_pedestal", () ->
                     BlockEntityType.Builder.of(DungeonPedestalBlockEntity::new, PEDESTAL_BLOCK.get())
+                            .build(null)
+            );
+
+    @SuppressWarnings("DataFlowIssue")
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DungeonBeamBlockEntity>> BEAM_BE =
+            BLOCK_ENTITIES.register("dungeon_beam", () ->
+                    BlockEntityType.Builder.of(DungeonBeamBlockEntity::new, BEAM_BLOCK.get())
                             .build(null)
             );
 

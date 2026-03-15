@@ -2,6 +2,7 @@
   "itemGroup.servo_dungeons": "Servo Dungeons",
   "block.servo_dungeons.dungeon_pedestal": "Pedestal de Dungeon",
   "block.servo_dungeons.dungeon_rune": "Runa de Dungeon",
+  "block.servo_dungeons.dungeon_beam": "Beam de Dungeon",
   "block.servo_dungeons.exit_portal": "Portal de Salida",
   "item.servo_dungeons.dungeon_key_basic": "Llave de Dungeon Basica",
   "item.servo_dungeons.dungeon_key_advanced": "Llave de Dungeon Avanzada",
@@ -17,6 +18,7 @@
   "message.servo_dungeons.dungeon_entered": "Entrando al dungeon...",
   "message.servo_dungeons.dungeon_active": "Ya hay un dungeon en progreso.",
   "message.servo_dungeons.invalid_altar": "El altar no esta formado correctamente. Coloca 4 Runas de Dungeon en patron de cruz.",
+  "message.servo_dungeons.dungeon_active_use_beam": "Hay un dungeon activo. Camina hacia el beam para entrar.",
   "message.servo_dungeons.dungeon_abandoned": "El dungeon ha sido abandonado.",
   "message.servo_dungeons.dungeon_exit": "Regresando a la superficie..."
 }

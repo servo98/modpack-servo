@@ -3,13 +3,11 @@ package com.servo.dungeons.block;
 import com.mojang.serialization.MapCodec;
 import com.servo.dungeons.DungeonRegistry;
 import com.servo.dungeons.DungeonTier;
-import com.servo.dungeons.ServoDungeons;
 import com.servo.dungeons.dungeon.DungeonManager;
 import com.servo.dungeons.item.DungeonKeyItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
@@ -93,15 +91,11 @@ public class DungeonPedestalBlock extends BaseEntityBlock {
 
         ServerPlayer serverPlayer = (ServerPlayer) player;
 
-        // If a dungeon is already active
+        // If a dungeon is already active, do nothing — beam handles entry
         if (pedestal.isActive()) {
-            // Re-entry for team members
-            DungeonManager manager = DungeonManager.getInstance();
-            if (manager != null && manager.isActive()) {
-                manager.reenterDungeon(serverPlayer);
-                return ItemInteractionResult.SUCCESS;
-            }
-            return ItemInteractionResult.FAIL;
+            serverPlayer.sendSystemMessage(
+                    Component.translatable("message.servo_dungeons.dungeon_active_use_beam"));
+            return ItemInteractionResult.SUCCESS;
         }
 
         // If player holds a dungeon key and no ritual in progress
