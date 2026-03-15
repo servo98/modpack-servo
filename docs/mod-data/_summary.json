@@ -71,29 +71,11 @@
     "total_entities": 2,
     "total_recipes": 0
   },
-  "mcwbridges": {
-    "total_items": 1,
-    "total_blocks": 151,
-    "total_entities": 0,
-    "total_recipes": 254
-  },
   "mcwfurnitures": {
     "total_items": 2,
     "total_blocks": 652,
     "total_entities": 0,
     "total_recipes": 654
-  },
-  "mcwroofs": {
-    "total_items": 2,
-    "total_blocks": 605,
-    "total_entities": 0,
-    "total_recipes": 607
-  },
-  "mcwtrpdoors": {
-    "total_items": 12,
-    "total_blocks": 187,
-    "total_entities": 0,
-    "total_recipes": 191
   },
   "mcwwindows": {
     "total_items": 5,
