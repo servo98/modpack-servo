@@ -128,89 +128,169 @@
   "entities": {},
   "recipes_count": 20,
   "recipe_types": [
-    "minecraft:crafting_shaped",
-    "minecraft:crafting_shapeless"
+    "minecraft:crafting_shapeless",
+    "minecraft:crafting_shaped"
   ],
   "recipes": {
     "gacha_coin": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_coin"
+      "result": "gachamachine:gacha_coin",
+      "ingredients": [
+        "minecraft:emerald"
+      ]
     },
     "gacha_coin_10": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_coin_10"
+      "result": "gachamachine:gacha_coin_10",
+      "ingredients": [
+        "gachamachine:gacha_coin",
+        "minecraft:black_dye"
+      ]
     },
     "gacha_coin_2": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_coin_2"
+      "result": "gachamachine:gacha_coin_2",
+      "ingredients": [
+        "gachamachine:gacha_coin",
+        "minecraft:red_dye"
+      ]
     },
     "gacha_coin_3": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_coin_3"
+      "result": "gachamachine:gacha_coin_3",
+      "ingredients": [
+        "gachamachine:gacha_coin",
+        "minecraft:orange_dye"
+      ]
     },
     "gacha_coin_4": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_coin_4"
+      "result": "gachamachine:gacha_coin_4",
+      "ingredients": [
+        "gachamachine:gacha_coin",
+        "minecraft:yellow_dye"
+      ]
     },
     "gacha_coin_5": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_coin_5"
+      "result": "gachamachine:gacha_coin_5",
+      "ingredients": [
+        "gachamachine:gacha_coin",
+        "minecraft:green_dye"
+      ]
     },
     "gacha_coin_6": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_coin_6"
+      "result": "gachamachine:gacha_coin_6",
+      "ingredients": [
+        "gachamachine:gacha_coin",
+        "minecraft:blue_dye"
+      ]
     },
     "gacha_coin_7": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_coin_7"
+      "result": "gachamachine:gacha_coin_7",
+      "ingredients": [
+        "gachamachine:gacha_coin",
+        "minecraft:purple_dye"
+      ]
     },
     "gacha_coin_8": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_coin_8"
+      "result": "gachamachine:gacha_coin_8",
+      "ingredients": [
+        "gachamachine:gacha_coin",
+        "minecraft:pink_dye"
+      ]
     },
     "gacha_coin_9": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_coin_9"
+      "result": "gachamachine:gacha_coin_9",
+      "ingredients": [
+        "gachamachine:gacha_coin",
+        "minecraft:white_dye"
+      ]
     },
     "gacha_machine": {
       "type": "minecraft:crafting_shaped",
-      "result": "gachamachine:gacha_machine"
+      "result": "gachamachine:gacha_machine",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:glass",
+        "minecraft:dispenser"
+      ]
     },
     "gacha_machine_10": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_machine_10"
+      "result": "gachamachine:gacha_machine_10",
+      "ingredients": [
+        "gachamachine:gacha_machine",
+        "minecraft:black_dye"
+      ]
     },
     "gacha_machine_2": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_machine_2"
+      "result": "gachamachine:gacha_machine_2",
+      "ingredients": [
+        "gachamachine:gacha_machine",
+        "minecraft:red_dye"
+      ]
     },
     "gacha_machine_3": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_machine_3"
+      "result": "gachamachine:gacha_machine_3",
+      "ingredients": [
+        "gachamachine:gacha_machine",
+        "minecraft:orange_dye"
+      ]
     },
     "gacha_machine_4": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_machine_4"
+      "result": "gachamachine:gacha_machine_4",
+      "ingredients": [
+        "gachamachine:gacha_machine",
+        "minecraft:yellow_dye"
+      ]
     },
     "gacha_machine_5": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_machine_5"
+      "result": "gachamachine:gacha_machine_5",
+      "ingredients": [
+        "gachamachine:gacha_machine",
+        "minecraft:green_dye"
+      ]
     },
     "gacha_machine_6": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_machine_6"
+      "result": "gachamachine:gacha_machine_6",
+      "ingredients": [
+        "gachamachine:gacha_machine",
+        "minecraft:blue_dye"
+      ]
     },
     "gacha_machine_7": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_machine_7"
+      "result": "gachamachine:gacha_machine_7",
+      "ingredients": [
+        "gachamachine:gacha_machine",
+        "minecraft:purple_dye"
+      ]
     },
     "gacha_machine_8": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_machine_8"
+      "result": "gachamachine:gacha_machine_8",
+      "ingredients": [
+        "gachamachine:gacha_machine",
+        "minecraft:pink_dye"
+      ]
     },
     "gacha_machine_9": {
       "type": "minecraft:crafting_shapeless",
-      "result": "gachamachine:gacha_machine_9"
+      "result": "gachamachine:gacha_machine_9",
+      "ingredients": [
+        "gachamachine:gacha_machine",
+        "minecraft:white_dye"
+      ]
     }
   },
   "summary": {

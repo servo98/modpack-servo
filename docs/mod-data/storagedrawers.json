@@ -131,518 +131,1044 @@
   "entities": {},
   "recipes_count": 126,
   "recipe_types": [
+    "storagedrawers:keyring",
+    "storagedrawers:add_upgrade",
+    "minecraft:crafting_shaped",
     "minecraft:crafting_shapeless",
     "storagedrawers:personal_key_cycle",
-    "storagedrawers:add_upgrade",
-    "storagedrawers:remote_group_upgrade",
-    "minecraft:crafting_shaped",
     "storagedrawers:add_detached_upgrade",
-    "storagedrawers:keyring"
+    "storagedrawers:remote_group_upgrade"
   ],
   "recipes": {
     "acacia_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:acacia_full_drawers_1"
+      "result": "storagedrawers:acacia_full_drawers_1",
+      "ingredients": [
+        "minecraft:acacia_planks",
+        "#c:chests/wooden"
+      ]
     },
     "acacia_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:acacia_full_drawers_2 x2"
+      "result": "storagedrawers:acacia_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:acacia_planks",
+        "#c:chests/wooden"
+      ]
     },
     "acacia_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:acacia_full_drawers_4 x4"
+      "result": "storagedrawers:acacia_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:acacia_planks"
+      ]
     },
     "acacia_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:acacia_half_drawers_1"
+      "result": "storagedrawers:acacia_half_drawers_1",
+      "ingredients": [
+        "minecraft:acacia_slab",
+        "#c:chests/wooden"
+      ]
     },
     "acacia_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:acacia_half_drawers_2 x2"
+      "result": "storagedrawers:acacia_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:acacia_slab",
+        "#c:chests/wooden"
+      ]
     },
     "acacia_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:acacia_half_drawers_4 x4"
+      "result": "storagedrawers:acacia_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:acacia_slab"
+      ]
     },
     "acacia_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:acacia_trim x4"
+      "result": "storagedrawers:acacia_trim x4",
+      "ingredients": [
+        "minecraft:acacia_planks",
+        "#c:rods/wooden"
+      ]
     },
     "add_detached_upgrade": {
       "type": "storagedrawers:add_detached_upgrade",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "add_upgrade": {
       "type": "storagedrawers:add_upgrade",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "balanced_fill_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:balance_fill_upgrade"
+      "result": "storagedrawers:balance_fill_upgrade",
+      "ingredients": [
+        "#c:ingots/gold",
+        "minecraft:comparator",
+        "storagedrawers:upgrade_template",
+        "#c:rods/wooden"
+      ]
     },
     "bamboo_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:bamboo_full_drawers_1"
+      "result": "storagedrawers:bamboo_full_drawers_1",
+      "ingredients": [
+        "minecraft:bamboo_planks",
+        "#c:chests/wooden"
+      ]
     },
     "bamboo_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:bamboo_full_drawers_2 x2"
+      "result": "storagedrawers:bamboo_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:bamboo_planks",
+        "#c:chests/wooden"
+      ]
     },
     "bamboo_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:bamboo_full_drawers_4 x4"
+      "result": "storagedrawers:bamboo_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:bamboo_planks"
+      ]
     },
     "bamboo_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:bamboo_half_drawers_1"
+      "result": "storagedrawers:bamboo_half_drawers_1",
+      "ingredients": [
+        "minecraft:bamboo_slab",
+        "#c:chests/wooden"
+      ]
     },
     "bamboo_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:bamboo_half_drawers_2 x2"
+      "result": "storagedrawers:bamboo_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:bamboo_slab",
+        "#c:chests/wooden"
+      ]
     },
     "bamboo_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:bamboo_half_drawers_4 x4"
+      "result": "storagedrawers:bamboo_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:bamboo_slab"
+      ]
     },
     "bamboo_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:bamboo_trim x4"
+      "result": "storagedrawers:bamboo_trim x4",
+      "ingredients": [
+        "minecraft:bamboo_planks",
+        "#c:rods/wooden"
+      ]
     },
     "birch_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:birch_full_drawers_1"
+      "result": "storagedrawers:birch_full_drawers_1",
+      "ingredients": [
+        "minecraft:birch_planks",
+        "#c:chests/wooden"
+      ]
     },
     "birch_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:birch_full_drawers_2 x2"
+      "result": "storagedrawers:birch_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:birch_planks",
+        "#c:chests/wooden"
+      ]
     },
     "birch_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:birch_full_drawers_4 x4"
+      "result": "storagedrawers:birch_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:birch_planks"
+      ]
     },
     "birch_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:birch_half_drawers_1"
+      "result": "storagedrawers:birch_half_drawers_1",
+      "ingredients": [
+        "minecraft:birch_slab",
+        "#c:chests/wooden"
+      ]
     },
     "birch_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:birch_half_drawers_2 x2"
+      "result": "storagedrawers:birch_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:birch_slab",
+        "#c:chests/wooden"
+      ]
     },
     "birch_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:birch_half_drawers_4 x4"
+      "result": "storagedrawers:birch_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:birch_slab"
+      ]
     },
     "birch_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:birch_trim x4"
+      "result": "storagedrawers:birch_trim x4",
+      "ingredients": [
+        "minecraft:birch_planks",
+        "#c:rods/wooden"
+      ]
     },
     "cherry_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:cherry_full_drawers_1"
+      "result": "storagedrawers:cherry_full_drawers_1",
+      "ingredients": [
+        "minecraft:cherry_planks",
+        "#c:chests/wooden"
+      ]
     },
     "cherry_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:cherry_full_drawers_2 x2"
+      "result": "storagedrawers:cherry_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:cherry_planks",
+        "#c:chests/wooden"
+      ]
     },
     "cherry_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:cherry_full_drawers_4 x4"
+      "result": "storagedrawers:cherry_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:cherry_planks"
+      ]
     },
     "cherry_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:cherry_half_drawers_1"
+      "result": "storagedrawers:cherry_half_drawers_1",
+      "ingredients": [
+        "minecraft:cherry_slab",
+        "#c:chests/wooden"
+      ]
     },
     "cherry_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:cherry_half_drawers_2 x2"
+      "result": "storagedrawers:cherry_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:cherry_slab",
+        "#c:chests/wooden"
+      ]
     },
     "cherry_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:cherry_half_drawers_4 x4"
+      "result": "storagedrawers:cherry_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:cherry_slab"
+      ]
     },
     "cherry_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:cherry_trim x4"
+      "result": "storagedrawers:cherry_trim x4",
+      "ingredients": [
+        "minecraft:cherry_planks",
+        "#c:rods/wooden"
+      ]
     },
     "compacting_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:compacting_drawers_2"
+      "result": "storagedrawers:compacting_drawers_2",
+      "ingredients": [
+        "minecraft:stone",
+        "minecraft:piston",
+        "#storagedrawers:full_drawers",
+        "#c:ingots/iron"
+      ]
     },
     "compacting_drawers_3": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:compacting_drawers_3"
+      "result": "storagedrawers:compacting_drawers_3",
+      "ingredients": [
+        "minecraft:stone",
+        "minecraft:piston",
+        "#storagedrawers:full_drawers",
+        "#c:ingots/iron"
+      ]
     },
     "compacting_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:compacting_half_drawers_2"
+      "result": "storagedrawers:compacting_half_drawers_2",
+      "ingredients": [
+        "minecraft:stone",
+        "minecraft:piston",
+        "#storagedrawers:half_drawers",
+        "#c:ingots/iron"
+      ]
     },
     "compacting_half_drawers_3": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:compacting_half_drawers_3"
+      "result": "storagedrawers:compacting_half_drawers_3",
+      "ingredients": [
+        "minecraft:stone",
+        "minecraft:piston",
+        "#storagedrawers:half_drawers",
+        "#c:ingots/iron"
+      ]
     },
     "concealment_key": {
       "type": "minecraft:crafting_shapeless",
-      "result": "storagedrawers:shroud_key"
+      "result": "storagedrawers:shroud_key",
+      "ingredients": [
+        "storagedrawers:drawer_key",
+        "minecraft:ender_eye"
+      ]
     },
     "controller": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:controller"
+      "result": "storagedrawers:controller",
+      "ingredients": [
+        "minecraft:stone",
+        "minecraft:comparator",
+        "#storagedrawers:drawers",
+        "#c:gems/diamond"
+      ]
     },
     "controller_io": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:controller_io"
+      "result": "storagedrawers:controller_io",
+      "ingredients": [
+        "minecraft:stone",
+        "minecraft:comparator",
+        "#storagedrawers:drawers",
+        "#c:ingots/gold"
+      ]
     },
     "conversion_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:conversion_upgrade"
+      "result": "storagedrawers:conversion_upgrade",
+      "ingredients": [
+        "minecraft:lapis_lazuli",
+        "#c:rods/wooden",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "copper_storage_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:copper_storage_upgrade"
+      "result": "storagedrawers:copper_storage_upgrade",
+      "ingredients": [
+        "#c:rods/wooden",
+        "#c:ingots/copper",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "crimson_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:crimson_full_drawers_1"
+      "result": "storagedrawers:crimson_full_drawers_1",
+      "ingredients": [
+        "minecraft:crimson_planks",
+        "#c:chests/wooden"
+      ]
     },
     "crimson_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:crimson_full_drawers_2 x2"
+      "result": "storagedrawers:crimson_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:crimson_planks",
+        "#c:chests/wooden"
+      ]
     },
     "crimson_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:crimson_full_drawers_4 x4"
+      "result": "storagedrawers:crimson_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:crimson_planks"
+      ]
     },
     "crimson_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:crimson_half_drawers_1"
+      "result": "storagedrawers:crimson_half_drawers_1",
+      "ingredients": [
+        "minecraft:crimson_slab",
+        "#c:chests/wooden"
+      ]
     },
     "crimson_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:crimson_half_drawers_2 x2"
+      "result": "storagedrawers:crimson_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:crimson_slab",
+        "#c:chests/wooden"
+      ]
     },
     "crimson_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:crimson_half_drawers_4 x4"
+      "result": "storagedrawers:crimson_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:crimson_slab"
+      ]
     },
     "crimson_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:crimson_trim x4"
+      "result": "storagedrawers:crimson_trim x4",
+      "ingredients": [
+        "minecraft:crimson_planks",
+        "#c:rods/wooden"
+      ]
     },
     "dark_oak_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:dark_oak_full_drawers_1"
+      "result": "storagedrawers:dark_oak_full_drawers_1",
+      "ingredients": [
+        "minecraft:dark_oak_planks",
+        "#c:chests/wooden"
+      ]
     },
     "dark_oak_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:dark_oak_full_drawers_2 x2"
+      "result": "storagedrawers:dark_oak_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:dark_oak_planks",
+        "#c:chests/wooden"
+      ]
     },
     "dark_oak_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:dark_oak_full_drawers_4 x4"
+      "result": "storagedrawers:dark_oak_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:dark_oak_planks"
+      ]
     },
     "dark_oak_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:dark_oak_half_drawers_1"
+      "result": "storagedrawers:dark_oak_half_drawers_1",
+      "ingredients": [
+        "minecraft:dark_oak_slab",
+        "#c:chests/wooden"
+      ]
     },
     "dark_oak_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:dark_oak_half_drawers_2 x2"
+      "result": "storagedrawers:dark_oak_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:dark_oak_slab",
+        "#c:chests/wooden"
+      ]
     },
     "dark_oak_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:dark_oak_half_drawers_4 x4"
+      "result": "storagedrawers:dark_oak_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:dark_oak_slab"
+      ]
     },
     "dark_oak_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:dark_oak_trim x4"
+      "result": "storagedrawers:dark_oak_trim x4",
+      "ingredients": [
+        "minecraft:dark_oak_planks",
+        "#c:rods/wooden"
+      ]
     },
     "detached_drawer": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:detached_drawer"
+      "result": "storagedrawers:detached_drawer",
+      "ingredients": [
+        "#c:rods/wooden",
+        "#c:chests/wooden",
+        "#minecraft:wooden_slabs"
+      ]
     },
     "diamond_storage_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:diamond_storage_upgrade"
+      "result": "storagedrawers:diamond_storage_upgrade",
+      "ingredients": [
+        "#c:rods/wooden",
+        "#c:gems/diamond",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "drawer_key": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:drawer_key"
+      "result": "storagedrawers:drawer_key",
+      "ingredients": [
+        "#c:nuggets/gold",
+        "#c:ingots/gold",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "drawer_puller": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:drawer_puller"
+      "result": "storagedrawers:drawer_puller",
+      "ingredients": [
+        "#c:ingots/iron",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "emerald_storage_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:emerald_storage_upgrade"
+      "result": "storagedrawers:emerald_storage_upgrade",
+      "ingredients": [
+        "#c:rods/wooden",
+        "#c:gems/emerald",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "fill_level_upgrade": {
       "type": "minecraft:crafting_shapeless",
-      "result": "storagedrawers:fill_level_upgrade"
+      "result": "storagedrawers:fill_level_upgrade",
+      "ingredients": [
+        "storagedrawers:upgrade_template",
+        "minecraft:repeater"
+      ]
     },
     "framing_table": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:framing_table"
+      "result": "storagedrawers:framing_table",
+      "ingredients": [
+        "#storagedrawers:trim"
+      ]
     },
     "gold_storage_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:gold_storage_upgrade"
+      "result": "storagedrawers:gold_storage_upgrade",
+      "ingredients": [
+        "#c:rods/wooden",
+        "#c:ingots/gold",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "hopper_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:hopper_upgrade"
+      "result": "storagedrawers:hopper_upgrade",
+      "ingredients": [
+        "minecraft:hopper",
+        "#c:rods/wooden",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "illumination_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:illumination_upgrade x8"
+      "result": "storagedrawers:illumination_upgrade x8",
+      "ingredients": [
+        "#c:dusts/glowstone",
+        "#c:rods/wooden",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "iron_storage_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:iron_storage_upgrade"
+      "result": "storagedrawers:iron_storage_upgrade",
+      "ingredients": [
+        "#c:rods/wooden",
+        "#c:ingots/iron",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "jungle_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:jungle_full_drawers_1"
+      "result": "storagedrawers:jungle_full_drawers_1",
+      "ingredients": [
+        "minecraft:jungle_planks",
+        "#c:chests/wooden"
+      ]
     },
     "jungle_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:jungle_full_drawers_2 x2"
+      "result": "storagedrawers:jungle_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:jungle_planks",
+        "#c:chests/wooden"
+      ]
     },
     "jungle_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:jungle_full_drawers_4 x4"
+      "result": "storagedrawers:jungle_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:jungle_planks"
+      ]
     },
     "jungle_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:jungle_half_drawers_1"
+      "result": "storagedrawers:jungle_half_drawers_1",
+      "ingredients": [
+        "minecraft:jungle_slab",
+        "#c:chests/wooden"
+      ]
     },
     "jungle_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:jungle_half_drawers_2 x2"
+      "result": "storagedrawers:jungle_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:jungle_slab",
+        "#c:chests/wooden"
+      ]
     },
     "jungle_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:jungle_half_drawers_4 x4"
+      "result": "storagedrawers:jungle_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:jungle_slab"
+      ]
     },
     "jungle_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:jungle_trim x4"
+      "result": "storagedrawers:jungle_trim x4",
+      "ingredients": [
+        "minecraft:jungle_planks",
+        "#c:rods/wooden"
+      ]
     },
     "keybutton_concealment": {
       "type": "minecraft:crafting_shapeless",
-      "result": "storagedrawers:keybutton_concealment"
+      "result": "storagedrawers:keybutton_concealment",
+      "ingredients": [
+        "storagedrawers:shroud_key",
+        "minecraft:stone_button"
+      ]
     },
     "keybutton_drawer": {
       "type": "minecraft:crafting_shapeless",
-      "result": "storagedrawers:keybutton_drawer"
+      "result": "storagedrawers:keybutton_drawer",
+      "ingredients": [
+        "storagedrawers:drawer_key",
+        "minecraft:stone_button"
+      ]
     },
     "keybutton_quantify": {
       "type": "minecraft:crafting_shapeless",
-      "result": "storagedrawers:keybutton_quantify"
+      "result": "storagedrawers:keybutton_quantify",
+      "ingredients": [
+        "storagedrawers:quantify_key",
+        "minecraft:stone_button"
+      ]
     },
     "keyring": {
       "type": "storagedrawers:keyring",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "magnet_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:magnet_upgrade"
+      "result": "storagedrawers:magnet_upgrade",
+      "ingredients": [
+        "#c:ingots/copper",
+        "minecraft:iron_bars",
+        "storagedrawers:hopper_upgrade"
+      ]
     },
     "magnet_upgrade_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:magnet_upgrade_2"
+      "result": "storagedrawers:magnet_upgrade_2",
+      "ingredients": [
+        "#c:ingots/copper",
+        "minecraft:iron_bars",
+        "storagedrawers:magnet_upgrade"
+      ]
     },
     "magnet_upgrade_3": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:magnet_upgrade_3"
+      "result": "storagedrawers:magnet_upgrade_3",
+      "ingredients": [
+        "#c:ingots/copper",
+        "minecraft:iron_bars",
+        "storagedrawers:magnet_upgrade_2"
+      ]
     },
     "mangrove_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:mangrove_full_drawers_1"
+      "result": "storagedrawers:mangrove_full_drawers_1",
+      "ingredients": [
+        "minecraft:mangrove_planks",
+        "#c:chests/wooden"
+      ]
     },
     "mangrove_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:mangrove_full_drawers_2 x2"
+      "result": "storagedrawers:mangrove_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:mangrove_planks",
+        "#c:chests/wooden"
+      ]
     },
     "mangrove_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:mangrove_full_drawers_4 x4"
+      "result": "storagedrawers:mangrove_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:mangrove_planks"
+      ]
     },
     "mangrove_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:mangrove_half_drawers_1"
+      "result": "storagedrawers:mangrove_half_drawers_1",
+      "ingredients": [
+        "minecraft:mangrove_slab",
+        "#c:chests/wooden"
+      ]
     },
     "mangrove_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:mangrove_half_drawers_2 x2"
+      "result": "storagedrawers:mangrove_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:mangrove_slab",
+        "#c:chests/wooden"
+      ]
     },
     "mangrove_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:mangrove_half_drawers_4 x4"
+      "result": "storagedrawers:mangrove_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:mangrove_slab"
+      ]
     },
     "mangrove_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:mangrove_trim x4"
+      "result": "storagedrawers:mangrove_trim x4",
+      "ingredients": [
+        "minecraft:mangrove_planks",
+        "#c:rods/wooden"
+      ]
     },
     "max_redstone_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:max_redstone_upgrade"
+      "result": "storagedrawers:max_redstone_upgrade",
+      "ingredients": [
+        "#c:dusts/redstone",
+        "#c:rods/wooden",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "min_redstone_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:min_redstone_upgrade"
+      "result": "storagedrawers:min_redstone_upgrade",
+      "ingredients": [
+        "#c:rods/wooden",
+        "storagedrawers:upgrade_template",
+        "#c:dusts/redstone"
+      ]
     },
     "netherite_storage_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:netherite_storage_upgrade"
+      "result": "storagedrawers:netherite_storage_upgrade",
+      "ingredients": [
+        "#c:rods/wooden",
+        "#c:ingots/netherite",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "oak_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:oak_full_drawers_1"
+      "result": "storagedrawers:oak_full_drawers_1",
+      "ingredients": [
+        "minecraft:oak_planks",
+        "#c:chests/wooden"
+      ]
     },
     "oak_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:oak_full_drawers_2 x2"
+      "result": "storagedrawers:oak_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:oak_planks",
+        "#c:chests/wooden"
+      ]
     },
     "oak_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:oak_full_drawers_4 x4"
+      "result": "storagedrawers:oak_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:oak_planks"
+      ]
     },
     "oak_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:oak_half_drawers_1"
+      "result": "storagedrawers:oak_half_drawers_1",
+      "ingredients": [
+        "minecraft:oak_slab",
+        "#c:chests/wooden"
+      ]
     },
     "oak_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:oak_half_drawers_2 x2"
+      "result": "storagedrawers:oak_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:oak_slab",
+        "#c:chests/wooden"
+      ]
     },
     "oak_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:oak_half_drawers_4 x4"
+      "result": "storagedrawers:oak_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:oak_slab"
+      ]
     },
     "oak_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:oak_trim x4"
+      "result": "storagedrawers:oak_trim x4",
+      "ingredients": [
+        "minecraft:oak_planks",
+        "#c:rods/wooden"
+      ]
     },
     "obsidian_storage_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:obsidian_storage_upgrade"
+      "result": "storagedrawers:obsidian_storage_upgrade",
+      "ingredients": [
+        "#c:rods/wooden",
+        "minecraft:obsidian",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "one_stack_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:one_stack_upgrade"
+      "result": "storagedrawers:one_stack_upgrade",
+      "ingredients": [
+        "#c:rods/wooden",
+        "minecraft:flint",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "personal_key": {
       "type": "minecraft:crafting_shapeless",
-      "result": "storagedrawers:personal_key"
+      "result": "storagedrawers:personal_key",
+      "ingredients": [
+        "storagedrawers:drawer_key",
+        "minecraft:name_tag"
+      ]
     },
     "personal_key_cofh": {
       "type": "minecraft:crafting_shapeless",
-      "result": "storagedrawers:personal_key_cofh"
+      "result": "storagedrawers:personal_key_cofh",
+      "ingredients": [
+        "storagedrawers:personal_key",
+        "#cofh_core:crafting/locks"
+      ]
     },
     "personal_key_cycle": {
       "type": "storagedrawers:personal_key_cycle",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "portability_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:portability_upgrade"
+      "result": "storagedrawers:portability_upgrade",
+      "ingredients": [
+        "#c:rods/wooden",
+        "minecraft:shulker_shell",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "priority_key": {
       "type": "minecraft:crafting_shapeless",
-      "result": "storagedrawers:priority_key"
+      "result": "storagedrawers:priority_key",
+      "ingredients": [
+        "storagedrawers:drawer_key",
+        "minecraft:compass"
+      ]
     },
     "quantify_key": {
       "type": "minecraft:crafting_shapeless",
-      "result": "storagedrawers:quantify_key"
+      "result": "storagedrawers:quantify_key",
+      "ingredients": [
+        "storagedrawers:drawer_key",
+        "minecraft:writable_book"
+      ]
     },
     "redstone_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:redstone_upgrade"
+      "result": "storagedrawers:redstone_upgrade",
+      "ingredients": [
+        "#c:dusts/redstone",
+        "#c:rods/wooden",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "remote_group_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:remote_group_upgrade"
+      "result": "storagedrawers:remote_group_upgrade",
+      "ingredients": [
+        "minecraft:ender_pearl",
+        "#c:dusts/redstone",
+        "storagedrawers:upgrade_template",
+        "#c:rods/wooden"
+      ]
     },
     "remote_group_upgrade_bound": {
       "type": "storagedrawers:remote_group_upgrade",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "remote_group_upgrade_inc": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:remote_group_upgrade"
+      "result": "storagedrawers:remote_group_upgrade",
+      "ingredients": [
+        "minecraft:ender_pearl",
+        "storagedrawers:remote_upgrade"
+      ]
     },
     "remote_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:remote_upgrade"
+      "result": "storagedrawers:remote_upgrade",
+      "ingredients": [
+        "minecraft:ender_pearl",
+        "#c:dusts/redstone",
+        "storagedrawers:upgrade_template",
+        "#c:rods/wooden"
+      ]
     },
     "spruce_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:spruce_full_drawers_1"
+      "result": "storagedrawers:spruce_full_drawers_1",
+      "ingredients": [
+        "minecraft:spruce_planks",
+        "#c:chests/wooden"
+      ]
     },
     "spruce_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:spruce_full_drawers_2 x2"
+      "result": "storagedrawers:spruce_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:spruce_planks",
+        "#c:chests/wooden"
+      ]
     },
     "spruce_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:spruce_full_drawers_4 x4"
+      "result": "storagedrawers:spruce_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:spruce_planks"
+      ]
     },
     "spruce_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:spruce_half_drawers_1"
+      "result": "storagedrawers:spruce_half_drawers_1",
+      "ingredients": [
+        "minecraft:spruce_slab",
+        "#c:chests/wooden"
+      ]
     },
     "spruce_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:spruce_half_drawers_2 x2"
+      "result": "storagedrawers:spruce_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:spruce_slab",
+        "#c:chests/wooden"
+      ]
     },
     "spruce_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:spruce_half_drawers_4 x4"
+      "result": "storagedrawers:spruce_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:spruce_slab"
+      ]
     },
     "spruce_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:spruce_trim x4"
+      "result": "storagedrawers:spruce_trim x4",
+      "ingredients": [
+        "minecraft:spruce_planks",
+        "#c:rods/wooden"
+      ]
     },
     "suspend_key": {
       "type": "minecraft:crafting_shapeless",
-      "result": "storagedrawers:suspend_key"
+      "result": "storagedrawers:suspend_key",
+      "ingredients": [
+        "storagedrawers:drawer_key",
+        "minecraft:lever"
+      ]
     },
     "upgrade_template": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:upgrade_template x4"
+      "result": "storagedrawers:upgrade_template x4",
+      "ingredients": [
+        "#c:rods/wooden",
+        "#storagedrawers:drawers"
+      ]
     },
     "void_upgrade": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:void_upgrade"
+      "result": "storagedrawers:void_upgrade",
+      "ingredients": [
+        "#c:obsidians",
+        "storagedrawers:upgrade_template"
+      ]
     },
     "warped_full_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:warped_full_drawers_1"
+      "result": "storagedrawers:warped_full_drawers_1",
+      "ingredients": [
+        "minecraft:warped_planks",
+        "#c:chests/wooden"
+      ]
     },
     "warped_full_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:warped_full_drawers_2 x2"
+      "result": "storagedrawers:warped_full_drawers_2 x2",
+      "ingredients": [
+        "minecraft:warped_planks",
+        "#c:chests/wooden"
+      ]
     },
     "warped_full_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:warped_full_drawers_4 x4"
+      "result": "storagedrawers:warped_full_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:warped_planks"
+      ]
     },
     "warped_half_drawers_1": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:warped_half_drawers_1"
+      "result": "storagedrawers:warped_half_drawers_1",
+      "ingredients": [
+        "minecraft:warped_slab",
+        "#c:chests/wooden"
+      ]
     },
     "warped_half_drawers_2": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:warped_half_drawers_2 x2"
+      "result": "storagedrawers:warped_half_drawers_2 x2",
+      "ingredients": [
+        "minecraft:warped_slab",
+        "#c:chests/wooden"
+      ]
     },
     "warped_half_drawers_4": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:warped_half_drawers_4 x4"
+      "result": "storagedrawers:warped_half_drawers_4 x4",
+      "ingredients": [
+        "#c:chests/wooden",
+        "minecraft:warped_slab"
+      ]
     },
     "warped_trim": {
       "type": "minecraft:crafting_shaped",
-      "result": "storagedrawers:warped_trim x4"
+      "result": "storagedrawers:warped_trim x4",
+      "ingredients": [
+        "minecraft:warped_planks",
+        "#c:rods/wooden"
+      ]
     }
   },
   "summary": {

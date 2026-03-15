@@ -55,302 +55,599 @@
   "entities": {},
   "recipes_count": 72,
   "recipe_types": [
-    "minecraft:crafting_shapeless",
-    "brewinandchewin:keg_pouring",
     "brewinandchewin:fermenting",
-    "farmersdelight:cooking",
+    "farmersdelight:cutting",
     "minecraft:crafting_shaped",
     "unknown",
-    "farmersdelight:cutting"
+    "minecraft:crafting_shapeless",
+    "brewinandchewin:keg_pouring",
+    "farmersdelight:cooking"
   ],
   "recipes": {
     "builders_tea": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "create:builders_tea",
+      "ingredients": []
     },
     "potion": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "minecraft:potion",
+      "ingredients": []
     },
     "milk_bottle": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "farmersdelight:milk_bottle",
+      "ingredients": []
     },
     "milk_bucket": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "minecraft:milk_bucket",
+      "ingredients": []
     },
     "beer": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:beer",
+      "ingredients": []
     },
     "bloody_mary": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:bloody_mary",
+      "ingredients": []
     },
     "dread_nog": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:dread_nog",
+      "ingredients": []
     },
     "egg_grog": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:egg_grog",
+      "ingredients": []
     },
     "glittering_grenadine": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:glittering_grenadine",
+      "ingredients": []
     },
     "honey_bottle": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "minecraft:honey_bottle",
+      "ingredients": []
     },
     "kombucha": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:kombucha"
+      "result": "brewinandchewin:kombucha",
+      "ingredients": [
+        "#forge:crops/carrot",
+        "minecraft:sweet_berries",
+        "farmersrespite:black_tea_leaves"
+      ]
     },
     "mead": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:mead",
+      "ingredients": []
     },
     "pale_jane": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:pale_jane",
+      "ingredients": []
     },
     "red_rum": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:red_rum",
+      "ingredients": []
     },
     "rice_wine": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:rice_wine",
+      "ingredients": []
     },
     "saccharine_rum": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:saccharine_rum",
+      "ingredients": []
     },
     "salty_folly": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:salty_folly",
+      "ingredients": []
     },
     "steel_toe_stout": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:steel_toe_stout",
+      "ingredients": []
     },
     "strongroot_ale": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:strongroot_ale",
+      "ingredients": []
     },
     "unripe_flaxen_cheese_wheel": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:unripe_flaxen_cheese_wheel",
+      "ingredients": []
     },
     "unripe_scarlet_cheese_wheel": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:unripe_scarlet_cheese_wheel",
+      "ingredients": []
     },
     "vodka": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:vodka",
+      "ingredients": []
     },
     "water_bucket": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "minecraft:water_bucket",
+      "ingredients": []
     },
     "withering_dross": {
       "type": "brewinandchewin:keg_pouring",
-      "result": "unknown"
+      "result": "brewinandchewin:withering_dross",
+      "ingredients": []
     },
     "beer_from_water": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:beer"
+      "result": "brewinandchewin:beer",
+      "ingredients": [
+        "minecraft:wheat",
+        "minecraft:wheat_seeds",
+        "minecraft:brown_mushroom",
+        ""
+      ]
     },
     "bloody_mary_from_vodka": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:bloody_mary"
+      "result": "brewinandchewin:bloody_mary",
+      "ingredients": [
+        "#c:crops/tomato",
+        "#c:crops/cabbage",
+        "minecraft:sweet_berries",
+        ""
+      ]
     },
     "cocoa_fudge_from_milk": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:cocoa_fudge"
+      "result": "brewinandchewin:cocoa_fudge",
+      "ingredients": [
+        "minecraft:sugar",
+        "minecraft:cocoa_beans",
+        "minecraft:cocoa_beans",
+        ""
+      ]
     },
     "dread_nog_from_egg_grog": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:dread_nog"
+      "result": "brewinandchewin:dread_nog",
+      "ingredients": [
+        "minecraft:ominous_bottle",
+        "minecraft:turtle_egg",
+        "minecraft:fermented_spider_eye",
+        ""
+      ]
     },
     "egg_grog_from_milk": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:egg_grog"
+      "result": "brewinandchewin:egg_grog",
+      "ingredients": [
+        "#c:eggs",
+        "#c:crops/cabbage",
+        "minecraft:sugar",
+        ""
+      ]
     },
     "flaxen_cheese_from_milk": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:flaxen_cheese"
+      "result": "brewinandchewin:flaxen_cheese",
+      "ingredients": [
+        "minecraft:brown_mushroom",
+        "minecraft:pumpkin_seeds",
+        "minecraft:sugar",
+        ""
+      ]
     },
     "glittering_grenadine_from_water": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:glittering_grenadine"
+      "result": "brewinandchewin:glittering_grenadine",
+      "ingredients": [
+        "minecraft:glow_berries",
+        "minecraft:glowstone_dust",
+        "minecraft:glow_ink_sac",
+        ""
+      ]
     },
     "jerky": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:jerky x3"
+      "result": "brewinandchewin:jerky x3",
+      "ingredients": [
+        "#brewinandchewin:foods/jerky_meat",
+        "#brewinandchewin:foods/jerky_meat",
+        "#brewinandchewin:foods/jerky_meat",
+        ""
+      ]
     },
     "kimchi": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:kimchi x2"
+      "result": "brewinandchewin:kimchi x2",
+      "ingredients": [
+        "#c:crops/cabbage",
+        "#c:foods/vegetable",
+        "minecraft:kelp",
+        ""
+      ]
     },
     "kippers": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:kippers x2"
+      "result": "brewinandchewin:kippers x2",
+      "ingredients": [
+        "#c:foods/safe_raw_fish",
+        "#c:foods/safe_raw_fish",
+        "minecraft:dried_kelp",
+        ""
+      ]
     },
     "mead_from_honey": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:mead"
+      "result": "brewinandchewin:mead",
+      "ingredients": [
+        "minecraft:wheat",
+        "minecraft:wheat_seeds",
+        "minecraft:sweet_berries",
+        ""
+      ]
     },
     "pale_jane_from_rice_wine": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:pale_jane"
+      "result": "brewinandchewin:pale_jane",
+      "ingredients": [
+        "minecraft:honey_bottle",
+        "farmersdelight:tree_bark",
+        "minecraft:lily_of_the_valley",
+        "minecraft:sugar"
+      ]
     },
     "pickled_pickles_from_honey": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:pickled_pickles x2"
+      "result": "brewinandchewin:pickled_pickles x2",
+      "ingredients": [
+        "minecraft:sea_pickle",
+        "minecraft:sea_pickle",
+        "minecraft:glow_berries",
+        ""
+      ]
     },
     "red_rum_from_bloody_mary": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:red_rum"
+      "result": "brewinandchewin:red_rum",
+      "ingredients": [
+        "minecraft:crimson_fungus",
+        "minecraft:nether_wart",
+        "minecraft:fermented_spider_eye",
+        "minecraft:shroomlight"
+      ]
     },
     "rice_wine_from_water": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:rice_wine"
+      "result": "brewinandchewin:rice_wine",
+      "ingredients": [
+        "#c:crops/rice",
+        "minecraft:brown_mushroom",
+        "",
+        ""
+      ]
     },
     "saccharine_rum_from_mead": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:saccharine_rum"
+      "result": "brewinandchewin:saccharine_rum",
+      "ingredients": [
+        "minecraft:sweet_berries",
+        "minecraft:sugar_cane",
+        "minecraft:melon",
+        ""
+      ]
     },
     "salty_folly_from_vodka": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:salty_folly"
+      "result": "brewinandchewin:salty_folly",
+      "ingredients": [
+        "minecraft:sea_pickle",
+        "minecraft:dried_kelp",
+        "minecraft:seagrass",
+        ""
+      ]
     },
     "scarlet_cheese_from_milk": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:scarlet_cheese"
+      "result": "brewinandchewin:scarlet_cheese",
+      "ingredients": [
+        "minecraft:crimson_fungus",
+        "minecraft:nether_wart",
+        "minecraft:sugar",
+        ""
+      ]
     },
     "steel_toe_stout_from_strongroot_ale": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:steel_toe_stout"
+      "result": "brewinandchewin:steel_toe_stout",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:crimson_fungus",
+        "minecraft:nether_wart",
+        "minecraft:wheat"
+      ]
     },
     "strongroot_ale_from_beer": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:strongroot_ale"
+      "result": "brewinandchewin:strongroot_ale",
+      "ingredients": [
+        "#c:crops/beetroot",
+        "#c:crops/potato",
+        "minecraft:brown_mushroom",
+        "brewinandchewin:jerky"
+      ]
     },
     "vodka_from_water": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:vodka"
+      "result": "brewinandchewin:vodka",
+      "ingredients": [
+        "#c:crops/potato",
+        "minecraft:wheat",
+        "minecraft:wheat_seeds",
+        ""
+      ]
     },
     "withering_dross_from_salty_folly": {
       "type": "brewinandchewin:fermenting",
-      "result": "brewinandchewin:withering_dross"
+      "result": "brewinandchewin:withering_dross",
+      "ingredients": [
+        "minecraft:wither_rose",
+        "minecraft:ink_sac",
+        "minecraft:nether_wart",
+        "minecraft:bone"
+      ]
     },
     "apple_jelly": {
       "type": "farmersdelight:cooking",
-      "result": "brewinandchewin:apple_jelly"
+      "result": "brewinandchewin:apple_jelly",
+      "ingredients": [
+        "minecraft:apple",
+        "minecraft:apple",
+        "minecraft:apple",
+        "minecraft:sugar"
+      ]
     },
     "cheesy_pasta": {
       "type": "farmersdelight:cooking",
-      "result": "brewinandchewin:cheesy_pasta"
+      "result": "brewinandchewin:cheesy_pasta",
+      "ingredients": [
+        "brewinandchewin:flaxen_cheese_wedge",
+        "#c:foods/pasta",
+        "#c:foods/tomato",
+        "#c:foods/safe_raw_fish"
+      ]
     },
     "creamy_onion_soup": {
       "type": "farmersdelight:cooking",
-      "result": "brewinandchewin:creamy_onion_soup"
+      "result": "brewinandchewin:creamy_onion_soup",
+      "ingredients": [
+        "#brewinandchewin:foods/cheese_wedge",
+        "#c:foods/onion",
+        "#c:foods/vegetable",
+        "#c:foods/bread"
+      ]
     },
     "fiery_fondue_pot": {
       "type": "farmersdelight:cooking",
-      "result": "brewinandchewin:fiery_fondue_pot"
+      "result": "brewinandchewin:fiery_fondue_pot",
+      "ingredients": [
+        "farmersdelight:tomato_sauce",
+        "#c:crops/potato",
+        "#c:foods/milk",
+        "brewinandchewin:scarlet_cheese_wheel",
+        "farmersdelight:ham",
+        "#c:foods/bread"
+      ]
     },
     "glow_berry_marmalade": {
       "type": "farmersdelight:cooking",
-      "result": "brewinandchewin:glow_berry_marmalade"
+      "result": "brewinandchewin:glow_berry_marmalade",
+      "ingredients": [
+        "minecraft:glow_berries",
+        "minecraft:glow_berries",
+        "minecraft:glow_berries",
+        "minecraft:sugar"
+      ]
     },
     "horror_lasagna": {
       "type": "farmersdelight:cooking",
-      "result": "brewinandchewin:horror_lasagna"
+      "result": "brewinandchewin:horror_lasagna",
+      "ingredients": [
+        "brewinandchewin:scarlet_cheese_wedge",
+        "#c:crops/beetroot",
+        "farmersdelight:tomato_sauce",
+        "#c:foods/pasta",
+        "#brewinandchewin:foods/cheese_wedge"
+      ]
     },
     "scarlet_pierogi": {
       "type": "farmersdelight:cooking",
-      "result": "brewinandchewin:scarlet_pierogi"
+      "result": "brewinandchewin:scarlet_pierogi",
+      "ingredients": [
+        "brewinandchewin:scarlet_cheese_wedge",
+        "#c:crops/potato",
+        "#c:foods/dough",
+        "minecraft:nether_wart",
+        "#c:crops/cabbage"
+      ]
     },
     "sweet_berry_jam": {
       "type": "farmersdelight:cooking",
-      "result": "brewinandchewin:sweet_berry_jam"
+      "result": "brewinandchewin:sweet_berry_jam",
+      "ingredients": [
+        "minecraft:sweet_berries",
+        "minecraft:sweet_berries",
+        "minecraft:sweet_berries",
+        "minecraft:sugar"
+      ]
     },
     "vegetable_omelet": {
       "type": "farmersdelight:cooking",
-      "result": "brewinandchewin:vegetable_omelet"
+      "result": "brewinandchewin:vegetable_omelet",
+      "ingredients": [
+        "#brewinandchewin:foods/cheese_wedge",
+        "#c:eggs",
+        "#c:eggs",
+        "#c:foods/onion",
+        "#c:crops/carrot"
+      ]
     },
     "flaxen_cheese_wheel": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "brewinandchewin:flaxen_cheese_wedge x4",
+      "ingredients": [
+        "brewinandchewin:flaxen_cheese_wheel"
+      ],
+      "tool": "#c:tools/knife"
     },
     "pizza": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:pizza"
+      "result": "brewinandchewin:pizza",
+      "ingredients": [
+        "#brewinandchewin:foods/cheese_wedge",
+        "#brewinandchewin:foods/pizza_topping",
+        "farmersdelight:tomato_sauce",
+        "minecraft:wheat"
+      ]
     },
     "quiche": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "brewinandchewin:quiche_slice x4",
+      "ingredients": [
+        "brewinandchewin:quiche"
+      ],
+      "tool": "#c:tools/knife"
     },
     "scarlet_cheese_wheel": {
       "type": "farmersdelight:cutting",
-      "result": "unknown"
+      "result": "brewinandchewin:scarlet_cheese_wedge x4",
+      "ingredients": [
+        "brewinandchewin:scarlet_cheese_wheel"
+      ],
+      "tool": "#c:tools/knife"
     },
     "flaxen_cheese_wheel_from_wedges": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:flaxen_cheese_wheel"
+      "result": "brewinandchewin:flaxen_cheese_wheel",
+      "ingredients": [
+        "brewinandchewin:flaxen_cheese_wedge"
+      ]
     },
     "ham_and_cheese_sandwich": {
       "type": "minecraft:crafting_shapeless",
-      "result": "brewinandchewin:ham_and_cheese_sandwich x2"
+      "result": "brewinandchewin:ham_and_cheese_sandwich x2",
+      "ingredients": [
+        "minecraft:bread",
+        "farmersdelight:smoked_ham",
+        "brewinandchewin:flaxen_cheese_wedge",
+        "minecraft:bread"
+      ]
     },
     "heating_cask": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:heating_cask"
+      "result": "brewinandchewin:heating_cask",
+      "ingredients": [
+        "#minecraft:wooden_slabs",
+        "minecraft:coal_block",
+        "minecraft:blaze_powder",
+        "#minecraft:planks",
+        "minecraft:magma_block"
+      ]
     },
     "ice_crate": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:ice_crate"
+      "result": "brewinandchewin:ice_crate",
+      "ingredients": [
+        "#minecraft:planks",
+        "minecraft:string",
+        "#minecraft:wooden_slabs",
+        "minecraft:packed_ice"
+      ]
     },
     "item_coaster": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:coaster x4"
+      "result": "brewinandchewin:coaster x4",
+      "ingredients": [
+        "farmersdelight:canvas"
+      ]
     },
     "keg": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:keg"
+      "result": "brewinandchewin:keg",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "#minecraft:planks",
+        "minecraft:honeycomb"
+      ]
     },
     "pizza_from_slices": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:pizza"
+      "result": "brewinandchewin:pizza",
+      "ingredients": [
+        "brewinandchewin:pizza_slice"
+      ]
     },
     "quiche_from_bacon": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:quiche"
+      "result": "brewinandchewin:quiche",
+      "ingredients": [
+        "farmersdelight:cooked_bacon",
+        "#c:crops/cabbage",
+        "#c:foods/milk",
+        "#brewinandchewin:foods/cheese_wedge",
+        "minecraft:egg",
+        "farmersdelight:pie_crust"
+      ]
     },
     "quiche_from_mushroom": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:quiche"
+      "result": "brewinandchewin:quiche",
+      "ingredients": [
+        "minecraft:brown_mushroom",
+        "farmersdelight:cabbage_leaf",
+        "#c:foods/milk",
+        "#brewinandchewin:foods/cheese_wedge",
+        "minecraft:egg",
+        "farmersdelight:pie_crust"
+      ]
     },
     "quiche_from_slices": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:quiche"
+      "result": "brewinandchewin:quiche",
+      "ingredients": [
+        "brewinandchewin:quiche_slice"
+      ]
     },
     "scarlet_cheese_wheel_from_wedges": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:scarlet_cheese_wheel"
+      "result": "brewinandchewin:scarlet_cheese_wheel",
+      "ingredients": [
+        "brewinandchewin:scarlet_cheese_wedge"
+      ]
     },
     "tankard": {
       "type": "minecraft:crafting_shaped",
-      "result": "brewinandchewin:tankard x4"
+      "result": "brewinandchewin:tankard x4",
+      "ingredients": [
+        "#minecraft:planks",
+        "minecraft:iron_nugget"
+      ]
     },
     "brewinandchewin": {
       "type": "unknown",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     }
   },
   "summary": {

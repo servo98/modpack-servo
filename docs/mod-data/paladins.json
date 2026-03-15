@@ -87,571 +87,1005 @@
   },
   "recipes_count": 140,
   "recipe_types": [
-    "minecraft:crafting_shaped",
     "minecraft:blasting",
     "minecraft:smithing_transform",
-    "minecraft:smelting"
+    "minecraft:smelting",
+    "minecraft:crafting_shaped"
   ],
   "recipes": {
     "acolyte_wand": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:acolyte_wand"
+      "result": "paladins:acolyte_wand",
+      "ingredients": [
+        "minecraft:stick",
+        "minecraft:string"
+      ]
     },
     "aeternium_claymore": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:aeternium_claymore"
+      "result": "paladins:aeternium_claymore",
+      "ingredients": [
+        "betterend:aeternium_ingot",
+        "#c:wood_sticks|minecraft:stick"
+      ]
     },
     "aeternium_great_hammer": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:aeternium_great_hammer"
+      "result": "paladins:aeternium_great_hammer",
+      "ingredients": [
+        "betterend:aeternium_ingot",
+        "#c:wood_sticks|minecraft:stick"
+      ]
     },
     "aeternium_kite_shield": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:aeternium_kite_shield"
+      "result": "paladins:aeternium_kite_shield",
+      "ingredients": [
+        "betterend:aeternium_ingot",
+        "minecraft:leather"
+      ]
     },
     "aeternium_mace": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:aeternium_mace"
+      "result": "paladins:aeternium_mace",
+      "ingredients": [
+        "betterend:aeternium_ingot",
+        "#c:wood_sticks|minecraft:stick"
+      ]
     },
     "crusader_armor_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:crusader_armor_chest"
+      "result": "paladins:crusader_armor_chest",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:gold_ingot",
+        "minecraft:ghast_tear"
+      ]
     },
     "crusader_armor_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:crusader_armor_feet"
+      "result": "paladins:crusader_armor_feet",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:gold_ingot"
+      ]
     },
     "crusader_armor_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:crusader_armor_head"
+      "result": "paladins:crusader_armor_head",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:ghast_tear",
+        "minecraft:iron_ingot"
+      ]
     },
     "crusader_armor_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:crusader_armor_legs"
+      "result": "paladins:crusader_armor_legs",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:ghast_tear",
+        "minecraft:iron_ingot"
+      ]
     },
     "diamond_claymore": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:diamond_claymore"
+      "result": "paladins:diamond_claymore",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:stick"
+      ]
     },
     "diamond_great_hammer": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:diamond_great_hammer"
+      "result": "paladins:diamond_great_hammer",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:stick"
+      ]
     },
     "diamond_holy_staff": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:diamond_holy_staff"
+      "result": "paladins:diamond_holy_staff",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:gold_ingot"
+      ]
     },
     "diamond_holy_wand": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:diamond_holy_wand"
+      "result": "paladins:diamond_holy_wand",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:gold_ingot"
+      ]
     },
     "diamond_kite_shield": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:diamond_kite_shield"
+      "result": "paladins:diamond_kite_shield",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:leather"
+      ]
     },
     "diamond_mace": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:diamond_mace"
+      "result": "paladins:diamond_mace",
+      "ingredients": [
+        "minecraft:diamond",
+        "minecraft:stick"
+      ]
     },
     "gold_nugget_from_blasting_crusader_armor_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:crusader_armor_chest"
+      ]
     },
     "gold_nugget_from_blasting_crusader_armor_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:crusader_armor_feet"
+      ]
     },
     "gold_nugget_from_blasting_crusader_armor_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:crusader_armor_head"
+      ]
     },
     "gold_nugget_from_blasting_crusader_armor_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:crusader_armor_legs"
+      ]
     },
     "gold_nugget_from_blasting_golden_claymore": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:golden_claymore"
+      ]
     },
     "gold_nugget_from_blasting_golden_great_hammer": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:golden_great_hammer"
+      ]
     },
     "gold_nugget_from_blasting_golden_kite_shield": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:golden_kite_shield"
+      ]
     },
     "gold_nugget_from_blasting_golden_mace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:golden_mace"
+      ]
     },
     "gold_nugget_from_blasting_holy_staff": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:holy_staff"
+      ]
     },
     "gold_nugget_from_blasting_holy_wand": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:holy_wand"
+      ]
     },
     "gold_nugget_from_blasting_prior_robe_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:prior_robe_chest"
+      ]
     },
     "gold_nugget_from_blasting_prior_robe_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:prior_robe_feet"
+      ]
     },
     "gold_nugget_from_blasting_prior_robe_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:prior_robe_head"
+      ]
     },
     "gold_nugget_from_blasting_prior_robe_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:prior_robe_legs"
+      ]
     },
     "gold_nugget_from_smelting_crusader_armor_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:crusader_armor_chest"
+      ]
     },
     "gold_nugget_from_smelting_crusader_armor_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:crusader_armor_feet"
+      ]
     },
     "gold_nugget_from_smelting_crusader_armor_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:crusader_armor_head"
+      ]
     },
     "gold_nugget_from_smelting_crusader_armor_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:crusader_armor_legs"
+      ]
     },
     "gold_nugget_from_smelting_golden_claymore": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:golden_claymore"
+      ]
     },
     "gold_nugget_from_smelting_golden_great_hammer": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:golden_great_hammer"
+      ]
     },
     "gold_nugget_from_smelting_golden_kite_shield": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:golden_kite_shield"
+      ]
     },
     "gold_nugget_from_smelting_golden_mace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:golden_mace"
+      ]
     },
     "gold_nugget_from_smelting_holy_staff": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:holy_staff"
+      ]
     },
     "gold_nugget_from_smelting_holy_wand": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:holy_wand"
+      ]
     },
     "gold_nugget_from_smelting_prior_robe_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:prior_robe_chest"
+      ]
     },
     "gold_nugget_from_smelting_prior_robe_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:prior_robe_feet"
+      ]
     },
     "gold_nugget_from_smelting_prior_robe_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:prior_robe_head"
+      ]
     },
     "gold_nugget_from_smelting_prior_robe_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "paladins:prior_robe_legs"
+      ]
     },
     "golden_claymore": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:golden_claymore"
+      "result": "paladins:golden_claymore",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:stick"
+      ]
     },
     "golden_great_hammer": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:golden_great_hammer"
+      "result": "paladins:golden_great_hammer",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:stick"
+      ]
     },
     "golden_kite_shield": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:golden_kite_shield"
+      "result": "paladins:golden_kite_shield",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:leather"
+      ]
     },
     "golden_mace": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:golden_mace"
+      "result": "paladins:golden_mace",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:stick"
+      ]
     },
     "holy_staff": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:holy_staff"
+      "result": "paladins:holy_staff",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:iron_ingot"
+      ]
     },
     "holy_wand": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:holy_wand"
+      "result": "paladins:holy_wand",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:iron_ingot"
+      ]
     },
     "iron_claymore": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:iron_claymore"
+      "result": "paladins:iron_claymore",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:stick"
+      ]
     },
     "iron_great_hammer": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:iron_great_hammer"
+      "result": "paladins:iron_great_hammer",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:stick"
+      ]
     },
     "iron_kite_shield": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:iron_kite_shield"
+      "result": "paladins:iron_kite_shield",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:leather"
+      ]
     },
     "iron_mace": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:iron_mace"
+      "result": "paladins:iron_mace",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:stick"
+      ]
     },
     "iron_nugget_from_blasting_iron_claymore": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:iron_claymore"
+      ]
     },
     "iron_nugget_from_blasting_iron_great_hammer": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:iron_great_hammer"
+      ]
     },
     "iron_nugget_from_blasting_iron_kite_shield": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:iron_kite_shield"
+      ]
     },
     "iron_nugget_from_blasting_iron_mace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:iron_mace"
+      ]
     },
     "iron_nugget_from_blasting_paladin_armor_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:paladin_armor_chest"
+      ]
     },
     "iron_nugget_from_blasting_paladin_armor_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:paladin_armor_feet"
+      ]
     },
     "iron_nugget_from_blasting_paladin_armor_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:paladin_armor_head"
+      ]
     },
     "iron_nugget_from_blasting_paladin_armor_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:paladin_armor_legs"
+      ]
     },
     "iron_nugget_from_blasting_priest_robe_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:priest_robe_chest"
+      ]
     },
     "iron_nugget_from_blasting_priest_robe_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:priest_robe_feet"
+      ]
     },
     "iron_nugget_from_blasting_priest_robe_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:priest_robe_head"
+      ]
     },
     "iron_nugget_from_blasting_priest_robe_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:priest_robe_legs"
+      ]
     },
     "iron_nugget_from_smelting_iron_claymore": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:iron_claymore"
+      ]
     },
     "iron_nugget_from_smelting_iron_great_hammer": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:iron_great_hammer"
+      ]
     },
     "iron_nugget_from_smelting_iron_kite_shield": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:iron_kite_shield"
+      ]
     },
     "iron_nugget_from_smelting_iron_mace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:iron_mace"
+      ]
     },
     "iron_nugget_from_smelting_paladin_armor_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:paladin_armor_chest"
+      ]
     },
     "iron_nugget_from_smelting_paladin_armor_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:paladin_armor_feet"
+      ]
     },
     "iron_nugget_from_smelting_paladin_armor_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:paladin_armor_head"
+      ]
     },
     "iron_nugget_from_smelting_paladin_armor_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:paladin_armor_legs"
+      ]
     },
     "iron_nugget_from_smelting_priest_robe_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:priest_robe_chest"
+      ]
     },
     "iron_nugget_from_smelting_priest_robe_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:priest_robe_feet"
+      ]
     },
     "iron_nugget_from_smelting_priest_robe_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:priest_robe_head"
+      ]
     },
     "iron_nugget_from_smelting_priest_robe_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "paladins:priest_robe_legs"
+      ]
     },
     "monk_workbench": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:monk_workbench"
+      "result": "paladins:monk_workbench",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:ghast_tear",
+        "minecraft:polished_andesite"
+      ]
     },
     "netherite_claymore_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_claymore"
+      "result": "paladins:netherite_claymore",
+      "ingredients": []
     },
     "netherite_crusader_armor_chest_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_crusader_armor_chest"
+      "result": "paladins:netherite_crusader_armor_chest",
+      "ingredients": []
     },
     "netherite_crusader_armor_feet_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_crusader_armor_feet"
+      "result": "paladins:netherite_crusader_armor_feet",
+      "ingredients": []
     },
     "netherite_crusader_armor_head_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_crusader_armor_head"
+      "result": "paladins:netherite_crusader_armor_head",
+      "ingredients": []
     },
     "netherite_crusader_armor_legs_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_crusader_armor_legs"
+      "result": "paladins:netherite_crusader_armor_legs",
+      "ingredients": []
     },
     "netherite_great_hammer_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_great_hammer"
+      "result": "paladins:netherite_great_hammer",
+      "ingredients": []
     },
     "netherite_holy_staff_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_holy_staff"
+      "result": "paladins:netherite_holy_staff",
+      "ingredients": []
     },
     "netherite_holy_wand_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_holy_wand"
+      "result": "paladins:netherite_holy_wand",
+      "ingredients": []
     },
     "netherite_kite_shield_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_kite_shield"
+      "result": "paladins:netherite_kite_shield",
+      "ingredients": []
     },
     "netherite_mace_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_mace"
+      "result": "paladins:netherite_mace",
+      "ingredients": []
     },
     "netherite_prior_robe_chest_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_prior_robe_chest"
+      "result": "paladins:netherite_prior_robe_chest",
+      "ingredients": []
     },
     "netherite_prior_robe_feet_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_prior_robe_feet"
+      "result": "paladins:netherite_prior_robe_feet",
+      "ingredients": []
     },
     "netherite_prior_robe_head_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_prior_robe_head"
+      "result": "paladins:netherite_prior_robe_head",
+      "ingredients": []
     },
     "netherite_prior_robe_legs_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:netherite_prior_robe_legs"
+      "result": "paladins:netherite_prior_robe_legs",
+      "ingredients": []
     },
     "netherite_scrap_from_blasting_netherite_claymore": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_claymore"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_crusader_armor_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_crusader_armor_chest"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_crusader_armor_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_crusader_armor_feet"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_crusader_armor_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_crusader_armor_head"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_crusader_armor_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_crusader_armor_legs"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_great_hammer": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_great_hammer"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_holy_staff": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_holy_staff"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_holy_wand": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_holy_wand"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_kite_shield": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_kite_shield"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_mace": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_mace"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_prior_robe_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_prior_robe_chest"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_prior_robe_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_prior_robe_feet"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_prior_robe_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_prior_robe_head"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_prior_robe_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_prior_robe_legs"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_claymore": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_claymore"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_crusader_armor_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_crusader_armor_chest"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_crusader_armor_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_crusader_armor_feet"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_crusader_armor_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_crusader_armor_head"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_crusader_armor_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_crusader_armor_legs"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_great_hammer": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_great_hammer"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_holy_staff": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_holy_staff"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_holy_wand": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_holy_wand"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_kite_shield": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_kite_shield"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_mace": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_mace"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_prior_robe_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_prior_robe_chest"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_prior_robe_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_prior_robe_feet"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_prior_robe_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_prior_robe_head"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_prior_robe_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "paladins:netherite_prior_robe_legs"
+      ]
     },
     "paladin_armor_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:paladin_armor_chest"
+      "result": "paladins:paladin_armor_chest",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:copper_ingot"
+      ]
     },
     "paladin_armor_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:paladin_armor_feet"
+      "result": "paladins:paladin_armor_feet",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:copper_ingot"
+      ]
     },
     "paladin_armor_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:paladin_armor_head"
+      "result": "paladins:paladin_armor_head",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:copper_ingot"
+      ]
     },
     "paladin_armor_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:paladin_armor_legs"
+      "result": "paladins:paladin_armor_legs",
+      "ingredients": [
+        "minecraft:copper_ingot",
+        "minecraft:iron_ingot"
+      ]
     },
     "priest_robe_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:priest_robe_chest"
+      "result": "paladins:priest_robe_chest",
+      "ingredients": [
+        "minecraft:chain",
+        "#minecraft:wool"
+      ]
     },
     "priest_robe_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:priest_robe_feet"
+      "result": "paladins:priest_robe_feet",
+      "ingredients": [
+        "minecraft:chain",
+        "#minecraft:wool"
+      ]
     },
     "priest_robe_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:priest_robe_head"
+      "result": "paladins:priest_robe_head",
+      "ingredients": [
+        "#minecraft:wool",
+        "minecraft:chain"
+      ]
     },
     "priest_robe_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:priest_robe_legs"
+      "result": "paladins:priest_robe_legs",
+      "ingredients": [
+        "minecraft:chain",
+        "#minecraft:wool"
+      ]
     },
     "prior_robe_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:prior_robe_chest"
+      "result": "paladins:prior_robe_chest",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "#minecraft:wool",
+        "minecraft:ghast_tear"
+      ]
     },
     "prior_robe_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:prior_robe_feet"
+      "result": "paladins:prior_robe_feet",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "#minecraft:wool"
+      ]
     },
     "prior_robe_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:prior_robe_head"
+      "result": "paladins:prior_robe_head",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "#minecraft:wool",
+        "minecraft:ghast_tear"
+      ]
     },
     "prior_robe_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:prior_robe_legs"
+      "result": "paladins:prior_robe_legs",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "minecraft:ghast_tear",
+        "#minecraft:wool"
+      ]
     },
     "ruby_claymore_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:ruby_claymore"
+      "result": "paladins:ruby_claymore",
+      "ingredients": []
     },
     "ruby_great_hammer_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:ruby_great_hammer"
+      "result": "paladins:ruby_great_hammer",
+      "ingredients": []
     },
     "ruby_holy_staff": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:ruby_holy_staff"
+      "result": "paladins:ruby_holy_staff",
+      "ingredients": [
+        "betternether:nether_ruby",
+        "minecraft:ghast_tear",
+        "betternether:cincinnasite_ingot"
+      ]
     },
     "ruby_kite_shield_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:ruby_kite_shield"
+      "result": "paladins:ruby_kite_shield",
+      "ingredients": []
     },
     "ruby_mace_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "paladins:ruby_mace"
+      "result": "paladins:ruby_mace",
+      "ingredients": []
     },
     "stone_claymore": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:stone_claymore"
+      "result": "paladins:stone_claymore",
+      "ingredients": [
+        "#minecraft:stone_tool_materials",
+        "minecraft:stick"
+      ]
     },
     "stone_great_hammer": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:stone_great_hammer"
+      "result": "paladins:stone_great_hammer",
+      "ingredients": [
+        "#minecraft:stone_tool_materials",
+        "minecraft:stick"
+      ]
     },
     "wooden_great_hammer": {
       "type": "minecraft:crafting_shaped",
-      "result": "paladins:wooden_great_hammer"
+      "result": "paladins:wooden_great_hammer",
+      "ingredients": [
+        "#minecraft:logs_that_burn",
+        "minecraft:stick"
+      ]
     }
   },
   "summary": {

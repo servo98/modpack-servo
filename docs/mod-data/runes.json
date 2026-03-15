@@ -20,90 +20,149 @@
   "entities": {},
   "recipes_count": 20,
   "recipe_types": [
-    "minecraft:crafting_shaped",
     "runes:crafting",
-    "minecraft:crafting_shapeless"
+    "minecraft:crafting_shapeless",
+    "minecraft:crafting_shaped"
   ],
   "recipes": {
     "arcane_rune_medium_altar": {
       "type": "runes:crafting",
-      "result": "runes:arcane_stone x16"
+      "result": "runes:arcane_stone x16",
+      "ingredients": []
     },
     "arcane_rune_medium_hand": {
       "type": "minecraft:crafting_shapeless",
-      "result": "runes:arcane_stone x4"
+      "result": "runes:arcane_stone x4",
+      "ingredients": [
+        "#runes:rune_crafting/base/stone",
+        "#runes:rune_crafting/reagent/arcane_medium"
+      ]
     },
     "arcane_rune_small_altar": {
       "type": "runes:crafting",
-      "result": "runes:arcane_stone x8"
+      "result": "runes:arcane_stone x8",
+      "ingredients": []
     },
     "arcane_rune_small_hand": {
       "type": "minecraft:crafting_shapeless",
-      "result": "runes:arcane_stone x2"
+      "result": "runes:arcane_stone x2",
+      "ingredients": [
+        "#runes:rune_crafting/base/stone",
+        "#runes:rune_crafting/reagent/arcane_small"
+      ]
     },
     "fire_rune_medium_altar": {
       "type": "runes:crafting",
-      "result": "runes:fire_stone x16"
+      "result": "runes:fire_stone x16",
+      "ingredients": []
     },
     "fire_rune_medium_hand": {
       "type": "minecraft:crafting_shapeless",
-      "result": "runes:fire_stone x4"
+      "result": "runes:fire_stone x4",
+      "ingredients": [
+        "#runes:rune_crafting/base/stone",
+        "#runes:rune_crafting/reagent/fire_medium"
+      ]
     },
     "fire_rune_small_altar": {
       "type": "runes:crafting",
-      "result": "runes:fire_stone x8"
+      "result": "runes:fire_stone x8",
+      "ingredients": []
     },
     "fire_rune_small_hand": {
       "type": "minecraft:crafting_shapeless",
-      "result": "runes:fire_stone x2"
+      "result": "runes:fire_stone x2",
+      "ingredients": [
+        "#runes:rune_crafting/base/stone",
+        "#runes:rune_crafting/reagent/fire_small"
+      ]
     },
     "frost_rune_medium_altar": {
       "type": "runes:crafting",
-      "result": "runes:frost_stone x16"
+      "result": "runes:frost_stone x16",
+      "ingredients": []
     },
     "frost_rune_medium_hand": {
       "type": "minecraft:crafting_shapeless",
-      "result": "runes:frost_stone x4"
+      "result": "runes:frost_stone x4",
+      "ingredients": [
+        "#runes:rune_crafting/base/stone",
+        "#runes:rune_crafting/reagent/frost_medium"
+      ]
     },
     "frost_rune_small_altar": {
       "type": "runes:crafting",
-      "result": "runes:frost_stone x8"
+      "result": "runes:frost_stone x8",
+      "ingredients": []
     },
     "frost_rune_small_hand": {
       "type": "minecraft:crafting_shapeless",
-      "result": "runes:frost_stone x2"
+      "result": "runes:frost_stone x2",
+      "ingredients": [
+        "#runes:rune_crafting/base/stone",
+        "#runes:rune_crafting/reagent/frost_small"
+      ]
     },
     "healing_rune_medium_altar": {
       "type": "runes:crafting",
-      "result": "runes:healing_stone x16"
+      "result": "runes:healing_stone x16",
+      "ingredients": []
     },
     "healing_rune_medium_hand": {
       "type": "minecraft:crafting_shapeless",
-      "result": "runes:healing_stone x4"
+      "result": "runes:healing_stone x4",
+      "ingredients": [
+        "#runes:rune_crafting/base/stone",
+        "#runes:rune_crafting/reagent/healing_medium"
+      ]
     },
     "healing_rune_small_altar": {
       "type": "runes:crafting",
-      "result": "runes:healing_stone x8"
+      "result": "runes:healing_stone x8",
+      "ingredients": []
     },
     "healing_rune_small_hand": {
       "type": "minecraft:crafting_shapeless",
-      "result": "runes:healing_stone x2"
+      "result": "runes:healing_stone x2",
+      "ingredients": [
+        "#runes:rune_crafting/base/stone",
+        "#runes:rune_crafting/reagent/healing_small"
+      ]
     },
     "large_rune_pouch": {
       "type": "minecraft:crafting_shaped",
-      "result": "runes:large_rune_pouch"
+      "result": "runes:large_rune_pouch",
+      "ingredients": [
+        "minecraft:string",
+        "#minecraft:wool",
+        "minecraft:nether_star"
+      ]
     },
     "medium_rune_pouch": {
       "type": "minecraft:crafting_shaped",
-      "result": "runes:medium_rune_pouch"
+      "result": "runes:medium_rune_pouch",
+      "ingredients": [
+        "minecraft:string",
+        "#minecraft:wool",
+        "minecraft:phantom_membrane"
+      ]
     },
     "small_rune_pouch": {
       "type": "minecraft:crafting_shaped",
-      "result": "runes:small_rune_pouch"
+      "result": "runes:small_rune_pouch",
+      "ingredients": [
+        "minecraft:string",
+        "#minecraft:wool",
+        "minecraft:ink_sac"
+      ]
     },
     "rune_crafting_altar": {
       "type": "minecraft:crafting_shaped",
-      "result": "runes:crafting_altar"
+      "result": "runes:crafting_altar",
+      "ingredients": [
+        "minecraft:gold_ingot",
+        "#runes:fancy_stone_materials"
+      ]
     }
   },
   "summary": {

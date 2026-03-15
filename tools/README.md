@@ -53,3 +53,22 @@ Convertidor de imagenes a texturas pixel art estilo Minecraft.
 - Paleta extraida con click para copiar hex
 - Export: download PNG con nombre y path type (item/block/entity/gui/particle)
 - Download All: descarga 16x16 + 32x32 + 64x64 de un tiro
+
+## Recipe Tree Viewer (`recipe-tree.html`)
+
+Visualizador interactivo de arboles de recetas de comida del modpack.
+
+**Datos:**
+- Carga automaticamente de `recipe-tree-data.js` (generado por `python scripts/extract-mod-content.py`)
+- Datos reales extraidos de los JARs en `modpack/mods/`
+- Para actualizar datos: correr el extract script despues de modificar mods/recetas
+
+**Que hace:**
+- Lista todas las comidas finales de FD, B&C, ED, Croptopia
+- Arbol visual de ingredientes (recursivo: comida final <- ingredientes <- sub-ingredientes <- crops base)
+- Colores por workstation: Cooking Pot (naranja), Cutting Board (marron), Keg (purpura), Juicer (verde), Furnace (rojo), Crafting Table (gris)
+- Buscar por nombre de comida o ingrediente
+- Filtrar por mod, workstation, tipo de receta
+- Panel de info: mod de origen, workstation, usos como ingrediente
+- Detectar ingredientes huerfanos (sin uso en ninguna receta)
+- Detectar recetas en crafting table (las que queremos mover a workstations)

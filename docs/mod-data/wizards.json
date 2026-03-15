@@ -74,503 +74,878 @@
   "recipes": {
     "amethyst_shard_from_blasting_staff_arcane": {
       "type": "minecraft:blasting",
-      "result": "minecraft:amethyst_shard"
+      "result": "minecraft:amethyst_shard",
+      "ingredients": [
+        "wizards:staff_arcane"
+      ]
     },
     "amethyst_shard_from_smelting_staff_arcane": {
       "type": "minecraft:smelting",
-      "result": "minecraft:amethyst_shard"
+      "result": "minecraft:amethyst_shard",
+      "ingredients": [
+        "wizards:staff_arcane"
+      ]
     },
     "arcane_robe_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:arcane_robe_chest"
+      "result": "wizards:arcane_robe_chest",
+      "ingredients": [
+        "minecraft:ender_pearl",
+        "#minecraft:wool"
+      ]
     },
     "arcane_robe_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:arcane_robe_feet"
+      "result": "wizards:arcane_robe_feet",
+      "ingredients": [
+        "minecraft:ender_pearl",
+        "#minecraft:wool"
+      ]
     },
     "arcane_robe_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:arcane_robe_head"
+      "result": "wizards:arcane_robe_head",
+      "ingredients": [
+        "#minecraft:wool",
+        "minecraft:ender_pearl"
+      ]
     },
     "arcane_robe_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:arcane_robe_legs"
+      "result": "wizards:arcane_robe_legs",
+      "ingredients": [
+        "minecraft:ender_pearl",
+        "#minecraft:wool"
+      ]
     },
     "blaze_powder_from_blasting_fire_robe_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:blaze_powder"
+      "result": "minecraft:blaze_powder",
+      "ingredients": [
+        "wizards:fire_robe_chest"
+      ]
     },
     "blaze_powder_from_blasting_fire_robe_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:blaze_powder"
+      "result": "minecraft:blaze_powder",
+      "ingredients": [
+        "wizards:fire_robe_feet"
+      ]
     },
     "blaze_powder_from_blasting_fire_robe_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:blaze_powder"
+      "result": "minecraft:blaze_powder",
+      "ingredients": [
+        "wizards:fire_robe_head"
+      ]
     },
     "blaze_powder_from_blasting_fire_robe_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:blaze_powder"
+      "result": "minecraft:blaze_powder",
+      "ingredients": [
+        "wizards:fire_robe_legs"
+      ]
     },
     "blaze_powder_from_blasting_staff_fire": {
       "type": "minecraft:blasting",
-      "result": "minecraft:blaze_powder"
+      "result": "minecraft:blaze_powder",
+      "ingredients": [
+        "wizards:staff_fire"
+      ]
     },
     "blaze_powder_from_smelting_fire_robe_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:blaze_powder"
+      "result": "minecraft:blaze_powder",
+      "ingredients": [
+        "wizards:fire_robe_chest"
+      ]
     },
     "blaze_powder_from_smelting_fire_robe_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:blaze_powder"
+      "result": "minecraft:blaze_powder",
+      "ingredients": [
+        "wizards:fire_robe_feet"
+      ]
     },
     "blaze_powder_from_smelting_fire_robe_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:blaze_powder"
+      "result": "minecraft:blaze_powder",
+      "ingredients": [
+        "wizards:fire_robe_head"
+      ]
     },
     "blaze_powder_from_smelting_fire_robe_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:blaze_powder"
+      "result": "minecraft:blaze_powder",
+      "ingredients": [
+        "wizards:fire_robe_legs"
+      ]
     },
     "blaze_powder_from_smelting_staff_fire": {
       "type": "minecraft:smelting",
-      "result": "minecraft:blaze_powder"
+      "result": "minecraft:blaze_powder",
+      "ingredients": [
+        "wizards:staff_fire"
+      ]
     },
     "ender_pearl_from_blasting_arcane_robe_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:ender_pearl"
+      "result": "minecraft:ender_pearl",
+      "ingredients": [
+        "wizards:arcane_robe_chest"
+      ]
     },
     "ender_pearl_from_blasting_arcane_robe_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:ender_pearl"
+      "result": "minecraft:ender_pearl",
+      "ingredients": [
+        "wizards:arcane_robe_feet"
+      ]
     },
     "ender_pearl_from_blasting_arcane_robe_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:ender_pearl"
+      "result": "minecraft:ender_pearl",
+      "ingredients": [
+        "wizards:arcane_robe_head"
+      ]
     },
     "ender_pearl_from_blasting_arcane_robe_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:ender_pearl"
+      "result": "minecraft:ender_pearl",
+      "ingredients": [
+        "wizards:arcane_robe_legs"
+      ]
     },
     "ender_pearl_from_smelting_arcane_robe_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:ender_pearl"
+      "result": "minecraft:ender_pearl",
+      "ingredients": [
+        "wizards:arcane_robe_chest"
+      ]
     },
     "ender_pearl_from_smelting_arcane_robe_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:ender_pearl"
+      "result": "minecraft:ender_pearl",
+      "ingredients": [
+        "wizards:arcane_robe_feet"
+      ]
     },
     "ender_pearl_from_smelting_arcane_robe_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:ender_pearl"
+      "result": "minecraft:ender_pearl",
+      "ingredients": [
+        "wizards:arcane_robe_head"
+      ]
     },
     "ender_pearl_from_smelting_arcane_robe_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:ender_pearl"
+      "result": "minecraft:ender_pearl",
+      "ingredients": [
+        "wizards:arcane_robe_legs"
+      ]
     },
     "fire_robe_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:fire_robe_chest"
+      "result": "wizards:fire_robe_chest",
+      "ingredients": [
+        "minecraft:blaze_powder",
+        "#minecraft:wool"
+      ]
     },
     "fire_robe_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:fire_robe_feet"
+      "result": "wizards:fire_robe_feet",
+      "ingredients": [
+        "minecraft:blaze_powder",
+        "#minecraft:wool"
+      ]
     },
     "fire_robe_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:fire_robe_head"
+      "result": "wizards:fire_robe_head",
+      "ingredients": [
+        "#minecraft:wool",
+        "minecraft:blaze_powder"
+      ]
     },
     "fire_robe_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:fire_robe_legs"
+      "result": "wizards:fire_robe_legs",
+      "ingredients": [
+        "minecraft:blaze_powder",
+        "#minecraft:wool"
+      ]
     },
     "frost_robe_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:frost_robe_chest"
+      "result": "wizards:frost_robe_chest",
+      "ingredients": [
+        "minecraft:prismarine_shard",
+        "#minecraft:wool"
+      ]
     },
     "frost_robe_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:frost_robe_feet"
+      "result": "wizards:frost_robe_feet",
+      "ingredients": [
+        "minecraft:prismarine_shard",
+        "#minecraft:wool"
+      ]
     },
     "frost_robe_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:frost_robe_head"
+      "result": "wizards:frost_robe_head",
+      "ingredients": [
+        "#minecraft:wool",
+        "minecraft:prismarine_shard"
+      ]
     },
     "frost_robe_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:frost_robe_legs"
+      "result": "wizards:frost_robe_legs",
+      "ingredients": [
+        "minecraft:prismarine_shard",
+        "#minecraft:wool"
+      ]
     },
     "gold_nugget_from_blasting_wand_arcane": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "wizards:wand_arcane"
+      ]
     },
     "gold_nugget_from_blasting_wand_fire": {
       "type": "minecraft:blasting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "wizards:wand_fire"
+      ]
     },
     "gold_nugget_from_smelting_wand_arcane": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "wizards:wand_arcane"
+      ]
     },
     "gold_nugget_from_smelting_wand_fire": {
       "type": "minecraft:smelting",
-      "result": "minecraft:gold_nugget"
+      "result": "minecraft:gold_nugget",
+      "ingredients": [
+        "wizards:wand_fire"
+      ]
     },
     "iron_nugget_from_blasting_wand_frost": {
       "type": "minecraft:blasting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "wizards:wand_frost"
+      ]
     },
     "iron_nugget_from_smelting_wand_frost": {
       "type": "minecraft:smelting",
-      "result": "minecraft:iron_nugget"
+      "result": "minecraft:iron_nugget",
+      "ingredients": [
+        "wizards:wand_frost"
+      ]
     },
     "lapis_lazuli_from_blasting_wizard_robe_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:lapis_lazuli"
+      "result": "minecraft:lapis_lazuli",
+      "ingredients": [
+        "wizards:wizard_robe_chest"
+      ]
     },
     "lapis_lazuli_from_blasting_wizard_robe_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:lapis_lazuli"
+      "result": "minecraft:lapis_lazuli",
+      "ingredients": [
+        "wizards:wizard_robe_feet"
+      ]
     },
     "lapis_lazuli_from_blasting_wizard_robe_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:lapis_lazuli"
+      "result": "minecraft:lapis_lazuli",
+      "ingredients": [
+        "wizards:wizard_robe_head"
+      ]
     },
     "lapis_lazuli_from_blasting_wizard_robe_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:lapis_lazuli"
+      "result": "minecraft:lapis_lazuli",
+      "ingredients": [
+        "wizards:wizard_robe_legs"
+      ]
     },
     "lapis_lazuli_from_smelting_wizard_robe_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:lapis_lazuli"
+      "result": "minecraft:lapis_lazuli",
+      "ingredients": [
+        "wizards:wizard_robe_chest"
+      ]
     },
     "lapis_lazuli_from_smelting_wizard_robe_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:lapis_lazuli"
+      "result": "minecraft:lapis_lazuli",
+      "ingredients": [
+        "wizards:wizard_robe_feet"
+      ]
     },
     "lapis_lazuli_from_smelting_wizard_robe_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:lapis_lazuli"
+      "result": "minecraft:lapis_lazuli",
+      "ingredients": [
+        "wizards:wizard_robe_head"
+      ]
     },
     "lapis_lazuli_from_smelting_wizard_robe_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:lapis_lazuli"
+      "result": "minecraft:lapis_lazuli",
+      "ingredients": [
+        "wizards:wizard_robe_legs"
+      ]
     },
     "netherite_arcane_robe_chest_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_arcane_robe_chest"
+      "result": "wizards:netherite_arcane_robe_chest",
+      "ingredients": []
     },
     "netherite_arcane_robe_feet_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_arcane_robe_feet"
+      "result": "wizards:netherite_arcane_robe_feet",
+      "ingredients": []
     },
     "netherite_arcane_robe_head_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_arcane_robe_head"
+      "result": "wizards:netherite_arcane_robe_head",
+      "ingredients": []
     },
     "netherite_arcane_robe_legs_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_arcane_robe_legs"
+      "result": "wizards:netherite_arcane_robe_legs",
+      "ingredients": []
     },
     "netherite_fire_robe_chest_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_fire_robe_chest"
+      "result": "wizards:netherite_fire_robe_chest",
+      "ingredients": []
     },
     "netherite_fire_robe_feet_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_fire_robe_feet"
+      "result": "wizards:netherite_fire_robe_feet",
+      "ingredients": []
     },
     "netherite_fire_robe_head_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_fire_robe_head"
+      "result": "wizards:netherite_fire_robe_head",
+      "ingredients": []
     },
     "netherite_fire_robe_legs_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_fire_robe_legs"
+      "result": "wizards:netherite_fire_robe_legs",
+      "ingredients": []
     },
     "netherite_frost_robe_chest_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_frost_robe_chest"
+      "result": "wizards:netherite_frost_robe_chest",
+      "ingredients": []
     },
     "netherite_frost_robe_feet_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_frost_robe_feet"
+      "result": "wizards:netherite_frost_robe_feet",
+      "ingredients": []
     },
     "netherite_frost_robe_head_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_frost_robe_head"
+      "result": "wizards:netherite_frost_robe_head",
+      "ingredients": []
     },
     "netherite_frost_robe_legs_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:netherite_frost_robe_legs"
+      "result": "wizards:netherite_frost_robe_legs",
+      "ingredients": []
     },
     "netherite_scrap_from_blasting_netherite_arcane_robe_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_arcane_robe_chest"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_arcane_robe_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_arcane_robe_feet"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_arcane_robe_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_arcane_robe_head"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_arcane_robe_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_arcane_robe_legs"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_fire_robe_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_fire_robe_chest"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_fire_robe_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_fire_robe_feet"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_fire_robe_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_fire_robe_head"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_fire_robe_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_fire_robe_legs"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_frost_robe_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_frost_robe_chest"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_frost_robe_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_frost_robe_feet"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_frost_robe_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_frost_robe_head"
+      ]
     },
     "netherite_scrap_from_blasting_netherite_frost_robe_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_frost_robe_legs"
+      ]
     },
     "netherite_scrap_from_blasting_staff_netherite_arcane": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:staff_netherite_arcane"
+      ]
     },
     "netherite_scrap_from_blasting_staff_netherite_fire": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:staff_netherite_fire"
+      ]
     },
     "netherite_scrap_from_blasting_staff_netherite_frost": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:staff_netherite_frost"
+      ]
     },
     "netherite_scrap_from_blasting_wand_netherite_arcane": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:wand_netherite_arcane"
+      ]
     },
     "netherite_scrap_from_blasting_wand_netherite_fire": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:wand_netherite_fire"
+      ]
     },
     "netherite_scrap_from_blasting_wand_netherite_frost": {
       "type": "minecraft:blasting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:wand_netherite_frost"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_arcane_robe_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_arcane_robe_chest"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_arcane_robe_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_arcane_robe_feet"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_arcane_robe_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_arcane_robe_head"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_arcane_robe_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_arcane_robe_legs"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_fire_robe_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_fire_robe_chest"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_fire_robe_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_fire_robe_feet"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_fire_robe_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_fire_robe_head"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_fire_robe_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_fire_robe_legs"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_frost_robe_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_frost_robe_chest"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_frost_robe_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_frost_robe_feet"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_frost_robe_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_frost_robe_head"
+      ]
     },
     "netherite_scrap_from_smelting_netherite_frost_robe_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:netherite_frost_robe_legs"
+      ]
     },
     "netherite_scrap_from_smelting_staff_netherite_arcane": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:staff_netherite_arcane"
+      ]
     },
     "netherite_scrap_from_smelting_staff_netherite_fire": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:staff_netherite_fire"
+      ]
     },
     "netherite_scrap_from_smelting_staff_netherite_frost": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:staff_netherite_frost"
+      ]
     },
     "netherite_scrap_from_smelting_wand_netherite_arcane": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:wand_netherite_arcane"
+      ]
     },
     "netherite_scrap_from_smelting_wand_netherite_fire": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:wand_netherite_fire"
+      ]
     },
     "netherite_scrap_from_smelting_wand_netherite_frost": {
       "type": "minecraft:smelting",
-      "result": "minecraft:netherite_scrap"
+      "result": "minecraft:netherite_scrap",
+      "ingredients": [
+        "wizards:wand_netherite_frost"
+      ]
     },
     "prismarine_crystals_from_blasting_staff_frost": {
       "type": "minecraft:blasting",
-      "result": "minecraft:prismarine_crystals"
+      "result": "minecraft:prismarine_crystals",
+      "ingredients": [
+        "wizards:staff_frost"
+      ]
     },
     "prismarine_crystals_from_smelting_staff_frost": {
       "type": "minecraft:smelting",
-      "result": "minecraft:prismarine_crystals"
+      "result": "minecraft:prismarine_crystals",
+      "ingredients": [
+        "wizards:staff_frost"
+      ]
     },
     "prismarine_shard_from_blasting_frost_robe_chest": {
       "type": "minecraft:blasting",
-      "result": "minecraft:prismarine_shard"
+      "result": "minecraft:prismarine_shard",
+      "ingredients": [
+        "wizards:frost_robe_chest"
+      ]
     },
     "prismarine_shard_from_blasting_frost_robe_feet": {
       "type": "minecraft:blasting",
-      "result": "minecraft:prismarine_shard"
+      "result": "minecraft:prismarine_shard",
+      "ingredients": [
+        "wizards:frost_robe_feet"
+      ]
     },
     "prismarine_shard_from_blasting_frost_robe_head": {
       "type": "minecraft:blasting",
-      "result": "minecraft:prismarine_shard"
+      "result": "minecraft:prismarine_shard",
+      "ingredients": [
+        "wizards:frost_robe_head"
+      ]
     },
     "prismarine_shard_from_blasting_frost_robe_legs": {
       "type": "minecraft:blasting",
-      "result": "minecraft:prismarine_shard"
+      "result": "minecraft:prismarine_shard",
+      "ingredients": [
+        "wizards:frost_robe_legs"
+      ]
     },
     "prismarine_shard_from_smelting_frost_robe_chest": {
       "type": "minecraft:smelting",
-      "result": "minecraft:prismarine_shard"
+      "result": "minecraft:prismarine_shard",
+      "ingredients": [
+        "wizards:frost_robe_chest"
+      ]
     },
     "prismarine_shard_from_smelting_frost_robe_feet": {
       "type": "minecraft:smelting",
-      "result": "minecraft:prismarine_shard"
+      "result": "minecraft:prismarine_shard",
+      "ingredients": [
+        "wizards:frost_robe_feet"
+      ]
     },
     "prismarine_shard_from_smelting_frost_robe_head": {
       "type": "minecraft:smelting",
-      "result": "minecraft:prismarine_shard"
+      "result": "minecraft:prismarine_shard",
+      "ingredients": [
+        "wizards:frost_robe_head"
+      ]
     },
     "prismarine_shard_from_smelting_frost_robe_legs": {
       "type": "minecraft:smelting",
-      "result": "minecraft:prismarine_shard"
+      "result": "minecraft:prismarine_shard",
+      "ingredients": [
+        "wizards:frost_robe_legs"
+      ]
     },
     "staff_arcane": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:staff_arcane"
+      "result": "wizards:staff_arcane",
+      "ingredients": [
+        "minecraft:amethyst_shard",
+        "minecraft:ender_pearl",
+        "minecraft:stick",
+        "minecraft:gold_ingot"
+      ]
     },
     "staff_crystal_arcane": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:staff_crystal_arcane"
+      "result": "wizards:staff_crystal_arcane",
+      "ingredients": [
+        "betterend:crystal_shards",
+        "minecraft:ender_pearl",
+        "betterend:aeternium_ingot"
+      ]
     },
     "staff_fire": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:staff_fire"
+      "result": "wizards:staff_fire",
+      "ingredients": [
+        "minecraft:nether_brick",
+        "minecraft:blaze_powder",
+        "minecraft:stick",
+        "minecraft:gold_ingot"
+      ]
     },
     "staff_frost": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:staff_frost"
+      "result": "wizards:staff_frost",
+      "ingredients": [
+        "minecraft:snowball",
+        "minecraft:prismarine_crystals",
+        "minecraft:stick",
+        "minecraft:iron_ingot"
+      ]
     },
     "staff_netherite_arcane_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:staff_netherite_arcane"
+      "result": "wizards:staff_netherite_arcane",
+      "ingredients": []
     },
     "staff_netherite_fire_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:staff_netherite_fire"
+      "result": "wizards:staff_netherite_fire",
+      "ingredients": []
     },
     "staff_netherite_frost_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:staff_netherite_frost"
+      "result": "wizards:staff_netherite_frost",
+      "ingredients": []
     },
     "staff_ruby_fire": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:staff_ruby_fire"
+      "result": "wizards:staff_ruby_fire",
+      "ingredients": [
+        "betternether:nether_ruby",
+        "minecraft:blaze_powder",
+        "betternether:cincinnasite_ingot"
+      ]
     },
     "staff_smaragdant_frost": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:staff_smaragdant_frost"
+      "result": "wizards:staff_smaragdant_frost",
+      "ingredients": [
+        "betterend:smaragdant_crystal_shard",
+        "minecraft:prismarine_crystals",
+        "betterend:aeternium_ingot"
+      ]
     },
     "staff_wizard": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:staff_wizard"
+      "result": "wizards:staff_wizard",
+      "ingredients": [
+        "minecraft:quartz",
+        "minecraft:stick"
+      ]
     },
     "wand_arcane": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:wand_arcane"
+      "result": "wizards:wand_arcane",
+      "ingredients": [
+        "minecraft:amethyst_shard",
+        "minecraft:gold_ingot"
+      ]
     },
     "wand_fire": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:wand_fire"
+      "result": "wizards:wand_fire",
+      "ingredients": [
+        "minecraft:gunpowder",
+        "minecraft:gold_ingot"
+      ]
     },
     "wand_frost": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:wand_frost"
+      "result": "wizards:wand_frost",
+      "ingredients": [
+        "minecraft:snowball",
+        "minecraft:iron_ingot"
+      ]
     },
     "wand_netherite_arcane_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:wand_netherite_arcane"
+      "result": "wizards:wand_netherite_arcane",
+      "ingredients": []
     },
     "wand_netherite_fire_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:wand_netherite_fire"
+      "result": "wizards:wand_netherite_fire",
+      "ingredients": []
     },
     "wand_netherite_frost_smithing": {
       "type": "minecraft:smithing_transform",
-      "result": "wizards:wand_netherite_frost"
+      "result": "wizards:wand_netherite_frost",
+      "ingredients": []
     },
     "wand_novice": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:wand_novice"
+      "result": "wizards:wand_novice",
+      "ingredients": [
+        "minecraft:coal",
+        "minecraft:stick"
+      ]
     },
     "wizard_robe_chest": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:wizard_robe_chest"
+      "result": "wizards:wizard_robe_chest",
+      "ingredients": [
+        "minecraft:lapis_lazuli",
+        "#minecraft:wool"
+      ]
     },
     "wizard_robe_feet": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:wizard_robe_feet"
+      "result": "wizards:wizard_robe_feet",
+      "ingredients": [
+        "minecraft:lapis_lazuli",
+        "#minecraft:wool"
+      ]
     },
     "wizard_robe_head": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:wizard_robe_head"
+      "result": "wizards:wizard_robe_head",
+      "ingredients": [
+        "#minecraft:wool",
+        "minecraft:lapis_lazuli"
+      ]
     },
     "wizard_robe_legs": {
       "type": "minecraft:crafting_shaped",
-      "result": "wizards:wizard_robe_legs"
+      "result": "wizards:wizard_robe_legs",
+      "ingredients": [
+        "minecraft:lapis_lazuli",
+        "#minecraft:wool"
+      ]
     }
   },
   "summary": {

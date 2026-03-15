@@ -95,6 +95,12 @@
     "total_entities": 5,
     "total_recipes": 140
   },
+  "plushables": {
+    "total_items": 1,
+    "total_blocks": 49,
+    "total_entities": 0,
+    "total_recipes": 50
+  },
   "progressivestages": {
     "total_items": 0,
     "total_blocks": 0,
@@ -108,10 +114,10 @@
     "total_recipes": 0
   },
   "refinedstorage": {
-    "total_items": 120,
-    "total_blocks": 38,
+    "total_items": 0,
+    "total_blocks": 0,
     "total_entities": 0,
-    "total_recipes": 420
+    "total_recipes": 1
   },
   "refurbished_furniture": {
     "total_items": 25,
@@ -142,6 +148,12 @@
     "total_blocks": 4,
     "total_entities": 0,
     "total_recipes": 8
+  },
+  "solonion": {
+    "total_items": 8,
+    "total_blocks": 0,
+    "total_entities": 0,
+    "total_recipes": 4
   },
   "spell_engine": {
     "total_items": 3,

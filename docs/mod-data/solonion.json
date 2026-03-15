@@ -15,26 +15,35 @@
   "entities": {},
   "recipes_count": 4,
   "recipe_types": [
-    "minecraft:crafting_shaped",
+    "minecraft:crafting_shapeless",
     "solonion:upgrade_food_container",
-    "minecraft:crafting_shapeless"
+    "minecraft:crafting_shaped"
   ],
   "recipes": {
     "food_book": {
       "type": "minecraft:crafting_shapeless",
-      "result": "solonion:food_book"
+      "result": "solonion:food_book",
+      "ingredients": [
+        "minecraft:book",
+        "minecraft:potato"
+      ]
     },
     "golden_lunchbox": {
       "type": "solonion:upgrade_food_container",
-      "result": "solonion:golden_lunchbox"
+      "result": "solonion:golden_lunchbox",
+      "ingredients": []
     },
     "lunchbag": {
       "type": "minecraft:crafting_shaped",
-      "result": "solonion:lunchbag"
+      "result": "solonion:lunchbag",
+      "ingredients": [
+        "minecraft:paper"
+      ]
     },
     "lunchbox": {
       "type": "solonion:upgrade_food_container",
-      "result": "solonion:lunchbox"
+      "result": "solonion:lunchbox",
+      "ingredients": []
     }
   },
   "summary": {

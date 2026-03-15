@@ -481,2706 +481,4107 @@
   "entities": {},
   "recipes_count": 672,
   "recipe_types": [
-    "refurbished_furniture:crafting_special_door_mat_copy",
-    "refurbished_furniture:toaster_heating",
-    "minecraft:crafting_shapeless",
-    "refurbished_furniture:workbench_constructing",
-    "refurbished_furniture:cutting_board_combining",
     "refurbished_furniture:cutting_board_slicing",
-    "refurbished_furniture:frying_pan_cooking",
     "minecraft:crafting_shaped",
-    "refurbished_furniture:oven_baking",
+    "minecraft:crafting_shapeless",
     "refurbished_furniture:microwave_heating",
-    "refurbished_furniture:freezer_solidifying"
+    "refurbished_furniture:oven_baking",
+    "refurbished_furniture:toaster_heating",
+    "refurbished_furniture:freezer_solidifying",
+    "refurbished_furniture:cutting_board_combining",
+    "refurbished_furniture:frying_pan_cooking",
+    "refurbished_furniture:workbench_constructing",
+    "refurbished_furniture:crafting_special_door_mat_copy"
   ],
   "recipes": {
     "acacia_dark_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_dark_ceiling_fan"
+      "result": "refurbished_furniture:acacia_dark_ceiling_fan",
+      "ingredients": []
     },
     "baked_potato": {
       "type": "refurbished_furniture:microwave_heating",
-      "result": "minecraft:baked_potato"
+      "result": "minecraft:baked_potato",
+      "ingredients": [
+        "minecraft:potato"
+      ]
     },
     "cooked_meatlovers_pizza": {
       "type": "refurbished_furniture:oven_baking",
-      "result": "refurbished_furniture:cooked_meatlovers_pizza"
+      "result": "refurbished_furniture:cooked_meatlovers_pizza",
+      "ingredients": [
+        "refurbished_furniture:raw_meatlovers_pizza"
+      ]
     },
     "cooked_vegetable_pizza": {
       "type": "refurbished_furniture:oven_baking",
-      "result": "refurbished_furniture:cooked_vegetable_pizza"
+      "result": "refurbished_furniture:cooked_vegetable_pizza",
+      "ingredients": [
+        "refurbished_furniture:raw_vegetable_pizza"
+      ]
     },
     "sea_salt": {
       "type": "refurbished_furniture:oven_baking",
-      "result": "refurbished_furniture:sea_salt x4"
+      "result": "refurbished_furniture:sea_salt x4",
+      "ingredients": [
+        "minecraft:water_bucket"
+      ]
     },
     "birch_dark_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_dark_ceiling_fan"
+      "result": "refurbished_furniture:birch_dark_ceiling_fan",
+      "ingredients": []
     },
     "black_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:black_cooler"
+      "result": "refurbished_furniture:black_cooler",
+      "ingredients": [
+        "minecraft:black_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "black_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:black_grill"
+      "result": "refurbished_furniture:black_grill",
+      "ingredients": [
+        "minecraft:black_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "black_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:black_kitchen_cabinetry"
+      "result": "refurbished_furniture:black_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:black_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "black_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:black_kitchen_drawer"
+      "result": "refurbished_furniture:black_kitchen_drawer",
+      "ingredients": [
+        "minecraft:black_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "black_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:black_kitchen_sink"
+      "result": "refurbished_furniture:black_kitchen_sink",
+      "ingredients": [
+        "minecraft:black_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "black_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:black_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:black_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:black_dye"
+      ]
     },
     "black_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:black_lamp"
+      "result": "refurbished_furniture:black_lamp",
+      "ingredients": [
+        "minecraft:black_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "black_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:black_sofa"
+      "result": "refurbished_furniture:black_sofa",
+      "ingredients": [
+        "minecraft:black_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "black_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:black_stool"
+      "result": "refurbished_furniture:black_stool",
+      "ingredients": [
+        "minecraft:black_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "black_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_toilet"
+      "result": "refurbished_furniture:black_toilet",
+      "ingredients": []
     },
     "black_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:black_trampoline"
+      "result": "refurbished_furniture:black_trampoline",
+      "ingredients": [
+        "minecraft:black_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "blue_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:blue_cooler"
+      "result": "refurbished_furniture:blue_cooler",
+      "ingredients": [
+        "minecraft:blue_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "blue_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:blue_grill"
+      "result": "refurbished_furniture:blue_grill",
+      "ingredients": [
+        "minecraft:blue_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "blue_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:blue_kitchen_cabinetry"
+      "result": "refurbished_furniture:blue_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:blue_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "blue_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:blue_kitchen_drawer"
+      "result": "refurbished_furniture:blue_kitchen_drawer",
+      "ingredients": [
+        "minecraft:blue_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "blue_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:blue_kitchen_sink"
+      "result": "refurbished_furniture:blue_kitchen_sink",
+      "ingredients": [
+        "minecraft:blue_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "blue_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:blue_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:blue_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:blue_dye"
+      ]
     },
     "blue_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:blue_lamp"
+      "result": "refurbished_furniture:blue_lamp",
+      "ingredients": [
+        "minecraft:blue_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "blue_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:blue_sofa"
+      "result": "refurbished_furniture:blue_sofa",
+      "ingredients": [
+        "minecraft:blue_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "blue_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:blue_stool"
+      "result": "refurbished_furniture:blue_stool",
+      "ingredients": [
+        "minecraft:blue_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "blue_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_toilet"
+      "result": "refurbished_furniture:blue_toilet",
+      "ingredients": []
     },
     "blue_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:blue_trampoline"
+      "result": "refurbished_furniture:blue_trampoline",
+      "ingredients": [
+        "minecraft:blue_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "brown_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:brown_cooler"
+      "result": "refurbished_furniture:brown_cooler",
+      "ingredients": [
+        "minecraft:brown_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "brown_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:brown_grill"
+      "result": "refurbished_furniture:brown_grill",
+      "ingredients": [
+        "minecraft:brown_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "brown_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:brown_kitchen_cabinetry"
+      "result": "refurbished_furniture:brown_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:brown_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "brown_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:brown_kitchen_drawer"
+      "result": "refurbished_furniture:brown_kitchen_drawer",
+      "ingredients": [
+        "minecraft:brown_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "brown_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:brown_kitchen_sink"
+      "result": "refurbished_furniture:brown_kitchen_sink",
+      "ingredients": [
+        "minecraft:brown_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "brown_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:brown_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:brown_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:brown_dye"
+      ]
     },
     "brown_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:brown_lamp"
+      "result": "refurbished_furniture:brown_lamp",
+      "ingredients": [
+        "minecraft:brown_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "brown_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:brown_sofa"
+      "result": "refurbished_furniture:brown_sofa",
+      "ingredients": [
+        "minecraft:brown_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "brown_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:brown_stool"
+      "result": "refurbished_furniture:brown_stool",
+      "ingredients": [
+        "minecraft:brown_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "brown_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_toilet"
+      "result": "refurbished_furniture:brown_toilet",
+      "ingredients": []
     },
     "brown_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:brown_trampoline"
+      "result": "refurbished_furniture:brown_trampoline",
+      "ingredients": [
+        "minecraft:brown_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "cheese": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:cheese x2"
+      "result": "refurbished_furniture:cheese x2",
+      "ingredients": [
+        "refurbished_furniture:sea_salt",
+        "minecraft:milk_bucket"
+      ]
     },
     "cherry_dark_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_dark_ceiling_fan"
+      "result": "refurbished_furniture:cherry_dark_ceiling_fan",
+      "ingredients": []
     },
     "cheese_sandwich": {
       "type": "refurbished_furniture:cutting_board_combining",
-      "result": "refurbished_furniture:cheese_sandwich"
+      "result": "refurbished_furniture:cheese_sandwich",
+      "ingredients": [
+        "refurbished_furniture:bread_slice",
+        "refurbished_furniture:cheese",
+        "refurbished_furniture:bread_slice"
+      ]
     },
     "glow_berry_jam_toast": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:glow_berry_jam_toast"
+      "result": "refurbished_furniture:glow_berry_jam_toast",
+      "ingredients": [
+        "refurbished_furniture:glow_berry_jam",
+        "refurbished_furniture:toast"
+      ]
     },
     "raw_meatlovers_pizza": {
       "type": "refurbished_furniture:cutting_board_combining",
-      "result": "refurbished_furniture:raw_meatlovers_pizza"
+      "result": "refurbished_furniture:raw_meatlovers_pizza",
+      "ingredients": [
+        "refurbished_furniture:dough",
+        "minecraft:cooked_beef",
+        "minecraft:cooked_chicken",
+        "minecraft:cooked_porkchop",
+        "refurbished_furniture:cheese"
+      ]
     },
     "raw_vegetable_pizza": {
       "type": "refurbished_furniture:cutting_board_combining",
-      "result": "refurbished_furniture:raw_vegetable_pizza"
+      "result": "refurbished_furniture:raw_vegetable_pizza",
+      "ingredients": [
+        "refurbished_furniture:dough",
+        "minecraft:carrot",
+        "minecraft:beetroot",
+        "minecraft:potato",
+        "refurbished_furniture:cheese"
+      ]
     },
     "sweet_berry_jam_toast": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:sweet_berry_jam_toast"
+      "result": "refurbished_furniture:sweet_berry_jam_toast",
+      "ingredients": [
+        "refurbished_furniture:sweet_berry_jam",
+        "refurbished_furniture:toast"
+      ]
     },
     "wheat_flour": {
       "type": "refurbished_furniture:cutting_board_combining",
-      "result": "refurbished_furniture:wheat_flour"
+      "result": "refurbished_furniture:wheat_flour",
+      "ingredients": [
+        "minecraft:bowl",
+        "minecraft:wheat",
+        "minecraft:wheat",
+        "minecraft:wheat",
+        "refurbished_furniture:sea_salt"
+      ]
     },
     "acacia_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_basin"
+      "result": "refurbished_furniture:acacia_basin",
+      "ingredients": []
     },
     "acacia_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_bath"
+      "result": "refurbished_furniture:acacia_bath",
+      "ingredients": []
     },
     "acacia_chair": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_chair"
+      "result": "refurbished_furniture:acacia_chair",
+      "ingredients": []
     },
     "acacia_crate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_crate"
+      "result": "refurbished_furniture:acacia_crate",
+      "ingredients": []
     },
     "acacia_cutting_board": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_cutting_board"
+      "result": "refurbished_furniture:acacia_cutting_board",
+      "ingredients": []
     },
     "acacia_desk": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_desk"
+      "result": "refurbished_furniture:acacia_desk",
+      "ingredients": []
     },
     "acacia_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_drawer"
+      "result": "refurbished_furniture:acacia_drawer",
+      "ingredients": []
     },
     "acacia_hedge": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_hedge"
+      "result": "refurbished_furniture:acacia_hedge",
+      "ingredients": []
     },
     "acacia_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_kitchen_cabinetry"
+      "result": "refurbished_furniture:acacia_kitchen_cabinetry",
+      "ingredients": []
     },
     "acacia_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_kitchen_drawer"
+      "result": "refurbished_furniture:acacia_kitchen_drawer",
+      "ingredients": []
     },
     "acacia_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_kitchen_sink"
+      "result": "refurbished_furniture:acacia_kitchen_sink",
+      "ingredients": []
     },
     "acacia_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:acacia_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "acacia_lattice_fence": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_lattice_fence"
+      "result": "refurbished_furniture:acacia_lattice_fence",
+      "ingredients": []
     },
     "acacia_lattice_fence_gate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_lattice_fence_gate"
+      "result": "refurbished_furniture:acacia_lattice_fence_gate",
+      "ingredients": []
     },
     "acacia_light_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_light_ceiling_fan"
+      "result": "refurbished_furniture:acacia_light_ceiling_fan",
+      "ingredients": []
     },
     "acacia_mail_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_mail_box"
+      "result": "refurbished_furniture:acacia_mail_box",
+      "ingredients": []
     },
     "acacia_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_storage_cabinet"
+      "result": "refurbished_furniture:acacia_storage_cabinet",
+      "ingredients": []
     },
     "acacia_storage_jar": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_storage_jar"
+      "result": "refurbished_furniture:acacia_storage_jar",
+      "ingredients": []
     },
     "acacia_table": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_table"
+      "result": "refurbished_furniture:acacia_table",
+      "ingredients": []
     },
     "acacia_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:acacia_toilet"
+      "result": "refurbished_furniture:acacia_toilet",
+      "ingredients": []
     },
     "andesite_stepping_stones": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:andesite_stepping_stones"
+      "result": "refurbished_furniture:andesite_stepping_stones",
+      "ingredients": []
     },
     "azalea_hedge": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:azalea_hedge"
+      "result": "refurbished_furniture:azalea_hedge",
+      "ingredients": []
     },
     "birch_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_basin"
+      "result": "refurbished_furniture:birch_basin",
+      "ingredients": []
     },
     "birch_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_bath"
+      "result": "refurbished_furniture:birch_bath",
+      "ingredients": []
     },
     "birch_chair": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_chair"
+      "result": "refurbished_furniture:birch_chair",
+      "ingredients": []
     },
     "birch_crate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_crate"
+      "result": "refurbished_furniture:birch_crate",
+      "ingredients": []
     },
     "birch_cutting_board": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_cutting_board"
+      "result": "refurbished_furniture:birch_cutting_board",
+      "ingredients": []
     },
     "birch_desk": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_desk"
+      "result": "refurbished_furniture:birch_desk",
+      "ingredients": []
     },
     "birch_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_drawer"
+      "result": "refurbished_furniture:birch_drawer",
+      "ingredients": []
     },
     "birch_hedge": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_hedge"
+      "result": "refurbished_furniture:birch_hedge",
+      "ingredients": []
     },
     "birch_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_kitchen_cabinetry"
+      "result": "refurbished_furniture:birch_kitchen_cabinetry",
+      "ingredients": []
     },
     "birch_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_kitchen_drawer"
+      "result": "refurbished_furniture:birch_kitchen_drawer",
+      "ingredients": []
     },
     "birch_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_kitchen_sink"
+      "result": "refurbished_furniture:birch_kitchen_sink",
+      "ingredients": []
     },
     "birch_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:birch_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "birch_lattice_fence": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_lattice_fence"
+      "result": "refurbished_furniture:birch_lattice_fence",
+      "ingredients": []
     },
     "birch_lattice_fence_gate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_lattice_fence_gate"
+      "result": "refurbished_furniture:birch_lattice_fence_gate",
+      "ingredients": []
     },
     "birch_light_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_light_ceiling_fan"
+      "result": "refurbished_furniture:birch_light_ceiling_fan",
+      "ingredients": []
     },
     "birch_mail_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_mail_box"
+      "result": "refurbished_furniture:birch_mail_box",
+      "ingredients": []
     },
     "birch_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_storage_cabinet"
+      "result": "refurbished_furniture:birch_storage_cabinet",
+      "ingredients": []
     },
     "birch_storage_jar": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_storage_jar"
+      "result": "refurbished_furniture:birch_storage_jar",
+      "ingredients": []
     },
     "birch_table": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_table"
+      "result": "refurbished_furniture:birch_table",
+      "ingredients": []
     },
     "birch_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:birch_toilet"
+      "result": "refurbished_furniture:birch_toilet",
+      "ingredients": []
     },
     "black_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_basin"
+      "result": "refurbished_furniture:black_basin",
+      "ingredients": []
     },
     "black_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_bath"
+      "result": "refurbished_furniture:black_bath",
+      "ingredients": []
     },
     "black_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_cooler"
+      "result": "refurbished_furniture:black_cooler",
+      "ingredients": []
     },
     "black_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_grill"
+      "result": "refurbished_furniture:black_grill",
+      "ingredients": []
     },
     "black_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_kitchen_cabinetry"
+      "result": "refurbished_furniture:black_kitchen_cabinetry",
+      "ingredients": []
     },
     "black_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_kitchen_drawer"
+      "result": "refurbished_furniture:black_kitchen_drawer",
+      "ingredients": []
     },
     "black_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_kitchen_sink"
+      "result": "refurbished_furniture:black_kitchen_sink",
+      "ingredients": []
     },
     "black_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:black_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "black_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_lamp"
+      "result": "refurbished_furniture:black_lamp",
+      "ingredients": []
     },
     "black_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_sofa"
+      "result": "refurbished_furniture:black_sofa",
+      "ingredients": []
     },
     "black_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_stool"
+      "result": "refurbished_furniture:black_stool",
+      "ingredients": []
     },
     "black_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:black_trampoline"
+      "result": "refurbished_furniture:black_trampoline",
+      "ingredients": []
     },
     "blue_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_basin"
+      "result": "refurbished_furniture:blue_basin",
+      "ingredients": []
     },
     "blue_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_bath"
+      "result": "refurbished_furniture:blue_bath",
+      "ingredients": []
     },
     "blue_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_cooler"
+      "result": "refurbished_furniture:blue_cooler",
+      "ingredients": []
     },
     "blue_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_grill"
+      "result": "refurbished_furniture:blue_grill",
+      "ingredients": []
     },
     "blue_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_kitchen_cabinetry"
+      "result": "refurbished_furniture:blue_kitchen_cabinetry",
+      "ingredients": []
     },
     "blue_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_kitchen_drawer"
+      "result": "refurbished_furniture:blue_kitchen_drawer",
+      "ingredients": []
     },
     "blue_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_kitchen_sink"
+      "result": "refurbished_furniture:blue_kitchen_sink",
+      "ingredients": []
     },
     "blue_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:blue_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "blue_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_lamp"
+      "result": "refurbished_furniture:blue_lamp",
+      "ingredients": []
     },
     "blue_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_sofa"
+      "result": "refurbished_furniture:blue_sofa",
+      "ingredients": []
     },
     "blue_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_stool"
+      "result": "refurbished_furniture:blue_stool",
+      "ingredients": []
     },
     "blue_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:blue_trampoline"
+      "result": "refurbished_furniture:blue_trampoline",
+      "ingredients": []
     },
     "brown_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_basin"
+      "result": "refurbished_furniture:brown_basin",
+      "ingredients": []
     },
     "brown_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_bath"
+      "result": "refurbished_furniture:brown_bath",
+      "ingredients": []
     },
     "brown_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_cooler"
+      "result": "refurbished_furniture:brown_cooler",
+      "ingredients": []
     },
     "brown_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_grill"
+      "result": "refurbished_furniture:brown_grill",
+      "ingredients": []
     },
     "brown_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_kitchen_cabinetry"
+      "result": "refurbished_furniture:brown_kitchen_cabinetry",
+      "ingredients": []
     },
     "brown_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_kitchen_drawer"
+      "result": "refurbished_furniture:brown_kitchen_drawer",
+      "ingredients": []
     },
     "brown_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_kitchen_sink"
+      "result": "refurbished_furniture:brown_kitchen_sink",
+      "ingredients": []
     },
     "brown_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:brown_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "brown_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_lamp"
+      "result": "refurbished_furniture:brown_lamp",
+      "ingredients": []
     },
     "brown_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_sofa"
+      "result": "refurbished_furniture:brown_sofa",
+      "ingredients": []
     },
     "brown_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_stool"
+      "result": "refurbished_furniture:brown_stool",
+      "ingredients": []
     },
     "brown_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:brown_trampoline"
+      "result": "refurbished_furniture:brown_trampoline",
+      "ingredients": []
     },
     "cherry_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_basin"
+      "result": "refurbished_furniture:cherry_basin",
+      "ingredients": []
     },
     "cherry_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_bath"
+      "result": "refurbished_furniture:cherry_bath",
+      "ingredients": []
     },
     "cherry_chair": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_chair"
+      "result": "refurbished_furniture:cherry_chair",
+      "ingredients": []
     },
     "cherry_crate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_crate"
+      "result": "refurbished_furniture:cherry_crate",
+      "ingredients": []
     },
     "cherry_cutting_board": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_cutting_board"
+      "result": "refurbished_furniture:cherry_cutting_board",
+      "ingredients": []
     },
     "cherry_desk": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_desk"
+      "result": "refurbished_furniture:cherry_desk",
+      "ingredients": []
     },
     "cherry_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_drawer"
+      "result": "refurbished_furniture:cherry_drawer",
+      "ingredients": []
     },
     "cherry_hedge": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_hedge"
+      "result": "refurbished_furniture:cherry_hedge",
+      "ingredients": []
     },
     "cherry_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_kitchen_cabinetry"
+      "result": "refurbished_furniture:cherry_kitchen_cabinetry",
+      "ingredients": []
     },
     "cherry_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_kitchen_drawer"
+      "result": "refurbished_furniture:cherry_kitchen_drawer",
+      "ingredients": []
     },
     "cherry_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_kitchen_sink"
+      "result": "refurbished_furniture:cherry_kitchen_sink",
+      "ingredients": []
     },
     "cherry_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:cherry_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "cherry_lattice_fence": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_lattice_fence"
+      "result": "refurbished_furniture:cherry_lattice_fence",
+      "ingredients": []
     },
     "cherry_lattice_fence_gate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_lattice_fence_gate"
+      "result": "refurbished_furniture:cherry_lattice_fence_gate",
+      "ingredients": []
     },
     "cherry_light_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_light_ceiling_fan"
+      "result": "refurbished_furniture:cherry_light_ceiling_fan",
+      "ingredients": []
     },
     "cherry_mail_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_mail_box"
+      "result": "refurbished_furniture:cherry_mail_box",
+      "ingredients": []
     },
     "cherry_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_storage_cabinet"
+      "result": "refurbished_furniture:cherry_storage_cabinet",
+      "ingredients": []
     },
     "cherry_storage_jar": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_storage_jar"
+      "result": "refurbished_furniture:cherry_storage_jar",
+      "ingredients": []
     },
     "cherry_table": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_table"
+      "result": "refurbished_furniture:cherry_table",
+      "ingredients": []
     },
     "cherry_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cherry_toilet"
+      "result": "refurbished_furniture:cherry_toilet",
+      "ingredients": []
     },
     "computer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:computer"
+      "result": "refurbished_furniture:computer",
+      "ingredients": []
     },
     "crimson_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_basin"
+      "result": "refurbished_furniture:crimson_basin",
+      "ingredients": []
     },
     "crimson_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_bath"
+      "result": "refurbished_furniture:crimson_bath",
+      "ingredients": []
     },
     "crimson_chair": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_chair"
+      "result": "refurbished_furniture:crimson_chair",
+      "ingredients": []
     },
     "crimson_crate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_crate"
+      "result": "refurbished_furniture:crimson_crate",
+      "ingredients": []
     },
     "crimson_cutting_board": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_cutting_board"
+      "result": "refurbished_furniture:crimson_cutting_board",
+      "ingredients": []
     },
     "crimson_dark_ceiling_fan": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:crimson_dark_ceiling_fan"
+      "result": "refurbished_furniture:crimson_dark_ceiling_fan",
+      "ingredients": [
+        "refurbished_furniture:crimson_light_ceiling_fan",
+        "minecraft:black_dye"
+      ]
     },
     "crimson_desk": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_desk"
+      "result": "refurbished_furniture:crimson_desk",
+      "ingredients": []
     },
     "crimson_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_drawer"
+      "result": "refurbished_furniture:crimson_drawer",
+      "ingredients": []
     },
     "crimson_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_kitchen_cabinetry"
+      "result": "refurbished_furniture:crimson_kitchen_cabinetry",
+      "ingredients": []
     },
     "crimson_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_kitchen_drawer"
+      "result": "refurbished_furniture:crimson_kitchen_drawer",
+      "ingredients": []
     },
     "crimson_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_kitchen_sink"
+      "result": "refurbished_furniture:crimson_kitchen_sink",
+      "ingredients": []
     },
     "crimson_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:crimson_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "crimson_lattice_fence": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_lattice_fence"
+      "result": "refurbished_furniture:crimson_lattice_fence",
+      "ingredients": []
     },
     "crimson_lattice_fence_gate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_lattice_fence_gate"
+      "result": "refurbished_furniture:crimson_lattice_fence_gate",
+      "ingredients": []
     },
     "crimson_light_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_light_ceiling_fan"
+      "result": "refurbished_furniture:crimson_light_ceiling_fan",
+      "ingredients": []
     },
     "crimson_mail_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_mail_box"
+      "result": "refurbished_furniture:crimson_mail_box",
+      "ingredients": []
     },
     "crimson_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_storage_cabinet"
+      "result": "refurbished_furniture:crimson_storage_cabinet",
+      "ingredients": []
     },
     "crimson_storage_jar": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_storage_jar"
+      "result": "refurbished_furniture:crimson_storage_jar",
+      "ingredients": []
     },
     "crimson_table": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_table"
+      "result": "refurbished_furniture:crimson_table",
+      "ingredients": []
     },
     "crimson_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:crimson_toilet"
+      "result": "refurbished_furniture:crimson_toilet",
+      "ingredients": []
     },
     "cyan_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_basin"
+      "result": "refurbished_furniture:cyan_basin",
+      "ingredients": []
     },
     "cyan_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_bath"
+      "result": "refurbished_furniture:cyan_bath",
+      "ingredients": []
     },
     "cyan_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_cooler"
+      "result": "refurbished_furniture:cyan_cooler",
+      "ingredients": []
     },
     "cyan_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_grill"
+      "result": "refurbished_furniture:cyan_grill",
+      "ingredients": []
     },
     "cyan_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_kitchen_cabinetry"
+      "result": "refurbished_furniture:cyan_kitchen_cabinetry",
+      "ingredients": []
     },
     "cyan_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_kitchen_drawer"
+      "result": "refurbished_furniture:cyan_kitchen_drawer",
+      "ingredients": []
     },
     "cyan_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_kitchen_sink"
+      "result": "refurbished_furniture:cyan_kitchen_sink",
+      "ingredients": []
     },
     "cyan_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:cyan_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "cyan_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_lamp"
+      "result": "refurbished_furniture:cyan_lamp",
+      "ingredients": []
     },
     "cyan_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_sofa"
+      "result": "refurbished_furniture:cyan_sofa",
+      "ingredients": []
     },
     "cyan_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_stool"
+      "result": "refurbished_furniture:cyan_stool",
+      "ingredients": []
     },
     "cyan_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:cyan_toilet"
+      "result": "refurbished_furniture:cyan_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:cyan_dye"
+      ]
     },
     "cyan_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:cyan_trampoline"
+      "result": "refurbished_furniture:cyan_trampoline",
+      "ingredients": []
     },
     "dark_ceiling_light": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:dark_ceiling_light"
+      "result": "refurbished_furniture:dark_ceiling_light",
+      "ingredients": [
+        "refurbished_furniture:light_ceiling_light",
+        "minecraft:black_dye"
+      ]
     },
     "dark_fridge": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:dark_fridge"
+      "result": "refurbished_furniture:dark_fridge",
+      "ingredients": [
+        "refurbished_furniture:light_fridge",
+        "minecraft:black_dye"
+      ]
     },
     "dark_lightswitch": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:dark_lightswitch"
+      "result": "refurbished_furniture:dark_lightswitch",
+      "ingredients": [
+        "refurbished_furniture:light_lightswitch",
+        "minecraft:black_dye"
+      ]
     },
     "dark_microwave": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:dark_microwave"
+      "result": "refurbished_furniture:dark_microwave",
+      "ingredients": [
+        "refurbished_furniture:light_microwave",
+        "minecraft:black_dye"
+      ]
     },
     "dark_oak_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_basin"
+      "result": "refurbished_furniture:dark_oak_basin",
+      "ingredients": []
     },
     "dark_oak_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_bath"
+      "result": "refurbished_furniture:dark_oak_bath",
+      "ingredients": []
     },
     "dark_oak_chair": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_chair"
+      "result": "refurbished_furniture:dark_oak_chair",
+      "ingredients": []
     },
     "dark_oak_crate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_crate"
+      "result": "refurbished_furniture:dark_oak_crate",
+      "ingredients": []
     },
     "dark_oak_cutting_board": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_cutting_board"
+      "result": "refurbished_furniture:dark_oak_cutting_board",
+      "ingredients": []
     },
     "dark_oak_dark_ceiling_fan": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:dark_oak_dark_ceiling_fan"
+      "result": "refurbished_furniture:dark_oak_dark_ceiling_fan",
+      "ingredients": [
+        "refurbished_furniture:dark_oak_light_ceiling_fan",
+        "minecraft:black_dye"
+      ]
     },
     "dark_oak_desk": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_desk"
+      "result": "refurbished_furniture:dark_oak_desk",
+      "ingredients": []
     },
     "dark_oak_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_drawer"
+      "result": "refurbished_furniture:dark_oak_drawer",
+      "ingredients": []
     },
     "dark_oak_hedge": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_hedge"
+      "result": "refurbished_furniture:dark_oak_hedge",
+      "ingredients": []
     },
     "dark_oak_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_kitchen_cabinetry"
+      "result": "refurbished_furniture:dark_oak_kitchen_cabinetry",
+      "ingredients": []
     },
     "dark_oak_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_kitchen_drawer"
+      "result": "refurbished_furniture:dark_oak_kitchen_drawer",
+      "ingredients": []
     },
     "dark_oak_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_kitchen_sink"
+      "result": "refurbished_furniture:dark_oak_kitchen_sink",
+      "ingredients": []
     },
     "dark_oak_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:dark_oak_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "dark_oak_lattice_fence": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_lattice_fence"
+      "result": "refurbished_furniture:dark_oak_lattice_fence",
+      "ingredients": []
     },
     "dark_oak_lattice_fence_gate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_lattice_fence_gate"
+      "result": "refurbished_furniture:dark_oak_lattice_fence_gate",
+      "ingredients": []
     },
     "dark_oak_light_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_light_ceiling_fan"
+      "result": "refurbished_furniture:dark_oak_light_ceiling_fan",
+      "ingredients": []
     },
     "dark_oak_mail_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_mail_box"
+      "result": "refurbished_furniture:dark_oak_mail_box",
+      "ingredients": []
     },
     "dark_oak_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_storage_cabinet"
+      "result": "refurbished_furniture:dark_oak_storage_cabinet",
+      "ingredients": []
     },
     "dark_oak_storage_jar": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_storage_jar"
+      "result": "refurbished_furniture:dark_oak_storage_jar",
+      "ingredients": []
     },
     "dark_oak_table": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_table"
+      "result": "refurbished_furniture:dark_oak_table",
+      "ingredients": []
     },
     "dark_oak_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:dark_oak_toilet"
+      "result": "refurbished_furniture:dark_oak_toilet",
+      "ingredients": []
     },
     "dark_range_hood": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:dark_range_hood"
+      "result": "refurbished_furniture:dark_range_hood",
+      "ingredients": [
+        "refurbished_furniture:light_range_hood",
+        "minecraft:black_dye"
+      ]
     },
     "dark_stove": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:dark_stove"
+      "result": "refurbished_furniture:dark_stove",
+      "ingredients": [
+        "refurbished_furniture:light_stove",
+        "minecraft:black_dye"
+      ]
     },
     "dark_toaster": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:dark_toaster"
+      "result": "refurbished_furniture:dark_toaster",
+      "ingredients": [
+        "refurbished_furniture:light_toaster",
+        "minecraft:black_dye"
+      ]
     },
     "deepslate_stepping_stones": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:deepslate_stepping_stones"
+      "result": "refurbished_furniture:deepslate_stepping_stones",
+      "ingredients": []
     },
     "diorite_stepping_stones": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:diorite_stepping_stones"
+      "result": "refurbished_furniture:diorite_stepping_stones",
+      "ingredients": []
     },
     "door_mat": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:door_mat"
+      "result": "refurbished_furniture:door_mat",
+      "ingredients": []
     },
     "doorbell": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:doorbell"
+      "result": "refurbished_furniture:doorbell",
+      "ingredients": []
     },
     "frying_pan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:frying_pan"
+      "result": "refurbished_furniture:frying_pan",
+      "ingredients": []
     },
     "granite_stepping_stones": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:granite_stepping_stones"
+      "result": "refurbished_furniture:granite_stepping_stones",
+      "ingredients": []
     },
     "gray_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_basin"
+      "result": "refurbished_furniture:gray_basin",
+      "ingredients": []
     },
     "gray_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_bath"
+      "result": "refurbished_furniture:gray_bath",
+      "ingredients": []
     },
     "gray_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_cooler"
+      "result": "refurbished_furniture:gray_cooler",
+      "ingredients": []
     },
     "gray_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_grill"
+      "result": "refurbished_furniture:gray_grill",
+      "ingredients": []
     },
     "gray_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_kitchen_cabinetry"
+      "result": "refurbished_furniture:gray_kitchen_cabinetry",
+      "ingredients": []
     },
     "gray_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_kitchen_drawer"
+      "result": "refurbished_furniture:gray_kitchen_drawer",
+      "ingredients": []
     },
     "gray_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_kitchen_sink"
+      "result": "refurbished_furniture:gray_kitchen_sink",
+      "ingredients": []
     },
     "gray_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:gray_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "gray_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_lamp"
+      "result": "refurbished_furniture:gray_lamp",
+      "ingredients": []
     },
     "gray_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_sofa"
+      "result": "refurbished_furniture:gray_sofa",
+      "ingredients": []
     },
     "gray_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_stool"
+      "result": "refurbished_furniture:gray_stool",
+      "ingredients": []
     },
     "gray_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:gray_toilet"
+      "result": "refurbished_furniture:gray_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:gray_dye"
+      ]
     },
     "gray_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:gray_trampoline"
+      "result": "refurbished_furniture:gray_trampoline",
+      "ingredients": []
     },
     "green_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_basin"
+      "result": "refurbished_furniture:green_basin",
+      "ingredients": []
     },
     "green_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_bath"
+      "result": "refurbished_furniture:green_bath",
+      "ingredients": []
     },
     "green_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_cooler"
+      "result": "refurbished_furniture:green_cooler",
+      "ingredients": []
     },
     "green_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_grill"
+      "result": "refurbished_furniture:green_grill",
+      "ingredients": []
     },
     "green_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_kitchen_cabinetry"
+      "result": "refurbished_furniture:green_kitchen_cabinetry",
+      "ingredients": []
     },
     "green_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_kitchen_drawer"
+      "result": "refurbished_furniture:green_kitchen_drawer",
+      "ingredients": []
     },
     "green_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_kitchen_sink"
+      "result": "refurbished_furniture:green_kitchen_sink",
+      "ingredients": []
     },
     "green_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:green_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "green_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_lamp"
+      "result": "refurbished_furniture:green_lamp",
+      "ingredients": []
     },
     "green_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_sofa"
+      "result": "refurbished_furniture:green_sofa",
+      "ingredients": []
     },
     "green_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_stool"
+      "result": "refurbished_furniture:green_stool",
+      "ingredients": []
     },
     "green_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:green_toilet"
+      "result": "refurbished_furniture:green_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:green_dye"
+      ]
     },
     "green_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:green_trampoline"
+      "result": "refurbished_furniture:green_trampoline",
+      "ingredients": []
     },
     "jungle_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_basin"
+      "result": "refurbished_furniture:jungle_basin",
+      "ingredients": []
     },
     "jungle_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_bath"
+      "result": "refurbished_furniture:jungle_bath",
+      "ingredients": []
     },
     "jungle_chair": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_chair"
+      "result": "refurbished_furniture:jungle_chair",
+      "ingredients": []
     },
     "jungle_crate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_crate"
+      "result": "refurbished_furniture:jungle_crate",
+      "ingredients": []
     },
     "jungle_cutting_board": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_cutting_board"
+      "result": "refurbished_furniture:jungle_cutting_board",
+      "ingredients": []
     },
     "jungle_dark_ceiling_fan": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:jungle_dark_ceiling_fan"
+      "result": "refurbished_furniture:jungle_dark_ceiling_fan",
+      "ingredients": [
+        "refurbished_furniture:jungle_light_ceiling_fan",
+        "minecraft:black_dye"
+      ]
     },
     "jungle_desk": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_desk"
+      "result": "refurbished_furniture:jungle_desk",
+      "ingredients": []
     },
     "jungle_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_drawer"
+      "result": "refurbished_furniture:jungle_drawer",
+      "ingredients": []
     },
     "jungle_hedge": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_hedge"
+      "result": "refurbished_furniture:jungle_hedge",
+      "ingredients": []
     },
     "jungle_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_kitchen_cabinetry"
+      "result": "refurbished_furniture:jungle_kitchen_cabinetry",
+      "ingredients": []
     },
     "jungle_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_kitchen_drawer"
+      "result": "refurbished_furniture:jungle_kitchen_drawer",
+      "ingredients": []
     },
     "jungle_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_kitchen_sink"
+      "result": "refurbished_furniture:jungle_kitchen_sink",
+      "ingredients": []
     },
     "jungle_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:jungle_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "jungle_lattice_fence": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_lattice_fence"
+      "result": "refurbished_furniture:jungle_lattice_fence",
+      "ingredients": []
     },
     "jungle_lattice_fence_gate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_lattice_fence_gate"
+      "result": "refurbished_furniture:jungle_lattice_fence_gate",
+      "ingredients": []
     },
     "jungle_light_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_light_ceiling_fan"
+      "result": "refurbished_furniture:jungle_light_ceiling_fan",
+      "ingredients": []
     },
     "jungle_mail_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_mail_box"
+      "result": "refurbished_furniture:jungle_mail_box",
+      "ingredients": []
     },
     "jungle_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_storage_cabinet"
+      "result": "refurbished_furniture:jungle_storage_cabinet",
+      "ingredients": []
     },
     "jungle_storage_jar": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_storage_jar"
+      "result": "refurbished_furniture:jungle_storage_jar",
+      "ingredients": []
     },
     "jungle_table": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_table"
+      "result": "refurbished_furniture:jungle_table",
+      "ingredients": []
     },
     "jungle_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:jungle_toilet"
+      "result": "refurbished_furniture:jungle_toilet",
+      "ingredients": []
     },
     "light_blue_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_basin"
+      "result": "refurbished_furniture:light_blue_basin",
+      "ingredients": []
     },
     "light_blue_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_bath"
+      "result": "refurbished_furniture:light_blue_bath",
+      "ingredients": []
     },
     "light_blue_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_cooler"
+      "result": "refurbished_furniture:light_blue_cooler",
+      "ingredients": []
     },
     "light_blue_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_grill"
+      "result": "refurbished_furniture:light_blue_grill",
+      "ingredients": []
     },
     "light_blue_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_kitchen_cabinetry"
+      "result": "refurbished_furniture:light_blue_kitchen_cabinetry",
+      "ingredients": []
     },
     "light_blue_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_kitchen_drawer"
+      "result": "refurbished_furniture:light_blue_kitchen_drawer",
+      "ingredients": []
     },
     "light_blue_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_kitchen_sink"
+      "result": "refurbished_furniture:light_blue_kitchen_sink",
+      "ingredients": []
     },
     "light_blue_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:light_blue_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "light_blue_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_lamp"
+      "result": "refurbished_furniture:light_blue_lamp",
+      "ingredients": []
     },
     "light_blue_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_sofa"
+      "result": "refurbished_furniture:light_blue_sofa",
+      "ingredients": []
     },
     "light_blue_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_stool"
+      "result": "refurbished_furniture:light_blue_stool",
+      "ingredients": []
     },
     "light_blue_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_blue_toilet"
+      "result": "refurbished_furniture:light_blue_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:light_blue_dye"
+      ]
     },
     "light_blue_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_blue_trampoline"
+      "result": "refurbished_furniture:light_blue_trampoline",
+      "ingredients": []
     },
     "light_ceiling_light": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_ceiling_light"
+      "result": "refurbished_furniture:light_ceiling_light",
+      "ingredients": []
     },
     "light_fridge": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_fridge"
+      "result": "refurbished_furniture:light_fridge",
+      "ingredients": []
     },
     "light_gray_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_basin"
+      "result": "refurbished_furniture:light_gray_basin",
+      "ingredients": []
     },
     "light_gray_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_bath"
+      "result": "refurbished_furniture:light_gray_bath",
+      "ingredients": []
     },
     "light_gray_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_cooler"
+      "result": "refurbished_furniture:light_gray_cooler",
+      "ingredients": []
     },
     "light_gray_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_grill"
+      "result": "refurbished_furniture:light_gray_grill",
+      "ingredients": []
     },
     "light_gray_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_kitchen_cabinetry"
+      "result": "refurbished_furniture:light_gray_kitchen_cabinetry",
+      "ingredients": []
     },
     "light_gray_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_kitchen_drawer"
+      "result": "refurbished_furniture:light_gray_kitchen_drawer",
+      "ingredients": []
     },
     "light_gray_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_kitchen_sink"
+      "result": "refurbished_furniture:light_gray_kitchen_sink",
+      "ingredients": []
     },
     "light_gray_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:light_gray_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "light_gray_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_lamp"
+      "result": "refurbished_furniture:light_gray_lamp",
+      "ingredients": []
     },
     "light_gray_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_sofa"
+      "result": "refurbished_furniture:light_gray_sofa",
+      "ingredients": []
     },
     "light_gray_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_stool"
+      "result": "refurbished_furniture:light_gray_stool",
+      "ingredients": []
     },
     "light_gray_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_gray_toilet"
+      "result": "refurbished_furniture:light_gray_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:light_gray_dye"
+      ]
     },
     "light_gray_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_gray_trampoline"
+      "result": "refurbished_furniture:light_gray_trampoline",
+      "ingredients": []
     },
     "light_lightswitch": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_lightswitch"
+      "result": "refurbished_furniture:light_lightswitch",
+      "ingredients": []
     },
     "light_microwave": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_microwave"
+      "result": "refurbished_furniture:light_microwave",
+      "ingredients": []
     },
     "light_range_hood": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_range_hood"
+      "result": "refurbished_furniture:light_range_hood",
+      "ingredients": []
     },
     "light_stove": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_stove"
+      "result": "refurbished_furniture:light_stove",
+      "ingredients": []
     },
     "light_toaster": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:light_toaster"
+      "result": "refurbished_furniture:light_toaster",
+      "ingredients": []
     },
     "lime_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_basin"
+      "result": "refurbished_furniture:lime_basin",
+      "ingredients": []
     },
     "lime_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_bath"
+      "result": "refurbished_furniture:lime_bath",
+      "ingredients": []
     },
     "lime_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_cooler"
+      "result": "refurbished_furniture:lime_cooler",
+      "ingredients": []
     },
     "lime_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_grill"
+      "result": "refurbished_furniture:lime_grill",
+      "ingredients": []
     },
     "lime_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_kitchen_cabinetry"
+      "result": "refurbished_furniture:lime_kitchen_cabinetry",
+      "ingredients": []
     },
     "lime_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_kitchen_drawer"
+      "result": "refurbished_furniture:lime_kitchen_drawer",
+      "ingredients": []
     },
     "lime_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_kitchen_sink"
+      "result": "refurbished_furniture:lime_kitchen_sink",
+      "ingredients": []
     },
     "lime_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:lime_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "lime_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_lamp"
+      "result": "refurbished_furniture:lime_lamp",
+      "ingredients": []
     },
     "lime_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_sofa"
+      "result": "refurbished_furniture:lime_sofa",
+      "ingredients": []
     },
     "lime_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_stool"
+      "result": "refurbished_furniture:lime_stool",
+      "ingredients": []
     },
     "lime_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:lime_toilet"
+      "result": "refurbished_furniture:lime_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:lime_dye"
+      ]
     },
     "lime_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:lime_trampoline"
+      "result": "refurbished_furniture:lime_trampoline",
+      "ingredients": []
     },
     "magenta_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_basin"
+      "result": "refurbished_furniture:magenta_basin",
+      "ingredients": []
     },
     "magenta_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_bath"
+      "result": "refurbished_furniture:magenta_bath",
+      "ingredients": []
     },
     "magenta_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_cooler"
+      "result": "refurbished_furniture:magenta_cooler",
+      "ingredients": []
     },
     "magenta_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_grill"
+      "result": "refurbished_furniture:magenta_grill",
+      "ingredients": []
     },
     "magenta_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_kitchen_cabinetry"
+      "result": "refurbished_furniture:magenta_kitchen_cabinetry",
+      "ingredients": []
     },
     "magenta_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_kitchen_drawer"
+      "result": "refurbished_furniture:magenta_kitchen_drawer",
+      "ingredients": []
     },
     "magenta_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_kitchen_sink"
+      "result": "refurbished_furniture:magenta_kitchen_sink",
+      "ingredients": []
     },
     "magenta_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:magenta_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "magenta_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_lamp"
+      "result": "refurbished_furniture:magenta_lamp",
+      "ingredients": []
     },
     "magenta_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_sofa"
+      "result": "refurbished_furniture:magenta_sofa",
+      "ingredients": []
     },
     "magenta_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_stool"
+      "result": "refurbished_furniture:magenta_stool",
+      "ingredients": []
     },
     "magenta_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:magenta_toilet"
+      "result": "refurbished_furniture:magenta_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:magenta_dye"
+      ]
     },
     "magenta_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:magenta_trampoline"
+      "result": "refurbished_furniture:magenta_trampoline",
+      "ingredients": []
     },
     "mangrove_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_basin"
+      "result": "refurbished_furniture:mangrove_basin",
+      "ingredients": []
     },
     "mangrove_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_bath"
+      "result": "refurbished_furniture:mangrove_bath",
+      "ingredients": []
     },
     "mangrove_chair": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_chair"
+      "result": "refurbished_furniture:mangrove_chair",
+      "ingredients": []
     },
     "mangrove_crate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_crate"
+      "result": "refurbished_furniture:mangrove_crate",
+      "ingredients": []
     },
     "mangrove_cutting_board": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_cutting_board"
+      "result": "refurbished_furniture:mangrove_cutting_board",
+      "ingredients": []
     },
     "mangrove_dark_ceiling_fan": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:mangrove_dark_ceiling_fan"
+      "result": "refurbished_furniture:mangrove_dark_ceiling_fan",
+      "ingredients": [
+        "refurbished_furniture:mangrove_light_ceiling_fan",
+        "minecraft:black_dye"
+      ]
     },
     "mangrove_desk": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_desk"
+      "result": "refurbished_furniture:mangrove_desk",
+      "ingredients": []
     },
     "mangrove_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_drawer"
+      "result": "refurbished_furniture:mangrove_drawer",
+      "ingredients": []
     },
     "mangrove_hedge": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_hedge"
+      "result": "refurbished_furniture:mangrove_hedge",
+      "ingredients": []
     },
     "mangrove_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_kitchen_cabinetry"
+      "result": "refurbished_furniture:mangrove_kitchen_cabinetry",
+      "ingredients": []
     },
     "mangrove_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_kitchen_drawer"
+      "result": "refurbished_furniture:mangrove_kitchen_drawer",
+      "ingredients": []
     },
     "mangrove_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_kitchen_sink"
+      "result": "refurbished_furniture:mangrove_kitchen_sink",
+      "ingredients": []
     },
     "mangrove_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:mangrove_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "mangrove_lattice_fence": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_lattice_fence"
+      "result": "refurbished_furniture:mangrove_lattice_fence",
+      "ingredients": []
     },
     "mangrove_lattice_fence_gate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_lattice_fence_gate"
+      "result": "refurbished_furniture:mangrove_lattice_fence_gate",
+      "ingredients": []
     },
     "mangrove_light_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_light_ceiling_fan"
+      "result": "refurbished_furniture:mangrove_light_ceiling_fan",
+      "ingredients": []
     },
     "mangrove_mail_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_mail_box"
+      "result": "refurbished_furniture:mangrove_mail_box",
+      "ingredients": []
     },
     "mangrove_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_storage_cabinet"
+      "result": "refurbished_furniture:mangrove_storage_cabinet",
+      "ingredients": []
     },
     "mangrove_storage_jar": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_storage_jar"
+      "result": "refurbished_furniture:mangrove_storage_jar",
+      "ingredients": []
     },
     "mangrove_table": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_table"
+      "result": "refurbished_furniture:mangrove_table",
+      "ingredients": []
     },
     "mangrove_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:mangrove_toilet"
+      "result": "refurbished_furniture:mangrove_toilet",
+      "ingredients": []
     },
     "oak_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_basin"
+      "result": "refurbished_furniture:oak_basin",
+      "ingredients": []
     },
     "oak_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_bath"
+      "result": "refurbished_furniture:oak_bath",
+      "ingredients": []
     },
     "oak_chair": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_chair"
+      "result": "refurbished_furniture:oak_chair",
+      "ingredients": []
     },
     "oak_crate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_crate"
+      "result": "refurbished_furniture:oak_crate",
+      "ingredients": []
     },
     "oak_cutting_board": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_cutting_board"
+      "result": "refurbished_furniture:oak_cutting_board",
+      "ingredients": []
     },
     "oak_dark_ceiling_fan": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:oak_dark_ceiling_fan"
+      "result": "refurbished_furniture:oak_dark_ceiling_fan",
+      "ingredients": [
+        "refurbished_furniture:oak_light_ceiling_fan",
+        "minecraft:black_dye"
+      ]
     },
     "oak_desk": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_desk"
+      "result": "refurbished_furniture:oak_desk",
+      "ingredients": []
     },
     "oak_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_drawer"
+      "result": "refurbished_furniture:oak_drawer",
+      "ingredients": []
     },
     "oak_hedge": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_hedge"
+      "result": "refurbished_furniture:oak_hedge",
+      "ingredients": []
     },
     "oak_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_kitchen_cabinetry"
+      "result": "refurbished_furniture:oak_kitchen_cabinetry",
+      "ingredients": []
     },
     "oak_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_kitchen_drawer"
+      "result": "refurbished_furniture:oak_kitchen_drawer",
+      "ingredients": []
     },
     "oak_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_kitchen_sink"
+      "result": "refurbished_furniture:oak_kitchen_sink",
+      "ingredients": []
     },
     "oak_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:oak_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "oak_lattice_fence": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_lattice_fence"
+      "result": "refurbished_furniture:oak_lattice_fence",
+      "ingredients": []
     },
     "oak_lattice_fence_gate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_lattice_fence_gate"
+      "result": "refurbished_furniture:oak_lattice_fence_gate",
+      "ingredients": []
     },
     "oak_light_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_light_ceiling_fan"
+      "result": "refurbished_furniture:oak_light_ceiling_fan",
+      "ingredients": []
     },
     "oak_mail_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_mail_box"
+      "result": "refurbished_furniture:oak_mail_box",
+      "ingredients": []
     },
     "oak_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_storage_cabinet"
+      "result": "refurbished_furniture:oak_storage_cabinet",
+      "ingredients": []
     },
     "oak_storage_jar": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_storage_jar"
+      "result": "refurbished_furniture:oak_storage_jar",
+      "ingredients": []
     },
     "oak_table": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_table"
+      "result": "refurbished_furniture:oak_table",
+      "ingredients": []
     },
     "oak_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:oak_toilet"
+      "result": "refurbished_furniture:oak_toilet",
+      "ingredients": []
     },
     "orange_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_basin"
+      "result": "refurbished_furniture:orange_basin",
+      "ingredients": []
     },
     "orange_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_bath"
+      "result": "refurbished_furniture:orange_bath",
+      "ingredients": []
     },
     "orange_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_cooler"
+      "result": "refurbished_furniture:orange_cooler",
+      "ingredients": []
     },
     "orange_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_grill"
+      "result": "refurbished_furniture:orange_grill",
+      "ingredients": []
     },
     "orange_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_kitchen_cabinetry"
+      "result": "refurbished_furniture:orange_kitchen_cabinetry",
+      "ingredients": []
     },
     "orange_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_kitchen_drawer"
+      "result": "refurbished_furniture:orange_kitchen_drawer",
+      "ingredients": []
     },
     "orange_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_kitchen_sink"
+      "result": "refurbished_furniture:orange_kitchen_sink",
+      "ingredients": []
     },
     "orange_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:orange_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "orange_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_lamp"
+      "result": "refurbished_furniture:orange_lamp",
+      "ingredients": []
     },
     "orange_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_sofa"
+      "result": "refurbished_furniture:orange_sofa",
+      "ingredients": []
     },
     "orange_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_stool"
+      "result": "refurbished_furniture:orange_stool",
+      "ingredients": []
     },
     "orange_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:orange_toilet"
+      "result": "refurbished_furniture:orange_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:orange_dye"
+      ]
     },
     "orange_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:orange_trampoline"
+      "result": "refurbished_furniture:orange_trampoline",
+      "ingredients": []
     },
     "pink_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_basin"
+      "result": "refurbished_furniture:pink_basin",
+      "ingredients": []
     },
     "pink_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_bath"
+      "result": "refurbished_furniture:pink_bath",
+      "ingredients": []
     },
     "pink_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_cooler"
+      "result": "refurbished_furniture:pink_cooler",
+      "ingredients": []
     },
     "pink_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_grill"
+      "result": "refurbished_furniture:pink_grill",
+      "ingredients": []
     },
     "pink_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_kitchen_cabinetry"
+      "result": "refurbished_furniture:pink_kitchen_cabinetry",
+      "ingredients": []
     },
     "pink_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_kitchen_drawer"
+      "result": "refurbished_furniture:pink_kitchen_drawer",
+      "ingredients": []
     },
     "pink_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_kitchen_sink"
+      "result": "refurbished_furniture:pink_kitchen_sink",
+      "ingredients": []
     },
     "pink_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:pink_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "pink_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_lamp"
+      "result": "refurbished_furniture:pink_lamp",
+      "ingredients": []
     },
     "pink_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_sofa"
+      "result": "refurbished_furniture:pink_sofa",
+      "ingredients": []
     },
     "pink_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_stool"
+      "result": "refurbished_furniture:pink_stool",
+      "ingredients": []
     },
     "pink_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:pink_toilet"
+      "result": "refurbished_furniture:pink_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:pink_dye"
+      ]
     },
     "pink_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:pink_trampoline"
+      "result": "refurbished_furniture:pink_trampoline",
+      "ingredients": []
     },
     "plate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:plate"
+      "result": "refurbished_furniture:plate",
+      "ingredients": []
     },
     "post_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:post_box"
+      "result": "refurbished_furniture:post_box",
+      "ingredients": []
     },
     "purple_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_basin"
+      "result": "refurbished_furniture:purple_basin",
+      "ingredients": []
     },
     "purple_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_bath"
+      "result": "refurbished_furniture:purple_bath",
+      "ingredients": []
     },
     "purple_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_cooler"
+      "result": "refurbished_furniture:purple_cooler",
+      "ingredients": []
     },
     "purple_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_grill"
+      "result": "refurbished_furniture:purple_grill",
+      "ingredients": []
     },
     "purple_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_kitchen_cabinetry"
+      "result": "refurbished_furniture:purple_kitchen_cabinetry",
+      "ingredients": []
     },
     "purple_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_kitchen_drawer"
+      "result": "refurbished_furniture:purple_kitchen_drawer",
+      "ingredients": []
     },
     "purple_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_kitchen_sink"
+      "result": "refurbished_furniture:purple_kitchen_sink",
+      "ingredients": []
     },
     "purple_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:purple_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "purple_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_lamp"
+      "result": "refurbished_furniture:purple_lamp",
+      "ingredients": []
     },
     "purple_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_sofa"
+      "result": "refurbished_furniture:purple_sofa",
+      "ingredients": []
     },
     "purple_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_stool"
+      "result": "refurbished_furniture:purple_stool",
+      "ingredients": []
     },
     "purple_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:purple_toilet"
+      "result": "refurbished_furniture:purple_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:purple_dye"
+      ]
     },
     "purple_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:purple_trampoline"
+      "result": "refurbished_furniture:purple_trampoline",
+      "ingredients": []
     },
     "recycle_bin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:recycle_bin"
+      "result": "refurbished_furniture:recycle_bin",
+      "ingredients": []
     },
     "red_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_basin"
+      "result": "refurbished_furniture:red_basin",
+      "ingredients": []
     },
     "red_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_bath"
+      "result": "refurbished_furniture:red_bath",
+      "ingredients": []
     },
     "red_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_cooler"
+      "result": "refurbished_furniture:red_cooler",
+      "ingredients": []
     },
     "red_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_grill"
+      "result": "refurbished_furniture:red_grill",
+      "ingredients": []
     },
     "red_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_kitchen_cabinetry"
+      "result": "refurbished_furniture:red_kitchen_cabinetry",
+      "ingredients": []
     },
     "red_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_kitchen_drawer"
+      "result": "refurbished_furniture:red_kitchen_drawer",
+      "ingredients": []
     },
     "red_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_kitchen_sink"
+      "result": "refurbished_furniture:red_kitchen_sink",
+      "ingredients": []
     },
     "red_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:red_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "red_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_lamp"
+      "result": "refurbished_furniture:red_lamp",
+      "ingredients": []
     },
     "red_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_sofa"
+      "result": "refurbished_furniture:red_sofa",
+      "ingredients": []
     },
     "red_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_stool"
+      "result": "refurbished_furniture:red_stool",
+      "ingredients": []
     },
     "red_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:red_toilet"
+      "result": "refurbished_furniture:red_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:red_dye"
+      ]
     },
     "red_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:red_trampoline"
+      "result": "refurbished_furniture:red_trampoline",
+      "ingredients": []
     },
     "spruce_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_basin"
+      "result": "refurbished_furniture:spruce_basin",
+      "ingredients": []
     },
     "spruce_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_bath"
+      "result": "refurbished_furniture:spruce_bath",
+      "ingredients": []
     },
     "spruce_chair": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_chair"
+      "result": "refurbished_furniture:spruce_chair",
+      "ingredients": []
     },
     "spruce_crate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_crate"
+      "result": "refurbished_furniture:spruce_crate",
+      "ingredients": []
     },
     "spruce_cutting_board": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_cutting_board"
+      "result": "refurbished_furniture:spruce_cutting_board",
+      "ingredients": []
     },
     "spruce_dark_ceiling_fan": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:spruce_dark_ceiling_fan"
+      "result": "refurbished_furniture:spruce_dark_ceiling_fan",
+      "ingredients": [
+        "refurbished_furniture:spruce_light_ceiling_fan",
+        "minecraft:black_dye"
+      ]
     },
     "spruce_desk": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_desk"
+      "result": "refurbished_furniture:spruce_desk",
+      "ingredients": []
     },
     "spruce_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_drawer"
+      "result": "refurbished_furniture:spruce_drawer",
+      "ingredients": []
     },
     "spruce_hedge": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_hedge"
+      "result": "refurbished_furniture:spruce_hedge",
+      "ingredients": []
     },
     "spruce_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_kitchen_cabinetry"
+      "result": "refurbished_furniture:spruce_kitchen_cabinetry",
+      "ingredients": []
     },
     "spruce_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_kitchen_drawer"
+      "result": "refurbished_furniture:spruce_kitchen_drawer",
+      "ingredients": []
     },
     "spruce_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_kitchen_sink"
+      "result": "refurbished_furniture:spruce_kitchen_sink",
+      "ingredients": []
     },
     "spruce_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:spruce_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "spruce_lattice_fence": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_lattice_fence"
+      "result": "refurbished_furniture:spruce_lattice_fence",
+      "ingredients": []
     },
     "spruce_lattice_fence_gate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_lattice_fence_gate"
+      "result": "refurbished_furniture:spruce_lattice_fence_gate",
+      "ingredients": []
     },
     "spruce_light_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_light_ceiling_fan"
+      "result": "refurbished_furniture:spruce_light_ceiling_fan",
+      "ingredients": []
     },
     "spruce_mail_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_mail_box"
+      "result": "refurbished_furniture:spruce_mail_box",
+      "ingredients": []
     },
     "spruce_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_storage_cabinet"
+      "result": "refurbished_furniture:spruce_storage_cabinet",
+      "ingredients": []
     },
     "spruce_storage_jar": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_storage_jar"
+      "result": "refurbished_furniture:spruce_storage_jar",
+      "ingredients": []
     },
     "spruce_table": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_table"
+      "result": "refurbished_furniture:spruce_table",
+      "ingredients": []
     },
     "spruce_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:spruce_toilet"
+      "result": "refurbished_furniture:spruce_toilet",
+      "ingredients": []
     },
     "stone_stepping_stones": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:stone_stepping_stones"
+      "result": "refurbished_furniture:stone_stepping_stones",
+      "ingredients": []
     },
     "television": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:television"
+      "result": "refurbished_furniture:television",
+      "ingredients": []
     },
     "warped_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_basin"
+      "result": "refurbished_furniture:warped_basin",
+      "ingredients": []
     },
     "warped_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_bath"
+      "result": "refurbished_furniture:warped_bath",
+      "ingredients": []
     },
     "warped_chair": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_chair"
+      "result": "refurbished_furniture:warped_chair",
+      "ingredients": []
     },
     "warped_crate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_crate"
+      "result": "refurbished_furniture:warped_crate",
+      "ingredients": []
     },
     "warped_cutting_board": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_cutting_board"
+      "result": "refurbished_furniture:warped_cutting_board",
+      "ingredients": []
     },
     "warped_dark_ceiling_fan": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:warped_dark_ceiling_fan"
+      "result": "refurbished_furniture:warped_dark_ceiling_fan",
+      "ingredients": [
+        "refurbished_furniture:warped_light_ceiling_fan",
+        "minecraft:black_dye"
+      ]
     },
     "warped_desk": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_desk"
+      "result": "refurbished_furniture:warped_desk",
+      "ingredients": []
     },
     "warped_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_drawer"
+      "result": "refurbished_furniture:warped_drawer",
+      "ingredients": []
     },
     "warped_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_kitchen_cabinetry"
+      "result": "refurbished_furniture:warped_kitchen_cabinetry",
+      "ingredients": []
     },
     "warped_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_kitchen_drawer"
+      "result": "refurbished_furniture:warped_kitchen_drawer",
+      "ingredients": []
     },
     "warped_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_kitchen_sink"
+      "result": "refurbished_furniture:warped_kitchen_sink",
+      "ingredients": []
     },
     "warped_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:warped_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "warped_lattice_fence": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_lattice_fence"
+      "result": "refurbished_furniture:warped_lattice_fence",
+      "ingredients": []
     },
     "warped_lattice_fence_gate": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_lattice_fence_gate"
+      "result": "refurbished_furniture:warped_lattice_fence_gate",
+      "ingredients": []
     },
     "warped_light_ceiling_fan": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_light_ceiling_fan"
+      "result": "refurbished_furniture:warped_light_ceiling_fan",
+      "ingredients": []
     },
     "warped_mail_box": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_mail_box"
+      "result": "refurbished_furniture:warped_mail_box",
+      "ingredients": []
     },
     "warped_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_storage_cabinet"
+      "result": "refurbished_furniture:warped_storage_cabinet",
+      "ingredients": []
     },
     "warped_storage_jar": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_storage_jar"
+      "result": "refurbished_furniture:warped_storage_jar",
+      "ingredients": []
     },
     "warped_table": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_table"
+      "result": "refurbished_furniture:warped_table",
+      "ingredients": []
     },
     "warped_toilet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:warped_toilet"
+      "result": "refurbished_furniture:warped_toilet",
+      "ingredients": []
     },
     "white_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_basin"
+      "result": "refurbished_furniture:white_basin",
+      "ingredients": []
     },
     "white_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_bath"
+      "result": "refurbished_furniture:white_bath",
+      "ingredients": []
     },
     "white_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_cooler"
+      "result": "refurbished_furniture:white_cooler",
+      "ingredients": []
     },
     "white_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_grill"
+      "result": "refurbished_furniture:white_grill",
+      "ingredients": []
     },
     "white_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_kitchen_cabinetry"
+      "result": "refurbished_furniture:white_kitchen_cabinetry",
+      "ingredients": []
     },
     "white_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_kitchen_drawer"
+      "result": "refurbished_furniture:white_kitchen_drawer",
+      "ingredients": []
     },
     "white_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_kitchen_sink"
+      "result": "refurbished_furniture:white_kitchen_sink",
+      "ingredients": []
     },
     "white_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:white_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "white_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_lamp"
+      "result": "refurbished_furniture:white_lamp",
+      "ingredients": []
     },
     "white_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_sofa"
+      "result": "refurbished_furniture:white_sofa",
+      "ingredients": []
     },
     "white_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_stool"
+      "result": "refurbished_furniture:white_stool",
+      "ingredients": []
     },
     "white_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:white_toilet"
+      "result": "refurbished_furniture:white_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:white_dye"
+      ]
     },
     "white_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:white_trampoline"
+      "result": "refurbished_furniture:white_trampoline",
+      "ingredients": []
     },
     "yellow_basin": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_basin"
+      "result": "refurbished_furniture:yellow_basin",
+      "ingredients": []
     },
     "yellow_bath": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_bath"
+      "result": "refurbished_furniture:yellow_bath",
+      "ingredients": []
     },
     "yellow_cooler": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_cooler"
+      "result": "refurbished_furniture:yellow_cooler",
+      "ingredients": []
     },
     "yellow_grill": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_grill"
+      "result": "refurbished_furniture:yellow_grill",
+      "ingredients": []
     },
     "yellow_kitchen_cabinetry": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_kitchen_cabinetry"
+      "result": "refurbished_furniture:yellow_kitchen_cabinetry",
+      "ingredients": []
     },
     "yellow_kitchen_drawer": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_kitchen_drawer"
+      "result": "refurbished_furniture:yellow_kitchen_drawer",
+      "ingredients": []
     },
     "yellow_kitchen_sink": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_kitchen_sink"
+      "result": "refurbished_furniture:yellow_kitchen_sink",
+      "ingredients": []
     },
     "yellow_kitchen_storage_cabinet": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:yellow_kitchen_storage_cabinet",
+      "ingredients": []
     },
     "yellow_lamp": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_lamp"
+      "result": "refurbished_furniture:yellow_lamp",
+      "ingredients": []
     },
     "yellow_sofa": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_sofa"
+      "result": "refurbished_furniture:yellow_sofa",
+      "ingredients": []
     },
     "yellow_stool": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_stool"
+      "result": "refurbished_furniture:yellow_stool",
+      "ingredients": []
     },
     "yellow_toilet": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:yellow_toilet"
+      "result": "refurbished_furniture:yellow_toilet",
+      "ingredients": [
+        "#refurbished_furniture:wooden_toilets",
+        "minecraft:yellow_dye"
+      ]
     },
     "yellow_trampoline": {
       "type": "refurbished_furniture:workbench_constructing",
-      "result": "refurbished_furniture:yellow_trampoline"
+      "result": "refurbished_furniture:yellow_trampoline",
+      "ingredients": []
     },
     "cyan_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:cyan_cooler"
+      "result": "refurbished_furniture:cyan_cooler",
+      "ingredients": [
+        "minecraft:cyan_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "cyan_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:cyan_grill"
+      "result": "refurbished_furniture:cyan_grill",
+      "ingredients": [
+        "minecraft:cyan_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "cyan_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:cyan_kitchen_cabinetry"
+      "result": "refurbished_furniture:cyan_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:cyan_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "cyan_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:cyan_kitchen_drawer"
+      "result": "refurbished_furniture:cyan_kitchen_drawer",
+      "ingredients": [
+        "minecraft:cyan_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "cyan_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:cyan_kitchen_sink"
+      "result": "refurbished_furniture:cyan_kitchen_sink",
+      "ingredients": [
+        "minecraft:cyan_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "cyan_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:cyan_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:cyan_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:cyan_dye"
+      ]
     },
     "cyan_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:cyan_lamp"
+      "result": "refurbished_furniture:cyan_lamp",
+      "ingredients": [
+        "minecraft:cyan_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "cyan_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:cyan_sofa"
+      "result": "refurbished_furniture:cyan_sofa",
+      "ingredients": [
+        "minecraft:cyan_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "cyan_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:cyan_stool"
+      "result": "refurbished_furniture:cyan_stool",
+      "ingredients": [
+        "minecraft:cyan_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "cyan_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:cyan_trampoline"
+      "result": "refurbished_furniture:cyan_trampoline",
+      "ingredients": [
+        "minecraft:cyan_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "dark_electricity_generator": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:dark_electricity_generator"
+      "result": "refurbished_furniture:dark_electricity_generator",
+      "ingredients": [
+        "refurbished_furniture:light_electricity_generator",
+        "minecraft:black_dye"
+      ]
     },
     "door_mat_copy": {
       "type": "refurbished_furniture:crafting_special_door_mat_copy",
-      "result": "unknown"
+      "result": "unknown",
+      "ingredients": []
     },
     "dough": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:dough x2"
+      "result": "refurbished_furniture:dough x2",
+      "ingredients": [
+        "refurbished_furniture:wheat_flour",
+        "minecraft:water_bucket"
+      ]
     },
     "blue_ice": {
       "type": "refurbished_furniture:freezer_solidifying",
-      "result": "minecraft:blue_ice"
+      "result": "minecraft:blue_ice",
+      "ingredients": [
+        "minecraft:packed_ice"
+      ]
     },
     "ice": {
       "type": "refurbished_furniture:freezer_solidifying",
-      "result": "minecraft:ice"
+      "result": "minecraft:ice",
+      "ingredients": [
+        "minecraft:water_bucket"
+      ]
     },
     "packed_ice": {
       "type": "refurbished_furniture:freezer_solidifying",
-      "result": "minecraft:packed_ice"
+      "result": "minecraft:packed_ice",
+      "ingredients": [
+        "minecraft:ice"
+      ]
     },
     "cheese_toastie": {
       "type": "refurbished_furniture:toaster_heating",
-      "result": "refurbished_furniture:cheese_toastie"
+      "result": "refurbished_furniture:cheese_toastie",
+      "ingredients": [
+        "refurbished_furniture:cheese_sandwich"
+      ]
     },
     "glow_berry_jam": {
       "type": "refurbished_furniture:frying_pan_cooking",
-      "result": "refurbished_furniture:glow_berry_jam"
+      "result": "refurbished_furniture:glow_berry_jam",
+      "ingredients": [
+        "minecraft:glow_berries"
+      ]
     },
     "sweet_berry_jam": {
       "type": "refurbished_furniture:frying_pan_cooking",
-      "result": "refurbished_furniture:sweet_berry_jam"
+      "result": "refurbished_furniture:sweet_berry_jam",
+      "ingredients": [
+        "minecraft:sweet_berries"
+      ]
     },
     "gray_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:gray_cooler"
+      "result": "refurbished_furniture:gray_cooler",
+      "ingredients": [
+        "minecraft:gray_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "gray_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:gray_grill"
+      "result": "refurbished_furniture:gray_grill",
+      "ingredients": [
+        "minecraft:gray_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "gray_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:gray_kitchen_cabinetry"
+      "result": "refurbished_furniture:gray_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:gray_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "gray_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:gray_kitchen_drawer"
+      "result": "refurbished_furniture:gray_kitchen_drawer",
+      "ingredients": [
+        "minecraft:gray_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "gray_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:gray_kitchen_sink"
+      "result": "refurbished_furniture:gray_kitchen_sink",
+      "ingredients": [
+        "minecraft:gray_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "gray_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:gray_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:gray_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:gray_dye"
+      ]
     },
     "gray_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:gray_lamp"
+      "result": "refurbished_furniture:gray_lamp",
+      "ingredients": [
+        "minecraft:gray_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "gray_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:gray_sofa"
+      "result": "refurbished_furniture:gray_sofa",
+      "ingredients": [
+        "minecraft:gray_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "gray_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:gray_stool"
+      "result": "refurbished_furniture:gray_stool",
+      "ingredients": [
+        "minecraft:gray_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "gray_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:gray_trampoline"
+      "result": "refurbished_furniture:gray_trampoline",
+      "ingredients": [
+        "minecraft:gray_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "green_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:green_cooler"
+      "result": "refurbished_furniture:green_cooler",
+      "ingredients": [
+        "minecraft:green_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "green_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:green_grill"
+      "result": "refurbished_furniture:green_grill",
+      "ingredients": [
+        "minecraft:green_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "green_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:green_kitchen_cabinetry"
+      "result": "refurbished_furniture:green_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:green_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "green_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:green_kitchen_drawer"
+      "result": "refurbished_furniture:green_kitchen_drawer",
+      "ingredients": [
+        "minecraft:green_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "green_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:green_kitchen_sink"
+      "result": "refurbished_furniture:green_kitchen_sink",
+      "ingredients": [
+        "minecraft:green_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "green_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:green_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:green_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:green_dye"
+      ]
     },
     "green_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:green_lamp"
+      "result": "refurbished_furniture:green_lamp",
+      "ingredients": [
+        "minecraft:green_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "green_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:green_sofa"
+      "result": "refurbished_furniture:green_sofa",
+      "ingredients": [
+        "minecraft:green_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "green_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:green_stool"
+      "result": "refurbished_furniture:green_stool",
+      "ingredients": [
+        "minecraft:green_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "green_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:green_trampoline"
+      "result": "refurbished_furniture:green_trampoline",
+      "ingredients": [
+        "minecraft:green_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "knife": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:knife"
+      "result": "refurbished_furniture:knife",
+      "ingredients": [
+        "minecraft:string",
+        "minecraft:leather",
+        "minecraft:iron_ingot"
+      ]
     },
     "light_blue_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_blue_cooler"
+      "result": "refurbished_furniture:light_blue_cooler",
+      "ingredients": [
+        "minecraft:light_blue_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "light_blue_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_blue_grill"
+      "result": "refurbished_furniture:light_blue_grill",
+      "ingredients": [
+        "minecraft:light_blue_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "light_blue_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:light_blue_kitchen_cabinetry"
+      "result": "refurbished_furniture:light_blue_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:light_blue_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "light_blue_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:light_blue_kitchen_drawer"
+      "result": "refurbished_furniture:light_blue_kitchen_drawer",
+      "ingredients": [
+        "minecraft:light_blue_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "light_blue_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:light_blue_kitchen_sink"
+      "result": "refurbished_furniture:light_blue_kitchen_sink",
+      "ingredients": [
+        "minecraft:light_blue_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "light_blue_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:light_blue_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:light_blue_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:light_blue_dye"
+      ]
     },
     "light_blue_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_blue_lamp"
+      "result": "refurbished_furniture:light_blue_lamp",
+      "ingredients": [
+        "minecraft:light_blue_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "light_blue_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_blue_sofa"
+      "result": "refurbished_furniture:light_blue_sofa",
+      "ingredients": [
+        "minecraft:light_blue_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "light_blue_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_blue_stool"
+      "result": "refurbished_furniture:light_blue_stool",
+      "ingredients": [
+        "minecraft:light_blue_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "light_blue_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_blue_trampoline"
+      "result": "refurbished_furniture:light_blue_trampoline",
+      "ingredients": [
+        "minecraft:light_blue_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "light_electricity_generator": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:light_electricity_generator"
+      "result": "refurbished_furniture:light_electricity_generator",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:redstone_block",
+        "minecraft:blast_furnace"
+      ]
     },
     "light_gray_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_gray_cooler"
+      "result": "refurbished_furniture:light_gray_cooler",
+      "ingredients": [
+        "minecraft:light_gray_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "light_gray_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_gray_grill"
+      "result": "refurbished_furniture:light_gray_grill",
+      "ingredients": [
+        "minecraft:light_gray_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "light_gray_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:light_gray_kitchen_cabinetry"
+      "result": "refurbished_furniture:light_gray_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:light_gray_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "light_gray_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:light_gray_kitchen_drawer"
+      "result": "refurbished_furniture:light_gray_kitchen_drawer",
+      "ingredients": [
+        "minecraft:light_gray_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "light_gray_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:light_gray_kitchen_sink"
+      "result": "refurbished_furniture:light_gray_kitchen_sink",
+      "ingredients": [
+        "minecraft:light_gray_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "light_gray_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:light_gray_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:light_gray_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:light_gray_dye"
+      ]
     },
     "light_gray_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_gray_lamp"
+      "result": "refurbished_furniture:light_gray_lamp",
+      "ingredients": [
+        "minecraft:light_gray_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "light_gray_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_gray_sofa"
+      "result": "refurbished_furniture:light_gray_sofa",
+      "ingredients": [
+        "minecraft:light_gray_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "light_gray_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_gray_stool"
+      "result": "refurbished_furniture:light_gray_stool",
+      "ingredients": [
+        "minecraft:light_gray_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "light_gray_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:light_gray_trampoline"
+      "result": "refurbished_furniture:light_gray_trampoline",
+      "ingredients": [
+        "minecraft:light_gray_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "lime_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:lime_cooler"
+      "result": "refurbished_furniture:lime_cooler",
+      "ingredients": [
+        "minecraft:lime_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "lime_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:lime_grill"
+      "result": "refurbished_furniture:lime_grill",
+      "ingredients": [
+        "minecraft:lime_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "lime_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:lime_kitchen_cabinetry"
+      "result": "refurbished_furniture:lime_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:lime_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "lime_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:lime_kitchen_drawer"
+      "result": "refurbished_furniture:lime_kitchen_drawer",
+      "ingredients": [
+        "minecraft:lime_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "lime_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:lime_kitchen_sink"
+      "result": "refurbished_furniture:lime_kitchen_sink",
+      "ingredients": [
+        "minecraft:lime_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "lime_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:lime_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:lime_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:lime_dye"
+      ]
     },
     "lime_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:lime_lamp"
+      "result": "refurbished_furniture:lime_lamp",
+      "ingredients": [
+        "minecraft:lime_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "lime_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:lime_sofa"
+      "result": "refurbished_furniture:lime_sofa",
+      "ingredients": [
+        "minecraft:lime_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "lime_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:lime_stool"
+      "result": "refurbished_furniture:lime_stool",
+      "ingredients": [
+        "minecraft:lime_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "lime_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:lime_trampoline"
+      "result": "refurbished_furniture:lime_trampoline",
+      "ingredients": [
+        "minecraft:lime_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "magenta_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:magenta_cooler"
+      "result": "refurbished_furniture:magenta_cooler",
+      "ingredients": [
+        "minecraft:magenta_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "magenta_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:magenta_grill"
+      "result": "refurbished_furniture:magenta_grill",
+      "ingredients": [
+        "minecraft:magenta_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "magenta_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:magenta_kitchen_cabinetry"
+      "result": "refurbished_furniture:magenta_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:magenta_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "magenta_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:magenta_kitchen_drawer"
+      "result": "refurbished_furniture:magenta_kitchen_drawer",
+      "ingredients": [
+        "minecraft:magenta_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "magenta_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:magenta_kitchen_sink"
+      "result": "refurbished_furniture:magenta_kitchen_sink",
+      "ingredients": [
+        "minecraft:magenta_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "magenta_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:magenta_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:magenta_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:magenta_dye"
+      ]
     },
     "magenta_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:magenta_lamp"
+      "result": "refurbished_furniture:magenta_lamp",
+      "ingredients": [
+        "minecraft:magenta_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "magenta_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:magenta_sofa"
+      "result": "refurbished_furniture:magenta_sofa",
+      "ingredients": [
+        "minecraft:magenta_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "magenta_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:magenta_stool"
+      "result": "refurbished_furniture:magenta_stool",
+      "ingredients": [
+        "minecraft:magenta_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "magenta_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:magenta_trampoline"
+      "result": "refurbished_furniture:magenta_trampoline",
+      "ingredients": [
+        "minecraft:magenta_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "orange_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:orange_cooler"
+      "result": "refurbished_furniture:orange_cooler",
+      "ingredients": [
+        "minecraft:orange_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "orange_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:orange_grill"
+      "result": "refurbished_furniture:orange_grill",
+      "ingredients": [
+        "minecraft:orange_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "orange_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:orange_kitchen_cabinetry"
+      "result": "refurbished_furniture:orange_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:orange_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "orange_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:orange_kitchen_drawer"
+      "result": "refurbished_furniture:orange_kitchen_drawer",
+      "ingredients": [
+        "minecraft:orange_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "orange_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:orange_kitchen_sink"
+      "result": "refurbished_furniture:orange_kitchen_sink",
+      "ingredients": [
+        "minecraft:orange_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "orange_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:orange_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:orange_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:orange_dye"
+      ]
     },
     "orange_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:orange_lamp"
+      "result": "refurbished_furniture:orange_lamp",
+      "ingredients": [
+        "minecraft:orange_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "orange_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:orange_sofa"
+      "result": "refurbished_furniture:orange_sofa",
+      "ingredients": [
+        "minecraft:orange_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "orange_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:orange_stool"
+      "result": "refurbished_furniture:orange_stool",
+      "ingredients": [
+        "minecraft:orange_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "orange_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:orange_trampoline"
+      "result": "refurbished_furniture:orange_trampoline",
+      "ingredients": [
+        "minecraft:orange_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "pink_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:pink_cooler"
+      "result": "refurbished_furniture:pink_cooler",
+      "ingredients": [
+        "minecraft:pink_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "pink_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:pink_grill"
+      "result": "refurbished_furniture:pink_grill",
+      "ingredients": [
+        "minecraft:pink_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "pink_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:pink_kitchen_cabinetry"
+      "result": "refurbished_furniture:pink_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:pink_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "pink_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:pink_kitchen_drawer"
+      "result": "refurbished_furniture:pink_kitchen_drawer",
+      "ingredients": [
+        "minecraft:pink_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "pink_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:pink_kitchen_sink"
+      "result": "refurbished_furniture:pink_kitchen_sink",
+      "ingredients": [
+        "minecraft:pink_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "pink_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:pink_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:pink_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:pink_dye"
+      ]
     },
     "pink_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:pink_lamp"
+      "result": "refurbished_furniture:pink_lamp",
+      "ingredients": [
+        "minecraft:pink_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "pink_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:pink_sofa"
+      "result": "refurbished_furniture:pink_sofa",
+      "ingredients": [
+        "minecraft:pink_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "pink_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:pink_stool"
+      "result": "refurbished_furniture:pink_stool",
+      "ingredients": [
+        "minecraft:pink_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "pink_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:pink_trampoline"
+      "result": "refurbished_furniture:pink_trampoline",
+      "ingredients": [
+        "minecraft:pink_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "purple_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:purple_cooler"
+      "result": "refurbished_furniture:purple_cooler",
+      "ingredients": [
+        "minecraft:purple_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "purple_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:purple_grill"
+      "result": "refurbished_furniture:purple_grill",
+      "ingredients": [
+        "minecraft:purple_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "purple_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:purple_kitchen_cabinetry"
+      "result": "refurbished_furniture:purple_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:purple_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "purple_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:purple_kitchen_drawer"
+      "result": "refurbished_furniture:purple_kitchen_drawer",
+      "ingredients": [
+        "minecraft:purple_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "purple_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:purple_kitchen_sink"
+      "result": "refurbished_furniture:purple_kitchen_sink",
+      "ingredients": [
+        "minecraft:purple_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "purple_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:purple_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:purple_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:purple_dye"
+      ]
     },
     "purple_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:purple_lamp"
+      "result": "refurbished_furniture:purple_lamp",
+      "ingredients": [
+        "minecraft:purple_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "purple_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:purple_sofa"
+      "result": "refurbished_furniture:purple_sofa",
+      "ingredients": [
+        "minecraft:purple_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "purple_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:purple_stool"
+      "result": "refurbished_furniture:purple_stool",
+      "ingredients": [
+        "minecraft:purple_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "purple_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:purple_trampoline"
+      "result": "refurbished_furniture:purple_trampoline",
+      "ingredients": [
+        "minecraft:purple_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "red_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:red_cooler"
+      "result": "refurbished_furniture:red_cooler",
+      "ingredients": [
+        "minecraft:red_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "red_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:red_grill"
+      "result": "refurbished_furniture:red_grill",
+      "ingredients": [
+        "minecraft:red_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "red_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:red_kitchen_cabinetry"
+      "result": "refurbished_furniture:red_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:red_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "red_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:red_kitchen_drawer"
+      "result": "refurbished_furniture:red_kitchen_drawer",
+      "ingredients": [
+        "minecraft:red_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "red_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:red_kitchen_sink"
+      "result": "refurbished_furniture:red_kitchen_sink",
+      "ingredients": [
+        "minecraft:red_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "red_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:red_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:red_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:red_dye"
+      ]
     },
     "red_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:red_lamp"
+      "result": "refurbished_furniture:red_lamp",
+      "ingredients": [
+        "minecraft:red_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "red_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:red_sofa"
+      "result": "refurbished_furniture:red_sofa",
+      "ingredients": [
+        "minecraft:red_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "red_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:red_stool"
+      "result": "refurbished_furniture:red_stool",
+      "ingredients": [
+        "minecraft:red_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "red_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:red_trampoline"
+      "result": "refurbished_furniture:red_trampoline",
+      "ingredients": [
+        "minecraft:red_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "black_dye_from_dried_kelp": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:black_dye"
+      "result": "minecraft:black_dye",
+      "ingredients": [
+        "minecraft:dried_kelp"
+      ]
     },
     "black_dye_from_wither_rose": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:black_dye x2"
+      "result": "minecraft:black_dye x2",
+      "ingredients": [
+        "minecraft:wither_rose"
+      ]
     },
     "blue_dye_from_cornflower": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:blue_dye x2"
+      "result": "minecraft:blue_dye x2",
+      "ingredients": [
+        "minecraft:cornflower"
+      ]
     },
     "bone_meal_from_bone": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:bone_meal x4"
+      "result": "minecraft:bone_meal x4",
+      "ingredients": [
+        "minecraft:bone"
+      ]
     },
     "bread_slice_from_bread": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "refurbished_furniture:bread_slice x6"
+      "result": "refurbished_furniture:bread_slice x6",
+      "ingredients": [
+        "minecraft:bread"
+      ]
     },
     "brown_dye_from_rotten_flesh": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:brown_dye"
+      "result": "minecraft:brown_dye",
+      "ingredients": [
+        "minecraft:rotten_flesh"
+      ]
     },
     "cyan_dye_from_pitcher_plant": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:cyan_dye x3"
+      "result": "minecraft:cyan_dye x3",
+      "ingredients": [
+        "minecraft:pitcher_plant"
+      ]
     },
     "green_dye_from_lily_pad": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:green_dye"
+      "result": "minecraft:green_dye",
+      "ingredients": [
+        "minecraft:lily_pad"
+      ]
     },
     "green_dye_from_seagrass": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:green_dye"
+      "result": "minecraft:green_dye",
+      "ingredients": [
+        "minecraft:seagrass"
+      ]
     },
     "honeycomb_from_honeycomb_block": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:honeycomb x4"
+      "result": "minecraft:honeycomb x4",
+      "ingredients": [
+        "minecraft:honeycomb_block"
+      ]
     },
     "light_blue_dye_from_blue_orchid": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:light_blue_dye x2"
+      "result": "minecraft:light_blue_dye x2",
+      "ingredients": [
+        "minecraft:blue_orchid"
+      ]
     },
     "light_gray_dye_from_azure_bluet": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:light_gray_dye x2"
+      "result": "minecraft:light_gray_dye x2",
+      "ingredients": [
+        "minecraft:azure_bluet"
+      ]
     },
     "magenta_dye_from_allium": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:magenta_dye x2"
+      "result": "minecraft:magenta_dye x2",
+      "ingredients": [
+        "minecraft:allium"
+      ]
     },
     "magenta_dye_from_lilac": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:magenta_dye x3"
+      "result": "minecraft:magenta_dye x3",
+      "ingredients": [
+        "minecraft:lilac"
+      ]
     },
     "meatlovers_pizza_slice_from_cooked_meatlovers_pizza": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "refurbished_furniture:meatlovers_pizza_slice x6"
+      "result": "refurbished_furniture:meatlovers_pizza_slice x6",
+      "ingredients": [
+        "refurbished_furniture:cooked_meatlovers_pizza"
+      ]
     },
     "melon_slice_from_melon": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:melon_slice x9"
+      "result": "minecraft:melon_slice x9",
+      "ingredients": [
+        "minecraft:melon"
+      ]
     },
     "orange_dye_from_glow_berries": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:orange_dye"
+      "result": "minecraft:orange_dye",
+      "ingredients": [
+        "minecraft:glow_berries"
+      ]
     },
     "orange_dye_from_orange_tulip": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:orange_dye x2"
+      "result": "minecraft:orange_dye x2",
+      "ingredients": [
+        "minecraft:orange_tulip"
+      ]
     },
     "orange_dye_from_torchflower": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:orange_dye x2"
+      "result": "minecraft:orange_dye x2",
+      "ingredients": [
+        "minecraft:torchflower"
+      ]
     },
     "pink_dye_from_peony": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:pink_dye x3"
+      "result": "minecraft:pink_dye x3",
+      "ingredients": [
+        "minecraft:peony"
+      ]
     },
     "pink_dye_from_pink_petals": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:pink_dye x2"
+      "result": "minecraft:pink_dye x2",
+      "ingredients": [
+        "minecraft:pink_petals"
+      ]
     },
     "pink_dye_from_pink_tulip": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:pink_dye x2"
+      "result": "minecraft:pink_dye x2",
+      "ingredients": [
+        "minecraft:pink_tulip"
+      ]
     },
     "pink_dye_from_spore_blossom": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:pink_dye x2"
+      "result": "minecraft:pink_dye x2",
+      "ingredients": [
+        "minecraft:spore_blossom"
+      ]
     },
     "pumpkin_seeds_from_pumpkin": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:pumpkin_seeds x5"
+      "result": "minecraft:pumpkin_seeds x5",
+      "ingredients": [
+        "minecraft:pumpkin"
+      ]
     },
     "red_dye_from_poppy": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:red_dye x2"
+      "result": "minecraft:red_dye x2",
+      "ingredients": [
+        "minecraft:poppy"
+      ]
     },
     "red_dye_from_red_tulip": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:red_dye x2"
+      "result": "minecraft:red_dye x2",
+      "ingredients": [
+        "minecraft:red_tulip"
+      ]
     },
     "red_dye_from_rose_bush": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:red_dye x3"
+      "result": "minecraft:red_dye x3",
+      "ingredients": [
+        "minecraft:rose_bush"
+      ]
     },
     "red_dye_from_spider_eye": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:red_dye"
+      "result": "minecraft:red_dye",
+      "ingredients": [
+        "minecraft:spider_eye"
+      ]
     },
     "red_dye_from_sweet_berries": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:red_dye"
+      "result": "minecraft:red_dye",
+      "ingredients": [
+        "minecraft:sweet_berries"
+      ]
     },
     "slime_ball_from_slime_block": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:slime_ball x9"
+      "result": "minecraft:slime_ball x9",
+      "ingredients": [
+        "minecraft:slime_block"
+      ]
     },
     "stick_from_dead_bush": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:stick x2"
+      "result": "minecraft:stick x2",
+      "ingredients": [
+        "minecraft:dead_bush"
+      ]
     },
     "stick_from_mangrove_roots": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:stick x8"
+      "result": "minecraft:stick x8",
+      "ingredients": [
+        "minecraft:mangrove_roots"
+      ]
     },
     "string_from_cobweb": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:string x2"
+      "result": "minecraft:string x2",
+      "ingredients": [
+        "minecraft:cobweb"
+      ]
     },
     "string_from_feather": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:string"
+      "result": "minecraft:string",
+      "ingredients": [
+        "minecraft:feather"
+      ]
     },
     "vegetable_pizza_slice_from_cooked_vegetable_pizza": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "refurbished_furniture:vegetable_pizza_slice x6"
+      "result": "refurbished_furniture:vegetable_pizza_slice x6",
+      "ingredients": [
+        "refurbished_furniture:cooked_vegetable_pizza"
+      ]
     },
     "wheat_seeds_from_short_grass": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:wheat_seeds"
+      "result": "minecraft:wheat_seeds",
+      "ingredients": [
+        "minecraft:short_grass"
+      ]
     },
     "white_dye_from_lily_of_the_valley": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:white_dye x2"
+      "result": "minecraft:white_dye x2",
+      "ingredients": [
+        "minecraft:lily_of_the_valley"
+      ]
     },
     "white_dye_from_oxeye_daisy": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:white_dye x2"
+      "result": "minecraft:white_dye x2",
+      "ingredients": [
+        "minecraft:oxeye_daisy"
+      ]
     },
     "white_dye_from_white_tulip": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:white_dye x2"
+      "result": "minecraft:white_dye x2",
+      "ingredients": [
+        "minecraft:white_tulip"
+      ]
     },
     "yellow_dye_from_dandelion": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:yellow_dye x2"
+      "result": "minecraft:yellow_dye x2",
+      "ingredients": [
+        "minecraft:dandelion"
+      ]
     },
     "yellow_dye_from_sunflower": {
       "type": "refurbished_furniture:cutting_board_slicing",
-      "result": "minecraft:yellow_dye x3"
+      "result": "minecraft:yellow_dye x3",
+      "ingredients": [
+        "minecraft:sunflower"
+      ]
     },
     "spatula": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:spatula"
+      "result": "refurbished_furniture:spatula",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:string",
+        "minecraft:leather"
+      ]
     },
     "television_remote": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:television_remote"
+      "result": "refurbished_furniture:television_remote",
+      "ingredients": [
+        "minecraft:iron_nugget",
+        "minecraft:redstone_lamp",
+        "minecraft:redstone",
+        "minecraft:copper_ingot"
+      ]
     },
     "toast": {
       "type": "refurbished_furniture:toaster_heating",
-      "result": "refurbished_furniture:toast"
+      "result": "refurbished_furniture:toast",
+      "ingredients": [
+        "refurbished_furniture:bread_slice"
+      ]
     },
     "white_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:white_cooler"
+      "result": "refurbished_furniture:white_cooler",
+      "ingredients": [
+        "minecraft:white_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "white_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:white_grill"
+      "result": "refurbished_furniture:white_grill",
+      "ingredients": [
+        "minecraft:white_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "white_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:white_kitchen_cabinetry"
+      "result": "refurbished_furniture:white_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:white_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "white_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:white_kitchen_drawer"
+      "result": "refurbished_furniture:white_kitchen_drawer",
+      "ingredients": [
+        "minecraft:white_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "white_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:white_kitchen_sink"
+      "result": "refurbished_furniture:white_kitchen_sink",
+      "ingredients": [
+        "minecraft:white_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "white_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:white_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:white_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:white_dye"
+      ]
     },
     "white_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:white_lamp"
+      "result": "refurbished_furniture:white_lamp",
+      "ingredients": [
+        "minecraft:white_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "white_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:white_sofa"
+      "result": "refurbished_furniture:white_sofa",
+      "ingredients": [
+        "minecraft:white_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "white_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:white_stool"
+      "result": "refurbished_furniture:white_stool",
+      "ingredients": [
+        "minecraft:white_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "white_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:white_trampoline"
+      "result": "refurbished_furniture:white_trampoline",
+      "ingredients": [
+        "minecraft:white_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     },
     "workbench": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:workbench"
+      "result": "refurbished_furniture:workbench",
+      "ingredients": [
+        "#minecraft:wooden_slabs",
+        "minecraft:stonecutter",
+        "#minecraft:planks",
+        "minecraft:redstone_block",
+        "minecraft:iron_ingot"
+      ]
     },
     "wrench": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:wrench"
+      "result": "refurbished_furniture:wrench",
+      "ingredients": [
+        "minecraft:iron_ingot",
+        "minecraft:string",
+        "minecraft:leather"
+      ]
     },
     "yellow_cooler_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:yellow_cooler"
+      "result": "refurbished_furniture:yellow_cooler",
+      "ingredients": [
+        "minecraft:yellow_dye",
+        "#refurbished_furniture:coolers"
+      ]
     },
     "yellow_grill_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:yellow_grill"
+      "result": "refurbished_furniture:yellow_grill",
+      "ingredients": [
+        "minecraft:yellow_dye",
+        "#refurbished_furniture:grills"
+      ]
     },
     "yellow_kitchen_cabinetry_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:yellow_kitchen_cabinetry"
+      "result": "refurbished_furniture:yellow_kitchen_cabinetry",
+      "ingredients": [
+        "minecraft:yellow_dye",
+        "#refurbished_furniture:coloured_kitchen_cabinetry"
+      ]
     },
     "yellow_kitchen_drawer_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:yellow_kitchen_drawer"
+      "result": "refurbished_furniture:yellow_kitchen_drawer",
+      "ingredients": [
+        "minecraft:yellow_dye",
+        "#refurbished_furniture:coloured_kitchen_drawers"
+      ]
     },
     "yellow_kitchen_sink_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:yellow_kitchen_sink"
+      "result": "refurbished_furniture:yellow_kitchen_sink",
+      "ingredients": [
+        "minecraft:yellow_dye",
+        "#refurbished_furniture:coloured_kitchen_sinks"
+      ]
     },
     "yellow_kitchen_storage_cabinet_from_dyeing": {
       "type": "minecraft:crafting_shaped",
-      "result": "refurbished_furniture:yellow_kitchen_storage_cabinet"
+      "result": "refurbished_furniture:yellow_kitchen_storage_cabinet",
+      "ingredients": [
+        "#refurbished_furniture:coloured_kitchen_storage_cabinets",
+        "minecraft:yellow_dye"
+      ]
     },
     "yellow_lamp_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:yellow_lamp"
+      "result": "refurbished_furniture:yellow_lamp",
+      "ingredients": [
+        "minecraft:yellow_dye",
+        "#refurbished_furniture:lamps"
+      ]
     },
     "yellow_sofa_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:yellow_sofa"
+      "result": "refurbished_furniture:yellow_sofa",
+      "ingredients": [
+        "minecraft:yellow_dye",
+        "#refurbished_furniture:sofas"
+      ]
     },
     "yellow_stool_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:yellow_stool"
+      "result": "refurbished_furniture:yellow_stool",
+      "ingredients": [
+        "minecraft:yellow_dye",
+        "#refurbished_furniture:stools"
+      ]
     },
     "yellow_trampoline_from_dyeing": {
       "type": "minecraft:crafting_shapeless",
-      "result": "refurbished_furniture:yellow_trampoline"
+      "result": "refurbished_furniture:yellow_trampoline",
+      "ingredients": [
+        "minecraft:yellow_dye",
+        "#refurbished_furniture:trampolines"
+      ]
     }
   },
   "summary": {
