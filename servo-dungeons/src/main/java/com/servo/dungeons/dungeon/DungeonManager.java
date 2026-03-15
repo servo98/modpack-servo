@@ -11,12 +11,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
 /**
- * Server-side singleton managing the active dungeon instance.
- * Only one dungeon can be active at a time (per design doc).
+ * Server-side singleton managing multiple concurrent dungeon instances.
+ * Each instance is placed at a different X offset in the dungeon dimension.
  *
  * Initialized on {@code ServerStartedEvent}, cleared on {@code ServerStoppedEvent}.
  */
@@ -25,8 +27,8 @@ public class DungeonManager {
     private static DungeonManager instance;
 
     private final MinecraftServer server;
-    @Nullable
-    private DungeonInstance activeInstance;
+    private final Map<UUID, DungeonInstance> activeInstances = new HashMap<>();
+    private final OffsetAllocator offsetAllocator = new OffsetAllocator();
 
     private DungeonManager(MinecraftServer server) {
         this.server = server;
@@ -52,17 +54,13 @@ public class DungeonManager {
     // ==================== Dungeon Management ====================
 
     /**
-     * Start a new dungeon. Creates a platform in the dungeon dimension and teleports the leader.
+     * Start a new dungeon. Allocates an offset, creates a platform in the dungeon dimension,
+     * and teleports the leader.
      *
      * @return the dungeon instance UUID, or null if creation failed
      */
     @Nullable
     public UUID startDungeon(ServerLevel overworld, BlockPos altarPos, ServerPlayer leader, DungeonTier tier) {
-        if (activeInstance != null) {
-            ServoDungeons.LOGGER.warn("Cannot start dungeon: one is already active");
-            return null;
-        }
-
         // Get or create the dungeon dimension
         ServerLevel dungeonLevel = server.getLevel(DungeonRegistry.DUNGEON_LEVEL_KEY);
         if (dungeonLevel == null) {
@@ -70,31 +68,38 @@ public class DungeonManager {
             return null;
         }
 
-        // Create spawn platform at Y=64
-        BlockPos entrancePos = new BlockPos(0, 65, 0);
-        createSpawnPlatform(dungeonLevel);
+        // Allocate an offset for this instance
+        BlockPos center = offsetAllocator.allocate();
+
+        // Create spawn platform at the allocated offset
+        BlockPos entrancePos = center.above(1); // Y=65 (center is Y=64)
+        createSpawnPlatform(dungeonLevel, center);
 
         // Create instance
         UUID id = UUID.randomUUID();
-        activeInstance = new DungeonInstance(id, tier, leader.getUUID(), altarPos, entrancePos);
+        DungeonInstance dungeonInstance = new DungeonInstance(id, tier, leader.getUUID(), altarPos, entrancePos, center);
+        activeInstances.put(id, dungeonInstance);
 
         // Teleport leader to dungeon
         teleportToDungeon(leader, entrancePos, dungeonLevel);
 
-        ServoDungeons.LOGGER.info("Dungeon started: tier={}, leader={}, id={}",
-                tier.name, leader.getName().getString(), id);
+        ServoDungeons.LOGGER.info("Dungeon started: tier={}, leader={}, id={}, center={}",
+                tier.name, leader.getName().getString(), id, center);
 
         return id;
     }
 
     /**
-     * End the active dungeon. Teleports all remaining players out and cleans up.
+     * End a specific dungeon instance. Teleports all remaining players out and cleans up.
+     *
+     * @param dungeonId the UUID of the dungeon instance to end
      */
-    public void endDungeon() {
-        if (activeInstance == null) return;
+    public void endDungeon(UUID dungeonId) {
+        DungeonInstance dungeonInstance = activeInstances.get(dungeonId);
+        if (dungeonInstance == null) return;
 
-        BlockPos altarPos = activeInstance.getAltarPos();
-        Set<UUID> playerIds = activeInstance.getPlayerIds();
+        BlockPos altarPos = dungeonInstance.getAltarPos();
+        Set<UUID> playerIds = dungeonInstance.getPlayerIds();
 
         // Teleport all players back to overworld
         ServerLevel overworld = server.getLevel(Level.OVERWORLD);
@@ -109,34 +114,30 @@ public class DungeonManager {
             }
         }
 
-        activeInstance.setActive(false);
-        activeInstance = null;
+        dungeonInstance.setActive(false);
 
-        ServoDungeons.LOGGER.info("Dungeon ended, players teleported back to overworld");
-    }
-
-    /**
-     * Re-enter the dungeon (e.g., after death or disconnect).
-     */
-    public void reenterDungeon(ServerPlayer player) {
-        if (activeInstance == null) return;
-
+        // Clean up the instance's area in the dungeon dimension
         ServerLevel dungeonLevel = server.getLevel(DungeonRegistry.DUNGEON_LEVEL_KEY);
-        if (dungeonLevel == null) return;
+        if (dungeonLevel != null) {
+            cleanupInstance(dungeonId, dungeonLevel);
+        } else {
+            // Still remove from map and release offset even if dimension is unavailable
+            activeInstances.remove(dungeonId);
+            offsetAllocator.release(dungeonInstance.getCenter());
+        }
 
-        activeInstance.addPlayer(player.getUUID());
-        teleportToDungeon(player, activeInstance.getEntrancePos(), dungeonLevel);
-
-        ServoDungeons.LOGGER.info("Player {} re-entered dungeon", player.getName().getString());
+        ServoDungeons.LOGGER.info("Dungeon {} ended, players teleported back to overworld", dungeonId);
     }
 
     /**
      * Exit a single player from the dungeon back to the altar.
+     * Finds which dungeon the player is in based on their position.
      */
     public void exitDungeon(ServerPlayer player) {
-        if (activeInstance == null) return;
+        DungeonInstance dungeonInstance = getDungeonForPlayer(player.getUUID());
+        if (dungeonInstance == null) return;
 
-        BlockPos altarPos = activeInstance.getAltarPos();
+        BlockPos altarPos = dungeonInstance.getAltarPos();
         ServerLevel overworld = server.getLevel(Level.OVERWORLD);
         if (overworld != null) {
             player.teleportTo(overworld,
@@ -145,26 +146,122 @@ public class DungeonManager {
         }
     }
 
-    // ==================== State Queries ====================
+    /**
+     * Re-enter a specific dungeon (e.g., after death or disconnect).
+     *
+     * @param player the player to teleport
+     * @param dungeonId the UUID of the dungeon to re-enter
+     */
+    public void reenterDungeon(ServerPlayer player, UUID dungeonId) {
+        DungeonInstance dungeonInstance = activeInstances.get(dungeonId);
+        if (dungeonInstance == null) return;
 
-    public boolean isActive() {
-        return activeInstance != null && activeInstance.isActive();
+        ServerLevel dungeonLevel = server.getLevel(DungeonRegistry.DUNGEON_LEVEL_KEY);
+        if (dungeonLevel == null) return;
+
+        dungeonInstance.addPlayer(player.getUUID());
+        teleportToDungeon(player, dungeonInstance.getEntrancePos(), dungeonLevel);
+
+        ServoDungeons.LOGGER.info("Player {} re-entered dungeon {}", player.getName().getString(), dungeonId);
     }
 
+    // ==================== State Queries ====================
+
+    /**
+     * Check if a specific dungeon instance is active.
+     */
+    public boolean isActive(UUID dungeonId) {
+        DungeonInstance dungeonInstance = activeInstances.get(dungeonId);
+        return dungeonInstance != null && dungeonInstance.isActive();
+    }
+
+    /**
+     * Check if there are any active dungeon instances.
+     */
+    public boolean hasActiveInstances() {
+        return !activeInstances.isEmpty();
+    }
+
+    /**
+     * Get a specific dungeon instance by its UUID.
+     */
     @Nullable
-    public DungeonInstance getActiveInstance() {
-        return activeInstance;
+    public DungeonInstance getInstance(UUID dungeonId) {
+        return activeInstances.get(dungeonId);
+    }
+
+    /**
+     * Find which dungeon instance a player is in, based on their player UUID.
+     * Checks if the player is tracked in any active instance.
+     *
+     * @param playerId the player's UUID
+     * @return the DungeonInstance the player is in, or null if not found
+     */
+    @Nullable
+    public DungeonInstance getDungeonForPlayer(UUID playerId) {
+        for (DungeonInstance dungeonInstance : activeInstances.values()) {
+            if (dungeonInstance.hasPlayer(playerId)) {
+                return dungeonInstance;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Find which dungeon instance contains a given position in the dungeon dimension.
+     *
+     * @param pos the position to check
+     * @return the DungeonInstance whose area contains the position, or null
+     */
+    @Nullable
+    public DungeonInstance getDungeonAtPosition(BlockPos pos) {
+        for (DungeonInstance dungeonInstance : activeInstances.values()) {
+            if (dungeonInstance.isPlayerInArea(pos)) {
+                return dungeonInstance;
+            }
+        }
+        return null;
+    }
+
+    // ==================== Cleanup ====================
+
+    /**
+     * Clean up a dungeon instance: clear blocks in the area, remove from map, release offset.
+     *
+     * @param dungeonId the dungeon instance UUID
+     * @param dungeonLevel the dungeon dimension ServerLevel
+     */
+    private void cleanupInstance(UUID dungeonId, ServerLevel dungeonLevel) {
+        DungeonInstance dungeonInstance = activeInstances.get(dungeonId);
+        if (dungeonInstance == null) return;
+
+        BlockPos center = dungeonInstance.getCenter();
+
+        // Clear the spawn platform area (platform size 5 + margin of 1 = 6)
+        int clearSize = 6;
+        for (int x = -clearSize; x <= clearSize; x++) {
+            for (int z = -clearSize; z <= clearSize; z++) {
+                for (int y = 0; y <= 5; y++) {
+                    dungeonLevel.setBlock(center.offset(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+                }
+            }
+        }
+
+        // Remove from active instances and release offset
+        activeInstances.remove(dungeonId);
+        offsetAllocator.release(center);
+
+        ServoDungeons.LOGGER.debug("Cleaned up dungeon instance {} at center {}", dungeonId, center);
     }
 
     // ==================== Internal Helpers ====================
 
     /**
-     * Create a simple stone brick platform at Y=64 as placeholder spawn room.
+     * Create a simple stone brick platform at the given center as placeholder spawn room.
      * Places an exit portal at the entrance.
      */
-    private void createSpawnPlatform(ServerLevel dungeonLevel) {
+    private void createSpawnPlatform(ServerLevel dungeonLevel, BlockPos center) {
         int platformSize = 5;
-        BlockPos center = new BlockPos(0, 64, 0);
 
         // Create floor
         for (int x = -platformSize; x <= platformSize; x++) {

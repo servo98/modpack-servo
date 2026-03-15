@@ -3,14 +3,14 @@ package com.servo.dungeons.block;
 import com.mojang.serialization.MapCodec;
 import com.servo.dungeons.DungeonRegistry;
 import com.servo.dungeons.DungeonTier;
-import com.servo.dungeons.ServoDungeons;
 import com.servo.dungeons.dungeon.DungeonManager;
 import com.servo.dungeons.item.DungeonKeyItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+
+import java.util.UUID;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
@@ -93,18 +93,18 @@ public class DungeonPedestalBlock extends BaseEntityBlock {
 
         ServerPlayer serverPlayer = (ServerPlayer) player;
 
-        // If a dungeon is already active
+        // If THIS pedestal's dungeon is already active — allow re-entry
         if (pedestal.isActive()) {
-            // Re-entry for team members
+            UUID dungeonId = pedestal.getDungeonId();
             DungeonManager manager = DungeonManager.getInstance();
-            if (manager != null && manager.isActive()) {
-                manager.reenterDungeon(serverPlayer);
+            if (manager != null && dungeonId != null && manager.isActive(dungeonId)) {
+                manager.reenterDungeon(serverPlayer, dungeonId);
                 return ItemInteractionResult.SUCCESS;
             }
             return ItemInteractionResult.FAIL;
         }
 
-        // If player holds a dungeon key and no ritual in progress
+        // If player holds a dungeon key and no ritual in progress on THIS pedestal
         if (stack.getItem() instanceof DungeonKeyItem keyItem && !pedestal.isRitualInProgress()) {
             // Validate multiblock
             if (!pedestal.validateMultiblock()) {
@@ -113,15 +113,7 @@ public class DungeonPedestalBlock extends BaseEntityBlock {
                 return ItemInteractionResult.FAIL;
             }
 
-            // Check if another dungeon is already running
-            DungeonManager manager = DungeonManager.getInstance();
-            if (manager != null && manager.isActive()) {
-                serverPlayer.sendSystemMessage(
-                        Component.translatable("message.servo_dungeons.dungeon_active"));
-                return ItemInteractionResult.FAIL;
-            }
-
-            // Start ritual
+            // Start ritual — multiple simultaneous dungeons are allowed
             DungeonTier tier = keyItem.getTier();
             pedestal.startRitual(tier, serverPlayer);
             stack.shrink(1);
