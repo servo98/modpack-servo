@@ -40,6 +40,7 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 | RPG Series | `docs/mod-data/rpg-series-content.md` | Clases, spells, tiers (datos de JARs) |
 | Blockers | `docs/blockers.md` | Problemas que bloquean progreso |
 | Historial | `git log` | Commits = registro de sesiones (reemplaza session-log.md) |
+| Assets | `assets/` | Drop folder para artista. Subcarpetas por mod. Ver `assets/README.md` |
 | Mecanicas | `docs/mechanics/*.md` | 21 docs, una por mecanica |
 | Capitulos | `docs/chapters/ch*.md` | 8 docs (ch1-ch8) con quests por capitulo |
 | Estado por mod | `docs/status/*.md` | Tablas done/pending + assets para artista |
