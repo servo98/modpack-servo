@@ -2,6 +2,7 @@
   "itemGroup.servo_dungeons": "Servo Dungeons",
   "block.servo_dungeons.dungeon_pedestal": "Dungeon Pedestal",
   "block.servo_dungeons.dungeon_rune": "Dungeon Rune",
+  "block.servo_dungeons.dungeon_beam": "Dungeon Beam",
   "block.servo_dungeons.exit_portal": "Exit Portal",
   "item.servo_dungeons.dungeon_key_basic": "Basic Dungeon Key",
   "item.servo_dungeons.dungeon_key_advanced": "Advanced Dungeon Key",
@@ -17,6 +18,7 @@
   "message.servo_dungeons.dungeon_entered": "Entering the dungeon...",
   "message.servo_dungeons.dungeon_active": "A dungeon is already in progress.",
   "message.servo_dungeons.invalid_altar": "The altar is not properly formed. Place 4 Dungeon Runes in a cross pattern.",
+  "message.servo_dungeons.dungeon_active_use_beam": "A dungeon is active. Walk into the beam above to enter.",
   "message.servo_dungeons.dungeon_abandoned": "The dungeon has been abandoned.",
   "message.servo_dungeons.dungeon_exit": "Returning to the surface..."
 }

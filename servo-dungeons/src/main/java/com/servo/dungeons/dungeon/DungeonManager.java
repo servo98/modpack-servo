@@ -130,6 +130,21 @@ public class DungeonManager {
     }
 
     /**
+     * Re-enter a specific dungeon by ID (used by beam blocks).
+     */
+    public void reenterDungeon(ServerPlayer player, UUID dungeonId) {
+        if (activeInstance == null || !activeInstance.getId().equals(dungeonId)) return;
+
+        ServerLevel dungeonLevel = server.getLevel(DungeonRegistry.DUNGEON_LEVEL_KEY);
+        if (dungeonLevel == null) return;
+
+        activeInstance.addPlayer(player.getUUID());
+        teleportToDungeon(player, activeInstance.getEntrancePos(), dungeonLevel);
+
+        ServoDungeons.LOGGER.info("Player {} entered dungeon via beam", player.getName().getString());
+    }
+
+    /**
      * Exit a single player from the dungeon back to the altar.
      * Finds which dungeon the player is in based on their position.
      */
