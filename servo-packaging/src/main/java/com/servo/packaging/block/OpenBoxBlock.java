@@ -108,8 +108,8 @@ public class OpenBoxBlock extends BaseEntityBlock {
                         Component.translatable("servo_packaging.box.sealed"), true);
             } else {
                 player.displayClientMessage(
-                        Component.translatable("servo_packaging.box.item_added",
-                                heldItem.getHoverName()), true);
+                        Component.translatable("servo_packaging.box.item_added_count",
+                                heldItem.getHoverName(), box.getTotalCount(), box.getPackSize()), true);
             }
             return ItemInteractionResult.SUCCESS;
         } else {

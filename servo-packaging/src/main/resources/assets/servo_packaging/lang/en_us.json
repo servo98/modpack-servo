@@ -11,6 +11,7 @@
   "item.servo_packaging.shipping_box.unboxed": "Unboxed %1$dx %2$s",
 
   "servo_packaging.box.item_added": "Added %s",
+  "servo_packaging.box.item_added_count": "Added %s (%s/%s)",
   "servo_packaging.box.item_removed": "Removed %s",
   "servo_packaging.box.sealed": "Box sealed!",
   "servo_packaging.box.wrong_type": "Only items of the same type",

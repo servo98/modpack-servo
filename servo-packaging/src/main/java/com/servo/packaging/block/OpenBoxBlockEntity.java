@@ -37,10 +37,11 @@ import java.util.List;
 public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer {
 
     public static final int MAX_SLOTS = 4;
-    public static final int ITEMS_PER_BOX = 16;
+    public static final int DEFAULT_PACK_SIZE = 16;
 
     private final NonNullList<ItemStack> items = NonNullList.withSize(MAX_SLOTS, ItemStack.EMPTY);
     private int totalCount = 0;
+    private int packSize = DEFAULT_PACK_SIZE;
     @Nullable
     private ResourceLocation packedItemId;
     private String category = "";
@@ -64,16 +65,17 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
 
         ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(heldItem.getItem());
 
-        // First item determines type
+        // First item determines type and pack size
         if (packedItemId == null) {
             packedItemId = itemId;
             category = detectCategory(heldItem);
+            packSize = detectPackSize(heldItem);
         } else if (!itemId.equals(packedItemId)) {
             return false; // wrong type
         }
 
         // Always add as many as possible from the held stack
-        int toAdd = Math.min(heldItem.getCount(), ITEMS_PER_BOX - totalCount);
+        int toAdd = Math.min(heldItem.getCount(), packSize - totalCount);
 
         if (toAdd <= 0) return false;
 
@@ -105,7 +107,7 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
         setChanged();
 
         // Auto-seal when full
-        if (totalCount >= ITEMS_PER_BOX) {
+        if (totalCount >= packSize) {
             seal();
         }
 
@@ -130,6 +132,7 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
                 if (totalCount <= 0) {
                     packedItemId = null;
                     category = "";
+                    packSize = DEFAULT_PACK_SIZE;
                     totalCount = 0;
                 }
                 playSound(SoundEvents.BUNDLE_REMOVE_ONE);
@@ -202,6 +205,10 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
         return totalCount;
     }
 
+    public int getPackSize() {
+        return packSize;
+    }
+
     @Nullable
     public ResourceLocation getPackedItemId() {
         return packedItemId;
@@ -234,6 +241,12 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
         if (stack.is(PackagingRegistry.FLAT_CARDBOARD_ITEM.get())) return false;
         if (stack.is(PackagingRegistry.SHIPPING_BOX_ITEM.get())) return false;
         return stack.is(PackagingRegistry.PACKABLE_TAG);
+    }
+
+    private int detectPackSize(ItemStack stack) {
+        if (stack.is(PackagingRegistry.PACK_SIZE_1_TAG)) return 1;
+        if (stack.is(PackagingRegistry.PACK_SIZE_8_TAG)) return 8;
+        return DEFAULT_PACK_SIZE;
     }
 
     private String detectCategory(ItemStack stack) {
@@ -293,6 +306,7 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
         super.saveAdditional(tag, registries);
         ContainerHelper.saveAllItems(tag, items, registries);
         tag.putInt("TotalCount", totalCount);
+        tag.putInt("PackSize", packSize);
         tag.putString("Category", category);
         if (packedItemId != null) {
             tag.putString("PackedItemId", packedItemId.toString());
@@ -304,6 +318,7 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
         super.loadAdditional(tag, registries);
         ContainerHelper.loadAllItems(tag, items, registries);
         totalCount = tag.getInt("TotalCount");
+        packSize = tag.contains("PackSize") ? tag.getInt("PackSize") : DEFAULT_PACK_SIZE;
         category = tag.getString("Category");
         if (tag.contains("PackedItemId")) {
             packedItemId = ResourceLocation.parse(tag.getString("PackedItemId"));
@@ -340,7 +355,7 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
         if (packedItemId != null && !BuiltInRegistries.ITEM.getKey(stack.getItem()).equals(packedItemId)) {
             return false;
         }
-        return totalCount < ITEMS_PER_BOX;
+        return totalCount < packSize;
     }
 
     @Override
@@ -385,6 +400,7 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
             if (packedItemId == null) {
                 packedItemId = itemId;
                 category = detectCategory(stack);
+                packSize = detectPackSize(stack);
             } else if (!itemId.equals(packedItemId)) {
                 return; // wrong type
             }
@@ -396,7 +412,7 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
         syncToClient();
         setChanged();
 
-        if (totalCount >= ITEMS_PER_BOX) {
+        if (totalCount >= packSize) {
             seal();
         }
     }
@@ -410,6 +426,7 @@ public class OpenBoxBlockEntity extends BlockEntity implements WorldlyContainer 
     public void clearContent() {
         items.clear();
         totalCount = 0;
+        packSize = DEFAULT_PACK_SIZE;
         packedItemId = null;
         category = "";
         setChanged();
