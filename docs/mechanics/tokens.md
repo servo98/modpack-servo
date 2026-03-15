@@ -1,7 +1,7 @@
 # Token System (Pepe Coins)
 
 > Fuente: GDD v2, seccion 3.12
-> Relacionado: [Gacha](gacha.md), [Quest System](quests.md), [Dungeons](dungeons.md), [Champions](champions.md), [Bosses](bosses.md), [ServoMart](servomart.md)
+> Relacionado: [Gacha](gacha.md), [Quest System](quests.md), [Dungeons](dungeons.md), [Champions](champions.md), [Bosses](bosses.md), [PepeMart](servomart.md)
 
 ## Overview
 
@@ -33,7 +33,7 @@ Pepe Coin = moneda universal del modpack. Conecta todos los sistemas.
 | Gacha Superior (Purpura) | 15 tokens/pull |
 | Gacha Muebles (Rosa) | 5 tokens/pull |
 | Crafteo Llaves avanzadas | Variable |
-| ServoMart compras directas | Mas caro que gacha |
+| PepeMart compras directas | Mas caro que gacha |
 
 Ver [Gacha](gacha.md) para pools de cada maquina.
 

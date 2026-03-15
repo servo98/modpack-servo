@@ -2,7 +2,7 @@
 
 > Fuente: GDD v2, seccion 3.11
 > Mod: Bloo's Gacha Machine
-> Relacionado: [Tokens](tokens.md), [ServoMart](servomart.md), [Accessories](accessories.md), [Dungeons](dungeons.md), [Jewelry](jewelry.md)
+> Relacionado: [Tokens](tokens.md), [PepeMart](servomart.md), [Accessories](accessories.md), [Dungeons](dungeons.md), [Jewelry](jewelry.md)
 > Balance detallado: docs/balance/gacha-rates.md
 
 ## Overview
@@ -134,7 +134,7 @@ Solo 8 de las 24 unique estan disponibles (las de stats mas generales):
 | Epico (purpura) | 4% | 1 set tematico de 2-3 muebles que combinan (ej: mesa+sillas+lampara del mismo estilo) |
 | Legendario (dorado) | 1% | 1 mueble exclusivo cosmetico (edicion limitada, con particulas o animacion) |
 
-El pool de muebles se expande por capitulo segun desbloqueo de ServoMart (ver [ServoMart](servomart.md)):
+El pool de muebles se expande por capitulo segun desbloqueo de PepeMart (ver [PepeMart](servomart.md)):
 - Ch2: Macaw's basico
 - Ch3: + Refurbished basico (nevera, estufa, fregadero)
 - Ch4: + Macaw's Windows completo

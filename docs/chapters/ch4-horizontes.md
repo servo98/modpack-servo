@@ -1,7 +1,7 @@
 # Capitulo 4: Horizontes + Especializacion
 
 > Fuente: GDD v2, seccion 4.3
-> Mecanicas relevantes: [RPG Classes](../mechanics/rpg-classes.md), [Create Automation](../mechanics/create-automation.md), [Cooking](../mechanics/cooking.md), [Jewelry](../mechanics/jewelry.md), [ServoMart](../mechanics/servomart.md)
+> Mecanicas relevantes: [RPG Classes](../mechanics/rpg-classes.md), [Create Automation](../mechanics/create-automation.md), [Cooking](../mechanics/cooking.md), [Jewelry](../mechanics/jewelry.md), [PepeMart](../mechanics/servomart.md)
 
 ## Tema
 

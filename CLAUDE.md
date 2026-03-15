@@ -70,6 +70,7 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 | `balance-checker` | Al cambiar numeros de balance o cuando el usuario pregunte si algo esta balanceado. |
 | `mod-researcher` | ANTES de sugerir cualquier mod nuevo. Verifica NeoForge 1.21.1. |
 | `issue-manager` | Al crear/actualizar issues. Detecta duplicados, mantiene formato estandar. |
+| `accessory-modeler` | Al crear modelos 3D de accesorios (gorros, cinturones, anillos, mochilas) via Blockbench MCP. |
 
 ## Comandos disponibles (.claude/commands/)
 | Comando | Cuando usarlo |

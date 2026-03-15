@@ -15,7 +15,7 @@ Comportamiento diferente segun la zona. Simple y claro.
 | Overworld | YIGD tumba normal | Nada se pierde (tumba con compas) |
 | Nether | YIGD tumba normal | Nada se pierde |
 | Dungeon | **Dark Souls** | Soulbound se queda, loot queda en tumba (re-entry gratis para recuperar) |
-| Boss Chamber | **Re-entry via portal** | Soulbound se queda, consumibles se pierden, portal reabre 15s |
+| Boss Chamber | **Re-entry via beam** | Soulbound se queda, consumibles se pierden, beam sigue activo mientras pelea dure |
 
 ## Soulbound (NUNCA se pierden)
 
@@ -61,17 +61,17 @@ Ver: [Dungeons - Multiplayer](dungeons.md#muerte-en-dungeon-dark-souls-style) pa
 
 Diferente al sistema de dungeons. NO hay tumba YIGD.
 
-1. Mueres en Boss Chamber → respawneas en overworld junto al Boss Altar
+1. Mueres en Boss Chamber → respawneas en overworld junto al altar (pedestal)
 2. Items Soulbound (T2+ equipado) se quedan contigo
 3. Consumibles (comida, pociones, materiales) se pierden
-4. El portal se **REABRE automaticamente 15 segundos** → puedes re-entrar
+4. El **beam sigue activo** mientras la pelea este en curso → puedes re-entrar tocando el beam
 5. Re-entras debilitado (sin consumibles) pero con tu gear
 6. El HP del boss NO se recalcula al re-entrar
-7. Si **TODOS** los jugadores mueren simultaneamente → Boss Chamber se destruye, hay que usar otra Boss Key
+7. Si **TODOS** los jugadores mueren simultaneamente → Boss Chamber se destruye, beam desaparece, hay que craftear otra Boss Key
 
-**Diferencia clave con dungeons**: No hay tumba que recuperar. No hay re-entry ilimitado. El portal solo reabre 15s por muerte. La penalizacion es perder consumibles, no loot.
+**Diferencia clave con dungeons**: No hay tumba que recuperar. La penalizacion es perder consumibles, no loot. El beam permite re-entry ilimitado mientras haya al menos 1 jugador vivo dentro.
 
-Ver: [Bosses - Muerte y Soulbound](bosses.md#7-muerte-y-soulbound-en-boss-chamber) para detalle completo.
+Ver: [Bosses - Multiplayer y Re-entry](bosses.md#23-reglas-de-entrada-y-multiplayer) para detalle completo.
 
 ## YIGD en overworld/nether
 

@@ -16,7 +16,7 @@ Este GDD es el **overview**. El detalle vive en docs especificos:
 | Arquitectura multi-mod | [architecture.md](architecture.md) |
 | Distribucion por capitulo | [mechanics/progression.md](mechanics/progression.md#distribucion-de-contenido-por-capitulo) |
 | RPG Series datos | [mod-data/rpg-series-content.md](mod-data/rpg-series-content.md) |
-| Estado de mods custom | `docs/status/*.md` |
+| Estado de mods custom | [GitHub Issues](https://github.com/servo98/modpack-servo/issues) |
 | Tareas pendientes | [GitHub Issues](https://github.com/servo98/modpack-servo/issues) |
 
 ---
@@ -63,7 +63,7 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 
 ## Mods custom (7 JARs)
 
-Arquitectura completa: [architecture.md](architecture.md). Estado por mod: `docs/status/`.
+Arquitectura completa: [architecture.md](architecture.md). Estado por mod: [GitHub Issues](https://github.com/servo98/modpack-servo/issues).
 
 | Mod | Funcion | Estado |
 |-----|---------|--------|
@@ -85,7 +85,7 @@ Cada sistema tiene su doc detallado en `docs/mechanics/`. Aqui el resumen ejecut
 
 Multibloque 3x3 inspirado en Satisfactory. Entregas items empacados para avanzar de capitulo. Screen muestra progreso, puertos aceptan automatizacion (hopper, Create, RS). Items de entrega son CAJAS EMPACADAS, no items sueltos.
 
-Detalle: [mechanics/space-elevator.md](mechanics/space-elevator.md) | Implementacion: [status/servo-delivery.md](status/servo-delivery.md)
+Detalle: [mechanics/space-elevator.md](mechanics/space-elevator.md)
 
 ## 3.2 Sistema de Empaque (Cajas de Envio)
 
@@ -93,7 +93,7 @@ Carton Plano → doblar en Empacadora → colocar Caja Abierta → llenar con it
 
 **Por que funciona**: Perfil B cocina a mano y empaca a mano. Perfil A automatiza con Create. Ambos contribuyen al Space Elevator.
 
-Detalle: [mechanics/packaging.md](mechanics/packaging.md) | Implementacion: [status/servo-packaging.md](status/servo-packaging.md)
+Detalle: [mechanics/packaging.md](mechanics/packaging.md)
 
 ## 3.3 Workstations de cocina (4 custom)
 
@@ -106,7 +106,7 @@ Detalle: [mechanics/packaging.md](mechanics/packaging.md) | Implementacion: [sta
 
 Detalle: [mechanics/cooking.md](mechanics/cooking.md)
 
-## 3.4 ServoMart (IKEA)
+## 3.4 PepeMart (IKEA)
 
 Tablet/catalogo donde "compras" muebles con tokens o materiales. Te llega una Caja de Carton que al abrirla aparece el mueble. Opcion de caja misteriosa (gacha de muebles separado).
 

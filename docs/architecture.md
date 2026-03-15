@@ -78,15 +78,16 @@ Los mods standalone son configurables via JSON/datapacks y no dependen de servo_
 - **Deps**: ninguna
 
 ### servo_dungeons
-- **Sistema**: Void dimension manager, instance lifecycle
-- **Bloques**: Dungeon Pedestal, Dungeon Rune, Boss Altar
+- **Sistema**: Void dimension manager, instance lifecycle, multiples instancias via offsets
+- **Bloques**: Pedestal Unificado (dungeon + boss), Runa de Dungeon, Exit Portal
 - **Items**: 4 Dungeon Keys, 8 Boss Keys, Esencia de Dungeon, Fragmento de Cristal, 8 Boss Drops
 - **Entities**: 8 bosses GeckoLib con AI, fases, scaling
-- **Proc-gen**: Templates .nbt, 7 tipos de sala
-- **Deps**: GeckoLib (hard), FTB Teams (soft)
+- **Entrada**: Beam vertical sobre altar (tocar = entrar). Sin restriccion de teams.
+- **Proc-gen**: Templates .nbt, 7 tipos de sala, spawning programatico de champions por tier
+- **Deps**: GeckoLib (hard), Champions Unofficial API (soft)
 
 ### servo_mart
-- **Bloques**: ServoMart (tablet/catalogo)
+- **Bloques**: PepeMart (tablet/catalogo)
 - **GUI**: Catalogo con categorias, precios, desbloqueo por stage
 - **Config**: Catalogo via JSON datapack (items, precios, moneda, stages)
 - **Deps**: servo_packaging (hard — entrega en cajas)

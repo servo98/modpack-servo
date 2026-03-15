@@ -11,7 +11,7 @@
 | servo_delivery (custom) | Terminal de Entrega (Space Elevator), multibloque 3x3. Deps: servo_packaging. | in-progress (scaffold+GUI). Ver architecture.md |
 | servo_cooking (custom) | 4 workstations: Blender, Moldes, Drink Maker, Horno Avanzado. Standalone. | pendiente |
 | servo_create (custom) | Compat Create <-> packaging (funnels, deployers). Deps: packaging+Create. | pendiente |
-| servo_dungeons (custom) | Bosses (8), dungeons, llaves, Boss Altar, Boss Chamber, dimension void. Deps: GeckoLib. | pendiente |
+| servo_dungeons (custom) | Bosses (8), dungeons, llaves, Altar Unificado (Pedestal + 4 Runas), Boss Chamber, dimension void. Deps: GeckoLib. | pendiente |
 | servo_mart (custom) | Tienda catalogo dinamico. Deps: servo_packaging. | pendiente |
 | servo_core (custom, glue) | Tokens (Pepe Coin), accesorios custom (belt/back/feet/head), gacha pity, champions post-processing, progression manager. No standalone. | scaffold |
 

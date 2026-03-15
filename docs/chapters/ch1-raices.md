@@ -86,7 +86,7 @@ Resumen: Cajas de comida variada, crops basicos, Raiz del Guardian (boss drop), 
 2. Colocar primer Waystone
 3. Encontrar un village
 4. Usar Supplementaries (rope, jar)
-5. Encontrar un dungeon portal
+5. Construir tu primer Altar de Dungeon
 
 ### Construccion (4)
 1. Construir casa basica

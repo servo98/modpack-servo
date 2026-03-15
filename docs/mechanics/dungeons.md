@@ -1,11 +1,16 @@
-# Sistema de Dungeons
+# Sistema de Dungeons y Bosses
 
-> Fuente: GDD v2, seccion 3.5
-> Relacionado: [Bosses](bosses.md), [Champions](champions.md), [Death System](death-system.md), [RPG Classes](rpg-classes.md), [Accessories](accessories.md), [Tokens](tokens.md)
+> Fuente: GDD v2, secciones 3.5 y 3.8
+> Implementacion: **servo_dungeons** (un solo mod para dungeons + bosses)
+> Relacionado: [Bosses (detalle de cada jefe)](bosses.md), [Champions](champions.md), [Death System](death-system.md), [RPG Classes](rpg-classes.md), [Accessories](accessories.md), [Tokens](tokens.md)
 
 ## Overview
 
-Sistema 100% custom en **servo_dungeons**. Dimension void, generacion procedural de salas, 4 tiers de llave, multiplayer, roguelike (muerte = pierde loot de la run). **Dimensional Dungeons REMOVIDO** (licencia ARR).
+Sistema 100% custom en **servo_dungeons**. Un solo mod maneja tanto dungeons procedurales como peleas de jefes de capitulo. Una sola dimension void compartida, multiples instancias simultaneas separadas por offsets de coordenadas. **Dimensional Dungeons REMOVIDO** (licencia ARR).
+
+**Dos modos de uso, mismo altar**:
+- **Dungeon Key** (4 tiers) → dungeon procedural con salas, mobs, loot
+- **Boss Key** (8, una por capitulo) → arena directa de boss, sin salas previas
 
 ## Llaves de Dungeon
 
@@ -93,23 +98,27 @@ Cada tier necesita drop del tier anterior → **cadena de progresion natural**.
 
 ## Puzzles con Supplementaries
 
-- Pozos → necesitas Rope para bajar
-- Paredes agrietadas → Bomb para abrir paso secreto
-- Puertas cerradas → Key de Supplementaries
-- Esto hace Supplementaries NECESARIO en dungeons
+- Pozos verticales → necesitas **Rope** (o Rope Arrow) para bajar/subir
+- Paredes agrietadas → **Bomb** para abrir paso secreto (Bomb normal = tier Basica/Avanzada, Blue Bomb = tier Maestra/Nucleo)
+- Trampas de piso → **Bamboo Spikes** tipped con pociones (Weakness/Poison/Harming segun tier)
+- Launch pads → **Spring Launcher** para puzzles de movimiento vertical
+- Mensajes ambientales → **Speaker Block** ("Escuchas crujidos detras de esta pared...")
+- Timers visuales → **Hourglass** en salas con limite de tiempo
+- Puertas cerradas → mob-clear gate (matar todos los mobs de la sala) o palanca oculta detras de pared agrietada
+- Bombas configuradas con `break_blocks = "NONE"` — no rompen bloques normales, solo cracked walls via codigo custom en servo_dungeons
 
-## Altar de Dungeon (Entrada)
+## Altar Unificado (Dungeon + Boss)
 
 ### El multibloque
 
-El Altar de Dungeon es la unica forma de entrar a una dungeon. Es un pequeno ritual en el piso: un pedestal central rodeado de 4 bloques de runa.
+El Altar es la unica forma de entrar a dungeons y peleas de boss. Es un ritual en el piso: un pedestal central rodeado de 4 bloques de runa. **El mismo altar sirve para ambos modos** — la llave determina que se genera.
 
 ```
      [R]
 [R]  [P]  [R]
      [R]
 
-P = Pedestal de Dungeon (servo_dungeons:dungeon_pedestal)
+P = Pedestal (servo_dungeons:dungeon_pedestal)
 R = Runa de Dungeon (servo_dungeons:dungeon_rune)
 ```
 
@@ -125,17 +134,17 @@ R = Runa de Dungeon (servo_dungeons:dungeon_rune)
 | Pedestal | 4 Stone Brick + 1 Ender Pearl + 2 Gold Ingot + 1 Lapis |
 | Runa (x4) | 4 Stone Brick + 1 Redstone + 1 Lapis |
 
-Materiales accesibles en Ch1. Un altar sirve para TODAS las tiers — la llave determina la dificultad, no el altar.
+Materiales accesibles en Ch1. Un altar sirve para TODO — la llave determina que pasa, no el altar.
 
 ---
 
-## Ritual de Entrada
+## Ritual de Entrada y Beam
 
 ### Flujo paso a paso
 
 ```
-1. Lider pone llave en pedestal (click derecho con llave en mano)
-   → Llave se consume, aparece flotando sobre el pedestal
+1. Jugador pone llave en pedestal (click derecho con llave en mano)
+   → Llave se consume
    → Runas empiezan a brillar, humming magico
 
 2. Carga del ritual (~5 segundos)
@@ -144,40 +153,48 @@ Materiales accesibles en Ch1. Un altar sirve para TODAS las tiers — la llave d
    → Las runas pulsan con el color del tier de llave:
      Basica=blanco, Avanzada=azul, Maestra=morado, Nucleo=dorado
 
-3. Explosion de particulas → TELEPORT
-   → Todos los jugadores elegibles son teleportados
-   → Flash de pantalla + sonido de llegada
-   → Aparecen en la sala de entrada de la dungeon
+3. BEAM aparece sobre el pedestal
+   → Columna de luz/particulas vertical
+   → El jugador que puso la llave es teleportado automaticamente
+   → El beam PERSISTE mientras la dungeon/boss este activo
+
+4. Otros jugadores pueden entrar
+   → Cualquiera que toque el beam es teleportado al dungeon/boss
+   → No hay limite de tiempo, no hay restriccion de team
+   → El beam es la puerta: tocas = entras
 ```
 
-### Quien se teleporta
+### Beam como mecanica central
 
-Usa **FTB Teams** como backend (el jugador no interactua con menus de team):
+**NO usa FTB Teams para entrada**. FTB Teams es puramente social (chat, waypoints). La entrada al dungeon es fisica: tocas el beam, entras.
 
-| Situacion | Quien entra |
-|-----------|-------------|
-| Lider en un FTB Team | Lider + todos los miembros del team que esten **dentro de 5 bloques del pedestal** |
-| Lider sin team (solo) | Solo el lider |
-| Miembro del team lejos del altar | NO se teleporta (debe estar cerca) |
-| Jugador de otro team cerca | NO se teleporta (no es su team) |
+| Situacion | Resultado |
+|-----------|-----------|
+| Tocas el beam | Teleport a la dungeon/boss activa de ese altar |
+| Dungeon cerrada (beam apagado) | Nada, necesitas una llave nueva |
+| Mueres y quieres re-entrar | Tocas el beam otra vez → entras por la ENTRADA |
 
-**Regla clave**: Pararte en el circulo = "estoy listo". No hay boton ni menu. Si estas ahi cuando el ritual termina, entras. Si no, no.
+### Multiples dungeons simultaneas
 
-### Limite: 1 dungeon activa
+Se pueden tener **multiples dungeons activas** al mismo tiempo en la misma dimension void. Cada una se genera en coordenadas separadas:
 
-- Si ya hay una dungeon en progreso, meter llave en cualquier altar → mensaje: **"Una dungeon esta en progreso. Espera a que termine."**
-- Las runas del altar activo brillan mientras la dungeon esta corriendo (indicador visual)
-- La llave NO se consume si el ritual falla
+```
+Altar A abre dungeon → instancia en X=0, Z=0
+Altar B abre dungeon → instancia en X=10,000, Z=0
+Altar C abre dungeon → instancia en X=20,000, Z=0
+```
+
+Cada altar trackea SU instancia. Si un altar ya tiene dungeon activa, no puedes meter otra llave en ESE altar — pero otro altar si puede abrir otra.
 
 ---
 
 ## Multiplayer
 
-### Grupos (FTB Teams)
+### Entrada libre via beam
 
-- El sistema de team se configura una vez (FTB Teams tiene su UI propia)
-- Para dungeons solo importa: estas en el mismo team? estas cerca del altar?
+- **No hay restriccion de team** para entrar. Cualquiera que toque el beam entra.
 - Maximo 8 jugadores por run (limite del servidor)
+- Para coordinar, usas FTB Teams (chat, waypoints) pero NO es requerido para entrar
 
 ### Dentro de la dungeon
 
@@ -198,9 +215,9 @@ Items de la run (loot, comida, materiales) quedan en la tumba
        ↓
 Jugador respawnea en overworld (cama/spawn)
        ↓
-Jugador va al Altar de Dungeon (sigue brillando, activo)
+Jugador va al Altar → el beam sigue activo
        ↓
-Click derecho en pedestal → teleport GRATIS a entrada de dungeon
+Toca el beam → teleport GRATIS a la ENTRADA de la dungeon
        ↓
 Jugador pelea su camino de vuelta a su tumba
        ↓
@@ -208,9 +225,9 @@ Recupera sus items ← O muere otra vez intentando
 ```
 
 **Reglas de muerte:**
-- Re-entry es **gratis** e **ilimitado** mientras la dungeon este activa
+- Re-entry via beam es **gratis** e **ilimitado** mientras la dungeon este activa
 - No necesitas otra llave para re-entrar
-- Apareces en la **sala de entrada** (no donde moriste) — tienes que caminar
+- Apareces en la **sala de entrada** (no donde moriste) — tienes que caminar de vuelta
 - Si mueres de nuevo, tumba anterior dropea items al suelo y nueva tumba se forma (comportamiento YIGD normal)
 - Tus companeros siguen peleando mientras tu vuelves
 
@@ -220,33 +237,42 @@ Recupera sus items ← O muere otra vez intentando
 
 | Metodo | Como |
 |--------|------|
-| Completar | Matar boss final (Nucleo) o limpiar ultima sala → portal de salida aparece |
-| Abandonar | Portal permanente en sala de entrada → click = vuelves al altar en overworld |
-| Morir | Respawneas en overworld, puedes re-entrar o abandonar |
+| Completar | Limpiar ultima sala (o matar boss en CORE) → Exit Portal aparece en sala final |
+| Abandonar | Exit Portal permanente en sala de entrada → pisarlo = vuelves al altar en overworld |
+| Morir | Respawneas en overworld, puedes re-entrar (tocar beam) o no volver |
 
-### Abandonar dungeon (lider)
+**No hay concepto de "lider"**. Nadie tiene control especial. Cualquiera entra, cualquiera sale.
 
-- El **lider** (quien puso la llave) puede interactuar con el pedestal del altar y elegir **"Abandonar Dungeon"**
-- Si hay jugadores adentro → reciben aviso: "El lider ha iniciado el cierre. 60 segundos para salir."
-- Despues de 60 seg → jugadores restantes son teleportados al altar
-- Tumbas no recogidas se teleportan al altar (items no se pierden)
-- Chunks de la dungeon se marcan para limpieza
+### Cierre automatico de dungeon
+
+La dungeon se cierra cuando **0 jugadores quedan adentro**:
+- Todos salieron por Exit Portal
+- Todos murieron y nadie re-entro en 10 minutos
+- Todos se desconectaron y nadie reconecto en 10 minutos
+
+Al cerrarse:
+1. Beam desaparece (pedestal → INACTIVE)
+2. Tumbas no recogidas se teleportan junto al altar
+3. Todos los bloques de esa instancia se limpian (set AIR)
+4. El offset se libera para reusar
+5. Se puede abrir una nueva dungeon en ese altar
+
+**Error de llave**: si metiste la llave equivocada, sal por el Exit Portal en la sala de entrada. La llave ya se consumio (costo del error), pero sales en 5 segundos.
 
 ### Desconexion / crash
 
 - Si un jugador se desconecta dentro de la dungeon → su posicion se guarda
 - Al reconectarse → aparece donde estaba (dentro de la dungeon)
 - Si TODOS los jugadores se desconectan → dungeon persiste 10 minutos
-- Despues de 10 min sin nadie → limpieza automatica, tumbas teleportadas al altar
+- Despues de 10 min sin nadie → cierre automatico (misma limpieza)
 
 ### Resumen de estados del Altar
 
 | Estado | Visual | Interaccion |
 |--------|--------|-------------|
-| Inactivo | Runas apagadas, sin particulas | Click con llave = inicia ritual |
-| Cargando ritual | Runas brillando, particulas, sonido | Esperar 5 seg, pararse cerca |
-| Dungeon activa | Runas pulsando suavemente | Click = re-entry (team members) / Abandonar (lider) |
-| Dungeon de otro | Runas apagadas | Click con llave = "Dungeon en progreso" |
+| Inactivo | Runas apagadas, sin beam | Click con llave = inicia ritual |
+| Cargando ritual | Runas brillando, particulas, sonido | Esperar 5 seg |
+| Dungeon/Boss activo | Runas pulsando, **beam vertical activo** | Tocar beam = entrar/re-entrar |
 
 ---
 
@@ -258,7 +284,63 @@ Recupera sus items ← O muere otra vez intentando
 
 ## Salas
 
-- 100+ templates .nbt
+### Templates
+
+- 100+ templates .nbt (creados con Structure Blocks)
 - 7 tipos: entrada, pasillo, esquina, T, cruz, dead-end, boss
 - Generacion procedural en dimension void
-- Limpieza de chunks cuando 0 jugadores quedan
+
+### Estados de sala
+
+| Estado | Condicion | Puerta siguiente |
+|--------|-----------|-----------------|
+| LOCKED | No has entrado aun | Cerrada |
+| ACTIVE | Entraste, mobs spawnearon | Cerrada |
+| CLEARED | Mobs muertos + spawns agotados | Abierta |
+
+Una sala es CLEARED cuando:
+1. Todas las waves/spawns ya se dispararon (no quedan pendientes)
+2. **0 mobs hostiles vivos** en el area de la sala
+
+Salas sin enemigos (pasillos, salas de cofres) se marcan CLEARED inmediatamente al entrar.
+
+### Spawning de mobs (programatico, NO spawners)
+
+Los mobs se spawnean via codigo Java, NO vanilla spawners. Al entrar a una sala por primera vez:
+
+```
+DungeonInstance.getTier() → tier de la llave usada
+    ↓
+Sala define: cantidad de mobs, tipos, posiciones
+    ↓
+Por cada mob a spawnear:
+    - Spawn normal (zombie, skeleton, etc.)
+    - Roll de champion: tier.championChance (15%/25%/30%/35%)
+    - Si champion: agregar affixes via Champions Unofficial API
+      max affixes = tier.maxAffixes (1/2/3/3)
+    ↓
+Sala pasa a ACTIVE
+    ↓
+Cuando 0 mobs vivos → sala pasa a CLEARED → puerta siguiente se abre
+```
+
+### Dimension e instancias
+
+Una sola dimension void (`servo_dungeons:dungeon`). Multiples instancias simultaneas separadas por offset:
+
+```
+Instancia 1: centro en X=0,       Z=0
+Instancia 2: centro en X=10,000,  Z=0
+Instancia 3: centro en X=20,000,  Z=0
+...
+```
+
+Al cerrarse una dungeon, sus bloques se limpian (set AIR) y el offset se libera para reusar.
+
+### Limpieza
+
+Cuando 0 jugadores quedan en una instancia (por cualquier razon):
+1. Timer de 10 min (por si alguien reconecta)
+2. Si nadie vuelve → limpiar todos los bloques de esa instancia
+3. Tumbas YIGD no recogidas → teleportar al altar en overworld
+4. Liberar offset para reusar

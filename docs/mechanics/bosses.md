@@ -1,7 +1,7 @@
 # Sistema de Jefes - Modpack Servo
 
 > Fuente: GDD v2, seccion 3.8
-> Implementacion: **servo_dungeons** (8 bosses, Boss Altar, Boss Chamber)
+> Implementacion: **servo_dungeons** (mismo mod que dungeons — altar unificado)
 > Relacionado: [Dungeons](dungeons.md), [Death System](death-system.md), [Combat Scaling](../balance/combat-scaling.md), [RPG Weapon Stats](../balance/rpg-weapon-stats.md), [Tokens](tokens.md)
 
 ---
@@ -16,55 +16,56 @@
 - Nunca "pegar y esquivar" como unico patron: cada boss tiene una mecanica interactiva unica
 - Fases con transiciones cinematicas (GeckoLib)
 - Multiplayer scaling: mas jugadores = mas HP y dano, mecanicas identicas
-- Invocacion directa al boss via Boss Altar — los dungeons son un sistema aparte
+- Invocacion via el **mismo altar de dungeons** con Boss Key — no hay altar separado
 
 ---
 
-# 2. INVOCACION: BOSS ALTAR
+# 2. INVOCACION: ALTAR UNIFICADO
 
 ## 2.1 Concepto
 
-El Boss Altar es un bloque custom de servo_dungeons. Existe 1 por mundo, pre-colocado en el spawn o crafteable a partir de Ch1. El jugador craftea una Boss Key del capitulo correspondiente, la inserta en el Altar, y el grupo entero es teleportado a la Boss Chamber (una arena instanciada en la dimension void de servo_dungeons).
+Se usa el **mismo altar que para dungeons** (Pedestal + 4 Runas). El jugador craftea una Boss Key del capitulo correspondiente, la inserta en el Pedestal, y aparece el beam. El jugador (y quien toque el beam) es teleportado a la Boss Chamber — una arena instanciada en la dimension void de servo_dungeons.
 
-No hay salas previas, no hay dungeon. Es directo: llave → altar → boss.
+No hay salas previas, no hay dungeon. Es directo: llave → altar → beam → boss.
+
+Ver [dungeons.md](dungeons.md) para detalles del altar y el beam.
 
 ## 2.2 Flujo de invocacion
 
 ```
 1. Jugador craftea Boss Key del capitulo
-2. Se acerca al Boss Altar con su grupo
+2. Se acerca al altar con su grupo
 3. Inserta la Boss Key → la llave se consume
-4. El Altar abre un portal (visual: vortice tematico del jefe)
-5. Todos los jugadores cercanos (radio 8 bloques) tienen 30 segundos para entrar
-6. Al entrar: teleport a la Boss Chamber instanciada
-7. Cuando el ultimo jugador entra O pasan los 30s → el portal se cierra
-8. El jefe aparece con cinematica de spawn
-9. Victoria o derrota → portal de salida aparece → regreso al Altar
+4. Ritual de 5 segundos (igual que dungeon)
+5. Beam aparece sobre el pedestal
+6. Jugador es teleportado a la Boss Chamber
+7. Otros jugadores pueden tocar el beam para entrar
+8. El jefe aparece con cinematica de spawn (HP se calcula al spawnear)
+9. Victoria → Exit Portal aparece → pisarlo = regreso al altar
+10. Derrota total (todos mueren) → Boss Chamber se destruye, beam desaparece
 ```
 
-## 2.3 Reglas del portal y multiplayer
+## 2.3 Reglas de entrada y multiplayer
 
-**Entrada**:
-- El portal permanece abierto 30 segundos despues de insertar la llave
-- Cualquier jugador en radio 8 bloques del Altar puede entrar durante esos 30s
-- El HP del jefe se calcula al momento del spawn basado en cuantos jugadores hay dentro cuando el portal se cierra
-- Si solo entraron 2 de 4, el boss escala para 2, no para 4
+**Entrada via beam**:
+- El beam persiste mientras la pelea este activa
+- Cualquier jugador que toque el beam entra (no hay restriccion de team)
+- El HP del jefe se calcula al momento del spawn basado en cuantos jugadores hay dentro en ese instante
+- Si entran mas jugadores despues del spawn, el boss NO re-escala
 
 **Re-entrada despues de morir**:
-- Si un jugador muere dentro de la Boss Chamber, respawnea en el overworld junto al Boss Altar
-- El portal se REABRE automaticamente por 15 segundos cuando un jugador muere, permitiendole re-entrar
-- El HP del boss NO se recalcula al re-entrar (sigue con el HP que tenia)
-- El jugador re-entra con sus items Soulbound (gear equipado T2+) pero sin los consumibles que perdio
-- Esto le permite re-entrar a ayudar al grupo, pero debilitado (sin pociones, sin comida extra)
-- Si TODOS los jugadores mueren simultaneamente, la Boss Chamber se destruye y hay que usar otra Boss Key
+- Jugador muere → respawnea en overworld → va al altar → toca el beam → re-entra
+- Entra con items Soulbound (gear T2+) pero sin consumibles (en la tumba dentro de la arena)
+- El HP del boss NO se recalcula al re-entrar
+- Si TODOS los jugadores mueren, la Boss Chamber se destruye. Boss Key consumida, hay que craftear otra.
 
 **Salida**:
-- Victoria: portal de salida aparece en la arena. 60 segundos para recoger loot y salir
-- Derrota total: todos respawnean en el overworld junto al Altar. Boss Key consumida, hay que craftear otra
-- Desconexion: si un jugador se desconecta, cuenta como muerto para efectos de la pelea. Al reconectar aparece en el overworld
+- Victoria: Exit Portal aparece en la arena. Recoger loot y pisar el portal
+- Derrota total: todos respawnean en overworld junto al altar. Beam desaparece
+- Desconexion: si un jugador se desconecta, cuenta como fuera de la pelea. Al reconectar aparece en overworld
 
 **Reglas de la Boss Chamber**:
-- Dimension void instanciada, unica para esa pelea
+- Instancia en la dimension void (mismo sistema de offsets que dungeons)
 - No se pueden colocar bloques (excepto mecanicas especificas del jefe que lo requieran)
 - No se puede usar Ender Pearl para escapar del arena
 - Waystones deshabilitados dentro de la chamber
@@ -119,7 +120,7 @@ ANIMACION (Blockbench, tab Animate)
 ├── Event keyframes para logica (ej: aplicar dano en frame 16)
 └── Exportar: .animation.json
 
-CODIGO (servo_core, Java/NeoForge)
+CODIGO (servo_dungeons, Java/NeoForge)
 ├── Entidad: extiende Monster, implementa GeoEntity
 ├── Modelo: extiende GeoModel<BossEntity>
 ├── Renderer: extiende GeoEntityRenderer<BossEntity>
@@ -925,7 +926,7 @@ Reglas especificas para Boss Chamber (diferentes a dungeons — ver [Death Syste
 - Items extra en inventario
 - La Boss Key ya se consumio al entrar
 
-**Diferencia con dungeons**: En boss chamber NO hay tumba YIGD. El jugador respawnea en el overworld junto al Altar con su gear soulbound, y el portal se reabre 15s para re-entrar. En dungeons, YIGD crea tumba y el jugador puede volver a buscarla.
+**Diferencia con dungeons**: En boss chamber NO hay tumba YIGD. El jugador respawnea en el overworld junto al altar (pedestal), con su gear soulbound, y puede re-entrar tocando el beam (que sigue activo mientras haya algun jugador vivo dentro). En dungeons, YIGD crea tumba y el jugador puede volver a buscarla.
 
 ---
 
@@ -940,13 +941,13 @@ Separado de bosses de capitulo. Solo aparece en **Dungeon Del Nucleo** (Ch7+).
 
 # 9. PREGUNTAS ABIERTAS
 
-- [ ] Boss Altar: crafteable o pre-colocado? Si crafteable, que materiales?
+- [x] Altar: crafteable. Pedestal (4 Stone Brick + 1 Ender Pearl + 2 Gold + 1 Lapis) + 4 Runas (4 Stone Brick + 1 Redstone + 1 Lapis). Quest reward en Ch1 da 1 set completo.
 - [ ] Animaciones: duraciones exactas requieren iteracion en Blockbench
 - [ ] Sonidos custom vs vanilla reutilizados
 - [ ] Devorador F2: diseno exacto de las 3 maquinas y secuencia
 - [ ] Devorador F3: receta exacta del Antidoto Cosmico
-- [ ] Balance: recraftear Boss Key al wipe es frustante? Alternativa: Boss Key no se consume si wipe total, solo en victoria
-- [ ] Boss Key multiplayer: 1 llave por grupo confirmado. El que inserta hostea
+- [x] Balance: recraftear Boss Key al wipe es frustante? Alternativa: Boss Key no se consume si wipe total, solo en victoria → **Resuelto: Confirmado: Boss Key se consume al insertar (igual que Dungeon Keys). Error = pierdes la llave.**
+- [ ] Boss Key multiplayer: 1 llave por grupo confirmado. No hay lider — cualquiera puede insertar la llave.
 - [ ] Death animations: duracion ideal
 - [ ] Trofeos: solo decorativos o con stats?
 - [ ] Locomotora Fantasma: arena circular en dimension void, verificar performance
