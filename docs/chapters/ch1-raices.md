@@ -20,7 +20,7 @@ Vanilla, FD basico, Supplementaries basico, Aquaculture, FTB Quests (Recetario),
 | Workstations | Cutting Board, Cooking Pot, Stove, Skillet |
 | Dungeon | Basica (primera llave gratis). 5-7 salas, 1 affix max |
 | Champions | 8% overworld, 1 affix |
-| Boss | Guardian del Bosque (200 HP) |
+| Boss | Guardian del Bosque (800 HP) |
 | RPG | T0: Flint Dagger, Stone weapons, Novice/Acolyte Wand. Small Rune Pouch + Arcane/Frost runes |
 | Jewelry | Copper/Iron Ring (introductorio, sin stats reales) |
 | Gacha | Machine como quest reward |

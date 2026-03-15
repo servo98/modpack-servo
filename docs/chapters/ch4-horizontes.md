@@ -22,7 +22,7 @@ Create brass (Mixer, Deployer, Crafter), Macaw's completo, FD Feasts, Skill Tree
 | RPG | T2 completo. **Skill Tree**: elegir especializacion |
 | Jewelry | Tanzanite/Topaz, Diamond, Emerald |
 | Decoracion | Macaw's completo |
-| Boss | Locomotora Fantasma (1,600 HP) |
+| Boss | Locomotora Fantasma (2,400 HP) |
 
 ## Especializaciones disponibles
 

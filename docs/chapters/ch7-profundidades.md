@@ -20,7 +20,7 @@ Llave del Nucleo de dungeon
 | Dungeon | **Llave del Nucleo**. 20-25 salas + boss dungeon. Pool completo de 16 affixes (incl. Paralyzing, Wounding) |
 | Unique Jewelry | 24 items como coleccionables. Boss dungeon garantiza 1 |
 | RPG | T3+ uniques. Accesorios custom T4 |
-| Boss | Nucleo del Dungeon (12,800 HP). Dropea **Cristal del Nucleo** |
+| Boss | Nucleo del Dungeon (7,200 HP). Dropea **Cristal del Nucleo** |
 
 ## Space Elevator entrega Ch7
 

@@ -120,7 +120,7 @@ Detalle: [mechanics/dungeons.md](mechanics/dungeons.md) | Muerte: [mechanics/dea
 
 ## 3.6 Bosses (8, uno por capitulo)
 
-Cada boss tiene tematica unica, mecanicas especiales, y HP que dobla por capitulo (200 → 25,600). Scaling multiplayer: HP * (1 + (players-1)*0.3). Boss Key crafteable consume al usar. Drops individuales por participante (como MMO).
+Cada boss tiene tematica unica, mecanicas especiales, y HP que crece x1.44 por capitulo (800 → 10,400). Scaling multiplayer: HP * (1 + (players-1)*0.3). Boss Key crafteable consume al usar. Drops individuales por participante (como MMO).
 
 Detalle: [mechanics/bosses.md](mechanics/bosses.md)
 
@@ -187,25 +187,25 @@ Quests detallados por capitulo en `docs/chapters/`:
 
 | Cap | Tema | Boss | HP | Contenido clave |
 |-----|------|------|----|----------------|
-| 1 | Tutorial + Survival | Guardian del Bosque | 200 | 12 crops, FD basico, dungeon basica, gacha machine, RPG T0 |
-| 2 | Cocina + Clase Melee | Bestia Glotona | 400 | +12 crops, Blender, Moldes, Create basico, Rogue/Warrior, B&C |
-| 3 | Engranajes + Magia | Coloso Mecanico | 800 | +10 frutas, Create andesite, Drink Maker, Horno, Wizard/Paladin/Priest, Nether |
-| 4 | Horizontes + Especializacion | Locomotora Fantasma | 1,600 | +8 especias, Create brass+trains, Skill Tree, T2, Feasts |
-| 5 | La Red + Poder Magico | El Arquitecto | 3,200 | +8 exoticos, RS, Trains avanzados, Enchants magicos, Llave Maestra |
-| 6 | Maestria + Netherite RPG | Senor de las Cosechas | 6,400 | +8 avanzados, T3 Netherite, enchant V, optimizacion |
-| 7 | Profundidades + Coleccion | Nucleo del Dungeon | 12,800 | +6 raros, Llave del Nucleo, unique jewelry, T4 materials |
-| 8 | Final + Legendarias | Devorador de Mundos | 25,600 | Todo, T4 custom, mega-entregas, boss 4 fases |
+| 1 | Tutorial + Survival | Guardian del Bosque | 800 | 12 crops, FD basico, dungeon basica, gacha machine, RPG T0 |
+| 2 | Cocina + Clase Melee | Bestia Glotona | 1,200 | +12 crops, Blender, Moldes, Create basico, Rogue/Warrior, B&C |
+| 3 | Engranajes + Magia | Coloso Mecanico | 1,600 | +10 frutas, Create andesite, Drink Maker, Horno, Wizard/Paladin/Priest, Nether |
+| 4 | Horizontes + Especializacion | Locomotora Fantasma | 2,400 | +8 especias, Create brass+trains, Skill Tree, T2, Feasts |
+| 5 | La Red + Poder Magico | El Arquitecto | 3,400 | +8 exoticos, RS, Trains avanzados, Enchants magicos, Llave Maestra |
+| 6 | Maestria + Netherite RPG | Senor de las Cosechas | 5,000 | +8 avanzados, T3 Netherite, enchant V, optimizacion |
+| 7 | Profundidades + Coleccion | Nucleo del Dungeon | 7,200 | +6 raros, Llave del Nucleo, unique jewelry, T4 materials |
+| 8 | Final + Legendarias | Devorador de Mundos | 10,400 | Todo, T4 custom, mega-entregas, boss 4 fases |
 
 ---
 
 # 5. ECONOMIA Y BALANCE
 
-Detalle completo en `docs/balance/`: [combat-scaling.md](balance/combat-scaling.md), [gacha-rates.md](balance/gacha-rates.md), [accessories.md](balance/accessories.md), [rpg-weapon-stats.md](balance/rpg-weapon-stats.md).
+Detalle completo en `docs/balance/`: [combat-scaling.md](balance/combat-scaling.md), [gacha-rates.md](balance/gacha-rates.md), [accessories.md](balance/accessories.md), [rpg-weapon-stats.md](balance/rpg-weapon-stats.md), [spell-power-analysis.md](balance/spell-power-analysis.md).
 
 ## Formulas clave
 
 ```
-Boss HP base:    HP(ch) = 200 * 2^(ch-1)
+Boss HP base:    HP(ch) = 800 * 1.44^(ch-1)
 Boss HP spawn:   HP * (1 + (players-1)*0.3)  [fijo al spawn]
 Boss dmg base:   dmg(ch) = 5 * 1.35^(ch-1)
 Boss dmg spawn:  dmg * (1 + (players-1)*0.15) [fijo al spawn]

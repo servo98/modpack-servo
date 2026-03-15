@@ -18,7 +18,7 @@ Ninguno. Todo ya esta disponible.
 | Crops | Todos desbloqueados (70+) |
 | Recetas | +10 legendarias que combinan todo |
 | RPG | **T4 custom**: Aeternium/Ruby weapons via KubeJS (materiales de boss/dungeon) |
-| Boss | **Devorador de Mundos** (25,600 HP, 4 fases: melee → Create → cocina buff → DPS race) |
+| Boss | **Devorador de Mundos** (10,400 HP, 4 fases: melee → Create → cocina buff → DPS race) |
 | Quests | Completismo (100% crops, 100% comidas) |
 
 ## T4 Weapons (KubeJS custom)
@@ -37,7 +37,7 @@ Resumen: Item Maestro, comidas legendarias, arma T4, trofeos de todos los bosses
 
 ## Boss Final: Devorador de Mundos
 
-- 25,600 HP (4 jugadores: 45,056 HP)
+- 10,400 HP (4 jugadores: 19,760 HP)
 - **4 fases**:
   1. Melee: combate cuerpo a cuerpo clasico
   2. Create: usar mecanismos Create en la arena

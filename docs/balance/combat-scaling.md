@@ -40,33 +40,41 @@ Armor bonuses: Warrior +4-5% dmg/piece, Rogue +2-5% dmg/piece + haste.
 
 ## Player DPS by Chapter (Mage - Wizard example)
 
-Spell DPS = spell_power * coefficient / cast_time.
-Con Staff T2 (6.0 SP) + Arcane Robe T2 (+100% arcane) = 12.0 effective SP.
+Spell DPS sustained = spell_power * coefficient / cast_time (rotacion optima, single-target).
+Spells bypasean armor del boss (solo aplica spell resistance, que es 0 por defecto).
 
-| Cap | Weapon           | Base SP | Armor Bonus | Effective SP | Best Spell (coeff) | Spell DPS |
-|-----|------------------|---------|-------------|--------------|--------------------| ----------|
-| 1   | Novice Wand T0   | 3.0     | -           | 3.0          | fire_scorch (0.6)  | 1.5       |
-| 2   | -                | -       | -           | -            | (melee only Ch2)   | -         |
-| 3   | Arcane Staff T2  | 6.0     | +100% (robe)| 12.0         | arcane_blast (0.8) | 6.4       |
-| 4   | Arcane Staff T2  | 6.0     | +100%       | 12.0         | arcane_beam (1.0)  | 12.0/5s   |
-| 5   | NR Arcane Staff  | 7.0     | +120%       | 15.4         | fire_meteor (1.0)  | 15.4      |
-| 6   | NR Arcane Staff  | 7.0     | +120%       | 15.4         | fire_meteor (1.0)  | 15.4      |
-| 7   | NR Staff+ench    | ~8.0    | +120%       | 17.6         | arcane_beam (1.0)  | 17.6/5s   |
-| 8   | Custom T4 Staff  | 8.0     | +120%       | 17.6         | frost_blizzard(0.7)| 12.3/8s   |
+| Cap | Weapon           | Base SP | Armor Bonus | Effective SP | Mejor rotacion sustained | Spell DPS |
+|-----|------------------|---------|-------------|--------------|--------------------------|-----------|
+| 1   | Novice Wand T0   | 3.0     | -           | 3.0          | fireball (0.8/1.5s)      | 1.6       |
+| 2   | -                | -       | -           | -            | (melee only Ch2)         | -         |
+| 3   | Frost Staff T2   | 6.0     | +100% (robe)| 12.0         | frostbolt (0.8/1.1s)     | 8.7       |
+| 4   | Frost Staff T2   | 6.0     | +100%       | 12.0         | frostbolt + frost_nova   | 8.9       |
+| 5   | NR Frost Staff   | 7.0     | +120%       | 15.4         | frostbolt (0.8/1.1s)     | 11.2      |
+| 6   | NR Frost Staff   | 7.0     | +120%       | 15.4         | frostbolt sustained      | 11.2      |
+| 7   | NR Staff+ench    | ~8.0    | +120%       | 17.6         | frostbolt (0.8/1.1s)     | 12.8      |
+| 8   | Custom T4 Staff  | 8.0     | +120%       | 17.6         | frostbolt sustained      | 12.8      |
 
-> Nota: Mages hacen burst damage alto pero con cooldowns. Melee es sustained.
+> Nota: Frost wizard tiene el mejor sustained single-target (frostbolt: sin CD, 1.1s cast).
+> Fire/Arcane burst (meteor 1.0/1s/10sCD, arcane_beam 1.0/5sCh/10sCD) son altos pero el sustained con fillers es menor.
+> Wizard DPS es ~30% menor que melee pero bypasea armor — contra Coloso (14 armor) wizard es competitivo.
+> Analisis detallado: [spell-power-analysis.md](spell-power-analysis.md)
 
 ## Boss HP by Chapter (base, solo, y con 8 jugadores)
+
+Formula: `HP = 800 * 1.44^(cap-1)` (crece x1.44/cap, 13x total).
+Curva anterior (200 * 2^cap) crecia 128x total — divergia del DPS que solo crece 1.8x.
+Justificacion: [spell-power-analysis.md](spell-power-analysis.md)
+
 | Cap | Base HP | Solo | 2p | 4p | 8p |
-|-----|---------|------|-----|-----|-----|
-| 1 | 200 | 200 | 260 | 380 | 620 |
-| 2 | 400 | 400 | 520 | 760 | 1,240 |
-| 3 | 800 | 800 | 1,040 | 1,520 | 2,480 |
-| 4 | 1,600 | 1,600 | 2,080 | 3,040 | 4,960 |
-| 5 | 3,200 | 3,200 | 4,160 | 6,080 | 9,920 |
-| 6 | 6,400 | 6,400 | 8,320 | 12,160 | 19,840 |
-| 7 | 12,800 | 12,800 | 16,640 | 24,320 | 39,680 |
-| 8 | 25,600 | 25,600 | 33,280 | 48,640 | 79,360 |
+|-----|---------|------|-------|-------|--------|
+| 1 | 800 | 800 | 1,040 | 1,520 | 2,480 |
+| 2 | 1,200 | 1,200 | 1,560 | 2,280 | 3,720 |
+| 3 | 1,600 | 1,600 | 2,080 | 3,040 | 4,960 |
+| 4 | 2,400 | 2,400 | 3,120 | 4,560 | 7,440 |
+| 5 | 3,400 | 3,400 | 4,420 | 6,460 | 10,540 |
+| 6 | 5,000 | 5,000 | 6,500 | 9,500 | 15,500 |
+| 7 | 7,200 | 7,200 | 9,360 | 13,680 | 22,320 |
+| 8 | 10,400 | 10,400 | 13,520 | 19,760 | 32,240 |
 
 ## Enemy HP Scaling (fijo, sin scaling por jugadores)
 | Cap | Normal | Champion 1x | Champion 2x | Champion 3x (dungeon) |

@@ -23,7 +23,7 @@ Refined Storage, Create Trains, Create C&A, Create Enchantment Industry, Create 
 | Jewelry | Netherite variants de todas las gemas |
 | Dungeon | **Llave Maestra**. 15-20 salas, 3 affixes, 15% unique jewelry |
 | Decoracion | Create Deco |
-| Boss | El Arquitecto (3,200 HP) |
+| Boss | El Arquitecto (3,400 HP) |
 
 ## Space Elevator entrega Ch5
 

@@ -23,7 +23,7 @@ Croptopia (12 crops), Brewin' And Chewin', Blender (custom), Moldes (custom), St
 | RPG | Rogue + Warrior (T1 melee). Arms Station |
 | Jewelry | Gold Ring, Citrine/Jade Ring y Necklace |
 | Runes | + Fire, Healing |
-| Boss | Bestia Glotona (400 HP) |
+| Boss | Bestia Glotona (1,200 HP) |
 
 **Por que melee primero?** Iron y leather son accesibles. Magia requiere materiales raros (Ender Pearl, Blaze Powder).
 

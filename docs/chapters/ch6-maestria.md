@@ -21,7 +21,7 @@ Ninguno nuevo. Todo se desbloquea/mejora.
 | Enchantments | Nivel V. Tipped Arrows de Spell Power (19 tipos) |
 | Create | Trenes full auto. Optimizacion fabricas |
 | Dungeon | Maestra: unique jewelry drop rate alto |
-| Boss | Senor de las Cosechas (6,400 HP). Dropea **Cristal de Boss Ch6** |
+| Boss | Senor de las Cosechas (5,000 HP). Dropea **Cristal de Boss Ch6** |
 
 ## Space Elevator entrega Ch6
 

@@ -212,14 +212,14 @@ public class BossPhaseManager {
 
 | Cap | Jefe | HP | Dmg | Fases | Duracion | Mecanica unica |
 |-----|------|-----|-----|-------|----------|----------------|
-| 1 | Guardian del Bosque | 200 | 5.0 | 2 | 3-5 min | Esquivar + matar minions cerca del boss para debuffarlo |
-| 2 | Bestia Glotona | 400 | 6.8 | 2 | 5-7 min | Lanzarle comida (envenenada = ventana de dano) |
-| 3 | Coloso Mecanico | 800 | 9.1 | 3 | 7-10 min | Golpear paneles naranjas, activar Nodos de Sabotaje |
-| 4 | Locomotora Fantasma | 1,600 | 12.3 | 2 | 8-12 min | Pelea en movimiento sobre tren circular |
-| 5 | El Arquitecto | 3,200 | 16.6 | 3 | 10-14 min | Hackear terminales en equipo para bajar Firewall |
-| 6 | Senor de las Cosechas | 6,400 | 22.4 | 3 | 12-16 min | Cosechar crops corruptos, plantar reales para danarlo |
-| 7 | Nucleo del Dungeon | 12,800 | 30.3 | 4 | 15-20 min | Arena que se destruye, pilares que explotar |
-| 8 | Devorador de Mundos | 25,600 | 40.9 | 4 | 20-30 min | 3 pilares combinados (combate + Create + cocina) |
+| 1 | Guardian del Bosque | 800 | 5.0 | 2 | 3-5 min | Esquivar + matar minions cerca del boss para debuffarlo |
+| 2 | Bestia Glotona | 1,200 | 6.8 | 2 | 5-7 min | Lanzarle comida (envenenada = ventana de dano) |
+| 3 | Coloso Mecanico | 1,600 | 9.1 | 3 | 7-10 min | Golpear paneles naranjas, activar Nodos de Sabotaje |
+| 4 | Locomotora Fantasma | 2,400 | 12.3 | 2 | 8-12 min | Pelea en movimiento sobre tren circular |
+| 5 | El Arquitecto | 3,400 | 16.6 | 3 | 10-14 min | Hackear terminales en equipo para bajar Firewall |
+| 6 | Senor de las Cosechas | 5,000 | 22.4 | 3 | 12-16 min | Cosechar crops corruptos, plantar reales para danarlo |
+| 7 | Nucleo del Dungeon | 7,200 | 30.3 | 4 | 15-20 min | Arena que se destruye, pilares que explotar |
+| 8 | Devorador de Mundos | 10,400 | 40.9 | 4 | 20-30 min | 3 pilares combinados (combate + Create + cocina) |
 
 **Formulas de scaling** (se fijan al spawnear):
 - HP: `base * (1 + (jugadores-1) * 0.3)`
@@ -242,7 +242,7 @@ public class BossPhaseManager {
 ### Stats
 | Stat | Base | 2 jug | 4 jug | 8 jug |
 |------|------|-------|-------|-------|
-| HP | 200 | 260 | 380 | 620 |
+| HP | 800 | 1,040 | 1,520 | 2,480 |
 | Dano | 5.0 | 5.75 | 7.25 | 10.25 |
 | Velocidad | 0.28 | — | — | — |
 | Armor | 4 | — | — | — |
@@ -320,7 +320,7 @@ public class BossPhaseManager {
 ### Stats
 | Stat | Base | 2 jug | 4 jug | 8 jug |
 |------|------|-------|-------|-------|
-| HP | 400 | 520 | 760 | 1,240 |
+| HP | 1,200 | 1,560 | 2,280 | 3,720 |
 | Dano | 6.8 | 7.82 | 9.86 | 13.94 |
 | Velocidad | 0.22 | — | — | — |
 | Armor | 6 | — | — | — |
@@ -400,7 +400,7 @@ La Bestia tiene un medidor de **Saciedad** (barra verde visible, 0%-100%, empiez
 ### Stats
 | Stat | Base | 2 jug | 4 jug | 8 jug |
 |------|------|-------|-------|-------|
-| HP | 800 | 1,040 | 1,520 | 2,480 |
+| HP | 1,600 | 2,080 | 3,040 | 4,960 |
 | Dano | 9.1 | 10.47 | 13.2 | 18.66 |
 | Velocidad | 0.18 | — | — | — |
 | Armor | 14 | — | — | — |
@@ -482,7 +482,7 @@ El Coloso tiene 4 paneles en su cuerpo (espalda, pecho, brazo izq, brazo der).
 ### Stats
 | Stat | Base | 2 jug | 4 jug | 8 jug |
 |------|------|-------|-------|-------|
-| HP | 1,600 | 2,080 | 3,040 | 4,960 |
+| HP | 2,400 | 3,120 | 4,560 | 7,440 |
 | Dano | 12.3 | 14.15 | 17.84 | 25.22 |
 | Velocidad | Fija (rail) | — | — | — |
 | Armor | 8 | — | — | — |
@@ -552,7 +552,7 @@ El tren da vueltas constantemente. La Locomotora (cabeza) es el hitbox del boss.
 ### Stats
 | Stat | Base | 2 jug | 4 jug | 8 jug |
 |------|------|-------|-------|-------|
-| HP | 3,200 | 4,160 | 6,080 | 9,920 |
+| HP | 3,400 | 4,420 | 6,460 | 10,540 |
 | Dano | 16.6 | 19.09 | 24.07 | 34.03 |
 | Velocidad | 0.32 + teleport | — | — | — |
 | Armor | 6 | — | — | — |
@@ -629,7 +629,7 @@ El Arquitecto tiene Firewall activo → solo recibe **10% de dano**.
 ### Stats
 | Stat | Base | 2 jug | 4 jug | 8 jug |
 |------|------|-------|-------|-------|
-| HP | 6,400 | 8,320 | 12,160 | 19,840 |
+| HP | 5,000 | 6,500 | 9,500 | 15,500 |
 | Dano | 22.4 | 25.76 | 32.48 | 45.92 |
 | Velocidad | 0.24 | — | — | — |
 | Armor | 12 | — | — | — |
@@ -714,7 +714,7 @@ El jugador debe cosechar crops corruptos y plantar reales. Llevar semillas/crops
 ### Stats
 | Stat | Base | 2 jug | 4 jug | 8 jug |
 |------|------|-------|-------|-------|
-| HP | 12,800 | 16,640 | 24,320 | 39,680 |
+| HP | 7,200 | 9,360 | 13,680 | 22,320 |
 | Dano | 30.3 | 34.85 | 43.94 | 62.12 |
 | Velocidad | 0 (flota, teleporta) | — | — | — |
 | Armor | 10 | — | — | — |
@@ -807,7 +807,7 @@ Lluvia de Shards ahora 8 shards. Rayo Prismatico rebota en Espejos.
 ### Stats
 | Stat | Base | 2 jug | 4 jug | 8 jug |
 |------|------|-------|-------|-------|
-| HP | 25,600 | 33,280 | 48,640 | 79,360 |
+| HP | 10,400 | 13,520 | 19,760 | 32,240 |
 | Dano | 40.9 | 47.04 | 59.31 | 83.85 |
 | Velocidad | Variable | — | — | — |
 | Armor | 16 | — | — | — |

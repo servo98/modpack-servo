@@ -25,7 +25,7 @@ Create andesite completo, Slice&Dice, Drink Maker (custom), Horno Avanzado (cust
 | Jewelry | Ruby/Sapphire rings y necklaces. Jeweler's Kit |
 | Dungeon | Llave Avanzada. 10-14 salas, 2 affixes, Esencia de Dungeon empieza a dropear |
 | Decoracion | Refurbished basico (nevera, estufa, fregadero) |
-| Boss | Coloso Mecanico (800 HP) |
+| Boss | Coloso Mecanico (1,600 HP) |
 
 ## Space Elevator entrega Ch3
 
