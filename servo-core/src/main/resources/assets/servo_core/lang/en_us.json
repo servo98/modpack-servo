@@ -1,0 +1,22 @@
+{
+  "itemGroup.servo_core": "Servo Core",
+
+  "item.servo_core.pepe_coin": "Pepe Coin",
+  "item.servo_core.pepe_coin.tooltip": "The modpack's currency",
+
+  "item.servo_core.dungeon_essence": "Dungeon Essence",
+  "item.servo_core.dungeon_essence.tooltip": "Dropped by dungeon champions",
+
+  "item.servo_core.core_crystal_fragment": "Core Crystal Fragment",
+  "item.servo_core.core_crystal_fragment.tooltip": "A shard of pure dungeon energy",
+
+  "item.servo_core.basic_dungeon_key": "Basic Dungeon Key",
+  "item.servo_core.advanced_dungeon_key": "Advanced Dungeon Key",
+  "item.servo_core.master_dungeon_key": "Master Dungeon Key",
+  "item.servo_core.core_dungeon_key": "Core Dungeon Key",
+
+  "item.servo_core.dungeon_key.tier_1": "Opens Tier 1 dungeons",
+  "item.servo_core.dungeon_key.tier_2": "Opens Tier 2 dungeons",
+  "item.servo_core.dungeon_key.tier_3": "Opens Tier 3 dungeons",
+  "item.servo_core.dungeon_key.tier_4": "Opens the Core dungeon"
+}

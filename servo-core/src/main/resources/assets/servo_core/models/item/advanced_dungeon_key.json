@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "servo_core:item/advanced_dungeon_key"
+  }
+}
