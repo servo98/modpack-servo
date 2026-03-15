@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "servo_mart:block/pepe_mart" },
+    "facing=south": { "model": "servo_mart:block/pepe_mart", "y": 180 },
+    "facing=west": { "model": "servo_mart:block/pepe_mart", "y": 270 },
+    "facing=east": { "model": "servo_mart:block/pepe_mart", "y": 90 }
+  }
+}

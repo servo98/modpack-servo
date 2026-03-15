@@ -1,0 +1,13 @@
+{
+  "block.servo_mart.pepe_mart": "PepeMart",
+  "itemGroup.servo_mart": "Servo Mart",
+  "servo_mart.category.furniture": "Muebles",
+  "servo_mart.category.plushies": "Peluches",
+  "servo_mart.category.accessories": "Accesorios",
+  "servo_mart.category.qol": "QoL",
+  "servo_mart.buy": "Comprar",
+  "servo_mart.locked": "Requiere: %s",
+  "servo_mart.insufficient": "No tienes suficientes materiales!",
+  "servo_mart.purchased": "Compraste %s!",
+  "servo_mart.price": "Precio:"
+}

@@ -24,11 +24,11 @@
 
 | Tier | Nombre | Boost | Obtencion |
 |------|--------|-------|-----------|
-| 1 | Comun (cobre) | +5% | Gacha, quest |
-| 2 | Uncommon (hierro) | +12% | Gacha, champion drops |
-| 3 | Raro (oro) | +22% | Boss drops, gacha |
-| 4 | Epico (diamante) | +40% | Boss drops, dungeon |
-| 5 | Legendario (netherite) | +70% | Boss final, dungeon boss |
+| 1 | Comun (cobre) | +5% | Craft, Gacha Basica (Raro), quest, **PepeMart (Ch3)** |
+| 2 | Uncommon (hierro) | +12% | Gacha Basica (Epico), Gacha Avanzada (Raro), champion drops, **PepeMart (Ch4)** |
+| 3 | Raro (oro) | +22% | Boss drops, Gacha Avanzada (Epico), Gacha Superior (Raro) |
+| 4 | Epico (diamante) | +40% | Boss drops, Gacha Superior (Epico), dungeon boss |
+| 5 | Legendario (netherite) | +70% | Boss Ch7 y Ch8 SOLAMENTE (excluido del gacha) |
 
 ## Familias de efecto por slot
 

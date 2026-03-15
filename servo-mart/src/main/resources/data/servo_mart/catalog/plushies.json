@@ -1,0 +1,39 @@
+{
+  "entries": [
+    {
+      "item": "plushables:plushable_pig",
+      "category": "plushies",
+      "tier": 1,
+      "price": { "minecraft:white_wool": 8, "minecraft:string": 4 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "plushables:plushable_clucky",
+      "category": "plushies",
+      "tier": 1,
+      "price": { "minecraft:white_wool": 8, "minecraft:string": 4 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "plushables:plushable_froge",
+      "category": "plushies",
+      "tier": 1,
+      "price": { "minecraft:white_wool": 8, "minecraft:string": 4 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "plushables:plushable_fox",
+      "category": "plushies",
+      "tier": 1,
+      "price": { "minecraft:white_wool": 8, "minecraft:string": 4 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "plushables:plushable_owl",
+      "category": "plushies",
+      "tier": 1,
+      "price": { "minecraft:white_wool": 8, "minecraft:string": 4 },
+      "requires_stage": "servo_ch2"
+    }
+  ]
+}

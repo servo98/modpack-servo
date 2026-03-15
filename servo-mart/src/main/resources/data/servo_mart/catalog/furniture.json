@@ -1,0 +1,32 @@
+{
+  "entries": [
+    {
+      "item": "refurbished_furniture:light_fridge",
+      "category": "furniture",
+      "tier": 2,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:redstone": 16, "minecraft:diamond": 4 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "refurbished_furniture:light_stove",
+      "category": "furniture",
+      "tier": 2,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:coal_block": 8, "minecraft:diamond": 4 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "mcwfurnitures:oak_chair",
+      "category": "furniture",
+      "tier": 1,
+      "price": { "minecraft:oak_planks": 8, "minecraft:iron_ingot": 4 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "mcwfurnitures:oak_table",
+      "category": "furniture",
+      "tier": 1,
+      "price": { "minecraft:oak_planks": 12, "minecraft:iron_ingot": 4 },
+      "requires_stage": "servo_ch2"
+    }
+  ]
+}

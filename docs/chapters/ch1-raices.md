@@ -9,7 +9,7 @@ Capitulo introductorio. Aprender mecanicas vanilla + Farmer's Delight + mecanica
 
 ## Mods activos
 
-Vanilla, FD basico, Supplementaries basico, Aquaculture, FTB Quests (Recetario), Lootr, Gacha Machine, Waystones, Xaero's, Jade, Backpacks, Carry On, Spell Engine (limitado), Runes (basico), Jewelry (basico)
+Vanilla, FD basico, Aquaculture, FTB Quests (Recetario), Lootr, Gacha Machine, Waystones, Xaero's, Jade, Backpacks, Carry On, Spell Engine (limitado), Runes (basico), Jewelry (basico)
 
 ## Contenido
 
@@ -85,8 +85,7 @@ Resumen: Cajas de comida variada, crops basicos, Raiz del Guardian (boss drop), 
 1. Explorar 3 biomas Terralith
 2. Colocar primer Waystone
 3. Encontrar un village
-4. Usar Supplementaries (rope, jar)
-5. Construir tu primer Altar de Dungeon
+4. Construir tu primer Altar de Dungeon
 
 ### Construccion (4)
 1. Construir casa basica

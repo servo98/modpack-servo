@@ -33,9 +33,9 @@ Pepe Coin = moneda universal del modpack. Conecta todos los sistemas.
 | Gacha Superior (Purpura) | 15 tokens/pull |
 | Gacha Muebles (Rosa) | 5 tokens/pull |
 | Crafteo Llaves avanzadas | Variable |
-| PepeMart compras directas | Mas caro que gacha |
-
 Ver [Gacha](gacha.md) para pools de cada maquina.
+
+> **Nota**: PepeMart NO usa Pepe Coins. Usa materiales (iron, diamond, etc.) configurable via JSON. Ver [PepeMart](servomart.md) y [catalogo completo](../balance/pepemart-catalog.md).
 
 ## Balance por capitulo
 

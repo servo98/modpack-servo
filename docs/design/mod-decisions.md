@@ -76,7 +76,6 @@
 ## Exploracion
 | Mod | Proposito | Notas |
 |-----|-----------|-------|
-| Supplementaries | Items utiles y decorativos | Config para desactivar overlap con servo_core |
 | Lootr | Loot unico por jugador | Fairness multiplayer |
 | YUNG's Better Nether Fortresses | Mejora fortalezas del Nether | Ligero, solo mejora estructuras, sin NPCs |
 | Terralith | ~95 biomas overworld, solo bloques vanilla | Mundo hermoso sin afectar gameplay |
@@ -107,9 +106,10 @@
 ## Decoracion
 | Mod | Proposito | Notas |
 |-----|-----------|-------|
-| Macaw's Furniture | Muebles decorativos (~650 muebles) | Ch4+ |
-| Macaw's Windows | Ventanas decorativas (~310 variantes) | Ch4+ |
-| MrCrayfish Refurbished | Muebles funcionales (nevera, estufa, TV, fregadero) | Ch3 (basico), Ch5 (completo) |
+| Macaw's Furniture | Muebles decorativos (~650 muebles) | Ch2+ (basico), Ch4 (completo). Via Gacha Rosa y PepeMart |
+| Macaw's Windows | Ventanas decorativas (~310 variantes) | Ch4+. Via Gacha Rosa y PepeMart |
+| MrCrayfish Refurbished | Muebles funcionales (nevera, estufa, TV, fregadero) | Ch3 (funcionales: nevera/estufa/fregadero), Ch5 (completo). Criticos para progresion. PepeMart garantiza compra directa |
+| Plushables | 49 plushies coleccionables con sonidos e interactividad | Ch2+. 24 comunes en PepeMart, 25 raros-legendarios exclusivos de Gacha Rosa |
 
 ## Worldgen
 | Mod | Proposito | Notas |

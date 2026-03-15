@@ -24,6 +24,7 @@
 | **Total** | **~150** | 100% |
 
 > Nota: Los sinks varian segun el jugador. Algunos priorizaran muebles, otros gacha avanzada. Los numeros son promedios.
+> **PepeMart NO consume tokens** — usa materiales. Ver [catalogo](pepemart-catalog.md).
 
 ### Costs
 | Accion | Costo |
@@ -66,11 +67,13 @@
 ### Muebles (Rosa) — Ch2+
 | Rareza | Prob | Contenido clave |
 |--------|------|-----------------|
-| Comun | 60% | Mueble Macaw's basico |
-| Poco Comun | 25% | Mueble Macaw's decorativo |
-| Raro | 10% | Mueble Macaw's especial o Refurbished funcional |
-| Epico | 4% | Set tematico (2-3 piezas) |
-| Legendario | 1% | Mueble exclusivo cosmetico |
+| Comun | 60% | Muebles basicos + plushies comunes + Create Deco basico |
+| Poco Comun | 25% | Muebles decorativos + plushies especiales + Create Deco medio |
+| Raro | 10% | Muebles especiales + funcionales (fridge/stove/sink) — **SIN plushies** |
+| Epico | 4% | Sets tematicos + plushies epicos (8 items) |
+| Legendario | 1% | Exclusivos + plushies legendarios (5 items) + Heart of Gold |
+
+> Items exactos por rareza: ver [Catalogo Completo](pepemart-catalog.md) (fuente de verdad)
 
 ## Pity System
 

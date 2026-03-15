@@ -124,22 +124,26 @@ Solo 8 de las 24 unique estan disponibles (las de stats mas generales):
 
 **Quest reward**: Introduccion a decoracion (Ch2).
 **Pull**: 1 Pink Coin (= 5 Pepe Coins).
-**Tema**: Muebles decorativos y funcionales. Separado del gacha de artefactos.
+**Tema**: Muebles decorativos, funcionales y **plushies coleccionables** (Plushables mod). Separado del gacha de artefactos.
 
-| Rareza | % | Pool de items |
-|--------|---|---------------|
-| Comun (gris) | 60% | 1 mueble Macaw's basico: silla, mesa, banco, estante, escalera |
-| Poco Comun (verde) | 25% | 1 mueble Macaw's decorativo: lampara, espejo, cortina, alfombra, sofa |
-| Raro (azul) | 10% | 1 mueble Macaw's especial (puerta decorativa, ventana, balcon) O 1 mueble Refurbished funcional (si capitulo lo permite: nevera Ch3, estufa Ch3, fregadero Ch3) |
-| Epico (purpura) | 4% | 1 set tematico de 2-3 muebles que combinan (ej: mesa+sillas+lampara del mismo estilo) |
-| Legendario (dorado) | 1% | 1 mueble exclusivo cosmetico (edicion limitada, con particulas o animacion) |
+| Rareza | % | Contenido |
+|--------|---|-----------|
+| Comun (gris) | 60% | Muebles basicos + plushies comunes + Create Deco basico |
+| Poco Comun (verde) | 25% | Muebles decorativos + plushies especiales + Create Deco medio |
+| Raro (azul) | 10% | Muebles especiales + **funcionales** (fridge/stove/sink) — **SIN plushies** |
+| Epico (purpura) | 4% | Sets tematicos + **plushies epicos** (8 items) |
+| Legendario (dorado) | 1% | Exclusivos + **plushies legendarios** (5 items) + Heart of Gold |
 
-El pool de muebles se expande por capitulo segun desbloqueo de PepeMart (ver [PepeMart](servomart.md)):
-- Ch2: Macaw's basico
-- Ch3: + Refurbished basico (nevera, estufa, fregadero)
-- Ch4: + Macaw's Windows completo
-- Ch5: + Create Deco + Refurbished completo
+> **Regla clave**: Plushies NO entran en tier Raro para proteger los muebles funcionales (fridge/stove/sink que bloquean progresion Ch4).
+
+El pool se expande por capitulo:
+- Ch2: Macaw's basico + plushies comunes
+- Ch3: + Refurbished funcional + plushies acuaticos
+- Ch4: + Macaw's Windows + plushies exoticos
+- Ch5: + Create Deco + Refurbished completo + plushies gacha-only
 - Ch6+: Todo
+
+> **Items exactos por rareza, capitulo y precio**: ver [Catalogo Completo](../balance/pepemart-catalog.md) (fuente de verdad)
 
 ---
 

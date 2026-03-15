@@ -108,7 +108,7 @@ Detalle: [mechanics/cooking.md](mechanics/cooking.md)
 
 ## 3.4 PepeMart (IKEA)
 
-Tablet/catalogo donde "compras" muebles con tokens o materiales. Te llega una Caja de Carton que al abrirla aparece el mueble. Opcion de caja misteriosa (gacha de muebles separado).
+Tablet/catalogo donde "compras" muebles, plushies y accesorios con **materiales** (NO Pepe Coins). Te llega una Caja de Carton que al abrirla aparece el item. La alternativa aleatoria es la Gacha Rosa (maquina separada).
 
 Detalle: [mechanics/servomart.md](mechanics/servomart.md)
 
