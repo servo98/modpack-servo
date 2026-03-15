@@ -86,6 +86,7 @@ public class DungeonManager {
         UUID id = UUID.randomUUID();
         DungeonInstance dungeonInstance = new DungeonInstance(id, tier, leader.getUUID(), altarPos, entrancePos, center);
         dungeonInstance.setLayout(layout);
+        dungeonInstance.setRoomTracker(new RoomTracker(layout));
         activeInstances.put(id, dungeonInstance);
 
         // Teleport leader to dungeon
