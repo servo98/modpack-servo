@@ -20,5 +20,15 @@
   "message.servo_dungeons.invalid_altar": "El altar no esta formado correctamente. Coloca 4 Runas de Dungeon en patron de cruz.",
   "message.servo_dungeons.dungeon_active_use_beam": "Hay un dungeon activo. Camina hacia el beam para entrar.",
   "message.servo_dungeons.dungeon_abandoned": "El dungeon ha sido abandonado.",
-  "message.servo_dungeons.dungeon_exit": "Regresando a la superficie..."
+  "message.servo_dungeons.dungeon_exit": "Regresando a la superficie...",
+  "message.servo_dungeons.boss_fight_entered": "Entrando a la arena del jefe...",
+  "item.servo_dungeons.boss_key_ch1": "Llave de Jefe: Capitulo 1",
+  "item.servo_dungeons.boss_key_ch2": "Llave de Jefe: Capitulo 2",
+  "item.servo_dungeons.boss_key_ch3": "Llave de Jefe: Capitulo 3",
+  "item.servo_dungeons.boss_key_ch4": "Llave de Jefe: Capitulo 4",
+  "item.servo_dungeons.boss_key_ch5": "Llave de Jefe: Capitulo 5",
+  "item.servo_dungeons.boss_key_ch6": "Llave de Jefe: Capitulo 6",
+  "item.servo_dungeons.boss_key_ch7": "Llave de Jefe: Capitulo 7",
+  "item.servo_dungeons.boss_key_ch8": "Llave de Jefe: Capitulo 8",
+  "tooltip.servo_dungeons.boss_key_chapter": "Jefe del Capitulo %d"
 }

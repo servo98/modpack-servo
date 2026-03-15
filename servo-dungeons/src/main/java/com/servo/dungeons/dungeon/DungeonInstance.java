@@ -27,6 +27,8 @@ public class DungeonInstance {
     @Nullable
     private DungeonLayout layout;
     private boolean active;
+    private boolean bossFight;
+    private int bossChapter = -1;
 
     public DungeonInstance(UUID id, DungeonTier tier, UUID leaderId, BlockPos altarPos, BlockPos entrancePos, BlockPos center) {
         this.id = id;
@@ -91,6 +93,22 @@ public class DungeonInstance {
 
     public void setLayout(DungeonLayout layout) {
         this.layout = layout;
+    }
+
+    public boolean isBossFight() {
+        return bossFight;
+    }
+
+    public void setBossFight(boolean bossFight) {
+        this.bossFight = bossFight;
+    }
+
+    public int getBossChapter() {
+        return bossChapter;
+    }
+
+    public void setBossChapter(int bossChapter) {
+        this.bossChapter = bossChapter;
     }
 
     /**

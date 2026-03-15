@@ -6,6 +6,7 @@ import com.servo.dungeons.block.DungeonPedestalBlock;
 import com.servo.dungeons.block.DungeonPedestalBlockEntity;
 import com.servo.dungeons.block.DungeonRuneBlock;
 import com.servo.dungeons.block.ExitPortalBlock;
+import com.servo.dungeons.item.BossKeyItem;
 import com.servo.dungeons.item.DungeonKeyItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -121,6 +122,24 @@ public class DungeonRegistry {
     public static final DeferredHolder<Item, DungeonKeyItem> KEY_CORE =
             ITEMS.register("dungeon_key_core", () -> new DungeonKeyItem(DungeonTier.CORE));
 
+    // === Boss Key Items ===
+    public static final DeferredHolder<Item, BossKeyItem> BOSS_KEY_1 =
+            ITEMS.register("boss_key_ch1", () -> new BossKeyItem(1));
+    public static final DeferredHolder<Item, BossKeyItem> BOSS_KEY_2 =
+            ITEMS.register("boss_key_ch2", () -> new BossKeyItem(2));
+    public static final DeferredHolder<Item, BossKeyItem> BOSS_KEY_3 =
+            ITEMS.register("boss_key_ch3", () -> new BossKeyItem(3));
+    public static final DeferredHolder<Item, BossKeyItem> BOSS_KEY_4 =
+            ITEMS.register("boss_key_ch4", () -> new BossKeyItem(4));
+    public static final DeferredHolder<Item, BossKeyItem> BOSS_KEY_5 =
+            ITEMS.register("boss_key_ch5", () -> new BossKeyItem(5));
+    public static final DeferredHolder<Item, BossKeyItem> BOSS_KEY_6 =
+            ITEMS.register("boss_key_ch6", () -> new BossKeyItem(6));
+    public static final DeferredHolder<Item, BossKeyItem> BOSS_KEY_7 =
+            ITEMS.register("boss_key_ch7", () -> new BossKeyItem(7));
+    public static final DeferredHolder<Item, BossKeyItem> BOSS_KEY_8 =
+            ITEMS.register("boss_key_ch8", () -> new BossKeyItem(8));
+
     // === Block Entities ===
     @SuppressWarnings("DataFlowIssue")
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DungeonPedestalBlockEntity>> PEDESTAL_BE =
@@ -148,6 +167,14 @@ public class DungeonRegistry {
                         output.accept(KEY_ADVANCED.get());
                         output.accept(KEY_MASTER.get());
                         output.accept(KEY_CORE.get());
+                        output.accept(BOSS_KEY_1.get());
+                        output.accept(BOSS_KEY_2.get());
+                        output.accept(BOSS_KEY_3.get());
+                        output.accept(BOSS_KEY_4.get());
+                        output.accept(BOSS_KEY_5.get());
+                        output.accept(BOSS_KEY_6.get());
+                        output.accept(BOSS_KEY_7.get());
+                        output.accept(BOSS_KEY_8.get());
                     })
                     .build()
             );

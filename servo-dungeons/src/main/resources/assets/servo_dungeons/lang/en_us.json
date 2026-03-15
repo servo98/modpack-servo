@@ -20,5 +20,15 @@
   "message.servo_dungeons.invalid_altar": "The altar is not properly formed. Place 4 Dungeon Runes in a cross pattern.",
   "message.servo_dungeons.dungeon_active_use_beam": "A dungeon is active. Walk into the beam above to enter.",
   "message.servo_dungeons.dungeon_abandoned": "The dungeon has been abandoned.",
-  "message.servo_dungeons.dungeon_exit": "Returning to the surface..."
+  "message.servo_dungeons.dungeon_exit": "Returning to the surface...",
+  "message.servo_dungeons.boss_fight_entered": "Entering boss arena...",
+  "item.servo_dungeons.boss_key_ch1": "Boss Key: Chapter 1",
+  "item.servo_dungeons.boss_key_ch2": "Boss Key: Chapter 2",
+  "item.servo_dungeons.boss_key_ch3": "Boss Key: Chapter 3",
+  "item.servo_dungeons.boss_key_ch4": "Boss Key: Chapter 4",
+  "item.servo_dungeons.boss_key_ch5": "Boss Key: Chapter 5",
+  "item.servo_dungeons.boss_key_ch6": "Boss Key: Chapter 6",
+  "item.servo_dungeons.boss_key_ch7": "Boss Key: Chapter 7",
+  "item.servo_dungeons.boss_key_ch8": "Boss Key: Chapter 8",
+  "tooltip.servo_dungeons.boss_key_chapter": "Chapter %d Boss"
 }
