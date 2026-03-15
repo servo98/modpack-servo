@@ -72,12 +72,19 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 | `mod-researcher` | ANTES de sugerir cualquier mod nuevo. Verifica NeoForge 1.21.1. |
 | `issue-manager` | Al crear/actualizar issues. Detecta duplicados, mantiene formato estandar. |
 
+## Comandos disponibles (.claude/commands/)
+| Comando | Cuando usarlo |
+|---------|--------------|
+| `/todo [idea]` | Capturar tareas futuras rapido. Invoca `issue-manager` con `priority:low`. |
+| `/session-start` | Inicio de sesion. Muestra issues, blockers y estado de mods. |
+
 ## Persistencia entre sesiones
 
 ### Al INICIO
+Usar `/session-start` o ejecutar manualmente:
 1. `gh issue list --repo servo98/modpack-servo --state open --limit 20` (tareas pendientes)
 2. Leer `docs/blockers.md` (problemas activos)
-3. `git log --oneline -10` (contexto de sesiones recientes via commits)
+3. Leer `docs/status/*.md` (estado de mods)
 
 ### Al FINAL
 1. Invocar `doc-keeper` (sync de docs, redundancias, consistencia)

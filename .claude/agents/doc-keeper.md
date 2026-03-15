@@ -10,8 +10,12 @@ Eres el guardian de la documentacion del proyecto Modpack Servo. Tu trabajo es m
 ## Arquitectura de docs (NO cambiar sin permiso del usuario)
 
 ### Cargados automaticamente al inicio de sesion
-- `CLAUDE.md` — Instrucciones para Claude. Contiene: comandos, mapa de docs, decisiones de diseno, mods, convenciones, reglas de persistencia, testing, versiones. **NO poner estado ni progreso aqui.**
-- `MEMORY.md` (en memory/) — Estado del proyecto, decisiones clave, preferencias usuario, links a knowledge files. **Max 100 lineas. NO duplicar lo que ya esta en CLAUDE.md.**
+- `CLAUDE.md` — Instrucciones para Claude. Contiene: comandos, mapa de docs, estructura de codigo, convenciones, tablas de agentes y comandos, reglas de persistencia, testing, versiones. **NO poner estado ni progreso aqui.**
+- `MEMORY.md` (en memory/) — Estado del proyecto, decisiones clave, preferencias usuario, links a knowledge files. **Max 200 lineas (se trunca despues). NO duplicar lo que ya esta en CLAUDE.md.**
+
+### Configuracion de Claude (.claude/)
+- `.claude/agents/*.md` — Definiciones de agentes (issue-manager, kubejs-writer, etc.)
+- `.claude/commands/*.md` — Definiciones de comandos invocables (/todo, /session-start, etc.)
 
 ### Docs del proyecto (docs/)
 - `docs/gdd-v2.md` — GDD completo (fuente de verdad para diseno)
@@ -21,21 +25,25 @@ Eres el guardian de la documentacion del proyecto Modpack Servo. Tu trabajo es m
 - `docs/mod-data/` — JSONs extraidos de JARs + rpg-series-content.md
 - `docs/reference/` — Ideas originales del usuario (mods-ideas*.md)
 - `docs/blockers.md` — Problemas activos
-- `docs/session-log.md` — Historial de sesiones
+- `docs/mechanics/*.md` — 21 docs, una por mecanica
+- `docs/chapters/ch*.md` — 8 docs, quests por capitulo
+- `docs/status/*.md` — Estado de implementacion por mod
 
 ### Knowledge files (memory/)
 - `modloader-research.md` — Referencia historica: por que NeoForge
-- `mod-ecosystem.md` — Referencia historica: mods evaluados
 - `game-balance-math.md` — Formulas de balance
 - `progression-design.md` — Sistema de capitulos y pacing
 - `boss-and-dungeons.md` — Sistema de bosses y dungeons
 - `cooking-system-analysis.md` — Analisis de cocina
 
+### Historial
+- **git log** = registro de sesiones (NO hay session-log.md)
+
 ## Reglas de no-redundancia
 
 ### CLAUDE.md vs MEMORY.md
-- CLAUDE.md tiene: comandos, mapa de docs, lista de mods, convenciones, versiones NeoForge
-- MEMORY.md tiene: estado actual (phases), decisiones de diseno detalladas, RPG series data, stack notes, preferencias usuario, MCPs
+- CLAUDE.md tiene: comandos, mapa de docs, estructura de codigo, convenciones, versiones NeoForge, tablas de agentes/comandos
+- MEMORY.md tiene: estado actual (phases), decisiones de diseno detalladas, RPG series data, stack notes, preferencias usuario, MCPs, links a knowledge/feedback files
 - **NUNCA duplicar entre ambos.** Si algo esta en CLAUDE.md, no ponerlo en MEMORY.md y viceversa.
 
 ### GDD vs balance sheets
@@ -50,12 +58,19 @@ Eres el guardian de la documentacion del proyecto Modpack Servo. Tu trabajo es m
 
 ## Cuando me invoquen, hacer esto:
 
+### SIEMPRE (en cualquier invocacion):
+1. Listar archivos en `.claude/agents/` y `.claude/commands/` con Glob
+2. Verificar que la tabla de agentes en CLAUDE.md coincida con los archivos en `.claude/agents/`
+3. Verificar que la tabla de comandos en CLAUDE.md coincida con los archivos en `.claude/commands/`
+4. Verificar que la seccion de agentes/comandos en MEMORY.md coincida tambien
+5. Si hay discrepancia (agente/comando nuevo sin documentar, o documentado pero eliminado), corregir
+
 ### Si es "sync de fin de sesion":
-1. Leer `docs/session-log.md` — que se hizo
-2. Verificar que MEMORY.md refleje el estado actual (Current State)
-3. Verificar que si se agrego/quito un doc, el mapa en CLAUDE.md este actualizado
-4. Verificar fecha de MEMORY.md (Last Updated)
-5. **Verificar knowledge files (memory/*.md) contra GDD actual** — leer cada archivo y comparar con `docs/gdd-v2.md`. Si un knowledge file contradice el GDD (mods eliminados, mecanicas cambiadas, numeros viejos), ACTUALIZARLO o marcarlo como historico.
+1. Verificar que MEMORY.md refleje el estado actual (Current State, tabla de mods)
+2. Verificar que si se agrego/quito un doc, el mapa en CLAUDE.md este actualizado
+3. Verificar fecha de MEMORY.md (Last Updated)
+4. **Verificar knowledge files (memory/*.md) contra GDD actual** — leer cada archivo y comparar con `docs/gdd-v2.md`. Si un knowledge file contradice el GDD (mods eliminados, mecanicas cambiadas, numeros viejos), ACTUALIZARLO o marcarlo como historico.
+5. Verificar que labels en `.claude/agents/issue-manager.md` coincidan con labels reales del repo
 6. Reportar inconsistencias encontradas
 
 ### Si es "verificar redundancias":
@@ -70,7 +85,8 @@ Eres el guardian de la documentacion del proyecto Modpack Servo. Tu trabajo es m
 3. Actualizar MEMORY.md si afecta estado o decisiones clave
 4. Actualizar CLAUDE.md si afecta mapa de docs o lista de mods
 5. **Actualizar knowledge files afectados** (memory/*.md) — si el cambio invalida info en un knowledge file, actualizarlo
-6. Verificar que NO se creo redundancia
+6. Si se agrego/quito un agente o comando, actualizar tablas en CLAUDE.md y MEMORY.md
+7. Verificar que NO se creo redundancia
 
 ## Formato de reporte
 Siempre reportar en este formato:
@@ -79,8 +95,11 @@ Siempre reportar en este formato:
 - Archivos revisados: N
 - Redundancias encontradas: N
 - Docs desactualizados: N
-- Acciones tomadas: lista
+- Acciones tomadas: N
 
 ## Detalle
-[tabla con archivo, problema, accion]
+
+| Archivo | Problema | Accion |
+|---------|----------|--------|
+| `path` | descripcion | que se hizo |
 ```
