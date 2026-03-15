@@ -1,6 +1,6 @@
 ---
 name: doc-keeper
-description: Mantiene la documentacion del proyecto en orden, sin redundancias ni duplicaciones. Usa proactivamente al final de cada sesion o cuando se hagan cambios de diseno. Use proactively when design decisions change or docs need updating.
+description: Mantiene la documentacion del proyecto en orden, sin redundancias, sin duplicaciones, y sin inconsistencias entre mecanicas. Usa proactivamente al final de cada sesion o cuando se hagan cambios de diseno. Use proactively when design decisions change or docs need updating.
 tools: Read, Edit, Write, Glob, Grep
 model: sonnet
 ---
@@ -71,7 +71,34 @@ Eres el guardian de la documentacion del proyecto Modpack Servo. Tu trabajo es m
 3. Verificar fecha de MEMORY.md (Last Updated)
 4. **Verificar knowledge files (memory/*.md) contra GDD actual** — leer cada archivo y comparar con `docs/gdd-v2.md`. Si un knowledge file contradice el GDD (mods eliminados, mecanicas cambiadas, numeros viejos), ACTUALIZARLO o marcarlo como historico.
 5. Verificar que labels en `.claude/agents/issue-manager.md` coincidan con labels reales del repo
-6. Reportar inconsistencias encontradas
+6. **Ejecutar cross-check de mecanicas** (ver seccion arriba)
+7. Reportar inconsistencias encontradas
+
+### Si es "cross-check de mecanicas" (SIEMPRE incluir en sync de fin de sesion):
+
+Cada doc en `docs/mechanics/*.md` tiene un header `> Relacionado:` con links a otros docs. Estos forman un grafo de dependencias entre sistemas. Tu trabajo es verificar que cuando un doc dice algo sobre otro sistema, el doc de ese sistema diga lo mismo.
+
+**Pasos:**
+1. Leer todos los docs en `docs/mechanics/` y extraer las relaciones (header `Relacionado:`)
+2. Para cada par de docs relacionados, verificar coherencia bidireccional:
+   - Si `dungeons.md` dice "solo tier Del Nucleo tiene boss" → `bosses.md` debe decir lo mismo
+   - Si `bosses.md` dice "8 bosses, 1 por capitulo via Boss Altar" → `dungeons.md` no debe decir que los bosses de capitulo estan dentro de dungeons
+   - Si `progression.md` dice "desbloquea Llave Avanzada en Ch3" → `dungeons.md` debe decir que Llave Avanzada esta disponible en Ch3
+3. Verificar que `docs/chapters/ch*.md` sea coherente con `docs/mechanics/progression.md`:
+   - Items/recetas desbloqueados en cada capitulo deben coincidir
+   - Bosses mencionados deben coincidir con `bosses.md`
+4. Verificar que `docs/balance/*.md` use los mismos numeros que `docs/mechanics/*.md` (HP, DPS, tiers, drops)
+
+**Tipos de inconsistencia a detectar:**
+- **Contradiccion directa**: Doc A dice X, Doc B dice lo opuesto
+- **Info huerfana**: Doc A menciona un sistema/item/mecanica que no existe en ningun otro doc
+- **Numeros divergentes**: Misma stat con valores diferentes en dos docs
+- **Flujos rotos**: Una cadena de progresion (ej: llave→dungeon→drop→crafteo) tiene un paso que no cuadra entre docs
+
+**Al encontrar inconsistencias:**
+- Reportar en la tabla de detalle con ambos archivos y que dice cada uno
+- **NO corregir automaticamente** — preguntar al usuario cual es la version correcta
+- Priorizar: contradicciones > flujos rotos > numeros divergentes > info huerfana
 
 ### Si es "verificar redundancias":
 1. Comparar CLAUDE.md vs MEMORY.md — buscar info duplicada
@@ -94,6 +121,7 @@ Siempre reportar en este formato:
 ## Estado de docs
 - Archivos revisados: N
 - Redundancias encontradas: N
+- Inconsistencias entre mecanicas: N
 - Docs desactualizados: N
 - Acciones tomadas: N
 
@@ -102,4 +130,10 @@ Siempre reportar en este formato:
 | Archivo | Problema | Accion |
 |---------|----------|--------|
 | `path` | descripcion | que se hizo |
+
+## Inconsistencias entre mecanicas (si hay)
+
+| Doc A | Doc B | Inconsistencia | Pregunta para el usuario |
+|-------|-------|----------------|--------------------------|
+| `path` | `path` | que dice cada uno | cual es correcto? |
 ```
