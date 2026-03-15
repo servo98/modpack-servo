@@ -2,6 +2,7 @@ package com.servo.dungeons.dungeon;
 
 import com.servo.dungeons.DungeonTier;
 import net.minecraft.core.BlockPos;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,6 +24,8 @@ public class DungeonInstance {
     private final BlockPos altarPos;
     private final BlockPos entrancePos;
     private final BlockPos center;
+    @Nullable
+    private DungeonLayout layout;
     private boolean active;
 
     public DungeonInstance(UUID id, DungeonTier tier, UUID leaderId, BlockPos altarPos, BlockPos entrancePos, BlockPos center) {
@@ -79,6 +82,15 @@ public class DungeonInstance {
 
     public BlockPos getCenter() {
         return center;
+    }
+
+    @Nullable
+    public DungeonLayout getLayout() {
+        return layout;
+    }
+
+    public void setLayout(DungeonLayout layout) {
+        this.layout = layout;
     }
 
     /**

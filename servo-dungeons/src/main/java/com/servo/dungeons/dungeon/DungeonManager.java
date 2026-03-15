@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.Nullable;
@@ -71,20 +72,27 @@ public class DungeonManager {
         // Allocate an offset for this instance
         BlockPos center = offsetAllocator.allocate();
 
-        // Create spawn platform at the allocated offset
-        BlockPos entrancePos = center.above(1); // Y=65 (center is Y=64)
-        createSpawnPlatform(dungeonLevel, center);
+        // Generate procedural dungeon layout
+        RandomSource random = dungeonLevel.getRandom();
+        DungeonLayout layout = DungeonGenerator.generate(tier, random);
+        DungeonGenerator.placeInWorld(layout, dungeonLevel, center);
+
+        // Entrance position: on top of the entrance room's floor (Y+1)
+        BlockPos entranceWorldPos = layout.getEntrance().getWorldPos(center);
+        // Place player in the center of the entrance room
+        BlockPos entrancePos = entranceWorldPos.offset(RoomData.ROOM_SIZE / 2, 1, RoomData.ROOM_SIZE / 2);
 
         // Create instance
         UUID id = UUID.randomUUID();
         DungeonInstance dungeonInstance = new DungeonInstance(id, tier, leader.getUUID(), altarPos, entrancePos, center);
+        dungeonInstance.setLayout(layout);
         activeInstances.put(id, dungeonInstance);
 
         // Teleport leader to dungeon
         teleportToDungeon(leader, entrancePos, dungeonLevel);
 
-        ServoDungeons.LOGGER.info("Dungeon started: tier={}, leader={}, id={}, center={}",
-                tier.name, leader.getName().getString(), id, center);
+        ServoDungeons.LOGGER.info("Dungeon started: tier={}, leader={}, id={}, center={}, rooms={}",
+                tier.name, leader.getName().getString(), id, center, layout.getRoomCount());
 
         return id;
     }
@@ -227,6 +235,7 @@ public class DungeonManager {
 
     /**
      * Clean up a dungeon instance: clear blocks in the area, remove from map, release offset.
+     * Uses the stored DungeonLayout to clear only the exact rooms that were placed.
      *
      * @param dungeonId the dungeon instance UUID
      * @param dungeonLevel the dungeon dimension ServerLevel
@@ -236,13 +245,26 @@ public class DungeonManager {
         if (dungeonInstance == null) return;
 
         BlockPos center = dungeonInstance.getCenter();
+        DungeonLayout layout = dungeonInstance.getLayout();
 
-        // Clear the spawn platform area (platform size 5 + margin of 1 = 6)
-        int clearSize = 6;
-        for (int x = -clearSize; x <= clearSize; x++) {
-            for (int z = -clearSize; z <= clearSize; z++) {
-                for (int y = 0; y <= 5; y++) {
-                    dungeonLevel.setBlock(center.offset(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+        if (layout != null) {
+            // Clear exact room positions from the layout
+            DungeonGenerator.clearFromWorld(layout, dungeonLevel, center);
+        } else {
+            // Fallback: clear a generous fixed area if layout is somehow missing
+            ServoDungeons.LOGGER.warn("No layout stored for dungeon {}, using fallback cleanup", dungeonId);
+            int clearRadius = 400;
+            for (int x = -clearRadius; x <= clearRadius; x += RoomData.ROOM_SIZE) {
+                for (int z = -clearRadius; z <= clearRadius; z += RoomData.ROOM_SIZE) {
+                    for (int bx = 0; bx < RoomData.ROOM_SIZE; bx++) {
+                        for (int bz = 0; bz < RoomData.ROOM_SIZE; bz++) {
+                            for (int y = 0; y < RoomData.ROOM_HEIGHT; y++) {
+                                dungeonLevel.setBlock(
+                                        center.offset(x + bx, y, z + bz),
+                                        Blocks.AIR.defaultBlockState(), 3);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -255,34 +277,6 @@ public class DungeonManager {
     }
 
     // ==================== Internal Helpers ====================
-
-    /**
-     * Create a simple stone brick platform at the given center as placeholder spawn room.
-     * Places an exit portal at the entrance.
-     */
-    private void createSpawnPlatform(ServerLevel dungeonLevel, BlockPos center) {
-        int platformSize = 5;
-
-        // Create floor
-        for (int x = -platformSize; x <= platformSize; x++) {
-            for (int z = -platformSize; z <= platformSize; z++) {
-                dungeonLevel.setBlock(center.offset(x, 0, z), Blocks.STONE_BRICKS.defaultBlockState(), 3);
-            }
-        }
-
-        // Clear air above
-        for (int x = -platformSize; x <= platformSize; x++) {
-            for (int z = -platformSize; z <= platformSize; z++) {
-                for (int y = 1; y <= 4; y++) {
-                    dungeonLevel.setBlock(center.offset(x, y, z), Blocks.AIR.defaultBlockState(), 3);
-                }
-            }
-        }
-
-        // Place exit portal at the edge of the platform
-        BlockPos portalPos = center.offset(0, 1, -platformSize);
-        dungeonLevel.setBlock(portalPos, DungeonRegistry.EXIT_PORTAL_BLOCK.get().defaultBlockState(), 3);
-    }
 
     /**
      * Teleport a player to the dungeon dimension at the given position.
