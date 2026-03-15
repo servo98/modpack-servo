@@ -96,16 +96,6 @@ Cada tier necesita drop del tier anterior → **cadena de progresion natural**.
 3. Llave Maestra requiere Esencia
 4. Llave del Nucleo requiere Cristal de Boss Ch6
 
-## Puzzles con Supplementaries
-
-- Pozos verticales → necesitas **Rope** (o Rope Arrow) para bajar/subir
-- Paredes agrietadas → **Bomb** para abrir paso secreto (Bomb normal = tier Basica/Avanzada, Blue Bomb = tier Maestra/Nucleo)
-- Trampas de piso → **Bamboo Spikes** tipped con pociones (Weakness/Poison/Harming segun tier)
-- Launch pads → **Spring Launcher** para puzzles de movimiento vertical
-- Mensajes ambientales → **Speaker Block** ("Escuchas crujidos detras de esta pared...")
-- Timers visuales → **Hourglass** en salas con limite de tiempo
-- Puertas cerradas → mob-clear gate (matar todos los mobs de la sala) o palanca oculta detras de pared agrietada
-- Bombas configuradas con `break_blocks = "NONE"` — no rompen bloques normales, solo cracked walls via codigo custom en servo_dungeons
 
 ## Altar Unificado (Dungeon + Boss)
 
