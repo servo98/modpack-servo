@@ -58,8 +58,12 @@ Los mods standalone son configurables via JSON/datapacks y no dependen de servo_
 - **Estado**: CODIGO COMPLETO (v0.3.0)
 
 ### servo_create
-- **Agrega**: Inventario por caras a Empacadora (funnel/belt I/O), Deployer compat
+- **Recipe Types**: `servo_create:box_compacting` (dynamic basin recipe)
+- **Feature 1**: Deployer recipe — dobla Carton Plano en belt → Caja Abierta (via DeployerRecipeSearchEvent)
+- **Feature 2**: Custom Compacting — Press+Basin empaca items packable + Caja Abierta → Caja de Envio con BoxContents dinamico
+- **Mixin**: `BasinOperatingBlockEntity.getMatchingRecipes()` para inyectar receta custom
 - **Deps**: servo_packaging (hard), Create (hard)
+- **Estado**: SCAFFOLD COMPLETO (v0.1.0) — compila, requiere testing in-game
 
 ### servo_delivery
 - **Bloques**: Terminal de Entrega, Puerto de Entrega, Base, Antena

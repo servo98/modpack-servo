@@ -1,0 +1,13 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "servo_packaging:flat_cardboard"
+    }
+  ],
+  "results": [
+    {
+      "item": "servo_packaging:open_box"
+    }
+  ]
+}

@@ -39,17 +39,31 @@ Segundo pilar del modpack. Create tiene PROPOSITO: empacar y entregar items al S
 | Create Enchantment Industry | Auto-enchanting, XP liquido | Ch5 |
 | Slice & Dice | Automatizar Cutting Board y Cooking Pot | Ch3 |
 
+## Pipeline de empaque automatizado (Ch4+ — servo_create)
+
+servo_create agrega dos integraciones con Create:
+
+1. **Deployer Folding**: Carton Plano en belt → Deployer (Use) → Caja Abierta
+2. **Basin Compacting**: Basin (Caja Abierta + items packable) + Press → Caja de Envio con BoxContents
+
+```
+Harvester → Belt → Press (Paper) → Crafter (Carton)
+  → Deployer (fold) → Basin+Press (compact) → Belt → Delivery Port
+```
+
+Ver [Packaging](packaging.md#4-automatizacion-con-create-servo_create-addon) para pipeline completo.
+
 ## Pipeline tipico (Ch5+)
 
 ```
 Harvester → Belt → Slice&Dice → Cooking Pot
-  → Deployer empaca → Belt → Space Elevator
+  → Basin+Press (compact) → Belt → Delivery Port
 ```
 
 Con RS:
 ```
 RS Exporter → Create Belt → Procesamiento
-  → RS Importer → Autocraft → RS Exporter → Space Elevator
+  → RS Importer → Autocraft → RS Exporter → Delivery Port
 ```
 
 ## Bridge con Nether

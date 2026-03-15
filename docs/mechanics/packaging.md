@@ -160,7 +160,7 @@ Contiene: 16x Vegetable Soup    [verde — color por categoria]
 
 ---
 
-# 4. AUTOMATIZACION CON CREATE (Futuro — servo_create addon)
+# 4. AUTOMATIZACION CON CREATE (servo_create addon)
 
 ## 4.1 Principio: hoppers nativos + funnels Create
 
@@ -169,45 +169,38 @@ La automatizacion basica ya funciona con hoppers de vanilla:
 - Hopper debajo: extrae cajas abiertas
 - Hopper arriba de caja abierta: mete items (auto-seal al llenar)
 
-servo_create agregara:
-- Funnel compat mejorada
-- Deployer support en belts
-- Smart chute para cajas selladas
+servo_create agrega dos features:
+- **Deployer Folding**: Deployer en belt dobla Carton Plano → Caja Abierta (Ch4+, brass tier)
+- **Basin Compacting**: Press+Basin empaca items packable + Caja Abierta → Caja de Envio con BoxContents (Ch4+)
 
-## 4.2 Pipeline completo con Create (servo_create)
+La compat basica (funnels/hoppers via WorldlyContainer/IItemHandler) ya funciona sin servo_create.
 
-```
-PIPELINE: Deployer dobla + Deployer llena
-
-[Chest: Carton Plano]
-        | Funnel
-[Belt: Carton Plano viajando]
-        |
-[Deployer 1: modo "Use"] -> Convierte Carton en Caja Abierta
-        |
-[Belt: Caja Abierta viajando]
-        |
-[Deployer 2: cargado con items]
-  -> Detecta Caja Abierta
-  -> Inserta items
-  -> Sale Caja de Envio cerrada
-        |
-[Belt: Caja cerrada]
-        |
-[Terminal de Entrega]
-```
-
-## 4.3 Produccion de Carton con Create
+## 4.2 Pipeline completo con Create (Ch4+)
 
 ```
-[Sugar Cane Farm -> Create Harvester]
-        | belt
-[Mechanical Press: Sugar Cane -> Paper]
-        | belt
-[Mechanical Crafter: 4 Paper + 1 String = 4 Carton Plano]
-        | belt
-[Chest buffer / directo a Empacadora]
+PRODUCCION DE CARTON:
+[Sugar Cane] → Harvester → Belt → Press (→ Paper) → Belt
+    → Mechanical Crafter (4 Paper + 1 String = 4 Carton) → Belt
+
+DOBLADO (servo_create — Deployer recipe):
+[Carton en Belt] → Deployer (modo "Use") → [Caja Abierta en Belt]
+
+EMPAQUE (servo_create — Custom Compacting):
+[Caja Abierta] → Funnel ↓ Basin ← Funnel [16x Items desde Chest]
+                    ↓ Mechanical Press
+              [Caja de Envio (items)] → Belt
+
+ENTREGA (ya funciona):
+[Caja de Envio en Belt] → Funnel → Delivery Port → progreso sube
 ```
+
+## 4.3 Implementacion tecnica
+
+- **Deployer**: `DeployerRecipeSearchEvent` listener inyecta receta cuando encuentra flat_cardboard
+- **Compacting**: Mixin en `BasinOperatingBlockEntity.getMatchingRecipes()` crea `BoxCompactingRecipe` dinamicamente
+- La receta de compacting es UNA receta generica que funciona con cualquier item `#servo_packaging:packable`
+- Respeta `pack_size` tags (1/8/16) y detecta categoria automaticamente
+- El output ShippingBox tiene BoxContents correcto (via `enforceNextResult`)
 
 ---
 
