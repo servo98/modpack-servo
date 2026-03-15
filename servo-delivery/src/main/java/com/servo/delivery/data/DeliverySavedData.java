@@ -10,11 +10,12 @@ import net.minecraft.world.level.saveddata.SavedData;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 /**
- * World-global delivery progress stored via SavedData.
- * All terminals read/write from this single instance, so progress
- * is shared across all terminals and survives terminal destruction.
+ * Per-team delivery progress stored via SavedData.
+ * Each FTB Team (or solo player if FTB Teams is absent) has its own
+ * chapter + delivered items. Progress survives terminal destruction.
  *
  * Stored in: data/servo_delivery_progress.dat (overworld)
  */
@@ -22,8 +23,10 @@ public class DeliverySavedData extends SavedData {
 
     private static final String DATA_NAME = "servo_delivery_progress";
 
-    private int currentChapter = 1;
-    private final Map<String, Integer> deliveredItems = new HashMap<>();
+    /** UUID used when migrating legacy (pre-team) data. */
+    static final UUID LEGACY_TEAM_UUID = new UUID(0L, 0L);
+
+    private final Map<UUID, TeamProgress> teamData = new HashMap<>();
 
     public DeliverySavedData() {}
 
@@ -36,51 +39,76 @@ public class DeliverySavedData extends SavedData {
 
     public static DeliverySavedData load(CompoundTag tag, HolderLookup.Provider registries) {
         DeliverySavedData data = new DeliverySavedData();
-        data.currentChapter = tag.getInt("Chapter");
-        if (data.currentChapter < 1) data.currentChapter = 1;
 
-        ListTag deliveries = tag.getList("Deliveries", Tag.TAG_COMPOUND);
-        for (int i = 0; i < deliveries.size(); i++) {
-            CompoundTag itemTag = deliveries.getCompound(i);
-            data.deliveredItems.put(itemTag.getString("Id"), itemTag.getInt("Count"));
+        // Legacy format: root has "Chapter" + "Deliveries" directly
+        if (tag.contains("Chapter", Tag.TAG_INT) && !tag.contains("Teams", Tag.TAG_LIST)) {
+            ServoDelivery.LOGGER.info("Migrating legacy delivery progress to per-team format");
+            TeamProgress legacy = new TeamProgress();
+            int chapter = tag.getInt("Chapter");
+            if (chapter < 1) chapter = 1;
+
+            Map<String, Integer> items = new HashMap<>();
+            ListTag deliveries = tag.getList("Deliveries", Tag.TAG_COMPOUND);
+            for (int i = 0; i < deliveries.size(); i++) {
+                CompoundTag itemTag = deliveries.getCompound(i);
+                items.put(itemTag.getString("Id"), itemTag.getInt("Count"));
+            }
+
+            legacy = new TeamProgress(chapter, items);
+            data.teamData.put(LEGACY_TEAM_UUID, legacy);
+            ServoDelivery.LOGGER.info("Legacy migration complete: chapter {}, {} items → team {}",
+                    chapter, items.size(), LEGACY_TEAM_UUID);
+        } else {
+            // New format: Teams list
+            ListTag teams = tag.getList("Teams", Tag.TAG_COMPOUND);
+            for (int i = 0; i < teams.size(); i++) {
+                CompoundTag teamTag = teams.getCompound(i);
+                UUID teamId = teamTag.getUUID("TeamId");
+                TeamProgress progress = TeamProgress.load(teamTag);
+                data.teamData.put(teamId, progress);
+            }
         }
 
-        ServoDelivery.LOGGER.info("Loaded delivery progress: chapter {}, {} items delivered",
-                data.currentChapter, data.deliveredItems.size());
+        ServoDelivery.LOGGER.info("Loaded delivery progress for {} teams", data.teamData.size());
         return data;
     }
 
     @Override
     public CompoundTag save(CompoundTag tag, HolderLookup.Provider registries) {
-        tag.putInt("Chapter", currentChapter);
-
-        ListTag deliveries = new ListTag();
-        for (var entry : deliveredItems.entrySet()) {
-            CompoundTag itemTag = new CompoundTag();
-            itemTag.putString("Id", entry.getKey());
-            itemTag.putInt("Count", entry.getValue());
-            deliveries.add(itemTag);
+        ListTag teams = new ListTag();
+        for (var entry : teamData.entrySet()) {
+            CompoundTag teamTag = entry.getValue().save();
+            teamTag.putUUID("TeamId", entry.getKey());
+            teams.add(teamTag);
         }
-        tag.put("Deliveries", deliveries);
+        tag.put("Teams", teams);
         return tag;
     }
 
-    // === Accessors ===
+    // === Per-team accessors ===
 
-    public int getCurrentChapter() { return currentChapter; }
-    public Map<String, Integer> getDeliveredItems() { return deliveredItems; }
+    public TeamProgress getOrCreate(UUID teamId) {
+        return teamData.computeIfAbsent(teamId, id -> new TeamProgress());
+    }
 
-    public void deliverItem(String requirementId) {
-        int current = deliveredItems.getOrDefault(requirementId, 0);
-        deliveredItems.put(requirementId, current + 1);
+    public int getCurrentChapter(UUID teamId) {
+        return getOrCreate(teamId).getCurrentChapter();
+    }
+
+    public Map<String, Integer> getDeliveredItems(UUID teamId) {
+        return getOrCreate(teamId).getDeliveredItems();
+    }
+
+    public void deliverItem(UUID teamId, String requirementId) {
+        getOrCreate(teamId).deliverItem(requirementId);
         setDirty();
     }
 
-    public void advanceChapter() {
-        ServoDelivery.LOGGER.info("Chapter {} delivery complete! Advancing to {}",
-                currentChapter, currentChapter + 1);
-        currentChapter++;
-        deliveredItems.clear();
+    public void advanceChapter(UUID teamId) {
+        TeamProgress progress = getOrCreate(teamId);
+        ServoDelivery.LOGGER.info("Team {} chapter {} delivery complete! Advancing to {}",
+                teamId, progress.getCurrentChapter(), progress.getCurrentChapter() + 1);
+        progress.advanceChapter();
         setDirty();
     }
 }

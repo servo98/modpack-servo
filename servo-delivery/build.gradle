@@ -41,6 +41,8 @@ neoForge {
 dependencies {
     implementation "software.bernie.geckolib:geckolib-neoforge-1.21.1:4.7.2"
     compileOnly project(':servo-packaging')
+    compileOnly fileTree(dir: "${rootProject.projectDir}/modpack/mods",
+                         include: ['ftb-teams-neoforge-*.jar', 'ftb-library-neoforge-*.jar'])
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

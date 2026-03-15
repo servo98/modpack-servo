@@ -4,6 +4,7 @@ import com.servo.delivery.DeliveryRegistry;
 import com.servo.delivery.data.ChapterDelivery;
 import com.servo.delivery.data.DeliveryDataLoader;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -13,16 +14,18 @@ import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Menu for the Delivery Terminal GUI.
- * Syncs chapter progress data from server to client.
+ * Syncs chapter progress data from server to client, scoped to a specific team.
  * No item slots — items are delivered by right-clicking the block.
  */
 public class DeliveryTerminalMenu extends AbstractContainerMenu {
 
     private final ContainerData data;
     private final DeliveryTerminalBlockEntity terminal;
+    private final UUID teamId;
     private final List<RequirementInfo> requirements;
     private final int chapter;
     private final String chapterName;
@@ -32,11 +35,12 @@ public class DeliveryTerminalMenu extends AbstractContainerMenu {
     private static final int DATA_READY = 1;
     private static final int DATA_SLOT_COUNT = 2; // + 1 per requirement for delivered count
 
-    /** Server constructor */
-    public DeliveryTerminalMenu(int containerId, Inventory playerInv, DeliveryTerminalBlockEntity terminal) {
+    /** Server constructor — scoped to a specific team */
+    public DeliveryTerminalMenu(int containerId, Inventory playerInv, DeliveryTerminalBlockEntity terminal, UUID teamId) {
         super(DeliveryRegistry.TERMINAL_MENU.get(), containerId);
         this.terminal = terminal;
-        this.chapter = terminal.getCurrentChapter();
+        this.teamId = teamId;
+        this.chapter = terminal.getCurrentChapter(teamId);
 
         ChapterDelivery chapterData = DeliveryDataLoader.getChapter(chapter);
         this.chapterName = chapterData != null ? chapterData.getName() : "Unknown";
@@ -52,14 +56,14 @@ public class DeliveryTerminalMenu extends AbstractContainerMenu {
         this.data = new ContainerData() {
             @Override
             public int get(int index) {
-                if (index == DATA_PROGRESS) return terminal.getProgressPercent();
+                if (index == DATA_PROGRESS) return terminal.getProgressPercent(teamId);
                 if (index == DATA_READY) {
-                    ChapterDelivery ch = DeliveryDataLoader.getChapter(terminal.getCurrentChapter());
-                    return (ch != null && ch.isComplete(terminal.getDeliveredItems())) ? 1 : 0;
+                    ChapterDelivery ch = DeliveryDataLoader.getChapter(terminal.getCurrentChapter(teamId));
+                    return (ch != null && ch.isComplete(terminal.getDeliveredItems(teamId))) ? 1 : 0;
                 }
                 int reqIndex = index - DATA_SLOT_COUNT;
                 if (reqIndex >= 0 && reqIndex < requirements.size()) {
-                    return terminal.getDeliveredItems().getOrDefault(requirements.get(reqIndex).id(), 0);
+                    return terminal.getDeliveredItems(teamId).getOrDefault(requirements.get(reqIndex).id(), 0);
                 }
                 return 0;
             }
@@ -77,6 +81,7 @@ public class DeliveryTerminalMenu extends AbstractContainerMenu {
     public DeliveryTerminalMenu(int containerId, Inventory playerInv, FriendlyByteBuf buf) {
         super(DeliveryRegistry.TERMINAL_MENU.get(), containerId);
         this.terminal = null;
+        this.teamId = null;
         this.chapter = buf.readVarInt();
         this.chapterName = buf.readUtf();
 
@@ -110,12 +115,9 @@ public class DeliveryTerminalMenu extends AbstractContainerMenu {
     @Override
     public boolean clickMenuButton(Player player, int id) {
         // Button 0 = Launch
-        if (id == 0 && terminal != null) {
-            ChapterDelivery ch = DeliveryDataLoader.getChapter(terminal.getCurrentChapter());
-            if (ch != null && ch.isComplete(terminal.getDeliveredItems())) {
-                terminal.launchDelivery();
-                return true;
-            }
+        if (id == 0 && terminal != null && player instanceof ServerPlayer serverPlayer) {
+            terminal.launchDelivery(serverPlayer);
+            return true;
         }
         return false;
     }

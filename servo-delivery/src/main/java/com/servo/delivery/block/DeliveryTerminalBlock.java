@@ -135,6 +135,9 @@ public class DeliveryTerminalBlock extends BaseEntityBlock {
                             @Nullable LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
         if (!level.isClientSide() && level.getBlockEntity(pos) instanceof DeliveryTerminalBlockEntity terminal) {
+            if (placer instanceof net.minecraft.server.level.ServerPlayer serverPlayer) {
+                terminal.setOwnerFromPlayer(serverPlayer);
+            }
             terminal.tryFormMultiblock();
         }
     }
