@@ -1,0 +1,1210 @@
+{
+	chapter.0100000000000001.title: "Cap 1: Raices"
+	quest.0101010100010001.title: "Bienvenido al mundo"
+	quest.0101010100010001.quest_subtitle: "Historia"
+	quest.0101010100010001.quest_desc: ["primer login"]
+	quest.0101020100010001.title: "Un techo sobre tu cabeza"
+	quest.0101020100010001.quest_subtitle: "Historia"
+	quest.0101020100010001.quest_desc: ["Obten crafting table"]
+	quest.0101030100010001.title: "Herramientas basicas"
+	quest.0101030100010001.quest_subtitle: "Historia"
+	quest.0101030100010001.quest_desc: ["Obten wooden pickaxe"]
+	quest.0101040100010001.title: "Conoce el Cooking Pot"
+	quest.0101040100010001.quest_subtitle: "Historia"
+	quest.0101040100010001.quest_desc: ["Obten cooking pot"]
+	quest.0101050100010001.title: "Conoce la Cutting Board"
+	quest.0101050100010001.quest_subtitle: "Historia"
+	quest.0101050100010001.quest_desc: ["Obten cutting board"]
+	quest.0101060100010001.title: "Conoce el Stove"
+	quest.0101060100010001.quest_subtitle: "Historia"
+	quest.0101060100010001.quest_desc: ["Obten stove"]
+	quest.0101070100010001.title: "El Space Elevator: tu mision"
+	quest.0101070100010001.quest_subtitle: "Historia"
+	quest.0101070100010001.quest_desc: ["recibir bloques del Terminal como quest reward"]
+	quest.0101080100010001.title: "Empacando para el futuro"
+	quest.0101080100010001.quest_subtitle: "Historia"
+	quest.0101080100010001.quest_desc: ["Obten packing station"]
+	quest.0101090100010001.title: "La Gacha Machine"
+	quest.0101090100010001.quest_subtitle: "Historia"
+	quest.0101090100010001.quest_desc: ["recibir Gacha Machine Verde como quest reward"]
+	quest.01010A0100010001.title: "Mazmorras y llaves"
+	quest.01010A0100010001.quest_subtitle: "Historia"
+	quest.01010A0100010001.quest_desc: ["Obten dungeon pedestal"]
+	quest.01010B0100010001.title: "La mesa de hechizos"
+	quest.01010B0100010001.quest_subtitle: "Historia"
+	quest.01010B0100010001.quest_desc: ["recibir Spell Binding Table como quest reward"]
+	quest.01010C0100010001.title: "Bolsa de runas"
+	quest.01010C0100010001.quest_subtitle: "Historia"
+	quest.01010C0100010001.quest_desc: ["Obten small rune pouch"]
+	quest.0102010100010001.title: "Primera comida cocinada"
+	quest.0102010100010001.quest_subtitle: "Cocina"
+	quest.0102010100010001.quest_desc: ["Obten mixed salad"]
+	quest.0102020100010001.title: "Variedad es sabor"
+	quest.0102020100010001.quest_subtitle: "Cocina"
+	quest.0102020100010001.quest_desc: ["cocinar 3 recetas FD diferentes"]
+	quest.0102030100010001.title: "El arte de cortar"
+	quest.0102030100010001.quest_subtitle: "Cocina"
+	quest.0102030100010001.quest_desc: ["usar Cutting Board para cortar un ingrediente"]
+	quest.0102040100010001.title: "Fuego controlado"
+	quest.0102040100010001.quest_subtitle: "Cocina"
+	quest.0102040100010001.quest_desc: ["cocinar algo en el Stove"]
+	quest.0102050100010001.title: "Maestro del Skillet"
+	quest.0102050100010001.quest_subtitle: "Cocina"
+	quest.0102050100010001.quest_desc: ["Obten fried egg"]
+	quest.0102060100010001.title: "Recetario: 5 comidas"
+	quest.0102060100010001.quest_subtitle: "Cocina"
+	quest.0102060100010001.quest_desc: ["comer 5 comidas diferentes (hito Recetario)"]
+	quest.0102070100010001.title: "Pesca del dia"
+	quest.0102070100010001.quest_subtitle: "Cocina"
+	quest.0102070100010001.quest_desc: ["Obten cod"]
+	quest.0102080100010001.title: "Del mar a la mesa"
+	quest.0102080100010001.quest_subtitle: "Cocina"
+	quest.0102080100010001.quest_desc: ["Obten grilled salmon"]
+	quest.0103010100010001.title: "Primer tomate"
+	quest.0103010100010001.quest_subtitle: "Farming"
+	quest.0103010100010001.quest_desc: ["Obten tomato"]
+	quest.0103020100010001.title: "Cebollas para llorar"
+	quest.0103020100010001.quest_subtitle: "Farming"
+	quest.0103020100010001.quest_desc: ["Obten onion"]
+	quest.0103030100010001.title: "Repollo del huerto"
+	quest.0103030100010001.quest_subtitle: "Farming"
+	quest.0103030100010001.quest_desc: ["Obten cabbage"]
+	quest.0103040100010001.title: "Arroz de la tierra"
+	quest.0103040100010001.quest_subtitle: "Farming"
+	quest.0103040100010001.quest_desc: ["Obten rice"]
+	quest.0103050100010001.title: "Granja diversa"
+	quest.0103050100010001.quest_subtitle: "Farming"
+	quest.0103050100010001.quest_desc: ["tener granja con 4+ tipos de crops plantados"]
+	quest.0103060100010001.title: "Amigos del corral"
+	quest.0103060100010001.quest_subtitle: "Farming"
+	quest.0103060100010001.quest_desc: ["domesticar 2 tipos de animales"]
+	quest.0104010100010001.title: "Forjando tu primera llave"
+	quest.0104010100010001.quest_subtitle: "Dungeon"
+	quest.0104010100010001.quest_desc: ["Obten basic key"]
+	quest.0104020100010001.title: "Primera incursion"
+	quest.0104020100010001.quest_subtitle: "Dungeon"
+	quest.0104020100010001.quest_desc: ["entrar a primera dungeon via beam"]
+	quest.0104030100010001.title: "Sobreviviente"
+	quest.0104030100010001.quest_subtitle: "Dungeon"
+	quest.0104030100010001.quest_desc: ["completar dungeon Basica (salir por Exit Portal)"]
+	quest.0104040100010001.title: "Cofre de dungeon"
+	quest.0104040100010001.quest_subtitle: "Dungeon"
+	quest.0104040100010001.quest_desc: ["abrir cofre Lootr en dungeon"]
+	quest.0104050100010001.title: "Champion cazador"
+	quest.0104050100010001.quest_subtitle: "Dungeon"
+	quest.0104050100010001.quest_desc: ["derrotar un champion en dungeon"]
+	quest.0105010100010001.title: "Primer arma"
+	quest.0105010100010001.quest_subtitle: "Combate"
+	quest.0105010100010001.quest_desc: ["Obten flint dagger"]
+	quest.0105020100010001.title: "Champion del overworld"
+	quest.0105020100010001.quest_subtitle: "Combate"
+	quest.0105020100010001.quest_desc: ["derrotar un champion en el overworld"]
+	quest.0105030100010001.title: "Equipar Rune Pouch"
+	quest.0105030100010001.quest_subtitle: "Combate"
+	quest.0105030100010001.quest_desc: ["equipar Small Rune Pouch en Curios slot"]
+	quest.0105040100010001.title: "La Llave del Bosque"
+	quest.0105040100010001.quest_subtitle: "Combate"
+	quest.0105040100010001.quest_desc: ["Obten boss key ch1"]
+	quest.0105050100010001.title: "GATE: Guardian del Bosque"
+	quest.0105050100010001.quest_subtitle: "Combate"
+	quest.0105050100010001.quest_desc: ["Derrota a guardian del bosque"]
+	quest.0106010100010001.title: "Tres biomas nuevos"
+	quest.0106010100010001.quest_subtitle: "Exploracion"
+	quest.0106010100010001.quest_desc: ["visitar 3 biomas Terralith diferentes"]
+	quest.0106020100010001.title: "Piedra de regreso"
+	quest.0106020100010001.quest_subtitle: "Exploracion"
+	quest.0106020100010001.quest_desc: ["Obten waystone"]
+	quest.0106030100010001.title: "Aldea encontrada"
+	quest.0106030100010001.quest_subtitle: "Exploracion"
+	quest.0106030100010001.quest_desc: ["location:minecraft:overworld:village?"]
+	quest.0106040100010001.title: "Construir tu Altar"
+	quest.0106040100010001.quest_subtitle: "Exploracion"
+	quest.0106040100010001.quest_desc: ["colocar Pedestal + 4 Runas en patron de cruz"]
+	quest.0107010100010001.title: "Hogar dulce hogar"
+	quest.0107010100010001.quest_subtitle: "Construccion"
+	quest.0107010100010001.quest_desc: ["construir casa con cama, puerta y techo"]
+	quest.0107020100010001.title: "La cocina"
+	quest.0107020100010001.quest_subtitle: "Construccion"
+	quest.0107020100010001.quest_desc: ["colocar Cooking Pot + Cutting Board + Stove en tu base"]
+	quest.0107030100010001.title: "Almacen organizado"
+	quest.0107030100010001.quest_subtitle: "Construccion"
+	quest.0107030100010001.quest_desc: ["colocar 8+ cofres"]
+	quest.0107040100010001.title: "La granja cercada"
+	quest.0107040100010001.quest_subtitle: "Construccion"
+	quest.0107040100010001.quest_desc: ["construir granja con cercas y puerta"]
+	quest.0108010100010001.title: "Primeras monedas"
+	quest.0108010100010001.quest_subtitle: "Coleccion"
+	quest.0108010100010001.quest_desc: ["Obten pepe coin x5"]
+	quest.0108020100010001.title: "Primera tirada"
+	quest.0108020100010001.quest_subtitle: "Coleccion"
+	quest.0108020100010001.quest_desc: ["hacer primer pull en Gacha Verde"]
+	quest.0108030100010001.title: "Recetario: primeros pasos"
+	quest.0108030100010001.quest_subtitle: "Coleccion"
+	quest.0108030100010001.quest_desc: ["cocinar 5 comidas unicas (Recetario)"]
+	quest.0108040100010001.title: "Pescador novato"
+	quest.0108040100010001.quest_subtitle: "Coleccion"
+	quest.0108040100010001.quest_desc: ["pescar 3 tipos de pez (cod, salmon, pufferfish)"]
+	quest.0108050100010001.title: "Primera Caja de Envio"
+	quest.0108050100010001.quest_subtitle: "Coleccion"
+	quest.0108050100010001.quest_desc: ["Obten shipping box"]
+	quest.0108060100010001.title: "GATE: Entrega al Space Elevator Ch1"
+	quest.0108060100010001.quest_subtitle: "Coleccion"
+	quest.0108060100010001.quest_desc: ["completar entrega Ch1 en Terminal y presionar LAUNCH"]
+	chapter.0200000000000001.title: "Cap 2: La Cocina + Clase Melee"
+	quest.0201010100010001.title: "Nuevos cultivos: Croptopia"
+	quest.0201010100010001.quest_subtitle: "Historia"
+	quest.0201010100010001.quest_desc: ["Obten lettuce"]
+	quest.0201020100010001.title: "La Batidora"
+	quest.0201020100010001.quest_subtitle: "Historia"
+	quest.0201020100010001.quest_desc: ["Obten blender"]
+	quest.0201030100010001.title: "Moldes de Postres"
+	quest.0201030100010001.quest_subtitle: "Historia"
+	quest.0201030100010001.quest_desc: ["Obten cake mold 1star"]
+	quest.0201040100010001.title: "El Keg: fermentacion"
+	quest.0201040100010001.quest_subtitle: "Historia"
+	quest.0201040100010001.quest_desc: ["Obten keg"]
+	quest.0201050100010001.title: "Storage Drawers"
+	quest.0201050100010001.quest_subtitle: "Historia"
+	quest.0201050100010001.quest_desc: ["Obten oak full drawers 1"]
+	quest.0201060100010001.title: "Create: la Water Wheel"
+	quest.0201060100010001.quest_subtitle: "Historia"
+	quest.0201060100010001.quest_desc: ["Obten water wheel"]
+	quest.0201070100010001.title: "Create: belts y shafts"
+	quest.0201070100010001.quest_subtitle: "Historia"
+	quest.0201070100010001.quest_desc: ["Obten mechanical belt"]
+	quest.0201080100010001.title: "Elige tu clase melee"
+	quest.0201080100010001.quest_subtitle: "Historia"
+	quest.0201080100010001.quest_desc: ["usar Class Book de Rogue o Warrior"]
+	quest.0201090100010001.title: "Arms Station"
+	quest.0201090100010001.quest_subtitle: "Historia"
+	quest.0201090100010001.quest_desc: ["Obten arms station"]
+	quest.02010A0100010001.title: "Gemas y Jewelry"
+	quest.02010A0100010001.quest_subtitle: "Historia"
+	quest.02010A0100010001.quest_desc: ["Obten citrine"]
+	quest.02010B0100010001.title: "Equipo Tier 1"
+	quest.02010B0100010001.quest_subtitle: "Historia"
+	quest.02010B0100010001.quest_desc: ["equipar arma T1 de clase"]
+	quest.02010C0100010001.title: "Minas de Citrine y Jade"
+	quest.02010C0100010001.quest_subtitle: "Historia"
+	quest.02010C0100010001.quest_desc: ["Obten jade"]
+	quest.0202010100010001.title: "Primer smoothie"
+	quest.0202010100010001.quest_subtitle: "Cocina"
+	quest.0202010100010001.quest_desc: ["hacer un smoothie en el Blender"]
+	quest.0202020100010001.title: "Variedad de smoothies"
+	quest.0202020100010001.quest_subtitle: "Cocina"
+	quest.0202020100010001.quest_desc: ["hacer 3 smoothies diferentes"]
+	quest.0202030100010001.title: "Postre con molde"
+	quest.0202030100010001.quest_subtitle: "Cocina"
+	quest.0202030100010001.quest_desc: ["usar Molde de Postres para hacer un postre"]
+	quest.0202040100010001.title: "Queso del Keg"
+	quest.0202040100010001.quest_subtitle: "Cocina"
+	quest.0202040100010001.quest_desc: ["Obten flaxen cheese"]
+	quest.0202050100010001.title: "Bebida fermentada"
+	quest.0202050100010001.quest_subtitle: "Cocina"
+	quest.0202050100010001.quest_desc: ["Obten beer"]
+	quest.0202060100010001.title: "Recetario: 15 comidas"
+	quest.0202060100010001.quest_subtitle: "Cocina"
+	quest.0202060100010001.quest_desc: ["comer 15 comidas diferentes (hito Recetario)"]
+	quest.0202070100010001.title: "Receta de Croptopia"
+	quest.0202070100010001.quest_subtitle: "Cocina"
+	quest.0202070100010001.quest_desc: ["Obten fruit salad"]
+	quest.0202080100010001.title: "Cajas de Queso"
+	quest.0202080100010001.quest_subtitle: "Cocina"
+	quest.0202080100010001.quest_desc: ["empacar queso en Caja de Envio"]
+	quest.0203010100010001.title: "4 nuevos cultivos"
+	quest.0203010100010001.quest_subtitle: "Farming"
+	quest.0203010100010001.quest_desc: ["plantar 4 crops Croptopia"]
+	quest.0203020100010001.title: "8 cultivos plantados"
+	quest.0203020100010001.quest_subtitle: "Farming"
+	quest.0203020100010001.quest_desc: ["plantar 8 crops Croptopia diferentes"]
+	quest.0203030100010001.title: "Los 12 de Croptopia"
+	quest.0203030100010001.quest_subtitle: "Farming"
+	quest.0203030100010001.quest_desc: ["plantar los 12 crops nuevos de Croptopia"]
+	quest.0203040100010001.title: "Expansion agricola"
+	quest.0203040100010001.quest_subtitle: "Farming"
+	quest.0203040100010001.quest_desc: ["expandir granja a 24+ crops plantados total"]
+	quest.0203050100010001.title: "Vinedo de uvas"
+	quest.0203050100010001.quest_subtitle: "Farming"
+	quest.0203050100010001.quest_desc: ["Obten grape x16"]
+	quest.0203060100010001.title: "Riego y cuidado"
+	quest.0203060100010001.quest_subtitle: "Farming"
+	quest.0203060100010001.quest_desc: ["tener granja funcionando con agua adyacente"]
+	quest.0204010100010001.title: "3 runs basicas"
+	quest.0204010100010001.quest_subtitle: "Dungeon"
+	quest.0204010100010001.quest_desc: ["completar 3 dungeon Basica runs"]
+	quest.0204020100010001.title: "Accesorio T1 de dungeon"
+	quest.0204020100010001.quest_subtitle: "Dungeon"
+	quest.0204020100010001.quest_desc: ["obtener accesorio T1 de cofre de dungeon"]
+	quest.0204030100010001.title: "Runas de dungeon"
+	quest.0204030100010001.quest_subtitle: "Dungeon"
+	quest.0204030100010001.quest_desc: ["obtener runas de cofre de dungeon"]
+	quest.0204040100010001.title: "20 Pepe Coins de dungeons"
+	quest.0204040100010001.quest_subtitle: "Dungeon"
+	quest.0204040100010001.quest_desc: ["acumular 20 PC solo de dungeon runs"]
+	quest.0204050100010001.title: "Molde en dungeon"
+	quest.0204050100010001.quest_subtitle: "Dungeon"
+	quest.0204050100010001.quest_desc: ["encontrar molde de postre en dungeon Basica"]
+	quest.0205010100010001.title: "Clase melee elegida"
+	quest.0205010100010001.quest_subtitle: "Combate"
+	quest.0205010100010001.quest_desc: ["tener clase Rogue o Warrior activa"]
+	quest.0205020100010001.title: "Armadura T1 de clase"
+	quest.0205020100010001.quest_subtitle: "Combate"
+	quest.0205020100010001.quest_desc: ["craftear set completo T1 de clase melee"]
+	quest.0205030100010001.title: "Arma T1 de clase"
+	quest.0205030100010001.quest_subtitle: "Combate"
+	quest.0205030100010001.quest_desc: ["craftear arma T1 de clase (Iron Dagger/Glaive/etc)"]
+	quest.0205040100010001.title: "Runa de Fuego o Curacion"
+	quest.0205040100010001.quest_subtitle: "Combate"
+	quest.0205040100010001.quest_desc: ["Obten fire rune"]
+	quest.0205050100010001.title: "GATE: Bestia Glotona"
+	quest.0205050100010001.quest_subtitle: "Combate"
+	quest.0205050100010001.quest_desc: ["Derrota a bestia glotona"]
+	quest.0206010100010001.title: "Minerales de Citrine"
+	quest.0206010100010001.quest_subtitle: "Exploracion"
+	quest.0206010100010001.quest_desc: ["encontrar y minar ore de Citrine"]
+	quest.0206020100010001.title: "Minerales de Jade"
+	quest.0206020100010001.quest_subtitle: "Exploracion"
+	quest.0206020100010001.quest_desc: ["encontrar y minar ore de Jade"]
+	quest.0206030100010001.title: "3 biomas nuevos"
+	quest.0206030100010001.quest_subtitle: "Exploracion"
+	quest.0206030100010001.quest_desc: ["visitar 3 biomas Terralith nuevos"]
+	quest.0206040100010001.title: "Red de Waystones"
+	quest.0206040100010001.quest_subtitle: "Exploracion"
+	quest.0206040100010001.quest_desc: ["colocar 3 Waystones"]
+	quest.0206050100010001.title: "Mercader de armas"
+	quest.0206050100010001.quest_subtitle: "Exploracion"
+	quest.0206050100010001.quest_desc: ["encontrar NPC Arms Dealer en village"]
+	quest.0207010100010001.title: "Sala de Drawers"
+	quest.0207010100010001.quest_subtitle: "Construccion"
+	quest.0207010100010001.quest_desc: ["colocar 8+ Storage Drawers"]
+	quest.0207020100010001.title: "Water Wheel instalada"
+	quest.0207020100010001.quest_subtitle: "Construccion"
+	quest.0207020100010001.quest_desc: ["colocar Water Wheel funcional generando SU"]
+	quest.0207030100010001.title: "Linea de belt"
+	quest.0207030100010001.quest_subtitle: "Construccion"
+	quest.0207030100010001.quest_desc: ["conectar belt de Create funcional"]
+	quest.0207040100010001.title: "Cocina mejorada"
+	quest.0207040100010001.quest_subtitle: "Construccion"
+	quest.0207040100010001.quest_desc: ["instalar Blender y Keg en tu cocina"]
+	quest.0208010100010001.title: "5 tiradas de gacha"
+	quest.0208010100010001.quest_subtitle: "Coleccion"
+	quest.0208010100010001.quest_desc: ["hacer 5 pulls en cualquier Gacha Machine"]
+	quest.0208020100010001.title: "3 moldes coleccionados"
+	quest.0208020100010001.quest_subtitle: "Coleccion"
+	quest.0208020100010001.quest_desc: ["tener 3 moldes de postres diferentes"]
+	quest.0208030100010001.title: "Primer anillo de gema"
+	quest.0208030100010001.quest_subtitle: "Coleccion"
+	quest.0208030100010001.quest_desc: ["equipar ring de Citrine o Jade"]
+	quest.0208040100010001.title: "Recetario: 20 comidas"
+	quest.0208040100010001.quest_subtitle: "Coleccion"
+	quest.0208040100010001.quest_desc: ["completar 20 comidas unicas en Recetario"]
+	quest.0208050100010001.title: "GATE: Entrega al Space Elevator Ch2"
+	quest.0208050100010001.quest_subtitle: "Coleccion"
+	quest.0208050100010001.quest_desc: ["completar entrega Ch2 en Terminal y presionar LAUNCH"]
+	chapter.0300000000000001.title: "Cap 3: Engranajes + Magia"
+	quest.0301010100010001.title: "El Drink Maker"
+	quest.0301010100010001.quest_subtitle: "Historia"
+	quest.0301010100010001.quest_desc: ["Obten drink maker"]
+	quest.0301020100010001.title: "El Horno Avanzado"
+	quest.0301020100010001.quest_subtitle: "Historia"
+	quest.0301020100010001.quest_desc: ["Obten advanced oven"]
+	quest.0301030100010001.title: "Slice & Dice: cocina mecanica"
+	quest.0301030100010001.quest_subtitle: "Historia"
+	quest.0301030100010001.quest_desc: ["Obten slicer"]
+	quest.0301040100010001.title: "Tom's Storage"
+	quest.0301040100010001.quest_subtitle: "Historia"
+	quest.0301040100010001.quest_desc: ["Obten ts terminal"]
+	quest.0301050100010001.title: "Bienvenido al Nether"
+	quest.0301050100010001.quest_subtitle: "Historia"
+	quest.0301050100010001.quest_desc: ["entrar al Nether por primera vez"]
+	quest.0301060100010001.title: "Create: Press y Fan"
+	quest.0301060100010001.quest_subtitle: "Historia"
+	quest.0301060100010001.quest_desc: ["Obten mechanical press"]
+	quest.0301070100010001.title: "Llave Avanzada"
+	quest.0301070100010001.quest_subtitle: "Historia"
+	quest.0301070100010001.quest_desc: ["Obten advanced key"]
+	quest.0301080100010001.title: "Clases magicas"
+	quest.0301080100010001.quest_subtitle: "Historia"
+	quest.0301080100010001.quest_desc: ["usar Class Book de Wizard, Paladin o Priest"]
+	quest.0301090100010001.title: "Altar de Runas"
+	quest.0301090100010001.quest_subtitle: "Historia"
+	quest.0301090100010001.quest_desc: ["Obten rune crafting altar"]
+	quest.03010A0100010001.title: "El Jeweler's Kit"
+	quest.03010A0100010001.quest_subtitle: "Historia"
+	quest.03010A0100010001.quest_desc: ["Obten jewelers kit"]
+	quest.03010B0100010001.title: "Cocina funcional: Refurbished"
+	quest.03010B0100010001.quest_subtitle: "Historia"
+	quest.03010B0100010001.quest_desc: ["Obten light fridge"]
+	quest.03010C0100010001.title: "Mercaderes del mundo"
+	quest.03010C0100010001.quest_subtitle: "Historia"
+	quest.03010C0100010001.quest_desc: ["interactuar con NPC Wizard Merchant"]
+	quest.0302010100010001.title: "Primera bebida del Drink Maker"
+	quest.0302010100010001.quest_subtitle: "Cocina"
+	quest.0302010100010001.quest_desc: ["hacer una bebida en el Drink Maker"]
+	quest.0302020100010001.title: "El orden importa"
+	quest.0302020100010001.quest_subtitle: "Cocina"
+	quest.0302020100010001.quest_desc: ["experimentar con orden de ingredientes en Drink Maker"]
+	quest.0302030100010001.title: "Primer horneado avanzado"
+	quest.0302030100010001.quest_subtitle: "Cocina"
+	quest.0302030100010001.quest_desc: ["hornear algo en el Horno Avanzado"]
+	quest.0302040100010001.title: "Temperatura correcta"
+	quest.0302040100010001.quest_subtitle: "Cocina"
+	quest.0302040100010001.quest_desc: ["producir comida perfecta (temperatura correcta) en Horno Avanzado"]
+	quest.0302050100010001.title: "Automatizar con Slice & Dice"
+	quest.0302050100010001.quest_subtitle: "Cocina"
+	quest.0302050100010001.quest_desc: ["automatizar una receta con Slice&Dice + Create"]
+	quest.0302060100010001.title: "Bebida infernal"
+	quest.0302060100010001.quest_subtitle: "Cocina"
+	quest.0302060100010001.quest_desc: ["preparar bebida con ingrediente del Nether"]
+	quest.0302070100010001.title: "Recetario: 30 comidas"
+	quest.0302070100010001.quest_subtitle: "Cocina"
+	quest.0302070100010001.quest_desc: ["comer 30 comidas diferentes (hito Recetario)"]
+	quest.0302080100010001.title: "Cocina instalada"
+	quest.0302080100010001.quest_subtitle: "Cocina"
+	quest.0302080100010001.quest_desc: ["instalar nevera + estufa + fregadero Refurbished"]
+	quest.0303010100010001.title: "4 frutas nuevas"
+	quest.0303010100010001.quest_subtitle: "Farming"
+	quest.0303010100010001.quest_desc: ["plantar 4 frutas de Croptopia Ch3"]
+	quest.0303020100010001.title: "Todas las frutas"
+	quest.0303020100010001.quest_subtitle: "Farming"
+	quest.0303020100010001.quest_desc: ["plantar las 10 frutas nuevas"]
+	quest.0303030100010001.title: "Plantacion tropical"
+	quest.0303030100010001.quest_subtitle: "Farming"
+	quest.0303030100010001.quest_desc: ["Obten banana x16"]
+	quest.0303040100010001.title: "Nether Wart"
+	quest.0303040100010001.quest_subtitle: "Farming"
+	quest.0303040100010001.quest_desc: ["Obten nether wart x16"]
+	quest.0303050100010001.title: "Expanded Delight"
+	quest.0303050100010001.quest_subtitle: "Farming"
+	quest.0303050100010001.quest_desc: ["plantar crops de Expanded Delight"]
+	quest.0303060100010001.title: "Cosechadora Create"
+	quest.0303060100010001.quest_subtitle: "Farming"
+	quest.0303060100010001.quest_desc: ["automatizar harvest con Create Harvester"]
+	quest.0304010100010001.title: "Primera Llave Avanzada"
+	quest.0304010100010001.quest_subtitle: "Dungeon"
+	quest.0304010100010001.quest_desc: ["Obten advanced key"]
+	quest.0304020100010001.title: "Dungeon Avanzada completa"
+	quest.0304020100010001.quest_subtitle: "Dungeon"
+	quest.0304020100010001.quest_desc: ["completar dungeon Avanzada"]
+	quest.0304030100010001.title: "Primera Esencia de Dungeon"
+	quest.0304030100010001.quest_subtitle: "Dungeon"
+	quest.0304030100010001.quest_desc: ["Obten dungeon essence"]
+	quest.0304040100010001.title: "Unique jewelry en dungeon"
+	quest.0304040100010001.quest_subtitle: "Dungeon"
+	quest.0304040100010001.quest_desc: ["obtener unique jewelry de dungeon Avanzada (5%)"]
+	quest.0304050100010001.title: "3 runs Avanzadas"
+	quest.0304050100010001.quest_subtitle: "Dungeon"
+	quest.0304050100010001.quest_desc: ["completar 3 dungeon runs Avanzadas"]
+	quest.0305010100010001.title: "Clase magica elegida"
+	quest.0305010100010001.quest_subtitle: "Combate"
+	quest.0305010100010001.quest_desc: ["tener clase Wizard, Paladin o Priest activa"]
+	quest.0305020100010001.title: "Armadura T1 magica"
+	quest.0305020100010001.quest_subtitle: "Combate"
+	quest.0305020100010001.quest_desc: ["craftear set completo T1 magico"]
+	quest.0305030100010001.title: "Medium Rune Pouch"
+	quest.0305030100010001.quest_subtitle: "Combate"
+	quest.0305030100010001.quest_desc: ["Obten medium rune pouch"]
+	quest.0305040100010001.title: "Runas del Altar"
+	quest.0305040100010001.quest_subtitle: "Combate"
+	quest.0305040100010001.quest_desc: ["craftear runas en Rune Crafting Altar"]
+	quest.0305050100010001.title: "GATE: Coloso Mecanico"
+	quest.0305050100010001.quest_subtitle: "Combate"
+	quest.0305050100010001.quest_desc: ["Derrota a coloso mecanico"]
+	quest.0306010100010001.title: "Portal al Nether"
+	quest.0306010100010001.quest_subtitle: "Exploracion"
+	quest.0306010100010001.quest_desc: ["construir y encender portal al Nether"]
+	quest.0306020100010001.title: "Fortaleza Nether"
+	quest.0306020100010001.quest_subtitle: "Exploracion"
+	quest.0306020100010001.quest_desc: ["encontrar Nether Fortress (YUNG's)"]
+	quest.0306030100010001.title: "Blaze Rods"
+	quest.0306030100010001.quest_subtitle: "Exploracion"
+	quest.0306030100010001.quest_desc: ["Obten blaze rod x4"]
+	quest.0306040100010001.title: "Wizard Merchant"
+	quest.0306040100010001.quest_subtitle: "Exploracion"
+	quest.0306040100010001.quest_desc: ["encontrar NPC Wizard Merchant en village"]
+	quest.0306050100010001.title: "Minas de Ruby y Sapphire"
+	quest.0306050100010001.quest_subtitle: "Exploracion"
+	quest.0306050100010001.quest_desc: ["encontrar y minar ore de Ruby o Sapphire"]
+	quest.0307010100010001.title: "Terminal de Tom's Storage"
+	quest.0307010100010001.quest_subtitle: "Construccion"
+	quest.0307010100010001.quest_desc: ["instalar Tom's Storage terminal funcionando"]
+	quest.0307020100010001.title: "Primera linea Create"
+	quest.0307020100010001.quest_subtitle: "Construccion"
+	quest.0307020100010001.quest_desc: ["construir linea de procesamiento Create funcional"]
+	quest.0307030100010001.title: "Setup de procesamiento"
+	quest.0307030100010001.quest_subtitle: "Construccion"
+	quest.0307030100010001.quest_desc: ["conectar Press + Fan en linea automatica"]
+	quest.0307040100010001.title: "Cocina funcional completa"
+	quest.0307040100010001.quest_subtitle: "Construccion"
+	quest.0307040100010001.quest_desc: ["instalar nevera + estufa + fregadero Refurbished en base"]
+	quest.0308010100010001.title: "Ruby y Sapphire"
+	quest.0308010100010001.quest_subtitle: "Coleccion"
+	quest.0308010100010001.quest_desc: ["Obten ruby"]
+	quest.0308020100010001.title: "Ring y necklace de gema"
+	quest.0308020100010001.quest_subtitle: "Coleccion"
+	quest.0308020100010001.quest_desc: ["equipar ring Y necklace de gema"]
+	quest.0308030100010001.title: "3 bebidas del Drink Maker"
+	quest.0308030100010001.quest_subtitle: "Coleccion"
+	quest.0308030100010001.quest_desc: ["preparar 3 bebidas diferentes en Drink Maker"]
+	quest.0308040100010001.title: "50 Pepe Coins acumulados"
+	quest.0308040100010001.quest_subtitle: "Coleccion"
+	quest.0308040100010001.quest_desc: ["Obten pepe coin x50"]
+	quest.0308050100010001.title: "GATE: Entrega al Space Elevator Ch3"
+	quest.0308050100010001.quest_subtitle: "Coleccion"
+	quest.0308050100010001.quest_desc: ["completar entrega Ch3 en Terminal y presionar LAUNCH"]
+	chapter.0400000000000001.title: "Cap 4: Horizontes"
+	quest.0401010100010001.title: "Create: el Mixer"
+	quest.0401010100010001.quest_subtitle: "Historia"
+	quest.0401010100010001.quest_desc: ["Obten mechanical mixer"]
+	quest.0401020100010001.title: "Create: el Deployer"
+	quest.0401020100010001.quest_subtitle: "Historia"
+	quest.0401020100010001.quest_desc: ["Obten deployer"]
+	quest.0401030100010001.title: "Mechanical Crafter"
+	quest.0401030100010001.quest_subtitle: "Historia"
+	quest.0401030100010001.quest_desc: ["Obten mechanical crafter"]
+	quest.0401040100010001.title: "Steam Engine"
+	quest.0401040100010001.quest_subtitle: "Historia"
+	quest.0401040100010001.quest_desc: ["Obten steam engine"]
+	quest.0401050100010001.title: "Trenes: vias y locomotora"
+	quest.0401050100010001.quest_subtitle: "Historia"
+	quest.0401050100010001.quest_desc: ["Obten track"]
+	quest.0401060100010001.title: "Skill Tree: especializate"
+	quest.0401060100010001.quest_subtitle: "Historia"
+	quest.0401060100010001.quest_desc: ["elegir especializacion en Skill Tree"]
+	quest.0401070100010001.title: "Equipo Tier 2"
+	quest.0401070100010001.quest_subtitle: "Historia"
+	quest.0401070100010001.quest_desc: ["craftear primera pieza T2 (Diamond tier)"]
+	quest.0401080100010001.title: "Farmer's Delight: Feasts"
+	quest.0401080100010001.quest_subtitle: "Historia"
+	quest.0401080100010001.quest_desc: ["Obten roast chicken block"]
+	quest.0401090100010001.title: "Macaw's: decoracion completa"
+	quest.0401090100010001.quest_subtitle: "Historia"
+	quest.0401090100010001.quest_desc: ["Obten oak chair"]
+	quest.04010A0100010001.title: "Minas de Tanzanite y Topaz"
+	quest.04010A0100010001.quest_subtitle: "Historia"
+	quest.04010A0100010001.quest_desc: ["encontrar ore de Tanzanite o Topaz"]
+	quest.04010B0100010001.title: "Soulbound: protege tu equipo"
+	quest.04010B0100010001.quest_subtitle: "Historia"
+	quest.04010B0100010001.quest_desc: ["tener item T2+ con Soulbound"]
+	quest.04010C0100010001.title: "Primer viaje en tren"
+	quest.04010C0100010001.quest_subtitle: "Historia"
+	quest.04010C0100010001.quest_desc: ["viajar en tren de Create"]
+	quest.0402010100010001.title: "Primer Feast"
+	quest.0402010100010001.quest_subtitle: "Cocina"
+	quest.0402010100010001.quest_desc: ["Obten roast chicken block"]
+	quest.0402020100010001.title: "3 Feasts diferentes"
+	quest.0402020100010001.quest_subtitle: "Cocina"
+	quest.0402020100010001.quest_desc: ["preparar 3 Feasts de FD diferentes"]
+	quest.0402030100010001.title: "Cocinar con especias"
+	quest.0402030100010001.quest_subtitle: "Cocina"
+	quest.0402030100010001.quest_desc: ["usar especia en receta de cocina"]
+	quest.0402040100010001.title: "Feast compartido"
+	quest.0402040100010001.quest_subtitle: "Cocina"
+	quest.0402040100010001.quest_desc: ["compartir un Feast con otro jugador (multiplayer)"]
+	quest.0402050100010001.title: "Mixer para cocina"
+	quest.0402050100010001.quest_subtitle: "Cocina"
+	quest.0402050100010001.quest_desc: ["usar Mixer de Create para receta de cocina"]
+	quest.0402060100010001.title: "Recetario: 50 comidas"
+	quest.0402060100010001.quest_subtitle: "Cocina"
+	quest.0402060100010001.quest_desc: ["comer 50 comidas diferentes (hito Recetario)"]
+	quest.0402070100010001.title: "Deployer: empaque auto"
+	quest.0402070100010001.quest_subtitle: "Cocina"
+	quest.0402070100010001.quest_desc: ["usar Deployer para automatizar empaque"]
+	quest.0402080100010001.title: "Receta de 3+ especias"
+	quest.0402080100010001.quest_subtitle: "Cocina"
+	quest.0402080100010001.quest_desc: ["preparar receta usando 3 o mas especias"]
+	quest.0403010100010001.title: "4 especias nuevas"
+	quest.0403010100010001.quest_subtitle: "Farming"
+	quest.0403010100010001.quest_desc: ["plantar 4 especias de Croptopia"]
+	quest.0403020100010001.title: "Todas las especias"
+	quest.0403020100010001.quest_subtitle: "Farming"
+	quest.0403020100010001.quest_desc: ["plantar las 8 especias nuevas"]
+	quest.0403030100010001.title: "Granja auto con Create"
+	quest.0403030100010001.quest_subtitle: "Farming"
+	quest.0403030100010001.quest_desc: ["automatizar granja con Create Harvester + belts"]
+	quest.0403040100010001.title: "Plantacion de vainilla"
+	quest.0403040100010001.quest_subtitle: "Farming"
+	quest.0403040100010001.quest_desc: ["Obten vanilla x16"]
+	quest.0403050100010001.title: "Produccion en masa"
+	quest.0403050100010001.quest_subtitle: "Farming"
+	quest.0403050100010001.quest_desc: ["producir 64+ de un solo crop en batch automatico"]
+	quest.0403060100010001.title: "Granja al Deployer"
+	quest.0403060100010001.quest_subtitle: "Farming"
+	quest.0403060100010001.quest_desc: ["conectar granja a Deployer para empaque"]
+	quest.0404010100010001.title: "5 runs de dungeon"
+	quest.0404010100010001.quest_subtitle: "Dungeon"
+	quest.0404010100010001.quest_desc: ["completar 5 dungeon runs (cualquier tier)"]
+	quest.0404020100010001.title: "Unique jewelry Avanzada"
+	quest.0404020100010001.quest_subtitle: "Dungeon"
+	quest.0404020100010001.quest_desc: ["obtener unique jewelry de dungeon Avanzada"]
+	quest.0404030100010001.title: "Farmear Esencia x3"
+	quest.0404030100010001.quest_subtitle: "Dungeon"
+	quest.0404030100010001.quest_desc: ["Obten dungeon essence x3"]
+	quest.0404040100010001.title: "Preparar gear para dungeon"
+	quest.0404040100010001.quest_subtitle: "Dungeon"
+	quest.0404040100010001.quest_desc: ["entrar a dungeon con gear T2 completo"]
+	quest.0404050100010001.title: "Dungeon con T2"
+	quest.0404050100010001.quest_subtitle: "Dungeon"
+	quest.0404050100010001.quest_desc: ["completar dungeon Avanzada con gear T2"]
+	quest.0405010100010001.title: "Especializacion elegida"
+	quest.0405010100010001.quest_subtitle: "Combate"
+	quest.0405010100010001.quest_desc: ["elegir especializacion en Skill Tree"]
+	quest.0405020100010001.title: "Set T2 completo"
+	quest.0405020100010001.quest_subtitle: "Combate"
+	quest.0405020100010001.quest_desc: ["craftear set T2 completo (arma + 4 armor)"]
+	quest.0405030100010001.title: "Spells de especializacion"
+	quest.0405030100010001.quest_subtitle: "Combate"
+	quest.0405030100010001.quest_desc: ["usar spell de especializacion (Skill Tree)"]
+	quest.0405040100010001.title: "Tanzanite o Topaz jewelry"
+	quest.0405040100010001.quest_subtitle: "Combate"
+	quest.0405040100010001.quest_desc: ["equipar Tanzanite o Topaz ring/necklace"]
+	quest.0405050100010001.title: "GATE: Locomotora Fantasma"
+	quest.0405050100010001.quest_subtitle: "Combate"
+	quest.0405050100010001.quest_desc: ["Derrota a locomotora fantasma"]
+	quest.0406010100010001.title: "Conducir tren manual"
+	quest.0406010100010001.quest_subtitle: "Exploracion"
+	quest.0406010100010001.quest_desc: ["conducir tren manualmente por 200+ bloques"]
+	quest.0406020100010001.title: "Ruta de tren"
+	quest.0406020100010001.quest_subtitle: "Exploracion"
+	quest.0406020100010001.quest_desc: ["establecer ruta de tren con schedule"]
+	quest.0406030100010001.title: "Explorar con tren"
+	quest.0406030100010001.quest_subtitle: "Exploracion"
+	quest.0406030100010001.quest_desc: ["explorar bioma nuevo usando tren"]
+	quest.0406040100010001.title: "Ores de Tanzanite/Topaz"
+	quest.0406040100010001.quest_subtitle: "Exploracion"
+	quest.0406040100010001.quest_desc: ["Obten tanzanite x2"]
+	quest.0406050100010001.title: "3 villages con NPCs"
+	quest.0406050100010001.quest_subtitle: "Exploracion"
+	quest.0406050100010001.quest_desc: ["visitar 3 villages diferentes con NPCs"]
+	quest.0407010100010001.title: "Estacion de tren"
+	quest.0407010100010001.quest_subtitle: "Construccion"
+	quest.0407010100010001.quest_desc: ["Obten track station"]
+	quest.0407020100010001.title: "Steam Engine instalado"
+	quest.0407020100010001.quest_subtitle: "Construccion"
+	quest.0407020100010001.quest_desc: ["instalar Steam Engine funcional"]
+	quest.0407030100010001.title: "Decorar con Macaw's"
+	quest.0407030100010001.quest_subtitle: "Construccion"
+	quest.0407030100010001.quest_desc: ["colocar 10+ bloques de Macaw's Furniture"]
+	quest.0407040100010001.title: "Fabrica con Crafter"
+	quest.0407040100010001.quest_subtitle: "Construccion"
+	quest.0407040100010001.quest_desc: ["construir linea con Mechanical Crafter funcional"]
+	quest.0408010100010001.title: "Diamond ring/necklace"
+	quest.0408010100010001.quest_subtitle: "Coleccion"
+	quest.0408010100010001.quest_desc: ["equipar Diamond ring o necklace"]
+	quest.0408020100010001.title: "5 especias coleccionadas"
+	quest.0408020100010001.quest_subtitle: "Coleccion"
+	quest.0408020100010001.quest_desc: ["tener 5 especias diferentes en inventario"]
+	quest.0408030100010001.title: "Primer accesorio T2"
+	quest.0408030100010001.quest_subtitle: "Coleccion"
+	quest.0408030100010001.quest_desc: ["obtener accesorio custom T2"]
+	quest.0408040100010001.title: "10 pulls de gacha"
+	quest.0408040100010001.quest_subtitle: "Coleccion"
+	quest.0408040100010001.quest_desc: ["hacer 10 pulls totales en cualquier maquina"]
+	quest.0408050100010001.title: "GATE: Entrega al Space Elevator Ch4"
+	quest.0408050100010001.quest_subtitle: "Coleccion"
+	quest.0408050100010001.quest_desc: ["completar entrega Ch4 en Terminal y presionar LAUNCH"]
+	chapter.0500000000000001.title: "Cap 5: La Red + Poder"
+	quest.0501010100010001.title: "Refined Storage: Controller"
+	quest.0501010100010001.quest_subtitle: "Historia"
+	quest.0501010100010001.quest_desc: ["Obten controller"]
+	quest.0501020100010001.title: "RS: Disk Drive y Grid"
+	quest.0501020100010001.quest_subtitle: "Historia"
+	quest.0501020100010001.quest_desc: ["Obten disk drive"]
+	quest.0501030100010001.title: "RS: Autocraft (Pattern + Crafter)"
+	quest.0501030100010001.quest_subtitle: "Historia"
+	quest.0501030100010001.quest_desc: ["Obten crafter"]
+	quest.0501040100010001.title: "RS: Wireless Grid"
+	quest.0501040100010001.quest_subtitle: "Historia"
+	quest.0501040100010001.quest_desc: ["Obten wireless grid"]
+	quest.0501050100010001.title: "Create: Enchantment Industry"
+	quest.0501050100010001.quest_subtitle: "Historia"
+	quest.0501050100010001.quest_desc: ["Obten disenchanter"]
+	quest.0501060100010001.title: "Create C&A: Motor electrico"
+	quest.0501060100010001.quest_subtitle: "Historia"
+	quest.0501060100010001.quest_desc: ["Obten electric motor"]
+	quest.0501070100010001.title: "Trenes automaticos"
+	quest.0501070100010001.quest_subtitle: "Historia"
+	quest.0501070100010001.quest_desc: ["configurar schedule de tren automatico"]
+	quest.0501080100010001.title: "Llave Maestra de dungeon"
+	quest.0501080100010001.quest_subtitle: "Historia"
+	quest.0501080100010001.quest_desc: ["Obten master key"]
+	quest.0501090100010001.title: "Enchants magicos"
+	quest.0501090100010001.quest_subtitle: "Historia"
+	quest.0501090100010001.quest_desc: ["aplicar enchant de Spell Power a un item"]
+	quest.05010A0100010001.title: "Pociones de Spell Power"
+	quest.05010A0100010001.quest_subtitle: "Historia"
+	quest.05010A0100010001.quest_desc: ["brewear pocion de Spell Power"]
+	quest.05010B0100010001.title: "Soul y Lightning runes"
+	quest.05010B0100010001.quest_subtitle: "Historia"
+	quest.05010B0100010001.quest_desc: ["Obten soul rune"]
+	quest.05010C0100010001.title: "Large Rune Pouch"
+	quest.05010C0100010001.quest_subtitle: "Historia"
+	quest.05010C0100010001.quest_desc: ["Obten large rune pouch"]
+	quest.0502010100010001.title: "Cocinar con exoticos"
+	quest.0502010100010001.quest_subtitle: "Cocina"
+	quest.0502010100010001.quest_desc: ["cocinar receta con ingrediente exotico Ch5"]
+	quest.0502020100010001.title: "3 recetas exoticas"
+	quest.0502020100010001.quest_subtitle: "Cocina"
+	quest.0502020100010001.quest_desc: ["preparar 3 recetas con ingredientes exoticos"]
+	quest.0502030100010001.title: "Automatizar con RS + Create"
+	quest.0502030100010001.quest_subtitle: "Cocina"
+	quest.0502030100010001.quest_desc: ["automatizar receta usando RS + Create juntos"]
+	quest.0502040100010001.title: "Produccion masa: Slice&Dice + RS"
+	quest.0502040100010001.quest_subtitle: "Cocina"
+	quest.0502040100010001.quest_desc: ["produccion en masa con Slice&Dice alimentado por RS"]
+	quest.0502050100010001.title: "Recetario: 70 comidas"
+	quest.0502050100010001.quest_subtitle: "Cocina"
+	quest.0502050100010001.quest_desc: ["comer 70 comidas diferentes (hito Recetario)"]
+	quest.0502060100010001.title: "Empaque automatizado"
+	quest.0502060100010001.quest_subtitle: "Cocina"
+	quest.0502060100010001.quest_desc: ["automatizar empaque completo (RS -> Create -> Packing Station)"]
+	quest.0502070100010001.title: "Pipeline: RS a Space Elevator"
+	quest.0502070100010001.quest_subtitle: "Cocina"
+	quest.0502070100010001.quest_desc: ["pipeline RS -> Create -> Puerto de Entrega funcionando"]
+	quest.0502080100010001.title: "Tipped Arrows de cocina"
+	quest.0502080100010001.quest_subtitle: "Cocina"
+	quest.0502080100010001.quest_desc: ["crear Tipped Arrows con efecto de comida (si aplica)"]
+	quest.0503010100010001.title: "4 crops exoticos"
+	quest.0503010100010001.quest_subtitle: "Farming"
+	quest.0503010100010001.quest_desc: ["plantar 4 crops exoticos de Croptopia Ch5"]
+	quest.0503020100010001.title: "Todos los exoticos"
+	quest.0503020100010001.quest_subtitle: "Farming"
+	quest.0503020100010001.quest_desc: ["plantar los 8 crops exoticos"]
+	quest.0503030100010001.title: "Granja full auto con RS"
+	quest.0503030100010001.quest_subtitle: "Farming"
+	quest.0503030100010001.quest_desc: ["granja automatizada con RS imports"]
+	quest.0503040100010001.title: "Conectar granjas a RS"
+	quest.0503040100010001.quest_subtitle: "Farming"
+	quest.0503040100010001.quest_desc: ["conectar granjas a red RS con exporters/importers"]
+	quest.0503050100010001.title: "Matar al Wither"
+	quest.0503050100010001.quest_subtitle: "Farming"
+	quest.0503050100010001.quest_desc: ["Derrota a wither"]
+	quest.0503060100010001.title: "Optimizar produccion"
+	quest.0503060100010001.quest_subtitle: "Farming"
+	quest.0503060100010001.quest_desc: ["optimizar produccion de crops (64+/min de algun crop)"]
+	quest.0504010100010001.title: "Primera Llave Maestra"
+	quest.0504010100010001.quest_subtitle: "Dungeon"
+	quest.0504010100010001.quest_desc: ["Obten master key"]
+	quest.0504020100010001.title: "Dungeon Maestra completa"
+	quest.0504020100010001.quest_subtitle: "Dungeon"
+	quest.0504020100010001.quest_desc: ["completar dungeon Maestra"]
+	quest.0504030100010001.title: "Accesorio T3 de dungeon"
+	quest.0504030100010001.quest_subtitle: "Dungeon"
+	quest.0504030100010001.quest_desc: ["obtener accesorio custom T3 de dungeon Maestra"]
+	quest.0504040100010001.title: "Unique jewelry en Maestra"
+	quest.0504040100010001.quest_subtitle: "Dungeon"
+	quest.0504040100010001.quest_desc: ["obtener unique jewelry en dungeon Maestra (15%)"]
+	quest.0504050100010001.title: "Molde 4-5 estrellas"
+	quest.0504050100010001.quest_subtitle: "Dungeon"
+	quest.0504050100010001.quest_desc: ["obtener molde de postre 4-5 estrellas en Maestra"]
+	quest.0505010100010001.title: "Enchant magico en arma"
+	quest.0505010100010001.quest_subtitle: "Combate"
+	quest.0505010100010001.quest_desc: ["aplicar enchant magico (Spell Power) a arma RPG"]
+	quest.0505020100010001.title: "Pocion de Spell Power"
+	quest.0505020100010001.quest_subtitle: "Combate"
+	quest.0505020100010001.quest_desc: ["beber pocion de Spell Power"]
+	quest.0505030100010001.title: "Auto-enchantar"
+	quest.0505030100010001.quest_subtitle: "Combate"
+	quest.0505030100010001.quest_desc: ["auto-enchantar pieza de equipo con Enchantment Industry"]
+	quest.0505040100010001.title: "Netherite jewelry"
+	quest.0505040100010001.quest_subtitle: "Combate"
+	quest.0505040100010001.quest_desc: ["equipar Netherite jewelry"]
+	quest.0505050100010001.title: "GATE: El Arquitecto"
+	quest.0505050100010001.quest_subtitle: "Combate"
+	quest.0505050100010001.quest_desc: ["Derrota a el arquitecto"]
+	quest.0506010100010001.title: "Ruta de tren automatica"
+	quest.0506010100010001.quest_subtitle: "Exploracion"
+	quest.0506010100010001.quest_desc: ["tren automatico circulando con schedule"]
+	quest.0506020100010001.title: "Tren Nether-Overworld"
+	quest.0506020100010001.quest_subtitle: "Exploracion"
+	quest.0506020100010001.quest_desc: ["establecer ruta de tren semi-auto Nether-Overworld"]
+	quest.0506030100010001.title: "Fabrica en Nether"
+	quest.0506030100010001.quest_subtitle: "Exploracion"
+	quest.0506030100010001.quest_desc: ["tener fabrica funcionando en el Nether"]
+	quest.0506040100010001.title: "Conectar RS entre areas"
+	quest.0506040100010001.quest_subtitle: "Exploracion"
+	quest.0506040100010001.quest_desc: ["conectar RS entre dos areas separadas"]
+	quest.0506050100010001.title: "Explorar con Wireless Grid"
+	quest.0506050100010001.quest_subtitle: "Exploracion"
+	quest.0506050100010001.quest_desc: ["usar Wireless Grid lejos de la base"]
+	quest.0507010100010001.title: "Sala RS con Controller"
+	quest.0507010100010001.quest_subtitle: "Construccion"
+	quest.0507010100010001.quest_desc: ["construir sala dedicada RS con Controller + Disk Drive"]
+	quest.0507020100010001.title: "Setup Enchantment Industry"
+	quest.0507020100010001.quest_subtitle: "Construccion"
+	quest.0507020100010001.quest_desc: ["instalar setup de Enchantment Industry funcional"]
+	quest.0507030100010001.title: "Linea RS -> Create"
+	quest.0507030100010001.quest_subtitle: "Construccion"
+	quest.0507030100010001.quest_desc: ["construir linea de produccion RS -> Create integrada"]
+	quest.0507040100010001.title: "Fabrica integrada"
+	quest.0507040100010001.quest_subtitle: "Construccion"
+	quest.0507040100010001.quest_desc: ["fabrica integrada completa (RS + Create + empaque)"]
+	quest.0508010100010001.title: "3 piezas auto-enchantadas"
+	quest.0508010100010001.quest_subtitle: "Coleccion"
+	quest.0508010100010001.quest_desc: ["auto-enchantar 3 piezas de equipo"]
+	quest.0508020100010001.title: "Set con enchants magicos"
+	quest.0508020100010001.quest_subtitle: "Coleccion"
+	quest.0508020100010001.quest_desc: ["tener set completo con enchants magicos"]
+	quest.0508030100010001.title: "3 unique jewelry"
+	quest.0508030100010001.quest_subtitle: "Coleccion"
+	quest.0508030100010001.quest_desc: ["coleccion de 3 unique jewelry"]
+	quest.0508040100010001.title: "Pipeline automatizado"
+	quest.0508040100010001.quest_subtitle: "Coleccion"
+	quest.0508040100010001.quest_desc: ["tener pipeline RS -> Create -> empaque -> Terminal funcionando"]
+	quest.0508050100010001.title: "GATE: Entrega al Space Elevator Ch5"
+	quest.0508050100010001.quest_subtitle: "Coleccion"
+	quest.0508050100010001.quest_desc: ["completar entrega Ch5 en Terminal y presionar LAUNCH"]
+	chapter.0600000000000001.title: "Cap 6: Maestria"
+	quest.0601010100010001.title: "Upgrade Netherite: RPG"
+	quest.0601010100010001.quest_subtitle: "Historia"
+	quest.0601010100010001.quest_desc: ["aplicar Netherite Upgrade Smithing Template a arma RPG"]
+	quest.0601020100010001.title: "Enchant nivel V"
+	quest.0601020100010001.quest_subtitle: "Historia"
+	quest.0601020100010001.quest_desc: ["aplicar enchant de nivel V a una pieza de equipo"]
+	quest.0601030100010001.title: "Tipped Arrows de Spell Power"
+	quest.0601030100010001.quest_subtitle: "Historia"
+	quest.0601030100010001.quest_desc: ["craftear Tipped Arrows de Spell Power"]
+	quest.0601040100010001.title: "Trenes full auto"
+	quest.0601040100010001.quest_subtitle: "Historia"
+	quest.0601040100010001.quest_desc: ["configurar tren full automatico con schedule completo"]
+	quest.0601050100010001.title: "Recetas multi-step"
+	quest.0601050100010001.quest_subtitle: "Historia"
+	quest.0601050100010001.quest_desc: ["completar receta que requiere 3+ workstations"]
+	quest.0601060100010001.title: "Cristal de Boss Ch6"
+	quest.0601060100010001.quest_subtitle: "Historia"
+	quest.0601060100010001.quest_desc: ["entender que el Cristal de Boss Ch6 desbloquea Llave del Nucleo"]
+	quest.0601070100010001.title: "Preparar Llave del Nucleo"
+	quest.0601070100010001.quest_subtitle: "Historia"
+	quest.0601070100010001.quest_desc: ["entender requisitos de la Llave del Nucleo (proximo capitulo)"]
+	quest.0601080100010001.title: "Optimizar fabrica"
+	quest.0601080100010001.quest_subtitle: "Historia"
+	quest.0601080100010001.quest_desc: ["optimizar throughput de fabrica existente"]
+	quest.0601090100010001.title: "Full build RPG"
+	quest.0601090100010001.quest_subtitle: "Historia"
+	quest.0601090100010001.quest_desc: ["tener build RPG completo (arma + armor + rings + runes)"]
+	quest.06010A0100010001.title: "Receta encadenada"
+	quest.06010A0100010001.quest_subtitle: "Historia"
+	quest.06010A0100010001.quest_desc: ["completar receta que encadena 3+ pasos de procesamiento"]
+	quest.0602010100010001.title: "Receta multi-step"
+	quest.0602010100010001.quest_subtitle: "Cocina"
+	quest.0602010100010001.quest_desc: ["completar receta multi-step (3+ workstations)"]
+	quest.0602020100010001.title: "Ingredientes raros"
+	quest.0602020100010001.quest_subtitle: "Cocina"
+	quest.0602020100010001.quest_desc: ["cocinar con ingrediente raro (crops avanzados)"]
+	quest.0602030100010001.title: "Cafe preparado"
+	quest.0602030100010001.quest_subtitle: "Cocina"
+	quest.0602030100010001.quest_desc: ["preparar cafe con coffee beans en Drink Maker"]
+	quest.0602040100010001.title: "Aceite de oliva"
+	quest.0602040100010001.quest_subtitle: "Cocina"
+	quest.0602040100010001.quest_desc: ["preparar plato con olive oil"]
+	quest.0602050100010001.title: "Recetario: 85 comidas"
+	quest.0602050100010001.quest_subtitle: "Cocina"
+	quest.0602050100010001.quest_desc: ["comer 85 comidas diferentes (hito Recetario)"]
+	quest.0602060100010001.title: "3 workstations en 1 receta"
+	quest.0602060100010001.quest_subtitle: "Cocina"
+	quest.0602060100010001.quest_desc: ["usar 3 workstations en una sola receta"]
+	quest.0602070100010001.title: "Automatizar receta multi-step"
+	quest.0602070100010001.quest_subtitle: "Cocina"
+	quest.0602070100010001.quest_desc: ["automatizar receta multi-step con RS + Create"]
+	quest.0602080100010001.title: "Pipeline completo"
+	quest.0602080100010001.quest_subtitle: "Cocina"
+	quest.0602080100010001.quest_desc: ["produccion masiva con pipeline completo funcionando"]
+	quest.0603010100010001.title: "4 crops avanzados"
+	quest.0603010100010001.quest_subtitle: "Farming"
+	quest.0603010100010001.quest_desc: ["plantar 4 crops avanzados"]
+	quest.0603020100010001.title: "Todos los avanzados"
+	quest.0603020100010001.quest_subtitle: "Farming"
+	quest.0603020100010001.quest_desc: ["plantar los 8 crops avanzados"]
+	quest.0603030100010001.title: "Granja de coffee beans"
+	quest.0603030100010001.quest_subtitle: "Farming"
+	quest.0603030100010001.quest_desc: ["Obten coffee beans x32"]
+	quest.0603040100010001.title: "Full auto farm pipeline"
+	quest.0603040100010001.quest_subtitle: "Farming"
+	quest.0603040100010001.quest_desc: ["farm -> RS -> Create -> empaque funcionando"]
+	quest.0603050100010001.title: "Rendimiento optimizado"
+	quest.0603050100010001.quest_subtitle: "Farming"
+	quest.0603050100010001.quest_desc: ["optimizar rendimiento de granja (128+/cosecha)"]
+	quest.0603060100010001.title: "Ingredientes raros en masa"
+	quest.0603060100010001.quest_subtitle: "Farming"
+	quest.0603060100010001.quest_desc: ["producir ingredientes raros en masa (32+)"]
+	quest.0604010100010001.title: "5 runs Maestra"
+	quest.0604010100010001.quest_subtitle: "Dungeon"
+	quest.0604010100010001.quest_desc: ["completar 5 dungeon Maestra runs"]
+	quest.0604020100010001.title: "Farmear unique jewelry (15%)"
+	quest.0604020100010001.quest_subtitle: "Dungeon"
+	quest.0604020100010001.quest_desc: ["obtener unique jewelry de dungeon Maestra"]
+	quest.0604030100010001.title: "Esencia x6"
+	quest.0604030100010001.quest_subtitle: "Dungeon"
+	quest.0604030100010001.quest_desc: ["Obten dungeon essence x6"]
+	quest.0604040100010001.title: "Accesorio T3+"
+	quest.0604040100010001.quest_subtitle: "Dungeon"
+	quest.0604040100010001.quest_desc: ["obtener accesorio custom T3 o superior de dungeon"]
+	quest.0604050100010001.title: "Materiales Llave del Nucleo"
+	quest.0604050100010001.quest_subtitle: "Dungeon"
+	quest.0604050100010001.quest_desc: ["tener materiales para craftear Llave del Nucleo"]
+	quest.0605010100010001.title: "Arma Netherite (T3)"
+	quest.0605010100010001.quest_subtitle: "Combate"
+	quest.0605010100010001.quest_desc: ["upgrade arma RPG a Netherite"]
+	quest.0605020100010001.title: "Set Netherite completo"
+	quest.0605020100010001.quest_subtitle: "Combate"
+	quest.0605020100010001.quest_desc: ["upgrade set completo RPG a Netherite (5 piezas)"]
+	quest.0605030100010001.title: "Enchant nivel V"
+	quest.0605030100010001.quest_subtitle: "Combate"
+	quest.0605030100010001.quest_desc: ["encantar pieza con nivel V"]
+	quest.0605040100010001.title: "Tipped Arrows Spell Power"
+	quest.0605040100010001.quest_subtitle: "Combate"
+	quest.0605040100010001.quest_desc: ["Obten tipped arrow x16"]
+	quest.0605050100010001.title: "GATE: Senor de las Cosechas"
+	quest.0605050100010001.quest_subtitle: "Combate"
+	quest.0605050100010001.quest_desc: ["Derrota a senor de las cosechas"]
+	quest.0606010100010001.title: "Tren full auto Nether"
+	quest.0606010100010001.quest_subtitle: "Exploracion"
+	quest.0606010100010001.quest_desc: ["tren full automatico circulando en Nether"]
+	quest.0606020100010001.title: "Fabrica Nether optimizada"
+	quest.0606020100010001.quest_subtitle: "Exploracion"
+	quest.0606020100010001.quest_desc: ["fabrica Nether con produccion optimizada"]
+	quest.0606030100010001.title: "Logistica automatizada"
+	quest.0606030100010001.quest_subtitle: "Exploracion"
+	quest.0606030100010001.quest_desc: ["logistica automatizada completa (overworld + Nether)"]
+	quest.0606040100010001.title: "Biomas restantes"
+	quest.0606040100010001.quest_subtitle: "Exploracion"
+	quest.0606040100010001.quest_desc: ["explorar biomas restantes de Terralith"]
+	quest.0606050100010001.title: "Red de Waystones completa"
+	quest.0606050100010001.quest_subtitle: "Exploracion"
+	quest.0606050100010001.quest_desc: ["red de Waystones cubriendo todas las areas principales"]
+	quest.0607010100010001.title: "Layout de fabrica optimizado"
+	quest.0607010100010001.quest_subtitle: "Construccion"
+	quest.0607010100010001.quest_desc: ["optimizar layout de fabrica (menos belts, mas throughput)"]
+	quest.0607020100010001.title: "Trenes full auto setup"
+	quest.0607020100010001.quest_subtitle: "Construccion"
+	quest.0607020100010001.quest_desc: ["setup de trenes full auto con multiples estaciones"]
+	quest.0607030100010001.title: "Linea de items complejos"
+	quest.0607030100010001.quest_subtitle: "Construccion"
+	quest.0607030100010001.quest_desc: ["linea de produccion para items complejos (multi-step)"]
+	quest.0607040100010001.title: "Base completa"
+	quest.0607040100010001.quest_subtitle: "Construccion"
+	quest.0607040100010001.quest_desc: ["base con todas las areas funcionales (cocina, fabrica, almacen, decoracion)"]
+	quest.0608010100010001.title: "Set T3 Netherite completo"
+	quest.0608010100010001.quest_subtitle: "Coleccion"
+	quest.0608010100010001.quest_desc: ["tener set completo T3 Netherite RPG"]
+	quest.0608020100010001.title: "Full enchant nivel V"
+	quest.0608020100010001.quest_subtitle: "Coleccion"
+	quest.0608020100010001.quest_desc: ["tener set completo enchantado con nivel V"]
+	quest.0608030100010001.title: "5+ unique jewelry"
+	quest.0608030100010001.quest_subtitle: "Coleccion"
+	quest.0608030100010001.quest_desc: ["coleccion de 5 o mas unique jewelry"]
+	quest.0608040100010001.title: "85+ comidas unicas"
+	quest.0608040100010001.quest_subtitle: "Coleccion"
+	quest.0608040100010001.quest_desc: ["85+ comidas en Recetario"]
+	quest.0608050100010001.title: "Acumular Esencia"
+	quest.0608050100010001.quest_subtitle: "Coleccion"
+	quest.0608050100010001.quest_desc: ["Obten dungeon essence x10"]
+	quest.0608060100010001.title: "Cristal de Boss guardado"
+	quest.0608060100010001.quest_subtitle: "Coleccion"
+	quest.0608060100010001.quest_desc: ["Obten boss crystal ch6"]
+	quest.0608070100010001.title: "GATE: Entrega al Space Elevator Ch6"
+	quest.0608070100010001.quest_subtitle: "Coleccion"
+	quest.0608070100010001.quest_desc: ["completar entrega Ch6 en Terminal y presionar LAUNCH"]
+	chapter.0700000000000001.title: "Cap 7: Profundidades"
+	quest.0701010100010001.title: "La Llave del Nucleo"
+	quest.0701010100010001.quest_subtitle: "Historia"
+	quest.0701010100010001.quest_desc: ["Obten core key"]
+	quest.0701020100010001.title: "Boss de dungeon"
+	quest.0701020100010001.quest_subtitle: "Historia"
+	quest.0701020100010001.quest_desc: ["entender que dungeon Del Nucleo tiene boss al final"]
+	quest.0701030100010001.title: "Champions peligrosos"
+	quest.0701030100010001.quest_subtitle: "Historia"
+	quest.0701030100010001.quest_desc: ["entender affixes Paralyzing, Wounding, Molten"]
+	quest.0701040100010001.title: "Fragmentos del Cristal"
+	quest.0701040100010001.quest_subtitle: "Historia"
+	quest.0701040100010001.quest_desc: ["Obten core crystal fragment"]
+	quest.0701050100010001.title: "El camino a T4"
+	quest.0701050100010001.quest_subtitle: "Historia"
+	quest.0701050100010001.quest_desc: ["entender que T4 requiere Fragmentos de Cristal del Nucleo"]
+	quest.0701060100010001.title: "Caza de unique jewelry"
+	quest.0701060100010001.quest_subtitle: "Historia"
+	quest.0701060100010001.quest_desc: ["entender pool de 24 unique jewelry"]
+	quest.0701070100010001.title: "Accesorios T4"
+	quest.0701070100010001.quest_subtitle: "Historia"
+	quest.0701070100010001.quest_desc: ["obtener accesorio custom T4"]
+	quest.0701080100010001.title: "Recetas de dungeon"
+	quest.0701080100010001.quest_subtitle: "Historia"
+	quest.0701080100010001.quest_desc: ["cocinar receta con ingrediente exclusivo de dungeon"]
+	quest.0701090100010001.title: "Estrategia anti-Paralyzing"
+	quest.0701090100010001.quest_subtitle: "Historia"
+	quest.0701090100010001.quest_desc: ["derrotar champion con affix Paralyzing"]
+	quest.07010A0100010001.title: "Preparacion para el Nucleo"
+	quest.07010A0100010001.quest_subtitle: "Historia"
+	quest.07010A0100010001.quest_desc: ["tener gear T3 + enchants V + consumibles para boss"]
+	quest.0702010100010001.title: "Ingrediente de dungeon"
+	quest.0702010100010001.quest_subtitle: "Cocina"
+	quest.0702010100010001.quest_desc: ["cocinar con ingrediente exclusivo de dungeon"]
+	quest.0702020100010001.title: "Crops raros"
+	quest.0702020100010001.quest_subtitle: "Cocina"
+	quest.0702020100010001.quest_desc: ["cocinar con crops raros Ch7"]
+	quest.0702030100010001.title: "Recetario: 100 comidas"
+	quest.0702030100010001.quest_subtitle: "Cocina"
+	quest.0702030100010001.quest_desc: ["comer 100 comidas diferentes (hito Recetario)"]
+	quest.0702040100010001.title: "Receta exclusiva dungeon"
+	quest.0702040100010001.quest_subtitle: "Cocina"
+	quest.0702040100010001.quest_desc: ["completar receta con ingrediente que solo dropea en dungeon"]
+	quest.0702050100010001.title: "Auto-producir comida rara"
+	quest.0702050100010001.quest_subtitle: "Cocina"
+	quest.0702050100010001.quest_desc: ["automatizar produccion de comida con ingredientes raros"]
+	quest.0702060100010001.title: "Buffs para dungeon"
+	quest.0702060100010001.quest_subtitle: "Cocina"
+	quest.0702060100010001.quest_desc: ["preparar buffs de comida especificos para dungeon runs"]
+	quest.0702070100010001.title: "Receta multi-step rara"
+	quest.0702070100010001.quest_subtitle: "Cocina"
+	quest.0702070100010001.quest_desc: ["receta multi-step con ingrediente raro"]
+	quest.0702080100010001.title: "Coleccion de bebidas"
+	quest.0702080100010001.quest_subtitle: "Cocina"
+	quest.0702080100010001.quest_desc: ["completar coleccion de 10 bebidas diferentes"]
+	quest.0703010100010001.title: "6 crops raros"
+	quest.0703010100010001.quest_subtitle: "Farming"
+	quest.0703010100010001.quest_desc: ["plantar los 6 crops raros"]
+	quest.0703020100010001.title: "Todos los raros plantados"
+	quest.0703020100010001.quest_subtitle: "Farming"
+	quest.0703020100010001.quest_desc: ["plantar todos los 6 crops raros"]
+	quest.0703030100010001.title: "Granja de kumquat"
+	quest.0703030100010001.quest_subtitle: "Farming"
+	quest.0703030100010001.quest_desc: ["Obten kumquat x16"]
+	quest.0703040100010001.title: "Optimizar con RS"
+	quest.0703040100010001.quest_subtitle: "Farming"
+	quest.0703040100010001.quest_desc: ["optimizar produccion de crops raros con RS"]
+	quest.0703050100010001.title: "Todas las granjas activas"
+	quest.0703050100010001.quest_subtitle: "Farming"
+	quest.0703050100010001.quest_desc: ["mantener todas las granjas funcionando simultaneamente"]
+	quest.0703060100010001.title: "Comida para dungeon runs"
+	quest.0703060100010001.quest_subtitle: "Farming"
+	quest.0703060100010001.quest_desc: ["auto-producir comida especifica para dungeon runs"]
+	quest.0704010100010001.title: "Primera Llave del Nucleo"
+	quest.0704010100010001.quest_subtitle: "Dungeon"
+	quest.0704010100010001.quest_desc: ["Obten core key"]
+	quest.0704020100010001.title: "Dungeon Del Nucleo completa"
+	quest.0704020100010001.quest_subtitle: "Dungeon"
+	quest.0704020100010001.quest_desc: ["completar dungeon Del Nucleo"]
+	quest.0704030100010001.title: "Boss de dungeon derrotado"
+	quest.0704030100010001.quest_subtitle: "Dungeon"
+	quest.0704030100010001.quest_desc: ["derrotar boss de dungeon en Del Nucleo"]
+	quest.0704040100010001.title: "Fragmento de Cristal"
+	quest.0704040100010001.quest_subtitle: "Dungeon"
+	quest.0704040100010001.quest_desc: ["Obten core crystal fragment x2"]
+	quest.0704050100010001.title: "5 unique jewelry de dungeons"
+	quest.0704050100010001.quest_subtitle: "Dungeon"
+	quest.0704050100010001.quest_desc: ["coleccionar 5 unique jewelry de dungeon"]
+	quest.0705010100010001.title: "Equipar unique jewelry"
+	quest.0705010100010001.quest_subtitle: "Combate"
+	quest.0705010100010001.quest_desc: ["equipar unique jewelry en ring/necklace slot"]
+	quest.0705020100010001.title: "Accesorio T4 equipado"
+	quest.0705020100010001.quest_subtitle: "Combate"
+	quest.0705020100010001.quest_desc: ["equipar accesorio custom T4"]
+	quest.0705030100010001.title: "Build optimizado dungeon"
+	quest.0705030100010001.quest_subtitle: "Combate"
+	quest.0705030100010001.quest_desc: ["tener build completo optimizado para dungeon (T3 + enchants V + uniques)"]
+	quest.0705040100010001.title: "Champion con Paralyzing"
+	quest.0705040100010001.quest_subtitle: "Combate"
+	quest.0705040100010001.quest_desc: ["derrotar champion con affix Paralyzing en dungeon"]
+	quest.0705050100010001.title: "GATE: Nucleo del Dungeon"
+	quest.0705050100010001.quest_subtitle: "Combate"
+	quest.0705050100010001.quest_desc: ["Derrota a nucleo del dungeon"]
+	quest.0706010100010001.title: "Mapa completo"
+	quest.0706010100010001.quest_subtitle: "Exploracion"
+	quest.0706010100010001.quest_desc: ["explorar y mapear la mayoria del mundo"]
+	quest.0706020100010001.title: "Rutas de tren optimizadas"
+	quest.0706020100010001.quest_subtitle: "Exploracion"
+	quest.0706020100010001.quest_desc: ["optimizar rutas de tren (minimo 3 estaciones)"]
+	quest.0706030100010001.title: "Todos los ores de gemas"
+	quest.0706030100010001.quest_subtitle: "Exploracion"
+	quest.0706030100010001.quest_desc: ["encontrar ores de todas las gemas (Citrine, Jade, Ruby, Sapphire, Tanzanite, Topaz)"]
+	quest.0706040100010001.title: "Biomas principales"
+	quest.0706040100010001.quest_subtitle: "Exploracion"
+	quest.0706040100010001.quest_desc: ["visitar todos los biomas principales de Terralith"]
+	quest.0706050100010001.title: "Red de Waystones final"
+	quest.0706050100010001.quest_subtitle: "Exploracion"
+	quest.0706050100010001.quest_desc: ["red de Waystones completa con 8+ piedras"]
+	quest.0707010100010001.title: "Base endgame"
+	quest.0707010100010001.quest_subtitle: "Construccion"
+	quest.0707010100010001.quest_desc: ["base endgame completa con todas las areas"]
+	quest.0707020100010001.title: "Trophy room de bosses"
+	quest.0707020100010001.quest_subtitle: "Construccion"
+	quest.0707020100010001.quest_desc: ["construir sala de trofeos con items de bosses"]
+	quest.0707030100010001.title: "Display de unique jewelry"
+	quest.0707030100010001.quest_subtitle: "Construccion"
+	quest.0707030100010001.quest_desc: ["display de unique jewelry coleccionadas"]
+	quest.0707040100010001.title: "Fabrica automatizada completa"
+	quest.0707040100010001.quest_subtitle: "Construccion"
+	quest.0707040100010001.quest_desc: ["fabrica completamente automatizada (RS + Create + trenes)"]
+	quest.0708010100010001.title: "10+ unique jewelry"
+	quest.0708010100010001.quest_subtitle: "Coleccion"
+	quest.0708010100010001.quest_desc: ["coleccion de 10 o mas unique jewelry"]
+	quest.0708020100010001.title: "Set accesorios T3+"
+	quest.0708020100010001.quest_subtitle: "Coleccion"
+	quest.0708020100010001.quest_desc: ["tener set completo de accesorios T3 o superior"]
+	quest.0708030100010001.title: "100+ comidas unicas"
+	quest.0708030100010001.quest_subtitle: "Coleccion"
+	quest.0708030100010001.quest_desc: ["100+ comidas en Recetario"]
+	quest.0708040100010001.title: "Fragmentos para T4"
+	quest.0708040100010001.quest_subtitle: "Coleccion"
+	quest.0708040100010001.quest_desc: ["Obten core crystal fragment x5"]
+	quest.0708050100010001.title: "Accesorio T5 Maestro"
+	quest.0708050100010001.quest_subtitle: "Coleccion"
+	quest.0708050100010001.quest_desc: ["obtener accesorio T5 Maestro de Boss Ch7 o Nucleo"]
+	quest.0708060100010001.title: "Acumular recursos T4"
+	quest.0708060100010001.quest_subtitle: "Coleccion"
+	quest.0708060100010001.quest_desc: ["tener materiales suficientes para primera pieza T4"]
+	quest.0708070100010001.title: "GATE: Entrega al Space Elevator Ch7"
+	quest.0708070100010001.quest_subtitle: "Coleccion"
+	quest.0708070100010001.quest_desc: ["completar entrega Ch7 en Terminal y presionar LAUNCH"]
+	chapter.0800000000000001.title: "Cap 8: El Final"
+	quest.0801010100010001.title: "Preparacion para el final"
+	quest.0801010100010001.quest_subtitle: "Historia"
+	quest.0801010100010001.quest_desc: ["entender las 4 fases del boss final"]
+	quest.0801020100010001.title: "La historia completa"
+	quest.0801020100010001.quest_subtitle: "Historia"
+	quest.0801020100010001.quest_desc: ["completar todas las quests de Historia de Ch1-Ch7"]
+	quest.0801030100010001.title: "Item Maestro"
+	quest.0801030100010001.quest_subtitle: "Historia"
+	quest.0801030100010001.quest_desc: ["Obten item maestro"]
+	quest.0801040100010001.title: "Primera arma T4"
+	quest.0801040100010001.quest_subtitle: "Historia"
+	quest.0801040100010001.quest_desc: ["craftear primera arma T4 (Aeternium o Ruby)"]
+	quest.0801050100010001.title: "Set T4 completo"
+	quest.0801050100010001.quest_subtitle: "Historia"
+	quest.0801050100010001.quest_desc: ["craftear set T4 completo (arma + 4 armor)"]
+	quest.0801060100010001.title: "Arena del boss final"
+	quest.0801060100010001.quest_subtitle: "Historia"
+	quest.0801060100010001.quest_desc: ["preparar estrategia para las 4 fases del Devorador"]
+	quest.0801070100010001.title: "Mega-entrega"
+	quest.0801070100010001.quest_subtitle: "Historia"
+	quest.0801070100010001.quest_desc: ["preparar todos los items para la mega-entrega Ch8"]
+	quest.0801080100010001.title: "GATE: Devorador de Mundos"
+	quest.0801080100010001.quest_subtitle: "Historia"
+	quest.0801080100010001.quest_desc: ["Derrota a devorador de mundos"]
+	quest.0801090100010001.title: "Celebracion"
+	quest.0801090100010001.quest_subtitle: "Historia"
+	quest.0801090100010001.quest_desc: ["presenciar cutscene/creditos despues de derrotar al Devorador"]
+	quest.08010A0100010001.title: "Post-game: la leyenda"
+	quest.08010A0100010001.quest_subtitle: "Historia"
+	quest.08010A0100010001.quest_desc: ["desbloquear desafios extra post-game"]
+	quest.0802010100010001.title: "Receta legendaria"
+	quest.0802010100010001.quest_subtitle: "Cocina"
+	quest.0802010100010001.quest_desc: ["cocinar receta legendaria endgame"]
+	quest.0802020100010001.title: "100% comidas (Recetario)"
+	quest.0802020100010001.quest_subtitle: "Cocina"
+	quest.0802020100010001.quest_desc: ["completar 100% de comidas en Recetario"]
+	quest.0802030100010001.title: "Recetario: 130+ comidas"
+	quest.0802030100010001.quest_subtitle: "Cocina"
+	quest.0802030100010001.quest_desc: ["comer 130+ comidas diferentes"]
+	quest.0802040100010001.title: "Buff para boss final"
+	quest.0802040100010001.quest_subtitle: "Cocina"
+	quest.0802040100010001.quest_desc: ["preparar buffs de comida especificos para las 4 fases del boss"]
+	quest.0802050100010001.title: "Automatizar todas las comidas"
+	quest.0802050100010001.quest_subtitle: "Cocina"
+	quest.0802050100010001.quest_desc: ["automatizar produccion de al menos 20 comidas diferentes"]
+	quest.0802060100010001.title: "Todos los moldes completos"
+	quest.0802060100010001.quest_subtitle: "Cocina"
+	quest.0802060100010001.quest_desc: ["completar coleccion de todos los moldes de postre (7 tipos)"]
+	quest.0802070100010001.title: "Coleccion de bebidas completa"
+	quest.0802070100010001.quest_subtitle: "Cocina"
+	quest.0802070100010001.quest_desc: ["completar coleccion de todas las bebidas del Drink Maker"]
+	quest.0802080100010001.title: "Mega produccion para entrega"
+	quest.0802080100010001.quest_subtitle: "Cocina"
+	quest.0802080100010001.quest_desc: ["producir todas las cajas de comida para entrega Ch8"]
+	quest.0803010100010001.title: "Crops restantes"
+	quest.0803010100010001.quest_subtitle: "Farming"
+	quest.0803010100010001.quest_desc: ["desbloquear todos los crops restantes de Croptopia"]
+	quest.0803020100010001.title: "TODOS los crops plantados"
+	quest.0803020100010001.quest_subtitle: "Farming"
+	quest.0803020100010001.quest_desc: ["plantar TODOS los crops (70+)"]
+	quest.0803030100010001.title: "Full auto para todos"
+	quest.0803030100010001.quest_subtitle: "Farming"
+	quest.0803030100010001.quest_desc: ["todas las granjas en full auto"]
+	quest.0803040100010001.title: "100+ comidas empacadas"
+	quest.0803040100010001.quest_subtitle: "Farming"
+	quest.0803040100010001.quest_desc: ["producir 100+ comidas empacadas en Cajas de Envio"]
+	quest.0803050100010001.title: "La granja perfecta"
+	quest.0803050100010001.quest_subtitle: "Farming"
+	quest.0803050100010001.quest_desc: ["todos los crops en una granja unificada"]
+	quest.0803060100010001.title: "Pipeline total"
+	quest.0803060100010001.quest_subtitle: "Farming"
+	quest.0803060100010001.quest_desc: ["automatizar TODO el pipeline (farm -> RS -> Create -> empaque -> Terminal)"]
+	quest.0804010100010001.title: "10 runs Del Nucleo"
+	quest.0804010100010001.quest_subtitle: "Dungeon"
+	quest.0804010100010001.quest_desc: ["completar 10 dungeon Del Nucleo runs"]
+	quest.0804020100010001.title: "15+ Fragmentos de Cristal"
+	quest.0804020100010001.quest_subtitle: "Dungeon"
+	quest.0804020100010001.quest_desc: ["Obten core crystal fragment x15"]
+	quest.0804030100010001.title: "20+ unique jewelry"
+	quest.0804030100010001.quest_subtitle: "Dungeon"
+	quest.0804030100010001.quest_desc: ["coleccionar 20+ unique jewelry"]
+	quest.0804040100010001.title: "Accesorio T5 legendario"
+	quest.0804040100010001.quest_subtitle: "Dungeon"
+	quest.0804040100010001.quest_desc: ["obtener accesorio T5 Maestro de Boss Ch8 o dungeon Del Nucleo"]
+	quest.0804050100010001.title: "Sin morir (challenge)"
+	quest.0804050100010001.quest_subtitle: "Dungeon"
+	quest.0804050100010001.quest_desc: ["completar dungeon Del Nucleo sin morir"]
+	quest.0805010100010001.title: "Arma T4 legendaria"
+	quest.0805010100010001.quest_subtitle: "Combate"
+	quest.0805010100010001.quest_desc: ["craftear arma T4 legendaria (Aeternium/Ruby)"]
+	quest.0805020100010001.title: "Set T4 completo equip"
+	quest.0805020100010001.quest_subtitle: "Combate"
+	quest.0805020100010001.quest_desc: ["equipar set T4 completo"]
+	quest.0805030100010001.title: "Skill Tree maxeado"
+	quest.0805030100010001.quest_subtitle: "Combate"
+	quest.0805030100010001.quest_desc: ["maxear todos los puntos de Skill Tree"]
+	quest.0805040100010001.title: "Mejor build posible"
+	quest.0805040100010001.quest_subtitle: "Combate"
+	quest.0805040100010001.quest_desc: ["equipar mejor build (T4 + unique jewelry + T5 accesorios)"]
+	quest.0805050100010001.title: "Llave del Vacio"
+	quest.0805050100010001.quest_subtitle: "Combate"
+	quest.0805050100010001.quest_desc: ["Obten boss key ch8"]
+	quest.0806010100010001.title: "Todos los biomas"
+	quest.0806010100010001.quest_subtitle: "Exploracion"
+	quest.0806010100010001.quest_desc: ["visitar todos los biomas de Terralith"]
+	quest.0806020100010001.title: "Mapa 100%"
+	quest.0806020100010001.quest_subtitle: "Exploracion"
+	quest.0806020100010001.quest_desc: ["completar mapa al 100%"]
+	quest.0806030100010001.title: "Red de transporte global"
+	quest.0806030100010001.quest_subtitle: "Exploracion"
+	quest.0806030100010001.quest_desc: ["red de transporte global con trenes + Waystones"]
+	quest.0806040100010001.title: "Todas las Waystones"
+	quest.0806040100010001.quest_subtitle: "Exploracion"
+	quest.0806040100010001.quest_desc: ["tener Waystones en todas las locaciones importantes"]
+	quest.0806050100010001.title: "Nether explorado"
+	quest.0806050100010001.quest_subtitle: "Exploracion"
+	quest.0806050100010001.quest_desc: ["explorar todo el Nether"]
+	quest.0807010100010001.title: "Base legendaria"
+	quest.0807010100010001.quest_subtitle: "Construccion"
+	quest.0807010100010001.quest_desc: ["base legendaria completa con todas las areas decoradas"]
+	quest.0807020100010001.title: "Museo de trofeos"
+	quest.0807020100010001.quest_subtitle: "Construccion"
+	quest.0807020100010001.quest_desc: ["museo de trofeos con items de los 8 bosses"]
+	quest.0807030100010001.title: "Display jewelry completo"
+	quest.0807030100010001.quest_subtitle: "Construccion"
+	quest.0807030100010001.quest_desc: ["display completo de unique jewelry coleccionadas"]
+	quest.0807040100010001.title: "Factory endgame"
+	quest.0807040100010001.quest_subtitle: "Construccion"
+	quest.0807040100010001.quest_desc: ["factory endgame optimizada con todas las lineas"]
+	quest.0808010100010001.title: "24/24 unique jewelry"
+	quest.0808010100010001.quest_subtitle: "Coleccion"
+	quest.0808010100010001.quest_desc: ["coleccion completa de 24/24 unique jewelry"]
+	quest.0808020100010001.title: "Todos los accesorios T5"
+	quest.0808020100010001.quest_subtitle: "Coleccion"
+	quest.0808020100010001.quest_desc: ["tener los 4 accesorios T5 Maestro"]
+	quest.0808030100010001.title: "130+ comidas Recetario"
+	quest.0808030100010001.quest_subtitle: "Coleccion"
+	quest.0808030100010001.quest_desc: ["130+ comidas unicas en Recetario (hito final)"]
+	quest.0808040100010001.title: "Todos los moldes de postre"
+	quest.0808040100010001.quest_subtitle: "Coleccion"
+	quest.0808040100010001.quest_desc: ["tener todos los moldes de postre (7 tipos x 5 rarezas)"]
+	quest.0808050100010001.title: "8 trofeos de boss"
+	quest.0808050100010001.quest_subtitle: "Coleccion"
+	quest.0808050100010001.quest_desc: ["tener los 8 trofeos de boss (1 de cada capitulo)"]
+	quest.0808060100010001.title: "Completista supremo"
+	quest.0808060100010001.quest_subtitle: "Coleccion"
+	quest.0808060100010001.quest_desc: ["completar 90%+ de todas las quests del modpack"]
+	quest.0808070100010001.title: "GATE: Entrega final al Space Elevator"
+	quest.0808070100010001.quest_subtitle: "Coleccion"
+	quest.0808070100010001.quest_desc: ["completar mega-entrega Ch8 en Terminal y presionar LAUNCH"]
+}

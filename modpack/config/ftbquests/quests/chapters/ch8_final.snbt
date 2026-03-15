@@ -1,0 +1,1366 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "ch8_final"
+	group: ""
+	icon: { id: "minecraft:nether_star" }
+	id: "0800000000000001"
+	order_index: 7
+	quests: [
+		{
+			id: "0801010100010001"
+			dependencies: []
+			icon: { id: "minecraft:book" }
+			size: 2.0d
+			shape: "hexagon"
+			x: -6.0d
+			y: -8.0d
+			tasks: [
+			{
+				id: "0801010200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0801010300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "0801010300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0801020100010001"
+			dependencies: []
+			icon: { id: "minecraft:book" }
+			size: 1.5d
+			shape: "square"
+			x: -4.5d
+			y: -8.0d
+			tasks: [
+			{
+				id: "0801020200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0801020300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0801020300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0801030100010001"
+			dependencies: []
+			icon: { id: "servo_core:item_maestro" }
+			size: 1.5d
+			shape: "square"
+			x: -3.0d
+			y: -8.0d
+			tasks: [
+			{
+				id: "0801030200010001"
+				type: "item"
+				item: { id: "servo_core:item_maestro" }
+			}
+			]
+			rewards: [
+			{
+				id: "0801030300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0801030300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0801040100010001"
+			dependencies: []
+			icon: { id: "minecraft:book" }
+			size: 1.5d
+			shape: "square"
+			x: -1.5d
+			y: -8.0d
+			tasks: [
+			{
+				id: "0801040200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0801040300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 4 }
+			}
+			{
+				id: "0801040300020001"
+				type: "xp"
+				xp: 100
+			}
+			]
+		}
+		{
+			id: "0801050100010001"
+			dependencies: ["0801040100010001"]
+			icon: { id: "minecraft:book" }
+			size: 1.5d
+			shape: "square"
+			x: 0.0d
+			y: -8.0d
+			tasks: [
+			{
+				id: "0801050200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0801050300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 4 }
+			}
+			{
+				id: "0801050300020001"
+				type: "xp"
+				xp: 100
+			}
+			]
+		}
+		{
+			id: "0801060100010001"
+			dependencies: ["0801010100010001"]
+			icon: { id: "minecraft:book" }
+			size: 1.5d
+			shape: "square"
+			x: 1.5d
+			y: -8.0d
+			tasks: [
+			{
+				id: "0801060200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0801060300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "0801060300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0801070100010001"
+			dependencies: []
+			icon: { id: "minecraft:book" }
+			size: 1.5d
+			shape: "square"
+			x: 3.0d
+			y: -8.0d
+			tasks: [
+			{
+				id: "0801070200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0801070300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0801070300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0801080100010001"
+			dependencies: ["0801050100010001"]
+			icon: { id: "minecraft:iron_sword" }
+			size: 2.5d
+			shape: "gear"
+			x: 4.5d
+			y: -8.0d
+			tasks: [
+			{
+				id: "0801080200010001"
+				type: "kill"
+				entity: "servo_dungeons:devorador_de_mundos"
+				value: 1L
+			}
+			]
+			rewards: [
+			{
+				id: "0801080300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 10 }
+			}
+			{
+				id: "0801080300020001"
+				type: "xp"
+				xp: 200
+			}
+			]
+		}
+		{
+			id: "0801090100010001"
+			dependencies: ["0801080100010001"]
+			icon: { id: "minecraft:book" }
+			size: 1.5d
+			shape: "square"
+			x: 6.0d
+			y: -8.0d
+			tasks: [
+			{
+				id: "0801090200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0801090300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "0801090300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "08010A0100010001"
+			dependencies: ["0801090100010001"]
+			icon: { id: "minecraft:book" }
+			size: 1.5d
+			shape: "square"
+			x: 7.5d
+			y: -8.0d
+			tasks: [
+			{
+				id: "08010A0200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "08010A0300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "08010A0300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0802010100010001"
+			dependencies: []
+			icon: { id: "farmersdelight:cooking_pot" }
+			size: 2.0d
+			shape: "hexagon"
+			x: -10.0d
+			y: -3.0d
+			tasks: [
+			{
+				id: "0802010200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0802010300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0802010300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0802020100010001"
+			dependencies: []
+			icon: { id: "farmersdelight:cooking_pot" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: -1.5d
+			tasks: [
+			{
+				id: "0802020200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0802020300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 4 }
+			}
+			{
+				id: "0802020300020001"
+				type: "xp"
+				xp: 100
+			}
+			]
+		}
+		{
+			id: "0802030100010001"
+			dependencies: ["0802020100010001"]
+			icon: { id: "farmersdelight:cooking_pot" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 0.0d
+			tasks: [
+			{
+				id: "0802030200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0802030300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0802030300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0802040100010001"
+			dependencies: ["0801060100010001"]
+			icon: { id: "farmersdelight:cooking_pot" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 1.5d
+			tasks: [
+			{
+				id: "0802040200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0802040300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0802040300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0802050100010001"
+			dependencies: []
+			icon: { id: "farmersdelight:cooking_pot" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 3.0d
+			tasks: [
+			{
+				id: "0802050200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0802050300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0802050300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0802060100010001"
+			dependencies: []
+			icon: { id: "farmersdelight:cooking_pot" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 4.5d
+			tasks: [
+			{
+				id: "0802060200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0802060300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0802060300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0802070100010001"
+			dependencies: []
+			icon: { id: "farmersdelight:cooking_pot" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 6.0d
+			tasks: [
+			{
+				id: "0802070200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0802070300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0802070300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0802080100010001"
+			dependencies: ["0801070100010001"]
+			icon: { id: "farmersdelight:cooking_pot" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 7.5d
+			tasks: [
+			{
+				id: "0802080200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0802080300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0802080300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0803010100010001"
+			dependencies: []
+			icon: { id: "minecraft:wheat" }
+			size: 2.0d
+			shape: "hexagon"
+			x: 4.0d
+			y: -3.0d
+			tasks: [
+			{
+				id: "0803010200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0803010300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "0803010300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0803020100010001"
+			dependencies: ["0803010100010001"]
+			icon: { id: "minecraft:wheat" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: -1.5d
+			tasks: [
+			{
+				id: "0803020200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0803020300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 4 }
+			}
+			{
+				id: "0803020300020001"
+				type: "xp"
+				xp: 100
+			}
+			]
+		}
+		{
+			id: "0803030100010001"
+			dependencies: ["0803020100010001"]
+			icon: { id: "minecraft:wheat" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 0.0d
+			tasks: [
+			{
+				id: "0803030200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0803030300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0803030300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0803040100010001"
+			dependencies: ["0803030100010001"]
+			icon: { id: "minecraft:wheat" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 1.5d
+			tasks: [
+			{
+				id: "0803040200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0803040300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0803040300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0803050100010001"
+			dependencies: ["0803020100010001"]
+			icon: { id: "minecraft:wheat" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 3.0d
+			tasks: [
+			{
+				id: "0803050200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0803050300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0803050300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0803060100010001"
+			dependencies: ["0803030100010001"]
+			icon: { id: "minecraft:wheat" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 4.5d
+			tasks: [
+			{
+				id: "0803060200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0803060300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0803060300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0804010100010001"
+			dependencies: []
+			icon: { id: "servo_dungeons:basic_key" }
+			size: 2.0d
+			shape: "hexagon"
+			x: -10.0d
+			y: 5.0d
+			tasks: [
+			{
+				id: "0804010200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0804010300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0804010300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0804020100010001"
+			dependencies: ["0804010100010001"]
+			icon: { id: "servo_dungeons:core_crystal_fragment" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 6.5d
+			tasks: [
+			{
+				id: "0804020200010001"
+				type: "item"
+				item: { id: "servo_dungeons:core_crystal_fragment" count: 15 }
+			}
+			]
+			rewards: [
+			{
+				id: "0804020300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 4 }
+			}
+			{
+				id: "0804020300020001"
+				type: "xp"
+				xp: 100
+			}
+			]
+		}
+		{
+			id: "0804030100010001"
+			dependencies: ["0804010100010001"]
+			icon: { id: "servo_dungeons:basic_key" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 8.0d
+			tasks: [
+			{
+				id: "0804030200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0804030300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 4 }
+			}
+			{
+				id: "0804030300020001"
+				type: "xp"
+				xp: 100
+			}
+			]
+		}
+		{
+			id: "0804040100010001"
+			dependencies: []
+			icon: { id: "servo_dungeons:basic_key" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 9.5d
+			tasks: [
+			{
+				id: "0804040200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0804040300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 4 }
+			}
+			{
+				id: "0804040300020001"
+				type: "xp"
+				xp: 100
+			}
+			]
+		}
+		{
+			id: "0804050100010001"
+			dependencies: ["0804010100010001"]
+			icon: { id: "servo_dungeons:basic_key" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 11.0d
+			tasks: [
+			{
+				id: "0804050200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0804050300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 4 }
+			}
+			{
+				id: "0804050300020001"
+				type: "xp"
+				xp: 100
+			}
+			]
+		}
+		{
+			id: "0805010100010001"
+			dependencies: ["0801040100010001"]
+			icon: { id: "minecraft:iron_sword" }
+			size: 2.0d
+			shape: "hexagon"
+			x: 4.0d
+			y: 5.0d
+			tasks: [
+			{
+				id: "0805010200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0805010300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0805010300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0805020100010001"
+			dependencies: ["0801050100010001"]
+			icon: { id: "minecraft:iron_sword" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 6.5d
+			tasks: [
+			{
+				id: "0805020200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0805020300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0805020300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0805030100010001"
+			dependencies: []
+			icon: { id: "minecraft:iron_sword" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 8.0d
+			tasks: [
+			{
+				id: "0805030200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0805030300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0805030300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0805040100010001"
+			dependencies: ["0805020100010001", "0804040100010001"]
+			icon: { id: "minecraft:iron_sword" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 9.5d
+			tasks: [
+			{
+				id: "0805040200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0805040300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0805040300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0805050100010001"
+			dependencies: ["0805010100010001"]
+			icon: { id: "servo_dungeons:boss_key_ch8" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 11.0d
+			tasks: [
+			{
+				id: "0805050200010001"
+				type: "item"
+				item: { id: "servo_dungeons:boss_key_ch8" }
+			}
+			]
+			rewards: [
+			{
+				id: "0805050300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "0805050300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0806010100010001"
+			dependencies: []
+			icon: { id: "minecraft:compass" }
+			size: 2.0d
+			shape: "hexagon"
+			x: -4.0d
+			y: 12.0d
+			tasks: [
+			{
+				id: "0806010200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0806010300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0806010300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0806020100010001"
+			dependencies: ["0806010100010001"]
+			icon: { id: "minecraft:compass" }
+			size: 1.5d
+			shape: "square"
+			x: -2.5d
+			y: 12.0d
+			tasks: [
+			{
+				id: "0806020200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0806020300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "0806020300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0806030100010001"
+			dependencies: []
+			icon: { id: "minecraft:compass" }
+			size: 1.5d
+			shape: "square"
+			x: -1.0d
+			y: 12.0d
+			tasks: [
+			{
+				id: "0806030200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0806030300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0806030300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0806040100010001"
+			dependencies: []
+			icon: { id: "minecraft:compass" }
+			size: 1.5d
+			shape: "square"
+			x: 0.5d
+			y: 12.0d
+			tasks: [
+			{
+				id: "0806040200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0806040300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "0806040300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0806050100010001"
+			dependencies: []
+			icon: { id: "minecraft:compass" }
+			size: 1.5d
+			shape: "square"
+			x: 2.0d
+			y: 12.0d
+			tasks: [
+			{
+				id: "0806050200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0806050300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "0806050300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0807010100010001"
+			dependencies: []
+			icon: { id: "minecraft:bricks" }
+			size: 2.0d
+			shape: "hexagon"
+			x: -10.0d
+			y: 15.0d
+			tasks: [
+			{
+				id: "0807010200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0807010300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0807010300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0807020100010001"
+			dependencies: ["0801080100010001"]
+			icon: { id: "minecraft:bricks" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 16.5d
+			tasks: [
+			{
+				id: "0807020200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0807020300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0807020300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0807030100010001"
+			dependencies: ["0804030100010001"]
+			icon: { id: "minecraft:bricks" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 18.0d
+			tasks: [
+			{
+				id: "0807030200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0807030300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "0807030300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0807040100010001"
+			dependencies: []
+			icon: { id: "minecraft:bricks" }
+			size: 1.5d
+			shape: "square"
+			x: -10.0d
+			y: 19.5d
+			tasks: [
+			{
+				id: "0807040200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0807040300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0807040300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0808010100010001"
+			dependencies: ["0804030100010001"]
+			icon: { id: "minecraft:chest" }
+			size: 2.0d
+			shape: "hexagon"
+			x: 4.0d
+			y: 15.0d
+			tasks: [
+			{
+				id: "0808010200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0808010300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0808010300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0808020100010001"
+			dependencies: ["0804040100010001"]
+			icon: { id: "minecraft:chest" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 16.5d
+			tasks: [
+			{
+				id: "0808020200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0808020300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0808020300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0808030100010001"
+			dependencies: ["0802030100010001"]
+			icon: { id: "minecraft:chest" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 18.0d
+			tasks: [
+			{
+				id: "0808030200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0808030300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 2 }
+			}
+			{
+				id: "0808030300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0808040100010001"
+			dependencies: ["0802060100010001"]
+			icon: { id: "minecraft:chest" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 19.5d
+			tasks: [
+			{
+				id: "0808040200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0808040300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0808040300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0808050100010001"
+			dependencies: ["0801080100010001"]
+			icon: { id: "minecraft:chest" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 21.0d
+			tasks: [
+			{
+				id: "0808050200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0808050300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0808050300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0808060100010001"
+			dependencies: []
+			icon: { id: "minecraft:chest" }
+			size: 1.5d
+			shape: "square"
+			x: 4.0d
+			y: 22.5d
+			tasks: [
+			{
+				id: "0808060200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0808060300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 3 }
+			}
+			{
+				id: "0808060300020001"
+				type: "xp"
+				xp: 50
+			}
+			]
+		}
+		{
+			id: "0808070100010001"
+			dependencies: ["0801080100010001"]
+			icon: { id: "minecraft:chest" }
+			size: 2.5d
+			shape: "gear"
+			x: 4.0d
+			y: 24.0d
+			tasks: [
+			{
+				id: "0808070200010001"
+				type: "checkmark"
+			}
+			]
+			rewards: [
+			{
+				id: "0808070300010001"
+				type: "item"
+				item: { id: "servo_core:pepe_coin" count: 8 }
+			}
+			{
+				id: "0808070300020001"
+				type: "xp"
+				xp: 200
+			}
+			]
+		}
+	]
+}
