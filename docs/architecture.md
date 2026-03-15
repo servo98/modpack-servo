@@ -1,7 +1,7 @@
 # Arquitectura de Mods — Modpack Servo
 
 > Fuente: Sesion 14 (2026-03-12)
-> Relacionado: [GDD](gdd-v2.md), [TODO](TODO.md)
+> Relacionado: [GDD](gdd-v2.md), [GitHub Issues](https://github.com/servo98/modpack-servo/issues)
 
 ## Vision
 

@@ -17,7 +17,7 @@ Este GDD es el **overview**. El detalle vive en docs especificos:
 | Distribucion por capitulo | [mechanics/progression.md](mechanics/progression.md#distribucion-de-contenido-por-capitulo) |
 | RPG Series datos | [mod-data/rpg-series-content.md](mod-data/rpg-series-content.md) |
 | Estado de mods custom | `docs/status/*.md` |
-| Tareas pendientes | [TODO.md](TODO.md) |
+| Tareas pendientes | [GitHub Issues](https://github.com/servo98/modpack-servo/issues) |
 
 ---
 

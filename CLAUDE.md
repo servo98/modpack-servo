@@ -3,7 +3,7 @@
 ## Proyecto
 Modpack progresivo MC 1.21.1 NeoForge con 7 mods custom (arquitectura multi-mod).
 8 capitulos, ~240 horas, 3 pilares: Cocina/Granja + Create/Automatizacion + RPG/Clases.
-GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas en `docs/TODO.md`.
+GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas en [GitHub Issues](https://github.com/servo98/modpack-servo/issues).
 
 ## Comandos clave
 - Build: `./gw build` (wrapper que setea JAVA_HOME, desde raiz)
@@ -32,7 +32,7 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 ## Mapa de docs
 | Tema | Ubicacion | Descripcion |
 |------|-----------|-------------|
-| Tareas | `docs/TODO.md` | Lista maestra con estado por tarea |
+| Tareas | [GitHub Issues](https://github.com/servo98/modpack-servo/issues) | Issues con labels por mod y tipo. Consultar con `gh issue list` |
 | GDD | `docs/gdd-v2.md` | Overview del modpack completo |
 | Arquitectura | `docs/architecture.md` | 7 mods custom, dependencias, orden de desarrollo |
 | Mods | `docs/design/mod-decisions.md` | Cada mod con su razon de ser |
@@ -73,7 +73,7 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 ## Persistencia entre sesiones
 
 ### Al INICIO
-1. Leer `docs/TODO.md` (tareas y estado)
+1. `gh issue list --repo servo98/modpack-servo --state open --limit 20` (tareas pendientes)
 2. Leer `docs/blockers.md` (problemas activos)
 3. `git log --oneline -10` (contexto de sesiones recientes via commits)
 
@@ -84,9 +84,9 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 4. Si se resolvio un blocker → mover a "Resueltos" en blockers.md
 
 ### Reglas de archivos de estado
-- **TODO.md** = fuente de verdad de tareas. Cada tarea tiene estado (pending/planned/needs-decision/done).
+- **GitHub Issues** = fuente de verdad de tareas. Filtrar por label: `gh issue list --label "mod:delivery"`. Cerrar al completar: `gh issue close <num>`.
 - **blockers.md** = fuente de verdad de problemas. Solo problemas que bloquean progreso real.
-- **git log** = registro de sesiones. Cada commit documenta que se hizo. NO usar docs/session-log.md.
+- **git log** = registro de sesiones. Cada commit documenta que se hizo.
 - NO repetir la misma info en multiples archivos.
 
 ## Flujo de testing

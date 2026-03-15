@@ -1,6 +1,6 @@
 # Blockers - Modpack Servo
 
-> Solo problemas que bloquean progreso real. Tareas normales van en TODO.md.
+> Solo problemas que bloquean progreso real. Tareas normales van en [GitHub Issues](https://github.com/servo98/modpack-servo/issues).
 
 ## Activos
 
