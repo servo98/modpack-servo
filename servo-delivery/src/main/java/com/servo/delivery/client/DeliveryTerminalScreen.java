@@ -1,6 +1,7 @@
 package com.servo.delivery.client;
 
 import com.servo.delivery.block.DeliveryTerminalMenu;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -10,6 +11,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * GUI Screen for the Delivery Terminal.
@@ -30,6 +35,9 @@ public class DeliveryTerminalScreen extends AbstractContainerScreen<DeliveryTerm
     private static final int LAUNCH_NOT_READY = 0xFF555555;
 
     private Button launchButton;
+    private List<Component> hoveredTooltip;
+    private int tooltipX;
+    private int tooltipY;
 
     public DeliveryTerminalScreen(DeliveryTerminalMenu menu, Inventory playerInv, Component title) {
         super(menu, playerInv, title);
@@ -76,6 +84,9 @@ public class DeliveryTerminalScreen extends AbstractContainerScreen<DeliveryTerm
 
     @Override
     protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
+        // Clear tooltip from previous frame
+        hoveredTooltip = null;
+
         int x = this.leftPos;
         int y = this.topPos;
         int w = this.imageWidth;
@@ -106,6 +117,11 @@ public class DeliveryTerminalScreen extends AbstractContainerScreen<DeliveryTerm
         if (menu.isReady()) {
             // Glow effect around button when ready
             graphics.fill(x + (w - 124) / 2, btnY - 2, x + (w + 124) / 2, btnY + 22, 0x4400ff88);
+        }
+
+        // Render tooltip last so it draws on top of everything
+        if (hoveredTooltip != null) {
+            graphics.renderTooltip(this.font, hoveredTooltip, Optional.empty(), tooltipX, tooltipY);
         }
     }
 
@@ -141,6 +157,30 @@ public class DeliveryTerminalScreen extends AbstractContainerScreen<DeliveryTerm
         int fillW = (int) (barW * pct);
         if (fillW > 0) {
             graphics.fill(barX, barY, barX + fillW, barY + barH, complete ? BAR_COMPLETE : BAR_FILL);
+        }
+
+        // Tooltip on hover
+        if (mouseX >= x && mouseX <= x + width && mouseY >= y && mouseY <= y + 24) {
+            List<Component> lines = new ArrayList<>();
+            // Full item name (not truncated)
+            lines.add(Component.literal(req.description()).withStyle(ChatFormatting.WHITE));
+            // Delivered count
+            lines.add(Component.literal("Delivered: " + delivered + " / " + req.count())
+                    .withStyle(ChatFormatting.GRAY));
+            // Category match info
+            String tag = req.contentTag();
+            if (tag != null && !tag.isEmpty() && tag.startsWith("category/")) {
+                String category = tag.substring("category/".length());
+                lines.add(Component.literal("Category: " + category)
+                        .withStyle(ChatFormatting.AQUA));
+            }
+            // Complete indicator
+            if (complete) {
+                lines.add(Component.literal("Complete!").withStyle(ChatFormatting.GREEN));
+            }
+            hoveredTooltip = lines;
+            tooltipX = mouseX;
+            tooltipY = mouseY;
         }
     }
 

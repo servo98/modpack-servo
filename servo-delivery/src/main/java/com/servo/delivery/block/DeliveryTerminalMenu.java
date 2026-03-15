@@ -43,7 +43,8 @@ public class DeliveryTerminalMenu extends AbstractContainerMenu {
         this.requirements = new ArrayList<>();
         if (chapterData != null) {
             for (ChapterDelivery.Requirement req : chapterData.getRequirements()) {
-                requirements.add(new RequirementInfo(req.id(), req.item().toString(), req.count(), req.description()));
+                requirements.add(new RequirementInfo(req.id(), req.item().toString(), req.count(), req.description(),
+                        req.contentTag() != null ? req.contentTag() : ""));
             }
         }
 
@@ -83,7 +84,7 @@ public class DeliveryTerminalMenu extends AbstractContainerMenu {
         this.requirements = new ArrayList<>();
         for (int i = 0; i < reqCount; i++) {
             requirements.add(new RequirementInfo(
-                    buf.readUtf(), buf.readUtf(), buf.readVarInt(), buf.readUtf()
+                    buf.readUtf(), buf.readUtf(), buf.readVarInt(), buf.readUtf(), buf.readUtf()
             ));
         }
 
@@ -102,6 +103,7 @@ public class DeliveryTerminalMenu extends AbstractContainerMenu {
             buf.writeUtf(req.itemId());
             buf.writeVarInt(req.count());
             buf.writeUtf(req.description());
+            buf.writeUtf(req.contentTag());
         }
     }
 
@@ -139,5 +141,5 @@ public class DeliveryTerminalMenu extends AbstractContainerMenu {
     public boolean isReady() { return data.get(DATA_READY) == 1; }
     public int getDelivered(int reqIndex) { return data.get(DATA_SLOT_COUNT + reqIndex); }
 
-    public record RequirementInfo(String id, String itemId, int count, String description) {}
+    public record RequirementInfo(String id, String itemId, int count, String description, String contentTag) {}
 }

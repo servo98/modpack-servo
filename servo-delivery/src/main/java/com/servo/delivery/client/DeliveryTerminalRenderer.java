@@ -8,10 +8,12 @@ import com.servo.delivery.block.DeliveryTerminalBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.blockentity.BeaconRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import software.bernie.geckolib.model.DefaultedBlockGeoModel;
 import software.bernie.geckolib.renderer.GeoBlockRenderer;
@@ -44,6 +46,35 @@ public class DeliveryTerminalRenderer extends GeoBlockRenderer<DeliveryTerminalB
         poseStack.popPose();
 
         renderScreenOverlay(animatable, poseStack, bufferSource, packedLight);
+
+        if (animatable.isCelebrating()) {
+            renderBeaconBeam(animatable, partialTick, poseStack, bufferSource);
+        }
+    }
+
+    private void renderBeaconBeam(DeliveryTerminalBlockEntity terminal, float partialTick,
+                                  PoseStack poseStack, MultiBufferSource bufferSource) {
+        Level level = terminal.getLevel();
+        if (level == null) return;
+
+        long gameTime = level.getGameTime();
+
+        poseStack.pushPose();
+        // Beam starts from the antenna (1 block above terminal)
+        poseStack.translate(0.0, 1.0, 0.0);
+
+        // Teal/cyan color matching the terminal's screen color (0x00d4aa)
+        BeaconRenderer.renderBeaconBeam(poseStack, bufferSource,
+                BeaconRenderer.BEAM_LOCATION,
+                partialTick, 1.0f, gameTime,
+                0,      // yOffset
+                256,    // height (to world ceiling)
+                0xFF00D4AA, // teal ARGB
+                0.15f,  // beam radius
+                0.2f    // glow radius
+        );
+
+        poseStack.popPose();
     }
 
     private static float getYRotation(Direction facing) {

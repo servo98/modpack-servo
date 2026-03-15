@@ -32,7 +32,7 @@
 | B008 | Mods de combate | NO agregar. RPG Series + Champions Unofficial |
 | B009 | Mods de bosses | NO agregar. Solo custom servo_dungeons |
 | B010 | Dungeons mod | Dim Dungeons removido (ARR). 100% custom servo_dungeons |
-| B011 | Mods sin descargar | Todos descargados (tasks 1.1-1.10 DONE) |
+| B011 | Mods sin descargar | Todos descargados |
 | B012 | 6 vs 8 capitulos | 8 capitulos confirmado |
 | B013 | RPG Series sin testear | Carga correctamente con 15 dependencias |
 | B015 | Jewelry vs Custom Curios overlap | Jewelry = rings/necklaces, servo_core = belt/back/feet/head |

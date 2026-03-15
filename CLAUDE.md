@@ -69,6 +69,7 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 | `kubejs-writer` | Al crear/editar scripts en `modpack/kubejs/`. Preferir sobre escribir KubeJS directo. |
 | `balance-checker` | Al cambiar numeros de balance o cuando el usuario pregunte si algo esta balanceado. |
 | `mod-researcher` | ANTES de sugerir cualquier mod nuevo. Verifica NeoForge 1.21.1. |
+| `issue-manager` | Al crear/actualizar issues. Detecta duplicados, mantiene formato estandar. |
 
 ## Persistencia entre sesiones
 
@@ -84,7 +85,7 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 4. Si se resolvio un blocker → mover a "Resueltos" en blockers.md
 
 ### Reglas de archivos de estado
-- **GitHub Issues** = fuente de verdad de tareas. Filtrar por label: `gh issue list --label "mod:delivery"`. Cerrar al completar: `gh issue close <num>`.
+- **GitHub Issues** = fuente de verdad de tareas. Filtrar por label: `gh issue list --label "mod:delivery"`. **NO cerrar manualmente** — se cierran solos al pushear commits con `Fixes #X` en el mensaje.
 - **blockers.md** = fuente de verdad de problemas. Solo problemas que bloquean progreso real.
 - **git log** = registro de sesiones. Cada commit documenta que se hizo.
 - NO repetir la misma info en multiples archivos.

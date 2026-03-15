@@ -1,8 +1,8 @@
 # Estado de Implementacion: servo_delivery
 
 > Mod ID: `servo_delivery`
-> Version: 0.1.0-scaffold
-> Ultima actualizacion: 2026-03-14
+> Version: 0.2.0
+> Ultima actualizacion: 2026-03-15
 > Diseno de referencia: [docs/mechanics/space-elevator.md](../mechanics/space-elevator.md)
 > Arquitectura: [docs/architecture.md](../architecture.md)
 
@@ -51,20 +51,19 @@ Flujo: Ensamblar multibloque → Click derecho con Caja de Envio en mano sobre T
 | Lang: es_mx | **done** | Traduccion completa al espanol |
 | Blockstates | **done** | Estados visuales para las 4 direcciones |
 | Modelos placeholder | **done** | Modelos cubo placeholder por bloque |
+| **Features completadas recientemente** | | |
+| BoxContents matching (validar contenido vs requisito) | **done** | Soporta match por item exacto y por categoria. `ChapterDelivery.Requirement.matches()` |
+| Automation para puertos (IItemHandler) | **done** | `PortItemHandler.java` — hoppers, funnels, Create cintas |
+| Loot tables (4 bloques) | **done** | Drops correctos al romper bloques |
+| Recetas de crafteo (4 bloques) | **done** | Recetas para ensamblar el multibloque |
+| JSONs de entregas Ch1-Ch8 | **done** | 8 JSONs con requisitos por capitulo |
+| Funcion de test in-game | **done** | `/function servo_delivery:test_kit` |
 | **Features pendientes** | | |
-| BoxContents matching (verificar tipo de caja vs requerimiento) | **pending** | Actualmente acepta cualquier ShippingBox; falta validar que el contenido corresponda al requisito |
-| Create automation para puertos (hopper/funnel extraction) | **pending** | Compat con cintas y funnels de Create |
-| Efectos de particulas durante celebracion | **pending** | VFX al completar capitulo |
-| Efectos de sonido (idle, insercion, celebracion) | **pending** | Placeholders vanilla en uso |
-| Beacon beam durante celebracion | **pending** | Haz de luz vertical al completar |
-| Loot tables | **pending** | Drops al romper bloques |
-| Recetas de crafteo | **pending** | Recetas para ensamblar el multibloque |
-| JSONs de entregas Ch2-Ch8 | **pending** | Solo Ch1 placeholder existe |
-| Funcion de test in-game | **pending** | `/function servo_delivery:test_kit` |
-| Chunk force-loading al armar multibloque | **pending** | Requiere decision de diseno (ver TODO 8.20) |
-| Buffer de 1 slot en puertos | **pending** | Actualmente passthrough; buffer + redstone pendiente de decision (ver TODO 8.21) |
-| Tooltip en hover sobre requisitos del GUI | **pending** | |
-| Animaciones GeckoLib reales | **pending** | registerControllers() vacio; geo.json y animation.json son placeholders |
+| Efectos de celebracion (particulas + sonido + beacon beam) | **done** | Issue #2. Totem + firework particles, beacon beam teal 5s, challenge complete sound |
+| Tooltip en hover sobre requisitos del GUI | **done** | Muestra nombre completo, progreso, categoria y estado al hacer hover |
+| Chunk force-loading al armar multibloque | **pending** | Necesita decision de diseno |
+| Buffer de 1 slot en puertos | **pending** | Actualmente passthrough; buffer + redstone pendiente de decision |
+| Animaciones GeckoLib reales | **pending** | Bloqueado por assets (issue #39) |
 
 ---
 
@@ -74,6 +73,7 @@ Flujo: Ensamblar multibloque → Click derecho con Caja de Envio en mano sobre T
 servo-delivery/src/main/java/com/servo/delivery/
 ├── ServoDelivery.java
 ├── DeliveryRegistry.java
+├── PortItemHandler.java
 ├── block/
 │   ├── DeliveryTerminalBlock.java
 │   ├── DeliveryTerminalBlockEntity.java
@@ -129,17 +129,17 @@ servo-delivery/src/main/java/com/servo/delivery/
 
 ```
 servo-delivery/src/main/resources/data/servo_delivery/delivery/
-├── chapter_1.json    # placeholder de prueba — existe
-├── chapter_2.json    # pending
-├── chapter_3.json    # pending
-├── chapter_4.json    # pending
-├── chapter_5.json    # pending
-├── chapter_6.json    # pending
-├── chapter_7.json    # pending
-└── chapter_8.json    # pending
+├── chapter_1.json    # done
+├── chapter_2.json    # done
+├── chapter_3.json    # done
+├── chapter_4.json    # done
+├── chapter_5.json    # done
+├── chapter_6.json    # done
+├── chapter_7.json    # done
+└── chapter_8.json    # done
 ```
 
-Formato: cada entrada especifica `category` (tag de categoria de `servo_packaging`) y `count` (numero de cajas requeridas).
+Formato: cada entrada especifica `content_tag` (item exacto o `category/xxx`) y `count` (numero de cajas requeridas). Soporta `"direct": true` para items que no son cajas.
 
 ---
 

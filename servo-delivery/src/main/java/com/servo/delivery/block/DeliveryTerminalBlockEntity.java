@@ -8,6 +8,7 @@ import com.servo.delivery.data.DeliverySavedData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
@@ -15,6 +16,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -42,9 +45,13 @@ public class DeliveryTerminalBlockEntity extends net.minecraft.world.level.block
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
+    /** Duration of celebration effects in ticks (5 seconds). */
+    private static final int CELEBRATION_DURATION = 100;
+
     // === Per-terminal state ===
     private boolean formed = false;
-    private boolean celebrationTriggered = false;
+    /** Countdown in ticks. >0 means celebration is active. Synced to client for beam rendering. */
+    private int celebrationTicks = 0;
 
     // === Cached from SavedData for client-side rendering ===
     private int cachedChapter = 1;
@@ -220,10 +227,15 @@ public class DeliveryTerminalBlockEntity extends net.minecraft.world.level.block
     private void onChapterComplete(DeliverySavedData data) {
         if (!(level instanceof ServerLevel serverLevel)) return;
 
-        celebrationTriggered = true;
+        int completedChapter = data.getCurrentChapter();
 
         // Fire event for servo_core to grant stages, trigger quests, etc.
-        DeliveryCompleteEvent.fire(serverLevel, worldPosition, data.getCurrentChapter());
+        DeliveryCompleteEvent.fire(serverLevel, worldPosition, completedChapter);
+
+        // Start celebration effects
+        celebrationTicks = CELEBRATION_DURATION;
+        spawnCelebrationParticles(serverLevel);
+        playCelebrationSound(serverLevel);
 
         // Advance to next chapter (clears delivered items)
         data.advanceChapter();
@@ -231,6 +243,30 @@ public class DeliveryTerminalBlockEntity extends net.minecraft.world.level.block
         refreshCache();
         setChanged();
         syncToClient();
+    }
+
+    private void spawnCelebrationParticles(ServerLevel serverLevel) {
+        double x = worldPosition.getX() + 0.5;
+        double y = worldPosition.getY() + 1.5;
+        double z = worldPosition.getZ() + 0.5;
+
+        // Totem-style rising particles (the "epic moment" burst)
+        serverLevel.sendParticles(ParticleTypes.TOTEM_OF_UNDYING,
+                x, y, z, 80, 0.6, 1.0, 0.6, 0.3);
+
+        // Firework sparks for extra flair
+        serverLevel.sendParticles(ParticleTypes.FIREWORK,
+                x, y + 0.5, z, 40, 0.5, 0.8, 0.5, 0.2);
+
+        // End rod floating particles (lingering glow)
+        serverLevel.sendParticles(ParticleTypes.END_ROD,
+                x, y, z, 20, 0.3, 2.0, 0.3, 0.05);
+    }
+
+    private void playCelebrationSound(ServerLevel serverLevel) {
+        serverLevel.playSound(null, worldPosition,
+                SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, SoundSource.BLOCKS,
+                1.5f, 1.0f);
     }
 
     /**
@@ -288,6 +324,8 @@ public class DeliveryTerminalBlockEntity extends net.minecraft.world.level.block
 
     public boolean isFormed() { return formed; }
 
+    public boolean isCelebrating() { return celebrationTicks > 0; }
+
     public int getCurrentChapter() {
         if (level != null && !level.isClientSide() && level.getServer() != null) {
             return DeliverySavedData.get(level.getServer()).getCurrentChapter();
@@ -306,6 +344,25 @@ public class DeliveryTerminalBlockEntity extends net.minecraft.world.level.block
 
     public static void serverTick(Level level, BlockPos pos, BlockState state,
                                   DeliveryTerminalBlockEntity be) {
+        // Celebration countdown
+        if (be.celebrationTicks > 0) {
+            be.celebrationTicks--;
+
+            // Ongoing particles during celebration (every 4 ticks)
+            if (be.celebrationTicks % 4 == 0 && level instanceof ServerLevel serverLevel) {
+                double x = pos.getX() + 0.5;
+                double y = pos.getY() + 1.0;
+                double z = pos.getZ() + 0.5;
+                serverLevel.sendParticles(ParticleTypes.END_ROD,
+                        x, y, z, 3, 0.2, 0.5, 0.2, 0.02);
+            }
+
+            if (be.celebrationTicks == 0) {
+                be.setChanged();
+                be.syncToClient();
+            }
+        }
+
         // Periodic structure validation (every 2 seconds)
         if (level.getGameTime() % 40 == 0) {
             be.tryFormMultiblock();
@@ -328,7 +385,7 @@ public class DeliveryTerminalBlockEntity extends net.minecraft.world.level.block
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
         tag.putBoolean("Formed", formed);
-        tag.putBoolean("CelebrationTriggered", celebrationTriggered);
+        tag.putInt("CelebrationTicks", celebrationTicks);
         // Cache values are saved so clients get correct data on chunk load
         tag.putInt("CachedChapter", cachedChapter);
         tag.putInt("CachedProgress", cachedProgress);
@@ -338,7 +395,7 @@ public class DeliveryTerminalBlockEntity extends net.minecraft.world.level.block
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
         formed = tag.getBoolean("Formed");
-        celebrationTriggered = tag.getBoolean("CelebrationTriggered");
+        celebrationTicks = tag.getInt("CelebrationTicks");
         cachedChapter = tag.getInt("CachedChapter");
         if (cachedChapter < 1) cachedChapter = 1;
         cachedProgress = tag.getInt("CachedProgress");
