@@ -1,0 +1,56 @@
+{
+  "chapter": 8,
+  "name": "El Legado",
+  "stage_granted": "servo_delivery_ch8",
+  "requirements": [
+    {
+      "id": "varied_food_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 48,
+      "description": "Caja de Comida Variada"
+    },
+    {
+      "id": "legendary_food_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 12,
+      "description": "Caja de Comida Legendaria"
+    },
+    {
+      "id": "master_item",
+      "item": "servo_core:master_item",
+      "count": 1,
+      "direct": true,
+      "description": "Item Maestro"
+    },
+    {
+      "id": "t4_weapon_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/magic",
+      "count": 1,
+      "description": "Caja de Arma T4"
+    },
+    {
+      "id": "boss_trophies",
+      "item": "servo_dungeons:boss_trophy",
+      "count": 8,
+      "direct": true,
+      "description": "Trofeos de Boss"
+    },
+    {
+      "id": "factory_output_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/processed",
+      "count": 19,
+      "description": "Caja de Factory Output"
+    },
+    {
+      "id": "devourer_fragment",
+      "item": "servo_dungeons:devourer_fragment",
+      "count": 1,
+      "direct": true,
+      "description": "Fragmento del Devorador"
+    }
+  ]
+}

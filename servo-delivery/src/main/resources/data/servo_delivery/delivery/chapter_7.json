@@ -1,0 +1,42 @@
+{
+  "chapter": 7,
+  "name": "Profundidades",
+  "stage_granted": "servo_delivery_ch7",
+  "requirements": [
+    {
+      "id": "varied_food_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 48,
+      "description": "Caja de Comida Variada"
+    },
+    {
+      "id": "unique_jewelry_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/magic",
+      "count": 3,
+      "description": "Caja de Unique Jewelry"
+    },
+    {
+      "id": "dungeon_essence_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "servo_core:dungeon_essence",
+      "count": 10,
+      "description": "Caja de Esencia de Dungeon"
+    },
+    {
+      "id": "core_items_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/special",
+      "count": 4,
+      "description": "Caja de Items del Nucleo"
+    },
+    {
+      "id": "core_crystal",
+      "item": "servo_dungeons:core_crystal",
+      "count": 1,
+      "direct": true,
+      "description": "Cristal del Nucleo"
+    }
+  ]
+}

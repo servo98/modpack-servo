@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I I",
+    "IHI",
+    "ICI"
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "H": { "item": "minecraft:hopper" },
+    "C": { "item": "minecraft:chest" }
+  },
+  "result": {
+    "id": "servo_delivery:delivery_port",
+    "count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IRI",
+    "IGI",
+    "ICI"
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "R": { "item": "minecraft:redstone" },
+    "G": { "item": "minecraft:glass" },
+    "C": { "item": "minecraft:crafting_table" }
+  },
+  "result": {
+    "id": "servo_delivery:delivery_terminal",
+    "count": 1
+  }
+}

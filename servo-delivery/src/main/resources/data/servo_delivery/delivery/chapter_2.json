@@ -1,0 +1,63 @@
+{
+  "chapter": 2,
+  "name": "La Mesa Servida",
+  "stage_granted": "servo_delivery_ch2",
+  "requirements": [
+    {
+      "id": "smoothie_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 4,
+      "description": "Caja de Smoothie Variado"
+    },
+    {
+      "id": "cheese_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 4,
+      "description": "Caja de Queso"
+    },
+    {
+      "id": "dessert_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 4,
+      "description": "Caja de Postre"
+    },
+    {
+      "id": "fermented_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 4,
+      "description": "Caja de Bebida Fermentada"
+    },
+    {
+      "id": "varied_food_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 12,
+      "description": "Caja de Comida Variada"
+    },
+    {
+      "id": "new_crops_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/crops",
+      "count": 4,
+      "description": "Caja de Crops Nuevos"
+    },
+    {
+      "id": "beast_jaw",
+      "item": "servo_dungeons:beast_jaw",
+      "count": 1,
+      "direct": true,
+      "description": "Mandibula de la Bestia"
+    },
+    {
+      "id": "create_ingots_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "create:andesite_alloy",
+      "count": 2,
+      "description": "Caja de Lingotes Create"
+    }
+  ]
+}

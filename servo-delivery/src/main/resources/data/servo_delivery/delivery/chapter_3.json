@@ -1,0 +1,63 @@
+{
+  "chapter": 3,
+  "name": "Engranajes y Magia",
+  "stage_granted": "servo_delivery_ch3",
+  "requirements": [
+    {
+      "id": "drink_maker_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 6,
+      "description": "Caja de Bebida del Drink Maker"
+    },
+    {
+      "id": "baked_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 4,
+      "description": "Caja de Horneado Avanzado"
+    },
+    {
+      "id": "varied_food_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 16,
+      "description": "Caja de Comida Variada"
+    },
+    {
+      "id": "pressed_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/processed",
+      "count": 4,
+      "description": "Caja de Items Prensados"
+    },
+    {
+      "id": "milled_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/processed",
+      "count": 4,
+      "description": "Caja de Items Molidos"
+    },
+    {
+      "id": "nether_materials_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/crops",
+      "count": 4,
+      "description": "Caja de Materiales Nether"
+    },
+    {
+      "id": "colossus_gear",
+      "item": "servo_dungeons:colossus_gear",
+      "count": 1,
+      "direct": true,
+      "description": "Engranaje del Coloso"
+    },
+    {
+      "id": "runes_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/magic",
+      "count": 2,
+      "description": "Caja de Runas"
+    }
+  ]
+}

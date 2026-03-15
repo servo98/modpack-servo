@@ -1,0 +1,56 @@
+{
+  "chapter": 4,
+  "name": "Horizontes",
+  "stage_granted": "servo_delivery_ch4",
+  "requirements": [
+    {
+      "id": "feast_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 4,
+      "description": "Caja de Feast"
+    },
+    {
+      "id": "varied_food_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 24,
+      "description": "Caja de Comida Variada"
+    },
+    {
+      "id": "brass_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "create:brass_ingot",
+      "count": 4,
+      "description": "Caja de Brass"
+    },
+    {
+      "id": "mech_crafting_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/processed",
+      "count": 4,
+      "description": "Caja de Mechanical Crafting"
+    },
+    {
+      "id": "gems_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/magic",
+      "count": 2,
+      "description": "Caja de Gemas"
+    },
+    {
+      "id": "spec_scroll",
+      "item": "servo_core:specialization_scroll",
+      "count": 1,
+      "direct": true,
+      "description": "Scroll de Especializacion"
+    },
+    {
+      "id": "phantom_signal",
+      "item": "servo_dungeons:phantom_signal",
+      "count": 1,
+      "direct": true,
+      "description": "Senal Fantasma"
+    }
+  ]
+}

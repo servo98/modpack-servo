@@ -1,0 +1,49 @@
+{
+  "chapter": 6,
+  "name": "Maestria",
+  "stage_granted": "servo_delivery_ch6",
+  "requirements": [
+    {
+      "id": "varied_food_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 32,
+      "description": "Caja de Comida Variada"
+    },
+    {
+      "id": "multistep_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 8,
+      "description": "Caja de Receta Multi-Step"
+    },
+    {
+      "id": "netherite_gear_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/magic",
+      "count": 2,
+      "description": "Caja de Netherite Gear"
+    },
+    {
+      "id": "tipped_arrows_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/magic",
+      "count": 4,
+      "description": "Caja de Tipped Arrows"
+    },
+    {
+      "id": "nether_production_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/crops",
+      "count": 13,
+      "description": "Caja de Produccion Nether"
+    },
+    {
+      "id": "harvest_lord_scythe",
+      "item": "servo_dungeons:harvest_lord_scythe",
+      "count": 1,
+      "direct": true,
+      "description": "Hoz del Senor de las Cosechas"
+    }
+  ]
+}

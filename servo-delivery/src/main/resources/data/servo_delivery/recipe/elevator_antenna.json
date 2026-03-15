@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " L ",
+    " I ",
+    "III"
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "L": { "item": "minecraft:lightning_rod" }
+  },
+  "result": {
+    "id": "servo_delivery:elevator_antenna",
+    "count": 1
+  }
+}

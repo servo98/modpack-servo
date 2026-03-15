@@ -1,0 +1,56 @@
+{
+  "chapter": 5,
+  "name": "La Red",
+  "stage_granted": "servo_delivery_ch5",
+  "requirements": [
+    {
+      "id": "varied_food_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 24,
+      "description": "Caja de Comida Variada"
+    },
+    {
+      "id": "exotic_food_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 8,
+      "description": "Caja de Comida Exotica"
+    },
+    {
+      "id": "autocraft_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/processed",
+      "count": 8,
+      "description": "Caja de Items Autocraft"
+    },
+    {
+      "id": "enchanted_books_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "minecraft:enchanted_book",
+      "count": 4,
+      "description": "Caja de Enchanted Books"
+    },
+    {
+      "id": "rs_components_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/processed",
+      "count": 2,
+      "description": "Caja de RS Components"
+    },
+    {
+      "id": "enchanted_gear_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/magic",
+      "count": 4,
+      "description": "Caja de Items Encantados"
+    },
+    {
+      "id": "architect_core",
+      "item": "servo_dungeons:architect_core",
+      "count": 1,
+      "direct": true,
+      "description": "Nucleo del Arquitecto"
+    }
+  ]
+}
