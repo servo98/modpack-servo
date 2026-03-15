@@ -20,5 +20,10 @@
   "message.servo_dungeons.invalid_altar": "El altar no esta formado correctamente. Coloca 4 Runas de Dungeon en patron de cruz.",
   "message.servo_dungeons.dungeon_active_use_beam": "Hay un dungeon activo. Camina hacia el beam para entrar.",
   "message.servo_dungeons.dungeon_abandoned": "El dungeon ha sido abandonado.",
-  "message.servo_dungeons.dungeon_exit": "Regresando a la superficie..."
+  "message.servo_dungeons.dungeon_exit": "Regresando a la superficie...",
+  "block.servo_dungeons.cracked_wall": "Pared Agrietada",
+  "block.servo_dungeons.dungeon_rope": "Cuerda de Dungeon",
+  "block.servo_dungeons.dungeon_spikes": "Espinas de Dungeon",
+  "item.servo_dungeons.dungeon_bomb": "Bomba de Dungeon",
+  "item.servo_dungeons.dungeon_rope_item": "Cuerda de Dungeon"
 }

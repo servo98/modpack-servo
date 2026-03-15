@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "servo_dungeons:block/dungeon_rope" }
+  }
+}

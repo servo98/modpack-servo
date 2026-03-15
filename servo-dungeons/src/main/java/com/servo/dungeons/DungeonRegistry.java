@@ -1,12 +1,17 @@
 package com.servo.dungeons;
 
+import com.servo.dungeons.block.CrackedWallBlock;
 import com.servo.dungeons.block.DungeonBeamBlock;
 import com.servo.dungeons.block.DungeonBeamBlockEntity;
 import com.servo.dungeons.block.DungeonPedestalBlock;
 import com.servo.dungeons.block.DungeonPedestalBlockEntity;
+import com.servo.dungeons.block.DungeonRopeBlock;
 import com.servo.dungeons.block.DungeonRuneBlock;
+import com.servo.dungeons.block.DungeonSpikesBlock;
 import com.servo.dungeons.block.ExitPortalBlock;
+import com.servo.dungeons.item.DungeonBombItem;
 import com.servo.dungeons.item.DungeonKeyItem;
+import com.servo.dungeons.item.DungeonRopeItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
@@ -97,6 +102,34 @@ public class DungeonRegistry {
                             .noLootTable()
             ));
 
+    public static final DeferredHolder<Block, CrackedWallBlock> CRACKED_WALL_BLOCK =
+            BLOCKS.register("cracked_wall", () -> new CrackedWallBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .strength(-1.0f, 3600000.0f)
+                            .sound(SoundType.STONE)
+                            .requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredHolder<Block, DungeonRopeBlock> ROPE_BLOCK =
+            BLOCKS.register("dungeon_rope", () -> new DungeonRopeBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.WOOD)
+                            .strength(0.5f)
+                            .sound(SoundType.CHAIN)
+                            .noOcclusion()
+                            .pushReaction(PushReaction.DESTROY)
+            ));
+
+    public static final DeferredHolder<Block, DungeonSpikesBlock> SPIKES_BLOCK =
+            BLOCKS.register("dungeon_spikes", () -> new DungeonSpikesBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.METAL)
+                            .strength(2.0f)
+                            .sound(SoundType.METAL)
+                            .noOcclusion()
+            ));
+
     // === Block Items ===
     public static final DeferredHolder<Item, BlockItem> PEDESTAL_ITEM =
             ITEMS.register("dungeon_pedestal", () -> new BlockItem(
@@ -107,6 +140,28 @@ public class DungeonRegistry {
             ITEMS.register("dungeon_rune", () -> new BlockItem(
                     RUNE_BLOCK.get(), new Item.Properties()
             ));
+
+    public static final DeferredHolder<Item, BlockItem> CRACKED_WALL_ITEM =
+            ITEMS.register("cracked_wall", () -> new BlockItem(
+                    CRACKED_WALL_BLOCK.get(), new Item.Properties()
+            ));
+
+    public static final DeferredHolder<Item, BlockItem> ROPE_BLOCK_ITEM =
+            ITEMS.register("dungeon_rope", () -> new BlockItem(
+                    ROPE_BLOCK.get(), new Item.Properties()
+            ));
+
+    public static final DeferredHolder<Item, BlockItem> SPIKES_BLOCK_ITEM =
+            ITEMS.register("dungeon_spikes", () -> new BlockItem(
+                    SPIKES_BLOCK.get(), new Item.Properties()
+            ));
+
+    // === Dungeon Items ===
+    public static final DeferredHolder<Item, DungeonBombItem> DUNGEON_BOMB =
+            ITEMS.register("dungeon_bomb", DungeonBombItem::new);
+
+    public static final DeferredHolder<Item, DungeonRopeItem> DUNGEON_ROPE =
+            ITEMS.register("dungeon_rope_item", DungeonRopeItem::new);
 
     // === Key Items ===
     public static final DeferredHolder<Item, DungeonKeyItem> KEY_BASIC =
@@ -144,10 +199,15 @@ public class DungeonRegistry {
                     .displayItems((params, output) -> {
                         output.accept(PEDESTAL_ITEM.get());
                         output.accept(RUNE_ITEM.get());
+                        output.accept(CRACKED_WALL_ITEM.get());
+                        output.accept(ROPE_BLOCK_ITEM.get());
+                        output.accept(SPIKES_BLOCK_ITEM.get());
                         output.accept(KEY_BASIC.get());
                         output.accept(KEY_ADVANCED.get());
                         output.accept(KEY_MASTER.get());
                         output.accept(KEY_CORE.get());
+                        output.accept(DUNGEON_BOMB.get());
+                        output.accept(DUNGEON_ROPE.get());
                     })
                     .build()
             );
