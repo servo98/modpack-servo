@@ -1,0 +1,19 @@
+# ==========================================================================
+# Capitulo 1: Raices — Stage inicial
+# ==========================================================================
+# Survival basico. Vanilla, FD, Supplementaries, Aquaculture, QoL.
+# Spell Engine T0, Small Rune Pouch, Copper/Iron Ring.
+# No locks — este es el punto de partida.
+# ==========================================================================
+
+[stage]
+id = "servo_ch1"
+display_name = "Raices"
+description = "Survival basico, cocina simple, primeros pasos en el mundo"
+icon = "minecraft:wooden_pickaxe"
+unlock_message = "&a&lCapitulo 1: Raices &r&7Bienvenido al mundo."
+
+# Starting stage — no dependency (auto-granted to new players)
+
+[locks]
+# No locks — everything at Ch1 is the base game

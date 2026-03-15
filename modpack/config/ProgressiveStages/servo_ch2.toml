@@ -1,0 +1,52 @@
+# ==========================================================================
+# Capitulo 2: La Cocina del Mundo
+# ==========================================================================
+# Croptopia, Brewin' & Chewin', Create basico, Storage Drawers,
+# Rogues & Warriors (melee classes), Macaw's Furniture, Jewelry Gold tier.
+# Create avanzado (andesite/brass/trains) re-locked in ch3/ch4/ch5.
+# ==========================================================================
+
+[stage]
+id = "servo_ch2"
+display_name = "La Cocina del Mundo"
+description = "Croptopia, Create basico, Storage Drawers, clases melee"
+icon = "farmersdelight:cooking_pot"
+unlock_message = "&6&lCapitulo 2 Desbloqueado! &r&7Create, Croptopia y clases melee disponibles."
+dependency = "servo_ch1"
+
+[locks]
+
+# --- Whole mod locks ---
+# Create ecosystem (basic unlocks here; advanced items re-locked in ch3/ch4/ch5)
+# Croptopia (all crops/items)
+# Brewin' And Chewin' (fermentation, cheese, drinks)
+# Storage Drawers (basic bulk storage)
+# Rogues & Warriors (melee classes: Rogue, Warrior)
+# Macaw's Furniture (basic decoration)
+# Jewelry (rings, necklaces, gems, ores)
+mods = [
+    "create",
+    "createaddition",
+    "create_dragons_plus",
+    "croptopia",
+    "brewinandchewin",
+    "storagedrawers",
+    "rogues",
+    "mcwfurnitures",
+    "jewelry"
+]
+
+# --- Specific item locks ---
+items = [
+    # Runes: Fire and Healing unlock at Ch2 (Arcane/Frost available from Ch1)
+    # TODO: Verify exact rune item IDs with /kubejs hand
+    "runes:fire_rune",
+    "runes:healing_rune"
+]
+
+# --- Whitelist: items available BEFORE this stage ---
+# Copper/Iron Ring from jewelry mod — available from Ch1
+unlocked_items = [
+    "jewelry:copper_ring",
+    "jewelry:iron_ring"
+]

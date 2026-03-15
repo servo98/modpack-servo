@@ -1,0 +1,46 @@
+# ==========================================================================
+# ProgressiveStages - Trigger Configuration
+# ==========================================================================
+# Stages are granted by servo_core via DeliveryCompleteEvent + boss kills.
+# servo_core listens to events and grants stages programmatically.
+#
+# These triggers serve as BACKUP automation for common scenarios.
+# The primary stage-granting mechanism is servo_core code, not these triggers.
+# ==========================================================================
+
+# ==========================================================================
+# ADVANCEMENT TRIGGERS
+# ==========================================================================
+[advancements]
+# No advancement-based triggers — stages are granted via servo_core events
+
+# ==========================================================================
+# ITEM PICKUP TRIGGERS
+# ==========================================================================
+[items]
+# No item pickup triggers — would bypass the boss+delivery requirement
+
+# ==========================================================================
+# DIMENSION ENTRY TRIGGERS
+# ==========================================================================
+[dimensions]
+# No dimension triggers — dimensions are LOCKED by stages, not the reverse
+
+# ==========================================================================
+# BOSS/ENTITY KILL TRIGGERS
+# ==========================================================================
+[bosses]
+# Boss kills are handled by servo_core (listens to LivingDeathEvent)
+# Once servo_dungeons is built, boss entity IDs go here as backup:
+#
+# "servo_dungeons:guardian_del_bosque" = "servo_ch2"
+# "servo_dungeons:bestia_glotona" = "servo_ch3"
+# "servo_dungeons:titan_de_hierro" = "servo_ch4"
+# "servo_dungeons:senor_de_las_llamas" = "servo_ch5"
+# "servo_dungeons:abismo_helado" = "servo_ch6"
+# "servo_dungeons:dragon_mecanico" = "servo_ch7"
+# "servo_dungeons:guardian_del_nucleo" = "servo_ch8"
+#
+# NOTE: Boss entities don't exist yet (servo_dungeons is 0% built)
+# NOTE: Each boss kill only grants the NEXT chapter, not the current one
+# The pattern is: kill Ch1 boss + complete Ch1 delivery = unlock Ch2

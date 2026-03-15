@@ -1,0 +1,60 @@
+# ==========================================================================
+# Capitulo 7: Las Profundidades
+# ==========================================================================
+# End dimension. Llave del Nucleo (Tier 4 dungeon).
+# Unique jewelry (loot-only, ~20 items from dungeon drops).
+# Rare crops. Core Crystal Fragments.
+# ==========================================================================
+
+[stage]
+id = "servo_ch7"
+display_name = "Las Profundidades"
+description = "End dimension, Llave del Nucleo, unique jewelry"
+icon = "minecraft:ender_eye"
+unlock_message = "&1&lCapitulo 7 Desbloqueado! &r&7Las profundidades del End te aguardan."
+dependency = "servo_ch6"
+
+[locks]
+
+# --- Dimension locks ---
+dimensions = [
+    "minecraft:the_end"
+]
+
+# --- Specific item locks ---
+items = [
+    # Dungeon key: Core (Tier 4)
+    "servo_core:core_dungeon_key",
+
+    # Core Crystal Fragment (boss drop material for T4 gear)
+    "servo_core:core_crystal_fragment",
+
+    # Unique jewelry (loot-only, no crafting recipes)
+    # These are special named items from the jewelry mod
+    # TODO: Verify exact unique jewelry IDs — these are loot-only items
+    # From docs: ~20 unique items with names and lore
+    # Examples from rpg-series-content.md:
+    "jewelry:amulet_of_unfettered_magics",
+    "jewelry:ring_of_omnipotence",
+    "jewelry:pendant_of_acumen",
+    "jewelry:pendant_of_sunfire",
+    "jewelry:sunflare_signet",
+    "jewelry:glacial_shard",
+    "jewelry:permafrost_stone",
+    "jewelry:adrias_pendant",
+    "jewelry:anetts_embrace",
+    "jewelry:amulet_of_unrelenting_storms",
+    "jewelry:ring_of_unstable_currents",
+    "jewelry:occult_necklace",
+    "jewelry:signet_of_captured_souls",
+    "jewelry:sentinels_amulet",
+    "jewelry:juggernaut_band",
+    "jewelry:angelistas_revenge",
+    "jewelry:chocker_of_vile_intent",
+    "jewelry:ring_of_fury",
+    "jewelry:necklace_of_anguish",
+    "jewelry:ring_of_suffering",
+    "jewelry:amulet_of_torture",
+    "jewelry:darnassian_strider_amulet",
+    "jewelry:thalassian_ranger_band"
+]

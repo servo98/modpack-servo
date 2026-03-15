@@ -4,9 +4,9 @@
 
 ## Activos
 
-### B003: ProgressiveStages configuracion completa
-- **Impacto**: Alto. Sin configs, no hay gating por capitulo.
-- **Estado**: Investigado (7 mecanismos). Falta crear configs TOML y asignar items por stage.
+### B003: ProgressiveStages — refinamiento de item IDs
+- **Impacto**: Bajo. Configs TOML base creadas (8 stages: servo_ch1 a servo_ch8). Gating funcional.
+- **Estado**: Configs creadas con mod locks + items conocidos. Pendiente: verificar IDs exactos de jewelry, runes, Create y RPG tier items in-game con `/kubejs hand`.
 - **Gap**: NO escanea Curios API slots → necesita fix en servo_core.
 
 ### B014: Tier 4 RPG sin recetas crafteables

@@ -1,0 +1,40 @@
+# ==========================================================================
+# Capitulo 8: El Devorador (Final)
+# ==========================================================================
+# T4 custom gear (Aeternium/Ruby via KubeJS, usando materiales de dungeon).
+# Recetas endgame legendarias. Todo desbloqueado.
+# ==========================================================================
+
+[stage]
+id = "servo_ch8"
+display_name = "El Devorador"
+description = "T4 custom endgame, recetas legendarias"
+icon = "minecraft:nether_star"
+unlock_message = "&4&lCapitulo 8 Desbloqueado! &r&7El poder definitivo esta en tus manos."
+dependency = "servo_ch7"
+
+[locks]
+
+# --- Specific item locks ---
+# T4 custom gear — these items don't exist yet (KubeJS recipes pending)
+# They will use materials from servo_core (Core Crystal Fragment, Dungeon Essence)
+# TODO: Add T4 item IDs once KubeJS recipes are created (issue #46 / blocker B014)
+items = [
+    # T4 Aeternium weapons (custom KubeJS)
+    # TODO: "servo_core:aeternium_dagger",
+    # TODO: "servo_core:aeternium_staff",
+    # TODO: "servo_core:aeternium_claymore",
+
+    # T4 Ruby weapons (custom KubeJS)
+    # TODO: "servo_core:ruby_dagger",
+    # TODO: "servo_core:ruby_staff",
+    # TODO: "servo_core:ruby_claymore",
+
+    # Legendary crafting recipes ingredients
+    # TODO: Add endgame-only materials once defined
+]
+
+# NOTE: Ch8 is the final chapter — once unlocked, everything is available.
+# The locks here are minimal because most content is already unlocked.
+# The real gating for T4 is via recipe requirements (boss drop materials),
+# not via ProgressiveStages item locks.

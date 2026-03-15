@@ -1,0 +1,79 @@
+# ==========================================================================
+# Capitulo 5: Red y Poder
+# ==========================================================================
+# Refined Storage, Create Enchantment Industry, Create Deco.
+# Trains avanzados, Create C&A (electric motor, alternator).
+# Spell Power potions/arrows, Ranged Weapon API.
+# Netherite jewelry. Large Rune Pouch. Soul/Lightning runes.
+# Llave Maestra de dungeon.
+# ==========================================================================
+
+[stage]
+id = "servo_ch5"
+display_name = "Red y Poder"
+description = "Refined Storage, Enchantment Industry, Netherite jewelry"
+icon = "refinedstorage:controller"
+unlock_message = "&d&lCapitulo 5 Desbloqueado! &r&7Red digital y poder magico disponibles."
+dependency = "servo_ch4"
+
+[locks]
+
+# --- Whole mod locks ---
+# Refined Storage (digital storage, autocrafting)
+# Create Enchantment Industry (auto-enchanting)
+# Create Deco (industrial decoration)
+mods = [
+    "refinedstorage",
+    "create_enchantment_industry",
+    "createdeco"
+]
+
+# --- Item mod locks (all items from these mods) ---
+# Spell Power (potions, tipped arrows, enchantment-related items)
+# Ranged Weapon API (ranged buff potions/arrows)
+item_mods = [
+    "spell_power",
+    "ranged_weapon_api"
+]
+
+# --- Specific item locks ---
+items = [
+    # Create C&A advanced items (electric motor, alternator)
+    # TODO: Verify exact createaddition item IDs
+    "createaddition:electric_motor",
+    "createaddition:alternator",
+    "createaddition:tesla_coil",
+    "createaddition:accumulator",
+    "createaddition:portable_energy_interface",
+    "createaddition:redstone_relay",
+
+    # Dungeon key: Master (Tier 3)
+    "servo_core:master_dungeon_key",
+
+    # Runes: Large Rune Pouch + Soul/Lightning runes
+    # TODO: Verify exact rune item IDs
+    "runes:large_rune_pouch",
+    "runes:soul_rune",
+    "runes:lightning_rune",
+
+    # Jewelry: Netherite tier
+    # TODO: Verify netherite jewelry IDs (may be netherite_citrine_ring, etc.)
+    "jewelry:netherite_ring",
+    "jewelry:netherite_necklace",
+    "jewelry:netherite_citrine_ring",
+    "jewelry:netherite_citrine_necklace",
+    "jewelry:netherite_jade_ring",
+    "jewelry:netherite_jade_necklace",
+    "jewelry:netherite_ruby_ring",
+    "jewelry:netherite_ruby_necklace",
+    "jewelry:netherite_sapphire_ring",
+    "jewelry:netherite_sapphire_necklace",
+    "jewelry:netherite_tanzanite_ring",
+    "jewelry:netherite_tanzanite_necklace",
+    "jewelry:netherite_topaz_ring",
+    "jewelry:netherite_topaz_necklace",
+    "jewelry:netherite_diamond_ring",
+    "jewelry:netherite_diamond_necklace",
+    "jewelry:netherite_emerald_ring",
+    "jewelry:netherite_emerald_necklace"
+]

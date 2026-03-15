@@ -1,0 +1,103 @@
+# ==========================================================================
+# Capitulo 3: Engranajes y Magia
+# ==========================================================================
+# Create andesite completo, Slice & Dice, Expanded Delight, Tom's Storage.
+# Wizard, Paladin, Priest classes. Refurbished Furniture.
+# T2 melee (Diamond gear). Ruby/Sapphire jewelry.
+# Llave Avanzada de dungeon.
+# ==========================================================================
+
+[stage]
+id = "servo_ch3"
+display_name = "Engranajes y Magia"
+description = "Create andesite, Slice and Dice, clases magicas, T2 melee"
+icon = "create:cogwheel"
+unlock_message = "&e&lCapitulo 3 Desbloqueado! &r&7Engranajes y magia a tu alcance."
+dependency = "servo_ch2"
+
+[locks]
+
+# --- Whole mod locks ---
+# Slice & Dice (Create kitchen automation)
+# Expanded Delight (more FD recipes)
+# Tom's Storage (basic digital storage terminal)
+# Wizards (Arcane/Fire/Frost Wizard classes)
+# Paladins & Priests (Paladin, Priest classes)
+# Refurbished Furniture (functional: fridge, stove, sink)
+mods = [
+    "sliceanddice",
+    "expandeddelight",
+    "toms_storage",
+    "wizards",
+    "paladins",
+    "refurbished_furniture"
+]
+
+# --- Specific item locks ---
+items = [
+    # Create andesite machinery (locked BEYOND Ch2 basic)
+    "create:mechanical_press",
+    "create:encased_fan",
+    "create:mechanical_saw",
+    "create:mechanical_drill",
+    "create:mechanical_harvester",
+    "create:millstone",
+    "create:crushing_wheel",
+    "create:mechanical_bearing",
+    "create:contraption_controls",
+    "create:rope_pulley",
+    "create:sticky_mechanical_piston",
+    "create:mechanical_piston",
+    "create:gantry_carriage",
+    "create:gantry_shaft",
+    "create:cart_assembler",
+    "create:portable_storage_interface",
+    "create:mechanical_roller",
+    "create:sticker",
+    "create:nozzle",
+    "create:rotation_speed_controller",
+
+    # Dungeon key: Advanced (Tier 2)
+    "servo_core:advanced_dungeon_key",
+
+    # Runes: Medium Rune Pouch + Rune Crafting Altar
+    # TODO: Verify exact item IDs with /kubejs hand
+    "runes:medium_rune_pouch",
+    "runes:rune_crafting_altar",
+
+    # Jewelry: Ruby/Sapphire tier (locked beyond Ch2)
+    # TODO: Verify exact item IDs — may include _gem, _ore variants
+    "jewelry:ruby_ring",
+    "jewelry:ruby_necklace",
+    "jewelry:ruby",
+    "jewelry:ruby_ore",
+    "jewelry:deepslate_ruby_ore",
+    "jewelry:sapphire_ring",
+    "jewelry:sapphire_necklace",
+    "jewelry:sapphire",
+    "jewelry:sapphire_ore",
+    "jewelry:deepslate_sapphire_ore"
+]
+
+# --- Block locks (Create machinery blocks) ---
+blocks = [
+    "create:mechanical_press",
+    "create:encased_fan",
+    "create:mechanical_saw",
+    "create:mechanical_drill",
+    "create:mechanical_harvester",
+    "create:millstone",
+    "create:crushing_wheel",
+    "create:mechanical_bearing",
+    "create:rope_pulley",
+    "create:sticky_mechanical_piston",
+    "create:mechanical_piston",
+    "create:gantry_carriage",
+    "create:gantry_shaft",
+    "create:cart_assembler",
+    "create:portable_storage_interface",
+    "create:mechanical_roller",
+    "create:sticker",
+    "create:nozzle",
+    "create:rotation_speed_controller"
+]

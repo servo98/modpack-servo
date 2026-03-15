@@ -1,0 +1,48 @@
+# ==========================================================================
+# Capitulo 6: Maestria
+# ==========================================================================
+# T3 Netherite upgrades para todo equipo RPG.
+# Enchantment V (max level). Tipped Arrows Spell Power.
+# Recetas avanzadas con ingredientes raros.
+# ==========================================================================
+
+[stage]
+id = "servo_ch6"
+display_name = "Maestria"
+description = "T3 Netherite RPG upgrades, enchantment V, recetas avanzadas"
+icon = "minecraft:netherite_ingot"
+unlock_message = "&5&lCapitulo 6 Desbloqueado! &r&7Domina tu clase con equipo Netherite."
+dependency = "servo_ch5"
+
+[locks]
+
+# --- Specific item locks ---
+# T3 Netherite RPG gear (smithing upgrades for all classes)
+# These are Netherite-tier items from the RPG class mods
+# TODO: Add specific netherite RPG item IDs once verified in-game
+# Pattern: rogues:netherite_*, wizards:netherite_*, paladins:netherite_*
+# Example IDs (verify with /kubejs hand):
+items = [
+    # Rogues T3 (Netherite)
+    # TODO: "rogues:netherite_dagger",
+    # TODO: "rogues:netherite_sickle",
+
+    # Wizards T3 (Netherite)
+    # TODO: "wizards:netherite_arcane_staff",
+    # TODO: "wizards:netherite_fire_staff",
+    # TODO: "wizards:netherite_frost_staff",
+
+    # Paladins T3 (Netherite)
+    # TODO: "paladins:netherite_claymore",
+    # TODO: "paladins:netherite_great_hammer",
+
+    # Dungeon materials (available from Ch6)
+    "servo_core:dungeon_essence",
+
+    # Tipped Arrows with Spell Power (if separate items)
+    # TODO: Add specific spell_power tipped arrow IDs
+]
+
+# NOTE: Enchantment level V gating is NOT possible via ProgressiveStages.
+# Enchantment levels are controlled by the enchanting table and loot tables.
+# Consider using KubeJS to limit enchantment levels per stage if needed.
