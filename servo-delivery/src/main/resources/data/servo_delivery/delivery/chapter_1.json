@@ -4,25 +4,60 @@
   "stage_granted": "servo_delivery_ch1",
   "requirements": [
     {
-      "id": "wheat_delivery",
-      "item": "minecraft:wheat",
-      "count": 3,
-      "direct": true,
-      "description": "Wheat"
+      "id": "vegetable_soup_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "farmersdelight:vegetable_soup",
+      "count": 4,
+      "description": "Caja de Vegetable Soup"
     },
     {
-      "id": "iron_ingot_delivery",
-      "item": "minecraft:iron_ingot",
+      "id": "beef_stew_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "farmersdelight:beef_stew",
+      "count": 4,
+      "description": "Caja de Beef Stew"
+    },
+    {
+      "id": "varied_food_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
+      "count": 8,
+      "description": "Caja de Comida Variada"
+    },
+    {
+      "id": "basic_crops_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/crops",
+      "count": 4,
+      "description": "Caja de Crops Basicos"
+    },
+    {
+      "id": "fish_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "category/food",
       "count": 2,
-      "direct": true,
-      "description": "Iron Ingot"
+      "description": "Caja de Pescado"
     },
     {
-      "id": "bread_delivery",
-      "item": "minecraft:bread",
+      "id": "guardian_root",
+      "item": "servo_dungeons:guardian_root",
       "count": 1,
       "direct": true,
-      "description": "Bread"
+      "description": "Raiz del Guardian"
+    },
+    {
+      "id": "iron_pickaxe_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "minecraft:iron_pickaxe",
+      "count": 1,
+      "description": "Caja de Iron Pickaxe"
+    },
+    {
+      "id": "iron_sword_box",
+      "item": "servo_packaging:shipping_box",
+      "content_tag": "minecraft:iron_sword",
+      "count": 1,
+      "description": "Caja de Iron Sword"
     }
   ]
 }

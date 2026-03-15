@@ -133,9 +133,9 @@
 | 8.17 | Funcion de test: `/function servo_delivery:test_kit` | pending |
 | 8.18 | Modelo GeckoLib final (Blockbench): geo.json + animation.json + textura | pending — assets de artista |
 | 8.19 | Texturas finales para los 4 bloques | pending — assets de artista |
-| 8.20 | Chunk forzado del terminal: implementar force-loading al armar multibloque, o quitar del diseno? | needs-decision |
-| 8.21 | Buffer en puertos de entrega: 1 slot con senal redstone al rechazar, o dejar como passthrough? | needs-decision |
-| 8.22 | Validacion de BoxContents: verificar que ShippingBox tenga el tipo de contenido correcto segun el requisito? | needs-decision |
+| 8.20 | Chunk forzado: NO implementar, FTB Chunks lo hace manual — DECIDIDO | done |
+| 8.21 | Buffer en puertos: NO, passthrough (Create belts manejan rechazos) — DECIDIDO | done |
+| 8.22 | Validacion de BoxContents: SI, implementar check del DataComponent — DECIDIDO | pending |
 
 ## Completado
 - [x] Phase 0: Build compiles, proyecto scaffold

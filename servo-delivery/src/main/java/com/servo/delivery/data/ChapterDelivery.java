@@ -3,6 +3,8 @@ package com.servo.delivery.data;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.servo.packaging.PackagingRegistry;
+import com.servo.packaging.component.BoxContents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
@@ -142,11 +144,20 @@ public class ChapterDelivery {
             // If this is a direct drop (boss item), no further checks needed
             if (direct) return true;
 
-            // For shipping boxes, check content tag matches
+            // For shipping boxes, check content tag matches against BoxContents
             if (contentTag != null && !contentTag.isEmpty()) {
-                // TODO: Check BoxContents data component from servo_packaging
-                // For now, accept any shipping box of the right type
-                return true;
+                BoxContents contents = stack.get(PackagingRegistry.BOX_CONTENTS.get());
+                if (contents == null) return false;
+
+                if (contentTag.startsWith("category/")) {
+                    // Category match: "category/food" matches any box with category "food"
+                    String requiredCategory = contentTag.substring("category/".length());
+                    return requiredCategory.equals(contents.category());
+                } else {
+                    // Exact item match: "farmersdelight:vegetable_soup" matches that specific item
+                    ResourceLocation requiredItem = ResourceLocation.parse(contentTag);
+                    return requiredItem.equals(contents.itemId());
+                }
             }
 
             return true;
