@@ -5,19 +5,18 @@
 
 ## Tema
 
-Create andesite completo. Drink Maker + Horno Avanzado. Nether accesible. Clases magicas/support se desbloquean.
+Create andesite completo. Nether accesible. Clases magicas/support se desbloquean.
 
 ## Mods nuevos
 
-Create andesite completo, Slice&Dice, Drink Maker (custom), Horno Avanzado (custom), Tom's Storage, Expanded Delight, Refurbished basico, Llave Avanzada, Wizards, Paladins & Priests
+Create andesite completo, Slice&Dice, Tom's Storage, Expanded Delight, Refurbished basico, Llave Avanzada, Wizards, Paladins & Priests
 
 ## Contenido
 
 | Area | Detalle |
 |------|---------|
 | Crops | +10 frutas (34 total): banana, mango, lemon, orange, pineapple, etc |
-| Recetas | +25 (bebidas, horno) |
-| Workstations | Drink Maker, Horno Avanzado |
+| Recetas | +25 |
 | Create | Press, Fan, Saw, Harvester, Millstone |
 | Storage | Tom's Storage (terminal, connector) |
 | Nether | Abierto. Ingredientes para cocina y RPG |
@@ -33,31 +32,25 @@ Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevato
 
 Resumen: Cajas de bebidas, items procesados con Create, materiales del Nether, Engranaje del Coloso (boss drop).
 
-## Quests (~50)
+## Quests (~44)
 
-### Historia/Tutorial (12)
-1. Tutorial: Drink Maker
-2. Tutorial: Horno Avanzado (temperatura)
-3. Tutorial: Slice&Dice (Create + cocina)
-4. Tutorial: Tom's Storage
-5. Tutorial: Nether (primer acceso)
-6. Tutorial: Create Press y Fan
-7. Tutorial: Llave Avanzada de dungeon
-8. Tutorial: Class books magicos (Wizard/Paladin/Priest)
-9. Tutorial: Rune Crafting Altar
-10. Tutorial: Jeweler's Kit
-11. Tutorial: Cocina funcional (Refurbished)
-12. Explicar NPC Merchants
+### Historia/Tutorial (10)
+1. Tutorial: Slice&Dice (Create + cocina)
+2. Tutorial: Tom's Storage
+3. Tutorial: Nether (primer acceso)
+4. Tutorial: Create Press y Fan
+5. Tutorial: Llave Avanzada de dungeon
+6. Tutorial: Class books magicos (Wizard/Paladin/Priest)
+7. Tutorial: Rune Crafting Altar
+8. Tutorial: Jeweler's Kit
+9. Tutorial: Cocina funcional (Refurbished)
+10. Explicar NPC Merchants
 
-### Cocina (8)
-1. Hacer una bebida en el Drink Maker
-2. Experimentar con orden de ingredientes (Drink Maker)
-3. Hornear algo en el Horno Avanzado
-4. Encontrar la temperatura correcta
-5. Automatizar una receta con Slice&Dice
-6. Preparar bebida con ingrediente Nether
-7. Comer 30 comidas diferentes (FTB Quests Recetario: +3 corazones)
-8. Instalar cocina funcional (nevera+estufa+fregadero)
+### Cocina (4)
+1. Automatizar una receta con Slice&Dice
+2. Preparar bebida con ingrediente Nether
+3. Comer 30 comidas diferentes (FTB Quests Recetario: +3 corazones)
+4. Instalar cocina funcional (nevera+estufa+fregadero)
 
 ### Farming (6)
 1. Plantar 4 frutas nuevas

@@ -50,7 +50,7 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 
 | Categoria | Mods clave |
 |-----------|-----------|
-| Cocina/Farming | Farmer's Delight, Brewin' & Chewin', Expanded Delight, Croptopia (solo ingredientes), Aquaculture |
+| Cocina/Farming | Farmer's Delight, Brewin' & Chewin', Expanded Delight, Croptopia (solo ingredientes) |
 | Automatizacion | Create + C&A + Deco + Enchantment Industry, Slice & Dice |
 | Storage | Storage Drawers → Tom's Storage → Refined Storage |
 | RPG/Clases | Spell Engine, Spell Power, Wizards, Rogues, Paladins, Skill Tree, Runes, Jewelry (11 JARs) |
@@ -69,10 +69,10 @@ Arquitectura completa: [architecture.md](architecture.md). Estado por mod: [GitH
 |-----|---------|--------|
 | servo_packaging | Cajas de carton, Empacadora (standalone) | CODIGO COMPLETO |
 | servo_delivery | Terminal de Entrega / Space Elevator (deps: packaging) | in-progress |
-| servo_cooking | 4 workstations: Blender, Moldes, Drink Maker, Horno Avanzado | pendiente |
-| servo_create | Compat Create ↔ packaging (funnels, deployers) | pendiente |
+| servo_cooking | Workstations custom (TBD) | pendiente |
+| servo_create | Compat Create ↔ packaging (funnels, deployers) | scaffold completo |
 | servo_mart | Tienda catalogo dinamico tipo IKEA (deps: packaging) | pendiente |
-| servo_dungeons | Bosses (8), dungeons (4 tiers), llaves, dimension void (deps: GeckoLib) | pendiente |
+| servo_dungeons | Bosses (8), dungeons (4 tiers), llaves, dimension void (deps: GeckoLib) | scaffold parcial |
 | servo_core | Glue: Pepe Coins, accesorios custom, gacha pity, champions post-processing | scaffold |
 
 ---
@@ -95,14 +95,9 @@ Carton Plano → doblar en Empacadora → colocar Caja Abierta → llenar con it
 
 Detalle: [mechanics/packaging.md](mechanics/packaging.md)
 
-## 3.3 Workstations de cocina (4 custom)
+## 3.3 Workstations de cocina (servo_cooking — TBD)
 
-| Workstation | Cap | Mecanica clave |
-|-------------|-----|---------------|
-| Blender | Ch2 | 4 ingredientes + 1 fluido. Smoothies, salsas, jugos |
-| Moldes de Postres | Ch2 | Moldes coleccionables (7 tipos, 5 rarezas). Calidad 1-5 estrellas |
-| Drink Maker | Ch3 | 1 base + 3 extras + vaso. ORDEN importa. Bebidas con efectos |
-| Horno Avanzado | Ch3 | 3 ingredientes, 3 modos, TEMPERATURA slider 1-10 (descubrimiento) |
+Las workstations custom de servo_cooking estan en fase de diseno. Se decidiran despues de analizar que gaps dejan los mods existentes (FD, B&C, ED).
 
 Detalle: [mechanics/cooking.md](mechanics/cooking.md)
 
@@ -144,7 +139,7 @@ Detalle: [mechanics/accessories.md](mechanics/accessories.md) | Jewelry: [mechan
 
 ## 3.10 Gacha y Tokens
 
-4 Gacha Machines fisicas, cada una quest reward en su capitulo (Basica Ch1, Muebles Ch2, Avanzada Ch3, Superior Ch5). Usa Pepe Coins convertidos a monedas de color (10-15 tokens/pull). Pity a 50 pulls. Tokens de: quests, champions, bosses, dungeons, primera cocina.
+4 Gacha Machines fisicas, cada una quest reward en su capitulo (Basica Ch1, Muebles Ch2, Avanzada Ch3, Superior Ch5). Usa Pepe Coins convertidos a monedas de color (5-15 tokens/pull segun maquina: Rosa=5, Verde/Azul=10, Purpura=15). Pity a 50 pulls. Tokens de: quests, champions, bosses, dungeons, primera cocina.
 
 Detalle: [mechanics/gacha.md](mechanics/gacha.md) | Tokens: [mechanics/tokens.md](mechanics/tokens.md)
 
@@ -188,8 +183,8 @@ Quests detallados por capitulo en `docs/chapters/`:
 | Cap | Tema | Boss | HP | Contenido clave |
 |-----|------|------|----|----------------|
 | 1 | Tutorial + Survival | Guardian del Bosque | 800 | 12 crops, FD basico, dungeon basica, gacha machine, RPG T0 |
-| 2 | Cocina + Clase Melee | Bestia Glotona | 1,200 | +12 crops, Blender, Moldes, Create basico, Rogue/Warrior, B&C |
-| 3 | Engranajes + Magia | Coloso Mecanico | 1,600 | +10 frutas, Create andesite, Drink Maker, Horno, Wizard/Paladin/Priest, Nether |
+| 2 | Cocina + Clase Melee | Bestia Glotona | 1,200 | +12 crops, Create basico, Rogue/Warrior, B&C |
+| 3 | Engranajes + Magia | Coloso Mecanico | 1,600 | +10 frutas, Create andesite, Wizard/Paladin/Priest, Nether |
 | 4 | Horizontes + Especializacion | Locomotora Fantasma | 2,400 | +8 especias, Create brass+trains, Skill Tree, T2, Feasts |
 | 5 | La Red + Poder Magico | El Arquitecto | 3,400 | +8 exoticos, RS, Trains avanzados, Enchants magicos, Llave Maestra |
 | 6 | Maestria + Netherite RPG | Senor de las Cosechas | 5,000 | +8 avanzados, T3 Netherite, enchant V, optimizacion |
@@ -212,5 +207,5 @@ Boss dmg spawn:  dmg * (1 + (players-1)*0.15) [fijo al spawn]
 Gacha pity:      rate = base + (increment * failures), hard pity 50
 Champion HP:     mob_hp * 2.5 (1 affix), * 3.75 (2), * 5 (3)
 Accesorio boost: 5%, 12%, 22%, 40%, 70% por tier
-Nutrition bonus: base * (1 + 0.2*(mold_stars-1))
+Nutrition bonus: TBD (servo_cooking)
 ```

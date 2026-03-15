@@ -44,14 +44,14 @@ Mobs con affixes tipo Diablo. Implementado con **Champions Unofficial** (mod, 16
 Affixes se introducen gradualmente. Los faciles primero, los peligrosos despues.
 
 ### Overworld (tier max por stage del jugador)
-| Player Stage | Max affixes | Pool (acumulativo) | Total |
-|--------------|-------------|-------------------|-------|
-| Ch1 | 1 | Hasty, Plagued, Lively, Arctic | 4 |
-| Ch2 | 1 | + Knocking, Infested | 6 |
-| Ch3 | 2 | + Desecrating, Enkindling, Magnetic | 9 |
-| Ch4 | 2 | + Reflective, Dampening, Adaptable | 12 |
-| Ch5 | 2 | + Shielding, Molten, Paralyzing, Wounding (todos) | 16 |
-| Ch6-8 | 3 | 16 (todos) | 16 |
+| Player Stage | Spawn % | Max affixes | Pool (acumulativo) | Total |
+|--------------|---------|-------------|-------------------|-------|
+| Ch1 | 8% | 1 | Hasty, Plagued, Lively, Arctic | 4 |
+| Ch2 | 10% | 1 | + Knocking, Infested | 6 |
+| Ch3 | 12% | 2 | + Desecrating, Enkindling, Magnetic | 9 |
+| Ch4 | 14% | 2 | + Reflective, Dampening, Adaptable | 12 |
+| Ch5 | 16% | 2 | + Shielding, Molten, Paralyzing, Wounding (todos) | 16 |
+| Ch6-8 | 18% | 3 | 16 (todos) | 16 |
 
 ### Nether (tier max por stage del jugador)
 | Player Stage | Max affixes | Pool |

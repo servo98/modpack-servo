@@ -24,7 +24,6 @@ Eres el guardian de la documentacion del proyecto Modpack Servo. Tu trabajo es m
 - `docs/balance/` — combat-scaling, rpg-weapon-stats, gacha-rates, accessories
 - `docs/mod-data/` — JSONs extraidos de JARs + rpg-series-content.md
 - `docs/reference/` — Ideas originales del usuario (mods-ideas*.md)
-- `docs/blockers.md` — Problemas activos
 - `docs/mechanics/*.md` — 21 docs, una por mecanica
 - `docs/chapters/ch*.md` — 8 docs, quests por capitulo
 - **NO hay docs/status/** — GitHub Issues es la unica fuente de verdad de estado/tareas

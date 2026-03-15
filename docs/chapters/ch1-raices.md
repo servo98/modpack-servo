@@ -9,7 +9,7 @@ Capitulo introductorio. Aprender mecanicas vanilla + Farmer's Delight + mecanica
 
 ## Mods activos
 
-Vanilla, FD basico, Aquaculture, FTB Quests (Recetario), Lootr, Gacha Machine, Waystones, Xaero's, Jade, Backpacks, Carry On, Spell Engine (limitado), Runes (basico), Jewelry (basico)
+Vanilla, FD basico, FTB Quests (Recetario), Lootr, Gacha Machine, Waystones, Xaero's, Jade, Backpacks, Carry On, Spell Engine (limitado), Runes (basico), Jewelry (basico)
 
 ## Contenido
 
@@ -56,8 +56,6 @@ Resumen: Cajas de comida variada, crops basicos, Raiz del Guardian (boss drop), 
 4. Cocinar algo con el Stove
 5. Preparar una comida con el Skillet
 6. Comer 5 comidas diferentes (FTB Quests Recetario: +1 corazon)
-7. Pescar un pez con Aquaculture
-8. Cocinar un plato con pescado
 
 ### Farming (6)
 1. Plantar tomate

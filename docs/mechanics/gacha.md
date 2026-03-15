@@ -39,8 +39,8 @@
 |--------|---|---------------|
 | Comun (gris) | 55% | **Materiales**: 8-16 Iron, 4-8 Gold, 8-16 Copper, 16-32 Coal, 4-8 Lapis, 4-8 Redstone, 8-16 Leather, 4-8 String. **Comida**: 4-8 ingredientes FD (trigo, papa, zanahoria, tomate, cebolla, arroz). **Runas**: 2-4 Small Arcane/Frost Rune |
 | Poco Comun (verde) | 25% | **Gemas**: 1-2 Citrine o Jade. **Libros**: Enchanted Book I-II (Protection, Sharpness, Efficiency, etc). **Preview**: 2-4 ingredientes Croptopia Ch2 (Lettuce, Corn, Strawberry). **Runas**: 1 Small Rune Pouch |
-| Raro (azul) | 12% | **Accesorios**: 1 Accesorio custom T1 aleatorio (Belt/Back/Feet/Head). **Moldes**: 1 Molde de postre 1-2★. **Jewelry**: Copper Ring o Iron Ring |
-| Epico (purpura) | 5% | **Accesorios**: 1 Accesorio custom T2 aleatorio. **Moldes**: 1 Molde de postre 3★. **Jewelry**: Gold Ring, Citrine Ring, o Jade Ring |
+| Raro (azul) | 12% | **Accesorios**: 1 Accesorio custom T1 aleatorio (Belt/Back/Feet/Head). **Jewelry**: Copper Ring o Iron Ring |
+| Epico (purpura) | 5% | **Accesorios**: 1 Accesorio custom T2 aleatorio. **Jewelry**: Gold Ring, Citrine Ring, o Jade Ring |
 | Legendario (dorado) | 3% | **Armas**: 1 arma RPG T1 (Iron Dagger, Iron Sickle, Wizard Staff, etc). **Accesorios**: 1 Accesorio T2 con SpecialEffect. **Llaves**: 1 Llave de Dungeon Basica |
 
 ---
@@ -55,8 +55,8 @@
 |--------|---|---------------|
 | Comun (gris) | 50% | **Materiales**: 2-4 Diamond, 4-8 Amethyst Shard, 4-8 Prismarine Shard, 2-4 Blaze Rod, 2-4 Ender Pearl. **Runas**: 2-4 Medium Rune (tipo aleatorio). **Comida**: 4-8 ingredientes Ch3-4 (frutas, especias) |
 | Poco Comun (verde) | 25% | **RPG Armor**: 1 pieza T1 aleatoria (Rogue, Warrior, Wizard, Paladin, o Priest set). **Gemas**: 1-2 Ruby o Sapphire. **Jewelry**: Ruby/Sapphire Ring o Necklace. **Libros**: Enchanted Book II-III o Spell Power enchant |
-| Raro (azul) | 15% | **Accesorios**: 1 Accesorio custom T2 aleatorio. **Moldes**: 1 Molde de postre 3★. **RPG**: 1 pieza T1 armor de clase especifica. **Llaves**: 1 Llave Basica |
-| Epico (purpura) | 7% | **Accesorios**: 1 Accesorio custom T3 aleatorio. **Jewelry**: Tanzanite/Topaz/Diamond Ring. **Unique Jewelry**: 1 del pool basico (ver tabla abajo). **Moldes**: 1 Molde de postre 4★ |
+| Raro (azul) | 15% | **Accesorios**: 1 Accesorio custom T2 aleatorio. **RPG**: 1 pieza T1 armor de clase especifica. **Llaves**: 1 Llave Basica |
+| Epico (purpura) | 7% | **Accesorios**: 1 Accesorio custom T3 aleatorio. **Jewelry**: Tanzanite/Topaz/Diamond Ring. **Unique Jewelry**: 1 del pool basico (ver tabla abajo) |
 | Legendario (dorado) | 3% | **Armas**: 1 arma RPG T2 (Diamond weapon, Elemental Staff). **Accesorios**: 1 Accesorio T3 con bonus especial. **Unique Jewelry**: 1 del pool medio |
 
 ### Pool de Unique Jewelry — Gacha Avanzada
@@ -86,7 +86,7 @@ Solo 8 de las 24 unique estan disponibles (las de stats mas generales):
 |--------|---|---------------|
 | Comun (gris) | 45% | **Materiales**: 1-2 Netherite Scrap, 2-4 Diamond, 2-4 Blaze Rod, 1-2 Ghast Tear, 2-4 Magma Cream. **Runas**: 1 Large Rune (tipo aleatorio). **Libros**: Enchanted Book III-IV |
 | Poco Comun (verde) | 25% | **RPG Armor**: 1 pieza T2 aleatoria (Assassin, Berserker, Elemental Robes, Crusader, Prior). **Jewelry**: Netherite Gem Ring/Necklace. **Enchants**: Spell Power, Sunfire, Soulfrost, o Energize enchant book |
-| Raro (azul) | 17% | **Accesorios**: 1 Accesorio custom T3 aleatorio. **Moldes**: 1 Molde de postre 4-5★. **Unique Jewelry**: 1 del pool medio (ver tabla abajo). **RPG**: Netherite Upgrade Smithing Template |
+| Raro (azul) | 17% | **Accesorios**: 1 Accesorio custom T3 aleatorio. **Unique Jewelry**: 1 del pool medio (ver tabla abajo). **RPG**: Netherite Upgrade Smithing Template |
 | Epico (purpura) | 9% | **Accesorios**: 1 Accesorio custom T4 aleatorio. **Unique Jewelry**: 1 del pool completo (cualquiera de 24). **Llaves**: 1 Llave Avanzada |
 | Legendario (dorado) | 4% | **Accesorios**: 1 Accesorio T4 con bonus doble (2 efectos). **Unique Jewelry**: 1 del pool legendario (ver tabla). **RPG**: 1 arma T3 (Netherite) |
 
@@ -166,29 +166,7 @@ Estos items **nunca** aparecen en ninguna maquina gacha:
 | Llave Maestra | Demasiado valiosa | Craft (requiere Esencia) |
 | Llave del Nucleo | Demasiado valiosa | Craft (requiere Fragmento) |
 | RPG T4 gear | Endgame, debe ser crafteado | Craft con materiales de dungeon |
-| Accesorio T5 Maestro (3 unicos) | Reward de bosses finales | Boss Ch7 y Ch8 |
-
-## Moldes de postres (detalle)
-
-7 tipos de molde, cada uno en 5 rarezas (1-5★). Total: 35 moldes.
-
-| Tipo | Recetas que desbloquea |
-|------|----------------------|
-| Molde de Pastel | Pasteles decorados |
-| Molde de Pie | Pies dulces y salados |
-| Molde de Tarta | Tartas francesas |
-| Molde de Galleta | Galletas con forma |
-| Molde de Dona | Donas glaseadas |
-| Molde de Muffin | Muffins y cupcakes |
-| Molde de Flan | Flanes y puddings |
-
-**Obtencion por rareza de molde**:
-- 1-2★: Gacha Basica (Raro), quests, dungeon Basica
-- 3★: Gacha Basica (Epico), Gacha Avanzada (Raro), dungeon Avanzada
-- 4★: Gacha Avanzada (Epico), Gacha Superior (Raro), dungeon Maestra
-- 5★: Gacha Superior (Raro, poco frecuente), dungeon Maestra/Nucleo
-
----
+| Accesorio T5 Maestro (4 unicos, 1 por slot) | Reward de bosses finales | Boss Ch7 y Ch8 |
 
 ## Implementacion con Bloo's Gacha Machine
 

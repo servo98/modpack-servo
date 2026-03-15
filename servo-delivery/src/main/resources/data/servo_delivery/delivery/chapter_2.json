@@ -4,11 +4,11 @@
   "stage_granted": "servo_delivery_ch2",
   "requirements": [
     {
-      "id": "smoothie_box",
+      "id": "cooking_pot_box",
       "item": "servo_packaging:shipping_box",
       "content_tag": "category/food",
       "count": 4,
-      "description": "Caja de Smoothie Variado"
+      "description": "Caja de Comida del Cooking Pot"
     },
     {
       "id": "cheese_box",
@@ -18,11 +18,11 @@
       "description": "Caja de Queso"
     },
     {
-      "id": "dessert_box",
+      "id": "cutting_board_box",
       "item": "servo_packaging:shipping_box",
       "content_tag": "category/food",
       "count": 4,
-      "description": "Caja de Postre"
+      "description": "Caja de Comida del Cutting Board"
     },
     {
       "id": "fermented_box",

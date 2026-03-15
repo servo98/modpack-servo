@@ -31,7 +31,7 @@
 | 16 | Fuego controlado | Cocina | `custom:cocinar algo en el Stove` | 2 PC | #6 |
 | 17 | Maestro del Skillet | Cocina | `item:farmersdelight:fried_egg` | 2 PC | #6 |
 | 18 | Recetario: 5 comidas | Cocina | `custom:comer 5 comidas diferentes (hito Recetario)` | 5 PC + 1 corazon extra | #14 |
-| 19 | Pesca del dia | Cocina | `item:aquaculture:bluegill?` | 2 PC | #1 |
+| 19 | Pesca del dia | Cocina | `item:minecraft:cod` | 2 PC | #1 |
 | 20 | Del mar a la mesa | Cocina | `item:farmersdelight:grilled_salmon?` | 3 PC | #19 |
 
 ### Farming (6)
@@ -90,7 +90,7 @@
 | 45 | Primeras monedas | Coleccion | `item:servo_core:pepe_coin x5` | 2 PC | #1 |
 | 46 | Primera tirada | Coleccion | `custom:hacer primer pull en Gacha Verde` | 3 PC | #9, #45 |
 | 47 | Recetario: primeros pasos | Coleccion | `custom:cocinar 5 comidas unicas (Recetario)` | 2 PC | #14 |
-| 48 | Pescador novato | Coleccion | `custom:pescar 3 tipos de pez con Aquaculture` | 3 PC | #19 |
+| 48 | Pescador novato | Coleccion | `custom:pescar 3 tipos de pez (cod, salmon, pufferfish)` | 3 PC | #19 |
 | 49 | Primera Caja de Envio | Coleccion | `item:servo_packaging:shipping_box` | 2 PC | #8 |
 | 50 | **GATE: Entrega al Space Elevator Ch1** | Coleccion | `custom:completar entrega Ch1 en Terminal y presionar LAUNCH` | 8 PC | #36, #49 |
 

@@ -17,12 +17,12 @@
 ## Tiers (custom servo_core: Belt/Back/Feet/Head)
 | Tier | Nombre | Boost | Cantidad | Obtencion |
 |------|--------|-------|----------|-----------|
-| 1 | Tosco | +5% | 24 | Craft, quests, Gacha Basica (Raro 12%) |
-| 2 | Pulido | +12% | 20 | Gacha Basica (Epico 5%), Gacha Avanzada (Raro 15%), champions |
+| 1 | Tosco | +5% | 15 | Craft, quests, Gacha Basica (Raro 12%) |
+| 2 | Pulido | +12% | 15 | Gacha Basica (Epico 5%), Gacha Avanzada (Raro 15%), champions |
 | 3 | Refinado | +22% + bonus | 12 | Gacha Avanzada (Epico 7%), Gacha Superior (Raro 17%), bosses |
 | 4 | Excepcional | +40% + bonus + visual | 8 | Gacha Superior (Epico 9%), dungeon boss |
 | 5 | Maestro | +70% + 2 bonus + particulas | 4 | Boss Ch7 y Ch8 SOLAMENTE (excluido del gacha) |
-| **Total** | | | **68** | |
+| **Total** | | | **54** | |
 
 ## Effect Families (15 clases Java)
 | Familia | Efecto | Slots |
@@ -45,14 +45,14 @@
 
 ## Work Estimate
 - 15 clases Java + 1 base = ~2,000 lineas
-- 12 pixelarts base x 5 recolores/tier = ~68 texturas
-- 136 strings traduccion (68 x 2 idiomas)
+- 12 pixelarts base x 5 recolores/tier = ~54 texturas
+- 108 strings traduccion (54 x 2 idiomas)
 - ~20-25 horas total
 
 ## Acquisition Over Full Modpack
 | Fuente | Accesorios | Tiers | Detalle |
 |--------|-----------|-------|---------|
-| Craft | 24 | T1 | Recetas vanilla-style |
+| Craft | 15 | T1 | Recetas vanilla-style |
 | Gacha | ~28-30 | T1-T4 | Basica: ~12 (T1-T2), Avanzada: ~10 (T2-T3), Superior: ~6-8 (T3-T4) |
 | Boss drops | 10 | T2-T5 | Bosses de capitulo (T5 solo Ch7-Ch8) |
 | Dungeon boss | 14 | T2-T4 | Cofres y bosses de dungeon |

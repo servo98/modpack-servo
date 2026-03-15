@@ -161,9 +161,9 @@ Cada entrega debe:
 
 | # | Item requerido | Cant. | Como se obtiene |
 |---|---------------|-------|-----------------|
-| 1 | Caja de Smoothie Variado | 4 | Blender (min 2 tipos) -> empacar |
+| 1 | Caja de Comida del Cooking Pot | 4 | Cooking Pot (recetas Ch2) -> empacar |
 | 2 | Caja de Queso | 4 | B&C Flaxen/Scarlet Cheese -> empacar |
-| 3 | Caja de Postre | 4 | Moldes de Postres -> empacar |
+| 3 | Caja de Comida del Cutting Board | 4 | Cutting Board -> empacar |
 | 4 | Caja de Bebida Fermentada | 4 | Keg (Beer, Mead, etc.) -> empacar |
 | 5 | Caja de Comida Variada | 12 | Min 12 tipos diferentes |
 | 6 | Caja de Crops Nuevos | 4 | Crops Croptopia Ch2 -> empacar |
@@ -175,8 +175,8 @@ Cada entrega debe:
 
 | # | Item requerido | Cant. | Como se obtiene |
 |---|---------------|-------|-----------------|
-| 1 | Caja de Bebida del Drink Maker | 6 | Drink Maker -> empacar |
-| 2 | Caja de Horneado Avanzado | 4 | Horno Avanzado -> empacar |
+| 1 | Caja de Comida del Keg | 6 | Keg (recetas Ch3) -> empacar |
+| 2 | Caja de Comida Horneada | 4 | Furnace/Smoker (recetas avanzadas) -> empacar |
 | 3 | Caja de Comida Variada | 16 | Min 16 tipos diferentes |
 | 4 | Caja de Items Prensados | 4 | Mechanical Press output -> empacar |
 | 5 | Caja de Items Molidos | 4 | Millstone output -> empacar |
@@ -252,8 +252,8 @@ Cada entrega debe:
 | Cap | Cajas | Boss drop | Foco de la entrega |
 |-----|-------|-----------|-------------------|
 | 1 | 24 | 1 | Tutorial: cocina + farming basico |
-| 2 | 34 | 1 | Variedad: queso, smoothies, postres, Create basico |
-| 3 | 40 | 1 | Create processing + Nether + bebidas custom |
+| 2 | 34 | 1 | Variedad: queso, cutting board, cooking pot, Create basico |
+| 3 | 40 | 1 | Create processing + Nether + keg avanzado |
 | 4 | 39 | 1 | Brass + feasts + RPG spec |
 | 5 | 50 | 1 | RS + enchants + escala industrial |
 | 6 | 59 | 1 | Netherite + multi-step + Nether factory |

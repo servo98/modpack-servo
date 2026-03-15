@@ -3,7 +3,7 @@
 > Modulo: **servo_packaging** (mod standalone, 0 dependencias). Create compat en servo_create addon.
 > Sin GUI en las cajas — interaccion inmersiva en el mundo (estilo Cooking Pot de FD)
 > Relacionado: [Terminal de Entrega](space-elevator.md), [Create Automation](create-automation.md), [Cooking](cooking.md), [Architecture](../architecture.md)
-> Estado: **CODIGO COMPLETO** — ver [docs/status/servo-packaging.md](../status/servo-packaging.md)
+> Estado: **CODIGO COMPLETO** — pendiente: assets de artista
 
 ---
 

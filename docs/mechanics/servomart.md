@@ -46,7 +46,7 @@ Ambos coexisten: gacha para la emocion del azar, PepeMart para compra directa co
 - Precio bajo-medio
 
 ### Plushies / Figuritas
-- Plushables mod (45+ plushies interactivos con sonidos)
+- Plushables mod (49 plushies interactivos con sonidos)
 - Algunos exclusivos de PepeMart, otros exclusivos de Gacha Rosa
 - Coleccionables decorativos
 - Precio bajo-medio
@@ -59,8 +59,6 @@ Ambos coexisten: gacha para la emocion del azar, PepeMart para compra directa co
 
 ### Items QoL / Consumibles
 - Items de conveniencia que no vale la pena craftear
-- Moldes de postres 1-2 estrellas
-- Llaves de Dungeon Basicas
 - Precio variable
 
 ## Desbloqueo por capitulo
@@ -69,8 +67,8 @@ Ambos coexisten: gacha para la emocion del azar, PepeMart para compra directa co
 |-----|---------------------------|
 | 2 | Macaw's Furniture basico, plushies comunes |
 | 3 | Refurbished funcional (nevera, estufa, fregadero), accesorios T1 |
-| 4 | Macaw's Windows completo, accesorios T2, moldes 1-2 estrellas |
-| 5 | Create Deco, Refurbished completo, llaves basicas |
+| 4 | Macaw's Windows completo, accesorios T2 |
+| 5 | Create Deco, Refurbished completo |
 | 6+ | Todo disponible |
 
 ## Precios sugeridos (materiales)
@@ -84,8 +82,6 @@ Ambos coexisten: gacha para la emocion del azar, PepeMart para compra directa co
 | Plushie raro | Ender Dragon Plush | 16 Wool + 4 Ender Pearl |
 | Accesorio T1 | Cinturon de Cobre | 32 Iron + 8 Gold + 16 crops |
 | Accesorio T2 | Capa de Hierro | 12 Diamond + 24 Gold + 32 Iron |
-| Molde 1-2 estrellas | Molde de Pastel | 16 Iron + 8 Clay |
-| Llave Basica | Llave de Dungeon | 24 Gold + 8 Diamond |
 
 ## Configuracion via JSON (datapack)
 
@@ -143,8 +139,7 @@ Campos por entrada:
 | Accesorios T3-T5 | Demasiado poderosos | Gacha Azul/Purpura, bosses, dungeons |
 | Unique Jewelry | Coleccionables escasos | Gacha Azul/Purpura, dungeons |
 | Armas RPG | Pilar RPG separado | Gacha, craft, dungeons |
-| Moldes 3-5 estrellas | Demasiado valiosos | Gacha Avanzada/Superior, dungeons |
-| Llaves Avanzada+ | Progresion de dungeon | Gacha Purpura, craft |
+| Llaves de Dungeon | Se craftean con materiales | Craft (4 Iron + 2 Gold la Basica) |
 | Materiales/gemas | Se farmean | Overworld, gacha |
 | Plushies legendarios | Exclusivos de gacha | Gacha Rosa (Legendario 1%) |
 

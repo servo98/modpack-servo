@@ -15,35 +15,12 @@ Pilar central del modpack. Cocinar a mano es **divertido** (Perfil B), Create es
 | Brewin' And Chewin' | Keg: fermentacion, quesos, bebidas alcoholicas. 36 items | Ch2 |
 | Expanded Delight | Juicer, mas crops y recetas FD. 60 items | Ch3 |
 | Croptopia | ~60 crops (recetas ELIMINADAS, solo ingredientes) | Ch2+ (gradual) |
-| Aquaculture 2 | 30+ peces, tag generico #c:fish | Siempre |
 | FTB Quests (Recetario) | Variedad = corazones permanentes via quest rewards | Siempre (capitulo propio en quest book) |
 | Slice & Dice | Automatizar cocina con Create | Ch3 |
 
-## 4 Workstations custom (servo_cooking)
+## servo_cooking (workstations TBD)
 
-### Batidora/Blender (Ch2)
-- 4 ingredientes + 1 fluido → 1 output
-- 100 ticks (5 seg), sin calor
-- Recetas: smoothies, salsas, jugos, mezclas
-- Compatible: Hopper, Create Funnel, RS Exporter
-
-### Moldes de Postres (Ch2)
-- 1 masa + 1 relleno + 1 molde (no consume) → 1 output
-- Moldes coleccionables: 7 tipos, 5 rarezas
-- Calidad 1-5 estrellas (afecta stats): `nutrition = base * (1 + 0.2 * (stars - 1))`
-- Obtencion moldes: gacha, bosses, quests
-
-### Drink Maker (Ch3)
-- 1 base + 3 extras + 1 vaso → 1 output
-- **Orden de extras IMPORTA** (mecanica repetitiva satisfactoria)
-- Efectos: Cafe=Speed, Te=Regen, Chocolate=Resistance, Smoothie=Saturation
-
-### Horno Avanzado (Ch3)
-- 3 ingredientes → 1 output
-- 3 modos: Hornear, Rostizar, Gratinar
-- **Temperatura slider 1-10** (correcta=perfecto, +3=quemado)
-- Receta muestra "Media-Alta" (descubrimiento, no numero exacto)
-- Requiere calor: Blaze Burner, lava, o fuego debajo
+Las workstations custom de servo_cooking estan en fase de diseno. Se decidiran despues de analizar que gaps dejan los mods existentes (FD, B&C, ED).
 
 ## Crops y recetas por capitulo
 

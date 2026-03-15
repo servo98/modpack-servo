@@ -50,7 +50,6 @@ Cada tier necesita drop del tier anterior → **cadena de progresion natural**.
 | Runas basicas | cofres | 30% |
 | Enchanted Books I-II | cofres | 20% |
 | Accesorio custom T1 | cofres raros | 10% |
-| Molde postre 1-2 estrellas | cofres raros | 5% |
 
 ### Avanzada (Ch3+) — todo lo de Basica +
 | Drop | Fuente | Chance |
@@ -69,7 +68,6 @@ Cada tier necesita drop del tier anterior → **cadena de progresion natural**.
 | Accesorio custom T3 | cofres raros | 12% |
 | Esencia de Dungeon (x2-3) | champions | 25% |
 | Unique Jewelry | cofre final | 15% |
-| Moldes 4-5 estrellas | cofres raros | 8% |
 
 ### Del Nucleo (Ch7+) — todo lo de Maestra +
 | Drop | Fuente | Chance |
@@ -87,7 +85,6 @@ Cada tier necesita drop del tier anterior → **cadena de progresion natural**.
 | Unique Jewelry (24 items) | Avanzada (5%) | Mejor equipo rings/necklaces |
 | Fragmento de Cristal del Nucleo | Del Nucleo | RPG Tier 4 (endgame) |
 | Accesorio custom T4-T5 | Maestra/Nucleo | Mejores accesorios |
-| Moldes 4-5 estrellas | Maestra/Nucleo | Mejores moldes postres |
 
 ## Anti-skip de tiers
 

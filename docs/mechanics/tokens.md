@@ -21,7 +21,10 @@ Pepe Coin = moneda universal del modpack. Conecta todos los sistemas.
 | Boss Ch6 (Senor de las Cosechas) | 50-70 | Por kill |
 | Boss Ch7 (Nucleo del Dungeon) | 60-80 | Por kill |
 | Boss Ch8 (Devorador de Mundos) | 100+ | Por kill |
-| Dungeon runs | 5-15 por run | Por run |
+| Dungeon run Basica | 5-10 por run | Por run |
+| Dungeon run Avanzada | 10-20 por run | Por run |
+| Dungeon run Maestra | 20-35 por run | Por run |
+| Dungeon run Del Nucleo | 35-50 por run | Por run |
 | Comidas nuevas (primera vez) | 1 | Una vez |
 
 ## Sinks (como se gastan)
@@ -32,7 +35,6 @@ Pepe Coin = moneda universal del modpack. Conecta todos los sistemas.
 | Gacha Avanzada (Azul) | 10 tokens/pull |
 | Gacha Superior (Purpura) | 15 tokens/pull |
 | Gacha Muebles (Rosa) | 5 tokens/pull |
-| Crafteo Llaves avanzadas | Variable |
 Ver [Gacha](gacha.md) para pools de cada maquina.
 
 > **Nota**: PepeMart NO usa Pepe Coins. Usa materiales (iron, diamond, etc.) configurable via JSON. Ver [PepeMart](servomart.md) y [catalogo completo](../balance/pepemart-catalog.md).
@@ -40,6 +42,7 @@ Ver [Gacha](gacha.md) para pools de cada maquina.
 ## Balance por capitulo
 
 - ~150 tokens por capitulo
-- Distribucion tipica: ~8 pulls artefactos (80-120 tokens) + ~4 pulls muebles (20 tokens) + 1-2 llaves dungeon
+- Distribucion tipica: ~10 pulls artefactos (100-130 tokens) + ~4 pulls muebles (20 tokens)
+- Llaves de dungeon se craftean con materiales, no consumen tokens
 - Primera pity (50 pulls en una maquina) alcanzable en Ch3-4
 - El jugador decide como repartir tokens entre las maquinas disponibles

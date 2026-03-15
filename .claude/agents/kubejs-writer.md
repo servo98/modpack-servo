@@ -27,7 +27,7 @@ Cocina: farmersdelight, brewinandchewin, expandeddelight, croptopia, solonion, s
 Automatizacion: create, createaddition, createdeco, create_enchantment_industry
 Storage: storagedrawers, toms_storage, refinedstorage
 RPG: spell_engine, spell_power, wizards, rogues, paladins, runes, jewelry
-Exploracion: alexsmobs, supplementaries, dimdungeons, lootr
+Exploracion: alexsmobs, dimdungeons, lootr
 Gacha: gachamachine
 
 ## Al escribir scripts

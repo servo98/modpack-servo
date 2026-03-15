@@ -13,9 +13,9 @@ Progresion gateada por **8 capitulos** usando ProgressiveStages. Cada capitulo s
 
 | Stage | Trigger | Desbloquea (resumen) |
 |-------|---------|---------------------|
-| servo_ch1 | Default (mundo nuevo) | Vanilla, FD basico, Supplementaries basico, Aquaculture, QoL, Spell Engine T0, Small Rune Pouch, Copper/Iron Ring |
-| servo_ch2 | Boss Ch1 + Delivery Ch1 | Croptopia 12, B&C, Blender, Moldes, Create basico, Drawers, Rogue/Warrior, T1 melee, Gold/Citrine/Jade jewelry |
-| servo_ch3 | Boss Ch2 + Delivery Ch2 | Frutas, Create andesite, Slice&Dice, Tom's, Drink Maker, Horno, Wizard/Paladin/Priest, T1 magico, **T2 melee** (Diamond melee gear), Llave Avanzada |
+| servo_ch1 | Default (mundo nuevo) | Vanilla, FD basico, QoL, Spell Engine T0, Small Rune Pouch, Copper/Iron Ring |
+| servo_ch2 | Boss Ch1 + Delivery Ch1 | Croptopia 12, B&C, Create basico, Drawers, Rogue/Warrior, T1 melee, Gold/Citrine/Jade jewelry |
+| servo_ch3 | Boss Ch2 + Delivery Ch2 | Frutas, Create andesite, Slice&Dice, Tom's, Wizard/Paladin/Priest, T1 magico, **T2 melee** (Diamond melee gear), Llave Avanzada |
 | servo_ch4 | Boss Ch3 + Delivery Ch3 | Especias, Create brass+steam, Feasts, Skill Tree, **T2 magico** (Diamond staves/robes), Tanzanite/Topaz/Diamond/Emerald jewelry |
 | servo_ch5 | Boss Ch4 + Delivery Ch4 | Exoticos, RS, Trains, Enchantment Industry, Enchants magicos, Pociones Spell Power, Llave Maestra, Netherite jewelry |
 | servo_ch6 | Boss Ch5 + Delivery Ch5 | Avanzados, enchant V, T3 Netherite upgrades, Tipped Arrows Spell Power |
@@ -79,8 +79,8 @@ Cada capitulo desbloquea contenido de TODOS los pilares. No hay "capitulo de Cre
 | Cap | Workstations nuevas | Recetas nuevas aprox |
 |-----|--------------------|-----------------------|
 | 1 | Cutting Board, Cooking Pot, Stove, Skillet (FD) | ~25 |
-| 2 | Blender, Moldes de Postres (custom) + B&C Keg | +30 |
-| 3 | Drink Maker, Horno Avanzado (custom) + Expanded Delight | +25 |
+| 2 | B&C Keg | +30 |
+| 3 | Expanded Delight | +25 |
 | 4 | FD Feasts + recetas con especias | +20 |
 | 5 | Recetas exoticas | +15 |
 | 6 | Recetas avanzadas con ingredientes raros | +10 |
@@ -130,7 +130,7 @@ Cada capitulo desbloquea contenido de TODOS los pilares. No hay "capitulo de Cre
 | 2 | Basica | Mismo tier, mas variedad de loot |
 | 3 | + Avanzada | 10-14 salas, champions 2 affix, Esencia de Dungeon, 5% unique jewelry |
 | 4 | Basica + Avanzada | Loot actualizado a Ch4 |
-| 5 | + Maestra | 15-20 salas, champions 3 affix, 15% unique jewelry, moldes 4-5 estrellas |
+| 5 | + Maestra | 15-20 salas, champions 3 affix, 15% unique jewelry |
 | 6 | Basica + Avanzada + Maestra | Loot actualizado a Ch6 |
 | 7 | + Del Nucleo | 20-25 salas + boss de dungeon, champions exclusivos, unique jewelry garantizada |
 | 8 | Todas | Loot endgame, T4 materials |
@@ -139,8 +139,8 @@ Cada capitulo desbloquea contenido de TODOS los pilares. No hay "capitulo de Cre
 
 | Cap | Que se desbloquea |
 |-----|-------------------|
-| 1 | Supplementaries basico (rope, jar, sign post, soap) |
-| 2 | + Macaw's Furniture basico + Supplementaries completo |
+| 1 | Macaw's Furniture basico |
+| 2 | + Macaw's Furniture completo |
 | 3 | + Refurbished Furniture basico (funcional: nevera, estufa, fregadero) |
 | 4 | + Macaw's Windows completo |
 | 5 | + Create Deco + Refurbished completo |

@@ -44,7 +44,7 @@ Resumen: Item Maestro, comidas legendarias, arma T4, trofeos de todos los bosses
   3. Cocina buff: comer comida especial para resist buff
   4. DPS race: enrage timer, maximo dano posible
 
-## Quests (~50)
+## Quests (~48)
 
 ### Historia/Final (10)
 1. Preparacion para el boss final
@@ -58,15 +58,14 @@ Resumen: Item Maestro, comidas legendarias, arma T4, trofeos de todos los bosses
 9. Celebracion: cutscene/creditos
 10. Post-game: desafios extra
 
-### Cocina (8)
+### Cocina (7)
 1. Cocinar receta legendaria
 2. Completar 100% de comidas (FTB Quests Recetario: +10 corazones, max 20 hearts)
 3. Comer 130+ comidas diferentes
 4. Preparar buff de comida para boss final
 5. Automatizar produccion de todas las comidas
-6. Completar coleccion de postres (todos los moldes)
-7. Completar coleccion de bebidas
-8. Mega produccion para entrega final
+6. Completar coleccion de bebidas
+7. Mega produccion para entrega final
 
 ### Farming (6)
 1. Desbloquear todos los crops restantes
@@ -103,9 +102,8 @@ Resumen: Item Maestro, comidas legendarias, arma T4, trofeos de todos los bosses
 3. Display completo de unique jewelry
 4. Factory endgame optimizada
 
-### Coleccion (5)
+### Coleccion (4)
 1. 24/24 unique jewelry
 2. Todos los accesorios T5
 3. 130+ comidas unicas (Recetario: hito final)
-4. Todos los moldes de postre
-5. Completar entrega final al Space Elevator
+4. Completar entrega final al Space Elevator

@@ -9,7 +9,7 @@ Cocina expandida. Create basico. Primeros Drawers. Elegir clase melee (Rogue o W
 
 ## Mods nuevos
 
-Croptopia (12 crops), Brewin' And Chewin', Blender (custom), Moldes (custom), Storage Drawers, Create basico, Macaw's Furniture basico, Rogues & Warriors (class books), Jewelry (gemas)
+Croptopia (12 crops), Brewin' And Chewin', Storage Drawers, Create basico, Macaw's Furniture basico, Rogues & Warriors (class books), Jewelry (gemas)
 
 ## Contenido
 
@@ -17,7 +17,7 @@ Croptopia (12 crops), Brewin' And Chewin', Blender (custom), Moldes (custom), St
 |------|---------|
 | Crops | +12 (24 total). Croptopia: lettuce, corn, strawberry, blueberry, grape, etc |
 | Recetas | +30 (smoothies, quesos, postres) |
-| Workstations | Blender, Moldes de Postres, B&C Keg |
+| Workstations | B&C Keg |
 | Create | Basico: Water Wheel, Shaft, Cogwheel, Belt, Depot, Andesite Funnel |
 | Storage | Storage Drawers basicos |
 | RPG | Rogue + Warrior (T1 melee). Arms Station |
@@ -33,31 +33,26 @@ Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevato
 
 Resumen: Cajas de comida variada (smoothies, quesos, postres), crops nuevos, Mandibula de la Bestia (boss drop).
 
-## Quests (~50)
+## Quests (~43)
 
-### Historia/Tutorial (12)
+### Historia/Tutorial (10)
 1. Introduccion a Croptopia
-2. Tutorial: Blender/Batidora
-3. Tutorial: Moldes de Postres
-4. Tutorial: Keg (fermentacion)
-5. Tutorial: Storage Drawers
-6. Tutorial: Create basico (Water Wheel)
-7. Tutorial: Create belts y shafts
-8. Tutorial: Class books (elegir melee)
-9. Tutorial: Arms Station
-10. Tutorial: Jewelry (gemas)
-11. Explicar tier 1 gear
-12. Explicar Citrine/Jade ores
+2. Tutorial: Keg (fermentacion)
+3. Tutorial: Storage Drawers
+4. Tutorial: Create basico (Water Wheel)
+5. Tutorial: Create belts y shafts
+6. Tutorial: Class books (elegir melee)
+7. Tutorial: Arms Station
+8. Tutorial: Jewelry (gemas)
+9. Explicar tier 1 gear
+10. Explicar Citrine/Jade ores
 
-### Cocina (8)
-1. Hacer un smoothie en el Blender
-2. Hacer 3 smoothies diferentes
-3. Usar Molde para hacer un postre
-4. Hacer queso en el Keg
-5. Fermentar una bebida alcoholica
-6. Comer 15 comidas diferentes (FTB Quests Recetario: +2 corazones)
-7. Hacer una receta de Croptopia (usando ingredientes)
-8. Preparar Cajas de Queso
+### Cocina (5)
+1. Hacer queso en el Keg
+2. Fermentar una bebida alcoholica
+3. Comer 15 comidas diferentes (FTB Quests Recetario: +2 corazones)
+4. Hacer una receta de Croptopia (usando ingredientes)
+5. Preparar Cajas de Queso
 
 ### Farming (6)
 1. Plantar 4 crops nuevos de Croptopia
@@ -67,12 +62,11 @@ Resumen: Cajas de comida variada (smoothies, quesos, postres), crops nuevos, Man
 5. Granja de uvas
 6. Automatizar riego (si aplica)
 
-### Dungeon (5)
+### Dungeon (4)
 1. Hacer 3 dungeon runs Basicas
 2. Obtener accesorio T1 de dungeon
 3. Obtener runas de dungeon
 4. Acumular 20 Pepe Coins de dungeons
-5. Encontrar un molde de postre en dungeon
 
 ### Combate/RPG (5)
 1. Elegir clase melee (Rogue o Warrior)
@@ -92,11 +86,10 @@ Resumen: Cajas de comida variada (smoothies, quesos, postres), crops nuevos, Man
 1. Crear sala de Storage Drawers
 2. Instalar primer Water Wheel
 3. Conectar Create belt
-4. Mejorar la cocina con Blender y Keg
+4. Mejorar la cocina con Keg
 
-### Coleccion (5)
+### Coleccion (4)
 1. Hacer 5 pulls de gacha
-2. Obtener 3 moldes de postres
-3. Equipar primer ring de gema
-4. Completar 20 comidas unicas (Recetario: avanzar hitos)
-5. Completar entrega al Space Elevator Ch2
+2. Equipar primer ring de gema
+3. Completar 20 comidas unicas (Recetario: avanzar hitos)
+4. Completar entrega al Space Elevator Ch2

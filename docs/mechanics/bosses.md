@@ -291,7 +291,6 @@ public class BossPhaseManager {
 | Semilla del Bosque (trophy + quest proof) | 100% |
 | Drop de Boss Ch1 (para Llave Avanzada en Ch3) | 100% |
 | Accesorio custom T1 (belt/back/feet/head aleatorio) | 30% |
-| Molde de postre 2 estrellas | 20% |
 | Runa Arcane x4 | 40% |
 
 ### Animaciones GeckoLib
@@ -367,7 +366,6 @@ La Bestia tiene un medidor de **Saciedad** (barra verde visible, 0%-100%, empiez
 | 25-35 Pepe Coins | 100% |
 | Mandibula de la Bestia (trophy) | 100% |
 | Drop de Boss Ch2 (para Llave Avanzada) | 100% |
-| Molde de postre 3 estrellas | 25% |
 | Accesorio T2 (belt/back/feet/head) | 20% |
 | Receta: "Estofado de la Bestia" (unica, +4 corazones temp) | 15% |
 
@@ -778,7 +776,6 @@ Lluvia de Shards ahora 8 shards. Rayo Prismatico rebota en Espejos.
 | Fragmento Central (trophy) | 100% |
 | Unique Jewelry aleatoria (de las 24) | 50% |
 | Accesorio T4-T5 | 25% |
-| Molde de postre 5 estrellas | 20% |
 
 ### Animaciones GeckoLib
 | Nombre | Tipo | Duracion | Notas |

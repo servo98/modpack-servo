@@ -44,10 +44,8 @@ MODS = [
     ("create-slice-and-dice", "slice-and-dice"),
     ("botany-pots", "botany-pots"),
     ("mystical-agriculture", "mystical-agriculture"),
-    ("aquaculture", "aquaculture"),
     # Tier 4: Exploration
     ("alexs-mobs", "alexs-mobs"),
-    ("supplementaries", "supplementaries"),
     ("dimensional-dungeons", None),  # Might not be on Modrinth
     ("lootr", "lootr"),
     # Tier 5: Create

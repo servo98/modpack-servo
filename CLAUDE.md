@@ -38,7 +38,6 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 | Mods | `docs/design/mod-decisions.md` | Cada mod con su razon de ser |
 | Balance | `docs/balance/*.md` | combat-scaling, gacha-rates, accessories, rpg-weapon-stats |
 | RPG Series | `docs/mod-data/rpg-series-content.md` | Clases, spells, tiers (datos de JARs) |
-| Blockers | `docs/blockers.md` | Problemas que bloquean progreso |
 | Historial | `git log` | Commits = registro de sesiones (reemplaza session-log.md) |
 | Assets | `assets/` | Drop folder para artista. Subcarpetas por mod. Ver `assets/README.md` |
 | Mecanicas | `docs/mechanics/*.md` | 21 docs, una por mecanica |
@@ -48,7 +47,9 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 - `servo-packaging/` — mod Java standalone (COMPLETO v0.3.0)
 - `servo-delivery/` — mod Java in-progress (scaffold+GUI completo)
 - `servo-core/` — mod Java glue (scaffold)
-- Futuros: `servo-cooking/`, `servo-create/`, `servo-dungeons/`, `servo-mart/`
+- `servo-create/` — mod Java (scaffold completo, requiere testing)
+- `servo-dungeons/` — mod Java (scaffold parcial — altar, keys, dimension, room gen)
+- Futuros: `servo-cooking/`, `servo-mart/`
 - `modpack/kubejs/` — scripts KubeJS
 - `modpack/config/` — configs de mods
 - `modpack/mods/` — JARs de mods
@@ -71,29 +72,27 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 | `mod-researcher` | ANTES de sugerir cualquier mod nuevo. Verifica NeoForge 1.21.1. |
 | `issue-manager` | Al crear/actualizar issues. Detecta duplicados, mantiene formato estandar. |
 | `accessory-modeler` | Al crear modelos 3D de accesorios (gorros, cinturones, anillos, mochilas) via Blockbench MCP. |
+| `quest-builder` | Al generar archivos SNBT de FTB Quests a partir de docs/chapters/. |
 
 ## Comandos disponibles (.claude/commands/)
 | Comando | Cuando usarlo |
 |---------|--------------|
 | `/todo [idea]` | Capturar tareas futuras rapido. Invoca `issue-manager` con `priority:low`. |
-| `/session-start` | Inicio de sesion. Muestra issues, blockers y estado de mods. |
+| `/session-start` | Inicio de sesion. Muestra issues y estado de mods. |
 
 ## Persistencia entre sesiones
 
 ### Al INICIO
 Usar `/session-start` o ejecutar manualmente:
 1. `gh issue list --repo servo98/modpack-servo --state open --limit 20` (tareas pendientes)
-2. Leer `docs/blockers.md` (problemas activos)
 
 ### Al FINAL
 1. Invocar `doc-keeper` (sync de docs, redundancias, consistencia)
 2. Commitear cambios con mensaje descriptivo (git = registro de sesiones)
 3. Si cambio diseno/estado → actualizar MEMORY.md
-4. Si se resolvio un blocker → mover a "Resueltos" en blockers.md
 
 ### Reglas de archivos de estado
-- **GitHub Issues** = fuente de verdad de tareas. Filtrar por label: `gh issue list --label "mod:delivery"`. **NO cerrar manualmente** — se cierran solos al pushear commits con `Fixes #X` en el mensaje.
-- **blockers.md** = fuente de verdad de problemas. Solo problemas que bloquean progreso real.
+- **GitHub Issues** = fuente de verdad de tareas y blockers. Filtrar por label: `gh issue list --label "mod:delivery"`. **NO cerrar manualmente** — se cierran solos al pushear commits con `Fixes #X` en el mensaje.
 - **git log** = registro de sesiones. Cada commit documenta que se hizo.
 - NO repetir la misma info en multiples archivos.
 

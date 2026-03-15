@@ -13,7 +13,7 @@
 | Macaw's Windows | ~25 tipos | x10-20 variantes | 310 |
 | Refurbished Furniture | ~55 tipos | x10-26 variantes | 473 |
 | Create Deco | ~60 tipos | x6-16 variantes | 409 |
-| Accesorios custom (servo_core) | 68 items | 5 tiers x 4 slots x 15 efectos | 68 |
+| Accesorios custom (servo_core) | 54 items | 5 tiers x 4 slots (efectos varian por tier) | 54 |
 | **Total** | **~290 tipos** | | **~1,964** |
 
 > **Nota**: Macaw's Bridges, Roofs y Trapdoors NO estan instalados. Solo Furniture y Windows.
@@ -374,28 +374,6 @@ Solo bloques decorativos industriales. Bricks/slabs/stairs se craftean normalmen
 
 ---
 
-## 7. OTROS ITEMS EN PEPEMART (no muebles ni accesorios)
-
-| # | Item | Fuente | PepeMart | Cap | Precio PepeMart |
-|---|------|--------|----------|-----|-----------------|
-| 1 | Molde de Pastel 1★ | servo_core | Si | 4 | 16 Iron + 8 Clay |
-| 2 | Molde de Pie 1★ | servo_core | Si | 4 | 16 Iron + 8 Clay |
-| 3 | Molde de Tarta 1★ | servo_core | Si | 4 | 16 Iron + 8 Clay |
-| 4 | Molde de Galleta 1★ | servo_core | Si | 4 | 16 Iron + 8 Clay |
-| 5 | Molde de Dona 1★ | servo_core | Si | 4 | 16 Iron + 8 Clay |
-| 6 | Molde de Muffin 1★ | servo_core | Si | 4 | 16 Iron + 8 Clay |
-| 7 | Molde de Flan 1★ | servo_core | Si | 4 | 16 Iron + 8 Clay |
-| 8 | Molde de Pastel 2★ | servo_core | Si | 4 | 8 Gold + 16 Iron + 8 Clay |
-| 9 | Molde de Pie 2★ | servo_core | Si | 4 | 8 Gold + 16 Iron + 8 Clay |
-| 10 | Molde de Tarta 2★ | servo_core | Si | 4 | 8 Gold + 16 Iron + 8 Clay |
-| 11 | Molde de Galleta 2★ | servo_core | Si | 4 | 8 Gold + 16 Iron + 8 Clay |
-| 12 | Molde de Dona 2★ | servo_core | Si | 4 | 8 Gold + 16 Iron + 8 Clay |
-| 13 | Molde de Muffin 2★ | servo_core | Si | 4 | 8 Gold + 16 Iron + 8 Clay |
-| 14 | Molde de Flan 2★ | servo_core | Si | 4 | 8 Gold + 16 Iron + 8 Clay |
-| 15 | Llave Dungeon Basica | servo_dungeons | Si | 5 | 24 Gold + 8 Diamond |
-
-> Moldes 3-5★ y Llaves Avanzada+ son **exclusivos de gacha y dungeon**. No se venden en PepeMart.
-
 ---
 
 ## Resumen total por sistema
@@ -403,7 +381,7 @@ Solo bloques decorativos industriales. Bricks/slabs/stairs se craftean normalmen
 | Contenido | PepeMart | Gacha Rosa | Gacha Combate | Dungeon/Boss |
 |-----------|---------|------------|---------------|-------------|
 | Plushies comunes (24) | Si | Comun/Poco Comun | — | — |
-| Plushies gacha-only (20) | **No** | Poco Comun | — | — |
+| Plushies gacha-only (25) | **No** | Poco Comun | — | — |
 | Plushies epicos (8) | **No** | Epico | — | — |
 | Plushies legendarios (5) | **No** | Legendario | — | — |
 | Macaw's Furniture (33 tipos) | Si | Comun-Raro | — | — |
@@ -416,9 +394,6 @@ Solo bloques decorativos industriales. Bricks/slabs/stairs se craftean normalmen
 | Accesorios T3 (12) | **No** | — | Azul/Purpura | Si |
 | Accesorios T4 (8) | **No** | — | Purpura | Si |
 | Accesorios T5 (4) | **No** | — | **No** | Si (boss) |
-| Moldes 1-2★ (14) | Si | — | Verde | Si |
-| Moldes 3-5★ (21) | **No** | — | Azul/Purpura | Si |
-| Llaves Basicas | Si (caro) | — | Verde | — |
-| Llaves Avanzada+ | **No** | — | Purpura | — |
+| Llaves de Dungeon | **No** (se craftean con materiales) | — | — | — |
 | Unique Jewelry (24) | **No** | — | Azul/Purpura | Si |
 | Armas RPG | **No** | — | Verde/Azul/Purpura | Si |

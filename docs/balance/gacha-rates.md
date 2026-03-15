@@ -12,16 +12,17 @@
 | Delivery capitulo | 15 | 10% |
 | Recetas nuevas (~15/cap) | 15 | 10% |
 | Champions overworld | 25 | 17% |
-| Dungeon runs (~3/cap) | 40 | 27% |
+| Dungeon runs (~3/cap, promedio all tiers) | 40 | 27% |
 | **Total** | **150** | 100% |
 
 ### Sinks (150 tokens/capitulo)
 | Gasto | Tokens | % |
 |-------|--------|---|
-| Gacha artefactos (~8 pulls) | 80-120 | ~65% |
+| Gacha artefactos (~10 pulls) | 100-130 | ~83% |
 | Gacha muebles (~4 pulls) | 20 | ~13% |
-| Dungeon keys (1-2) | 15-30 | ~17% |
-| **Total** | **~150** | 100% |
+| **Total** | **~150** | ~100% |
+
+> Llaves de dungeon se craftean con materiales, no consumen tokens. Ver [dungeons.md](../mechanics/dungeons.md).
 
 > Nota: Los sinks varian segun el jugador. Algunos priorizaran muebles, otros gacha avanzada. Los numeros son promedios.
 > **PepeMart NO consume tokens** — usa materiales. Ver [catalogo](pepemart-catalog.md).
@@ -33,7 +34,6 @@
 | 1 pull Avanzada (Azul) | 10 tokens |
 | 1 pull Superior (Purpura) | 15 tokens |
 | 1 pull Muebles (Rosa) | 5 tokens |
-| Dungeon key Basica | 15 tokens |
 
 ## Rates por maquina
 
@@ -42,8 +42,8 @@
 |--------|------|-----------------|
 | Comun | 55% | Materiales vanilla, ingredientes, runas small |
 | Poco Comun | 25% | Gemas Citrine/Jade, libros I-II, preview crops |
-| Raro | 12% | Accesorio T1, Molde 1-2★, Copper/Iron Ring |
-| Epico | 5% | Accesorio T2, Molde 3★, Gold/Gem Ring |
+| Raro | 12% | Accesorio T1, Copper/Iron Ring |
+| Epico | 5% | Accesorio T2, Gold/Gem Ring |
 | Legendario | 3% | Arma RPG T1, Accesorio T2 especial, Llave Basica |
 
 ### Avanzada (Azul) — Ch3+
@@ -51,8 +51,8 @@
 |--------|------|-----------------|
 | Comun | 50% | Diamond, Amethyst, Blaze Rod, runas medium |
 | Poco Comun | 25% | RPG armor T1, Ruby/Sapphire jewelry, libros II-III |
-| Raro | 15% | Accesorio T2, Molde 3★, RPG armor clase especifica |
-| Epico | 7% | Accesorio T3, Unique Jewelry basica (8/24), Molde 4★ |
+| Raro | 15% | Accesorio T2, RPG armor clase especifica |
+| Epico | 7% | Accesorio T3, Unique Jewelry basica (8/24) |
 | Legendario | 3% | Arma RPG T2, Accesorio T3 especial, Unique Jewelry media |
 
 ### Superior (Purpura) — Ch5+
@@ -60,7 +60,7 @@
 |--------|------|-----------------|
 | Comun | 45% | Netherite Scrap, Diamond, Ghast Tear, runas large |
 | Poco Comun | 25% | RPG armor T2, Netherite jewelry, enchants magicos |
-| Raro | 17% | Accesorio T3, Molde 4-5★, Unique Jewelry media (16/24) |
+| Raro | 17% | Accesorio T3, Unique Jewelry media (16/24) |
 | Epico | 9% | Accesorio T4, Unique Jewelry completa (24/24), Llave Avanzada |
 | Legendario | 4% | Accesorio T4 con bonus doble, Unique Jewelry legendaria, arma T3 |
 
@@ -142,7 +142,7 @@
 | Superior (16 pulls) | — | — | ~3 | ~1-2 | — | ~4-5 |
 | **Total gacha** | **~7** | **~8** | **~6** | **~1-2** | **—** | **~22-23** |
 
-> T5 Maestro (3 items) es exclusivo de Boss Ch7 y Ch8. NO aparece en gacha.
+> T5 Maestro (4 items, 1 por slot) es exclusivo de Boss Ch7 y Ch8. NO aparece en gacha.
 
 ### Unique Jewelry de gacha (lifetime)
 | Fuente | Cantidad esperada |

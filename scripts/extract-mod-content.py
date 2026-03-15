@@ -14,7 +14,6 @@ GAMEPLAY_MODS = {
     "BrewinAndChewin": "brewinandchewin",
     "expandeddelight": "expandeddelight",
     "croptopia": "croptopia",
-    "Aquaculture": "aquaculture",
     "MysticalAgriculture": "mysticalagriculture",
     "Cucumber": "cucumber",
     "create-1.21": "create",

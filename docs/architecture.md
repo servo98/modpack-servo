@@ -15,7 +15,7 @@ Los mods standalone son configurables via JSON/datapacks y no dependen de servo_
 | 1 | `servo_packaging` | servo-packaging | Si | Cajas de carton, Empacadora. Sin Create dep. |
 | 2 | `servo_create` | servo-create | Si | Addon: compat Create <-> packaging (funnels, belts, deployers) |
 | 3 | `servo_delivery` | servo-delivery | Si | Terminal de Entrega (Space Elevator), multibloque |
-| 4 | `servo_cooking` | servo-cooking | Si | 4 workstations: Blender, Moldes, Drink Maker, Horno Avanzado |
+| 4 | `servo_cooking` | servo-cooking | Si | Workstations custom de cocina (TBD) |
 | 5 | `servo_dungeons` | servo-dungeons | Si | Dungeons + Bosses + void instances + ritual altars |
 | 6 | `servo_mart` | servo-mart | Si | Tienda/catalogo dinamico configurable |
 | 7 | `servo_core` | servo-core | No (glue) | Tokens, accesorios, gacha, progression |
@@ -32,7 +32,7 @@ Los mods standalone son configurables via JSON/datapacks y no dependen de servo_
         v                 |  v                  v
 +---------------+ +-------+--------+  +-----------------+
 |servo_dungeons | |servo_delivery  |  | servo_cooking   |
-|dungeons+bosses| |space elevator  |  | 4 workstations  |
+|dungeons+bosses| |space elevator  |  | workstations TBD|
 |GeckoLib       | +-------+--------+  +-----------------+
 +---------------+         | hard dep
                           v
@@ -72,9 +72,9 @@ Los mods standalone son configurables via JSON/datapacks y no dependen de servo_
 - **Deps**: servo_packaging (hard — acepta Cajas de Envio)
 
 ### servo_cooking
-- **Bloques**: Blender, Moldes de Postres, Drink Maker, Horno Avanzado
-- **Recipe Types**: 4 tipos custom (JSON)
-- **Items**: Moldes (7 tipos x 5 rarezas)
+- **Bloques**: TBD
+- **Recipe Types**: TBD
+- **Items**: TBD
 - **Deps**: ninguna
 
 ### servo_dungeons
@@ -145,7 +145,7 @@ modpack-servo/
 Cada mod es configurable sin tocar codigo:
 - `servo_packaging`: tags definen que es empacable y cantidades
 - `servo_delivery`: JSON define entregas por capitulo
-- `servo_cooking`: JSON recipes para cada workstation
+- `servo_cooking`: TBD
 - `servo_dungeons`: .nbt templates, JSON loot tables, boss configs
 - `servo_mart`: JSON catalogo
 

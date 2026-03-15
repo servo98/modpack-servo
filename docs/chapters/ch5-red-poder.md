@@ -31,7 +31,7 @@ Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevato
 
 Resumen: Cajas auto-producidas (RS+Create), items enchantados, Nucleo del Arquitecto (boss drop).
 
-## Quests (~50)
+## Quests (~49)
 
 ### Historia/Tutorial (12)
 1. Tutorial: Refined Storage Controller
@@ -65,12 +65,11 @@ Resumen: Cajas auto-producidas (RS+Create), items enchantados, Nucleo del Arquit
 5. Matar al Wither (Nether Star para Large Pouch)
 6. Optimizar produccion de crops
 
-### Dungeon (5)
+### Dungeon (4)
 1. Craftear primera Llave Maestra
 2. Completar dungeon Maestra
 3. Obtener accesorio T3
 4. Obtener unique jewelry en Maestra (15%)
-5. Obtener Molde de postre 4-5 estrellas en Maestra
 
 ### Combate/RPG (5)
 1. Aplicar enchant magico a arma

@@ -9,10 +9,6 @@ Ejecuta estos pasos en paralelo y presenta un resumen consolidado:
    - Muestra count total y lista los high priority con numero y titulo
    - Issues con label `needs-decision` NO son accionables — marcarlos con ⚠️ y no sugerirlos como trabajo para hoy
 
-2. **Blockers activos**: Lee `docs/blockers.md`
-   - Lista solo los blockers activos (no resueltos)
-   - Si no hay blockers, indicalo
-
 ## Formato de salida
 
 Presenta el resumen asi:
@@ -22,9 +18,6 @@ Presenta el resumen asi:
 
 **Issues abiertos**: N total (X high priority)
 [lista de high priority con #numero y titulo]
-
-**Blockers**: N activos
-[lista corta de cada blocker]
 ```
 
 Al final pregunta: "En que trabajamos hoy?"

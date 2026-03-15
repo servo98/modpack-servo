@@ -4,18 +4,18 @@
   "stage_granted": "servo_delivery_ch3",
   "requirements": [
     {
-      "id": "drink_maker_box",
+      "id": "keg_box",
       "item": "servo_packaging:shipping_box",
       "content_tag": "category/food",
       "count": 6,
-      "description": "Caja de Bebida del Drink Maker"
+      "description": "Caja de Comida del Keg"
     },
     {
-      "id": "baked_box",
+      "id": "baked_food_box",
       "item": "servo_packaging:shipping_box",
       "content_tag": "category/food",
       "count": 4,
-      "description": "Caja de Horneado Avanzado"
+      "description": "Caja de Comida Horneada"
     },
     {
       "id": "varied_food_box",
