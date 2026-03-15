@@ -87,7 +87,7 @@ public class DungeonBeamBlock extends BaseEntityBlock {
             if (dungeonId == null) return;
 
             DungeonManager manager = DungeonManager.getInstance();
-            if (manager == null || !manager.isActive()) return;
+            if (manager == null || !manager.isActive(dungeonId)) return;
 
             // Record cooldown and teleport
             TELEPORT_COOLDOWNS.put(playerId, currentTime);
