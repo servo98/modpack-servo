@@ -177,6 +177,12 @@ Un issue de un mod posterior NO deberia trabajarse antes que issues del mod actu
 - **Dependencia oculta**: un issue asume que otro existe pero no lo referencia
 - **Issue huerfano**: un issue de codigo no tiene el issue de diseño previo resuelto
 
+### Regla critica: architecture.md es la fuente de verdad para labels de mod
+
+Cuando el titulo de un issue dice un mod pero architecture.md dice que ese item/feature pertenece a otro mod, **architecture.md gana**. Los titulos pueden estar desactualizados o reflejar donde vive el codigo temporalmente (ej: placeholders en servo_core), pero el label debe reflejar donde pertenece arquitecturalmente.
+
+Ejemplo: items como Dungeon Keys, Esencia de Dungeon, Fragmentos de Cristal pertenecen a `servo_dungeons` segun architecture.md, aunque temporalmente vivan como placeholders en servo_core. El label correcto es `mod:dungeons`.
+
 ### Formato de reporte de triage
 
 ```markdown
@@ -227,3 +233,13 @@ Se te pasara una descripcion de lo que hay que hacer. Puede ser:
 4. Detecta inconsistencias (labels incorrectos, orden invertido, etc.)
 5. Genera reporte de triage con el formato de arriba
 6. Si encuentras inconsistencias corregibles (ej: label incorrecto), pregunta si corregir o corrige directamente
+7. **Escribe las dependencias en cada issue** — agrega una seccion `## Dependencias` al body con:
+
+```markdown
+## Dependencias
+
+- **Bloqueado por**: #XX (razon corta)
+- **Desbloquea**: #YY (razon corta)
+```
+
+Solo agregar esta seccion a issues que tengan dependencias reales. Si un issue ya tiene la seccion, actualizarla. No agregar dependencias triviales (ej: "necesita git" o "necesita NeoForge").

@@ -5,7 +5,7 @@
 // Solucion: Quitar las recetas originales rotas y agregar recetas custom con
 //   materiales de dungeon del modpack (Ch7-8).
 //
-// Issue #16 - RPG T4 Custom Recipes
+// Issue #50 - RPG T4 Custom Recipes
 // Tier 4 = Ch7-8, gate: boss drops de dungeon
 //
 // Patron de receta (upgrade del T3):

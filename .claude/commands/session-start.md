@@ -7,6 +7,7 @@ Ejecuta estos pasos en paralelo y presenta un resumen consolidado:
 1. **Issues abiertos**: `gh issue list --repo servo98/modpack-servo --state open --limit 30 --json number,title,labels`
    - Agrupa por prioridad: primero `priority:high`, luego el resto
    - Muestra count total y lista los high priority con numero y titulo
+   - Issues con label `needs-decision` NO son accionables — marcarlos con ⚠️ y no sugerirlos como trabajo para hoy
 
 2. **Blockers activos**: Lee `docs/blockers.md`
    - Lista solo los blockers activos (no resueltos)
