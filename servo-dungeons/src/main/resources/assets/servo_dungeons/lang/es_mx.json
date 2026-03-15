@@ -35,5 +35,6 @@
   "item.servo_dungeons.boss_key_ch6": "Llave de Jefe: Capitulo 6",
   "item.servo_dungeons.boss_key_ch7": "Llave de Jefe: Capitulo 7",
   "item.servo_dungeons.boss_key_ch8": "Llave de Jefe: Capitulo 8",
-  "tooltip.servo_dungeons.boss_key_chapter": "Jefe del Capitulo %d"
+  "tooltip.servo_dungeons.boss_key_chapter": "Jefe del Capitulo %d",
+  "message.servo_dungeons.dungeon_complete": "\u00a1Dungeon completado! Un portal de salida ha aparecido."
 }

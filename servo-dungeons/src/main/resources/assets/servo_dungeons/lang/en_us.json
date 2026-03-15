@@ -35,5 +35,6 @@
   "item.servo_dungeons.boss_key_ch6": "Boss Key: Chapter 6",
   "item.servo_dungeons.boss_key_ch7": "Boss Key: Chapter 7",
   "item.servo_dungeons.boss_key_ch8": "Boss Key: Chapter 8",
-  "tooltip.servo_dungeons.boss_key_chapter": "Chapter %d Boss"
+  "tooltip.servo_dungeons.boss_key_chapter": "Chapter %d Boss",
+  "message.servo_dungeons.dungeon_complete": "Dungeon complete! An exit portal has appeared."
 }

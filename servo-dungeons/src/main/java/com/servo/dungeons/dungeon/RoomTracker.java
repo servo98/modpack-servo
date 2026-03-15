@@ -107,4 +107,14 @@ public class RoomTracker {
         long key = DungeonLayout.packGridPos(gridX, gridZ);
         return livingMobs.getOrDefault(key, 0);
     }
+
+    /**
+     * Check if ALL rooms in the dungeon are CLEARED.
+     */
+    public boolean isAllCleared() {
+        for (RoomState state : roomStates.values()) {
+            if (state != RoomState.CLEARED) return false;
+        }
+        return true;
+    }
 }
