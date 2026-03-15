@@ -13,10 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * Server-side singleton managing multiple concurrent dungeon instances.
@@ -32,6 +29,12 @@ public class DungeonManager {
     private final Map<UUID, DungeonInstance> activeInstances = new HashMap<>();
     private final OffsetAllocator offsetAllocator = new OffsetAllocator();
 
+    /** Tracks when each dungeon became empty (no players). Maps dungeonId to game tick. */
+    private final Map<UUID, Long> emptyTimers = new HashMap<>();
+
+    /** 10 minutes in ticks (20 ticks/sec * 60 sec/min * 10 min). */
+    private static final long AUTO_CLOSE_TICKS = 20L * 60 * 10;
+
     private DungeonManager(MinecraftServer server) {
         this.server = server;
     }
@@ -40,6 +43,7 @@ public class DungeonManager {
 
     public static void init(MinecraftServer server) {
         instance = new DungeonManager(server);
+        instance.loadFromSavedData();
         ServoDungeons.LOGGER.info("DungeonManager initialized");
     }
 
@@ -85,10 +89,14 @@ public class DungeonManager {
 
         // Create instance
         UUID id = UUID.randomUUID();
-        DungeonInstance dungeonInstance = new DungeonInstance(id, tier, leader.getUUID(), altarPos, entrancePos, center);
+        long createdTime = server.overworld().getGameTime();
+        DungeonInstance dungeonInstance = new DungeonInstance(id, tier, leader.getUUID(), altarPos, entrancePos, center, createdTime);
         dungeonInstance.setLayout(layout);
         dungeonInstance.setRoomTracker(new RoomTracker(layout));
         activeInstances.put(id, dungeonInstance);
+
+        // Persist to SavedData
+        saveToSavedData();
 
         // Teleport leader to dungeon
         teleportToDungeon(leader, entrancePos, dungeonLevel);
@@ -208,6 +216,12 @@ public class DungeonManager {
             offsetAllocator.release(dungeonInstance.getCenter());
         }
 
+        // Remove from SavedData
+        if (overworld != null) {
+            DungeonSavedData data = DungeonSavedData.getOrCreate(overworld);
+            data.removeInstance(dungeonId);
+        }
+
         ServoDungeons.LOGGER.info("Dungeon {} ended, players teleported back to overworld", dungeonId);
     }
 
@@ -303,6 +317,129 @@ public class DungeonManager {
             }
         }
         return null;
+    }
+
+    // ==================== Persistence ====================
+
+    /**
+     * Load dungeon state from SavedData after a server restart.
+     * Restores the offset allocator and rebuilds active instances (without layout).
+     */
+    private void loadFromSavedData() {
+        ServerLevel overworld = server.getLevel(Level.OVERWORLD);
+        if (overworld == null) return;
+
+        DungeonSavedData data = DungeonSavedData.getOrCreate(overworld);
+
+        // Restore offset allocator from saved offsets
+        offsetAllocator.restore(data.getUsedOffsets());
+
+        // Restore active instances (without layout — rooms are already placed in world)
+        for (DungeonSavedData.DungeonInstanceData instanceData : data.getInstances().values()) {
+            DungeonTier tier = resolveTier(instanceData.tierName);
+            if (tier == null) {
+                ServoDungeons.LOGGER.warn("Unknown tier '{}' for saved dungeon {}, skipping",
+                        instanceData.tierName, instanceData.id);
+                continue;
+            }
+
+            DungeonInstance restored = new DungeonInstance(
+                    instanceData.id,
+                    tier,
+                    instanceData.leaderId,
+                    instanceData.altarPos,
+                    instanceData.entrancePos,
+                    instanceData.center,
+                    instanceData.createdTime
+            );
+
+            // Re-add all tracked players
+            for (UUID playerId : instanceData.playerIds) {
+                restored.addPlayer(playerId);
+            }
+
+            // Layout is null — the physical rooms remain in the dimension but
+            // DungeonLayout and RoomTracker are lost on restart. This is OK.
+            activeInstances.put(instanceData.id, restored);
+
+            ServoDungeons.LOGGER.info("Restored dungeon instance {} (tier={}, center={})",
+                    instanceData.id, tier.name, instanceData.center);
+        }
+
+        if (!activeInstances.isEmpty()) {
+            ServoDungeons.LOGGER.info("Restored {} dungeon instances from saved data", activeInstances.size());
+        }
+    }
+
+    /**
+     * Save all active instances to SavedData.
+     */
+    private void saveToSavedData() {
+        ServerLevel overworld = server.getLevel(Level.OVERWORLD);
+        if (overworld == null) return;
+
+        DungeonSavedData data = DungeonSavedData.getOrCreate(overworld);
+        for (DungeonInstance inst : activeInstances.values()) {
+            data.saveInstance(inst);
+        }
+    }
+
+    /**
+     * Resolve a tier name string back to the DungeonTier enum.
+     */
+    @Nullable
+    private static DungeonTier resolveTier(String tierName) {
+        for (DungeonTier tier : DungeonTier.values()) {
+            if (tier.name.equals(tierName)) {
+                return tier;
+            }
+        }
+        return null;
+    }
+
+    // ==================== Auto-Close ====================
+
+    /**
+     * Called every server tick. Checks for empty dungeons and auto-closes them
+     * after {@value #AUTO_CLOSE_TICKS} ticks (10 minutes) with no players present.
+     */
+    public void tick() {
+        if (activeInstances.isEmpty()) return;
+
+        long currentTime = server.overworld().getGameTime();
+        List<UUID> toClose = new ArrayList<>();
+
+        for (Map.Entry<UUID, DungeonInstance> entry : activeInstances.entrySet()) {
+            UUID id = entry.getKey();
+            DungeonInstance inst = entry.getValue();
+
+            // Check if any tracked players are actually in the dungeon dimension
+            boolean hasPlayers = false;
+            for (UUID playerId : inst.getPlayerIds()) {
+                ServerPlayer player = server.getPlayerList().getPlayer(playerId);
+                if (player != null && player.level().dimension().equals(DungeonRegistry.DUNGEON_LEVEL_KEY)) {
+                    hasPlayers = true;
+                    break;
+                }
+            }
+
+            if (!hasPlayers) {
+                // Start or check the empty timer
+                emptyTimers.putIfAbsent(id, currentTime);
+                if (currentTime - emptyTimers.get(id) >= AUTO_CLOSE_TICKS) {
+                    toClose.add(id);
+                }
+            } else {
+                // Players are present — reset the timer
+                emptyTimers.remove(id);
+            }
+        }
+
+        for (UUID id : toClose) {
+            ServoDungeons.LOGGER.info("Auto-closing dungeon {} (10 min timeout with no players)", id);
+            endDungeon(id);
+            emptyTimers.remove(id);
+        }
     }
 
     // ==================== Cleanup ====================

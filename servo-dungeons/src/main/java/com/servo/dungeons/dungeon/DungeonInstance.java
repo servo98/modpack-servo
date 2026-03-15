@@ -31,8 +31,13 @@ public class DungeonInstance {
     private boolean active;
     private boolean bossFight;
     private int bossChapter = -1;
+    private final long createdTime;
 
     public DungeonInstance(UUID id, DungeonTier tier, UUID leaderId, BlockPos altarPos, BlockPos entrancePos, BlockPos center) {
+        this(id, tier, leaderId, altarPos, entrancePos, center, -1);
+    }
+
+    public DungeonInstance(UUID id, DungeonTier tier, UUID leaderId, BlockPos altarPos, BlockPos entrancePos, BlockPos center, long createdTime) {
         this.id = id;
         this.tier = tier;
         this.leaderId = leaderId;
@@ -42,6 +47,7 @@ public class DungeonInstance {
         this.entrancePos = entrancePos;
         this.center = center;
         this.active = true;
+        this.createdTime = createdTime;
     }
 
     public UUID getId() {
@@ -129,5 +135,9 @@ public class DungeonInstance {
     public boolean isPlayerInArea(BlockPos pos) {
         return Math.abs(pos.getX() - center.getX()) <= AREA_HALF_SIZE
                 && Math.abs(pos.getZ() - center.getZ()) <= AREA_HALF_SIZE;
+    }
+
+    public long getCreatedTime() {
+        return createdTime;
     }
 }

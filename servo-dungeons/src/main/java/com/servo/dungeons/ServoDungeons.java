@@ -11,6 +11,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import net.neoforged.neoforge.event.server.ServerStoppedEvent;
 import net.neoforged.neoforge.event.tick.LevelTickEvent;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,6 +41,12 @@ public class ServoDungeons {
 
         // Mob death: track kills and mark rooms as CLEARED
         NeoForge.EVENT_BUS.addListener(MobDeathListener::onMobDeath);
+
+        // Tick handler for auto-close timer
+        NeoForge.EVENT_BUS.addListener((ServerTickEvent.Post event) -> {
+            DungeonManager mgr = DungeonManager.getInstance();
+            if (mgr != null) mgr.tick();
+        });
 
         LOGGER.info("Servo Dungeons initialized!");
     }

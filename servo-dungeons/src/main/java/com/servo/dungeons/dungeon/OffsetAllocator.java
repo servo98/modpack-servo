@@ -69,6 +69,28 @@ public class OffsetAllocator {
     }
 
     /**
+     * Restore the allocator state from a set of previously used offsets.
+     * Used when loading from SavedData after a server restart.
+     *
+     * @param offsets the set of X offsets that are currently in use
+     */
+    public void restore(Set<Integer> offsets) {
+        usedOffsets.clear();
+        usedOffsets.addAll(offsets);
+
+        // Recalculate nextCandidate to be past the highest used offset
+        nextCandidate = 0;
+        for (int offset : usedOffsets) {
+            if (offset >= nextCandidate) {
+                nextCandidate = offset + OFFSET_SPACING;
+            }
+        }
+
+        ServoDungeons.LOGGER.debug("OffsetAllocator: restored {} used offsets, nextCandidate={}",
+                usedOffsets.size(), nextCandidate);
+    }
+
+    /**
      * @return the number of currently allocated offsets
      */
     public int getActiveCount() {
