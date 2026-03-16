@@ -31,6 +31,9 @@ neoForge {
 dependencies {
     // servo_core depends on other servo mods (soft deps in production, hard in dev)
     compileOnly project(':servo-packaging')
+
+    // Curios API — compileOnly for CuriosStageEnforcer (soft dep at runtime)
+    compileOnly files("${rootProject.projectDir}/modpack/mods/curios-neoforge-9.5.1+1.21.1.jar")
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

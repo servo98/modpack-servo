@@ -18,5 +18,7 @@
   "item.servo_core.dungeon_key.tier_1": "Abre dungeons de Tier 1",
   "item.servo_core.dungeon_key.tier_2": "Abre dungeons de Tier 2",
   "item.servo_core.dungeon_key.tier_3": "Abre dungeons de Tier 3",
-  "item.servo_core.dungeon_key.tier_4": "Abre el dungeon del Nucleo"
+  "item.servo_core.dungeon_key.tier_4": "Abre el dungeon del Nucleo",
+
+  "servo_core.curios_enforcer.removed": "%s fue desequipado (requiere %s)"
 }

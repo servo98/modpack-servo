@@ -3,9 +3,13 @@
 # ==========================================================================
 # Refined Storage, Create Enchantment Industry, Create Deco.
 # Trains avanzados, Create C&A (electric motor, alternator).
-# Spell Power potions/arrows, Ranged Weapon API.
-# Netherite jewelry. Large Rune Pouch. Soul/Lightning runes.
+# Large Rune Pouch. Soul/Lightning runes.
+# Netherite jewelry (citrine/jade/ruby/sapphire/tanzanite/topaz variants).
 # Llave Maestra de dungeon.
+#
+# NOTE: spell_power and ranged_weapon_api items are vanilla potions/arrows
+# under minecraft: namespace. They CANNOT be gated by mod ID.
+# Gating via brewing ingredient access (Nether materials) is sufficient.
 # ==========================================================================
 
 [stage]
@@ -28,18 +32,9 @@ mods = [
     "createdeco"
 ]
 
-# --- Item mod locks (all items from these mods) ---
-# Spell Power (potions, tipped arrows, enchantment-related items)
-# Ranged Weapon API (ranged buff potions/arrows)
-item_mods = [
-    "spell_power",
-    "ranged_weapon_api"
-]
-
 # --- Specific item locks ---
 items = [
     # Create C&A advanced items (electric motor, alternator)
-    # TODO: Verify exact createaddition item IDs
     "createaddition:electric_motor",
     "createaddition:alternator",
     "createaddition:tesla_coil",
@@ -51,15 +46,12 @@ items = [
     "servo_core:master_dungeon_key",
 
     # Runes: Large Rune Pouch + Soul/Lightning runes
-    # TODO: Verify exact rune item IDs
     "runes:large_rune_pouch",
-    "runes:soul_rune",
-    "runes:lightning_rune",
+    "runes:soul_stone",
+    "runes:lightning_stone",
 
-    # Jewelry: Netherite tier
-    # TODO: Verify netherite jewelry IDs (may be netherite_citrine_ring, etc.)
-    "jewelry:netherite_ring",
-    "jewelry:netherite_necklace",
+    # Jewelry: Netherite tier (6 gem variants x ring+necklace = 12 items)
+    # NOTE: No plain netherite_ring/necklace exists — only gem variants
     "jewelry:netherite_citrine_ring",
     "jewelry:netherite_citrine_necklace",
     "jewelry:netherite_jade_ring",
@@ -71,9 +63,5 @@ items = [
     "jewelry:netherite_tanzanite_ring",
     "jewelry:netherite_tanzanite_necklace",
     "jewelry:netherite_topaz_ring",
-    "jewelry:netherite_topaz_necklace",
-    "jewelry:netherite_diamond_ring",
-    "jewelry:netherite_diamond_necklace",
-    "jewelry:netherite_emerald_ring",
-    "jewelry:netherite_emerald_necklace"
+    "jewelry:netherite_topaz_necklace"
 ]

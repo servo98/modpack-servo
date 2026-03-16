@@ -1,14 +1,16 @@
 # ==========================================================================
 # Capitulo 8: El Devorador (Final)
 # ==========================================================================
-# T4 custom gear (Aeternium/Ruby via KubeJS, usando materiales de dungeon).
-# Recetas endgame legendarias. Todo desbloqueado.
+# T4 gear from RPG mods (Aeternium + Ruby variants).
+# These items exist in the mods but their vanilla recipes require
+# BetterEnd/BetterNether materials (not installed).
+# Custom KubeJS recipes using dungeon materials will be added.
 # ==========================================================================
 
 [stage]
 id = "servo_ch8"
 display_name = "El Devorador"
-description = "T4 custom endgame, recetas legendarias"
+description = "T4 endgame gear, recetas legendarias"
 icon = "minecraft:nether_star"
 unlock_message = "&4&lCapitulo 8 Desbloqueado! &r&7El poder definitivo esta en tus manos."
 dependency = "servo_ch7"
@@ -16,25 +18,39 @@ dependency = "servo_ch7"
 [locks]
 
 # --- Specific item locks ---
-# T4 custom gear — these items don't exist yet (KubeJS recipes pending)
-# They will use materials from servo_core (Core Crystal Fragment, Dungeon Essence)
-# TODO: Add T4 item IDs once KubeJS recipes are created (issue #46 / blocker B014)
+# T4 gear — items exist in RPG mods but need custom KubeJS recipes
 items = [
-    # T4 Aeternium weapons (custom KubeJS)
-    # TODO: "servo_core:aeternium_dagger",
-    # TODO: "servo_core:aeternium_staff",
-    # TODO: "servo_core:aeternium_claymore",
+    # --- Rogues T4 (Aeternium) ---
+    "rogues:aeternium_dagger",
+    "rogues:aeternium_sickle",
+    "rogues:aeternium_double_axe",
+    "rogues:aeternium_glaive",
 
-    # T4 Ruby weapons (custom KubeJS)
-    # TODO: "servo_core:ruby_dagger",
-    # TODO: "servo_core:ruby_staff",
-    # TODO: "servo_core:ruby_claymore",
+    # --- Rogues T4 (Ruby) ---
+    "rogues:ruby_dagger",
+    "rogues:ruby_sickle",
+    "rogues:ruby_double_axe",
+    "rogues:ruby_glaive",
 
-    # Legendary crafting recipes ingredients
-    # TODO: Add endgame-only materials once defined
+    # --- Wizards T4 (Aeternium/Ruby/Smaragdant) ---
+    "wizards:staff_crystal_arcane",
+    "wizards:staff_ruby_fire",
+    "wizards:staff_smaragdant_frost",
+
+    # --- Paladins T4 (Aeternium) ---
+    "paladins:aeternium_claymore",
+    "paladins:aeternium_great_hammer",
+    "paladins:aeternium_mace",
+    "paladins:aeternium_kite_shield",
+
+    # --- Paladins T4 (Ruby) ---
+    "paladins:ruby_claymore",
+    "paladins:ruby_great_hammer",
+    "paladins:ruby_holy_staff",
+    "paladins:ruby_kite_shield",
+    "paladins:ruby_mace"
 ]
 
 # NOTE: Ch8 is the final chapter — once unlocked, everything is available.
-# The locks here are minimal because most content is already unlocked.
 # The real gating for T4 is via recipe requirements (boss drop materials),
-# not via ProgressiveStages item locks.
+# not only via ProgressiveStages item locks.

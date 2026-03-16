@@ -39,9 +39,8 @@ mods = [
 # --- Specific item locks ---
 items = [
     # Runes: Fire and Healing unlock at Ch2 (Arcane/Frost available from Ch1)
-    # TODO: Verify exact rune item IDs with /kubejs hand
-    "runes:fire_rune",
-    "runes:healing_rune"
+    "runes:fire_stone",
+    "runes:healing_stone"
 ]
 
 # --- Whitelist: items available BEFORE this stage ---

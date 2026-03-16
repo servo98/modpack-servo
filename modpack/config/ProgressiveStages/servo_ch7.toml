@@ -2,8 +2,8 @@
 # Capitulo 7: Las Profundidades
 # ==========================================================================
 # End dimension. Llave del Nucleo (Tier 4 dungeon).
-# Unique jewelry (loot-only, ~20 items from dungeon drops).
-# Rare crops. Core Crystal Fragments.
+# Unique jewelry (loot-only, 24 items from dungeon drops).
+# Core Crystal Fragments.
 # ==========================================================================
 
 [stage]
@@ -30,31 +30,41 @@ items = [
     "servo_core:core_crystal_fragment",
 
     # Unique jewelry (loot-only, no crafting recipes)
-    # These are special named items from the jewelry mod
-    # TODO: Verify exact unique jewelry IDs — these are loot-only items
-    # From docs: ~20 unique items with names and lore
-    # Examples from rpg-series-content.md:
-    "jewelry:amulet_of_unfettered_magics",
-    "jewelry:ring_of_omnipotence",
-    "jewelry:pendant_of_acumen",
-    "jewelry:pendant_of_sunfire",
-    "jewelry:sunflare_signet",
-    "jewelry:glacial_shard",
-    "jewelry:permafrost_stone",
-    "jewelry:adrias_pendant",
-    "jewelry:anetts_embrace",
-    "jewelry:amulet_of_unrelenting_storms",
-    "jewelry:ring_of_unstable_currents",
-    "jewelry:occult_necklace",
-    "jewelry:signet_of_captured_souls",
-    "jewelry:sentinels_amulet",
-    "jewelry:juggernaut_band",
-    "jewelry:angelistas_revenge",
-    "jewelry:chocker_of_vile_intent",
-    "jewelry:ring_of_fury",
-    "jewelry:necklace_of_anguish",
-    "jewelry:ring_of_suffering",
-    "jewelry:amulet_of_torture",
-    "jewelry:darnassian_strider_amulet",
-    "jewelry:thalassian_ranger_band"
+    # Registry IDs use unique_[element]_[type] pattern
+    # Arcane
+    "jewelry:unique_arcane_necklace",
+    "jewelry:unique_arcane_ring",
+    # Spell (generic magic)
+    "jewelry:unique_spell_necklace",
+    "jewelry:unique_spell_ring",
+    # Fire
+    "jewelry:unique_fire_necklace",
+    "jewelry:unique_fire_ring",
+    # Frost
+    "jewelry:unique_frost_necklace",
+    "jewelry:unique_frost_ring",
+    # Healing
+    "jewelry:unique_healing_necklace",
+    "jewelry:unique_healing_ring",
+    # Lightning
+    "jewelry:unique_lightning_necklace",
+    "jewelry:unique_lightning_ring",
+    # Soul
+    "jewelry:unique_soul_necklace",
+    "jewelry:unique_soul_ring",
+    # Tank
+    "jewelry:unique_tank_necklace",
+    "jewelry:unique_tank_ring",
+    # Dexterity
+    "jewelry:unique_dex_necklace",
+    "jewelry:unique_dex_ring",
+    # Attack
+    "jewelry:unique_attack_necklace",
+    "jewelry:unique_attack_ring",
+    # Critical
+    "jewelry:unique_crit_necklace",
+    "jewelry:unique_crit_ring",
+    # Archer
+    "jewelry:unique_archer_necklace",
+    "jewelry:unique_archer_ring"
 ]

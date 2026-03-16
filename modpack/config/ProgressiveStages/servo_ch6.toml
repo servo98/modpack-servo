@@ -18,29 +18,65 @@ dependency = "servo_ch5"
 
 # --- Specific item locks ---
 # T3 Netherite RPG gear (smithing upgrades for all classes)
-# These are Netherite-tier items from the RPG class mods
-# TODO: Add specific netherite RPG item IDs once verified in-game
-# Pattern: rogues:netherite_*, wizards:netherite_*, paladins:netherite_*
-# Example IDs (verify with /kubejs hand):
 items = [
-    # Rogues T3 (Netherite)
-    # TODO: "rogues:netherite_dagger",
-    # TODO: "rogues:netherite_sickle",
+    # --- Rogues T3 (Netherite weapons) ---
+    "rogues:netherite_dagger",
+    "rogues:netherite_sickle",
+    "rogues:netherite_double_axe",
+    "rogues:netherite_glaive",
 
-    # Wizards T3 (Netherite)
-    # TODO: "wizards:netherite_arcane_staff",
-    # TODO: "wizards:netherite_fire_staff",
-    # TODO: "wizards:netherite_frost_staff",
+    # --- Rogues T3 (Netherite armor: Assassin + Berserker) ---
+    "rogues:netherite_assassin_armor_head",
+    "rogues:netherite_assassin_armor_chest",
+    "rogues:netherite_assassin_armor_legs",
+    "rogues:netherite_assassin_armor_feet",
+    "rogues:netherite_berserker_armor_head",
+    "rogues:netherite_berserker_armor_chest",
+    "rogues:netherite_berserker_armor_legs",
+    "rogues:netherite_berserker_armor_feet",
 
-    # Paladins T3 (Netherite)
-    # TODO: "paladins:netherite_claymore",
-    # TODO: "paladins:netherite_great_hammer",
+    # --- Wizards T3 (Netherite staves + wands) ---
+    "wizards:staff_netherite_arcane",
+    "wizards:staff_netherite_fire",
+    "wizards:staff_netherite_frost",
+    "wizards:wand_netherite_arcane",
+    "wizards:wand_netherite_fire",
+    "wizards:wand_netherite_frost",
 
-    # Dungeon materials (available from Ch6)
-    "servo_core:dungeon_essence",
+    # --- Wizards T3 (Netherite robes: Arcane + Fire + Frost) ---
+    "wizards:netherite_arcane_robe_head",
+    "wizards:netherite_arcane_robe_chest",
+    "wizards:netherite_arcane_robe_legs",
+    "wizards:netherite_arcane_robe_feet",
+    "wizards:netherite_fire_robe_head",
+    "wizards:netherite_fire_robe_chest",
+    "wizards:netherite_fire_robe_legs",
+    "wizards:netherite_fire_robe_feet",
+    "wizards:netherite_frost_robe_head",
+    "wizards:netherite_frost_robe_chest",
+    "wizards:netherite_frost_robe_legs",
+    "wizards:netherite_frost_robe_feet",
 
-    # Tipped Arrows with Spell Power (if separate items)
-    # TODO: Add specific spell_power tipped arrow IDs
+    # --- Paladins T3 (Netherite weapons) ---
+    "paladins:netherite_claymore",
+    "paladins:netherite_great_hammer",
+    "paladins:netherite_mace",
+    "paladins:netherite_kite_shield",
+    "paladins:netherite_holy_staff",
+    "paladins:netherite_holy_wand",
+
+    # --- Paladins T3 (Netherite armor: Crusader + Prior) ---
+    "paladins:netherite_crusader_armor_head",
+    "paladins:netherite_crusader_armor_chest",
+    "paladins:netherite_crusader_armor_legs",
+    "paladins:netherite_crusader_armor_feet",
+    "paladins:netherite_prior_robe_head",
+    "paladins:netherite_prior_robe_chest",
+    "paladins:netherite_prior_robe_legs",
+    "paladins:netherite_prior_robe_feet",
+
+    # --- Dungeon materials (available from Ch6) ---
+    "servo_core:dungeon_essence"
 ]
 
 # NOTE: Enchantment level V gating is NOT possible via ProgressiveStages.

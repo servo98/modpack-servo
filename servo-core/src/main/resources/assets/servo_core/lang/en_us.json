@@ -18,5 +18,7 @@
   "item.servo_core.dungeon_key.tier_1": "Opens Tier 1 dungeons",
   "item.servo_core.dungeon_key.tier_2": "Opens Tier 2 dungeons",
   "item.servo_core.dungeon_key.tier_3": "Opens Tier 3 dungeons",
-  "item.servo_core.dungeon_key.tier_4": "Opens the Core dungeon"
+  "item.servo_core.dungeon_key.tier_4": "Opens the Core dungeon",
+
+  "servo_core.curios_enforcer.removed": "%s was unequipped (requires %s)"
 }

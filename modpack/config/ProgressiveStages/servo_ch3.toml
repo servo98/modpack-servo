@@ -61,22 +61,18 @@ items = [
     "servo_core:advanced_dungeon_key",
 
     # Runes: Medium Rune Pouch + Rune Crafting Altar
-    # TODO: Verify exact item IDs with /kubejs hand
     "runes:medium_rune_pouch",
-    "runes:rune_crafting_altar",
+    "runes:crafting_altar",
 
     # Jewelry: Ruby/Sapphire tier (locked beyond Ch2)
-    # TODO: Verify exact item IDs — may include _gem, _ore variants
+    # NOTE: Gem ores are generic (jewelry:gem_vein / deepslate_gem_vein),
+    # they unlock with the mod at Ch2 and are not per-gem.
     "jewelry:ruby_ring",
     "jewelry:ruby_necklace",
     "jewelry:ruby",
-    "jewelry:ruby_ore",
-    "jewelry:deepslate_ruby_ore",
     "jewelry:sapphire_ring",
     "jewelry:sapphire_necklace",
-    "jewelry:sapphire",
-    "jewelry:sapphire_ore",
-    "jewelry:deepslate_sapphire_ore"
+    "jewelry:sapphire"
 ]
 
 # --- Block locks (Create machinery blocks) ---

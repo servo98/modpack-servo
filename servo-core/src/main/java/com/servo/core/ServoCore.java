@@ -1,6 +1,8 @@
 package com.servo.core;
 
+import com.servo.core.stage.CuriosStageEnforcer;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.Mod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +15,12 @@ public class ServoCore {
     public ServoCore(IEventBus modEventBus) {
         LOGGER.info("Servo Core initializing...");
         ModRegistry.register(modEventBus);
+
+        // Initialize Curios stage enforcer (supplements ProgressiveStages for Curios slots)
+        if (ModList.get().isLoaded("curios") && ModList.get().isLoaded("progressivestages")) {
+            CuriosStageEnforcer.init();
+        }
+
         LOGGER.info("Servo Core initialized!");
     }
 }

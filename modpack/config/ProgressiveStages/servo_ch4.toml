@@ -21,7 +21,7 @@ dependency = "servo_ch3"
 # More RPG Classes Skill Tree (8 specializations)
 # Macaw's Windows (decorative windows)
 mods = [
-    "skill_tree_rpgs",
+    "skill_tree",
     "mrpgc_skill_tree",
     "mcwwindows"
 ]
@@ -62,17 +62,13 @@ items = [
     "create:display_board",
 
     # Jewelry: Tanzanite/Topaz/Diamond/Emerald tier
-    # TODO: Verify exact item IDs with /kubejs hand
+    # NOTE: Gem ores are generic (jewelry:gem_vein), no per-gem ore items
     "jewelry:tanzanite_ring",
     "jewelry:tanzanite_necklace",
     "jewelry:tanzanite",
-    "jewelry:tanzanite_ore",
-    "jewelry:deepslate_tanzanite_ore",
     "jewelry:topaz_ring",
     "jewelry:topaz_necklace",
     "jewelry:topaz",
-    "jewelry:topaz_ore",
-    "jewelry:deepslate_topaz_ore",
     "jewelry:diamond_ring",
     "jewelry:diamond_necklace",
     "jewelry:emerald_ring",
