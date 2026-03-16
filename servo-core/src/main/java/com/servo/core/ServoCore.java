@@ -1,5 +1,6 @@
 package com.servo.core;
 
+import com.servo.core.progression.ChapterProgressionHandler;
 import com.servo.core.stage.CuriosStageEnforcer;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
@@ -20,6 +21,9 @@ public class ServoCore {
         if (ModList.get().isLoaded("curios") && ModList.get().isLoaded("progressivestages")) {
             CuriosStageEnforcer.init();
         }
+
+        // Initialize chapter progression handler (listens to DeliveryCompleteEvent from servo_delivery)
+        ChapterProgressionHandler.init();
 
         LOGGER.info("Servo Core initialized!");
     }

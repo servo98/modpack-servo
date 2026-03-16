@@ -31,9 +31,18 @@ neoForge {
 dependencies {
     // servo_core depends on other servo mods (soft deps in production, hard in dev)
     compileOnly project(':servo-packaging')
+    compileOnly project(':servo-delivery')
 
     // Curios API — compileOnly for CuriosStageEnforcer (soft dep at runtime)
     compileOnly files("${rootProject.projectDir}/modpack/mods/curios-neoforge-9.5.1+1.21.1.jar")
+
+    // FTB Teams — compileOnly for team member resolution (soft dep at runtime)
+    compileOnly fileTree(dir: "${rootProject.projectDir}/modpack/mods",
+                         include: ['ftb-teams-neoforge-*.jar', 'ftb-library-neoforge-*.jar'])
+
+    // GameStages/ProgressiveStages — compileOnly for stage granting (soft dep at runtime)
+    compileOnly files("${rootProject.projectDir}/modpack/mods/progressivestages-1.2.jar")
+    compileOnly files("${rootProject.projectDir}/modpack/mods/bookshelf-neoforge-1.21.1-21.1.81.jar")
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

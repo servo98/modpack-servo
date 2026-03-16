@@ -43,3 +43,17 @@ description='''${mod_description}'''
     versionRange="[1.0,)"
     ordering="AFTER"
     side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="servo_delivery"
+    type="optional"
+    versionRange="[0.1.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="ftbteams"
+    type="optional"
+    versionRange="[2101.1.0,)"
+    ordering="AFTER"
+    side="BOTH"
