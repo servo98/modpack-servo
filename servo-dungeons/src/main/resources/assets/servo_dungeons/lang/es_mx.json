@@ -36,5 +36,7 @@
   "item.servo_dungeons.boss_key_ch7": "Llave de Jefe: Capitulo 7",
   "item.servo_dungeons.boss_key_ch8": "Llave de Jefe: Capitulo 8",
   "tooltip.servo_dungeons.boss_key_chapter": "Jefe del Capitulo %d",
-  "message.servo_dungeons.dungeon_complete": "\u00a1Dungeon completado! Un portal de salida ha aparecido."
+  "message.servo_dungeons.dungeon_complete": "\u00a1Dungeon completado! Un portal de salida ha aparecido.",
+  "item.servo_dungeons.dungeon_essence": "Esencia de Dungeon",
+  "tooltip.servo_dungeons.dungeon_essence": "Un fragmento cristalizado de energia de dungeon"
 }

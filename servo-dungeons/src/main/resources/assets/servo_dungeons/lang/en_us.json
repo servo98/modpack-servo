@@ -36,5 +36,7 @@
   "item.servo_dungeons.boss_key_ch7": "Boss Key: Chapter 7",
   "item.servo_dungeons.boss_key_ch8": "Boss Key: Chapter 8",
   "tooltip.servo_dungeons.boss_key_chapter": "Chapter %d Boss",
-  "message.servo_dungeons.dungeon_complete": "Dungeon complete! An exit portal has appeared."
+  "message.servo_dungeons.dungeon_complete": "Dungeon complete! An exit portal has appeared.",
+  "item.servo_dungeons.dungeon_essence": "Dungeon Essence",
+  "tooltip.servo_dungeons.dungeon_essence": "A crystallized fragment of dungeon energy"
 }

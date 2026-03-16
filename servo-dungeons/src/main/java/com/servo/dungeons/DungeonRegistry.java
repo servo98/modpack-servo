@@ -20,6 +20,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -164,6 +165,12 @@ public class DungeonRegistry {
     public static final DeferredHolder<Item, DungeonRopeItem> DUNGEON_ROPE =
             ITEMS.register("dungeon_rope_item", DungeonRopeItem::new);
 
+    // === Drop Items ===
+    public static final DeferredHolder<Item, Item> DUNGEON_ESSENCE =
+            ITEMS.register("dungeon_essence", () -> new Item(
+                    new Item.Properties().rarity(Rarity.RARE).stacksTo(64)
+            ));
+
     // === Key Items ===
     public static final DeferredHolder<Item, DungeonKeyItem> KEY_BASIC =
             ITEMS.register("dungeon_key_basic", () -> new DungeonKeyItem(DungeonTier.BASIC));
@@ -225,6 +232,7 @@ public class DungeonRegistry {
                         output.accept(KEY_ADVANCED.get());
                         output.accept(KEY_MASTER.get());
                         output.accept(KEY_CORE.get());
+                        output.accept(DUNGEON_ESSENCE.get());
                         output.accept(DUNGEON_BOMB.get());
                         output.accept(DUNGEON_ROPE.get());
                         output.accept(BOSS_KEY_1.get());
