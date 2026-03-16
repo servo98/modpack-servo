@@ -3,8 +3,11 @@ package com.servo.delivery.block;
 import com.mojang.serialization.MapCodec;
 import com.servo.delivery.DeliveryRegistry;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -47,6 +50,24 @@ public class DeliveryPortBlock extends BaseEntityBlock {
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new SlaveBlockEntity(pos, state);
+    }
+
+    @Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level,
+                                              BlockPos pos, Player player, InteractionHand hand,
+                                              BlockHitResult hit) {
+        if (!state.getValue(FORMED)) return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        if (stack.isEmpty()) return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        if (level.isClientSide()) return ItemInteractionResult.SUCCESS;
+
+        if (level.getBlockEntity(pos) instanceof SlaveBlockEntity slave) {
+            DeliveryTerminalBlockEntity master = slave.getMaster();
+            if (master != null) {
+                master.tryInsertItem(stack, player);
+                return ItemInteractionResult.CONSUME;
+            }
+        }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     @Override

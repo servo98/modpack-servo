@@ -2,18 +2,14 @@ package com.servo.delivery;
 
 import com.servo.delivery.block.DeliveryPortBlock;
 import com.servo.delivery.block.DeliveryTerminalBlockEntity;
-import com.servo.delivery.block.SlaveBlockEntity;
 import com.servo.delivery.data.DeliveryDataLoader;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddReloadListenerEvent;
-import net.neoforged.neoforge.items.IItemHandler;
-import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,8 +27,9 @@ public class ServoDelivery {
             event.addListener(new DeliveryDataLoader());
         });
 
-        // Register IItemHandler capability on delivery ports for hopper/funnel compat
+        // Register IItemHandler capability on delivery ports and terminal for hopper/funnel compat
         modEventBus.addListener((RegisterCapabilitiesEvent event) -> {
+            // Ports: delegate to master terminal
             event.registerBlockEntity(
                     Capabilities.ItemHandler.BLOCK,
                     DeliveryRegistry.SLAVE_BE.get(),
@@ -42,6 +39,17 @@ public class ServoDelivery {
                             if (master != null) {
                                 return new PortItemHandler(master);
                             }
+                        }
+                        return null;
+                    }
+            );
+            // Terminal itself: accept items directly (hopper/funnel pointing at the screen)
+            event.registerBlockEntity(
+                    Capabilities.ItemHandler.BLOCK,
+                    DeliveryRegistry.TERMINAL_BE.get(),
+                    (terminal, direction) -> {
+                        if (terminal.isFormed()) {
+                            return new PortItemHandler(terminal);
                         }
                         return null;
                     }
