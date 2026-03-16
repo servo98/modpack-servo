@@ -1,0 +1,7 @@
+{
+  "itemGroup.servo_cooking": "Servo Cocina",
+  "block.servo_cooking.prep_station": "Tabla de Preparacion",
+  "block.servo_cooking.blender": "Licuadora",
+  "block.servo_cooking.wok": "Wok",
+  "block.servo_cooking.bakers_oven": "Horno de Panaderia"
+}
