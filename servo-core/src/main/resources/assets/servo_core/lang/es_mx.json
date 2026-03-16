@@ -20,5 +20,15 @@
   "item.servo_core.dungeon_key.tier_3": "Abre dungeons de Tier 3",
   "item.servo_core.dungeon_key.tier_4": "Abre el dungeon del Nucleo",
 
-  "servo_core.curios_enforcer.removed": "%s fue desequipado (requiere %s)"
+  "servo_core.curios_enforcer.removed": "%s fue desequipado (requiere %s)",
+
+  "servo_core.progression.delivery_complete": "[Servo] Entrega del Capitulo %s completada!",
+  "servo_core.progression.boss_pending": "[Servo] Derrota al boss del Capitulo %s para avanzar.",
+  "servo_core.progression.boss_killed": "[Servo] Boss del Capitulo %s derrotado!",
+  "servo_core.progression.delivery_pending": "[Servo] Completa la entrega del Capitulo %s para avanzar.",
+  "servo_core.progression.chapter_advance": "[Servo] %s completaron el Capitulo %s! Bienvenidos al Capitulo %s: %s",
+  "servo_core.progression.title": "Capitulo %s",
+  "servo_core.progression.final_complete": "[Servo] El modpack ha sido COMPLETADO! Felicidades!",
+  "servo_core.progression.final_title": "FELICIDADES!",
+  "servo_core.progression.final_subtitle": "Han completado el modpack!"
 }
