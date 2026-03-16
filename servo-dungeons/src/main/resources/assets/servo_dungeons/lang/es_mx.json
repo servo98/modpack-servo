@@ -38,5 +38,23 @@
   "tooltip.servo_dungeons.boss_key_chapter": "Jefe del Capitulo %d",
   "message.servo_dungeons.dungeon_complete": "\u00a1Dungeon completado! Un portal de salida ha aparecido.",
   "item.servo_dungeons.dungeon_essence": "Esencia de Dungeon",
-  "tooltip.servo_dungeons.dungeon_essence": "Un fragmento cristalizado de energia de dungeon"
+  "tooltip.servo_dungeons.dungeon_essence": "Un fragmento cristalizado de energia de dungeon",
+
+  "entity.servo_dungeons.guardian_del_bosque": "Guardian del Bosque",
+  "entity.servo_dungeons.bestia_glotona": "Bestia Glotona",
+  "entity.servo_dungeons.coloso_mecanico": "Coloso Mecanico",
+  "entity.servo_dungeons.locomotora_fantasma": "Locomotora Fantasma",
+  "entity.servo_dungeons.el_arquitecto": "El Arquitecto",
+  "entity.servo_dungeons.senor_cosechas": "Senor de las Cosechas",
+  "entity.servo_dungeons.nucleo_del_dungeon": "Nucleo del Dungeon",
+  "entity.servo_dungeons.devorador_des_mundos": "Devorador de Mundos",
+
+  "item.servo_dungeons.trophy_ch1": "Semilla del Bosque",
+  "item.servo_dungeons.trophy_ch2": "Mandibula de la Bestia",
+  "item.servo_dungeons.trophy_ch3": "Nucleo del Coloso",
+  "item.servo_dungeons.trophy_ch4": "Faro Fantasmal",
+  "item.servo_dungeons.trophy_ch5": "Chip del Arquitecto",
+  "item.servo_dungeons.trophy_ch6": "Corazon Marchito",
+  "item.servo_dungeons.trophy_ch7": "Fragmento de Cristal del Nucleo",
+  "item.servo_dungeons.trophy_ch8": "Corazon del Vacio"
 }

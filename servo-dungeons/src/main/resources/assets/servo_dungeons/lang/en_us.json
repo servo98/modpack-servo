@@ -38,5 +38,23 @@
   "tooltip.servo_dungeons.boss_key_chapter": "Chapter %d Boss",
   "message.servo_dungeons.dungeon_complete": "Dungeon complete! An exit portal has appeared.",
   "item.servo_dungeons.dungeon_essence": "Dungeon Essence",
-  "tooltip.servo_dungeons.dungeon_essence": "A crystallized fragment of dungeon energy"
+  "tooltip.servo_dungeons.dungeon_essence": "A crystallized fragment of dungeon energy",
+
+  "entity.servo_dungeons.guardian_del_bosque": "Guardian of the Forest",
+  "entity.servo_dungeons.bestia_glotona": "Gluttonous Beast",
+  "entity.servo_dungeons.coloso_mecanico": "Mechanical Colossus",
+  "entity.servo_dungeons.locomotora_fantasma": "Ghost Locomotive",
+  "entity.servo_dungeons.el_arquitecto": "The Architect",
+  "entity.servo_dungeons.senor_cosechas": "Lord of the Harvest",
+  "entity.servo_dungeons.nucleo_del_dungeon": "Dungeon Core",
+  "entity.servo_dungeons.devorador_des_mundos": "World Devourer",
+
+  "item.servo_dungeons.trophy_ch1": "Seed of the Forest",
+  "item.servo_dungeons.trophy_ch2": "Jaw of the Beast",
+  "item.servo_dungeons.trophy_ch3": "Core of the Colossus",
+  "item.servo_dungeons.trophy_ch4": "Ghost Lantern",
+  "item.servo_dungeons.trophy_ch5": "Architect's Chip",
+  "item.servo_dungeons.trophy_ch6": "Withered Heart",
+  "item.servo_dungeons.trophy_ch7": "Core Crystal Fragment",
+  "item.servo_dungeons.trophy_ch8": "Heart of the Void"
 }
