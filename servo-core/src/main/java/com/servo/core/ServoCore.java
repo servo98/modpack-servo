@@ -1,5 +1,6 @@
 package com.servo.core;
 
+import com.servo.core.gacha.GachaPityAttachment;
 import com.servo.core.progression.ChapterProgressionHandler;
 import com.servo.core.stage.CuriosStageEnforcer;
 import net.neoforged.bus.api.IEventBus;
@@ -16,6 +17,7 @@ public class ServoCore {
     public ServoCore(IEventBus modEventBus) {
         LOGGER.info("Servo Core initializing...");
         ModRegistry.register(modEventBus);
+        GachaPityAttachment.register(modEventBus);
 
         // Initialize Curios stage enforcer (supplements ProgressiveStages for Curios slots)
         if (ModList.get().isLoaded("curios") && ModList.get().isLoaded("progressivestages")) {

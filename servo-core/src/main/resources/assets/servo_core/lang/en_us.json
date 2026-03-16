@@ -30,5 +30,9 @@
   "servo_core.progression.title": "Chapter %s",
   "servo_core.progression.final_complete": "[Servo] The modpack has been COMPLETED! Congratulations!",
   "servo_core.progression.final_title": "CONGRATULATIONS!",
-  "servo_core.progression.final_subtitle": "You have completed the modpack!"
+  "servo_core.progression.final_subtitle": "You have completed the modpack!",
+
+  "servo_core.gacha.pity.epic_bonus": "Epic chance bonus: +%s%%",
+  "servo_core.gacha.pity.hard_pity": "Legendary guaranteed!",
+  "servo_core.gacha.pity.pulls_since_epic": "Pulls since last Epic+: %s"
 }
