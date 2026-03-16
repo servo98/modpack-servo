@@ -7,9 +7,13 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 
 ## Comandos clave
 - Build: `./gw build` (wrapper que setea JAVA_HOME, desde raiz)
-- Run server: `./gw runServer`
+- Run server: `./gw runServer` (auto-copia server.properties + eula.txt a run/)
 - Run client: `./gw runClient`
 - Run client (background, logs): `./gw runClient 2>&1 | tee run/client-latest.log`
+- Run server (background, logs): `./scripts/start-server.sh --background`
+- RCON interactive: `python scripts/rcon.py -i` (password: servo-dev, port: 25575)
+- RCON single cmd: `python scripts/rcon.py "function servo_core:test_all_kits"`
+- Run tests: `python scripts/run-tests.py` (smoke: `--smoke`, por mod: `--mod packaging`)
 - NOTA: usar `./gw` (no `./gradlew` — JAVA_HOME del sistema apunta a JDK incorrecto)
 - Hot reload KubeJS: `/reload` en consola del server
 - Hot reload texturas: `F3+T` en cliente
@@ -53,7 +57,8 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 - `modpack/kubejs/` — scripts KubeJS
 - `modpack/config/` — configs de mods
 - `modpack/mods/` — JARs de mods
-- `scripts/` — utilidades (extract-mod-content.py, download-mods.py)
+- `scripts/` — utilidades (extract-mod-content.py, download-mods.py, rcon.py, run-tests.py)
+- `server/` — configs de server dev (server.properties, eula.txt, ops.json)
 
 ## Convenciones
 - Java: PascalCase clases, camelCase metodos, SCREAMING_SNAKE constantes
@@ -73,6 +78,7 @@ GDD completo en `docs/gdd-v2.md`. Arquitectura en `docs/architecture.md`. Tareas
 | `issue-manager` | Al crear/actualizar issues. Detecta duplicados, mantiene formato estandar. |
 | `accessory-modeler` | Al crear modelos 3D de accesorios (gorros, cinturones, anillos, mochilas) via Blockbench MCP. |
 | `quest-builder` | Al generar archivos SNBT de FTB Quests a partir de docs/chapters/. |
+| `server-tester` | Testea mods via RCON en server. Items, stages, mcfunctions, logs. Sin necesidad de cliente. |
 
 ## Comandos disponibles (.claude/commands/)
 | Comando | Cuando usarlo |
@@ -99,13 +105,34 @@ Usar `/session-start` o ejecutar manualmente:
 ## Flujo de testing
 | Cambio | Como verificar |
 |--------|---------------|
-| Java (cualquier mod) | `./gw build` → `./gw runClient` → probar in-game |
-| KubeJS scripts | `/reload` → verificar en EMI (R = receta, U = usos) |
-| Items custom servo_packaging | `/function servo_packaging:test_kit` en creative |
-| Items de otros mods | `/give @s servo_[mod]:item_name` en creative |
-| Progression/stages | Mundo nuevo → `/kubejs stages add @s servo_ch2` → verificar |
-| Configs de mods | Reiniciar cliente |
-| Mods nuevos/eliminados | Reiniciar cliente → verificar en EMI |
+| Java (cualquier mod) | `./gw build` → `./gw runServer` → `python scripts/run-tests.py --smoke` |
+| KubeJS scripts | RCON: `reload` → verificar con give/function |
+| Items custom (cualquier mod) | RCON: `function servo_core:test_all_kits` o `give @a <mod>:<item> 1` |
+| Progression/stages | RCON: `function servo_core:stage_unlock` / `stage_reset` |
+| Flujo completo por mod | `python scripts/run-tests.py --mod <nombre>` |
+| Test suite completo | `python scripts/run-tests.py --all` |
+| Verificacion visual (texturas, GUI, EMI) | `./gw runClient` → probar in-game |
+| Configs de mods | Reiniciar server |
+| Mods nuevos/eliminados | Reiniciar server → `--smoke` |
+
+### Server de desarrollo
+- Config: `server/server.properties` (RCON habilitado, port 25575, password: servo-dev)
+- Start: `./gw runServer` (auto-copia configs a run/) o `./scripts/start-server.sh`
+- RCON: `python scripts/rcon.py -i` (interactivo) o `python scripts/rcon.py "comando"`
+
+### mcfunctions de testing
+| Funcion | Que hace |
+|---------|----------|
+| `servo_core:test_all_kits` | Da TODOS los test kits de todos los mods |
+| `servo_core:stage_unlock` | Desbloquea ch1-ch8 |
+| `servo_core:stage_reset` | Resetea a ch1 |
+| `servo_core:test_stages` | Info de stages + comandos utiles |
+| `servo_packaging:test_kit` | Items de packaging |
+| `servo_delivery:test_kit` | Bloques multibloque + shipping boxes |
+| `servo_core:test_kit` | Coins, keys, esencias, cristales |
+| `servo_create:test_kit` | Materiales deployer/basin + Create components |
+| `servo_dungeons:test_kit` | Dungeon essence |
+| `servo_mart:test_kit` | Bloque PepeMart |
 
 ## NeoForge Version
 - MC: 1.21.1 | NeoForge: 21.1.219 | JDK: 21 (Foojay) | Gradle: 9.2.1

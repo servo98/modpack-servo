@@ -40,6 +40,8 @@ neoForge {
         server {
             server()
             programArgument '--nogui'
+            // Copy server configs (RCON, eula) to run/ before starting
+            systemProperty 'forge.logging.console.level', 'info'
         }
 
         configureEach {
@@ -57,6 +59,18 @@ dependencies {
     implementation project(':servo-create')
     implementation project(':servo-dungeons')
     implementation project(':servo-mart')
+}
+
+// Copy server config files (RCON, eula, ops) to run/ before server starts
+tasks.register('copyServerConfigs', Copy) {
+    from 'server'
+    into 'run'
+    include 'server.properties', 'eula.txt', 'ops.json'
+}
+
+// Ensure server configs are copied before runServer
+tasks.matching { it.name == 'runServer' }.configureEach {
+    dependsOn 'copyServerConfigs'
 }
 
 idea {
