@@ -18,9 +18,20 @@ Pilar central del modpack. Cocinar a mano es **divertido** (Perfil B), Create es
 | FTB Quests (Recetario) | Variedad = corazones permanentes via quest rewards | Siempre (capitulo propio en quest book) |
 | Slice & Dice | Automatizar cocina con Create | Ch3 |
 
-## servo_cooking (workstations TBD)
+## servo_cooking (4 workstations custom)
 
-Las workstations custom de servo_cooking estan en fase de diseno. Se decidiran despues de analizar que gaps dejan los mods existentes (FD, B&C, ED).
+Las 4 workstations de servo_cooking estan definidas. Cadenas completas de sub-ingredientes documentadas en [docs/design/cooking-recipe-chains.md](../design/cooking-recipe-chains.md).
+
+| Workstation | Mecanica | Capitulo | Recetas | Create compat |
+|-------------|----------|----------|---------|---------------|
+| **Prep Station** | Ensamblaje frio (4 slots → 1 output) | Ch1 | ~57 | Deployer en secuencia |
+| **Licuadora** | Mezcla ingredientes + liquido (3 seg) | Ch2 | ~23 | Basin + Mixer |
+| **Wok** | Freidora con control activo de temperatura | Ch2 | ~21 | Deployer + Blaze Burner |
+| **Baker's Oven** | Horno multislot (4 slots + modo) | Ch3 | ~46 | Mixer Heated |
+
+**Congelados (helados, 7 recetas)**: van al **Freezer de MrCrayfish Refurbished** (bloque ya en el modpack). NO requieren 5ta workstation. Issue #71 para recetas KubeJS.
+
+**Create como gateway**: flour, butter, olive_oil, chocolate, whipping_cream se producen en maquinas Create (Millstone, Press, Mixer), forzando el puente entre los pilares Cocina y Automatizacion a partir de Ch3-Ch4.
 
 ## Crops y recetas por capitulo
 

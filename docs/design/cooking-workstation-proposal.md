@@ -522,14 +522,11 @@ Estos son ensamblajes simples o conversiones de almacenamiento, no cocina:
 | 13 | paper_from_tree_bark | Paper | No es comida |
 | 14 | basket | Basket | No es comida |
 
-### Congelados (7 recetas) — decision pendiente
+### Congelados (7 recetas) — DECISION: Freezer de MrCrayfish Refurbished
 
-Helados y postres frios. Opciones:
-- A) Crear una **5ta workstation** (Heladera) — pero solo 7 recetas, poco valor
-- B) Meterlos en la **Licuadora** (mezclar + frio) — logico para milkshakes/smoothies
-- C) Meterlos en el **Baker's Oven** modo "congelar" — raro tematicamente
+Helados y postres frios. **Decision tomada**: van al **Freezer de MrCrayfish Refurbished** (bloque ya disponible en el modpack). NO se crea 5ta workstation, NO van a la Licuadora.
 
-**Recomendacion**: meterlos en la **Licuadora** como recetas que usan leche en vez de agua.
+Razon: el Freezer ya existe como furniture de Refurbished, tiene mecanica de frio, y cubre exactamente estos 7 items sin inflar servo_cooking. Issue #71 creado para la implementacion KubeJS.
 
 | # | Receta | Mod origen | Resultado |
 |---|--------|-----------|-----------|
@@ -567,9 +564,10 @@ Helados y postres frios. Opciones:
 | **Stove/Skillet** (FD) | manual | +10 | 0 | **~10** | No |
 | **Furnace/Smoker** | 49 | 0 | 0 | **49** | No |
 | **Prep Station** (NUEVO) | 0 | 0 | ~57 | **~57** | Deployer |
-| **Licuadora** (NUEVO) | 0 | 0 | ~27 | **~27** | Mixer |
+| **Licuadora** (NUEVO) | 0 | 0 | ~20 | **~20** | Mixer |
 | **Wok** (NUEVO) | 0 | 0 | ~21 | **~21** | Deployer+Burner |
 | **Baker's Oven** (NUEVO) | 0 | 0 | ~50 | **~50** | Mixer Heated* |
+| **Freezer** (Refurbished) | — | 7 congelados | 0 | **7** | No |
 | Crafting table (no comida) | — | — | — | **~14** | — |
 | **TOTAL** | | | | **~388+** | |
 
@@ -578,6 +576,6 @@ Helados y postres frios. Opciones:
 | Workstation | Mecanica unica | Cap | Recetas | Diferencia clave vs existente |
 |-------------|---------------|-----|---------|------------------------------|
 | **Prep Station** | Ensamblar ingredientes frios (4 slots → 1 output) | Ch1 | ~57 | Cutting Board CORTA, Prep Station ENSAMBLA |
-| **Licuadora** | Mezclar ingredientes + liquido, aspas girando (3 seg) | Ch2 | ~27 | Juicer exprime 1 fruta. Licuadora MEZCLA multiples con liquido |
+| **Licuadora** | Mezclar ingredientes + liquido, aspas girando (3 seg) | Ch2 | ~20 | Juicer exprime 1 fruta. Licuadora MEZCLA multiples con liquido |
 | **Wok** | Freir con control de temperatura activo (bajo/medio/alto) | Ch2 | ~21 | Skillet es pasivo. Wok requiere control manual del fuego |
 | **Baker's Oven** | Hornear multiples ingredientes secos (4 slots + modo) | Ch3 | ~50 | Furnace hace 1 item. Baker's Oven hace recetas complejas secas |

@@ -95,11 +95,11 @@ Carton Plano → doblar en Empacadora → colocar Caja Abierta → llenar con it
 
 Detalle: [mechanics/packaging.md](mechanics/packaging.md)
 
-## 3.3 Workstations de cocina (servo_cooking — TBD)
+## 3.3 Workstations de cocina (servo_cooking)
 
-Las workstations custom de servo_cooking estan en fase de diseno. Se decidiran despues de analizar que gaps dejan los mods existentes (FD, B&C, ED).
+4 workstations custom: Prep Station (Ch1, ensamblaje frio), Licuadora (Ch2, batidos/jugos), Wok (Ch2, freidora activa), Baker's Oven (Ch3, horneado complejo). Congelados van al Freezer de Refurbished. Create es gateway para ingredientes intermedios (flour, butter, chocolate, etc.) a partir de Ch3-Ch4.
 
-Detalle: [mechanics/cooking.md](mechanics/cooking.md)
+Detalle: [mechanics/cooking.md](mechanics/cooking.md) | Cadenas de recetas: [design/cooking-recipe-chains.md](design/cooking-recipe-chains.md)
 
 ## 3.4 PepeMart (IKEA)
 
