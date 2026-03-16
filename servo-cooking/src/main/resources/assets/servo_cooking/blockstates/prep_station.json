@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "servo_cooking:block/prep_station" }
+  }
+}
