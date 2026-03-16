@@ -1,0 +1,8 @@
+[
+  {
+    "uuid": "REPLACE-WITH-YOUR-UUID",
+    "name": "Dev",
+    "level": 4,
+    "bypassesPlayerLimit": true
+  }
+]
