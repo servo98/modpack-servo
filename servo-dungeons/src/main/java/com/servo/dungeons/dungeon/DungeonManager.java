@@ -3,11 +3,13 @@ package com.servo.dungeons.dungeon;
 import com.servo.dungeons.DungeonRegistry;
 import com.servo.dungeons.DungeonTier;
 import com.servo.dungeons.ServoDungeons;
+import com.servo.dungeons.entity.boss.AbstractDungeonBoss;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -136,6 +138,9 @@ public class DungeonManager {
         instance.setBossChapter(chapter);
         activeInstances.put(id, instance);
 
+        // Spawn the boss entity at the center of the arena
+        spawnBossEntity(dungeonLevel, center, chapter, 1);
+
         teleportToDungeon(leader, entrancePos, dungeonLevel);
 
         ServoDungeons.LOGGER.info("Boss fight started: chapter={}, leader={}, id={}, center={}",
@@ -259,6 +264,47 @@ public class DungeonManager {
         teleportToDungeon(player, dungeonInstance.getEntrancePos(), dungeonLevel);
 
         ServoDungeons.LOGGER.info("Player {} re-entered dungeon {}", player.getName().getString(), dungeonId);
+    }
+
+    /**
+     * Spawn the boss entity for the given chapter at the center of the arena.
+     * Applies multiplayer scaling based on the number of players present.
+     *
+     * @param dungeonLevel the dungeon dimension
+     * @param arenaCenter the center position of the boss arena
+     * @param chapter the boss chapter (1-8)
+     * @param playerCount the number of players in the fight for scaling
+     */
+    private void spawnBossEntity(ServerLevel dungeonLevel, BlockPos arenaCenter, int chapter, int playerCount) {
+        EntityType<? extends AbstractDungeonBoss> bossType = DungeonRegistry.getBossTypeForChapter(chapter);
+        if (bossType == null) {
+            ServoDungeons.LOGGER.error("No boss entity type found for chapter {}", chapter);
+            return;
+        }
+
+        AbstractDungeonBoss boss = (AbstractDungeonBoss) bossType.create(dungeonLevel);
+        if (boss == null) {
+            ServoDungeons.LOGGER.error("Failed to create boss entity for chapter {}", chapter);
+            return;
+        }
+
+        // Position boss in the center of the arena (32x32 arena, so center is +16,+1,+16)
+        double bossX = arenaCenter.getX() + 16.0;
+        double bossY = arenaCenter.getY() + 1.0;
+        double bossZ = arenaCenter.getZ() + 16.0;
+        boss.setPos(bossX, bossY, bossZ);
+
+        // Apply multiplayer scaling
+        boss.scaleForPlayers(playerCount);
+
+        // Add to the world
+        dungeonLevel.addFreshEntity(boss);
+
+        // Trigger spawn animation
+        boss.triggerAnim("phase", "spawn");
+
+        ServoDungeons.LOGGER.info("Spawned boss entity for chapter {} at ({}, {}, {}) with {} player(s)",
+                chapter, bossX, bossY, bossZ, playerCount);
     }
 
     // ==================== State Queries ====================

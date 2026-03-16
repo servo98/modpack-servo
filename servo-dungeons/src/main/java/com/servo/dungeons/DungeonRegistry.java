@@ -9,6 +9,7 @@ import com.servo.dungeons.block.DungeonRopeBlock;
 import com.servo.dungeons.block.DungeonRuneBlock;
 import com.servo.dungeons.block.DungeonSpikesBlock;
 import com.servo.dungeons.block.ExitPortalBlock;
+import com.servo.dungeons.entity.boss.*;
 import com.servo.dungeons.item.BossKeyItem;
 import com.servo.dungeons.item.DungeonBombItem;
 import com.servo.dungeons.item.DungeonKeyItem;
@@ -17,6 +18,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -30,6 +33,7 @@ import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -44,6 +48,8 @@ public class DungeonRegistry {
             DeferredRegister.create(Registries.ITEM, ServoDungeons.MOD_ID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, ServoDungeons.MOD_ID);
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
+            DeferredRegister.create(Registries.ENTITY_TYPE, ServoDungeons.MOD_ID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ServoDungeons.MOD_ID);
 
@@ -202,6 +208,63 @@ public class DungeonRegistry {
     public static final DeferredHolder<Item, BossKeyItem> BOSS_KEY_8 =
             ITEMS.register("boss_key_ch8", () -> new BossKeyItem(8));
 
+    // === Boss Entity Types ===
+    public static final DeferredHolder<EntityType<?>, EntityType<GuardianDelBosqueBoss>> GUARDIAN_DEL_BOSQUE =
+            ENTITY_TYPES.register("guardian_del_bosque", () ->
+                    EntityType.Builder.of(GuardianDelBosqueBoss::new, MobCategory.MONSTER)
+                            .sized(1.4F, 3.0F)
+                            .clientTrackingRange(64)
+                            .build(ServoDungeons.MOD_ID + ":guardian_del_bosque"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<BestiaGlotonaBoss>> BESTIA_GLOTONA =
+            ENTITY_TYPES.register("bestia_glotona", () ->
+                    EntityType.Builder.of(BestiaGlotonaBoss::new, MobCategory.MONSTER)
+                            .sized(3.0F, 2.5F)
+                            .clientTrackingRange(64)
+                            .build(ServoDungeons.MOD_ID + ":bestia_glotona"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<ColosoMecanicoBoss>> COLOSO_MECANICO =
+            ENTITY_TYPES.register("coloso_mecanico", () ->
+                    EntityType.Builder.of(ColosoMecanicoBoss::new, MobCategory.MONSTER)
+                            .sized(2.5F, 5.0F)
+                            .clientTrackingRange(64)
+                            .build(ServoDungeons.MOD_ID + ":coloso_mecanico"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<LocomotoraFantasmaBoss>> LOCOMOTORA_FANTASMA =
+            ENTITY_TYPES.register("locomotora_fantasma", () ->
+                    EntityType.Builder.of(LocomotoraFantasmaBoss::new, MobCategory.MONSTER)
+                            .sized(2.0F, 3.0F)
+                            .clientTrackingRange(80)
+                            .build(ServoDungeons.MOD_ID + ":locomotora_fantasma"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<ElArquitectoBoss>> EL_ARQUITECTO =
+            ENTITY_TYPES.register("el_arquitecto", () ->
+                    EntityType.Builder.of(ElArquitectoBoss::new, MobCategory.MONSTER)
+                            .sized(1.2F, 4.0F)
+                            .clientTrackingRange(64)
+                            .build(ServoDungeons.MOD_ID + ":el_arquitecto"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<SenorCosechasBoss>> SENOR_COSECHAS =
+            ENTITY_TYPES.register("senor_cosechas", () ->
+                    EntityType.Builder.of(SenorCosechasBoss::new, MobCategory.MONSTER)
+                            .sized(2.5F, 6.0F)
+                            .clientTrackingRange(64)
+                            .build(ServoDungeons.MOD_ID + ":senor_cosechas"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<NucleoDelDungeonBoss>> NUCLEO_DEL_DUNGEON =
+            ENTITY_TYPES.register("nucleo_del_dungeon", () ->
+                    EntityType.Builder.of(NucleoDelDungeonBoss::new, MobCategory.MONSTER)
+                            .sized(4.0F, 4.0F)
+                            .clientTrackingRange(80)
+                            .build(ServoDungeons.MOD_ID + ":nucleo_del_dungeon"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<DevoradorDesMundosBoss>> DEVORADOR_DES_MUNDOS =
+            ENTITY_TYPES.register("devorador_des_mundos", () ->
+                    EntityType.Builder.of(DevoradorDesMundosBoss::new, MobCategory.MONSTER)
+                            .sized(3.0F, 3.0F)
+                            .clientTrackingRange(96)
+                            .build(ServoDungeons.MOD_ID + ":devorador_des_mundos"));
+
     // === Block Entities ===
     @SuppressWarnings("DataFlowIssue")
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DungeonPedestalBlockEntity>> PEDESTAL_BE =
@@ -252,6 +315,46 @@ public class DungeonRegistry {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
         BLOCK_ENTITIES.register(modEventBus);
+        ENTITY_TYPES.register(modEventBus);
         CREATIVE_TABS.register(modEventBus);
+
+        // Register entity attributes
+        modEventBus.addListener(DungeonRegistry::registerEntityAttributes);
+    }
+
+    /**
+     * Register attributes for all boss entity types.
+     * Called automatically via the mod event bus.
+     */
+    private static void registerEntityAttributes(EntityAttributeCreationEvent event) {
+        event.put(GUARDIAN_DEL_BOSQUE.get(), GuardianDelBosqueBoss.createAttributes().build());
+        event.put(BESTIA_GLOTONA.get(), BestiaGlotonaBoss.createAttributes().build());
+        event.put(COLOSO_MECANICO.get(), ColosoMecanicoBoss.createAttributes().build());
+        event.put(LOCOMOTORA_FANTASMA.get(), LocomotoraFantasmaBoss.createAttributes().build());
+        event.put(EL_ARQUITECTO.get(), ElArquitectoBoss.createAttributes().build());
+        event.put(SENOR_COSECHAS.get(), SenorCosechasBoss.createAttributes().build());
+        event.put(NUCLEO_DEL_DUNGEON.get(), NucleoDelDungeonBoss.createAttributes().build());
+        event.put(DEVORADOR_DES_MUNDOS.get(), DevoradorDesMundosBoss.createAttributes().build());
+    }
+
+    /**
+     * Get the boss entity type for a given chapter number (1-8).
+     *
+     * @param chapter the chapter number
+     * @return the EntityType for that chapter's boss, or null if invalid
+     */
+    @org.jetbrains.annotations.Nullable
+    public static EntityType<? extends AbstractDungeonBoss> getBossTypeForChapter(int chapter) {
+        return switch (chapter) {
+            case 1 -> GUARDIAN_DEL_BOSQUE.get();
+            case 2 -> BESTIA_GLOTONA.get();
+            case 3 -> COLOSO_MECANICO.get();
+            case 4 -> LOCOMOTORA_FANTASMA.get();
+            case 5 -> EL_ARQUITECTO.get();
+            case 6 -> SENOR_COSECHAS.get();
+            case 7 -> NUCLEO_DEL_DUNGEON.get();
+            case 8 -> DEVORADOR_DES_MUNDOS.get();
+            default -> null;
+        };
     }
 }
