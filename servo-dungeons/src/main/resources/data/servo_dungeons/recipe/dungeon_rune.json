@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "RL",
+    "SS"
+  ],
+  "key": {
+    "S": { "item": "minecraft:stone_bricks" },
+    "R": { "item": "minecraft:redstone" },
+    "L": { "item": "minecraft:lapis_lazuli" }
+  },
+  "result": {
+    "id": "servo_dungeons:dungeon_rune",
+    "count": 4
+  }
+}

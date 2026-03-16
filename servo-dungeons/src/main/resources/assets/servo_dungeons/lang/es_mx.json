@@ -39,6 +39,9 @@
   "message.servo_dungeons.dungeon_complete": "\u00a1Dungeon completado! Un portal de salida ha aparecido.",
   "item.servo_dungeons.dungeon_essence": "Esencia de Dungeon",
   "tooltip.servo_dungeons.dungeon_essence": "Un fragmento cristalizado de energia de dungeon",
+  "item.servo_dungeons.boss_heart": "Coraz\u00f3n de Jefe",
+  "item.servo_dungeons.boss_crystal": "Cristal de Jefe",
+  "item.servo_dungeons.nether_star_fragment": "Fragmento de Estrella del Nether",
 
   "entity.servo_dungeons.guardian_del_bosque": "Guardian del Bosque",
   "entity.servo_dungeons.bestia_glotona": "Bestia Glotona",

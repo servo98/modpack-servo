@@ -177,6 +177,22 @@ public class DungeonRegistry {
                     new Item.Properties().rarity(Rarity.RARE).stacksTo(64)
             ));
 
+    // === Boss Drop Items (for key crafting chain) ===
+    public static final DeferredHolder<Item, Item> BOSS_HEART =
+            ITEMS.register("boss_heart", () -> new Item(
+                    new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(16)
+            ));
+
+    public static final DeferredHolder<Item, Item> BOSS_CRYSTAL =
+            ITEMS.register("boss_crystal", () -> new Item(
+                    new Item.Properties().rarity(Rarity.EPIC).stacksTo(16)
+            ));
+
+    public static final DeferredHolder<Item, Item> NETHER_STAR_FRAGMENT =
+            ITEMS.register("nether_star_fragment", () -> new Item(
+                    new Item.Properties().rarity(Rarity.RARE).stacksTo(64)
+            ));
+
     // === Key Items ===
     public static final DeferredHolder<Item, DungeonKeyItem> KEY_BASIC =
             ITEMS.register("dungeon_key_basic", () -> new DungeonKeyItem(DungeonTier.BASIC));
@@ -296,6 +312,9 @@ public class DungeonRegistry {
                         output.accept(KEY_MASTER.get());
                         output.accept(KEY_CORE.get());
                         output.accept(DUNGEON_ESSENCE.get());
+                        output.accept(BOSS_HEART.get());
+                        output.accept(BOSS_CRYSTAL.get());
+                        output.accept(NETHER_STAR_FRAGMENT.get());
                         output.accept(DUNGEON_BOMB.get());
                         output.accept(DUNGEON_ROPE.get());
                         output.accept(BOSS_KEY_1.get());

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ENE",
+    "ECE",
+    " N "
+  ],
+  "key": {
+    "E": { "item": "servo_dungeons:dungeon_essence" },
+    "N": { "tag": "c:ingots/netherite" },
+    "C": { "item": "servo_dungeons:boss_crystal" }
+  },
+  "result": {
+    "id": "servo_dungeons:dungeon_key_core",
+    "count": 1
+  }
+}

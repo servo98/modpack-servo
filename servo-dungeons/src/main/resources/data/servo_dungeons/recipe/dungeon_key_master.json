@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DND",
+    "DSD",
+    "NE "
+  ],
+  "key": {
+    "D": { "tag": "c:gems/diamond" },
+    "N": { "item": "minecraft:netherite_scrap" },
+    "S": { "item": "servo_dungeons:nether_star_fragment" },
+    "E": { "item": "servo_dungeons:dungeon_essence" }
+  },
+  "result": {
+    "id": "servo_dungeons:dungeon_key_master",
+    "count": 1
+  }
+}

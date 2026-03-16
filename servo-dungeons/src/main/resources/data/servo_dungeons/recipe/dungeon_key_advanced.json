@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BDB",
+    "BEB",
+    " H "
+  ],
+  "key": {
+    "B": { "item": "minecraft:blaze_rod" },
+    "D": { "tag": "c:gems/diamond" },
+    "E": { "item": "minecraft:ender_pearl" },
+    "H": { "item": "servo_dungeons:boss_heart" }
+  },
+  "result": {
+    "id": "servo_dungeons:dungeon_key_advanced",
+    "count": 1
+  }
+}
