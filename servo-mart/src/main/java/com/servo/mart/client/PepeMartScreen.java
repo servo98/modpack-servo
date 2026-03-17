@@ -39,15 +39,22 @@ public class PepeMartScreen extends AbstractContainerScreen<PepeMartMenu> {
     private int scrollOffset = 0;
     private int selectedIndex = -1;
 
+    /** Y offset where the player inventory slots begin (must match PepeMartMenu) */
+    private static final int INV_Y = 186;
+
     public PepeMartScreen(PepeMartMenu menu, Inventory playerInv, Component title) {
         super(menu, playerInv, title);
         this.imageWidth = 256;
-        this.imageHeight = 222;
+        this.imageHeight = 270;
     }
 
     @Override
     protected void init() {
         super.init();
+
+        // Hide default inventory labels — we draw our own
+        this.inventoryLabelY = INV_Y - 11;
+        this.inventoryLabelX = (this.imageWidth - 162) / 2;
 
         // Build category list
         categories = menu.getCatalog().stream()
@@ -75,7 +82,7 @@ public class PepeMartScreen extends AbstractContainerScreen<PepeMartMenu> {
             }).bounds(tabX, tabY + i * 22, 50, 20).build());
         }
 
-        // Buy button
+        // Buy button — sits between the detail panel and the player inventory
         addRenderableWidget(Button.builder(Component.translatable("servo_mart.buy"), btn -> {
             if (selectedIndex >= 0 && selectedIndex < currentEntries.size()) {
                 int globalIndex = menu.getCatalog().indexOf(currentEntries.get(selectedIndex));
@@ -83,7 +90,7 @@ public class PepeMartScreen extends AbstractContainerScreen<PepeMartMenu> {
                     minecraft.gameMode.handleInventoryButtonClick(menu.containerId, globalIndex);
                 }
             }
-        }).bounds(leftPos + imageWidth - 60, topPos + imageHeight - 62, 52, 20).build());
+        }).bounds(leftPos + imageWidth - 60, topPos + 160, 52, 20).build());
     }
 
     private void refreshEntries() {
@@ -98,7 +105,7 @@ public class PepeMartScreen extends AbstractContainerScreen<PepeMartMenu> {
 
     @Override
     protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
-        // Background
+        // Full background
         graphics.fill(leftPos, topPos, leftPos + imageWidth, topPos + imageHeight, BG_COLOR);
 
         // Header
@@ -172,6 +179,15 @@ public class PepeMartScreen extends AbstractContainerScreen<PepeMartMenu> {
                 }
             }
         }
+
+        // Separator line between catalog area and player inventory
+        int sepY = topPos + INV_Y - 14;
+        graphics.fill(leftPos + 4, sepY, leftPos + imageWidth - 4, sepY + 1, 0xFF3a3a5e);
+
+        // Player inventory background panel
+        int invSlotX = leftPos + (imageWidth - 162) / 2 - 4;
+        int invSlotY = topPos + INV_Y - 4;
+        graphics.fill(invSlotX, invSlotY, invSlotX + 170, invSlotY + 80, PANEL_COLOR);
     }
 
     @Override
@@ -181,7 +197,9 @@ public class PepeMartScreen extends AbstractContainerScreen<PepeMartMenu> {
         int panelY = topPos + 18;
         int panelW = imageWidth - 62;
 
-        if (mouseX >= panelX && mouseX < panelX + panelW && mouseY >= panelY) {
+        int panelH = ROWS_VISIBLE * ROW_HEIGHT + 4;
+        if (mouseX >= panelX && mouseX < panelX + panelW
+                && mouseY >= panelY && mouseY < panelY + panelH) {
             int row = (int) ((mouseY - panelY - 2) / ROW_HEIGHT);
             if (row >= 0 && row < ROWS_VISIBLE) {
                 int idx = row + scrollOffset;
