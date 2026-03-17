@@ -545,14 +545,14 @@
   "entities": {},
   "recipes_count": 488,
   "recipe_types": [
-    "minecraft:smoking",
-    "minecraft:crafting_shaped",
     "thermal:insolator",
-    "botanypots:crop",
     "minecraft:crafting_shapeless",
+    "minecraft:smoking",
+    "immersiveengineering:cloche",
+    "minecraft:crafting_shaped",
     "minecraft:smelting",
-    "minecraft:campfire_cooking",
-    "immersiveengineering:cloche"
+    "botanypots:crop",
+    "minecraft:campfire_cooking"
   ],
   "recipes": {
     "almond_brittle": {

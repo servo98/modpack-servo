@@ -128,8 +128,8 @@
   "entities": {},
   "recipes_count": 20,
   "recipe_types": [
-    "minecraft:crafting_shapeless",
-    "minecraft:crafting_shaped"
+    "minecraft:crafting_shaped",
+    "minecraft:crafting_shapeless"
   ],
   "recipes": {
     "gacha_coin": {

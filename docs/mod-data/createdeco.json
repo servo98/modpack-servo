@@ -417,12 +417,12 @@
   "entities": {},
   "recipes_count": 1714,
   "recipe_types": [
-    "minecraft:crafting_shaped",
-    "minecraft:crafting_shapeless",
-    "minecraft:smelting",
-    "minecraft:stonecutting",
     "minecraft:blasting",
-    "create:pressing"
+    "minecraft:crafting_shapeless",
+    "minecraft:stonecutting",
+    "create:pressing",
+    "minecraft:crafting_shaped",
+    "minecraft:smelting"
   ],
   "recipes": {
     "long_verdant_bricks_from_verdant_bricks_stonecutting": {

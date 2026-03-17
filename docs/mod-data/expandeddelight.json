@@ -111,16 +111,16 @@
   "entities": {},
   "recipes_count": 95,
   "recipe_types": [
-    "farmersdelight:cutting",
-    "minecraft:smoking",
-    "minecraft:crafting_shaped",
-    "unknown",
-    "minecraft:crafting_shapeless",
-    "expandeddelight:juicing",
-    "minecraft:smelting",
-    "minecraft:campfire_cooking",
     "minecraft:blasting",
-    "farmersdelight:cooking"
+    "minecraft:crafting_shapeless",
+    "farmersdelight:cutting",
+    "farmersdelight:cooking",
+    "minecraft:smoking",
+    "expandeddelight:juicing",
+    "unknown",
+    "minecraft:crafting_shaped",
+    "minecraft:smelting",
+    "minecraft:campfire_cooking"
   ],
   "recipes": {
     "asparagus": {

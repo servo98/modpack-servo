@@ -74,10 +74,10 @@
   },
   "recipes_count": 125,
   "recipe_types": [
+    "minecraft:crafting_shaped",
     "minecraft:blasting",
     "minecraft:smithing_transform",
-    "minecraft:smelting",
-    "minecraft:crafting_shaped"
+    "minecraft:smelting"
   ],
   "recipes": {
     "aeternium_dagger": {

@@ -57,7 +57,7 @@ Modpack progresivo para hasta 8 jugadores (~240 horas) con 8 capitulos. Combina 
 | Combate | Champions Unofficial (16 affixes) |
 | Gacha | Bloo's Gacha Machine |
 | Decoracion | Macaw's Furniture/Windows, Refurbished Furniture |
-| QoL | Waystones, Xaero's Maps, Jade, Backpacks, Carry On, YIGD |
+| QoL | Waystones, Jade, Backpacks, Carry On, YIGD |
 | Multimedia | WATERFrAMES (video screens) |
 | Progression | ProgressiveStages, FTB Quests/Teams/Chunks |
 

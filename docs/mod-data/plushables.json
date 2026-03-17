@@ -58,8 +58,8 @@
   "entities": {},
   "recipes_count": 50,
   "recipe_types": [
-    "minecraft:crafting_shapeless",
-    "minecraft:crafting_shaped"
+    "minecraft:crafting_shaped",
+    "minecraft:crafting_shapeless"
   ],
   "recipes": {
     "heart_of_gold": {

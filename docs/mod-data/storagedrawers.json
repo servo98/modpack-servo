@@ -131,13 +131,13 @@
   "entities": {},
   "recipes_count": 126,
   "recipe_types": [
-    "storagedrawers:keyring",
-    "storagedrawers:add_upgrade",
-    "minecraft:crafting_shaped",
     "minecraft:crafting_shapeless",
-    "storagedrawers:personal_key_cycle",
     "storagedrawers:add_detached_upgrade",
-    "storagedrawers:remote_group_upgrade"
+    "minecraft:crafting_shaped",
+    "storagedrawers:add_upgrade",
+    "storagedrawers:remote_group_upgrade",
+    "storagedrawers:personal_key_cycle",
+    "storagedrawers:keyring"
   ],
   "recipes": {
     "acacia_full_drawers_1": {

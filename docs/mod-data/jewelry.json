@@ -100,9 +100,9 @@
   },
   "recipes_count": 87,
   "recipe_types": [
+    "minecraft:crafting_shaped",
     "minecraft:blasting",
-    "minecraft:smelting",
-    "minecraft:crafting_shaped"
+    "minecraft:smelting"
   ],
   "recipes": {
     "citrine_necklace": {

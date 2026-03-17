@@ -13,10 +13,10 @@
   "entities": {},
   "recipes_count": 8,
   "recipe_types": [
-    "create:mixing",
-    "minecraft:crafting_shapeless",
+    "minecraft:crafting_shaped",
     "create:filling",
-    "minecraft:crafting_shaped"
+    "minecraft:crafting_shapeless",
+    "create:mixing"
   ],
   "recipes": {
     "rich_soil": {

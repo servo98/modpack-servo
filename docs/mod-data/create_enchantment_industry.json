@@ -24,17 +24,17 @@
   "entities": {},
   "recipes_count": 22,
   "recipe_types": [
-    "create_enchantment_industry:grinding",
-    "create:crushing",
-    "minecraft:crafting_shaped",
-    "create:cutting",
-    "minecraft:crafting_shapeless",
-    "create:compacting",
-    "create:item_application",
     "create:emptying",
+    "minecraft:crafting_shapeless",
+    "minecraft:smithing_transform",
+    "create:cutting",
+    "create:compacting",
+    "create_enchantment_industry:grinding",
     "create:pressing",
+    "minecraft:crafting_shaped",
     "create:filling",
-    "minecraft:smithing_transform"
+    "create:crushing",
+    "create:item_application"
   ],
   "recipes": {
     "experience_bottle": {

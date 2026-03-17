@@ -67,9 +67,9 @@
   "recipes_count": 125,
   "recipe_types": [
     "minecraft:blasting",
+    "minecraft:crafting_shaped",
     "minecraft:smithing_transform",
-    "minecraft:smelting",
-    "minecraft:crafting_shaped"
+    "minecraft:smelting"
   ],
   "recipes": {
     "amethyst_shard_from_blasting_staff_arcane": {

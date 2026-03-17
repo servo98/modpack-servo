@@ -1,12 +1,12 @@
 # PepeMart (Tienda Online)
 
 > Fuente: GDD v2, seccion 3.4
-> Implementacion: **servo_mart** (mod standalone, deps: servo_packaging)
+> Implementacion: **servo_core** (1 bloque: `servo_core:pepe_mart`). Absorbido en el mod glue en sesion 17 (2026-03-17). No es un mod separado.
 > Relacionado: [Tokens](tokens.md), [Gacha](gacha.md), [Progression](progression.md)
 
 ## Overview
 
-Bloque custom tipo tablet/computadora. El jugador abre un catalogo, elige lo que quiere comprar, paga con **materiales** (NO Pepe Coins), y el item llega en una **Caja de Carton** (servo_packaging) que debe desempacar.
+Bloque custom tipo tablet/computadora (`servo_core:pepe_mart`). El jugador abre un catalogo, elige lo que quiere comprar, paga con **materiales** (NO Pepe Coins), y el item va directamente al inventario del jugador.
 
 ## Diferencia con Gacha
 
@@ -16,7 +16,7 @@ Bloque custom tipo tablet/computadora. El jugador abre un catalogo, elige lo que
 | **Resultado** | Random | Determinístico — eliges qué comprar |
 | **Sensación** | "A ver qué me toca!" | "Quiero ESE específico" |
 | **Precio relativo** | Barato por item esperado | Más caro que gacha |
-| **Entrega** | Capsula de gacha | Caja de Cartón (servo_packaging) |
+| **Entrega** | Capsula de gacha | Directo al inventario |
 
 Ambos coexisten: gacha para la emocion del azar, PepeMart para compra directa con certeza.
 
@@ -27,8 +27,7 @@ Ambos coexisten: gacha para la emocion del azar, PepeMart para compra directa co
 3. Catalogo organizado por **categorias** (muebles, plushies, accesorios, QoL)
 4. Cada item muestra: nombre, preview, precio en materiales, stage requerido
 5. Items bloqueados por stage se ven pero no se pueden comprar (candado)
-6. Al comprar: materiales se consumen del inventario, aparece **Caja de Carton** con el item
-7. Colocar la caja y abrirla → aparece el item
+6. Al comprar: materiales se consumen del inventario, el item aparece directamente en el inventario del jugador (overflow: dropea al suelo)
 
 ## Categorias del catalogo
 
@@ -143,10 +142,10 @@ Campos por entrada:
 | Materiales/gemas | Se farmean | Overworld, gacha |
 | Plushies legendarios | Exclusivos de gacha | Gacha Rosa (Legendario 1%) |
 
-## Implementacion (servo_mart)
+## Implementacion (servo_core)
 
 ### Bloques
-- `servo_mart:pepe_mart` — bloque tablet con GUI
+- `servo_core:pepe_mart` — bloque tablet con GUI (parte de servo_core, no mod separado)
 
 ### GUI
 - Pantalla tipo catalogo con tabs por categoria
@@ -155,8 +154,8 @@ Campos por entrada:
 - Indicador de stage requerido para items bloqueados
 
 ### Dependencias
-- servo_packaging (hard) — entrega en cajas
-- ProgressiveStages (soft) — gating por stage
+- ninguna externa (es parte de servo_core)
+- ProgressiveStages (soft, via servo_core) — gating por stage
 
 ## Estado: EN DISENO
 

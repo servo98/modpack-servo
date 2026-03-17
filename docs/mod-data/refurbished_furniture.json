@@ -481,17 +481,17 @@
   "entities": {},
   "recipes_count": 672,
   "recipe_types": [
-    "refurbished_furniture:cutting_board_slicing",
-    "minecraft:crafting_shaped",
+    "refurbished_furniture:crafting_special_door_mat_copy",
     "minecraft:crafting_shapeless",
-    "refurbished_furniture:microwave_heating",
-    "refurbished_furniture:oven_baking",
-    "refurbished_furniture:toaster_heating",
     "refurbished_furniture:freezer_solidifying",
     "refurbished_furniture:cutting_board_combining",
-    "refurbished_furniture:frying_pan_cooking",
     "refurbished_furniture:workbench_constructing",
-    "refurbished_furniture:crafting_special_door_mat_copy"
+    "minecraft:crafting_shaped",
+    "refurbished_furniture:cutting_board_slicing",
+    "refurbished_furniture:oven_baking",
+    "refurbished_furniture:toaster_heating",
+    "refurbished_furniture:microwave_heating",
+    "refurbished_furniture:frying_pan_cooking"
   ],
   "recipes": {
     "acacia_dark_ceiling_fan": {

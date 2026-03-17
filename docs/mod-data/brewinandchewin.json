@@ -55,13 +55,13 @@
   "entities": {},
   "recipes_count": 72,
   "recipe_types": [
+    "minecraft:crafting_shapeless",
     "brewinandchewin:fermenting",
     "farmersdelight:cutting",
-    "minecraft:crafting_shaped",
-    "unknown",
-    "minecraft:crafting_shapeless",
+    "farmersdelight:cooking",
     "brewinandchewin:keg_pouring",
-    "farmersdelight:cooking"
+    "unknown",
+    "minecraft:crafting_shaped"
   ],
   "recipes": {
     "builders_tea": {

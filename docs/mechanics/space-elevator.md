@@ -1,9 +1,9 @@
 # Sistema: Terminal de Entrega (Space Elevator) — Diseno Completo
 
 > Modulo: **servo_delivery** (mod standalone). Coordination con servo_core para stage unlocks.
-> Dependencias: servo_packaging (hard — acepta Cajas de Envio), FTB Quests (auto-complete), ProgressiveStages (stage unlock via servo_core), FTB Teams (multiplayer sync)
+> Dependencias: ninguna (acepta raw items directamente). FTB Quests (auto-complete), ProgressiveStages (stage unlock via servo_core), FTB Teams (multiplayer sync)
 > Prioridad: CRITICA — sin esto no hay progresion de capitulos
-> Relacionado: [Packaging (Cajas de Envio)](packaging.md), [Progression](progression.md), [Game Loop](game-loop.md), [Create Automation](create-automation.md)
+> Relacionado: [Progression](progression.md), [Game Loop](game-loop.md), [Create Automation](create-automation.md)
 
 ---
 
@@ -11,7 +11,7 @@
 
 El Terminal de Entrega es el eje central del modpack. Es un multibloque que el jugador construye con bloques que recibe como recompensa de quest. Inspirado en el Space Elevator de Satisfactory: insertas items requeridos y al completar todos, avanzas de capitulo.
 
-El Terminal SOLO acepta **Cajas de Envio** (ver [packaging.md](packaging.md)), no items sueltos. Excepcion: drops de boss, que van directo.
+El Terminal acepta **items directos** (raw items sueltos o en stack). No requiere empacar. Los drops de boss tambien van directo.
 
 ---
 
@@ -103,14 +103,13 @@ Click derecho en el Terminal de Entrega:
 
 ## 3.2 Como se insertan items
 
-El jugador inserta items haciendo **click derecho** directamente sobre el bloque Terminal o sobre los bloques Puerto, con la Caja de Envio en mano. No hay un slot de GUI para arrastrar items.
+El jugador inserta items haciendo **click derecho** directamente sobre el bloque Terminal o sobre los bloques Puerto, con el item en mano. No hay un slot de GUI para arrastrar items.
 
 Flujo de validacion al hacer click derecho:
 1. servo_delivery verifica:
-   - Es Caja de Envio valida (`servo_packaging:shipping_box`) o item directo de boss?
    - Corresponde a un requisito de la entrega actual?
    - Aun se necesitan mas de ese tipo?
-2. **Si valido**: item se consume del stack en mano, contador sube, particulas verdes, sonido "cha-ching"
+2. **Si valido**: items se consumen del stack en mano (hasta la cantidad necesaria), contador sube, particulas verdes, sonido "cha-ching"
 3. **Si no valido**: item no se consume. Mensaje rojo en ActionBar: "Este item no es necesario para la entrega actual"
 4. **Si ya completo ese tipo**: "Ya entregaste suficientes de este tipo"
 5. **Al completar todo**: el boton LAUNCH se habilita en el GUI. El jugador debe abrir el GUI y presionarlo para cerrar el capitulo.
@@ -120,14 +119,14 @@ Flujo de validacion al hacer click derecho:
 Los 2 bloques `delivery_port` a los lados del Terminal aceptan items por click derecho o por automatizacion:
 
 - **Click derecho**: igual que el Terminal — valida y consume si el item es correcto
-- **Automatizacion** *(pendiente)*: Hopper, Create Funnel, Create Belt, RS Exporter, Chute
+- **Automatizacion** *(pendiente)*: Hopper, Create Funnel, Create Belt (con Create Packager/Frogport), RS Exporter, Chute
 - **Comportamiento actual**: los puertos delegan al master (`tryInsertItem`). Son passthrough — no tienen buffer propio.
 - **Buffer de 1 slot por puerto** *(pendiente)*: retener items rechazados en vez de tirarlos
 - **Senal de redstone por rechazo** *(pendiente)*: Puerto emite redstone 15 cuando tiene item rechazado (para que Create filtre)
 
 Progresion de uso:
-- **Ch1-Ch3**: jugador lleva cajas a mano al GUI
-- **Ch4+**: Create belt -> Puerto. Pipeline automatico.
+- **Ch1-Ch3**: jugador lleva items a mano al GUI
+- **Ch4+**: Create belt -> Puerto. Pipeline automatico con Packager/Stock Link.
 - **Ch5+**: RS Exporter -> Puerto. Full digital logistics.
 
 ---
@@ -138,127 +137,171 @@ Progresion de uso:
 
 Cada entrega debe:
 1. **Demostrar dominio del capitulo** — usaste las mecanicas nuevas
-2. **Ser alcanzable sin Create** — todo se puede hacer a mano
-3. **Ser mas eficiente con Create** — automatizar ahorra tiempo, no es requisito
+2. **Ser alcanzable sin Create** — todo se puede hacer a mano en capitulos tempranos
+3. **Ser mas eficiente con Create** — automatizar ahorra tiempo, no es requisito obligatorio
 4. **Incluir 1 item de boss** — obliga a pelear antes de completar
-5. **Escalar en cantidad** — Ch1 pide ~25, Ch8 pide ~90
+5. **Escalar en cantidad acumulada** — cada capitulo pide items de capitulos anteriores + nuevos
+6. **Solo produccion, nunca equipo personal** — materias primas y productos procesados, no herramientas/armas del jugador
+
+> Para las tablas completas de entregas por capitulo con cantidades exactas ver [progression.md → Entregas al Space Elevator](progression.md#entregas-al-space-elevator-por-capitulo).
 
 ## 4.1 Capitulo 1: "Primeras Raices"
 
-| # | Item requerido | Cant. | Como se obtiene |
-|---|---------------|-------|-----------------|
-| 1 | Caja de Vegetable Soup | 4 | Cooking Pot -> empacar |
-| 2 | Caja de Beef Stew | 4 | Cooking Pot -> empacar |
-| 3 | Caja de Comida Variada | 8 | Min 8 tipos diferentes de comida -> empacar |
-| 4 | Caja de Crops Basicos | 4 | Stack de cualquier crop Ch1 -> empacar |
-| 5 | Caja de Pescado | 2 | Cualquier pez cocinado -> empacar |
-| 6 | Raiz del Guardian | 1 | Drop del boss Ch1 (item directo) |
-| 7 | Caja de Iron Pickaxe | 1 | Iron Pickaxe -> empacar |
-| 8 | Caja de Iron Sword | 1 | Iron Sword -> empacar |
-| **Total** | | **25** | **~2-3 horas** |
+Manual puro. Cantidades pequenas.
 
-## 4.2 Capitulo 2: "La Mesa Servida"
+| Item requerido | Cant. | Como se obtiene |
+|---------------|-------|-----------------|
+| Vegetable Soup | 16 | Cooking Pot |
+| Beef Stew | 16 | Cocina con carne |
+| Comida variada (min 8 tipos) | 16 | Diversidad culinaria |
+| Crops Ch1 (cualquiera) | 32 | Farming |
+| Pescado cocinado | 8 | Exploracion |
+| Iron Ingot | 32 | Mineria |
+| Leather + String | 16+16 | Caza/exploracion |
+| Raiz del Guardian | 1 | **Boss** |
+| **Total** | **~153** | ~3 horas manual |
 
-| # | Item requerido | Cant. | Como se obtiene |
-|---|---------------|-------|-----------------|
-| 1 | Caja de Comida del Cooking Pot | 4 | Cooking Pot (recetas Ch2) -> empacar |
-| 2 | Caja de Queso | 4 | B&C Flaxen/Scarlet Cheese -> empacar |
-| 3 | Caja de Comida del Cutting Board | 4 | Cutting Board -> empacar |
-| 4 | Caja de Bebida Fermentada | 4 | Keg (Beer, Mead, etc.) -> empacar |
-| 5 | Caja de Comida Variada | 12 | Min 12 tipos diferentes |
-| 6 | Caja de Crops Nuevos | 4 | Crops Croptopia Ch2 -> empacar |
-| 7 | Mandibula de la Bestia | 1 | Drop del boss Ch2 (item directo) |
-| 8 | Caja de Lingotes Create | 2 | Andesite Alloy x64 -> empacar |
-| **Total** | | **35** | |
+## 4.2 Capitulo 2: "Engranajes"
 
-## 4.3 Capitulo 3: "Engranajes y Magia"
+Belts mueven cosas. Todo de Ch1 sigue pidiendo.
 
-| # | Item requerido | Cant. | Como se obtiene |
-|---|---------------|-------|-----------------|
-| 1 | Caja de Comida del Keg | 6 | Keg (recetas Ch3) -> empacar |
-| 2 | Caja de Comida Horneada | 4 | Furnace/Smoker (recetas avanzadas) -> empacar |
-| 3 | Caja de Comida Variada | 16 | Min 16 tipos diferentes |
-| 4 | Caja de Items Prensados | 4 | Mechanical Press output -> empacar |
-| 5 | Caja de Items Molidos | 4 | Millstone output -> empacar |
-| 6 | Caja de Materiales Nether | 4 | Blaze Rod, Nether Wart, Quartz -> empacar |
-| 7 | Engranaje del Coloso | 1 | Drop del boss Ch3 (item directo) |
-| 8 | Caja de Runas | 2 | Runas crafteadas -> empacar |
-| **Total** | | **41** | |
+| Item requerido | Cant. | Nuevo/Acumulado |
+|---------------|-------|-----------------|
+| Cooking Pot recipe (cualquiera) | 32 | Acumulado (x2) |
+| Cutting Board output | 32 | Acumulado |
+| Cerveza/Hidromiel (Keg) | 16 | **Nuevo** |
+| Queso (B&C) | 16 | **Nuevo** |
+| Crops Croptopia | 64 | **Nuevo** |
+| Comida variada (min 14 tipos) | 32 | Acumulado |
+| Andesite Alloy | 32 | **Nuevo** — primer Create |
+| Mandibula de la Bestia | 1 | **Boss** |
+| **Total** | **~225** | |
 
-## 4.4 Capitulo 4: "Horizontes"
+## 4.3 Capitulo 3: "Automatizacion"
 
-| # | Item requerido | Cant. | Como se obtiene |
-|---|---------------|-------|-----------------|
-| 1 | Caja de Feast | 4 | FD Feasts -> empacar |
-| 2 | Caja de Comida Variada | 24 | Min 24 tipos diferentes |
-| 3 | Caja de Brass | 4 | Brass Ingot x64 -> empacar |
-| 4 | Caja de Mechanical Crafting | 4 | Mechanical Crafter output -> empacar |
-| 5 | Caja de Gemas | 2 | Gemas de Jewelry -> empacar |
-| 6 | Scroll de Especializacion | 1 | Prueba de Skill Tree spec (custom item, directo) |
-| 7 | Senal Fantasma | 1 | Drop del boss Ch4 (item directo) |
-| **Total** | | **40** | |
+Maquinas procesan. Las cantidades ya piden Create.
+
+| Item requerido | Cant. | Nuevo/Acumulado |
+|---------------|-------|-----------------|
+| Cooking Pot recipe | 64 | Acumulado (x2) |
+| Cutting Board output | 32 | Acumulado |
+| Keg product | 32 | Acumulado (x2) |
+| Wheat Flour | 128 | **Nuevo** — Millstone |
+| Iron Sheet | 64 | **Nuevo** — Press |
+| Copper Sheet | 64 | **Nuevo** — Press |
+| Fan-washed output | 32 | **Nuevo** — Encased Fan |
+| Slicer output | 64 | **Nuevo** — Slice&Dice |
+| Jugo/smoothie (Expanded Delight) | 32 | **Nuevo** |
+| Comida variada (min 22 tipos) | 32 | Acumulado |
+| Blaze Rod | 16 | **Nuevo** — Nether |
+| Engranaje del Coloso | 1 | **Boss** |
+| **Total** | **~561** | |
+
+## 4.4 Capitulo 4: "La Fabrica"
+
+Fabrica completa. Steam Engine porque Water Wheel ya no alcanza.
+
+| Item requerido | Cant. | Nuevo/Acumulado |
+|---------------|-------|-----------------|
+| Cooking Pot recipe | 64 | Acumulado |
+| Keg product | 32 | Acumulado |
+| Wheat Flour | 128 | Acumulado |
+| Iron/Copper Sheet | 128 | Acumulado (x2) |
+| Slicer output | 64 | Acumulado |
+| Brass Ingot | 128 | **Nuevo** — Mixer |
+| Precision Mechanism | 8 | **Nuevo** — Sequenced Assembly |
+| Crushed ore (cualquiera) | 128 | **Nuevo** — Crushing Wheel |
+| Deployer recipe output | 32 | **Nuevo** — Deployer |
+| Feast completo (FD) | 8 | **Nuevo** |
+| Wok recipe (servo_cooking) | 32 | **Nuevo** |
+| Baker's Oven recipe | 32 | **Nuevo** |
+| Comida variada (min 30 tipos) | 32 | Acumulado |
+| Senal Fantasma | 1 | **Boss** |
+| **Total** | **~807** | |
 
 ## 4.5 Capitulo 5: "La Red"
 
-| # | Item requerido | Cant. | Como se obtiene |
-|---|---------------|-------|-----------------|
-| 1 | Caja de Comida Variada | 24 | Min 24 tipos diferentes |
-| 2 | Caja de Comida Exotica | 8 | Recetas con crops exoticos Ch5 -> empacar |
-| 3 | Caja de Items Autocraft | 8 | RS Autocrafting output -> empacar |
-| 4 | Caja de Enchanted Books | 4 | Enchanted Books III+ -> empacar |
-| 5 | Caja de RS Components | 2 | RS Controller/Disk -> empacar |
-| 6 | Caja de Items Encantados | 4 | Gear con Spell Power enchants -> empacar |
-| 7 | Nucleo del Arquitecto | 1 | Drop del boss Ch5 (item directo) |
-| **Total** | | **51** | |
+Escala industrial. Trenes mueven entre ubicaciones.
+
+| Item requerido | Cant. | Nuevo/Acumulado |
+|---------------|-------|-----------------|
+| Cooking Pot recipe | 64 | Acumulado |
+| Keg product | 32 | Acumulado |
+| Sheets (iron+copper+brass) | 256 | Acumulado (x2) |
+| Flour | 128 | Acumulado |
+| Crushed ore | 128 | Acumulado |
+| Slicer output | 64 | Acumulado |
+| Wok + Baker's recipes | 64 | Acumulado |
+| Iron/Copper/Brass Rod | 64 | **Nuevo** — Rolling Mill |
+| Wire (cualquier tipo) | 64 | **Nuevo** — Rolling Mill |
+| Enchanted Book III+ | 16 | **Nuevo** — Enchantment Industry |
+| Comida exotica (crops Ch5) | 64 | **Nuevo** |
+| Comida variada (min 38 tipos) | 32 | Acumulado |
+| Quartz | 64 | **Nuevo** — material para Refined Storage |
+| Nucleo del Arquitecto | 1 | **Boss** |
+| **Total** | **~1041** | |
 
 ## 4.6 Capitulo 6: "Maestria"
 
-| # | Item requerido | Cant. | Como se obtiene |
-|---|---------------|-------|-----------------|
-| 1 | Caja de Comida Variada | 32 | Min 32 tipos diferentes |
-| 2 | Caja de Receta Multi-Step | 8 | Recetas de 3+ workstations -> empacar |
-| 3 | Caja de Netherite Gear | 2 | T3 RPG gear -> empacar |
-| 4 | Caja de Tipped Arrows | 4 | Tipped Arrows Spell Power -> empacar |
-| 5 | Caja de Produccion Nether | 13 | Items de fabrica Nether -> empacar |
-| 6 | Hoz del Senor de las Cosechas | 1 | Drop del boss Ch6 (item directo) |
-| **Total** | | **60** | |
+Menos volumen, items dificiles.
+
+| Item requerido | Cant. | Nuevo/Acumulado |
+|---------------|-------|-----------------|
+| Sheets + Rods + Wire (variados) | 128 | Acumulado |
+| Crushed ore | 64 | Acumulado |
+| ALL workstations output | 64 | Acumulado |
+| Slicer output | 32 | Acumulado |
+| Comida variada (min 42 tipos) | 32 | Acumulado |
+| Netherite Scrap | 16 | **Nuevo** |
+| Netherite Ingot | 4 | **Nuevo** |
+| End Stone (Dragons Plus Ending) | 32 | **Nuevo** |
+| Blue Ice (Dragons Plus Freezing) | 32 | **Nuevo** |
+| Multi-step recipe (3+ workstations) | 32 | **Nuevo** |
+| Hoz del Senor | 1 | **Boss** |
+| **Total** | **~437** | |
 
 ## 4.7 Capitulo 7: "Profundidades"
 
-| # | Item requerido | Cant. | Como se obtiene |
-|---|---------------|-------|-----------------|
-| 1 | Caja de Comida Variada | 48 | Min 40 tipos diferentes |
-| 2 | Caja de Unique Jewelry | 3 | Unique Jewelry (loot-only) -> empacar |
-| 3 | Caja de Esencia de Dungeon | 10 | Esencia de Dungeon -> empacar |
-| 4 | Caja de Items del Nucleo | 4 | Loot de Dungeon del Nucleo -> empacar |
-| 5 | Cristal del Nucleo | 1 | Drop del boss Ch7 (item directo) |
-| **Total** | | **66** | |
+Dungeon farming.
+
+| Item requerido | Cant. | Nuevo/Acumulado |
+|---------------|-------|-----------------|
+| Factory output variado | 128 | Acumulado |
+| ALL workstations output | 64 | Acumulado |
+| Comida variada (min 44 tipos) | 32 | Acumulado |
+| Unique Jewelry | 3 | **Nuevo** — dungeon farming |
+| Esencia de Dungeon | 16 | **Nuevo** — champions en dungeon |
+| Loot del Nucleo | 8 | **Nuevo** — Llave del Nucleo |
+| Cristal del Nucleo | 1 | **Boss** |
+| **Total** | **~252** | |
 
 ## 4.8 Capitulo 8 (FINAL): "El Legado"
 
-| # | Item requerido | Cant. | Como se obtiene |
-|---|---------------|-------|-----------------|
-| 1 | Caja de Comida Variada | 48 | Min 40 tipos diferentes |
-| 2 | Caja de Comida Legendaria | 12 | Recetas endgame -> empacar |
-| 3 | Item Maestro | 1 | Mega-craft con items de todos los capitulos (directo) |
-| 4 | Caja de Arma T4 | 1 | Arma T4 custom -> empacar |
-| 5 | Trofeos de Boss | 8 | 1 de cada boss (items directos) |
-| 6 | Caja de Factory Output | 19 | Pipeline RS+Create output -> empacar |
-| 7 | Fragmento del Devorador | 1 | Drop del boss final (item directo) |
-| **Total** | | **90** | |
+Todo combinado. La prueba final.
+
+| Item requerido | Cant. | Nuevo/Acumulado |
+|---------------|-------|-----------------|
+| Comida variada (min 48 tipos) | 64 | Acumulado |
+| Comida legendaria (endgame recipes) | 32 | **Nuevo** |
+| Factory output (sheets+rods+wire+crushed) | 256 | Acumulado |
+| ALL workstations output | 64 | Acumulado |
+| Cristal del Nucleo | 8 | **Nuevo** — dungeon endgame farming |
+| Trofeos de Boss (1 de cada) | 7 | **Nuevo** — todos los bosses |
+| Fragmento del Devorador | 1 | **Boss** |
+| **Total** | **~432** | |
 
 ## 4.9 Resumen de escalado
 
-| Cap | Cajas | Boss drop | Foco de la entrega |
-|-----|-------|-----------|-------------------|
-| 1 | 24 | 1 | Tutorial: cocina + farming basico |
-| 2 | 34 | 1 | Variedad: queso, cutting board, cooking pot, Create basico |
-| 3 | 40 | 1 | Create processing + Nether + keg avanzado |
-| 4 | 39 | 1 | Brass + feasts + RPG spec |
-| 5 | 50 | 1 | RS + enchants + escala industrial |
-| 6 | 59 | 1 | Netherite + multi-step + Nether factory |
-| 7 | 65 | 1 | Dungeon endgame farming |
-| 8 | 89 | 1 | Todo combinado + boss final |
+| Cap | Total items | Boss drop | Foco de la entrega |
+|-----|-------------|-----------|-------------------|
+| 1 | ~153 | 1 | Manual: cocina + farming basico |
+| 2 | ~225 | 1 | Belts: Keg, Create basico, Croptopia |
+| 3 | ~561 | 1 | Maquinas: Press, Mill, Fan, Slicer obligatorios |
+| 4 | ~807 | 1 | Fabrica: Mixer, Crusher, Deployer, Sequenced Assembly |
+| 5 | ~1041 | 1 | Industrial: Rolling Mill, Enchanting, trains/logistics |
+| 6 | ~437 | 1 | Maestria: items dificiles (Netherite, Dragons Plus) |
+| 7 | ~252 | 1 | Dungeon: farming de jewelry, esencia, loot |
+| 8 | ~432 | 1 | Final: todo combinado |
 
 ---
 
@@ -305,19 +348,16 @@ team_data.boss_ch[N] = true/false       // boss derrotado (event from servo_dung
 
 ## Resueltas
 1. **Obtencion**: recompensa de quest temprana Ch1 + receta de backup
-2. **Cajas**: sistema fisico separado (ver [packaging.md](packaging.md))
-3. **Empacadora**: bloque disponible desde Ch1. Sin crafting manual previo. Deployer compat (servo_create) en Ch4.
+2. **Items directos**: Terminal acepta raw items, no requiere empacar (servo_packaging eliminado)
+3. **Packager Create**: Create 6.0 tiene Packager nativo para automatizar entregas en belt → Delivery Port
 
 ## Pendientes
-- [ ] "Caja de Comida Variada" verifica tipos unicos? Propuesta: si, estricto
-- [ ] Items de boss necesitan caja? Propuesta: no, van directo
+- [ ] "Comida variada" verifica tipos unicos? Propuesta: si, estricto
 - [ ] Terminal acepta items del capitulo siguiente? Propuesta: no, solo actual
 - [ ] Cual quest exacta da los bloques? Propuesta: "Cocina tu primera comida"
 
-## Resueltas (balance check sesion 12)
+## Resueltas (balance check sesion 12 + update sesion 17)
 - [x] Recompensa: 15 Pepe Coins + 1 Gacha Ticket por capitulo (alineado con gacha-rates.md)
-- [x] Caja de Iron Tools separada en 2 cajas (Pick + Sword) para respetar regla "mismo tipo"
-- [x] Unique Jewelry Ch7: bajado de 5 a 3 (varianza de drop rates)
-- [x] Comida Variada Ch8: bajado de 64 a 48 (min 40 tipos distintos)
-- [x] Curva de cajas suavizada: sin retrocesos entre capitulos
-- [x] Empacadora: quitado Piston (requeria Redstone) de la receta
+- [x] Unique Jewelry Ch7: 3 items (varianza de drop rates)
+- [x] Curva de entregas suavizada: acumulativa, sin retrocesos
+- [x] Entregas = solo produccion, nunca equipo personal del jugador

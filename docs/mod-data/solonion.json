@@ -15,9 +15,9 @@
   "entities": {},
   "recipes_count": 4,
   "recipe_types": [
-    "minecraft:crafting_shapeless",
+    "minecraft:crafting_shaped",
     "solonion:upgrade_food_container",
-    "minecraft:crafting_shaped"
+    "minecraft:crafting_shapeless"
   ],
   "recipes": {
     "food_book": {

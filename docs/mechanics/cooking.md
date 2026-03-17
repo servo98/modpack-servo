@@ -24,14 +24,16 @@ Las 4 workstations de servo_cooking estan definidas. Cadenas completas de sub-in
 
 | Workstation | Mecanica | Capitulo | Recetas | Create compat |
 |-------------|----------|----------|---------|---------------|
-| **Prep Station** | Ensamblaje frio (4 slots → 1 output) | Ch1 | ~57 | Deployer en secuencia |
-| **Licuadora** | Mezcla ingredientes + liquido (3 seg) | Ch2 | ~23 | Basin + Mixer |
-| **Wok** | Freidora con control activo de temperatura | Ch2 | ~21 | Deployer + Blaze Burner |
-| **Baker's Oven** | Horno multislot (4 slots + modo) | Ch3 | ~46 | Mixer Heated |
+| **Prep Station** | Ensamblaje frio (4 slots → 1 output) | Ch3 | ~57 | Deployer en secuencia |
+| **Licuadora** | Mezcla ingredientes + liquido (3 seg) | Ch3 | ~23 | Basin + Mixer |
+| **Wok** | Freidora con control activo de temperatura | Ch4 | ~21 | Deployer + Blaze Burner |
+| **Baker's Oven** | Horno multislot (4 slots + modo) | Ch4 | ~46 | Mixer Heated |
 
 **Congelados (helados, 7 recetas)**: van al **Freezer de MrCrayfish Refurbished** (bloque ya en el modpack). NO requieren 5ta workstation. Issue #71 para recetas KubeJS.
 
 **Create como gateway**: flour, butter, olive_oil, chocolate, whipping_cream se producen en maquinas Create (Millstone, Press, Mixer), forzando el puente entre los pilares Cocina y Automatizacion a partir de Ch3-Ch4.
+
+**Slice&Dice como bridge Create↔Cocina** (Ch3): Slice&Dice automatiza Cutting Board y Cooking Pot de Farmer's Delight con maquinas Create (Slicer → Sprinkler). Las workstations de servo_cooking deben seguir el mismo patron: runtime recipe injection permite que Deployer, Basin u otras maquinas Create lean y ejecuten recetas custom sin depender de Create directamente. Esto hace que servo_cooking sea standalone (0 deps) pero Create-compatible via injection en runtime.
 
 ## Crops y recetas por capitulo
 

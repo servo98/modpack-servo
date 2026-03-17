@@ -1,9 +1,14 @@
-# Sistema: Cajas de Carton y Empaque — Diseno Completo (v3)
+# Sistema: Cajas de Carton y Empaque — ELIMINADO (referencia historica)
 
-> Modulo: **servo_packaging** (mod standalone, 0 dependencias). Create compat en servo_create addon.
-> Sin GUI en las cajas — interaccion inmersiva en el mundo (estilo Cooking Pot de FD)
-> Relacionado: [Terminal de Entrega](space-elevator.md), [Create Automation](create-automation.md), [Cooking](cooking.md), [Architecture](../architecture.md)
-> Estado: **CODIGO COMPLETO** — pendiente: assets de artista
+> **ESTADO: ELIMINADO en sesion 17 (2026-03-17)**
+> **Razon**: Create 6.0 tiene packaging nativo (Packager, Cardboard Package). El Space Elevator ahora acepta items directos, sin necesidad de cajas. Ver [progression.md → Decisiones arquitecturales](progression.md#decisiones-arquitecturales-v2--2026-03-17) y [architecture.md](../architecture.md).
+> **Este archivo se conserva como referencia historica. No implementar.**
+
+---
+
+> ~~Modulo: **servo_packaging** (mod standalone, 0 dependencias). Create compat en servo_create addon.~~
+> ~~Relacionado: [Terminal de Entrega](space-elevator.md), [Create Automation](create-automation.md), [Cooking](cooking.md), [Architecture](../architecture.md)~~
+> ~~Estado: CODIGO COMPLETO — pendiente: assets de artista~~
 
 ---
 

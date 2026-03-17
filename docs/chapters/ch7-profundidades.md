@@ -1,95 +1,112 @@
-# Capitulo 7: Las Profundidades + Coleccion Legendaria
+# Capitulo 7: Profundidades
 
-> Fuente: GDD v2, seccion 4.3
-> Mecanicas relevantes: [Dungeons](../mechanics/dungeons.md), [Jewelry](../mechanics/jewelry.md), [RPG Classes](../mechanics/rpg-classes.md), [Accessories](../mechanics/accessories.md), [Champions](../mechanics/champions.md)
+> Stage: `servo_ch7` (requiere: Boss Ch6 + Delivery Ch6)
+> Trigger para Ch8: Derrotar al Nucleo del Dungeon + Completar entrega Ch7
+> Mecanicas: [Dungeons](../mechanics/dungeons.md), [Jewelry](../mechanics/jewelry.md), [RPG Classes](../mechanics/rpg-classes.md), [Accessories](../mechanics/accessories.md), [Champions](../mechanics/champions.md)
 
 ## Tema
 
-Dungeon endgame. Llave del Nucleo. Boss de dungeon. Caza de unique jewelry.
+Dungeon endgame. La fabrica corre sola, el foco cambia a combate y exploracion de dungeons. Llave del Nucleo abre las dungeons mas peligrosas: 20-25 salas, pool completo de 16 affixes de champions (incluyendo Paralyzing, Wounding, Molten), y boss de dungeon que garantiza unique jewelry. El jugador caza coleccionables y farmea materiales para T4.
 
 ## Mods nuevos
 
-Llave del Nucleo de dungeon
+Llave del Nucleo de dungeon (servo_dungeons)
 
 ## Contenido
 
 | Area | Detalle |
 |------|---------|
 | Crops | +6 raros (64 total): saguaro, kumquat, persimmon, nectarine, currant, tomatillo |
-| Recetas | +10 (con ingredientes de dungeon) |
-| Dungeon | **Llave del Nucleo**. 20-25 salas + boss dungeon. Pool completo de 16 affixes (incl. Paralyzing, Wounding) |
-| Unique Jewelry | 24 items como coleccionables. Boss dungeon garantiza 1 |
-| RPG | T3+ uniques. Accesorios custom T4 |
-| Boss | Nucleo del Dungeon (7,200 HP). Dropea **Cristal del Nucleo** |
+| Recetas | +10 (con ingredientes exclusivos de dungeon + crops raros) |
+| Dungeon | **Llave del Nucleo**. 20-25 salas + boss de dungeon. Pool completo de 16 affixes (incl. Paralyzing, Wounding, Molten). Boss de dungeon garantiza 1 unique jewelry |
+| Unique Jewelry | 24 items como coleccionables. Boss dungeon garantiza 1, champions tienen chance extra |
+| RPG | T3+ uniques. Accesorios custom T4 de dungeons |
+| Champions | 20% overworld, 3 affixes. Dungeon del Nucleo: todos los 16 affixes habilitados |
+| Boss | Nucleo del Dungeon (7,200 HP) |
+| Decoracion | Nada nuevo (todo disponible) |
 
-## Space Elevator entrega Ch7
+### Llave del Nucleo — endgame dungeon
 
-Ver detalle completo en [mechanics/space-elevator.md](../mechanics/space-elevator.md#47-capitulo-7-profundidades).
+| Aspecto | Detalle |
+|---------|---------|
+| Crafteo | Materiales de dungeons anteriores + boss drops |
+| Salas | 20-25 por run |
+| Champions | Pool completo: 16 affixes incl. Paralyzing, Wounding, Molten (los mas peligrosos) |
+| Boss dungeon | Final de la dungeon. Garantiza 1 unique jewelry |
+| Loot | Unique jewelry, Esencia de Dungeon, Fragmentos de Cristal del Nucleo, materiales T4 |
 
-Resumen: Cajas de materiales de dungeon, unique jewelry, Esencia de Dungeon, Cristal del Nucleo (boss drop).
+## Entrega al Space Elevator — Ch7: "Profundidades"
 
-## Quests (~50)
+> Detalle completo: [progression.md → Entregas](../mechanics/progression.md#capitulo-7-profundidades)
 
-### Historia/Tutorial (10)
-1. Tutorial: Llave del Nucleo
-2. Tutorial: Boss de dungeon
+Dungeon farming. La fabrica produce en automatico, el foco es loot de dungeon (~252 items total).
+
+| Item | Cant. | Nuevo/Acumulado |
+|------|-------|-----------------|
+| Factory output variado (sheets+rods+crushed) | 128 | Acumulado |
+| ALL workstations output | 64 | Acumulado |
+| Comida variada (min 44 tipos) | 32 | Acumulado |
+| Unique Jewelry | 3 | **Nuevo** — dungeon farming |
+| Esencia de Dungeon | 16 | **Nuevo** — champions en dungeon |
+| Loot del Nucleo | 8 | **Nuevo** — Llave del Nucleo |
+| Cristal del Nucleo | 1 | **Boss** |
+
+## Quests (~48)
+
+### Historia/Tutorial (8)
+1. Tutorial: Llave del Nucleo — como craftearla
+2. Tutorial: Boss de dungeon — mecanicas y preparacion
 3. Tutorial: Champions peligrosos del Nucleo (Paralyzing, Wounding, Molten)
-4. Explicar Fragmentos de Cristal del Nucleo
-5. Explicar T4 (proximo capitulo)
-6. Caza de unique jewelry
-7. Accesorios T4
-8. Recetas con ingredientes de dungeon
-9. Estrategia para champions con Paralyzing/Wounding
-10. Preparacion para boss de dungeon
+4. Tutorial: Fragmentos de Cristal del Nucleo (material para T4)
+5. Explicar T4 legendario (proximo capitulo)
+6. Caza de unique jewelry — coleccion y efectos
+7. Estrategia contra champions con Paralyzing/Wounding
+8. Preparacion optima para dungeon run (buffs, gear, comida)
 
-### Cocina (8)
-1. Cocinar con ingredientes de dungeon
-2. Cocinar con crops raros
-3. Comer 100 comidas diferentes (FTB Quests Recetario: +8 corazones)
-4. Receta con ingrediente exclusivo de dungeon
-5. Automatizar produccion de comida rara
-6. Preparar buffs de comida para dungeon runs
-7. Receta multi-step con ingrediente raro
-8. Completar coleccion de bebidas
+### Cocina (6)
+1. Cocinar con ingredientes exclusivos de dungeon
+2. Cocinar con crops raros (kumquat, persimmon, etc.)
+3. Receta con ingrediente exclusivo de dungeon
+4. Preparar buffs de comida para dungeon runs (alta nutricion)
+5. Automatizar produccion de comida de buff
+6. Comer 100 comidas diferentes (Recetario: +8 corazones)
 
-### Farming (6)
-1. Plantar crops raros (6)
-2. Plantar todos los raros
+### Farming (5)
+1. Plantar 6 crops raros
+2. Plantar todos los crops raros
 3. Granja de kumquat o persimmon
-4. Optimizar produccion con RS
-5. Mantener todas las granjas funcionando
-6. Auto-producir comida para dungeon runs
+4. Mantener todas las granjas funcionando (64 total)
+5. Auto-producir comida para dungeon runs
 
 ### Dungeon (5)
 1. Craftear primera Llave del Nucleo
-2. Completar dungeon Del Nucleo
+2. Completar dungeon Del Nucleo (20-25 salas)
 3. Derrotar boss de dungeon
 4. Obtener Fragmento de Cristal del Nucleo
 5. Coleccionar 5 unique jewelry de dungeons
 
 ### Combate/RPG (5)
-1. Equipar unique jewelry
-2. Obtener accesorio custom T4
-3. Build optimizado para dungeon
-4. Derrotar champion con Paralyzing
-5. Derrotar al Nucleo del Dungeon
+1. Equipar unique jewelry (efecto especial activo)
+2. Obtener accesorio custom T4 de dungeon loot
+3. Build optimizado para dungeon Del Nucleo
+4. Derrotar champion con Paralyzing affix
+5. Derrotar al Nucleo del Dungeon (boss)
 
-### Exploracion (5)
-1. Completar mapa del mundo
-2. Optimizar rutas de tren
+### Exploracion (4)
+1. Completar mapa del mundo (todos los biomas principales)
+2. Optimizar rutas de tren para eficiencia
 3. Encontrar todos los ores de gemas
-4. Visitar todos los biomas principales
-5. Red de Waystones completa
+4. Red de Waystones completa (10+ puntos)
 
 ### Construccion (4)
-1. Base endgame completa
-2. Trophy room de bosses
-3. Display de unique jewelry
-4. Fabrica automatizada completa
+1. Base endgame completa y funcional
+2. Trophy room de bosses (display)
+3. Display de unique jewelry coleccionada
+4. Fabrica automatizada corriendo 24/7 sin intervencion
 
 ### Coleccion (5)
-1. 10+ unique jewelry
+1. 10+ unique jewelry coleccionadas
 2. Set completo de accesorios T3+
-3. 100+ comidas unicas (Recetario: hito Ch7)
-4. Fragmentos para T4 (acumular)
+3. 100+ comidas unicas en el Recetario
+4. Acumular Fragmentos de Cristal para T4
 5. Completar entrega al Space Elevator Ch7
