@@ -79,6 +79,6 @@ items = [
     "servo_core:dungeon_essence"
 ]
 
-# NOTE: Enchantment level V gating is NOT possible via ProgressiveStages.
-# Enchantment levels are controlled by the enchanting table and loot tables.
-# Consider using KubeJS to limit enchantment levels per stage if needed.
+# NOTE: Enchantment level gating se implementa via KubeJS (PlayerEvents.inventoryChanged).
+# Ver: modpack/kubejs/server_scripts/01_progression/enchantment_gating.js (Issue #89)
+# Ch1-2: max II | Ch3-4: max III | Ch5: max IV | Ch6+: sin restriccion

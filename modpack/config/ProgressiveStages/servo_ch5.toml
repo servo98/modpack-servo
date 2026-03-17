@@ -10,6 +10,9 @@
 # NOTE: spell_power and ranged_weapon_api items are vanilla potions/arrows
 # under minecraft: namespace. They CANNOT be gated by mod ID.
 # Gating via brewing ingredient access (Nether materials) is sufficient.
+# NOTE: spell_power ENCHANTS (spell_power:spell_power, sunfire, soulfrost, etc.)
+# son gateados hasta Ch5 via KubeJS (Issue #89):
+# modpack/kubejs/server_scripts/01_progression/enchantment_gating.js
 # ==========================================================================
 
 [stage]
