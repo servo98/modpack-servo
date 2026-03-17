@@ -1,0 +1,165 @@
+{
+  "entries": [
+    {
+      "item": "minecraft:name_tag",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 8, "minecraft:string": 4 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "minecraft:saddle",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:leather": 8, "minecraft:iron_ingot": 4 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "minecraft:lead",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:string": 8, "minecraft:slime_ball": 2 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "minecraft:spyglass",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:copper_ingot": 4, "minecraft:amethyst_shard": 2 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "minecraft:bundle",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:leather": 4, "minecraft:string": 4 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "minecraft:golden_apple",
+      "category": "qol",
+      "tier": 2,
+      "price": { "minecraft:gold_ingot": 8, "minecraft:apple": 1 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "minecraft:ender_pearl",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:gold_ingot": 4, "minecraft:amethyst_shard": 4 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "minecraft:firework_rocket",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:gunpowder": 4, "minecraft:paper": 4 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "runes:small_rune_pouch",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:white_wool": 4, "minecraft:string": 4, "minecraft:ink_sac": 2 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "runes:medium_rune_pouch",
+      "category": "qol",
+      "tier": 2,
+      "price": { "minecraft:white_wool": 8, "minecraft:string": 8, "minecraft:phantom_membrane": 4 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "runes:arcane_stone",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:amethyst_shard": 4, "minecraft:stone": 8 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "runes:fire_stone",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:gunpowder": 4, "minecraft:stone": 8 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "runes:frost_stone",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:snowball": 8, "minecraft:stone": 8 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "runes:healing_stone",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:gold_nugget": 8, "minecraft:stone": 8 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "runes:soul_stone",
+      "category": "qol",
+      "tier": 2,
+      "price": { "minecraft:soul_sand": 8, "minecraft:stone": 8, "minecraft:gold_ingot": 4 },
+      "requires_stage": "servo_ch5"
+    },
+    {
+      "item": "runes:lightning_stone",
+      "category": "qol",
+      "tier": 2,
+      "price": { "minecraft:copper_ingot": 8, "minecraft:stone": 8, "minecraft:gold_ingot": 4 },
+      "requires_stage": "servo_ch5"
+    },
+    {
+      "item": "storagedrawers:upgrade_template",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:oak_planks": 8, "minecraft:stick": 4 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "storagedrawers:iron_storage_upgrade",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 8, "minecraft:stick": 4, "minecraft:oak_planks": 4 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "storagedrawers:gold_storage_upgrade",
+      "category": "qol",
+      "tier": 2,
+      "price": { "minecraft:gold_ingot": 8, "minecraft:stick": 4, "minecraft:oak_planks": 4 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "storagedrawers:diamond_storage_upgrade",
+      "category": "qol",
+      "tier": 2,
+      "price": { "minecraft:diamond": 4, "minecraft:stick": 4, "minecraft:oak_planks": 4 },
+      "requires_stage": "servo_ch5"
+    },
+    {
+      "item": "farmersdelight:canvas",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:string": 4, "minecraft:stick": 2 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "minecraft:clock",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:gold_ingot": 4, "minecraft:redstone": 2 },
+      "requires_stage": "servo_ch2"
+    },
+    {
+      "item": "minecraft:compass",
+      "category": "qol",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 4, "minecraft:redstone": 2 },
+      "requires_stage": "servo_ch2"
+    }
+  ]
+}
