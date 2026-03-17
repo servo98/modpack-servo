@@ -1,0 +1,214 @@
+{
+  "entries": [
+    {
+      "item": "servo_core:belt_speed_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:belt_defense_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:belt_efficiency_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:belt_food_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:back_damage_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:back_exploration_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:back_dungeon_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:back_speed_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:feet_luck_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:feet_regen_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:feet_animal_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:feet_token_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:head_spellpower_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:head_vision_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:head_xp_t1",
+      "category": "accessories",
+      "tier": 1,
+      "price": { "minecraft:iron_ingot": 32, "minecraft:gold_ingot": 8, "minecraft:bread": 16 },
+      "requires_stage": "servo_ch3"
+    },
+    {
+      "item": "servo_core:belt_speed_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:belt_defense_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:belt_efficiency_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:belt_food_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:back_damage_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:back_exploration_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:back_dungeon_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:back_speed_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:feet_luck_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:feet_regen_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:feet_animal_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:feet_token_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:head_spellpower_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:head_vision_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    },
+    {
+      "item": "servo_core:head_xp_t2",
+      "category": "accessories",
+      "tier": 2,
+      "price": { "minecraft:diamond": 12, "minecraft:gold_ingot": 24, "minecraft:iron_ingot": 32 },
+      "requires_stage": "servo_ch4"
+    }
+  ]
+}
