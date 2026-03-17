@@ -1,0 +1,13 @@
+{
+  "type": "servo_cooking:prep_station",
+  "ingredients": [
+    "minecraft:bread",
+    "farmersdelight:cooked_bacon",
+    "farmersdelight:tomato",
+    "minecraft:kelp"
+  ],
+  "result": {
+    "id": "farmersdelight:bacon_sandwich",
+    "count": 1
+  }
+}

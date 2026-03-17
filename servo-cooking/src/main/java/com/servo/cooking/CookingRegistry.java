@@ -1,7 +1,12 @@
 package com.servo.cooking;
 
+import com.servo.cooking.block.PrepStationBlock;
+import com.servo.cooking.block.entity.PrepStationBlockEntity;
+import com.servo.cooking.menu.PrepStationMenu;
+import com.servo.cooking.recipe.PrepStationRecipe;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -38,10 +43,9 @@ public class CookingRegistry {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ServoCooking.MOD_ID);
 
     // === Blocks ===
-    // Placeholder blocks — will be replaced with proper Block subclasses per workstation
 
-    public static final DeferredHolder<Block, Block> PREP_STATION_BLOCK =
-            BLOCKS.register("prep_station", () -> new Block(
+    public static final DeferredHolder<Block, PrepStationBlock> PREP_STATION_BLOCK =
+            BLOCKS.register("prep_station", () -> new PrepStationBlock(
                     BlockBehaviour.Properties.of()
                             .mapColor(MapColor.WOOD)
                             .strength(2.5f)
@@ -49,6 +53,7 @@ public class CookingRegistry {
                             .noOcclusion()
             ));
 
+    // Future workstations — placeholder blocks for now
     public static final DeferredHolder<Block, Block> BLENDER_BLOCK =
             BLOCKS.register("blender", () -> new Block(
                     BlockBehaviour.Properties.of()
@@ -96,6 +101,37 @@ public class CookingRegistry {
             ITEMS.register("bakers_oven", () -> new BlockItem(
                     BAKERS_OVEN_BLOCK.get(), new Item.Properties()
             ));
+
+    // === Block Entities ===
+
+    @SuppressWarnings("DataFlowIssue")
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<PrepStationBlockEntity>> PREP_STATION_BE =
+            BLOCK_ENTITIES.register("prep_station", () ->
+                    BlockEntityType.Builder.of(PrepStationBlockEntity::new, PREP_STATION_BLOCK.get())
+                            .build(null)
+            );
+
+    // === Menus ===
+
+    public static final DeferredHolder<MenuType<?>, MenuType<PrepStationMenu>> PREP_STATION_MENU =
+            MENUS.register("prep_station", () ->
+                    new MenuType<>(PrepStationMenu::clientMenu, FeatureFlags.DEFAULT_FLAGS)
+            );
+
+    // === Recipe Types ===
+
+    public static final DeferredHolder<RecipeType<?>, RecipeType<PrepStationRecipe>> PREP_STATION_RECIPE_TYPE =
+            RECIPE_TYPES.register("prep_station", () -> new RecipeType<>() {
+                @Override
+                public String toString() {
+                    return "servo_cooking:prep_station";
+                }
+            });
+
+    // === Recipe Serializers ===
+
+    public static final DeferredHolder<RecipeSerializer<?>, PrepStationRecipe.Serializer> PREP_STATION_SERIALIZER =
+            RECIPE_SERIALIZERS.register("prep_station", PrepStationRecipe.Serializer::new);
 
     // === Creative Tab ===
     public static final Supplier<CreativeModeTab> COOKING_TAB =

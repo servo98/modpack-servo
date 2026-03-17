@@ -1,0 +1,13 @@
+{
+  "type": "servo_cooking:prep_station",
+  "ingredients": [
+    "minecraft:bread",
+    "farmersdelight:beef_patty",
+    "farmersdelight:tomato",
+    "farmersdelight:onion"
+  ],
+  "result": {
+    "id": "farmersdelight:hamburger",
+    "count": 1
+  }
+}
