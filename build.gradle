@@ -63,6 +63,7 @@ dependencies {
 
 // Copy server config files (RCON, eula, ops) to run/ before server starts
 tasks.register('copyServerConfigs', Copy) {
+    doNotTrackState("run/ contains client session.lock that blocks Gradle file hashing")
     from 'server'
     into 'run'
     include 'server.properties', 'eula.txt', 'ops.json'

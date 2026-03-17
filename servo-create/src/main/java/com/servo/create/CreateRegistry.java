@@ -17,12 +17,7 @@ public class CreateRegistry {
 
     // Custom recipe type for box compacting via Press+Basin
     public static final DeferredHolder<RecipeType<?>, RecipeType<BoxCompactingRecipe>> BOX_COMPACTING_TYPE =
-            RECIPE_TYPES.register("box_compacting", () -> new RecipeType<>() {
-                @Override
-                public String toString() {
-                    return "servo_create:box_compacting";
-                }
-            });
+            RECIPE_TYPES.register("box_compacting", () -> RecipeType.simple(ServoCreate.modLoc("box_compacting")));
 
     public static final DeferredHolder<RecipeSerializer<?>, BoxCompactingRecipe.Serializer> BOX_COMPACTING_SERIALIZER =
             RECIPE_SERIALIZERS.register("box_compacting", BoxCompactingRecipe.Serializer::new);
