@@ -52,6 +52,11 @@
   "entity.servo_dungeons.nucleo_del_dungeon": "Dungeon Core",
   "entity.servo_dungeons.devorador_des_mundos": "World Devourer",
 
+  "block.servo_dungeons.dungeon_barrier": "Dungeon Barrier",
+  "message.servo_dungeons.room_cleared": "Room cleared! The barriers have been lifted.",
+  "message.servo_dungeons.dungeon_joined": "Joining the dungeon...",
+  "message.servo_dungeons.dungeon_reenter": "Re-entering the dungeon...",
+
   "item.servo_dungeons.trophy_ch1": "Seed of the Forest",
   "item.servo_dungeons.trophy_ch2": "Jaw of the Beast",
   "item.servo_dungeons.trophy_ch3": "Core of the Colossus",

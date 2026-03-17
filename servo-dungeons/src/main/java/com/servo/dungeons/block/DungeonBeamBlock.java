@@ -3,6 +3,7 @@ package com.servo.dungeons.block;
 import com.mojang.serialization.MapCodec;
 import com.servo.dungeons.DungeonRegistry;
 import com.servo.dungeons.ServoDungeons;
+import com.servo.dungeons.dungeon.DungeonInstance;
 import com.servo.dungeons.dungeon.DungeonManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -89,11 +90,21 @@ public class DungeonBeamBlock extends BaseEntityBlock {
             DungeonManager manager = DungeonManager.getInstance();
             if (manager == null || !manager.isActive(dungeonId)) return;
 
-            // Record cooldown and teleport
+            // Check if this is a new player joining or a re-entry
+            DungeonInstance dungeonInstance = manager.getInstance(dungeonId);
+            boolean isNewPlayer = dungeonInstance != null && !dungeonInstance.hasPlayer(playerId);
+
+            // Record cooldown and teleport (reenterDungeon handles addPlayer internally)
             TELEPORT_COOLDOWNS.put(playerId, currentTime);
             manager.reenterDungeon(serverPlayer, dungeonId);
-            serverPlayer.sendSystemMessage(
-                    Component.translatable("message.servo_dungeons.dungeon_entered"));
+
+            if (isNewPlayer) {
+                serverPlayer.sendSystemMessage(
+                        Component.translatable("message.servo_dungeons.dungeon_joined"));
+            } else {
+                serverPlayer.sendSystemMessage(
+                        Component.translatable("message.servo_dungeons.dungeon_reenter"));
+            }
         }
     }
 }

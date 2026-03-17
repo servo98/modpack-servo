@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "servo_dungeons:block/dungeon_barrier"
+    }
+  }
+}

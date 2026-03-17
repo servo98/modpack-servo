@@ -52,6 +52,11 @@
   "entity.servo_dungeons.nucleo_del_dungeon": "Nucleo del Dungeon",
   "entity.servo_dungeons.devorador_des_mundos": "Devorador de Mundos",
 
+  "block.servo_dungeons.dungeon_barrier": "Barrera de Dungeon",
+  "message.servo_dungeons.room_cleared": "\u00a1Sala limpia! Las barreras han sido levantadas.",
+  "message.servo_dungeons.dungeon_joined": "Uniendose al dungeon...",
+  "message.servo_dungeons.dungeon_reenter": "Re-entrando al dungeon...",
+
   "item.servo_dungeons.trophy_ch1": "Semilla del Bosque",
   "item.servo_dungeons.trophy_ch2": "Mandibula de la Bestia",
   "item.servo_dungeons.trophy_ch3": "Nucleo del Coloso",

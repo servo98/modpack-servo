@@ -9,6 +9,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
@@ -212,9 +213,30 @@ public class DungeonGenerator {
      * @param center       the dungeon instance center (from OffsetAllocator)
      */
     public static void placeInWorld(DungeonLayout layout, ServerLevel dungeonLevel, BlockPos center) {
+        placeInWorld(layout, dungeonLevel, center, null, null);
+    }
+
+    /**
+     * Place the generated layout as actual blocks in the dungeon dimension,
+     * optionally spawning loot chests if tier and random are provided.
+     *
+     * @param layout       the generated dungeon layout
+     * @param dungeonLevel the dungeon dimension's ServerLevel
+     * @param center       the dungeon instance center (from OffsetAllocator)
+     * @param tier         the dungeon tier for loot tables (null to skip chests)
+     * @param random       random source for chest placement (null to skip chests)
+     */
+    public static void placeInWorld(DungeonLayout layout, ServerLevel dungeonLevel, BlockPos center,
+                                     @Nullable DungeonTier tier, @Nullable RandomSource random) {
         for (RoomData room : layout.getRooms()) {
             placeRoom(room, dungeonLevel, center);
         }
+
+        // Place loot chests after all rooms are built
+        if (tier != null && random != null) {
+            DungeonLootPlacer.placeChests(layout, tier, dungeonLevel, center, random);
+        }
+
         ServoDungeons.LOGGER.debug("Placed {} rooms in world at center {}",
                 layout.getRoomCount(), center);
     }
@@ -316,28 +338,16 @@ public class DungeonGenerator {
     }
 
     /**
-     * Place entrance room extras: Exit Portal block near the wall opposite the first connection.
+     * Place entrance room extras: spawn point marker.
+     * The exit portal is no longer placed here — it appears only when all rooms are cleared
+     * (see {@link MobDeathListener#onDungeonComplete}).
      */
     private static void placeEntranceExtras(RoomData room, BlockPos origin, ServerLevel level) {
+        // Place a sea lantern marker at the spawn point so players know where they started
         int size = RoomData.ROOM_SIZE;
-        BlockState portalState = DungeonRegistry.EXIT_PORTAL_BLOCK.get().defaultBlockState();
-
-        // Find the first connection direction
-        Direction firstConnection = room.getConnections().iterator().next();
-        // Place portal opposite the connection (so players see it when they enter)
-        Direction portalSide = firstConnection.getOpposite();
-
-        // Position: 1 block inside from the wall on the portal side, centered (X or Z = 7 or 8)
-        int centerCoord = size / 2; // 8
-        BlockPos portalPos = switch (portalSide) {
-            case NORTH -> origin.offset(centerCoord, 1, 1);          // 1 block from north wall
-            case SOUTH -> origin.offset(centerCoord, 1, size - 2);   // 1 block from south wall
-            case WEST -> origin.offset(1, 1, centerCoord);           // 1 block from west wall
-            case EAST -> origin.offset(size - 2, 1, centerCoord);    // 1 block from east wall
-            default -> origin.offset(centerCoord, 1, 1);
-        };
-
-        level.setBlock(portalPos, portalState, 3);
+        int centerCoord = size / 2;
+        level.setBlock(origin.offset(centerCoord, 0, centerCoord),
+                Blocks.SEA_LANTERN.defaultBlockState(), 3);
     }
 
     /**

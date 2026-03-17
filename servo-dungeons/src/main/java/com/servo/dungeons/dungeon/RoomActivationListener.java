@@ -45,7 +45,7 @@ public class RoomActivationListener {
 
             RoomState state = tracker.getState(gridX, gridZ);
             if (state == RoomState.LOCKED) {
-                // Activate room: spawn mobs
+                // Activate room: spawn mobs and place door barriers
                 DungeonLayout layout = instance.getLayout();
                 RoomData room = layout.getRoom(gridX, gridZ);
                 if (room != null) {
@@ -53,7 +53,11 @@ public class RoomActivationListener {
                             room, instance.getTier(), level, instance.getCenter(), level.getRandom());
                     tracker.activateRoom(gridX, gridZ);
                     tracker.setLivingMobs(gridX, gridZ, spawned);
-                    ServoDungeons.LOGGER.debug("Room ({},{}) activated: {} mobs spawned",
+
+                    // Place barrier blocks in doorways to lock players in combat
+                    DungeonBarrierManager.placeBarriers(room, layout, level, instance.getCenter());
+
+                    ServoDungeons.LOGGER.debug("Room ({},{}) activated: {} mobs spawned, barriers placed",
                             gridX, gridZ, spawned);
                 }
             }

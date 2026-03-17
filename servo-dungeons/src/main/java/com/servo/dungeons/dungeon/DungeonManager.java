@@ -3,6 +3,7 @@ package com.servo.dungeons.dungeon;
 import com.servo.dungeons.DungeonRegistry;
 import com.servo.dungeons.DungeonTier;
 import com.servo.dungeons.ServoDungeons;
+import com.servo.dungeons.block.DungeonPedestalBlockEntity;
 import com.servo.dungeons.entity.boss.AbstractDungeonBoss;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.MinecraftServer;
@@ -12,6 +13,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
@@ -82,7 +84,7 @@ public class DungeonManager {
         // Generate procedural dungeon layout
         RandomSource random = dungeonLevel.getRandom();
         DungeonLayout layout = DungeonGenerator.generate(tier, random);
-        DungeonGenerator.placeInWorld(layout, dungeonLevel, center);
+        DungeonGenerator.placeInWorld(layout, dungeonLevel, center, tier, random);
 
         // Entrance position: on top of the entrance room's floor (Y+1)
         BlockPos entranceWorldPos = layout.getEntrance().getWorldPos(center);
@@ -210,6 +212,14 @@ public class DungeonManager {
         }
 
         dungeonInstance.setActive(false);
+
+        // Reset the pedestal (removes beam, resets state)
+        if (overworld != null) {
+            BlockEntity be = overworld.getBlockEntity(altarPos);
+            if (be instanceof DungeonPedestalBlockEntity pedestal) {
+                pedestal.resetAfterDungeon();
+            }
+        }
 
         // Clean up the instance's area in the dungeon dimension
         ServerLevel dungeonLevel = server.getLevel(DungeonRegistry.DUNGEON_LEVEL_KEY);

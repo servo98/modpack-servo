@@ -1,6 +1,7 @@
 package com.servo.dungeons;
 
 import com.servo.dungeons.block.CrackedWallBlock;
+import com.servo.dungeons.block.DungeonBarrierBlock;
 import com.servo.dungeons.block.DungeonBeamBlock;
 import com.servo.dungeons.block.DungeonBeamBlockEntity;
 import com.servo.dungeons.block.DungeonPedestalBlock;
@@ -138,6 +139,18 @@ public class DungeonRegistry {
                             .noOcclusion()
             ));
 
+    public static final DeferredHolder<Block, DungeonBarrierBlock> BARRIER_BLOCK =
+            BLOCKS.register("dungeon_barrier", () -> new DungeonBarrierBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_RED)
+                            .strength(-1.0f, 3600000.0f)
+                            .sound(SoundType.GLASS)
+                            .noOcclusion()
+                            .lightLevel(state -> 3)
+                            .pushReaction(PushReaction.BLOCK)
+                            .noLootTable()
+            ));
+
     // === Block Items ===
     public static final DeferredHolder<Item, BlockItem> PEDESTAL_ITEM =
             ITEMS.register("dungeon_pedestal", () -> new BlockItem(
@@ -162,6 +175,11 @@ public class DungeonRegistry {
     public static final DeferredHolder<Item, BlockItem> SPIKES_BLOCK_ITEM =
             ITEMS.register("dungeon_spikes", () -> new BlockItem(
                     SPIKES_BLOCK.get(), new Item.Properties()
+            ));
+
+    public static final DeferredHolder<Item, BlockItem> BARRIER_ITEM =
+            ITEMS.register("dungeon_barrier", () -> new BlockItem(
+                    BARRIER_BLOCK.get(), new Item.Properties()
             ));
 
     // === Dungeon Items ===
@@ -307,6 +325,7 @@ public class DungeonRegistry {
                         output.accept(CRACKED_WALL_ITEM.get());
                         output.accept(ROPE_BLOCK_ITEM.get());
                         output.accept(SPIKES_BLOCK_ITEM.get());
+                        output.accept(BARRIER_ITEM.get());
                         output.accept(KEY_BASIC.get());
                         output.accept(KEY_ADVANCED.get());
                         output.accept(KEY_MASTER.get());
