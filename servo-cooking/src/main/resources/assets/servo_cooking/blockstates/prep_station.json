@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "servo_cooking:block/prep_station" }
+    "facing=north": { "model": "servo_cooking:block/prep_station" },
+    "facing=south": { "model": "servo_cooking:block/prep_station", "y": 180 },
+    "facing=east":  { "model": "servo_cooking:block/prep_station", "y": 90 },
+    "facing=west":  { "model": "servo_cooking:block/prep_station", "y": 270 }
   }
 }

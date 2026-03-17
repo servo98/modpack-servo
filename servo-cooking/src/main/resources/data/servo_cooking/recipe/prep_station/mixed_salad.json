@@ -1,0 +1,12 @@
+{
+  "type": "servo_cooking:prep_station",
+  "ingredients": [
+    "farmersdelight:tomato",
+    "minecraft:beetroot",
+    "minecraft:carrot"
+  ],
+  "result": {
+    "id": "farmersdelight:mixed_salad",
+    "count": 1
+  }
+}

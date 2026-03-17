@@ -1,0 +1,12 @@
+{
+  "type": "servo_cooking:prep_station",
+  "ingredients": [
+    "minecraft:apple",
+    "minecraft:melon_slice",
+    "minecraft:sweet_berries"
+  ],
+  "result": {
+    "id": "farmersdelight:fruit_salad",
+    "count": 1
+  }
+}

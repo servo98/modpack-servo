@@ -3,5 +3,7 @@
   "block.servo_cooking.prep_station": "Prep Station",
   "block.servo_cooking.blender": "Blender",
   "block.servo_cooking.wok": "Wok",
-  "block.servo_cooking.bakers_oven": "Baker's Oven"
+  "block.servo_cooking.bakers_oven": "Baker's Oven",
+  "servo_cooking.container.prep_station": "Prep Station",
+  "servo_cooking.jei.prep_station": "Prep Station"
 }

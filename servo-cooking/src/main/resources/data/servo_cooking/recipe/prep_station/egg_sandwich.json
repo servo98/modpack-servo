@@ -1,0 +1,11 @@
+{
+  "type": "servo_cooking:prep_station",
+  "ingredients": [
+    "minecraft:bread",
+    "farmersdelight:fried_egg"
+  ],
+  "result": {
+    "id": "farmersdelight:egg_sandwich",
+    "count": 1
+  }
+}

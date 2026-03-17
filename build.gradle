@@ -57,6 +57,7 @@ dependencies {
     implementation project(':servo-core')
     implementation project(':servo-delivery')
     implementation project(':servo-create')
+    implementation project(':servo-cooking')
     implementation project(':servo-dungeons')
     implementation project(':servo-mart')
 }
